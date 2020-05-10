@@ -1,0 +1,51 @@
+<section xml:id="DerivativeExp">
+  <title>Derivative of Exponentials</title>
+  <p>
+    When we graph an exponential function,
+    say an increasing one <m>f(x)=a^x, a>1</m>,
+    we imagine a function that curves up towards infinity on the right and shallows out towards 0 on the left \url{https://www.desmos.com/calculator/51zxitu9xc}. What then should it's derivatives look like?
+    Well it seems like the slopes are initially shallow,
+    and then as we go forward the slopes start to increase,
+    and they get progressively and progressively larger.
+    In other words <term> the derivative is also an exponential function!</term>
+    \url{https://www.desmos.com/calculator/etbmc1ttzo}.
+  </p>
+  <p>
+    Which one?
+    Let's first start with a special case,
+    what is the derivative of <m>f(x)=e^x</m>?
+    <m>e</m> is a special number,
+    it has the peculiar property that:
+    <me>
+      \limit{h}{0}\frac{e^h-1}{h}=1
+    </me>.
+  </p>
+  <p>
+    The proof of this is a fairly sophisticated fact and it not trivial,
+    but you can verify it by taking the slider <m>h</m>,
+    dragging it towards 0 and seeing what happens: \url{https://www.desmos.com/calculator/4uv0zgguq9}. Using this fact,
+    we can deduce:
+    <md>
+      <mrow>\frac{d}{dx}[e^x]\amp =\amp \limit{h}{0}\frac{e^{x+h}-e^x}{h}</mrow>
+      <mrow>\amp =\amp \limit{h}{0}\frac{e^xe^h-e^x}{h}</mrow>
+      <mrow>\amp =\amp e^x\limit{h}{0}\frac{e^h-1}{h}</mrow>
+      <mrow>\amp =\amp e^x\cdot1=e^x</mrow>
+    </md>.
+  </p>
+  <p>
+    So this explains why <m>e</m> is such a significant number in mathematics,
+    it is the unique number so that the exponential <m>e^x</m> is it's own derivative \url{https://www.desmos.com/calculator/xelrg6t0ez}. Every other <m>a^x</m> differs from it's derivative slightly: \url{https://www.desmos.com/calculator/aqa6zw4vyz}, you can see that when <m>a</m> is less than <m>e</m> (about 2.714),
+    it's derivative falls under the original function,
+    and when <m>a>e</m>, it's derivative falls above the original.
+  </p>
+  <p>
+    So, to compute the actual derivative of <m>a^x</m>:
+    <md>
+      <mrow>\frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }</mrow>
+      <mrow>\amp =\amp \frac{d}{dx}[e^{\ln(a)x}]</mrow>
+      <mrow>\amp =\amp e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }</mrow>
+      <mrow>\amp =\amp e^{\ln(a)x}\ln(a)\cdot1</mrow>
+      <mrow>\amp =\amp a^x\ln(a)</mrow>
+    </md>.
+  </p>
+</section>

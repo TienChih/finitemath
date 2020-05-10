@@ -1,0 +1,96 @@
+<section xml:id="Sec_Logarithms">
+  <title>Logarithms</title>
+  <p>
+    So looking at any exponential function,
+    but specifically for increasing ones,
+    we notice that they are 1-1, meaning two different inputs give you 2 different outputs.
+    Thus, <m>f(x)=a^x</m> is an invertible function.
+    You can see in these graphs \url{https://www.desmos.com/calculator/cvriy608bg} that reflecting the exponential over the <m>y=x</m> line giving us the green function is another function.
+    We call this function <m>\log_a(x)</m>.
+    As the inverse of an exponential function, it has some properties:
+    <ul>
+      <li>
+        <p>
+          <term>It's domain is only positive numbers</term>.
+          Why?
+          Because the only possible outputs of exponential outputs are positive numbers.
+          Taking the inverse reverses the roles of the domain and range,
+          and so the domain of <m>\log_a</m> is the positives.
+        </p>
+      </li>
+      <li>
+        <p>
+          <term>As <m>\mathbf{x}</m> goes to 0,
+          <m>\mathbf{\log_a(x)}</m> goes to <m>\mathbf{-\infty}</m>.</term>
+          This is the result of the reflection.
+          Normally <m>a^x</m>
+          (for <m>a>1</m>)
+          goes to 0 as <m>x\to -\infty</m>,
+          so when reflected, that line is now asymptotic to the <m>y</m>-axis.
+          Also <m>\log_a</m> returns the power necessary to achieve the value <m>x</m>.
+          If <m>x</m> is a small number like 0.0001,
+          what power would I have to raise <m>a</m> to to get <m>0.0001</m>?
+          It can't be 0, <m>a^0=1</m>,
+          so it has to be <term>less</term>
+          than 0, and the smaller <m>x</m> is,
+          the lower this power must go.
+        </p>
+      </li>
+      <li>
+        <p>
+          As <m>\mathbf{x\to\infty, \log_a(x)\to \infty}</m>,
+          again this is the result of the reflection,
+          but we can also think of this as the powers <m>a</m> needs to be raised to in order to achieve <m>x</m>,
+          as this increases, those powers must increase as well.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\log_a(xy)=\log_a(x)+\log_a(y)</m>.
+          Too see this consider:
+          <md>
+            <mrow>xy\amp =\amp a^{\log_a{xy}}</mrow>
+            <mrow>xy\amp =\amp x\cdot y</mrow>
+            <mrow>\amp =\amp a^{\log_a(x)}\cdot a^{\log_a(y)}</mrow>
+            <mrow>\amp =\amp a^{\log_a(x)+\log_a(y)}</mrow>
+          </md>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\log_a(x^y)=y\log_a(x)</m>.
+          To see this, consider:
+          <md>
+            <mrow>x^y\amp =\amp a^{\log_a(x^y)}.</mrow>
+            <mrow>x^y\amp =\amp (a^{\log_a(x)})^y</mrow>
+            <mrow>\amp =\amp a^{y\log_a(x)}</mrow>
+          </md>
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    Typically most textbooks include a whole bunch of other arithmetic rules,
+    but they can all be distilled from the 2 above so they're all totally pointless.
+  </p>
+  <p>
+    Special cases of logs are log base 10 which is usually just denoted <m>\log</m> and log based <m>e</m>,
+    which is denoted <m>\ln</m>.
+    Astronomers and other scientists like <m>\log</m> since taking <m>\log</m> base 10 gives you approximate magnitude of stuff.
+    As a mathematician, I prefer <m>\ln</m> since <m>e</m> has pretty special mathematical properties,
+    plus it's shorter, which makes it better.
+  </p>
+  <p>
+    The main use of logs algebraically is to de-exponentiate expressions.
+    So if one is trying to solve <m>10=2^x</m>, we could do this via:
+    <md>
+      <mrow>10\amp =\amp 2^x</mrow>
+      <mrow>\ln(10)\amp =\amp \ln(2^x)</mrow>
+      <mrow>\ln(10)\amp =\amp x\ln(2)</mrow>
+      <mrow>x\amp =\amp \frac{\ln(10)}{\ln(2)}\approx 3.3219</mrow>
+    </md>.
+  </p>
+  <p>
+    One can also solve problems like this visually: \url{https://www.desmos.com/calculator/t0pojr0gel}.
+  </p>
+</section>

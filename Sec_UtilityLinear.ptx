@@ -1,0 +1,70 @@
+<section xml:id="Sec_UtilityLinear">
+  <title>Utilizing the Linear Function</title>
+  <p>
+    Once you obtain a linear function,
+    this gives you a relationship between the <m>x</m> and <m>y</m> variables.
+    It allows you to identify,
+    given an <m>x</m> or <m>y</m> value, the other value:
+  </p>
+  <example xml:id="Example_LinearFindValue">
+    <statement>
+      <p>
+        Consider the linear function <m>y=2x-3</m>.
+        <ol>
+          <li>
+            <p>
+              When <m>y=0</m>, what is <m>x</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              When <m>x=3</m> what is <m>y</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        These can be identified algebraically:
+        <ol>
+          <li>
+            <p>
+              When <m>\textcolor{ForestGreen}{y=0}</m>, we have:
+              <md>
+                <mrow>y\amp =\amp 2x-3</mrow>
+                <mrow>\textcolor{ForestGreen}{0}\amp =\amp 2x-3</mrow>
+                <mrow>3\amp =\amp 2x</mrow>
+                <mrow>x\amp =\amp 1.5</mrow>
+              </md>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>\textcolor{orange}{x=3}</m>:
+              <md>
+                <mrow>y\amp =\amp 2x-3</mrow>
+                <mrow>y\amp =\amp 2(\textcolor{orange}{3})-3</mrow>
+                <mrow>y\amp =\amp 6-3=3</mrow>
+              </md>.
+              We can identify both points graphically as well:    \url{https://www.desmos.com/calculator/gukgr4sjfm}.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[yscale=0.3][domain=-1:10]
+\draw[gray!50, thin, step=1] (-1,-5) grid (10,20);
+\draw[very thick,->] (-1,0) -- (10.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-5) -- (0,20.1) node[above] {\(y\)};
+\draw[scale=1,domain=0:10,smooth,variable=\x,blue] plot ({\x},{(2)*\x-3});
+\node at (1.5,0){\(*\)};
+\draw (1.5,0) --node[below right]{\((1.5,0)\)}(1.5,0);
+\node at (3,3){\(*\)};
+\draw (3,3) --node[below right]{\((3,3)\)}(3,3);
+\draw[ForestGreen, dashed, ultra thick] (-1,0) --node[below]{\(y=0\)}(10,0);
+\draw[orange, dashed, ultra thick] (3,-5) --node[left]{\(x=3\)}(3,20);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </statement>
+  </example>
+</section>

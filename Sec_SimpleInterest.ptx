@@ -1,0 +1,47 @@
+<section xml:id="Sec_SimpleInterest">
+  <title>Simple Interest</title>
+  <p>
+    Let's say you take out a loan at $100 dollars and are charged 5% monthly simple interest.
+    What this means is that every month, 5% of your initial debt is added on as interest.
+    Over time you would see something like:
+    <me>
+      \begin{array}{|c|c|} \hline \text{ Month }  \amp  \text{ Debt } \\ \hline 0 \amp  100\\ 1\amp  100+(.05)(100)=100+5=105\\ 2\amp  105+(.05)(100)=105+5=110\\ 3 \amp  110+(.05)(100)=110+5=115\\ \vdots \amp  \vdots\\ n \amp  100+(.05)(100)n=100+5n\\ \hline \end{array}
+    </me>
+  </p>
+  <p>
+    So in say 5 months you would owe <m>100+5*5=\dollar125</m>.
+    In general, we could track how much we owe <m>A</m> in month <m>m</m> as
+    <m>A=100+5m</m>, which is, as we know,
+    a linear equation: \url{https://www.desmos.com/calculator/m0k43cprhq}
+  </p>
+  <p>
+    Now of course,
+    this could be adjusted to any number of situations.
+    You could take out a loan for <m>P</m> dollars.
+    You could have a <m>r</m> interest rate every time period which doesn't have to be a month.
+    Then the future value <m>A</m> after <m>m</m> time periods would be:
+    <me>
+      \begin{array}{|c|c|} \hline \text{ Time Unit }  \amp  \text{ Debt } \\ \hline 0 \amp  P\\ 1\amp  P+rP\\ 2\amp  P+rP+rP=P+2rP\\ 3 \amp  P+2rP+rP=P+3rp\\ \vdots \amp  \vdots\\ m \amp  P+mrP=P(1+mr)\\ \hline \end{array}
+    </me>
+  </p>
+  <p>
+    This still expresses <m>A</m> as a line with <m>y</m>-intercept <m>P</m> and slope <m>rP</m>: \url{https://www.desmos.com/calculator/hdj0ublnkk}
+  </p>
+  <p>
+    So suppose you lend your friend some money at 2% weekly interest,
+    and after 10 weeks they owe you $240, how much did you lend them?
+    Well, we know that in this case
+    <m>r=0.02,
+    m=10</m> and the future value <m>A=240</m> so:
+    <md>
+      <mrow>A\amp =\amp P+mrP</mrow>
+      <mrow>240\amp =\amp P+(10)(.02)P</mrow>
+      <mrow>240\amp =\amp 1.2P</mrow>
+      <mrow>P\amp =\amp 200</mrow>
+    </md>
+  </p>
+  <p>
+    So <m>P=\dollar200</m> is how much they borrowed.
+    One can verify this graphically: \url{https://www.desmos.com/calculator/lq0r43ctb0}.
+  </p>
+</section>

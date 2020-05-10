@@ -1,0 +1,347 @@
+<section xml:id="Sec_GraphsofLinearFunctions">
+  <title>Standard form and graphs of Linear Functions.</title>
+  <introduction>
+    <p>
+      Algebraically, linear functions are expressible as:
+      <md>
+        <mrow>y\amp =\amp mx+b, \text{ or }</mrow>
+        <mrow>f(x)\amp =\amp mx+b</mrow>
+      </md>.
+    </p>
+    <p>
+      Where <m>m</m> is the <term>slope</term>,
+      the rate of change of our linear function,
+      and <m>b</m> is the <m>\mathbf{y}</m><term>-intercept</term>.
+    </p>
+    <p>
+      What are these things,
+      why do they have these names, and what do they signify?
+    </p>
+  </introduction>
+  <subsection>
+    <title>Slope.</title>
+    <p>
+    <sage>
+<input>
+2+2
+</input>
+<output>
+</output>
+</sage>
+
+      The <term>slope</term> is the constant rate of change of the linear function.
+      It is often expressed:   
+      <me>
+        m=\frac{\Delta y}{\Delta x}, m=\frac{\Delta f(x)}{\Delta x}
+      </me>.
+    </p>
+     <figure><caption>Test</caption><interactive xml:id="desmos-natural-log" desmos="ttox1bvxku" width="60%" aspect="2:3" /></figure>
+    <p>
+      These algebraic expressions are just a formal way of saying, ``However much <m>x</m> changes,
+      <m>y</m> or <m>f(x)</m> always changes by a proportional amount,
+      and this amount is <m>m</m>."
+    </p>
+    <example xml:id="Example_Slope">
+      <statement>
+        <p>
+          Let <m>y=-x+4</m>.
+          This represents a linear function with <m>m=-1</m> and <m>b=4</m>.
+          To verify, if we compared <m>x=4</m> and <m>x=1</m>,
+          we have a change in <m>x</m>, <m>\Delta x=4-1=3</m>.
+          To find <m>\Delta y</m>,
+          we note that when <m>x=1, y=-(1)+4=3</m> and when <m>x=4, y=-(4)+4=0</m>.
+          Thus <m>\Delta y=0-3=-3</m>.
+          So <m>m=\frac{\Delta f(x)}{\Delta x}=\frac{-3}{3}=-1</m>.
+        </p>
+        <p>
+          This shouldn't depend on which choices of <m>x</m> we made.
+          If we compared <m>x=3</m> and <m>x=2</m>,
+          we have a change in <m>x</m>, <m>\Delta x=3-2=1</m>.
+          To find <m>\Delta y</m>,
+          we note that when <m>x=3, y=-(3)+4=1</m> and when <m>x=2, y=-(2)+4=2</m>.
+          Thus <m>\Delta y=1-2=-1</m>.
+          So <m>m=\frac{\Delta f(x)}{\Delta x}=\frac{-1}{1}=-1</m>.
+        </p>
+        <p>
+          This can be represented visually:
+        </p>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[scale=1][domain=-1:5]
+\draw[gray!50, thin, step=1] (-1,-1) grid (5,5);
+\draw[very thick,->] (-1,0) -- (5.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-1) -- (0,5.1) node[above] {\(y\)};
+\draw[scale=1,domain=-1:5,smooth,variable=\x,blue] plot ({\x},{-1*\x+4});
+\node at (1,3){\(*\)};
+\draw (1,3) --node[above]{\((1,3)\)}(1,3);
+\node at (4,0){\(*\)};
+\draw (4,0) --node[above right]{\((4,0)\)}(4,0);
+\draw[red, fill, opacity=0.2] (1,3)--(4,0)--(1,0)--(1,3);
+\draw[red] (1,1.5) --node[left]{\(\Delta y =-3\)}(1,1.5);
+\draw[red] (2.5,0) --node[below]{\(\Delta x =3\)}(2.5,0);
+\draw[red] (2.5,1.5) --node[above right]{\(m=\frac{-3}{3}=-1\)}(2.5,1.5);\end{tikzpicture}]]>
+</latex-image>
+        </image>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[scale=1][domain=-1:5]
+\draw[gray!50, thin, step=1] (-1,-1) grid (5,5);
+\draw[very thick,->] (-1,0) -- (5.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-1) -- (0,5.1) node[above] {\(y\)};
+\draw[scale=1,domain=-1:5,smooth,variable=\x,blue] plot ({\x},{-1*\x+4});
+\node at (2,2){\(*\)};
+\draw (2,2) --node[above]{\((2,2)\)}(2,2);
+\node at (3,1){\(*\)};
+\draw (3,1) --node[right]{\((3,1)\)}(3,1);
+\draw[red, fill, opacity=0.2] (2,2)--(3,1)--(2,1)--(2,2);
+\draw[red] (2,1.5) --node[left]{\(\Delta y =-1\)}(2,1.5);
+\draw[red] (2.5,1) --node[below]{\(\Delta x =1\)}(2.5,1);
+\draw[red] (2.5,1.5) --node[above right]{\(m=\frac{-1}{1}=-1\)}(2.5,1.5);\end{tikzpicture}]]>
+</latex-image>
+        </image>
+        <p>
+          An interactive version of this graph can be found here:   <figure><interactive desmos="9s3kfotxne" width="60%" aspect="4:3" /><caption>Test</caption></figure>
+        </p>
+      </statement>
+    </example>
+    <example xml:id="Example_NullSlope">
+      <statement>
+        <p>
+          Let <m>y=3</m>.
+          We can re-imagine this as <m>y=0x+3</m>,
+          so this represents a linear function with <m>m=0</m> and <m>b=3</m>.
+          Note that no matter what the <m>x</m> values are, <m>y=3</m>.
+          So <m>\Delta y=0</m>,
+          and <m>m=\frac{\Delta y}{\Delta x}=\frac{0}{\Delta x}=0</m>.
+          Intuitively, <m>y</m> is always 3 and never changes, so the
+          <q>rate of change</q>
+          is a constant nothing.
+          This gives us a horizontal line.
+        </p>
+        <p>
+          This can be represented visually:
+        </p>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[scale=1][domain=-1:5]
+\draw[gray!50, thin, step=1] (-1,-1) grid (5,5);
+\draw[very thick,->] (-1,0) -- (5.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-1) -- (0,5.1) node[above] {\(y\)};
+\draw[scale=1,domain=-1:5,smooth,variable=\x,blue] plot ({\x},{3});
+\node at (1,3){\(*\)};
+\draw (1,3) --node[above]{\((1,3)\)}(1,3);
+\node at (4,3){\(*\)};
+\draw (4,3) --node[above right]{\((4,3)\)}(4,3);
+\draw[red, opacity=0.2] (1,3)--(4,3);
+\draw[red] (1,3) --node[below left]{\(\Delta y =0\)}(1,3);
+\draw[red] (2.5,3) --node[below]{\(\Delta x =3\)}(2.5,3);
+\draw[red] (2.5,3) --node[above]{\(m=\frac{0}{3}=0\)}(2.5,3);\end{tikzpicture}]]>
+</latex-image>
+        </image>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[scale=1][domain=-1:5]
+\draw[gray!50, thin, step=1] (-1,-1) grid (5,5);
+\draw[very thick,->] (-1,0) -- (5.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-1) -- (0,5.1) node[above] {\(y\)};
+\draw[scale=1,domain=-1:5,smooth,variable=\x,blue] plot ({\x},{3});
+\node at (2,3){\(*\)};
+\draw (2,3) --node[above left]{\((2,3)\)}(2,3);
+\node at (3,3){\(*\)};
+\draw (3,3) --node[above right]{\((3,3)\)}(3,3);
+\draw[red, opacity=0.2] (2,3)--(3,3);
+\draw[red] (2,3) --node[below left]{\(\Delta y =0\)}(2,3);
+\draw[red] (2.5,3) --node[below]{\(\Delta x =1\)}(2.5,3);
+\draw[red] (2.5,4) --node[above]{\(m=\frac{0}{1}=0\)}(2.5,4);\end{tikzpicture}]]>
+</latex-image>
+        </image>
+        <p>
+          An interactive version of this graph can be found here: \url{https://www.desmos.com/calculator/pv7m6fbugb}.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title><m>\mathbf{y}</m>-intercept.</title>
+    <p>
+      The <m>\mathbf{y}</m><term>-intercept</term>
+      of a linear function <m>y=mx+b</m> is the value <m>b</m>.
+      It is so named because it is the value of the linear function when it
+      <term>intercepts</term> the <m>y</m>-axis.
+      The reason for this is that the <m>y</m>-axis is exactly the line <m>x=0</m>,
+      and when <m>x=0</m>, <m>y=m(0)+b=b</m>.
+    </p>
+    <example xml:id="Example_Intercept">
+      <statement>
+        <p>
+          Let us recall <xref ref="Example_Slope">Example</xref> and let <m>y=-x+4</m>.
+          Note that when <m>x=0, y=-(0)+4=4</m>.
+        </p>
+        <p>
+          This can be represented visually:
+        </p>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[scale=1][domain=-1:5]
+\draw[gray!50, thin, step=1] (-1,-1) grid (5,5);
+\draw[very thick,->] (-1,0) -- (5.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-1) -- (0,5.1) node[above] {\(y\)};
+\draw[scale=1,domain=-1:5,smooth,variable=\x,blue] plot ({\x},{-1*\x+4});
+\node at (0,4){\(*\)};
+\draw (0,4) --node[right]{\((0,4)\)}(0,4);\end{tikzpicture}]]>
+</latex-image>
+        </image>
+        <p>
+          Note that <m>4</m> is the height of the function when it intercepts the <m>y</m>-axis.
+        </p>
+      </statement>
+    </example>
+    <example xml:id="Example_Intercept2">
+      <statement>
+        <p>
+          Let us recall <xref ref="Example_NullSlope">Example</xref> and let <m>y=3=0x+3</m>.
+          Note that when <m>x=0, y=3</m>.
+        </p>
+        <p>
+          This can be represented visually:
+        </p>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[scale=1][domain=-1:5]
+\draw[gray!50, thin, step=1] (-1,-1) grid (5,5);
+\draw[very thick,->] (-1,0) -- (5.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-1) -- (0,5.1) node[above] {\(y\)};
+\draw[scale=1,domain=-1:5,smooth,variable=\x,blue] plot ({\x},{3});
+\node at (0,3){\(*\)};
+\draw (0,3) --node[above right]{\((0,3)\)}(0,3);\end{tikzpicture}]]>
+</latex-image>
+        </image>
+        <p>
+          Note that <m>3</m> is the height of the function when it intercepts the <m>y</m>-axis.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Translating from Algebra to Geometry</title>
+    <p>
+      We can see in our above examples that linear functions have both an algebraic form and a geometric interpretation.
+      Both are useful and in fact necessary to understand what's going on with a linear function.
+      So what we now want to ask ourselves is,
+      given the algebraic expression for a line,
+      how might we find it's geometric representation?
+    </p>
+    <p>
+      Intuitively,
+      we know that if we had a sheet of paper and a ruler,
+      if we drew 2 points on this paper,
+      we could find the line between them.
+      So to find a geometric representation of a linear function,
+      we should:
+      <ol>
+        <li>
+          <p>
+            Find a point that must be on thee line.
+          </p>
+        </li>
+        <li>
+          <p>
+            Identify a second point on the line.
+          </p>
+        </li>
+        <li>
+          <p>
+            Draw the line between them.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <example xml:id="Example_DrawLine">
+      <statement>
+        <p>
+          Draw the line <m>y=f(x)</m> where <m>f(x)=-\frac{2}{3}x+4</m>.
+          <ol>
+            <li>
+              <p>
+                We first identify a point on the line,
+                the easiest to find is probably the <m>y</m>-intercept,
+                note that when <m>x=0, f(x)=-\frac{2}{3}(0)+4=4</m>,
+                thus <m>(0,4)</m> is on <m>y=f(x)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                We have infinitely many choices for a second point,
+                but to make the arithmetic easy, let's let <m>x=3</m>,
+                then <m>f(x)=-\frac{2}{3}(3)+4=-2+4=2</m>,
+                so <m>(3,2)</m> is on the line.
+                Note this gives us:
+                <image>
+                   <latex-image> <![CDATA[\begin{tikzpicture}[scale=1][domain=-1:5] \draw[gray!50, thin, step=1] (-1,-1) grid (5,5); \draw[very thick,->] (-1,0) -- (5.1,0) node[right] {\(x\)}; \draw[very thick,->] (0,-1) -- (0,5.1) node[above] {\(y\)};     \node at (0,4){\(*\)}; \draw (0,4) --node[above right]{\((0,4)\)}(0,4);  \node at (3,2){\(*\)}; \draw (3,2) --node[above right]{\((3,2)\)}(3,2);\end{tikzpicture}]]> </latex-image>
+                </image>
+              </p>
+            </li>
+            <li>
+              <p>
+                We then literally connect the dots:
+                <image>
+                   <latex-image> <![CDATA[\begin{tikzpicture}[scale=1][domain=-1:5] \draw[gray!50, thin, step=1] (-1,-1) grid (5,5); \draw[very thick,->] (-1,0) -- (5.1,0) node[right] {\(x\)}; \draw[very thick,->] (0,-1) -- (0,5.1) node[above] {\(y\)};    \draw[scale=1,domain=-1:5,smooth,variable=\x,blue] plot ({\x},{(-2/3)*\x+4});  \node at (0,4){\(*\)}; \draw (0,4) --node[above right]{\((0,4)\)}(0,4);  \node at (3,2){\(*\)}; \draw (3,2) --node[above right]{\((3,2)\)}(3,2);\end{tikzpicture}]]> </latex-image>
+                </image>
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          Modern technology also let's us readily draw these functions: \url{https://www.desmos.com/calculator/gyvulordwz}.
+        </p>
+      </statement>
+    </example>
+    <example xml:id="Example_DrawLineOtherForm">
+      <statement>
+        <p>
+          Draw the line <m>2x+4y=8</m>.
+          <ol>
+            <li>
+              <p>
+                We first identify a point on the line.
+                To make life easy note that when <m>x=0, 2(0)+4y=8</m> and <m>y=2</m>,
+                thus <m>(0,2)</m> is on <m>2x+4y=8</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Similarly when <m>y=0, 2x+4(0)=8</m> and <m>x=4</m>,
+                thus <m>(4,0)</m> is on <m>2x+4y=8</m>.
+                Note this gives us:
+                <image>
+                   <latex-image> <![CDATA[\begin{tikzpicture}[scale=1][domain=-1:5] \draw[gray!50, thin, step=1] (-1,-1) grid (5,5); \draw[very thick,->] (-1,0) -- (5.1,0) node[right] {\(x\)}; \draw[very thick,->] (0,-1) -- (0,5.1) node[above] {\(y\)};     \node at (0,2){\(*\)}; \draw (0,2) --node[above right]{\((0,2)\)}(0,2);  \node at (4,0){\(*\)}; \draw (4,0) --node[above right]{\((4,0)\)}(4,0);\end{tikzpicture}]]> </latex-image>
+                </image>
+              </p>
+            </li>
+            <li>
+              <p>
+                We then connect the dots:
+                <image>
+                   <latex-image> <![CDATA[\begin{tikzpicture}[scale=1][domain=-1:5] \draw[gray!50, thin, step=1] (-1,-1) grid (5,5); \draw[very thick,->] (-1,0) -- (5.1,0) node[right] {\(x\)}; \draw[very thick,->] (0,-1) -- (0,5.1) node[above] {\(y\)};    \draw[scale=1,domain=-1:5,smooth,variable=\x,blue] plot ({\x},{(-1/2)*\x+2});  \node at (0,2){\(*\)}; \draw (0,2) --node[above right]{\((0,2)\)}(0,2);  \node at (4,0){\(*\)}; \draw (4,0) --node[above right]{\((4,0)\)}(4,0);\end{tikzpicture}]]> </latex-image>
+                </image>
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          Again, utilizing technology: \url{https://www.desmos.com/calculator/lprlevpf6q}.
+        </p>
+        <p>
+          Note that we could have taken <m>2x+4y=8</m> and rewritten it:
+          <md>
+            <mrow>2x+4y\amp =\amp 8</mrow>
+            <mrow>4y\amp =\amp -2x+8</mrow>
+            <mrow>y\amp =\amp -\frac{1}{2}x+2</mrow>
+          </md>,
+          and from here,
+          treated it the same way as in <xref ref="Example_DrawLine">Example</xref>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

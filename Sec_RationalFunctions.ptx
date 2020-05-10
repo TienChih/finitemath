@@ -1,0 +1,115 @@
+<section xml:id="Sec_RationalFunctions">
+  <title>Rational Functions</title>
+  <introduction>
+    <definition>
+      <statement>
+        <p>
+          A <term>rational function</term> is a function <m>r(x)</m> which may be written as <m>r(x)=\frac{p(x)}{q(x)}</m> where
+          <m>p(x),
+          q(x)</m> are both polynomials, and <m>q(x)\neq 0</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Now when we say <m>q(x)\neq0</m>,
+      we mean that <m>q(x)</m> is not the polynomial 0, not that <m>q(x)</m> could never be 0.
+      As before, we will consider the long and short term behavior of polynomials.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Long Term Behavior</title>
+    <p>
+      For Polynomials,
+      what determined the long term behavior of a polynomial was the leading term.
+      So it makes sense that a rational function will be determined the same way.
+      Given
+      <me>
+        r(x)=\frac{a_nx^n+\cdots a_0x^0}{b_mx^m+\cdots b_0x^0}
+      </me>,
+      we can determine the long term behavior with
+      <me>
+        \frac{a_nx^n}{b_mx^m}
+      </me>
+      which simplifies to <m>\frac{a_n}{b_m}x^{n-m}</m>.
+      So there are some cases to consider here:
+      <ul>
+        <li>
+          <p>
+            If <m>n>m</m>,
+            then <m>\frac{a_n}{b_m}x^{n-m}</m> is just a regular monomial.
+            This doesn't mean that <m>r(x)</m>'s graph will look like a polynomial's, but it does mean the long term behavior will be the same as that of a polynomial.
+            For example consider <m>y=\frac{-x^4+x}{x+1}</m>.
+            We should note:
+            <m>\frac{-x^4-x}{x+1}\sim\frac{-x^4}{x} \sim -x^3</m>,
+            so the long term behavior of <m>y</m> will be the same as <m>-x^3</m>'s:
+            positive infinity to the left,
+            negative infinity to the right. \url{https://www.desmos.com/calculator/jzxyyrcgep}.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>n=m</m>,
+            then <m>\frac{a_n}{b_m}x^{n-m}=\frac{a_n}{b_m}</m> is just a constant.
+            So as the magnitude of <m>x</m> grows,
+            these values approach <m>\frac{a_n}{b_m}</m>.
+            For example consider <m>y=\frac{-2x^4+x}{3x^4+1}</m>.
+            We should note:
+            <m>\frac{-2x^4-x}{3x^4+1}\sim\frac{-2x^4}{3x^4} \sim -\frac{2}{3}</m>,
+            so the long term behavior of <m>y</m> will be the same as
+            <m>-\frac{2}{3}</m>'s: \url{https://www.desmos.com/calculator/qaeq86mivp}.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>n\lt m</m>,
+            then <m>\frac{a_n}{b_m}x^{n-m}=\frac{a_n}{b_m}\frac{1}{x^{m-n}}</m>.
+            As the magnitude of <m>x</m> grows,
+            the more <m>\frac{1}{x^{m-n}}</m> will shrink and the entire function converges to 0.
+            For example consider <m>y=\frac{-2x^2+x}{3x^4+1}</m>.
+            We should note:
+            <m>\frac{-2x^2-x}{3x^4+1}\sim\frac{-2x^2}{3x^4} \sim -\frac{2}{3}\frac{1}{x^2}</m>,
+            so the long term behavior of <m>y</m> will be converging to 0: \url{https://www.desmos.com/calculator/n0ftbxmcod}.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Short term behavior</title>
+    <p>
+      Here, we once again care about the multiplicity of the roots, that is,
+      if <m>r(x)=\frac{p(x)}{q(x)}</m>,
+      what we care about is when <m>p(x)</m> or <m>q(x)</m> is 0, and what the multiplicity is.
+    </p>
+    <p>
+      Well, turns out, 0 divided by anything is 0.
+      So if the numerator is 0, then <m>r(x)</m> is 0.
+      Moreover, it bounces or crosses in the same way as a polynomial.
+      So if the multiplicity is odd,
+      the function crosses and if it's even, it bounces.
+    </p>
+    <p>
+      For example, consider <m>r_1(x)=\frac{x-1}{x}</m>.
+      It is clearly 0 when <m>x=1</m>,
+      and since the multiplicity is odd,
+      we cross \url{https://www.desmos.com/calculator/9graa40kq1}. But if we change that to <m>r_2(x)=\frac{(x-1)^2}{x}</m>,
+      the multiplicity is now even so we bounce \url{https://www.desmos.com/calculator/iy9kvoac37}.
+    </p>
+    <p>
+      It also turns out you can't divide by 0.
+      So at those points, the function is undefined.
+      And as the values in the denominator towards 0, the overall value of the quotient approaches either positive or negative infinity.
+      Just like roots,
+      whether or not we change signs at these asymptotes depends on the multiplicity of the root.
+    </p>
+    <p>
+      For example, again consider <m>r_1(x)=\frac{x-1}{x}</m>.
+      The denominator is 0 when <m>x=0</m>,
+      so we have a vertical asymptote there.
+      Since the multiplicity is odd,
+      we change signs there: \url{https://www.desmos.com/calculator/ik9xwhui5i}. If we made that multiplicity even,
+      the function would not change sign at <m>x=0</m>,
+      so for <m>r_2(x)=\frac{x-1}{x^2}</m>: \url{https://www.desmos.com/calculator/h5famtu30t}
+    </p>
+  </subsection>
+</section>

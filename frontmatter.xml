@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2015/07/12)                     -->
+<!--                                               -->
+<!--   Abstract Algebra: Theory and Applications   -->
+<!--                                               -->
+<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
+
+<frontmatter xml:id="index" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <titlepage>
+
+        <author>
+            <personname>Tien Chih</personname>
+            <department>Department of Mathematics</department>
+            <institution>Montana State University-Billings</institution>
+            <email>tien.chih@msubillings.edu</email>
+        </author>
+
+        
+
+        <date><today /></date>
+
+    </titlepage>
+
+    <colophon xml:id="front-colophon">
+
+        <credit>
+            <role>Cover Design</role>
+            <entity>Covers 4 U</entity>
+        </credit>
+        <credit>
+            <role>Production Editor</role>
+            <entity>Vilma Mesa</entity>
+        </credit>
+
+        <edition>Annual Edition 2015</edition>
+
+        <website>
+            <name><c>abstract.pugetsound.edu</c></name>
+            <address>http://abstract.pugetsound.edu</address>
+        </website>
+
+        <copyright>
+            <year>1997<ndash />2015</year>
+            <holder>Thomas W. Judson, Robert A. Beezer</holder>
+            <minilicense>GFDL License</minilicense>
+            <shortlicense>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included in the appendix entitled <q>GNU Free Documentation License.</q>  All trademarks<trademark /> are the registered<registered /> marks of their respective owners.</shortlicense>
+        </copyright>
+
+    </colophon>
+
+    <!-- A section of its own in HTML, migrates to copyright-page in LaTeX -->
+    <!-- Titles are optional, presumably none for single author,           -->
+    <!-- or for every author, even if we test a mix here                   -->
+    <biography xml:id="author-bio-TWJ">
+        <p>Tien Chih did his undergraduate work in Hawaii, his graduate work in Montana and presently teaches in Billings, Montana.</p>
+
+
+
+         <p>He likes to cook, bike of course doing Mathematics.</p>
+
+         <p> He believes Mathematics is part of the cultural legacy of every person, and it's doors should be closed to no one.</p>
+    </biography>
+
+    
+
+    <!-- The following items must be placed in the desired/required order -->
+    <!-- This will be checked by a Document Type Definition eventually -->
+    <!-- Order: dedication, acknowledgements, forewords, prefaces -->
+
+    <!-- Each paragraph gets centered and has some vertical separatation -->
+    <!-- A line element may be used here with a single paragraph   -->
+    <dedication xml:id="dedication">
+        <p>
+            <line>To students and would be students.  Learning is your right.</line>
+        </p>
+        <p>To those who I've taught , and to those who have taught me.</p>
+    </dedication>
+
+    <acknowledgement xml:id="acknowledgement">
+
+        <p>I would like to acknowledge the following reviewers for their helpful comments and suggestions.<ul>
+            <li><p>Someone at somepoint.</p></li>
+        </ul></p>
+
+        <p>I want to thank my wife Tara for standing by my side through the bright and dark times.  You never wavered even when I did.</p>
+
+        <p>To Abdelnaser AlHasan, Ramon Figueroa, Mark Kayll, Jennifer McNulty, George McRae, Demitri Plessas, Nikolaus Vonesson and many many others.  You all made me the mathematician I am today.</p>
+
+        <!-- Added NSF support statement.  TWJ 8/9/2012 -->
+
+    </acknowledgement>
+
+    <preface xml:id="preface">
+
+        <p>NAH</p>
+
+
+
+        <sidebyside>
+        <!-- Replaced figure with tikz figure - TWJ 6/14/2010 -->
+
+            <image xml:id="preface-dependencies">
+                <latex-image>
+                    <![CDATA[
+                    \begin{tikzpicture}[scale=0.8]
+
+                    \draw (3.5,0) rectangle (6.5,1);
+                    \node at (5,0.5) {Chapter 23};
+
+                    \draw (3.5,1.5) rectangle (6.5,2.5);
+                    \node at (5,2) {Chapter 22};
+
+                    \draw (3.5,3) rectangle (6.5,4);
+                    \node at (5,3.5) {Chapter 21};
+
+                    \draw (0,4.5) rectangle (3,5.5);
+                    \node at (1.5,5) {Chapter 18};
+
+                    \draw (3.5,4.5) rectangle (6.5,5.5);
+                    \node at (5,5) {Chapter 20};
+
+                    \draw (7,4.5) rectangle (10,5.5);
+                    \node at (8.5,5) {Chapter 19};
+
+                    \draw (3.5,6) rectangle (6.5,7);
+                    \node at (5,6.5) {Chapter 17};
+
+                    \draw (10.5,6) rectangle (13.5,7);
+                    \node at (12,6.5) {Chapter 15};
+
+                    \draw (0,7.5) rectangle (3,8.5);
+                    \node at (1.5,8) {Chapter 13};
+
+                    \draw (3.5,7.5) rectangle (6.5,8.5);
+                    \node at (5,8) {Chapter 16};
+
+                    \draw (7,7.5) rectangle (10,8.5);
+                    \node at (8.5,8) {Chapter 12};
+
+                    \draw (10.5,7.5) rectangle (13.5,8.5);
+                    \node at (12,8) {Chapter 14};
+
+                    \draw (3.5,9) rectangle (6.5,10);
+                    \node at (5,9.5) {Chapter 11};
+
+                    \draw (3.5,10.5) rectangle (6.5,11.5);
+                    \node at (5,11) {Chapter 10};
+
+                    \draw (0,12) rectangle (3,13);
+                    \node at (1.5,12.5) {Chapter 8};
+
+                    \draw (3.5,12) rectangle (6.5,13);
+                    \node at (5,12.5) {Chapter 9};
+
+                    \draw (7,12) rectangle (10,13);
+                    \node at (8.5,12.5) {Chapter 7};
+
+                    \draw (3.5,13.5) rectangle (6.5,14.5);
+                    \node at (5,14) {Chapters 1--6};
+
+                    \draw (5,1) -- (5,1.5) (5,2.5) -- (5,3)  (5,4) -- (5,4.5)  (5,5.5) -- (5,6)  (5,7) -- (5,7.5)  (5,8.5) -- (5,9)  (5,10) -- (5,10.5)  (5,11.5) -- (5,12)  (5,13) -- (5,13.5);
+
+                    \draw [dashed] (6.5,0.5) -- (12,0.5) -- (12,6);
+
+                    \draw (12,7) -- (12,7.5) (12,8.5) -- (12,9.5) -- (6.5,9.5) (8.5,8.5) -- (8.5,9.5);
+
+                    \draw (8.5,5.5) -- (8.5,6.5) -- (6.5,6.5);
+
+                    \draw (8.5,13) -- (8.5,14) -- (6.5,14);
+
+                    \draw [dashed] (3.5,0.5) -- (-0.5,0.5) -- (-0.5,8) -- (0,8);
+
+                    \draw [dashed] (3.5,2) -- (-1,2) -- (-1,12.5) -- (0,12.5);
+
+                    \draw (1.5,5.5) -- (1.5,6.5) -- (3.5,6.5);
+
+                    \draw (1.5,8.5) -- (1.5,9.5) -- (3.5,9.5);
+
+                    \draw (1.5,13) -- (1.5,14) -- (3.5,14);
+
+                    \end{tikzpicture}]]>
+                </latex-image>
+            </image>
+        </sidebyside>
+
+        <p>Though there are no specific prerequisites for a course in abstract algebra, students who have had other higher-level courses in mathematics will generally be more prepared than those who have not, because they will possess a bit more mathematical sophistication. Occasionally, we shall assume some basic linear algebra; that is, we shall take for granted an elementary knowledge of matrices and determinants. This should present no great problem, since most students taking a course in abstract algebra have been introduced to matrices and determinants elsewhere in their career, if they have not already taken a sophomore or junior-level course in linear algebra.</p>
+
+        <p>Exercise sections are the heart of any mathematics text. An exercise set appears at the end of each chapter. The nature of the exercises ranges over several categories; computational,  conceptual, and theoretical problems are included. A section presenting hints and solutions to many of the exercises appears at the end of the text. Often in the solutions a proof is only sketched, and it is up to the student to provide the details. The exercises range in difficulty from very easy to very challenging. Many of the more substantial problems require careful thought, so the student should not be discouraged if the 	solution is not forthcoming after a few minutes of work.</p>
+
+        <!-- Removed reference to the solutions manual.  TWJ 8/19/2010 -->
+        <!-- A complete solutions manual is available for the instructor's use.  -->
+
+        <p>There are additional exercises or computer projects at the ends of many of the chapters. The computer projects usually require a knowledge of programming. All of these exercises and projects are more substantial in nature and allow the exploration of new results and theory.</p>
+
+        <!-- % Added Sage blurb, RAB 2011/07/28 -->
+        <p>Sage (<url href="http://sagemath.org">sagemath.org</url>) is a free, open source, software system for advanced mathematics, which is ideal for assisting with a study of abstract algebra. Sage can be used either on your own computer, a local server, or on SageMathCloud (<url href="https://cloud.sagemath.com">https://cloud.sagemath.com</url>). Robert Beezer has written a comprehensive introduction to Sage and a selection of relevant exercises that appear at the end of each chapter, including live Sage cells in the web version of the book.</p>
+
+        <attribution>
+            <line>Thomas W. Judson</line>
+            <line>Nacogdoches, Texas 2015</line>
+        </attribution>
+
+    </preface>
+
+    <preface xml:id="contributors">
+        <title>Contributors to the 4<m>^\mathrm{th}</m> Edition</title>
+
+        <p>Many individuals have made this book possible.  We will try to thank a few of them here, and hope we have not forgotten anybody really important.</p>
+
+        <contributors>
+            <contributor xml:id="tjudson">
+                <personname>Thomas Judson</personname>
+                <department>Department of Mathematics and Statistics</department>
+                <institution>Stephen F. Austin State University</institution>
+                <email>judsontw@sfasu.edu</email>
+            </contributor>
+
+            <contributor xml:id="dfarmer">
+                <personname>David Farmer</personname>
+                <institution>American Institute of Mathematics</institution>
+                <email>farmer@aimath.org</email>
+            </contributor>
+
+            <contributor>
+                <personname>Robert Beezer</personname>
+                <department>Department of Mathematics and Computer Science</department>
+                <institution>University of Puget Sound</institution>
+                <location>Tacoma, Washington, USA</location>
+                <email>beezer@pugetsound.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>Alex Jordan</personname>
+                <department>Department of Mathematics</department>
+                <institution>Portland Community College</institution>
+                <location>Portland, OR</location>
+                <email>alex.jordan@pcc.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>Thomas Judson</personname>
+                <department>Department of Mathematics and Statistics</department>
+                <institution>Stephen F. Austin State University</institution>
+                <email>judsontw@sfasu.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>David Farmer</personname>
+                <institution>American Institute of Mathematics</institution>
+                <email>farmer@aimath.org</email>
+            </contributor>
+
+            <contributor>
+                <personname>Robert Beezer</personname>
+                <department>Department of Mathematics and Computer Science</department>
+                <institution>University of Puget Sound</institution>
+                <location>Tacoma, Washington, USA</location>
+                <email>beezer@pugetsound.edu</email>
+            </contributor>
+
+            <contributor xml:id="ajordan">
+                <personname>Alex Jordan</personname>
+                <department>Department of Mathematics</department>
+                <institution>Portland Community College</institution>
+                <location>Portland, OR</location>
+                <email>alex.jordan@pcc.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>Thomas Judson</personname>
+                <department>Department of Mathematics and Statistics</department>
+                <institution>Stephen F. Austin State University</institution>
+                <email>judsontw@sfasu.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>David Farmer</personname>
+                <institution>American Institute of Mathematics</institution>
+                <email>farmer@aimath.org</email>
+            </contributor>
+
+            <contributor>
+                <personname>Robert Beezer</personname>
+                <department>Department of Mathematics and Computer Science</department>
+                <institution>University of Puget Sound</institution>
+                <location>Tacoma, Washington, USA</location>
+                <email>beezer@pugetsound.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>Alex Jordan</personname>
+                <department>Department of Mathematics</department>
+                <institution>Portland Community College</institution>
+                <location>Portland, OR</location>
+                <email>alex.jordan@pcc.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>Thomas Judson</personname>
+                <department>Department of Mathematics and Statistics</department>
+                <institution>Stephen F. Austin State University</institution>
+                <email>judsontw@sfasu.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>David Farmer</personname>
+                <institution>American Institute of Mathematics</institution>
+                <email>farmer@aimath.org</email>
+            </contributor>
+
+            <contributor xml:id="rbeezer">
+                <personname>Robert Beezer</personname>
+                <department>Department of Mathematics and Computer Science</department>
+                <institution>University of Puget Sound</institution>
+                <location>Tacoma, Washington, USA</location>
+                <email>beezer@pugetsound.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>Alex Jordan</personname>
+                <department>Department of Mathematics</department>
+                <institution>Portland Community College</institution>
+                <location>Portland, OR</location>
+                <email>alex.jordan@pcc.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>Thomas Judson</personname>
+                <department>Department of Mathematics and Statistics</department>
+                <institution>Stephen F. Austin State University</institution>
+                <email>judsontw@sfasu.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>David Farmer</personname>
+                <institution>American Institute of Mathematics</institution>
+                <email>farmer@aimath.org</email>
+            </contributor>
+
+            <contributor>
+                <personname>Robert Beezer</personname>
+                <department>Department of Mathematics and Computer Science</department>
+                <institution>University of Puget Sound</institution>
+                <location>Tacoma, Washington, USA</location>
+                <email>beezer@pugetsound.edu</email>
+            </contributor>
+
+            <contributor>
+                <personname>Alex Jordan</personname>
+                <department>Department of Mathematics</department>
+                <institution>Portland Community College</institution>
+                <location>Portland, OR</location>
+                <email>alex.jordan@pcc.edu</email>
+            </contributor>
+        </contributors>
+
+        <p>That's it.  Thanks everybody.</p>
+
+    </preface>
+
+</frontmatter>

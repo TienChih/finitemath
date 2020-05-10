@@ -1,0 +1,275 @@
+<section xml:id="Sec_MatrixArithmetic">
+  <title>Products and Sums of Matrices</title>
+  <introduction>
+    <p>
+      In the previous sections,
+      we saw how the entries of matrix may be used to record relationships between two collections of variables.
+      For example in <xref ref="Example_Vitamin">Example</xref>,
+      the entries in the <m>3\times 3</m> portion of the matrix represents the proportion of vitamins contained by a collection of supplements,
+      with each entry representing a vitamin-supplement pair.
+      It is natural then,
+      to wonder if we could combine relationships between variables or compose them.
+      The operations behind these ideas are the sums and products of matrices.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Products of Matrices</title>
+    <p>
+      We begin with a motivating example:
+    </p>
+    <example xml:id="Example_VitProd">
+      <statement>
+        <p>
+          Recall that in <xref ref="Example_Vitamin">Example</xref> Margo has three supplements:
+          the first contains 20% vitamin A, 20% vitamin D and 20\vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E.
+        </p>
+        <p>
+          On Monday she eats 100 mg of supplement 1, 100 mg of supplement 2 and 150 mg of supplement 3.
+          On Wednesday she eats 150 mg of supplement 1, 50 mg of supplement 2 and 100 mg of supplement 3.
+          Putting aside that this is an ill advised way to take supplements,
+          how much of each vitamin did she get on each day?
+        </p>
+        <p>
+          We first let
+          <me>
+            A= \left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)
+          </me>
+          represent the relation between vitamins and supplements,
+          where each row corresponds to vitamins,
+          and each column corresponds to supplements.
+          So the entry in the second row,
+          second column corresponds to the proportion of supplement 2 which is vitamin D, 30%.
+        </p>
+        <p>
+          A useful way to conceptualize this matrix is as an arrow or transformation,
+          whose inputs are mg of various supplements,
+          and whose outputs are mg of various vitamins.
+        </p>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node(S)[draw,circle,minimum size=2.5cm,inner sep=1pt] at (4,0) {Supplements};
+\node(V)[draw,circle,minimum size=2.5cm,inner sep=1pt] at (0,0) {Vitamins};
+\draw[->] (S) --node[above]{\(A\)} (V);\end{tikzpicture}]]>
+</latex-image>
+        </image>
+        <p>
+          Next, we record the relationship between days of the week and supplements:
+          <me>
+            B= \left( \begin{array}{rrr} 100 \amp  150\\ 100 \amp  50\\ 150 \amp  100 \end{array} \right)
+          </me>
+        </p>
+        <p>
+          Where now the rows are quantities of supplements and columns are days of the week.
+          So the 100 in the third row second column represents the 100mg taken on Wednesday of Supplement 3.
+          This to may be conceptualized as an arrow or transformation whose inputs are days of the week,
+          and whose outputs are quantities of supplements.
+        </p>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node(S)[draw,circle,minimum size=2.5cm,inner sep=1pt] at (4,0) {Supplements};
+\node(D)[draw,circle,minimum size=2.5cm,inner sep=1pt] at (8,0) {Days};
+\draw[->] (D) --node[above]{\(B\)} (S);\end{tikzpicture}]]>
+</latex-image>
+        </image>
+        <p>
+          Our goal now is to establish a relationship between days of the week and quantity of vitamins.
+        </p>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node(S)[draw,circle,minimum size=2.5cm,inner sep=1pt] at (4,0) {Supplements};
+\node(V)[draw,circle,minimum size=2.5cm,inner sep=1pt] at (0,0) {Vitamins};
+\node(D)[draw,circle,minimum size=2.5cm,inner sep=1pt] at (8,0) {Days};
+\draw[->] (S) --node[above]{\(A\)} (V);
+\draw[->] (D) --node[above]{\(B\)} (S);
+\draw [->, dashed, red] (D) to [out=150,in=30] node[above]{\(AB\)} (V);\end{tikzpicture}]]>
+</latex-image>
+        </image>
+        <p>
+          So, how much Vitamin A does Margo get on Monday?
+          She took 100 mg of Supplement 1, of which 20% is Vitamin A, 100 mg of Supplement 2, of which 10% is Vitamin A, and 150 mg of Supplement 1, of which 50% is Vitamin A:
+          <me>
+            \left( \begin{array}{rrr} \textcolor{red}{0.2} \amp  \textcolor{red}{0.1} \amp  \textcolor{red}{0.5}\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} \textcolor{blue}{100} \amp  150\\ \textcolor{blue}{100} \amp  50\\ \textcolor{blue}{150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} \textcolor{red}{0.2}\cdot\textcolor{blue}{100}+\textcolor{red}{0.1}\cdot\textcolor{blue}{100}+\textcolor{red}{0.5}\cdot\textcolor{blue}{150} \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)=\left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)
+          </me>.
+        </p>
+        <p>
+          So on Monday, Margo got 105 mg of vitamin A. What about the amount of vitamin D she received on Wednesday?
+          She took 150 mg of Supplement 1, of which 20% is Vitamin D, 50 mg of Supplement 2, of which 30% is Vitamin D, and 100 mg of Supplement 1, of which 10% is Vitamin A:
+          <md>
+            <mrow>\left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ \textcolor{red}{0.2} \amp  \textcolor{red}{0.3} \amp  \textcolor{red}{0.1}\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} 100 \amp  \textcolor{blue}{150}\\ 100 \amp  \textcolor{blue}{50}\\ 150 \amp  \textcolor{blue}{100} \end{array} \right)\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  \textcolor{red}{0.2}\cdot\textcolor{blue}{150}+\textcolor{red}{0.3}\cdot\textcolor{blue}{50}+\textcolor{red}{0.1}\cdot\textcolor{blue}{100} \\ ? \amp  ? \end{array} \right)</mrow>
+            <mrow>\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  55 \\ ? \amp  ? \end{array} \right)</mrow>
+          </md>.
+        </p>
+        <p>
+          So Margo got 55 mg of Vitamin D on Wednesday.
+          Following this line of thinking, we obtain matrix:
+          <me>
+            \left( \begin{array}{rrr} {0.2} \amp  {0.1} \amp  {0.5}\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} {100} \amp  150\\ {100} \amp  50\\ {150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} 105 \amp  85 \\ 65 \amp  55 \\ 90 \amp  70 \end{array} \right)
+          </me>.
+        </p>
+        <p>
+          This matrix records how much of each vitamin Margo had per day,
+          where vitamins are rows and days are columns.
+          So on Monday, she got 90 mg of Vitamin E, and on Wednesday,
+          she got 85 mg of Vitamin A.
+        </p>
+      </statement>
+    </example>
+    <p>
+      So with this illustrative example in mind,
+      we can define matrix multiplication.
+    </p>
+    <definition xml:id="Defn_MatrixProd">
+      <statement>
+        <p>
+          For any matrix <m>M</m>,
+          let <m>(M)_{ij}=m_{ij}</m> denote the entry in the <m>i</m>th row and <m>j</m>th column.
+          Then, given a <m>m\times n</m> matrix <m>A</m> and a <m>n\times k</m> matrix <m>B</m>,
+          we define <m>AB</m> the product of <m>A</m> and <m>B</m> to be a <m>m\times k</m> matrix where:
+          <me>
+            (AB)_{ij}=\begin{pmatrix}\textcolor{red}{a_{i1}} \amp  \textcolor{red}{a_{i2}} \amp  \cdots \amp  \textcolor{red}{a_{in}} \end{pmatrix} \begin{pmatrix}\textcolor{blue}{b_{1j}} \\ \textcolor{blue}{b_{2j}} \\ \vdots \\ \textcolor{blue}{b_{nj}} \end{pmatrix} =\begin{pmatrix}\textcolor{red}{a_{i1}}\textcolor{blue}{b_{1j}}+\textcolor{red}{a_{i2}}\textcolor{blue}{b_{2j}}+\cdots+\textcolor{red}{a_{in}}\textcolor{blue}{b_{nj}} \end{pmatrix}
+          </me>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      <term>Note that the number of columns of <m>A</m> and the number of rows of <m>B</m> must be the same.</term>
+      Recall <xref ref="Example_VitProd">Example</xref>,
+      the outputs of <m>B</m> corresponded to the rows,
+      and the inputs of <m>A</m> corresponded to it's columns,
+      so these had to match up.
+      This number is also the <m>n</m> is <xref ref="Defn_MatrixProd">Definition</xref>.
+    </p>
+    <example xml:id="Example_MoreMatrixProducts">
+      <statement>
+        <p>
+          Let
+          <me>
+            A=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} , B=\begin{pmatrix}0.2 \amp  0.4 \\ 0.5 \amp  0.6 \\ 0.1 \amp  0.8 \end{pmatrix} , C=\begin{pmatrix}10 \\ 20 \\ 15 \end{pmatrix}
+          </me>.
+        </p>
+        <p>
+          Find:
+          <ol>
+            <li>
+              <p>
+                <m>AB</m>.
+                <md>
+                  <mrow>AB=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \begin{pmatrix}0.2 \amp  0.4 \\ 0.5 \amp  0.6 \\ 0.1 \amp  0.8 \end{pmatrix} \amp =\amp \begin{pmatrix}1\cdot0.2+2\cdot0.5+3\cdot0.1 \amp  1\cdot0.4+2\cdot0.6+3\cdot0.8\\ 4\cdot0.2+5\cdot0.5+6\cdot0.1 \amp  4\cdot0.4+5\cdot0.6+6\cdot0.8 \end{pmatrix}</mrow>
+                  <mrow>\amp =\amp \begin{pmatrix}1.5 \amp  4 \\ 3.9  \amp   9.4 \end{pmatrix}</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>BA</m>.
+                <md>
+                  <mrow>BA=\begin{pmatrix}0.2 \amp  0.4 \\ 0.5 \amp  0.6 \\ 0.1 \amp  0.8 \end{pmatrix} \begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \amp =\amp \begin{pmatrix}0.2\cdot1+ 0.4\cdot 4 \amp  0.2\cdot2+ 0.4\cdot 5 \amp  0.2\cdot3+ 0.4\cdot6\\ 0.5\cdot1+ 0.6\cdot 4 \amp  0.5\cdot2+ 0.6\cdot 5 \amp  0.5\cdot3+ 0.6\cdot6\\ 0.1\cdot1+ 0.8\cdot 4 \amp  0.1\cdot2+ 0.8\cdot 5 \amp  0.1\cdot3+ 0.8\cdot6 \end{pmatrix}</mrow>
+                  <mrow>\amp =\amp \begin{pmatrix}1.8 \amp  2.4 \amp  3 \\ 2.9  \amp   4 \amp  5.1 \\ 3.3 \amp  4.2 \amp  5.1 \end{pmatrix}</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>AC</m>.
+                <md>
+                  <mrow>AC=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \begin{pmatrix}10\\20\\15 \end{pmatrix} \amp =\amp \begin{pmatrix}1\cdot10+2\cdot20+3\cdot15 \\ 4\cdot10+5\cdot20+6\cdot15 \end{pmatrix}</mrow>
+                  <mrow>\amp =\amp \begin{pmatrix}95 \\ 230 \end{pmatrix}</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>CA</m>.
+                Notice that if we try to take the product <m>CA</m>:
+                <md>
+                  <mrow>CA=\begin{pmatrix}10\\20\\15 \end{pmatrix} \begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \amp =\amp \begin{pmatrix}10\cdot1+?\cdot4 \amp  10\cdot2+?\cdot5 \amp  10\cdot3+?\cdot6 \\ 20\cdot1+?\cdot4 \amp  20\cdot2+?\cdot5 \amp  20\cdot3+?\cdot6\\15\cdot1+?\cdot4 \amp  15\cdot2+?\cdot5 \amp  15\cdot3+?\cdot6 \end{pmatrix}</mrow>
+                </md>
+                Since the number of columns of the first matrix do not match with the number of rows of the second matrix,
+                the product is not defined.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>BC</m>.
+                Since <m>B</m> has 2 columns and <m>C</m> has 3 rows,
+                these values do not match and this product is not defined.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>CB</m>.
+                Since <m>C</m> has 1 column and <m>B</m> has 2 rows,
+                these values do not match and this product is not defined.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <p>
+      Something we should observe here is that,
+      unlike products of real numbers,
+      products of matrices are <term>NOT</term> commutative.
+      In <xref ref="Example_MoreMatrixProducts">Example</xref>,
+      <m>AB\neq BA</m>,
+      and <m>AC</m> was defined whereas <m>CA</m> was not.
+    </p>
+    <p>
+      Another way matrix products deviate from real number products is that the product of matrices whose entries aren't 0 can result in a matrix whose entries are all 0.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Let
+          <me>
+            A=\begin{pmatrix}1\amp 2\\2\amp 4 \end{pmatrix} , B=\begin{pmatrix}2\amp 6\\-1\amp -3 \end{pmatrix}
+          </me>.
+        </p>
+        <p>
+          Notice that:
+          <md>
+            <mrow>AB=\begin{pmatrix}1\amp 2\\2\amp 4 \end{pmatrix} \begin{pmatrix}2\amp 6\\-1\amp -3 \end{pmatrix} \amp =\amp \begin{pmatrix}1\cdot 2+2\cdot(-1) \amp  1\cdot 6+2\cdot(-3)\\ 2\cdot 2+4\cdot(-1)\amp 2\cdot 6 +4\cdot(-3) \end{pmatrix}</mrow>
+            <mrow>\amp =\amp \begin{pmatrix}0 \amp  0 \\ 0 \amp  0 \end{pmatrix} </mrow>
+          </md>.
+        </p>
+        <p>
+          Although neither <m>A</m> nor <m>B</m> have 0 entries,
+          their product is an all 0 matrix.
+          Also notice that this does not mean <m>BA</m> is an all 0 matrix.
+          <md>
+            <mrow>BA=\begin{pmatrix}2\amp 6\\-1\amp -3 \end{pmatrix} \begin{pmatrix}1\amp 2\\2\amp 4 \end{pmatrix} \amp =\amp \begin{pmatrix}2\cdot 1+6\cdot2 \amp  2\cdot 2+6\cdot4\\ (-1)\cdot 1+(-3)\cdot2\amp (-1)\cdot 2 +(-3)\cdot4 \end{pmatrix}</mrow>
+            <mrow>\amp =\amp \begin{pmatrix}14 \amp  28 \\ -7 \amp  -14 \end{pmatrix} </mrow>
+          </md>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Sums of Matrices</title>
+    <p>
+      Matrix sums are much more straight forward than their products.
+      Two Matrices need to have the same dimensions in order to be summed,
+      and the sum is just the sum of the entries, so:
+      <me>
+        \begin{pmatrix}a \amp  b \\ c \amp  d \end{pmatrix} + \begin{pmatrix}w \amp  x \\ y \amp  z \end{pmatrix} =\begin{pmatrix}a+w \amp  b+x \\ c+y \amp  d+z \end{pmatrix}
+      </me>
+    </p>
+    <example>
+      <statement>
+        <p>
+          Company <m>B</m> gets in on this action and will give 2 dollars to each charity for each student who attends.
+          NOW given <m>F</m> female and <m>M</m> male students,
+          how much money will go to Elderly and the Homeless?
+          <md>
+            <mrow>\begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \left( \begin{pmatrix}2 \amp  1 \\ 1 \amp  2 \\ 2 \amp  2 \end{pmatrix}  + \begin{pmatrix}2 \amp  2 \\ 2 \amp  2 \\ 2 \amp  2 \end{pmatrix}    \right)\begin{pmatrix}F\\M \end{pmatrix} \amp =\amp \begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \begin{pmatrix}4 \amp  3 \\ 3 \amp  4 \\ 4 \amp  4 \end{pmatrix}  \begin{pmatrix}F\\M \end{pmatrix}</mrow>
+            <mrow>\amp =\amp \begin{pmatrix}4.7 \amp  4.4 \\ 7.3 \amp   6.6 \end{pmatrix} \begin{pmatrix}F\\M \end{pmatrix}</mrow>
+            <mrow>\amp =\amp \begin{pmatrix}4.7F+4.4M\\ 7.3F+6.6M \end{pmatrix}</mrow>
+          </md>
+        </p>
+        <p>
+          So $<m>4.7 F+4.4M</m> for Elderly and <m>\dollar7.3 F+6.6M</m> for Homeless.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

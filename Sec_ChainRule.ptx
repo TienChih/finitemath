@@ -1,0 +1,58 @@
+<section xml:id="Sec_ChainRule">
+  <title>Chain Rule</title>
+  <introduction>
+    <p>
+      We've so far covered sums products and quotients of functions,
+      so how about composition?
+      The <term> chain rule</term> is:
+      <m>\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x)</m>.
+      To see why:
+      <md>
+        <mrow>\frac{d}{dx}[f(g(x))]\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }</mrow>
+        <mrow>\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h}\textcolor{blue}{\frac{g(x+h)-g(x)}{g(x+h)-g(x)}}</mrow>
+        <mrow>\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}</mrow>
+        <mrow>\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}</mrow>
+      </md>
+    </p>
+    <p>
+      We're going tom play a second trick here,
+      we are goin to let <m>k=g(x+h)-g(x)</m>,
+      we also note then that <m>g(x+h+=g(x)+k</m>.
+      Also note that when <m>h\to 0</m> It follows that <m>k=g(x+h)-g(x)\to g(x+0)-g(x)=0</m>.
+      So we can make some replacements:
+      <md>
+        <mrow>\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}</mrow>
+        <mrow>\amp =\amp \limit{\textcolor{red}{k}}{0}\frac{f(\textcolor{red}{g(x)+k})-f(g(x))}{\textcolor{red}{k}}\limit{h}{0}\frac{g(x+h)-g(x)}{h}</mrow>
+        <mrow>\amp =\amp f'(g(x))g'(x)</mrow>
+      </md>
+    </p>
+  </introduction>
+  <subsection>
+    <title>Examples</title>
+    <p>
+      Consider <m>f(x)=\sqrt{x^2+1}</m>.
+      We can think of this as <m>f(x)=g(h(x))</m> where <m>g(x)=\sqrt{x}=x^{1/2}, h(x)=x^2+1</m>.
+      So <m>g'(x)=\frac{1}{2}x^{-1/2}, h'(x)=2x</m> and:
+      <md>
+        <mrow>f'(x)\amp =\amp \frac{d}{dx}[\sqrt{x^2+1}]</mrow>
+        <mrow>\amp =\amp \frac{d}{dx}[g(h(x))]</mrow>
+        <mrow>\amp =\amp g'(h(x))h'(x)</mrow>
+        <mrow>\amp =\amp \frac{1}{2}(x^2+1)^{-1/2}(2x)</mrow>
+        <mrow>\amp =\amp \frac{x}{\sqrt{x^2+1}}</mrow>
+      </md>.
+    </p>
+    <p>
+      Another example,
+      lets consider the derivative of <m>y=(x^2+100)^{300}</m>.
+      We COULD expand this polynomial out,
+      but lets agree no one wants that.
+      On the other hand by the chain rule:
+      <md>
+        <mrow>\frac{dy}{dx}\amp =\amp \frac{d}{dx}[(x^2+100)^{300}],\ \text{ so by the chain rule: }</mrow>
+        <mrow>\amp =\amp 300(x^2+100)^{299}\frac{d}{dx}[x^2+100]</mrow>
+        <mrow>\amp =\amp 300(x^2+100)^{299}(2x)</mrow>
+        <mrow>\amp =\amp 600x(x^2+100)^{299}</mrow>
+      </md>.
+    </p>
+  </subsection>
+</section>

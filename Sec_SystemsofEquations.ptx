@@ -1,0 +1,322 @@
+<section xml:id="Sec_SystemsofEquations">
+  <title>Systems of Linear  Equations</title>
+  <introduction>
+    <p>
+      A system of equations with unknowns
+      <m>x_1,\ldots,x_n</m> is a collection of first degree equations:
+      <md>
+        <mrow>a_{1,1}x_1+a_{1,2}x_2+\cdots+a_{1,n}x_n\amp =\amp b_1</mrow>
+        <mrow>a_{2,1}x_1+a_{2,2}x_2+\cdots+a_{2,n}x_n\amp =\amp b_1</mrow>
+        <mrow>\vdots \amp =\amp \vdots</mrow>
+        <mrow>a_{m,1}x_1+a_{m,2}x_2+\cdots+a_{m,n}x_n\amp =\amp b_1</mrow>
+      </md>
+    </p>
+  </introduction>
+  <subsection>
+    <title>What Exactly is  a Solution to a System of Linear Equations?</title>
+    <p>
+      To answer the question that is the name of this section,
+      we should kinda back up here and ask
+      <q>What is a solution to an equation?</q>
+    </p>
+    <p>
+      For example, what is a solution to <m>y=2x+3</m>?
+      After dealing with linear equations in Chapter 1, we should have some sense as to what <m>y=2x+3</m> looks like,
+      that is a line with slope 2 and <m>y</m>-intercept <m>(0,3)</m>.
+      But what IS this line?
+      It's the collection of all points <m>(x,y)</m> that make the above equation true.
+      So <m>(0,3), (-1,1)</m> and <m>(2,7)</m> are all on this line because they make the equation true (<m>3=2(0)+3, 1=2(-1)+3, 7=2(2)+3</m>).
+      A point like <m>(1,1)</m> is NOT on this line because <m>1\neq 2(1)+3</m>.
+    </p>
+    <p>
+      So a solution to an equation is
+      <term>any point which makes the equation true</term>.
+    </p>
+    <p>
+      A <em>System of Equations</em> is a collection of equations.
+      Thus, a solution to a system of equations is
+      <term>any point which makes <em>all</em>
+      the equations true</term>.
+    </p>
+  </subsection>
+  <subsection>
+    <title>What are the Types of Solutions that we can have?</title>
+    <p>
+      So a solution to the system:
+      <md>
+        <mrow>2x+3y\amp =\amp 15</mrow>
+        <mrow>x-y\amp =\amp 0</mrow>
+      </md>
+      is a collection of points that satisfy the first AND the second linear equalities.
+      The first equation describes the line:
+      <m>y=-\frac{2}{3}x+5</m>, whereas the second describes the line <m>y=x</m>.
+      Each of these equations represent lines,
+      so each individually has infinitely many solutions.
+      The question is, how many solutions do these lines have in common?
+    </p>
+    <p>
+      There are a number of ways to find out,
+      but the most straight forward is simply to graph the system:
+    </p>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[scale=0.5][domain=-1:10]
+\draw[gray!50, thin, step=1] (-1,-1) grid (10,10);
+\draw[very thick,->] (-1,0) -- (10.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-1) -- (0,10.1) node[above] {\(y\)};
+\draw[scale=1,domain=-1:9,smooth,variable=\x,blue] plot ({\x},{(-2/3)*\x+5});
+\draw[scale=1,domain=-1:10,smooth,variable=\x,red] plot ({\x},{\x});
+\node at (3,3){\(*\)};
+\draw (3,3) --node[left]{\((3,3)\)}(3,3);
+\draw[blue] (8,2) --node[above]{\(2x+3y=15\)}(8,2);
+\draw[red] (7,8) --node[left]{\(x-y=0\)}(7,8);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <p>
+      \url{https://www.desmos.com/calculator/cdrgyxm2al}.
+    </p>
+    <p>
+      As one can see, although each line has infinitely many points,
+      the only solution they have in common is the point <m>(3,3)</m>.
+      To verify this, we note that <m>2(3)+3(3)=15</m> and <m>3-3=0</m>,
+      so both equations are satisfied.
+      This system has <term>a unique solution</term>
+    </p>
+    <p>
+      What else could happen when solving a system of equations?
+      Well, consider:
+      <md>
+        <mrow>x+y\amp =\amp 5</mrow>
+        <mrow>2x+2y\amp =\amp 10</mrow>
+      </md>.
+    </p>
+    <p>
+      If we look at the graph of both lines,
+      we only see one actual line:
+    </p>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[scale=0.5][domain=-1:10]
+\draw[gray!50, thin, step=1] (-1,-1) grid (10,10);
+\draw[very thick,->] (-1,0) -- (10.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-1) -- (0,10.1) node[above] {\(y\)};
+\draw[scale=1,domain=-1:6,smooth,variable=\x,blue] plot ({\x},{(-1)*\x+5});
+\draw[scale=1,domain=-1:6,smooth,variable=\x,red, dashed] plot ({\x},{-1*\x+5});
+\draw[blue] (5,0) --node[above right]{\(x+y=5\)}(5,0);
+\draw[red] (0,5) --node[above right]{\(2x+2y=10\)}(0,5);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <p>
+      \url{https://www.desmos.com/calculator/oaqbrkruhl}.
+    </p>
+    <p>
+      This is because both equations describe the same line.
+      After all, whenever <m>x+y=5</m>,
+      it would have to be true that
+      <m>2(x+y)=5\cdot2</m> and thus <m>2x+2y=10</m>.
+      So ANY point that is a solution to one equation is a solution to the other,
+      this system has <term>infinitely many solutions</term>.
+    </p>
+    <p>
+      Another possibility arises from the following example:
+      <md>
+        <mrow>x+y\amp =\amp 5</mrow>
+        <mrow>x+y\amp =\amp 6</mrow>
+      </md>
+    </p>
+    <p>
+      If we graph these lines side by side:
+    </p>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[scale=0.5][domain=-1:10]
+\draw[gray!50, thin, step=1] (-1,-1) grid (10,10);
+\draw[very thick,->] (-1,0) -- (10.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-1) -- (0,10.1) node[above] {\(y\)};
+\draw[scale=1,domain=-1:6,smooth,variable=\x,blue] plot ({\x},{(-1)*\x+5});
+\draw[scale=1,domain=-1:7,smooth,variable=\x,red] plot ({\x},{-1*\x+6});
+\draw[blue] (4,0) --node[above left]{\(x+y=5\)}(4,0);
+\draw[red] (0,6) --node[above right]{\(x+y=6\)}(0,5);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <p>
+      \url{https://www.desmos.com/calculator/djqxxge4ce}.
+    </p>
+    <p>
+      We can see that these lines are parallel and do not actually have any points in common.
+      After all, how many pairs of numbers <m>x</m> and <m>y</m> sum to both 5 AND 6?
+      It should be clear that this system has
+      <term>no solutions</term>.
+    </p>
+    <p>
+      Of course, these have all been Systems of Linear Equations in 2 variables.
+      When we increase the number of variables,
+      we increase the dimensionality of the potential solution space,
+      and what it means to be
+      <q>linear</q>
+      changes somewhat.
+      Nevertheless,
+      these examples illustrate the 3 possible outcomes of a system of linear equations in any dimension:
+      <ul>
+        <li>
+          <p>
+            There is a unique Solution.
+          </p>
+        </li>
+        <li>
+          <p>
+            There are infinitely many Solutions.
+          </p>
+        </li>
+        <li>
+          <p>
+            There are no Solutions.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection>
+    <title>How do we find the Solution(s)/know we have No Solutions?</title>
+    <p>
+      In 2 variables,
+      it's simple enough we can just graph, as we did above.
+      But we should try to develop some algebraic techniques as well,
+      since this will be harder to do when we increase the dimensions of our problems.
+    </p>
+    <p>
+      What we introduce here is the Echelon Method,
+      the general goal is to take non-zero multiples of our equations and use them to eliminate variables in the other equations so that a solution to a variable can be made known.
+      This process should also reveal if there are infinitely many or no solutions.
+    </p>
+    <example>
+      <statement>
+        <md>
+          <mrow>2x+3y\amp =\amp 1</mrow>
+          <mrow>x+y\amp =\amp 0</mrow>
+        </md>
+        <p>
+          We note that whatever the solutions to this are,
+          they should be the same as the solutions to:
+          <md>
+            <mrow>x+\frac{3}{2}y\amp =\amp \frac{1}{2}</mrow>
+            <mrow>x+y\amp =\amp 0</mrow>
+          </md>
+        </p>
+        <p>
+          We've divided the first equation in half,
+          but we haven't actually changed what points will make that equation true.
+          Then:
+          <md>
+            <mrow>x+\frac{3}{2}y\amp =\amp \frac{1}{2}</mrow>
+            <mrow>x+y-(x+\frac{3}{2}y)\amp =\amp 0-\frac{1}{2}</mrow>
+          </md>
+        </p>
+        <p>
+          Must also be true,
+          since we can add and subtract the same values from 2 sides of an equation and preserve the solutions.
+          By doing this,
+          we kill off the <m>x</m> in the second equation and we can solve for <m>y</m>:
+          <md>
+            <mrow>x+\frac{3}{2}y\amp =\amp \frac{1}{2}</mrow>
+            <mrow>-\frac{1}{2}y\amp =\amp -\frac{1}{2}</mrow>
+          </md>
+        </p>
+        <p>
+          So <m>y=1</m> based on the second line.
+          <md>
+            <mrow>x+\frac{3}{2}y\amp =\amp \frac{1}{2}</mrow>
+            <mrow>y\amp =\amp 1</mrow>
+          </md>
+        </p>
+        <p>
+          If we take <m>-\frac{3}{2}</m> times the second line and add it to the first:
+          <md>
+            <mrow>x+\frac{3}{2}y-\frac{3}{2}(y)\amp =\amp \frac{1}{2}-\frac{3}{2}(1)</mrow>
+            <mrow>y\amp =\amp 1</mrow>
+          </md>
+        </p>
+        <p>
+          We obtain:
+          <md>
+            <mrow>x\amp =\amp -1</mrow>
+            <mrow>y\amp =\amp 1</mrow>
+          </md>
+        </p>
+        <p>
+          We can verify that if we consider the original system:
+          <md>
+            <mrow>2x+3y\amp =\amp 1</mrow>
+            <mrow>x+y\amp =\amp 0</mrow>
+          </md>
+          then by evaluating at <m>x=-1, y=1</m>:
+          <md>
+            <mrow>2(-1)+3(1)=-2+3\amp =\amp 1</mrow>
+            <mrow>-1+1\amp =\amp 0</mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          So if we consider:
+          <md>
+            <mrow>x+y\amp =\amp 2</mrow>
+            <mrow>2x+2y\amp =\amp 4</mrow>
+          </md>.
+        </p>
+        <p>
+          Just like before,
+          we want to kill the <m>x</m> in the second equation:
+          <md>
+            <mrow>x+y\amp =\amp 2</mrow>
+            <mrow>2x+2y-2(x+y)\amp =\amp 4-2(2)</mrow>
+          </md>.
+        </p>
+        <p>
+          Which gives us:
+          <md>
+            <mrow>x+y\amp =\amp 2</mrow>
+            <mrow>0\amp =\amp 0</mrow>
+          </md>.
+        </p>
+        <p>
+          Well..., certainly that second line doesn't contribute much,
+          zero is always equal to itself.
+          So the solutions are just whenever <m>x+y=2</m>,
+          which happens for infinitely many possible pairs.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Lastly, when we look at:
+          <md>
+            <mrow>x+y\amp =\amp 0</mrow>
+            <mrow>x+y\amp =\amp 1</mrow>
+          </md>.
+        </p>
+        <p>
+          We can try to kill the <m>x</m> in the second line as before:
+          <md>
+            <mrow>x+y\amp =\amp 0</mrow>
+            <mrow>x+y-(x+y)\amp =\amp 1-0</mrow>
+          </md>.
+        </p>
+        <p>
+          Where we get:
+          <md>
+            <mrow>x+y\amp =\amp 0</mrow>
+            <mrow>0\amp =\amp 1</mrow>
+          </md>.
+        </p>
+        <p>
+          So all you have to do is find a pair <m>(x,y)</m> so that <m>0=1</m>... which is not ever going to happen.
+          So this will never have a solution.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

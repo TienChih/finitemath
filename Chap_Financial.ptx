@@ -1,0 +1,6 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_Financial">
+  <title>Financial Mathematics</title>
+  <xi:include  href="Sec_SimpleInterest.ptx"/>
+  <xi:include  href="Sec_CompoundInterest.ptx"/>
+  <xi:include  href="Sec_RegularPayments.ptx"/>
+</chapter>

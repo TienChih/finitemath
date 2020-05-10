@@ -1,0 +1,21 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_Matrices">
+  <title>Systems of Linear Equations and Matrices</title>
+  <introduction>
+    <p>
+      In this chapter, we introduce the notion of Linear Systems.
+      Linear Systems occur whenever we have collections of variables with linear relations with each other.
+      For example,
+      we may want to eat a diet which contains certain levels of protein and fiber,
+      and we wonder how much chicken and kale we should eat to achieve this?
+      Or we have Business, English and Math students,
+      each of whom take different number of these courses,
+      if we knew how many of each major there were,
+      could we compute how many credits of each type of course would be taught?
+      This chapter will focus on the techniques and tools to model and address these types of situations.
+    </p>
+  </introduction>
+  <xi:include  href="Sec_SystemsofEquations.ptx"/>
+  <xi:include  href="Sec_SystemasMatrix.ptx"/>
+  <xi:include  href="Sec_MatrixArithmetic.ptx"/>
+  <xi:include  href="Sec_MatrixSage.ptx"/>
+</chapter>

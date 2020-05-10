@@ -1,0 +1,34 @@
+<section xml:id="Fallacies">
+  <title>Fallacies</title>
+  <introduction>
+    <p>
+      The following are common <term> Fallacies</term>.
+      They seem like they could be true but they are not.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Fallacy of the Converse</title>
+    <me>
+      \begin{array}{l}
+      p\to q \\
+      q\\
+      \hline
+      p
+      \end{array}
+    </me>
+  </subsection>
+  <subsection>
+    <title>Fallacy of the Inverse</title>
+    <me>
+      \begin{array}{l}
+      p\to q \\
+      \sim p\\
+      \hline
+      \sim q
+      \end{array}
+    </me>
+    <p>
+      The reason these are fallacies are covered in the previous write-up.
+    </p>
+  </subsection>
+</section>

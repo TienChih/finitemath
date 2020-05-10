@@ -1,0 +1,42 @@
+<section xml:id="Sec_LinearInequalities">
+  <title>Linear Inequalities</title>
+  <p>
+    Remember when we said the solution to something like
+    <me>
+      2x+3y=12
+    </me>
+    is the collection of all points <m>(x,y)</m> that make this statement true.
+    For equations of the form above, that forms a line.
+    If however if we replace the <m>=</m> with an inequality like so:
+    <me>
+      2x+3y\leq12
+    </me>
+  </p>
+  <p>
+    What we now mean is every pair <m>(x,y)</m> that make THIS statement true.
+    So that would include every point on the line <m>2x+3y=12</m>,
+    as well as say <m>(0,0), (1,2), (1,3)</m> but not <m>(1,4)</m>
+    (plug them in to see why.)
+    Obviously, just like in lines,
+    we don't want to test every one of infinitely many points to see what's going on.
+  </p>
+  <p>
+    So, we note that <m>2x+3y=12</m> is a line: \url{https://www.desmos.com/calculator/spsryp8xxl}
+  </p>
+  <p>
+    The inequality <m>2x+3y\leq12</m> is not just this line,
+    but the entire half of the plane where <m>2x+3y</m> is some value that is less than 12.
+    The number 12 cuts the number line in half,
+    numbers less than, and greater than 12,
+    so it makes sense that this line cuts the <m>x,y</m> plane in half as well,
+    we just need to pick a half.
+  </p>
+  <p>
+    Well, we know that <m>2(0)+3(0)=0\leq12</m>,
+    and so our half should be the half that contains <m>(0,0)</m>.
+    In general, you can pick any point you want and test it.
+    For example, if we picked (5,5),
+    we would observe that <m>2(5)+3(5)=25\not\leq 12</m> and so we should pick the half that DOESN'T contain <m>(5,5)</m>.
+    Either way, we obtain: \url{https://www.desmos.com/calculator/yvb1odxncf}
+  </p>
+</section>

@@ -1,0 +1,41 @@
+<section xml:id="Sec_Exponentials">
+  <title>Exponentials</title>
+  <definition>
+    <statement>
+      <p>
+        An <term>exponential function</term>
+        is a function <m>f(x)</m> which may be written as <m>f(x)=b\cdot a^x</m>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    We should note that we've seen exponential functions before,
+    in the guise of compound interest.
+    If the future value of a debt is
+    <m>S=P(1+i)^x</m> after <m>x</m> unites of time,
+    then <m>P</m> is your <m>b</m> and <m>1+i</m> is your <m>a</m>.
+  </p>
+  <p>
+    We should also note that there is a real kinship between exponential functions and linear functions.
+    Linear functions have the form <m>\ell(x)=mx+b</m>,
+    which we can think of as <m>\ell(x)=\overbrace{m+m+\cdots+m}^x+b</m>,
+    with <m>x</m> copies of <m>m</m>.
+    Similarly we can see that <m>f(x)=b\cdot a^x=\overbrace{a\cdot a\cdots a}^x\cdot b</m>,
+    so it is really the multiplicative analogue of the linear function,
+    where the <m>b</m>'s are the initial value of the function when <m>x=0</m> and the growth rate of the function is totally determined by <m>a</m>
+    (whereas it's determined by <m>m</m> for linear functions).
+  </p>
+  <p>
+    In that way, we can also tell when
+    <m>f(x)=b\cdot a^x</m> is increasing or decreasing,
+    just by looking at whether or not <m>a>1</m> or <m>a\lt 1</m>.
+    If <m>a>1</m> it is increasing: \url{https://www.desmos.com/calculator/edktzphc6x} if <m>a\lt 1</m> then it's decreasing: \url{https://www.desmos.com/calculator/rpiu9qc4ty}.
+  </p>
+  <p>
+    Exponential functions are used to model anything that grows or decays proportionately to it's current value.
+    So for example debts or investment accrue proportionately to how much debt/investment there already is.
+    Population is another example,
+    the greater the population,
+    the more reproduction there will be within that population and the greater the increase in population.
+  </p>
+</section>

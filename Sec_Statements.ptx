@@ -1,0 +1,47 @@
+<section xml:id="Sec_Statements">
+  <title>Statements</title>
+  <p>
+    Something thats often misunderstood about Math is that people think that Math is the study of numbers.
+    This is false, and not even historically justifiable.
+    Certainly numeracy has taken on a great role within mathematics,
+    but that is not fundamentally what the discipline is.
+    Really, even when Math deals with numbers,
+    the fundamental thing that is studied are not numbers but <term>statements</term>.
+    What is a statement?
+    It is a sentence that is true or false, but not both.
+    For example:
+    <ol>
+      <li>
+        <p>
+          MSU-Billings is a State School.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>10+5=12</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>x\lt 4</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+  <p>
+    The first sentence is a true sentence,
+    the second sentence is a false sentence.
+    The third is true or false depending on the value of <m>x</m>,
+    but at no point can it take on the value of both true and false.
+  </p>
+  <p>
+    So we're going to be doing something in this chapter that seems fairly strange.
+    We are going to be working with variables that are placeholders for statements rather than numbers.
+    The possible values for these statements then, are
+    <q>True</q>
+    and
+    <q>False</q>. We will be performing operations on these statements as in standard algebra,
+    but since every variable has only 2 possible values,
+    the rules of our algebra are going to be different.
+  </p>
+</section>

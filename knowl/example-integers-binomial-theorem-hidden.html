@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-10-17T14:10:32-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>We will prove the binomial theorem using mathematical induction; that is,</p>
+\begin{equation*}
+(a + b)^n = \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k},
+\end{equation*}
+<p>where \(a\) and \(b\) are real numbers, \(n \in \mathbb{N}\text{,}\) and</p>
+\begin{equation*}
+\binom{n}{k} = \frac{n!}{k! (n - k)!}
+\end{equation*}
+<p>is the binomial coefficient.  We first show that</p>
+\begin{equation*}
+\binom{n + 1}{k} = \binom{n}{k} + \binom{n}{k - 1}.
+\end{equation*}
+<p>This result follows from</p>
+\begin{align*}
+\binom{n}{k} + \binom{n}{k - 1} &amp; = \frac{n!}{k!(n - k)!} +\frac{n!}{(k-1)!(n - k + 1)!}\\
+&amp; = \frac{(n + 1)!}{k!(n + 1 - k)!}\\
+&amp; =\binom{n + 1}{k}.
+\end{align*}
+<p>If \(n = 1\text{,}\) the binomial theorem is easy to verify. Now assume that the result is true for \(n\) greater than or equal to 1.  Then</p>
+\begin{align*}
+(a + b)^{n + 1} &amp; = (a + b)(a + b)^n\\
+&amp; = (a + b) \left( \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k}\right)\\
+&amp; = \sum_{k = 0}^{n} \binom{n}{k} a^{k + 1} b^{n - k} + \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n + 1 - k}\\
+&amp; = a^{n + 1} + \sum_{k = 1}^{n} \binom{n}{k - 1} a^{k} b^{n + 1 - k} + \sum_{k = 1}^{n} \binom{n}{k}  a^k b^{n + 1 - k} + b^{n + 1}\\
+&amp;  = a^{n + 1} + \sum_{k = 1}^{n} \left[ \binom{n}{k - 1} + \binom{n}{k} \right]a^k b^{n + 1 - k} + b^{n + 1}\\
+&amp;  = \sum_{k = 0}^{n + 1}   \binom{n + 1}{k} a^k b^{n + 1- k}.
+\end{align*}
+</article></body>
+</html>

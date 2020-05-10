@@ -1,0 +1,649 @@
+<section xml:id="Sec_SystemasMatrix">
+  <title>Representing a System of Linear Equations as a Matrix</title>
+  <introduction>
+    <p>
+      Given a system of equations, we can try to encode that information in a matrix:
+    </p>
+    <p>
+      So for example the system of equations:
+      <md>
+        <mrow>2x+3y+z\amp =\amp 3</mrow>
+        <mrow>-2x+4y+2z\amp =\amp 0</mrow>
+        <mrow>x-y+2z\amp =\amp 3</mrow>
+      </md>
+    </p>
+    <p>
+      Would have matrix representation:
+      <me>
+        \left( \begin{array}{rrr|r} 2 \amp  3 \amp  1\amp  3\\ -2 \amp  4 \amp  2 \amp  0\\ 1 \amp  -1 \amp  2 \amp  3 \end{array} \right)
+      </me>.
+    </p>
+    <p>
+      A <term>matrix</term> is a rectangular array of numbers,
+      each number is an <term>entry</term> of the matrix.
+      In the above example,
+      the vertical line is a visual reminder to separate the constant terms from the variables.
+      A matrix displayed this way is an
+      <term>augmented matrix</term>.
+    </p>
+    <p>
+      By letting each column of a matrix represent a different variable or constant and arranging the linear equations into rows,
+      one can write any linear system of equations as an augmented matrix.
+      Conversely, if you have a matrix:
+      <me>
+        \left( \begin{array}{rr|r} 1 \amp  2 \amp  4\\ 3 \amp  3  \amp  9 \end{array} \right)
+      </me>
+    </p>
+    <p>
+      This represent the system of equations:
+      <md>
+        <mrow>x+2y\amp =\amp 4</mrow>
+        <mrow>3x+3y\amp =\amp 9</mrow>
+      </md>
+    </p>
+  </introduction>
+  <subsection>
+    <title>Solving Systems of Linear Equations</title>
+    <p>
+      So let's consider the above system/matrix:
+      <me>
+        \left( \begin{array}{rr|r} 1 \amp  2 \amp  4\\ 3 \amp  3  \amp  9 \end{array} \right)
+      </me>
+    </p>
+    <p>
+      We are allowed to manipulate this matrix in a number of ways.
+      Remembering that each row represents a linear equation:
+      <ol>
+        <li>
+          <p>
+            <term>You can multiply any row by a non-zero multiple</term>.
+            We can do this because say,
+            the solutions to <m>x+2y=4</m> are the same as the solutions to <m>-x-2y=-4</m> or <m>2x+4y=8</m>,
+            so we're not adding in new solutions or removing existing solutions.
+          </p>
+        </li>
+        <li>
+          <p>
+            <term>You can add to any row,
+            the multiple of any row.</term> Adding a linear equality to another linear equality preserves the solutions to both equations.
+          </p>
+        </li>
+        <li>
+          <p>
+            <term>You can rearrange the rows.</term>
+            The solutions to a system of equations does not depend on the order in which they appear.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      So our goal here is to change this system into one where it's much easier to see what the solution is.
+      The best way to do this,
+      is to not have all these x's and y's, I want 2 equations:
+      <m>x=?, y=??</m>.
+    </p>
+    <p>
+      So:
+      <md>
+        <mrow>\left( \begin{array}{rr|r} 1 \amp  2 \amp  4\\ 3 \amp  3  \amp  9 \end{array} \right)\amp \amp</mrow>
+        <mrow>(1/3)R_2\mapsto R_2 \left( \begin{array}{rr|r} 1 \amp  2 \amp  4\\ 1 \amp  1  \amp  3 \end{array} \right)\amp \amp</mrow>
+        <mrow>(-1)R_1+R_2\mapsto R_2 \left( \begin{array}{rr|r} 1 \amp  2 \amp  4\\ 0 \amp  -1  \amp  -1 \end{array} \right)\amp \amp</mrow>
+        <mrow>(-1)R_2\mapsto R_2 \left( \begin{array}{rr|r} 1 \amp  2 \amp  4\\ 0 \amp  1  \amp  1 \end{array} \right)\amp \amp</mrow>
+        <mrow>(-2)R_2+R_1\mapsto R_1 \left( \begin{array}{rr|r} 1 \amp  0 \amp  2\\ 0 \amp  1  \amp  1 \end{array} \right)\amp \amp</mrow>
+      </md>
+    </p>
+    <p>
+      What system of equations of this?
+      It is:
+      <md>
+        <mrow>x+0y\amp =\amp 2</mrow>
+        <mrow>0x+y\amp =\amp 1</mrow>
+      </md>
+    </p>
+    <p>
+      Which must mean: <m>x=2, y=1</m>, alright!
+      By the way, one can test your answers to see if they are correct!
+      <me>
+        1(2)+2(1)=4, 3(1)+3(2)=9
+      </me>
+      so it checks out.
+    </p>
+    <p>
+      A matrix with 1's across the diagonal,
+      and 0's above and below these 1's
+      (as above)
+      is called <term>reduced row-echelon form</term>.
+      A process to obtain a reduced row echelon form matrix is called the
+      <term>Gauss-Jordan Method</term>.
+      The methodology is:
+      <ol>
+        <li>
+          <p>
+            Starting with the first row,
+            multiply by a number so it's leading (leftmost) value is 1.
+          </p>
+        </li>
+        <li>
+          <p>
+            Multiply and add copies of this row to all rows below so that every entry below this leading 1 is a 0.
+          </p>
+        </li>
+        <li>
+          <p>
+            Repeat steps (1) and (2) for subsequent rows until the last row.
+          </p>
+        </li>
+        <li>
+          <p>
+            Starting with the bottom row working up,
+            repeat steps (1)-(3) except working upwards and making entries
+            <term>above</term> the leading 1's 0.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <example xml:id="Example_GaussJordan">
+      <statement>
+        <p>
+          Solve the linear system:
+          <md>
+            <mrow>3x+2y+z\amp =\amp 1</mrow>
+            <mrow>x+y-z\amp =\amp 3</mrow>
+            <mrow>2x-y+2z\amp =\amp -2</mrow>
+          </md>
+        </p>
+        <p>
+          This corresponds to augmented matrix:
+          <me>
+            \left( \begin{array}{rrr|r} 3 \amp  2 \amp  1 \amp  1\\ 1 \amp  1  \amp  -1 \amp  3\\ 2 \amp  -1 \amp  2 \amp  -2 \end{array} \right)
+          </me>
+        </p>
+        <p>
+          So applying Gauss-Jordan:
+          <md>
+            <mrow>\frac{1}{3}R_1\to R_1 \left( \begin{array}{rrr|r} 3 \amp  2 \amp  1 \amp  1\\ 1 \amp  1  \amp  -1 \amp  3\\ 2 \amp  -1 \amp  2 \amp  -2 \end{array} \right)\amp \amp</mrow>
+            <mrow>\frac{1}{3}R_1\to R_1 \left( \begin{array}{rrr|r} 1 \amp  \frac{2}{3} \amp  \frac{1}{3} \amp  \frac{1}{3}\\ 1 \amp  1  \amp  -1 \amp  3\\ 2 \amp  -1 \amp  2 \amp  -2 \end{array} \right)\amp \amp</mrow>
+            <mrow>-1R_1+R_2\to R_2\left( \begin{array}{rrr|r} 1 \amp  \frac{2}{3} \amp  \frac{1}{3} \amp  \frac{1}{3}\\ 0 \amp  -\frac{1}{3}  \amp  -\frac{4}{3} \amp  \frac{8}{3}\\ 2 \amp  -1 \amp  2 \amp  -2 \end{array} \right)\amp \amp</mrow>
+            <mrow>-3R_2\to R_2\left( \begin{array}{rrr|r} 1 \amp  \frac{2}{3} \amp  \frac{1}{3} \amp  \frac{1}{3}\\ 0 \amp  1  \amp  4 \amp  -8\\ 2 \amp  -1 \amp  2 \amp  -2 \end{array} \right)\amp \amp</mrow>
+            <mrow>-2R_1+R_3\to R_3\left( \begin{array}{rrr|r} 1 \amp  \frac{2}{3} \amp  \frac{1}{3} \amp  \frac{1}{3}\\ 0 \amp  1  \amp  4 \amp  -8\\ 0 \amp  -\frac{7}{3} \amp  \frac{4}{3} \amp  -\frac{8}{3} \end{array} \right)\amp \amp</mrow>
+            <mrow>\frac{3}{7}R_2+R_3\to R_3\left( \begin{array}{rrr|r} 1 \amp  \frac{2}{3} \amp  \frac{1}{3} \amp  \frac{1}{3}\\ 0 \amp  1  \amp  4 \amp  -8\\ 0 \amp  0 \amp  \frac{64}{21} \amp  -\frac{128}{21} \end{array} \right)\amp \amp</mrow>
+            <mrow>\frac{21}{64}R_3\to R_3\left( \begin{array}{rrr|r} 1 \amp  \frac{2}{3} \amp  \frac{1}{3} \amp  \frac{1}{3}\\ 0 \amp  1  \amp  4 \amp  -8\\ 0 \amp  0 \amp  1 \amp  -2 \end{array} \right)\amp \amp</mrow>
+          </md>
+        </p>
+        <p>
+          Then we work from bottom back up:
+          <md>
+            <mrow>-4R_3 + R_2\to R_2\left( \begin{array}{rrr|r} 1 \amp  \frac{2}{3} \amp  \frac{1}{3} \amp  \frac{1}{3}\\ 0 \amp  1  \amp  0 \amp  0\\ 0 \amp  0 \amp  1 \amp  -2 \end{array} \right)\amp \amp</mrow>
+            <mrow>-\frac{1}{3}R_3 + R_1\to R_1\left( \begin{array}{rrr|r} 1 \amp  \frac{2}{3} \amp  0 \amp  1\\ 0 \amp  1  \amp  0 \amp  0\\ 0 \amp  0 \amp  1 \amp  -2 \end{array} \right)\amp \amp</mrow>
+            <mrow>-\frac{2}{3}R_2 + R_1\to R_1\left( \begin{array}{rrr|r} 1 \amp  0 \amp  0 \amp  1\\ 0 \amp  1  \amp  0 \amp  0\\ 0 \amp  0 \amp  1 \amp  -2 \end{array} \right)\amp \amp</mrow>
+          </md>
+        </p>
+        <p>
+          Which corresponds to the linear system:
+          <md>
+            <mrow>1x+0y+0z\amp =\amp 1</mrow>
+            <mrow>0x+1y+0z\amp =\amp 0</mrow>
+            <mrow>0x+0y+z\amp =\amp -2</mrow>
+          </md>
+        </p>
+        <p>
+          Which has solution <m>x=1, y=0, z=2</m>.
+          To verify this works, we can check:
+          <md>
+            <mrow>3(1)+2(0)+(-2)\amp =\amp 1</mrow>
+            <mrow>(1)+(0)-(-2)\amp =\amp 3</mrow>
+            <mrow>2(1)-(0)+2(-2)\amp =\amp -2</mrow>
+          </md>
+          and we have solved our linear system.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Reduced Row Echelon Form using Technology.</title>
+    <p>
+      Suppose we wanted to solve the system associated with the augmented matrix:
+      <me>
+        \left( \begin{array}{rrr|r} 2 \amp  3 \amp  1\amp  3\\ -2 \amp  4 \amp  2 \amp  0\\ 1 \amp  -1 \amp  2 \amp  3 \end{array} \right)
+      </me>.
+    </p>
+    <p>
+      We could solve this the same way we did <xref ref="Example_GaussJordan">Example</xref>,
+      but your first thought here is probably ``I don't want to do this." Yeah,
+      me neither.
+      One thing to note is that this process of finding a reduced row echelon form of a matrix is fairly mechanical.
+      So, we should be able to do this with a machine.
+    </p>
+    <p>
+      Following this link to an independent sagecell: \url{https://sagecell.sagemath.org/?z=eJxztM1NLCnKrNAIDNRRiI420jHWMdQxjtWJ1jXSMdEx0jEAMg11dA2BTOPYWE1eroKizLwSDUcES6-oKDVNQ1MTAN6nE6M=&amp;amp;lang=sage}. You see the following code:
+    </p>
+<pre>
+A=matrix(QQ, [[2,3,1,3],[-2,4,2,0],[1,-1,2,3]])
+print(A)
+print(A.rref())
+</pre>
+    <p>
+      The first line defines the matrix <m>A</m> with the rows identical to the rows we defined in our above matrix.
+      Then the code returns a printout of that matrix,
+      and it's reduced row echelon form:
+      <me>
+        \left( \begin{array}{rrr|r} 1 \amp  0 \amp  0\amp  1\\ 0 \amp  1 \amp  0 \amp  0\\ 0 \amp  0 \amp  1 \amp  1 \end{array} \right)
+      </me>
+    </p>
+    <p>
+      So <m>x=1, y=0, z=1</m>.
+      Is this right?
+      Well,
+      <md>
+        <mrow>2(1)+3(0)+1\amp =\amp 3</mrow>
+        <mrow>-2(1)+4(0)+2(1)\amp =\amp 0</mrow>
+        <mrow>1-0+2(1)\amp =\amp 3</mrow>
+      </md>
+    </p>
+    <p>
+      Works for me.
+    </p>
+    <p>
+      By the way, if you enter the matrix from <xref ref="Example_GaussJordan">Example</xref>,
+      and replace the first line with:
+    </p>
+<pre>
+A=matrix(QQ, [[3,2,1,1],[1,1,1,3],[2,-1,2,-2]])
+</pre>
+    <p>
+      You should have the reduced row echelon matrix we achieved earlier.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Infinitely many solutions</title>
+    <p>
+      Consider the system:
+      <md>
+        <mrow>x+2y+z\amp =\amp 3</mrow>
+        <mrow>-x+y+0z\amp =\amp 0</mrow>
+        <mrow>0x+3y+z\amp =\amp 3</mrow>
+      </md>
+    </p>
+    <p>
+      Then by using rref using as <m>A</m>:
+    </p>
+<pre>
+A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,3]])
+</pre>
+    <p>
+      We would obtain:
+      <me>
+        \left( \begin{array}{rrr|r} 1 \amp  0 \amp  1/3\amp  1\\ 0 \amp  1 \amp  1/3 \amp  1\\ 0 \amp  0 \amp  0 \amp  0 \end{array} \right)
+      </me>
+    </p>
+    <p>
+      Which gives us the system:
+      <md>
+        <mrow>x+0y+(1/3)z\amp =\amp 1</mrow>
+        <mrow>0x+y+(1/3)z\amp =\amp 1</mrow>
+        <mrow>0x+0y+0z\amp =\amp 0</mrow>
+      </md>
+    </p>
+    <p>
+      Well, the last line is useless,
+      it basically says that <m>0=0</m>,
+      which is true but useless.
+      Let's break down the remaining equations:
+      <md>
+        <mrow>x+(1/3)z\amp =\amp 1</mrow>
+        <mrow>y+(1/3)z\amp =\amp 1</mrow>
+      </md>
+    </p>
+    <p>
+      Which can be thought of as:
+      <md>
+        <mrow>x\amp =\amp 1-(1/3)z</mrow>
+        <mrow>y\amp =\amp 1-(1/3)z</mrow>
+      </md>
+    </p>
+    <p>
+      So basically what this is saying,
+      no matter what <m>z</m> is, you can fin <m>x</m> and <m>y</m>.
+      So if <m>z=0</m>, then <m>x,y=1</m>.
+      But if <m>z=6</m>, then <m>x,y=-1</m>.
+      Well, what is <m>z</m>?
+      Apparently it can be whatever we want,
+      both of the above triplets provide perfectly legitimate solutions to the original system.
+      What you see described is a line of solutions.
+      The 3 equations describe 3 planes in 3 dimensional (<m>x,y,z)</m> space and they intersect at this line which can be describes as the solution to this equation.
+    </p>
+  </subsection>
+  <subsection>
+    <title>No Solutions</title>
+    <p>
+      Consider a similar system:
+      <md>
+        <mrow>x+2y+z\amp =\amp 3</mrow>
+        <mrow>-x+y+0z\amp =\amp 0</mrow>
+        <mrow>0x+3y+z\amp =\amp 0</mrow>
+      </md>
+    </p>
+    <p>
+      Then by using rref using as <m>A</m>:
+    </p>
+<pre>
+A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
+</pre>
+    <p>
+      We would obtain:
+      <me>
+        \left( \begin{array}{rrr|r} 1 \amp  0 \amp  1/3\amp  1\\ 0 \amp  1 \amp  1/3 \amp  1\\ 0 \amp  0 \amp  0 \amp  0 \end{array} \right)
+      </me>
+    </p>
+    <p>
+      Which gives us the system:
+      <md>
+        <mrow>x+0y+(1/3)z\amp =\amp 1</mrow>
+        <mrow>0x+y+(1/3)z\amp =\amp 1</mrow>
+        <mrow>0x+0y+0z\amp =\amp 1</mrow>
+      </md>
+    </p>
+    <p>
+      Well, what does this last line mean?
+      It says that <m>0=1</m>.
+      When will this happen?
+      Well basically never,
+      no choice of <m>x,y,z</m> will ever make this true,
+      our 3 planes do not intersect at a point or line or at all,
+      so there is no solution.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Applications</title>
+    <example>
+      <statement>
+        <p>
+          A new airline has recently purchased a fleet of Airbus A330-300s, Boeing 767-300ERs, and Boeing Dreamliner 787-9s to meet an estimated demand for 9,300 seats.
+          The A330-300s seat 330 passengers and cost $250 million each,
+          the 767-300ERs seat 270 passengers and cost $200 million each,
+          while the 787-9s seat 240 passengers and cost $250 million each.
+          The total cost of the fleet,
+          which had twice as many 787-9s as 767s, was $8,100 million.
+          How many of each type of aircraft did the company purchase?
+        </p>
+        <p>
+          It helps perhaps if we organize some of this information in a table.
+          <me>
+            <tabular>
+              <row bottom="minor">
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell></cell>
+                <cell>A330-300s</cell>
+                <cell>767-300ERs</cell>
+                <cell>787-9s</cell>
+                <cell>Total</cell>
+              </row>
+              <row bottom="medium">
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell  ><term>Capacity</term></cell>
+                <cell>330</cell>
+                <cell>270</cell>
+                <cell>240</cell>
+                <cell><term>9,300</term></cell>
+              </row>
+              <row bottom="minor">
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell><term>Cost ($ million)</term></cell>
+                <cell>250</cell>
+                <cell>200</cell>
+                <cell>250</cell>
+                <cell><term>8,100</term></cell>
+              </row>
+              <row bottom="minor">
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+              </row>
+            </tabular>
+          </me>
+        </p>
+        <p>
+          By letting <m>x</m> denote the numbere of A330-300's, <m>y</m> denote the number of 767-300ERs and <m>z</m> denote the number of 787-9s,
+          we obtain the following linear equalities:
+        </p>
+        <p>
+          First, the total capacity is 9,300 seats:
+          <me>
+            330x+270y+240z=9300
+          </me>.
+        </p>
+        <p>
+          Next, the total cost is $8,100 million:
+          <me>
+            250x+200y+250z=8100
+          </me>.
+        </p>
+        <p>
+          Finally, there are twice as many 787-9s as 767-300ERs:
+          <md>
+            <mrow>z\amp =\amp 2y</mrow>
+            <mrow>-2y+z\amp =\amp 0</mrow>
+          </md>.
+        </p>
+        <p>
+          Giving us a system:
+          <md>
+            <mrow>330x+270y+240z\amp =\amp 9300</mrow>
+            <mrow>250x+200y+250z\amp =\amp 8100</mrow>
+            <mrow>-2y+z\amp =\amp 0</mrow>
+          </md>
+          and corresponding augmented matrix:
+          <me>
+            \left( \begin{array}{rrr|r} 330 \amp  270 \amp  240\amp  9300\\ 250 \amp  200 \amp  250 \amp  8100\\ 0 \amp  -2 \amp  1 \amp  0 \end{array} \right)
+          </me>.
+        </p>
+        <p>
+          Using any method we'd like, we find row reduced echelon form:
+          <me>
+            \left( \begin{array}{rrr|r} 1 \amp  0 \amp  0\amp  10\\ 0 \amp  1 \amp  0 \amp  8\\ 0 \amp  0 \amp  1 \amp  16 \end{array} \right)
+          </me>
+          which corresponds to <m>x=10,
+          y=8, z=16</m> or 10 A330-300s, 8 767300ERs and 16 787-9s.
+        </p>
+        <p>
+          To verify that this is a legitimate solution, check:
+          <md>
+            <mrow>330(10)+270(8)+240(16)\amp =\amp 9300</mrow>
+            <mrow>250(10)+200(8)+250(16)\amp =\amp 8100</mrow>
+            <mrow>-2(8)+16\amp =\amp 0</mrow>
+          </md>.
+        </p>
+      </statement>
+    </example>
+    <example xml:id="Example_Vitamin">
+      <statement>
+        <p>
+          Margo needs 200mg of vitamin A, 100mg of vitamin D, and 140mg of vitamin E per week.
+          She has three supplements:
+          the first contains 20% vitamin A, 20% vitamin D and 20\vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E. How much of each supplement should she eat each week?
+        </p>
+        <p>
+          Let <m>x,y,z</m> denote the quantities of supplements 1,2 and 3 she takes each week.
+          She needs 200mg of vitamin A, which gives us:
+          <me>
+            0.2x+0.1y+0.5z=200
+          </me>.
+        </p>
+        <p>
+          Similarly, for 100mg of vitamin D:
+          <me>
+            0.2x+0.3y+0.1z=100
+          </me>
+          and for 140mg of vitamin E:
+          <me>
+            0.2x+0.2y+0.4z=140
+          </me>.
+        </p>
+        <p>
+          This gives us the system:
+          <md>
+            <mrow>0.2x+0.1y+0.5z\amp =\amp 200</mrow>
+            <mrow>0.2x+0.3y+0.1z\amp =\amp 100</mrow>
+            <mrow>0.2x+0.4y+0.2z\amp =\amp 140</mrow>
+          </md>
+          with corresponding matrix:
+          <me>
+            \left( \begin{array}{rrr|r} 0.2 \amp  0.1 \amp  0.5\amp  200\\ 0.2 \amp  0.3 \amp  0.1 \amp  100\\ 0.2 \amp  0.4 \amp  0.2 \amp  140 \end{array} \right)
+          </me>.
+        </p>
+        <p>
+          This has reduced row echelon form:
+          <me>
+            \left( \begin{array}{rrr|r} 1 \amp  0 \amp  0\amp  200\\ 0 \amp  1 \amp  0 \amp  100\\ 0 \amp  0 \amp  1 \amp  300 \end{array} \right)
+          </me>
+          which corresponds to solution
+          <m>x=200, y=100,
+          z=300</m> or 200 mg of supplement 1, 100mg of supplement 2 and 300mg of supplement 3.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Suppose an event with 300 people ends,
+          and the attendees walk from the venue to two restaurants, Xavier's and Yoneda's.
+          They walk along streets Anderson, Birmingham and Central,
+          which are all one way.
+          When the night ends,
+          there are 75 people and Xavier's and 225 at Yoneda's.
+        </p>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node (V) at (0,0) [draw,thick,minimum width=1cm,minimum height=1cm] {\(300\)};
+\node (I1) at (3,2) ;
+\node (I2) at (3,-2) ;
+\draw[->] (V) -- (I1)node[midway,sloped,above]{Anderson};;
+\draw[->] (V) -- (I2) node[midway,sloped,below]{Birmingham};
+\draw[->] (I1) -- (I2) node[midway,sloped,above]{Central};
+\node[label={Xavier}] (X) at (5,2) [draw,thick,minimum width=1cm,minimum height=1cm] {75};
+\node[label={Yoneda}] (Y) at (5,-2) [draw,thick,minimum width=1cm,minimum height=1cm] {225};
+\draw[->] (I1)--(X);
+\draw[->] (I2)--(Y);\end{tikzpicture}]]>
+</latex-image>
+        </image>
+        <p>
+          Let <m>a,b,c</m> denote the number of people walking along Anderson, Birmingham and Central.
+          <ol>
+            <li>
+              <p>
+                Find an expression for the amount of people walking along each street.
+                We first set up our systems of equations.
+                We first note that all 300 people have to walk either along either Anderson or Birmingham, so
+                <me>
+                  a+b=300
+                </me>.
+                Next, the 75 at Xavier is the however many people walked down Anderson,
+                and take away whoever veered off onto Central so:
+                <me>
+                  a-c=75
+                </me>.
+                The 225 people at Yoneda is everyone coming across Birmingham and Central so
+                <me>
+                  b+c=225
+                </me>.
+                Thus the system is:
+                <md>
+                  <mrow>a+b\amp =\amp 300</mrow>
+                  <mrow>a-c\amp =\amp 75</mrow>
+                  <mrow>b+c\amp =\amp 225</mrow>
+                </md>,
+                with associated augmented matrix:
+                <me>
+                  \left( \begin{array}{rrr|r} 1 \amp  1 \amp  0\amp  300\\ 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225 \end{array} \right)
+                </me>.
+                So the reduced row echelon form of this is:
+                <me>
+                  \left( \begin{array}{rrr|r} 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225\\ 0 \amp  0 \amp  0\amp  0 \end{array} \right)
+                </me>.
+                What this tells us is that there is not a unique solution,
+                as the system associated with this matrix is:
+                <md>
+                  <mrow>a-c\amp =\amp 75</mrow>
+                  <mrow>b+c\amp =\amp 225</mrow>
+                </md>,
+                Which is two of the original equations.
+                So, depending on what <m>c</m> is,
+                this will determine how many people traverse Anderson and Birmingham.
+              </p>
+            </li>
+            <li>
+              <p>
+                If 50 people crossed central,
+                how many people crossed Anderson and Birmingham?
+                So letting <m>c=50</m>, we would have:
+                <md>
+                  <mrow>a-c\amp =\amp 75</mrow>
+                  <mrow>a-50\amp =\amp 75</mrow>
+                  <mrow>a\amp =\amp 125</mrow>
+                  <mrow>b+c\amp =\amp 225</mrow>
+                  <mrow>b+50\amp =\amp 225</mrow>
+                  <mrow>b\amp =\amp 175</mrow>
+                </md>,
+                So 125 people across Anderson and 175 across Birmingham.
+                Another way to do this would be to add an equation <m>c=50</m> to our system:
+                <me>
+                  \left( \begin{array}{rrr|r} 1 \amp  1 \amp  0\amp  300\\ 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225\\ 0 \amp  0 \amp  1 \amp  50 \end{array} \right)
+                </me>.
+                Which has reduced row echelon form:
+                <me>
+                  \left( \begin{array}{rrr|r} 1 \amp  0 \amp  0 \amp  125\\ 0 \amp  1 \amp  0 \amp  175\\ 0 \amp  0 \amp  1\amp  50\\ 0 \amp  0 \amp  0\amp  0 \end{array} \right)
+                </me>.
+                That is <m>a=125, b=125, c=50</m> which is our solution above.
+              </p>
+            </li>
+            <li>
+              <p>
+                If 100 people go through Anderson,
+                how many go through Birmingham or Central?
+                We can revisit our linear system from (a):
+                <md>
+                  <mrow>a-c\amp =\amp 75</mrow>
+                  <mrow>100-c\amp =\amp 75</mrow>
+                  <mrow>c\amp =\amp 25</mrow>
+                  <mrow>b+c\amp =\amp 225</mrow>
+                  <mrow>b+25\amp =\amp 225</mrow>
+                  <mrow>b\amp =\amp 200</mrow>
+                </md>,
+                so 200 across Birmingham and 25 across Central.
+                We can also add the linear equation <m>a=100</m>:
+                <me>
+                  \left( \begin{array}{rrr|r} 1 \amp  1 \amp  0\amp  300\\ 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225\\ 1 \amp  0 \amp  0 \amp  100 \end{array} \right)
+                </me>
+                with reduced row echelon form:
+                <me>
+                  \left( \begin{array}{rrr|r} 1 \amp  0 \amp  0 \amp  100\\ 0 \amp  1 \amp  0 \amp  200\\ 0 \amp  0 \amp  1\amp  25\\ 0 \amp  0 \amp  0\amp  0 \end{array} \right)
+                </me>.
+                So 100 across Anderson, 200 across Birmingham and 25 across Central.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

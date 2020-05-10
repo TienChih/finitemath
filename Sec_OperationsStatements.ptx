@@ -1,0 +1,74 @@
+<section xml:id="Sec_OperationsStatements">
+  <title>Operations on Statements</title>
+  <subsection>
+    <title>Not</title>
+    <p>
+      The first sort of operation we can perform is <term>negation</term>.
+      Given any statement,
+      the negation is a statement that is false whenever the original statement is true,
+      and true when the original is false.
+    </p>
+    <p>
+      For example if <m>p=\text{ ``It will rain today'' }</m>,
+      then it's negation <m>\sim p=\text{ ``it will not rain today'' }</m>,
+      similarly if <m>q=``x>10''</m>,
+      then it's negation <m>\sim q =``x\leq 10''</m>.
+      These are statements that are true whenever the original statement is false and false when they are true.
+    </p>
+    <p>
+      A convenient way to record when a statement is true or false is by something called a
+      <q>truth table</q>. By listing all the truth values of <m>p</m>,
+      we can see when <m>\sim p</m> is true:
+      <me>
+        \begin{array}{c|c} p\amp \sim p\\ \hline T \amp  F\\ F\amp T \end{array}
+      </me>
+    </p>
+  </subsection>
+  <subsection>
+    <title>And</title>
+    <p>
+      Given statements <m>p</m>, <m>q</m>,
+      the statement <m>p\wedge q</m> pronounced <m>p</m> and <m>q</m> is when <m>p</m> and <m>q</m> are both true,
+      otherwise it is false.
+    </p>
+    <p>
+      For example, if <m>p=</m>
+      <q>I will eat breakfast today</q>
+      and <m>q=</m>
+      <q>I will eat lunch today</q>, then the statement <m>p\wedge q</m> is the statement
+      <q>I will breakfast today and I will eat lunch today</q>
+      which is only true if you eat both meals,
+      if you skip one or both, then it is false.
+      <me>
+        \begin{array}{c|c|c} p\amp q\amp p\wedge q\\ \hline T \amp  T\amp T\\ T\amp F\amp F\\ F\amp T\amp F\\ F\amp F\amp F \end{array}
+      </me>
+    </p>
+    <p>
+      So if you skipped breakfast but had lunch,
+      you could take a look at the third line and see that the compound statement
+      <q>I will breakfast today and I will eat lunch today</q>
+      is false.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Or</title>
+    <p>
+      Given statements <m>p</m>, <m>q</m>,
+      the statement <m>p\vee q</m> pronounced <m>p</m> or <m>q</m> is when either <m>p</m> or <m>q</m> is true,
+      otherwise it is false.
+    </p>
+    <p>
+      So as in the above example,
+      <m>p\vee q</m> would be ``I will eat breakfast today or I will eat lunch today" and you're covered as long as you either have breakfast or lunch.
+      If you skip both, then you're lying,
+      but as long as you had either you're telling the truth.
+      <me>
+        \begin{array}{c|c|c} p\amp q\amp p\vee q\\ \hline T \amp  T\amp T\\ T\amp F\amp T\\ F\amp T\amp T\\ F\amp F\amp F \end{array}
+      </me>
+    </p>
+    <p>
+      So if you had breakfast and skipped lunch,
+      you can look at the second row and see that the statement ``I will eat breakfast today or I will eat lunch today" is still true.
+    </p>
+  </subsection>
+</section>

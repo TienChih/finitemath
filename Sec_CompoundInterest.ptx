@@ -1,0 +1,263 @@
+<section xml:id="Sec_CompoundInterest">
+  <title>Compound Interest</title>
+  <introduction>
+    <p>
+      Almost no meaningful financial transaction in the world is computed by simple interest.
+      The most common type of interest is compound interest which charges interest not just on your principle loan,
+      but also on previously accrued interest as well.
+    </p>
+    <p>
+      So lets say you took out $100 in a loan that charged 5% monthly interest compounded monthly.
+      That means each month,
+      you would owe 5% more than what you owed the month before.
+      <me>
+        \begin{array}{|c|c|} \hline \text{ Month }  \amp  \text{ Debt } \\ \hline 0 \amp  100\\ 1\amp  100+(.05)(100)=100+5=105\\ 2\amp  105+(.05)(105)=105+5.25=110.25\\ 3 \amp  110.25+(.05)(110.25)=110.25+5.5125=115.405\\ \vdots \amp  \vdots\\ \hline \end{array}
+      </me>
+    </p>
+    <p>
+      So not only is the debt increasing,
+      but the amount that the debt increases per month, also increases.
+      Is there an easy way to see how much we'd owe in say 10 months without computing every month in between?
+    </p>
+    <p>
+      Well, If I owe <m>X</m> dollars in any given month,
+      then the next month I'll owe <m>X+0.05X=(1.05)X</m> dollars.
+      In another month I'll owe <m>1.05X+(.05)(1.05)X=(1.05)(1.05)X=X(1.05)^2</m> dollars.
+      If we apply this logic to our situation, we can see:
+      <me>
+        \begin{array}{|c|c|} \hline \text{ Month }  \amp  \text{ Debt } \\ \hline 0 \amp  100\\ 1\amp  100+(.05)(100)=(1.05)100\\ 2\amp  (1.05)100+(.05)((1.05)100)=(1.05)(1.05)100=(1.05)^2 100\\ 3 \amp  (1.05)^2100+(.05)((1.05)^2100)=(1.05)(1.05)^2 100=(1.05)^3 100\\ \vdots \amp  \vdots\\ n \amp  (1.05)^n100\\ \hline \end{array}
+      </me>
+    </p>
+    <p>
+      So in 10 months,
+      we'd owe <m>100*(1.05)^10\approx \dollar162.89</m>.
+      In general, this forms an <term>exponential function</term>: \url{https://www.desmos.com/calculator/r51afj5zwr}
+    </p>
+    <p>
+      In general, if the interest rate per time unit is <m>i</m>,
+      then after <m>n</m> time units:
+      <me>
+        \begin{array}{|c|c|} \hline \text{ Time Unit }  \amp  \text{ Debt } \\ \hline 0 \amp  P\\ 1\amp  P+iP=(1+i)P\\ 2\amp  (1+i)P+i(1+i)P=(1+i)^2P\\ 3 \amp  (1+i)^2P+i(1+i)^2P=(1+i)^3P\\ \vdots \amp  \vdots\\ n \amp  (1+i)^nP\\ \hline \end{array}
+      </me>
+    </p>
+    <p>
+      \url{https://www.desmos.com/calculator/kqz7bwj8ip}
+    </p>
+    <p>
+      So we have the general equation
+      <me>
+        A=P(1+i)^n
+      </me>,
+      so as usual, if you know any 3 of these values,
+      in principle we should be able to find the 4th.
+    </p>
+  </introduction>
+  <subsection>
+    <title>AN ISSUE OF EXTREME ANNOYANCE</title>
+    <p>
+      The formulas we have found above is not so very complicated,
+      and neither is solving for values found therein.
+      However, financial companies have devised a concept that obfuscates this principle via an artificial notion of
+      <q>compounding periods</q>.
+    </p>
+    <p>
+      Suppose you have a debt of $100 that accrues 10% annual interest.
+      With no other given information,
+      we would say that the amount you owe in <m>10</m> years would be
+      <me>
+        A=100(1.1)^{10}\approx \dollar259.37
+      </me>
+      right?
+      But what a financial institution will do is say that the debt is
+      <q>compounded quarterly</q>
+      i.e. 4 times a year.
+      Thus instead of 10% interest per year,
+      it will now be <m>10\%/4=2.5\%</m> interest
+      <term> per quarter</term>.
+      How much will you owe in 10 years?
+      Well, 10 years is 40 quarters so:
+      <me>
+        A=100(1.025)^{40}\approx 268.51
+      </me>
+    </p>
+    <p>
+      Similarly, if the compounding is done <term> monthly</term>,
+      then this is 12 times a year,
+      and each month you'd be charged at a rate of <m>\frac{10\%}{12}</m>.
+      So in 10 years or 120 months, you would owe:
+      <me>
+        A=100(1+\frac{0.1}{12})^{120}\approx 270.70
+      </me>
+    </p>
+    <p>
+      My belief is this accomplishes 2 things:
+      <ol>
+        <li>
+          <p>
+            By making the issue more complicated,
+            it makes it more difficult for consumers to figure out how much they are actually going to be charged in interest.
+          </p>
+        </li>
+        <li>
+          <p>
+            By increasing compounding periods,
+            you can effectively charge more interest,
+            see how much the debt's grow in the above scenarios?
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      In general if you are charged an annual interest rate of <m>r</m> compounded <m>m</m> times a year for <m>t</m> years.
+      You are really getting charged
+      <me>
+        i=\frac{r}{m}
+      </me>
+      interest rate per time unit, and the number of time units will be
+      <me>
+        n=mt
+      </me>.
+    </p>
+    <p>
+      How much yearly interest is there really?
+      It's how much interest you end up accruing in a year: Let <m>r_E</m> be the effective annual interest:
+      <md>
+        <mrow>P(1+r_E)\amp =\amp P(1+r/m)^{m}</mrow>
+        <mrow>1+r_E\amp =\amp (1+r/m)^{m}</mrow>
+        <mrow>r_E\amp =\amp (1+r/m)^{m}-1</mrow>
+      </md>
+    </p>
+    <p>
+      So 10% interest compounded quarterly is effectively:
+      <me>
+        r_E=(1+0.1/4)^4-1\approx0.1038
+      </me>
+      or 10.38% annual interest.
+      Whereas 10% compounded monthly is
+      <me>
+        r_E=(1+0.1/12)^{12}-1\approx 0.1047
+      </me>
+      or 10.47% annual interest.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Solving</title>
+    <p>
+      Now that we got that annoyance out of the way,
+      let's solve some example problems.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Suppose that I take out a loan for $500 at 12% annual interest charged biannually.
+          How much will I owe in 10 years?
+        </p>
+        <p>
+          So we note that:
+          <md>
+            <mrow>P\amp =\amp 500\ \text{ the initial loan }</mrow>
+            <mrow>i\amp =\amp 0.12/2=0.06 \ \text{ the interest rate per half-year }</mrow>
+            <mrow>n\amp =\amp 10\cdot 2=20 \ \text{ the number of half-years }</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <me>
+            A=500(1+.06)^{20}\approx 1603.57
+          </me>.
+        </p>
+        <p>
+          \url{https://www.desmos.com/calculator/fuvteaqq2q}
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Suppose that I want to invest some money at 8% annual interest compounded annually
+          (so no shenanigans),
+          and after 20 years I want $2000.
+          How much should I invest?
+        </p>
+        <p>
+          So we note that:
+          <md>
+            <mrow>A\amp =\amp 2000, \ \text{ the future value }</mrow>
+            <mrow>i\amp =\amp 0.08, \ \text{ the actual interest rate }</mrow>
+            <mrow>n\amp =\amp 20, \ \text{ number of years }</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>2000\amp =\amp P(1.08)^{20}</mrow>
+            <mrow>P\amp =\amp \frac{2000}{1.08^{20}}\approx429.10</mrow>
+          </md>
+        </p>
+        <p>
+          \url{https://www.desmos.com/calculator/2cavnhsskf}
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Suppose that I want to invest $500 and in 10 years I want this to grow to $2000.
+          What sort of interest would make that possible?
+        </p>
+        <p>
+          So we have:
+          <md>
+            <mrow>P\amp =\amp 500</mrow>
+            <mrow>A\amp =\amp 2000</mrow>
+            <mrow>n\amp =\amp 10</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>2000\amp =\amp 500(1+i)^{10}</mrow>
+            <mrow>4\amp =\amp (1+i)^{10}</mrow>
+            <mrow>4^{1/10}=1+i</mrow>
+            <mrow>i\amp =\amp 4^{1/10}-1\approx0.1487</mrow>
+          </md>
+          or 14.87% annual interest.
+        </p>
+        <p>
+          \url{https://www.desmos.com/calculator/tzcuetbwgc}
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Suppose that I borrow $1000 at 24% annual interest compounded monthly.
+          How long until I owe $20,000?
+        </p>
+        <p>
+          So we have:
+          <md>
+            <mrow>P\amp =\amp 1000</mrow>
+            <mrow>A\amp =\amp 20000</mrow>
+            <mrow>i\amp =\amp 0.24.12=0.02</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>20000\amp =\amp 1000(1.02)^n</mrow>
+            <mrow>20\amp =\amp (1.02)^n</mrow>
+            <mrow>\ln(20)\amp =\amp n\ln(1.02)</mrow>
+            <mrow>n\amp =\amp \ln(20)/\ln(1.02)\approx151.28</mrow>
+          </md>
+        </p>
+        <p>
+          So in about 151-152 <term> MONTHS</term>, I will owe 20,000 dollars.
+        </p>
+        <p>
+          \url{https://www.desmos.com/calculator/rpq1zumxyw}
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

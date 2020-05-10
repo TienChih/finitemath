@@ -1,0 +1,33 @@
+<section xml:id="Sec_RulesofDerivative">
+  <title>Basic rules of the derivative</title>
+  <p>
+    At this point we probably are,
+    or should be, sick of computing limits like:
+    <me>
+      \limit{h}{0}\frac{2(x+h)^3-4(x+h)-(2x^3-4x)}{h}
+    </me>.
+  </p>
+  <p>
+    This is technically the derivative of <m>f(x)=2x^3-4x</m>.
+    But there's 2 sides to mathematics,
+    theres the formal definition,
+    and then we should leverage our knowledge and try to find shortcuts to some of these things.
+    So let's figure some of these things out.
+  </p>
+  <p>
+    Given functions <m>f(x), g(x)</m> and constants <m>a,b</m> we have:
+    <me>
+      \frac{d}{dx}[a(f)x)+bg(x)]=af'(x)+bg'(x)
+    </me>.
+  </p>
+  <p>
+    How do we know that?
+    Well:
+    <md>
+      <mrow>\frac{d}{dx}[a(f)x)+bg(x)]\amp =\amp \limit{h}{0}\frac{af(x+h)+bg(x+h)-(af(x)-bg(x))}{h}</mrow>
+      <mrow>\amp =\amp \limit{h}{0}\frac{af(x+h)-af(x)}{h}+\limit{h}{0}\frac{bg(x+h)-bg(x)}{h}</mrow>
+      <mrow>\amp =\amp a\limit{h}{0}\frac{f(x+h)-f(x)}{h}+b\limit{h}{0}\frac{g(x+h)-g(x)}{h}</mrow>
+      <mrow>\amp =\amp af'(x)+bg'(x)</mrow>
+    </md>.
+  </p>
+</section>

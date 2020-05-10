@@ -1,0 +1,186 @@
+<section xml:id="Sec_IntrotoLinear">
+  <title>What is a Linear Function?</title>
+  <p>
+    A linear function is a function whose inputs and outputs are real numbers,
+    and <em>the change in output per unit change increase in input is always the same.</em>
+    A linear function may always increase,
+    or decrease, or stay the same,
+    but the rate at which it does so will never change.
+  </p>
+ 
+  <example>
+    <statement>
+      <p>
+        Consider a function who takes on the following values:
+        <me>
+          \begin{array}{|c||c|c|c|c|c|} \hline x \amp  1\amp 2\amp 3\amp 4\amp 10\\ \hline f(x)\amp 10\amp 12\amp 14\amp 16\amp 28\\ \hline \end{array}
+        </me>
+      </p>
+      <p>
+        Does this function appear linear?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        It certainly takes on the semblance of linearity,
+        if we observe the change from <m>x=1</m> to <m>x=2</m>,
+        the change in <m>f(x)</m> or <m>\Delta f(x)=12-10=2</m>.
+      </p>
+      <p>
+        When we go from <m>x=2</m> to <m>x=3</m>,
+        we again saw that <m>\Delta f(x)=14-12=2</m>, and so forth.
+      </p>
+      <p>
+        Even when we go from <m>x=4</m> to <m>x=10</m>,
+        we say that <m>\Delta f(x)=28-16=12</m>,
+        but that was over a change of <m>\Delta x=10-4=6</m>.
+        This is still a change of <m>12/6=2</m> per unit of <m>x</m>.
+        So assuming nothing wild happens between the listed values,
+        this function does seem linear.
+      </p>
+      <p>
+        Graphically we can visualize this:
+      </p>
+<figure>
+<caption>Poop </caption>      
+      <image>
+ <description>A pile of electronic components wired together</description>     
+<latex-image>
+<![CDATA[\begin{tikzpicture}[yscale=.2][domain=-0:11]
+\draw[gray!50, thin, step=1] (0,0) grid (11,28);
+\draw[very thick,->] (0,0) -- (11.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,0) -- (0,28.1) node[above] {\(y\)};
+\draw[scale=1,domain=0:10,smooth,variable=\x,blue] plot ({\x},{2*\x+8});
+\node at (1,10){\(*\)};
+\draw (1,10) --node[above]{\((1,10)\)}(1,10);
+\node at (2,12){\(*\)};
+\draw (2,12) --node[below]{\((2,12)\)}(2,12);
+\node at (3,14){\(*\)};
+\draw (3,14) --node[above]{\((3,14)\)}(3,14);
+\node at (4,16){\(*\)};
+\draw (4,16) --node[below]{\((4,16)\)}(4,16);
+\node at (10,28){\(*\)};
+\draw (10,28) --node[above]{\((10,28)\)}(10,28);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      </figure>
+<figure xml:id="figure-pgfplots-demo">
+                    <caption>Sample pgfplots plot</caption>
+                    <image xml:id="pgfplots-demo">
+                        <description>A pgfplots example, with a function, a parametric curve, and some points plotted.</description>
+                        <latex-image>
+                        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                        <![CDATA[\begin{tikzpicture}
+                        \matrix{
+                            \begin{axis}[width = 0.5\linewidth]
+                                \addplot[
+                                    domain = 0.1:10,
+                                    <->,
+                                    smooth,
+                                    thin,
+                                    color = blue,
+                                ]{4*ln(x)/ln(10)};
+                                \addplot[
+                                    only marks,
+                                ]coordinates{
+                                    (0,2)
+                                    (4,3)
+                                    (2,4)
+                                    (3,4)};
+                                \addplot[
+                                    variable = \t,
+                                    domain = 0:360,
+                                    samples = 200,
+                                    color = orange,
+                                ]({3*sin(2*t)}, {2*cos(5*t)});
+                            \end{axis}
+                            \amp
+                            \begin{axis}[axis lines = box, width = 0.5\linewidth]
+                                \addplot3[
+                                    surf,
+                                    faceted color = blue,
+                                    samples = 15,
+                                    domain = 0:1,
+                                    y domain = -1:1
+                                ]{x^2 - y^2};
+                            \end{axis}\\
+                        };
+                        \end{tikzpicture}]]>
+                        </latex-image>
+                    </image>
+                </figure>      
+      <p>
+        An interactive version of this graph may be found here:  <figure><caption>Test</caption><interactive desmos="txkz7479z3" /></figure>.
+      </p>
+    </solution>
+  </example>
+  <p>
+    It always helps to illustrate a concept with a <term>non</term>-example.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Consider a function who takes on the following values:
+        <me>
+          \begin{array}{|c||c|c|c|c|c|} \hline x \amp  -2\amp -1\amp 0\amp 1\amp 2\\ \hline f(x)\amp 4\amp 1\amp 0\amp 1\amp 4\\ \hline \end{array}
+        </me>
+      </p>
+      <p>
+        Does this function appear linear?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        If we observe the change from <m>x=-2</m> to <m>x=-1</m>,
+        the change in <m>f(x)</m> or <m>\Delta f(x)=1-4=-3</m>.
+      </p>
+      <p>
+        However, when we go from <m>x=-1</m> to <m>x=0</m>,
+        we see that <m>\Delta f(x)=0-1=-1</m>.
+        Similarly, when we go from <m>x=0</m> to <m>x=1</m>,
+        we see that <m>\Delta f(x)=1-0=1</m>,
+        and when we go from <m>x=1</m> to <m>x=2</m>,
+        we see that <m>\Delta f(x)=4-1=3</m>.
+      </p>
+      <p>
+        Thus, this function goes from decreasing,
+        to increasing, and the rate at which it does so changes,
+        thus this function is <term>not</term> a linear function.
+      </p>
+      <p>
+        Graphically we can visualize this:
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[scale=1][domain=-0:11]
+\draw[gray!50, thin, step=1] (-3,-1) grid (3,5);
+\draw[very thick,->] (-3,0) -- (3.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-1) -- (0,5.1) node[above] {\(y\)};
+\draw[scale=1,domain=-2.23:2.23,smooth,variable=\x,blue] plot ({\x},{\x*\x});
+\node at (-2,4){\(*\)};
+\draw (-2,4) --node[below]{\((-2,4)\)}(-2,4);
+\node at (-1,1){\(*\)};
+\draw (-1,1) --node[left]{\((-1,1)\)}(-1,1);
+\node at (0,0){\(*\)};
+\draw (0,0) --node[below]{\((0,0)\)}(0,0);
+\node at (1,1){\(*\)};
+\draw (1,1) --node[right]{\((1,1)\)}(1,1);
+\node at (2,4){\(*\)};
+\draw (2,4) --node[below]{\((2,4)\)}(2,4);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        An interactive version of this graph may be found here: \url{https://www.desmos.com/calculator/za4t3zanlr}.
+      </p>
+    </solution>
+  </example>
+  <p>
+    We can see from the above examples that linear functions are the functions whose graphs may be represented with a straight line.
+    This is sensible: after all,
+    straight lines move in the same direction,
+    and neither deviate one way nor another,
+    just as linear functions increase,
+    stay constant or decrease at a constant rate.
+    This is where the name <term>linear</term> functions come from.
+  </p>
+</section>

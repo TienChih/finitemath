@@ -1,0 +1,63 @@
+<section xml:id="Sec_AvgRoC">
+  <title>Average rates of change</title>
+  <p>
+    Consider a rocket that is launched into the air and has height
+    <m>f(x)=-5x^2+20x</m> meters in <m>x</m> seconds. \url{https://www.desmos.com/calculator/1rwsdsbcm9}. How fast is the rocket traveling when it's launched (<m>x=0</m> seconds)?
+  </p>
+  <p>
+    Turns out, it's not so easy to think about what this is,
+    we don't typically think about speeds in terms of instantaneous action.
+    Our methods of measuring speed reflects this,
+    it's always stuff like meters <term> PER SECOND</term>,
+    miles <term> PER HOUR</term>,
+    in other words speed is some change in distance <term> OVER TIME</term>
+    and that period of time is not typically 0.
+  </p>
+  <p>
+    So what now?
+    Lets start by asking an easier question,
+    what is the average speed of the rocket over the first 3 seconds?
+  </p>
+  <p>
+    It's best in a scenario like this to NOT overthink the underlying problem.
+    At 0 seconds,
+    you're <m>f(0)=-5(0)^2+20(0)=0</m> meters off the ground.
+    After 3 seconds you are <m>f(3)=-5(3^2)+20(3)=15</m> meters off the ground.
+    So you rose by 15 meters in 3 seconds?
+    You're aveerage speed must be 5 meters per second. \url{https://www.desmos.com/calculator/6k61owwnrd}.
+  </p>
+  <p>
+    In fact: <term> The average rate of change of a function <m>f(x)</m> over the interval <m>[a,b]</m> is <m>m=\frac{f(b)-f(a)}{b-a}</m>.</term>
+    This is just the slope of the line connecting <m>(a,f(a))</m> and <m>(b,f(b))</m>.
+  </p>
+  <p>
+    Following this idea,
+    the average velocity of our rocket over the 1st 2 seconds is:
+    <m>m=\frac{f(2)-f(0)}{2-0}=\frac{20}{2}=10</m> meters per second. \url{https://www.desmos.com/calculator/ihauynuflo}
+  </p>
+  <p>
+    The average velocity of our rocket over the 1st second is:
+    <m>m=\frac{f(1)-f(0)}{1-0}=\frac{15}{1}=15</m> meters per second. \url{https://www.desmos.com/calculator/jce0fd1bsr}
+  </p>
+  <p>
+    The average velocity of our rocket over the 1st half second is:
+    <m>m=\frac{f(.5)-f(0)}{.5-0}=\frac{8.75}{.5}=17.5</m> meters per second. \url{https://www.desmos.com/calculator/xpxlltf8f5}
+  </p>
+  <p>
+    The average velocity of our rocket over the 1st quarter second is:
+    <m>m=\frac{f(.25)-f(0)}{.25-0}=\frac{4.6875}{.25}=18.75</m> meters per second. \url{https://www.desmos.com/calculator/74kpvz17c5}
+  </p>
+  <p>
+    The average velocity of our rocket over the 1st tenth of a second is:
+    <m>m=\frac{f(.1)-f(0)}{.1-0}=\frac{1.95}{.1}=19.5</m> meters per second. \url{https://www.desmos.com/calculator/qyvtzmyg8k}
+  </p>
+  <p>
+    The average velocity of our rocket over the 1st hundreth of a second is:
+    <m>m=\frac{f(.01)-f(0)}{.01-0}=\frac{.1995}{.1}=19.95</m> meters per second. \url{https://www.desmos.com/calculator/hrawtifwdw}
+  </p>
+  <p>
+    And it does seem like these numbers are getting closer and closer to 20 meters per second as <m>b</m> gets closer to 0.
+    But if I plug in <m>0</m> for <m>b</m>, I get an undefined <m>0/0</m> fraction.
+    Oh, if only there were some concept in mathematics to describe the values of a function as your inputs slowly approach a given value.........
+  </p>
+</section>

@@ -1,0 +1,28 @@
+<section xml:id="Sec_SystemsLinearInequalities">
+  <title>Systems of Linear Inequalities</title>
+  <p>
+    If a solution to a system of equations is a set of points that make several equations true,
+    then the same is true of systems of linear inequalities.
+    It's just going to be the collection of points that make all the inequalities true.
+  </p>
+  <example>
+    <statement>
+      <p>
+        What is the solution to the following system:
+        <md>
+          <mrow>2x+3y\amp \leq\amp 12</mrow>
+          <mrow>x\amp \geq\amp 0</mrow>
+          <mrow>y\amp \geq\amp 0</mrow>
+        </md>
+      </p>
+      <p>
+        We know from earlier that the solutions have to lie in the bottom right hand of the plane on or below the line <m>2x+3y=12</m>.
+        We also know that neither the <m>x</m> or <m>y</m> values can be negative.
+        What's left is a sort of triangle: \url{https://www.desmos.com/calculator/2dekmagipa}, the overlap of regions where all 3 inequalities are true.
+      </p>
+      <p>
+        This may be easier to see: \url{https://www.desmos.com/calculator/apmcey4kfa}.
+      </p>
+    </statement>
+  </example>
+</section>

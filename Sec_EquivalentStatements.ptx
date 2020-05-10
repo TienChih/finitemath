@@ -1,0 +1,155 @@
+<section xml:id="Sec_EquivalentStatements">
+  <title>Equivalent Statements</title>
+  <p>
+    Naturally, in mathematics, we care about equivalence of things.
+    For example,
+    one might say that given any <m>x</m>, <m>2(x+3)=2x+6</m>.
+    Another example of equivalent statements would be
+    <q>I own a red dog</q>
+    and
+    <q>I own a dog and it is red.</q>
+    Suffice to say,
+    the same information can be transmitted in a lot of distinct ways,
+    and we should have some mechanism for detecting that.
+  </p>
+  <p>
+    Let's take a closer look at <m>2(x+3)=2x+6</m>.
+    What does this really mean?
+    In essence, it says that no matter what <m>x</m> is,
+    the left hand side and right hand side will yield the same value.
+    If I plug in <m>x=0</m> then <m>2(0+3)=2(0)+6=6</m>,
+    if I plug in <m>x=4</m> then <m>2(4+3)=2(4)+6=14</m>,
+    if I plug in <m>x=-1</m> then <m>2(-1+3)=2(-1)+6=4</m> and so forth.
+    The statements <m>2(x+3)</m> and <m>2x+6</m> have the same value under the same circumstances.
+    So this is how we define equivalence of logical statements.
+    <term>Two logical statements are equivalent if they have the same values under the same circumstances.</term>
+  </p>
+  <p>
+    For algebraic expressions like the ones above,
+    <m>x</m> can take on infinitely many values,
+    so we can't just sit there and plug in infinitely many values into both sides,
+    so it becomes imperative that we establish some sort of general rules and laws,
+    like distribution, to avoid having to do this,
+    while still being able to meaningfully accomplish things.
+    The nice thing about logical statements is that for any variable,
+    we only have 2 possible values, <m>T</m> or <m>F</m>.
+    The statement itself can only take on the values <m>T</m> or <m>F</m>,
+    so it's much easier to see if two logical statements are equivalent,
+    compared to algebraic ones.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Is
+        <q><m>\sim(p \vee q)=\sim p \vee \sim q</m>?</q>
+      </p>
+      <p>
+        Before we jump into the formal stuff,
+        it helps to concretize this with actual statements.
+        Let's say <m>p</m> is ``I'll eat breakfast" and <m>q</m> is ``I'll eat lunch". Then
+        <m>p \vee q</m> is ``I'll eat breakfast or I'll eat lunch". Is NOT doing this the same as
+        <m>\sim p \vee \sim q</m> which is ``I'll not eat breakfast or I'll not eat lunch?"
+      </p>
+      <p>
+        The first statement is basically ``I'm not eating breakfast or lunch", the second is ``I'll not eat breakfast or I'll not eat lunch", they sound similar spoken aloud but there is a subtle difference.
+      </p>
+      <p>
+        Let's say you skip breakfast and eat lunch.
+        Since you ate lunch, <m>p\vee q</m> is true,
+        so <m>\sim(p\vee q)</m> must be false,
+        you didn't not eat breakfast or eat lunch.
+        What about <m>\sim p \vee \sim q</m>?
+        Well you skipped breakfast so <m>\sim p</m> is true and therefore <m>\sim p \vee \sim q</m> is true,
+        so it would seem like they are not the same.
+      </p>
+      <p>
+        Formally, we can look at these truth tables:
+        <me>
+          \begin{array}{c|c|c|c} p\amp q\amp p\vee q\amp  \sim (p\vee q)\\ \hline T \amp  T\amp T\amp F\\ T\amp F\amp T\amp F\\ F\amp T\amp T\amp F\\ F\amp F\amp F\amp T \end{array}
+        </me>
+        <me>
+          \begin{array}{c|c|c|c|c} p\amp q\amp \sim p\amp  \sim q \amp  \sim p \vee \sim q\\ \hline T \amp  T\amp F\amp F\amp F\\ T\amp F\amp F\amp T\amp T\\ F\amp T\amp T\amp F\amp T\\ F\amp F\amp T\amp T\amp T \end{array}
+        </me>
+      </p>
+      <p>
+        So <m>\sim(p\vee q)</m> i.e.<nbsp/>``I'm not eating breakfast or lunch" is only true if you skip both meals.
+        If you eat either then you lied.
+        On the other hand,
+        <m>\sim p \vee \sim q</m> i.e.<nbsp/>``I'll skip breakfast or I'll skip lunch" is true so long as you skip either meal.
+        It's only false if you go ahead and eat both.
+      </p>
+      <p>
+        So what does <m>\sim(p \vee q)</m> equal?
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        Does <m>\sim(p \vee q)=\sim p \wedge \sim q</m>?
+      </p>
+      <p>
+        Start with the concrete before the formal.
+        In our extended example,
+        <m>\sim(p\vee q)</m> means ``I'm not eating breakfast or lunch", whereas
+        <m>\sim p \wedge \sim q</m> means ``I'm not eating breakfast and I'm not eating lunch." It does kinda seem like they're the same<ellipsis/>
+      </p>
+      <p>
+        So formally:
+        <me>
+          \begin{array}{c|c|c|c} p\amp q\amp p\vee q\amp  \sim (p\vee q)\\ \hline T \amp  T\amp T\amp F\\ T\amp F\amp T\amp F\\ F\amp T\amp T\amp F\\ F\amp F\amp F\amp T \end{array}
+        </me>
+        <me>
+          \begin{array}{c|c|c|c|c} p\amp q\amp \sim p\amp  \sim q \amp  \sim p \wedge \sim q\\ \hline T \amp  T\amp F\amp F\amp F\\ T\amp F\amp F\amp T\amp F\\ F\amp T\amp T\amp F\amp F\\ F\amp F\amp T\amp T\amp T \end{array}
+        </me>
+        now THIS makes more sense.
+        In order to say ``I'm not having breakfast OR lunch" you really are saying ``I'm skipping breakfast AND I'm skipping lunch". So these statements are in fact identical,
+        they have the same values under the same circumstances.
+      </p>
+      <p>
+        This is half of a pair of equivalences called
+        <term>DeMorgan's Laws</term>:
+        <ul>
+          <li>
+            <p>
+              <m>\sim(p \vee q)=\sim p \wedge \sim q</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sim(p \wedge q)=\sim p \vee \sim q</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        It's not a bad idea to check this second equivalence,
+        build the truth tables and see if they are the same.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        Is <m>\sim((p \vee q)\wedge \sim r)=(\sim p \wedge \sim q )\vee r</m>?
+      </p>
+      <p>
+        So yeah sure,
+        we could go ahead and build truth tables for all this,
+        but at this point Im sure laying out 8 rows of T and F and all these combinations is a real hassle.
+        On the other hand,
+        we have in fact these very nice laws described above.
+        One of the reasons we develop algebraic rules is convenience,
+        so let's go ahead:
+        <md>
+          <mrow>\sim((p \vee q)\wedge \sim r)\amp =\amp \sim(p \vee q)\vee \sim\sim r\ \ \text{ By DeMorgan's Law }</mrow>
+          <mrow>\amp =\amp \sim(p \vee q)\vee r \ \ \text{ since \(\sim\sim r=r\) }</mrow>
+          <mrow>\amp =\amp (\sim p \wedge \sim q )\vee r \ \ \text{ by DeMorgans law again. }</mrow>
+        </md>
+      </p>
+      <p>
+        So yes, they are equal, fairly nice.
+      </p>
+    </statement>
+  </example>
+</section>

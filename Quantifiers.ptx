@@ -1,0 +1,152 @@
+<section xml:id="Quantifiers">
+  <title>Quantifiers</title>
+  <introduction>
+    <p>
+      There are a lot of things in the world.
+      A lot of people, a lot of animals, a lot of numbers,
+      a lot of toppings available for pizza,
+      a lot of things I could add to this list.
+      Presumably, sometimes we'd want to make statements about all these things,
+      and sometimes we want to make statements about some of these things.
+    </p>
+    <p>
+      Suppose <m>x</m> is an MSUB student and <m>I(x)</m> is the statement
+      <q><m>x</m> likes ice cream.</q>
+      We want to perhaps say something more subtle than this.
+      So we introduce the quantifiers <m>\forall</m> and <m>\exists</m>.
+    </p>
+    <p>
+      The <m>\forall</m> is pronounced
+      <q>for all</q>
+      or
+      <q>for every</q>, indicates that the following statement is true for all values of <m>x</m>.
+      So <m>\forall I(x)</m> would denote
+      <q>For every MSUB student <m>x</m>,
+      <m>x</m> likes Ice Cream.</q>. In order for a <m>\forall</m> statement to be true,
+      it has to be true for EVERY possible value of <m>x</m>.
+    </p>
+    <p>
+      The <m>\exists</m> pronounced
+      <q>there exists</q>
+      or
+      <q>there is</q>
+      indicates the following statement is true for some values of <m>x</m>.
+      It could be true for 1 of them,
+      or a bunch of them, or for all of them.
+      The only thing we know for sure is that there is AT LEAST 1 value of <m>x</m> for which it is true.
+      So <m>\exists I(x)</m> would mean
+      <q>There is an MSUB student who likes Ice Cream.</q>
+      or
+      <q>At least one MSUB student likes Ice Cream.</q>
+    </p>
+    <p>
+      Let's let <m>M(x)</m> be
+      <q><m>x</m> is a Math Major</q>, <m>C(x)</m> be
+      <q><m>x</m> takes Calculus</q>. Then consider the following equivalences:
+      <me>
+        <tabular>
+          <row>
+            <cell><term> Logic</term></cell>
+            <cell><term> English</term></cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>\(\forall (M(x)\to C(x))\)</cell>
+            <cell>For every MSUB student, if you're a Math Major then you take Calculus.</cell>
+          </row>
+          <row>
+            <cell>\(\exists (\sim M(x)\wedge \sim C(x))\)</cell>
+            <cell>There is an MSUB student who isn't a Math Major and doesn't take Calculus.</cell>
+          </row>
+          <row>
+            <cell>\(\forall \sim C(x)\)</cell>
+            <cell>Every MSUB student does not take calculus.</cell>
+          </row>
+        </tabular>
+      </me>
+    </p>
+    <p>
+      Putting aside whether or not the above statements are actually true,
+      here we just see how we can translate statements from english to logical symbols with quantifiers and back.
+    </p>
+    <p>
+      Also, whenever you see a statement <m>\forall p(x)</m>,
+      no matter what <m>p(x)</m> is,
+      it is fair to deduce <m>\exists p(x)</m> automatically.
+      If somethings true for EVERY <m>x</m>,
+      then it also has to be true for at least 1 <m>x</m>.
+      The converse is obviously NOT true.
+      If something is true for a single <m>x</m>,
+      it doesn't mean it will be true for more.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Negating Quantifiers</title>
+    <p>
+      Let's consider <m>\forall I(x)</m> or
+      <q>Every MSUB student likes Ice Cream.</q>
+      If this were NOT true, what would that mean?
+      It would mean that there is some poor soul out on our campus who does not like Ice Cream.
+      In other words: <m>\exists \sim I(x)</m>.
+    </p>
+    <p>
+      What would the negation of <m>\exists I(x)</m> be?
+      The statement is saying
+      <q>There is a student who likes Ice Cream.</q>
+      What is the opposite of this?
+      It would mean that every single student doesn't like Ice Cream,
+      i.e.<nbsp/><m>\forall \sim I(x)</m>.
+      So our negation rules are:
+      <md>
+        <mrow>\sim(\forall p(x))\amp =\amp \exists \sim p(x)</mrow>
+        <mrow>\sim(\exists p(x))\amp =\amp \forall \sim p(x)</mrow>
+      </md>.
+    </p>
+    <p>
+      So let's practice on the statements we made earlier:
+      <ul>
+        <li>
+          <p>
+            The negation of ``For every MSUB student,
+            if you're a Math Major then you take Calculus." is:
+            <md>
+              <mrow>\sim(\forall (M(x)\to C(x)))\amp =\amp \exists\sim (M(x)\to C(x))</mrow>
+              <mrow>\amp =\amp \exists\sim (\sim M(x)\vee C(x))</mrow>
+              <mrow>\amp =\amp \exists(M(x)\wedge \sim C(x))</mrow>
+            </md>
+            ``At MSUB, there is a student who is a Math Major and doesn't take Calculus."
+          </p>
+        </li>
+        <li>
+          <p>
+            The negation of ``There is an MSUB student who isn't a Math Major and doesn't take Calculus." is:
+            <md>
+              <mrow>\sim(\exists (\sim M(x)\wedge \sim C(x)))\amp =\amp \forall \sim(\sim M(x)\wedge \sim C(x))</mrow>
+              <mrow>\amp =\amp \forall M(x)\vee C(x)</mrow>
+            </md>
+            ``Every student at MSUB either is a Math Major or takes Calculus."
+          </p>
+        </li>
+        <li>
+          <p>
+            The negation of
+            <q>Every MSUB student does not take calculus.</q>
+            is:
+            <md>
+              <mrow>\sim(\forall \sim C(x))\amp =\amp \exists \sim\sim C(x)</mrow>
+              <mrow>\amp =\amp \exists C(x)</mrow>
+            </md>
+            <q>There is an MSUB student taking Calculus.</q>
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Again, I'm not claiming any of these things are true IRL. But given the original statements,
+      these should read and feel like real opposites.
+    </p>
+  </subsection>
+</section>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-05-10T10:49:14-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Standard form and graphs of Linear Functions.</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_IntrotoLinear.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_LinearFunctions.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_IndentifyLinear.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_IntrotoLinear.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_LinearFunctions.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_IndentifyLinear.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions" class="active">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_UtilityLinear.html" data-scroll="Sec_UtilityLinear">Utilizing the Linear Function</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_OperationsStatements.html" data-scroll="Sec_OperationsStatements">Operations on Statements</a></li>
+<li><a href="Sec_CompoundStatements.html" data-scroll="Sec_CompoundStatements">Compound Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Sec_Circuits.html" data-scroll="Sec_Circuits">Circuits</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Argument Types</a></li>
+<li><a href="Fallacies.html" data-scroll="Fallacies">Fallacies</a></li>
+<li><a href="Sec_ValidArguments.html" data-scroll="Sec_ValidArguments">Valid and invalid arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative as a Limit</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
+<li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
+<li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
+<li><a href="section-38.html" data-scroll="section-38">Product Rule</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Quotient Rule</a></li>
+<li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_GraphsofLinearFunctions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Standard form and graphs of Linear Functions.</span>
+</h2>
+<a href="Sec_GraphsofLinearFunctions.html" class="permalink">¶</a><section class="introduction" id="introduction-2"><p id="p-19">Algebraically, linear functions are expressible as:</p>
+<div class="displaymath">
+\begin{align*}
+y\amp =\amp mx+b, \text{ or }\\
+f(x)\amp =\amp mx+b\text{.}
+\end{align*}
+</div>
+<p id="p-20">Where \(m\) is the <dfn class="terminology">slope</dfn>, the rate of change of our linear function, and \(b\) is the \(\mathbf{y}\)<dfn class="terminology">-intercept</dfn>.</p>
+<p id="p-21">What are these things, why do they have these names, and what do they signify?</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Slope.</span>
+</h3>
+<p id="p-22"><div class="sagecell-sage" id="sage-1"><script type="text/x-sage">2+2
+</script></div> The <dfn class="terminology">slope</dfn> is the constant rate of change of the linear function. It is often expressed:</p>
+<div class="displaymath">
+\begin{equation*}
+m=\frac{\Delta y}{\Delta x}, m=\frac{\Delta f(x)}{\Delta x}\text{.}
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="figure-4"><iframe src="https://www.desmos.com/calculator/ttox1bvxku" id="desmos-natural-log" width="360" height="540"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span>Test</figcaption></figure><p id="p-23">These algebraic expressions are just a formal way of saying, ``However much \(x\) changes, \(y\) or \(f(x)\) always changes by a proportional amount, and this amount is \(m\text{.}\)"</p>
+<article class="example example-like" id="Example_Slope"><a data-knowl="" class="id-ref original" data-refid="hk-Example_Slope"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_Slope"><article class="example example-like"><p id="p-24">Let \(y=-x+4\text{.}\) This represents a linear function with \(m=-1\) and \(b=4\text{.}\) To verify, if we compared \(x=4\) and \(x=1\text{,}\) we have a change in \(x\text{,}\) \(\Delta x=4-1=3\text{.}\) To find \(\Delta y\text{,}\) we note that when \(x=1, y=-(1)+4=3\) and when \(x=4, y=-(4)+4=0\text{.}\) Thus \(\Delta y=0-3=-3\text{.}\) So \(m=\frac{\Delta f(x)}{\Delta x}=\frac{-3}{3}=-1\text{.}\)</p>
+<p id="p-25">This shouldn't depend on which choices of \(x\) we made. If we compared \(x=3\) and \(x=2\text{,}\) we have a change in \(x\text{,}\) \(\Delta x=3-2=1\text{.}\) To find \(\Delta y\text{,}\) we note that when \(x=3, y=-(3)+4=1\) and when \(x=2, y=-(2)+4=2\text{.}\) Thus \(\Delta y=1-2=-1\text{.}\) So \(m=\frac{\Delta f(x)}{\Delta x}=\frac{-1}{1}=-1\text{.}\)</p>
+<p id="p-26">This can be represented visually:</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-4.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-5.svg" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-27">An interactive version of this graph can be found here:   <figure class="figure figure-like" id="figure-5"><iframe src="https://www.desmos.com/calculator/9s3kfotxne" id="interactive-3" width="360" height="270"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.3<span class="period">.</span></span><span class="space"> </span>Test</figcaption></figure></p></article></div>
+<article class="example example-like" id="Example_NullSlope"><a data-knowl="" class="id-ref original" data-refid="hk-Example_NullSlope"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_NullSlope"><article class="example example-like"><p id="p-28">Let \(y=3\text{.}\) We can re-imagine this as \(y=0x+3\text{,}\) so this represents a linear function with \(m=0\) and \(b=3\text{.}\) Note that no matter what the \(x\) values are, \(y=3\text{.}\) So \(\Delta y=0\text{,}\) and \(m=\frac{\Delta y}{\Delta x}=\frac{0}{\Delta x}=0\text{.}\) Intuitively, \(y\) is always 3 and never changes, so the “rate of change” is a constant nothing. This gives us a horizontal line.</p>
+<p id="p-29">This can be represented visually:</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-6.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-7.svg" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-30">An interactive version of this graph can be found here: \url{https://www.desmos.com/calculator/pv7m6fbugb}.</p></article></div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">\(\mathbf{y}\)-intercept.</span>
+</h3>
+<p id="p-31">The \(\mathbf{y}\)<dfn class="terminology">-intercept</dfn> of a linear function \(y=mx+b\) is the value \(b\text{.}\) It is so named because it is the value of the linear function when it <dfn class="terminology">intercepts</dfn> the \(y\)-axis. The reason for this is that the \(y\)-axis is exactly the line \(x=0\text{,}\) and when \(x=0\text{,}\) \(y=m(0)+b=b\text{.}\)</p>
+<article class="example example-like" id="Example_Intercept"><a data-knowl="" class="id-ref original" data-refid="hk-Example_Intercept"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_Intercept"><article class="example example-like"><p id="p-32">Let us recall <a class="xref" data-knowl="./knowl/Example_Slope.html" title="Example 1.2.2">Example 1.2.2</a> and let \(y=-x+4\text{.}\) Note that when \(x=0, y=-(0)+4=4\text{.}\)</p>
+<p id="p-33">This can be represented visually:</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-8.svg" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-34">Note that \(4\) is the height of the function when it intercepts the \(y\)-axis.</p></article></div>
+<article class="example example-like" id="Example_Intercept2"><a data-knowl="" class="id-ref original" data-refid="hk-Example_Intercept2"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_Intercept2"><article class="example example-like"><p id="p-35">Let us recall <a class="xref" data-knowl="./knowl/Example_NullSlope.html" title="Example 1.2.4">Example 1.2.4</a> and let \(y=3=0x+3\text{.}\) Note that when \(x=0, y=3\text{.}\)</p>
+<p id="p-36">This can be represented visually:</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-9.svg" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-37">Note that \(3\) is the height of the function when it intercepts the \(y\)-axis.</p></article></div></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">Translating from Algebra to Geometry</span>
+</h3>
+<p id="p-38">We can see in our above examples that linear functions have both an algebraic form and a geometric interpretation. Both are useful and in fact necessary to understand what's going on with a linear function. So what we now want to ask ourselves is, given the algebraic expression for a line, how might we find it's geometric representation?</p>
+<p id="p-39">Intuitively, we know that if we had a sheet of paper and a ruler, if we drew 2 points on this paper, we could find the line between them. So to find a geometric representation of a linear function, we should:</p>
+<ol class="decimal">
+<li id="li-1"><p id="p-40">Find a point that must be on thee line.</p></li>
+<li id="li-2"><p id="p-41">Identify a second point on the line.</p></li>
+<li id="li-3"><p id="p-42">Draw the line between them.</p></li>
+</ol>
+<article class="example example-like" id="Example_DrawLine"><a data-knowl="" class="id-ref original" data-refid="hk-Example_DrawLine"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_DrawLine"><article class="example example-like"><p id="p-43">Draw the line \(y=f(x)\) where \(f(x)=-\frac{2}{3}x+4\text{.}\)</p>
+<ol class="decimal">
+<li id="li-4"><p id="p-44">We first identify a point on the line, the easiest to find is probably the \(y\)-intercept, note that when \(x=0, f(x)=-\frac{2}{3}(0)+4=4\text{,}\) thus \((0,4)\) is on \(y=f(x)\text{.}\)</p></li>
+<li id="li-5"><p id="p-45">We have infinitely many choices for a second point, but to make the arithmetic easy, let's let \(x=3\text{,}\) then \(f(x)=-\frac{2}{3}(3)+4=-2+4=2\text{,}\) so \((3,2)\) is on the line. Note this gives us: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-10.svg" style="width: 100%; height: auto;" alt=""></div></p></li>
+<li id="li-6"><p id="p-46">We then literally connect the dots: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-11.svg" style="width: 100%; height: auto;" alt=""></div></p></li>
+</ol>
+<p id="p-47">Modern technology also let's us readily draw these functions: \url{https://www.desmos.com/calculator/gyvulordwz}.</p></article></div>
+<article class="example example-like" id="Example_DrawLineOtherForm"><a data-knowl="" class="id-ref original" data-refid="hk-Example_DrawLineOtherForm"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_DrawLineOtherForm"><article class="example example-like"><p id="p-48">Draw the line \(2x+4y=8\text{.}\)</p>
+<ol class="decimal">
+<li id="li-7"><p id="p-49">We first identify a point on the line. To make life easy note that when \(x=0, 2(0)+4y=8\) and \(y=2\text{,}\) thus \((0,2)\) is on \(2x+4y=8\text{.}\)</p></li>
+<li id="li-8"><p id="p-50">Similarly when \(y=0, 2x+4(0)=8\) and \(x=4\text{,}\) thus \((4,0)\) is on \(2x+4y=8\text{.}\) Note this gives us: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-12.svg" style="width: 100%; height: auto;" alt=""></div></p></li>
+<li id="li-9"><p id="p-51">We then connect the dots: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-13.svg" style="width: 100%; height: auto;" alt=""></div></p></li>
+</ol>
+<p id="p-52">Again, utilizing technology: \url{https://www.desmos.com/calculator/lprlevpf6q}.</p>
+<p id="p-53">Note that we could have taken \(2x+4y=8\) and rewritten it:</p>
+<div class="displaymath">
+\begin{align*}
+2x+4y\amp =\amp 8\\
+4y\amp =\amp -2x+8\\
+y\amp =\amp -\frac{1}{2}x+2\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">and from here, treated it the same way as in <a class="xref" data-knowl="./knowl/Example_DrawLine.html" title="Example 1.2.7">Example 1.2.7</a>.</p></article></div></section></section></div></main>
+</div>
+</body>
+</html>

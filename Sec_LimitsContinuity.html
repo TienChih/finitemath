@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-05-10T10:49:17-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Limits &amp; Continuity</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Chap_Calculus.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_AvgRoC.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Chap_Calculus.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_AvgRoC.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_UtilityLinear.html" data-scroll="Sec_UtilityLinear">Utilizing the Linear Function</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_OperationsStatements.html" data-scroll="Sec_OperationsStatements">Operations on Statements</a></li>
+<li><a href="Sec_CompoundStatements.html" data-scroll="Sec_CompoundStatements">Compound Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Sec_Circuits.html" data-scroll="Sec_Circuits">Circuits</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Argument Types</a></li>
+<li><a href="Fallacies.html" data-scroll="Fallacies">Fallacies</a></li>
+<li><a href="Sec_ValidArguments.html" data-scroll="Sec_ValidArguments">Valid and invalid arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity" class="active">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative as a Limit</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
+<li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
+<li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
+<li><a href="section-38.html" data-scroll="section-38">Product Rule</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Quotient Rule</a></li>
+<li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_LimitsContinuity"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Limits &amp; Continuity</span>
+</h2>
+<a href="Sec_LimitsContinuity.html" class="permalink">¶</a><section class="introduction" id="introduction-16"><p id="p-555">Informally, the limit of a function \(\limit{x}{a} f(x)=L\) (if it exists) is a number \(L\) such that when \(f(x)\) get's closer and closer to \(a\text{,}\) \(f(x)\) gets closer and closer to \(L\text{.}\)</p>
+<p id="p-556">Consider the function \(f(x)=\frac{x^2-1}{x-1}\text{,}\) what happens as \(x\) get's closer and closer to 1?</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{|c|c|} \hline x \amp  f(x)\\ \hline 1.1 \amp  2.1\\ 1.01 \amp  2.01\\ 1.001 \amp  2.001\\ .9 \amp  1.9\\ .99\amp 1.99\\ .999 \amp  1.999\\ \hline \end{array}
+\end{equation*}
+</div>
+<p id="p-557">You can test and see these values here: \url{https://www.desmos.com/calculator/w3ycpf3mv4}. It certainly seems as if \(x\) gets closer and closer to \(1\text{,}\) \(f(x)\) approaches the value \(2\text{.}\) Why couldn't we just plug in 1? Because if we did we would get \(f(1)``=''\frac{1^2-1}{1-1}``=''\frac{0}{0}\) which is undefined. Recall that \(1\) would not be a part of the domain of \(f(x)\text{.}\) This, in fact, is the whole point of limits, the entire reason they exist, is in order to give values to things like \(f(1)\) which are not defined.</p>
+<p id="p-558">The left and right limits of a function are values the function approaches as \(x\) \(a\) from the left or the right, so as we see above, they both (the black and orange dots in the linked graph) both approach the same value. So:</p>
+<ul class="disc">
+<li id="li-99"><p id="p-559">\(\limit{x}{1^-}\frac{x^2-1}{x-1}=2\text{.}\)</p></li>
+<li id="li-100"><p id="p-560">\(\limit{x}{1^+}\frac{x^2-1}{x-1}=2\)</p></li>
+<li id="li-101"><p id="p-561">\(\limit{x}{1}\frac{x^2-1}{x-1}=2\)</p></li>
+<li id="li-102"><p id="p-562">\(f(1)\) is undefined.</p></li>
+</ul>
+<p id="p-563">So looking at this graph:</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-39.svg" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-564">For \(x=2,4,6,8\text{,}\) find the left and right limits, the limit, and the value of the function. See if you understand why the following are true:</p>
+<ul class="disc">
+<li id="li-103"><p id="p-565">\(\limit{x}{2^-}f(x)=2\text{,}\) as we approach \(x\) from the left, this is what \(f(x)\) approaches.</p></li>
+<li id="li-104"><p id="p-566">\(\limit{x}{2^+}f(x)=1\text{,}\) as we approach \(x\) from the right, this is what \(f(x)\) approaches.</p></li>
+<li id="li-105"><p id="p-567">\(\limit{x}{2}f(x)\) is undefined, there is no single number that \(f(x)\) get's closer to, so there is no limit.</p></li>
+<li id="li-106"><p id="p-568">\(f(2)=1\text{,}\) that's the actual value of \(f(2)\text{.}\)</p></li>
+</ul>
+<p id="p-569">Similarly, we should see:</p>
+<ul class="disc">
+<li id="li-107"><p id="p-570">\(\limit{x}{4^-}f(x)=1\text{.}\)</p></li>
+<li id="li-108"><p id="p-571">\(\limit{x}{4^+}f(x)=1\text{.}\)</p></li>
+<li id="li-109"><p id="p-572">\(\limit{x}{4}f(x)=1\text{.}\)</p></li>
+<li id="li-110"><p id="p-573">\(f(4)=-1\text{.}\)</p></li>
+<li id="li-111"><p id="p-574">\(\limit{x}{6^-}f(x)=-1\text{.}\)</p></li>
+<li id="li-112"><p id="p-575">\(\limit{x}{6^+}f(x)=-1\text{.}\)</p></li>
+<li id="li-113"><p id="p-576">\(\limit{x}{6}f(x)=-1\text{.}\)</p></li>
+<li id="li-114"><p id="p-577">\(f(6)=-1\text{.}\)</p></li>
+<li id="li-115"><p id="p-578">\(\limit{x}{8^-}f(x)=-3\text{.}\)</p></li>
+<li id="li-116"><p id="p-579">\(\limit{x}{8^+}f(x)=-3\text{.}\)</p></li>
+<li id="li-117"><p id="p-580">\(\limit{x}{8}f(x)=-3\text{.}\)</p></li>
+<li id="li-118"><p id="p-581">\(f(8)\) is undefined.</p></li>
+</ul>
+<p id="p-582">A great shorthand for determining when there is or isn't a limit is: ``\(\limit{x}{a}f(x)=L\) and exists if and only if \(\limit{x}{a^-}f(x)=L\) and \(\limit{x}{a^+}f(x)=L\)"</p></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.1.1</span> <span class="title">Continuity</span>
+</h3>
+<p id="p-583">I'm not going to overblow continuity with to much verbiage here since we intuitive understand what it means to be continuous, it just means that all the points “connect”. So what does tat mean for us above? Out of the values \(x=2,4,6,8\text{,}\) where is \(x\) continuous?</p>
+<p id="p-584">It seems like it's only 6 where it's continuous. 2 and 4 have jump discontinuities, and \(f(x)\) isn't even defined at \(x=8\) so how could it be continuous there? So the definition of continuous is as intuitive as we would like:</p>
+<p id="p-585">\(f(x)\) is continuous at \(a\) if and only of \(f(a)=\limit{x}{a} f(x)\text{.}\) So as in above, out of the 4 points we looked at, \(x=6\) is the only place where everything “behaves properly” and we get continuity.</p></section></section></div></main>
+</div>
+</body>
+</html>

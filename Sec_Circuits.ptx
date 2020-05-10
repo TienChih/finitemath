@@ -1,0 +1,73 @@
+<section xml:id="Sec_Circuits">
+  <title>Circuits</title>
+  <p>
+    Consider
+    <me>
+      \begin{circuitikz}  \draw (0,0) to[ospst=$p$] (2,0);  \end{circuitikz}
+    </me>
+  </p>
+  <p>
+    This is the diagram of the
+    <q>circuit</q>
+    <m>p</m> Imagine <m>T</m> as been the bridge open and <m>F</m> as the bridge closed.
+    Can you cross over, well,
+    yes as long as the bridge is open,
+    i.e. as long as <m>p</m> is true.
+  </p>
+  <p>
+    Now how about this:
+  </p>
+  <p>
+    Consider
+    <me>
+      \begin{circuitikz}  \draw (0,0) to[ospst=$p$] (2,0);  \draw (2,0) to[ospst=$q$] (4,0);  \end{circuitikz}
+    </me>
+  </p>
+  <p>
+    Can you get to the other side?
+    Well, as long as both bridges are open, i.e.
+    <m>p\wedge q</m>.
+  </p>
+  <p>
+    How about this?
+    <me>
+      \begin{circuitikz}  \draw (0,0) to (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$p$] (4,1);  \draw (2,-1) to[ospst=$q$] (4,-1);  \draw(4,1) to (4,0); \draw(4,-1) to (4,0);  \draw(4,0) to (6,0);   \end{circuitikz}
+    </me>
+  </p>
+  <p>
+    Can you get from one side to the other?
+    Yes, as long as either bridge is open we can,
+    so this is <m>p\vee q</m>.
+  </p>
+  <p>
+    Using these circuit diagrams,
+    we can model any logical statement.
+    For example <m>p\wedge ((q\wedge r) \vee (\sim q \wedge \sim r))</m> would be:
+    <me>
+      \begin{circuitikz}  \draw (0,0) to[ospst=$p$] (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$q$] (3,1); \draw (3,1) to[ospst=$r$] (4,1);  \draw (2,-1) to[ospst=$\sim q$] (3,-1); \draw (3,-1) to[ospst=$\sim r$] (4,-1);  \draw(4,1) to (4,0); \draw(4,-1) to (4,0);  \draw(4,0) to (5,0);   \end{circuitikz}
+    </me>
+  </p>
+  <p>
+    And
+    <me>
+      \begin{circuitikz}  \draw (0,0) to[ospst=$p$] (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$q$] (3,1); \draw (3,1) to[ospst=$r$] (4,1);  \draw (2,-1) to (3,-1); \draw (3,-1) to (3,-.5); \draw (3,-1) to (3,-1.5);  \draw (3,-.5) to[ospst=$\sim s$] (4,-.5); \draw (3,-1.5) to[ospst=$\sim t$] (4,-1.5);      \draw(4,1) to (4,0); \draw(4,-1.5) to (4,0);  \draw(4,0) to (5,0);   \end{circuitikz}
+    </me>
+    would be <m>p \wedge ((q\wedge r)\vee (\sim s\vee \sim t))</m>.
+  </p>
+  <p>
+    Here, it again helps to be able to break everything down into ands/ors.
+    We don't have something for implications,
+    but of we wanted to do the circuit for <m>\sim((p\vee q)\to r)</m>,
+    we could note:
+    <md>
+      <mrow>\sim((p\vee q)\to r)\amp =\amp \sim(\sim(p\vee q)\vee r)</mrow>
+      <mrow>\amp =\amp (p\vee q)\wedge \sim r</mrow>
+    </md>.
+  </p>
+  <p>
+    So it's circuit would be:
+    <me>
+      \begin{circuitikz}  \draw (0,0) to (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$p$] (4,1);  \draw (2,-1) to[ospst=$q$] (4,-1);  \draw(4,1) to (4,0); \draw(4,-1) to (4,0);  \draw(4,0) to[ospst=$\sim r$] (6,0);   \end{circuitikz}
+    </me>
+  </p>
+</section>

@@ -1,0 +1,15 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_Calculus">
+  <title>Introduction to Differential Calculus</title>
+  <xi:include  href="Sec_LimitsContinuity.ptx"/>
+  <xi:include  href="Sec_AvgRoC.ptx"/>
+  <xi:include  href="Sec_DefofDerivative.ptx"/>
+  <xi:include  href="Sec_RulesofDerivative.ptx"/>
+  <xi:include  href="Sec_PowerRule.ptx"/>
+  <xi:include  href="Sec_ProductRule.ptx"/>
+  <xi:include  href="Sec_QuotientRule.ptx"/>
+  <xi:include  href="section7-8.ptx"/>
+  <xi:include  href="section7-9.ptx"/>
+  <xi:include  href="Sec_ChainRule.ptx"/>
+  <xi:include  href="DerivativeExp.ptx"/>
+  <xi:include  href="DerivativeLogs.ptx"/>
+</chapter>

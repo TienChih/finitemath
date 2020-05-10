@@ -1,0 +1,56 @@
+<section xml:id="Sec_QuotientRule">
+  <title>Quotient Rule</title>
+  <introduction>
+    <p>
+      If we have a rule for differentiating products,
+      we should have a rule for differentiating quotients as well,
+      after all,
+      quotients and products are basically the same thing.
+      So let <m>Q(x)=\frac{f(x)}{g(x)}</m>,
+      and ask, what is <m>Q'(x)</m>.
+      So:
+      <md>
+        <mrow>Q(x)\amp =\amp \frac{f(x)}{g(x)}</mrow>
+        <mrow>Q(x)g(x)\amp =\amp f(x),\ \text{ now we can differentiate both sides }</mrow>
+        <mrow>\frac{d}{dx}[Q(x)g(x)]\amp =\amp f'(x),\ \text{ then by the product rule: }</mrow>
+        <mrow>Q'(x)g(x)+Q(x)g'(x)\amp =\amp f'(x)</mrow>
+        <mrow>Q'(x)g(x)\amp =\amp f'(x)-Q(x)g'(x),\ \text{then recall that  \(Q(x)=\frac{f(x)}{g(x)}\)}</mrow>
+        <mrow>Q'(x)g(x)\amp =\amp f'(x)-\frac{f(x)g'(x)}{g(x)}</mrow>
+        <mrow>Q'(x)g(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)}</mrow>
+        <mrow>Q'(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}</mrow>
+      </md>
+    </p>
+    <p>
+      So the <term> quotient rule</term>
+      is <m>\frac{d}{dx}[\frac{f(x)}{g(x)}]=\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}</m>.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Examples</title>
+    <p>
+      So, consider the derivative of
+      <m>f(x)=x^3(x+1)</m>, which can be computed:
+      <md>
+        <mrow>f'(x)\amp =\amp \frac{d}{dx}[x^3](x+1)+x^3\frac{d}{dx}[x+1]</mrow>
+        <mrow>\amp =\amp 3x^2(x+1)+x^3(1)</mrow>
+        <mrow>\amp =\amp 3x^3+3x^2+x^3</mrow>
+        <mrow>\amp =\amp 4x^3+3x^2</mrow>
+      </md>.
+    </p>
+    <p>
+      Also note we could have computed this some other way:
+      <md>
+        <mrow>f(x)\amp =\amp x^3(x+1)=x^4+x^3</mrow>
+        <mrow>f'(x)\amp =\amp 4x^3+3x^2</mrow>
+      </md>.
+    </p>
+    <p>
+      Similarly, the derivative of <m>g(x)=\frac{x}{x^2+1}</m>:
+      <md>
+        <mrow>g'(x)\amp =\amp \frac{(x^2+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x^2+1]}{(x^2+1)^2}</mrow>
+        <mrow>\amp =\amp \frac{(x^2+1)(1)-x(2x)}{(x^2+1)^2}</mrow>
+        <mrow>\amp =\amp \frac{1-x^2}{(x^2+1)^2}</mrow>
+      </md>
+    </p>
+  </subsection>
+</section>

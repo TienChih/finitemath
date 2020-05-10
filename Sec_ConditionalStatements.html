@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-05-10T10:49:16-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Conditional Statements</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_EquivalentStatements.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_Circuits.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_EquivalentStatements.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_Circuits.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_UtilityLinear.html" data-scroll="Sec_UtilityLinear">Utilizing the Linear Function</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_OperationsStatements.html" data-scroll="Sec_OperationsStatements">Operations on Statements</a></li>
+<li><a href="Sec_CompoundStatements.html" data-scroll="Sec_CompoundStatements">Compound Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements" class="active">Conditional Statements</a></li>
+<li><a href="Sec_Circuits.html" data-scroll="Sec_Circuits">Circuits</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Argument Types</a></li>
+<li><a href="Fallacies.html" data-scroll="Fallacies">Fallacies</a></li>
+<li><a href="Sec_ValidArguments.html" data-scroll="Sec_ValidArguments">Valid and invalid arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative as a Limit</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
+<li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
+<li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
+<li><a href="section-38.html" data-scroll="section-38">Product Rule</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Quotient Rule</a></li>
+<li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_ConditionalStatements"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Conditional Statements</span>
+</h2>
+<a href="Sec_ConditionalStatements.html" class="permalink">¶</a><section class="introduction" id="introduction-9"><p id="p-362">These things go by a few names, conditional statements, if-then statements. They are statements of the form “If \(p\text{,}\) then \(q\text{.}\)” When the condition \(p\) is satisfied, it implies the statement \(q\text{.}\) This is written in formal logic as \(p\to q\text{.}\)</p>
+<p id="p-363">Let's suppose that you have a child and you say to them ``If you are clean your room, I'll buy you ice-cream!" What would make you a liar and what would make you a truth teller.</p>
+<p id="p-364">If your kid cleans their room, and you buy them ice-cream, then hooray, you kept your promise! If your kid cleans their room and and you don't buy them ice-cream, then you didn't keep your promise and are a liar.</p>
+<p id="p-365">Now this part is sometimes tricky for students, but bear with me. If your kid doesn't clean their room, you can do whatever you want. You only said that you would do something if they cleaned their room, you made no promises as to what you would do if they didn't. So now whether or not you buy them ice-cream, you've technically kept your promise. This may make you a pushover parent, depending, but it wouldn't make you a liar.</p>
+<p id="p-366">So, if we let \(p\)= “kid cleans room” and \(q\)= “you buy them ice-cream” Then the above sentence may be written as \(p\to q\) which has the following truth table:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c} p\amp q\amp p\to q\\ \hline T\amp T\amp T\\ T\amp F\amp F\\ F\amp T\amp T\\ F\amp F\amp T \end{array}
+\end{equation*}
+</div>
+<p id="p-367">As we can see “If \(p\) then \(q\)” is always true unless \(p\) happens and then \(q\) does not happen as promised.</p></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.1</span> <span class="title">An equivalent statement</span>
+</h3>
+<p id="p-368">Notice that \(p\to q\) is only false under one circumstance. So is the statement \(p\vee q\text{.}\) Is it possible then to rewrite \(p\to q\) as an “or” statement somehow?</p>
+<p id="p-369">I claim that \(p \to q = \sim p \vee q\text{.}\) To see this, consider:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c} p\amp q\amp p\to q\amp \sim p \amp  \sim p \vee q\\ \hline T\amp T\amp T\amp F\amp T\\ T\amp F\amp F\amp F\amp F\\ F\amp T\amp T\amp T\amp T\\ F\amp F\amp T\amp T\amp T \end{array}
+\end{equation*}
+</div>
+<p id="p-370">And we see that these things have the same truth values and are equivalent statements. But, more importantly, consider what \(\sim p \vee q\) would mean in our example. ``Either you don't clean your room or you can have ice-cream." One might rephrase this as ``You can either not clean your room or you can have ice-cream." Isn't this basically saying “If you clean your room you can have ice-cream?” So that definitely sounds like an equivalent statement to me.</p></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.2</span> <span class="title">Negation</span>
+</h3>
+<p id="p-371">What about the negation of \(p\to q\text{?}\) Well, one can try all sorts of combinations of \(p, q\text{,}\) but what we do know is how to negate and/or statements, and how to rewrite \(p\to q\) so:</p>
+<div class="displaymath">
+\begin{align*}
+\sim(p\to q)\amp =\amp \sim(\sim p \vee q)\\
+\amp =\amp \sim\sim p\wedge \sim q\\
+\amp =\amp p\wedge \sim q\text{.}
+\end{align*}
+</div>
+<p id="p-372">How does that play out in practice, again using our parenting example, \(p\wedge \sim q\) is ``You cleaned your room and I'm not buying you ice-cream." Damn. That's basically exactly the opposite of what you said before, which is what a negation is supposed to be.</p></section><section class="subsection" id="subsection-28"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.3</span> <span class="title">A Longer Example</span>
+</h3>
+<p id="p-373">Using these facts, we can take relatively complicated statements, break them down, and negate them with relative ease. Consider this sentence:</p>
+<p id="p-374">``If it is sunny and I am in a good mood, then I will take a walk."</p>
+<p id="p-375">So let's let:</p>
+<ul class="disc">
+<li id="li-66"><p id="p-376">\(p\)=``It's Sunny"</p></li>
+<li id="li-67"><p id="p-377">\(q\)=``I'm in a good mood."</p></li>
+<li id="li-68"><p id="p-378">\(r\)= “I take a walk”.</p></li>
+</ul>
+<p id="p-379">We can summarize this whole thing as \((p\wedge q)\to r\text{.}\) It's not the easiest thing to see when this statement may be true. So, we can break this thing down as follows:</p>
+<div class="displaymath">
+\begin{align*}
+(p\wedge q)\to r\amp =\amp \sim (p\wedge q)\vee r\\
+\amp =\amp (\sim p \vee \sim q) \vee r
+\end{align*}
+</div>
+<p id="p-380">So this is an equivalent statement, and it's not much easier to see that it is true as long as it isn't sunny, you're in a bad mood, or if you take a walk. We would read this as ``Either it's not sunny, or I'm not in a good mood, or I'm taking a walk."</p>
+<p id="p-381">If we negate this thing:</p>
+<div class="displaymath">
+\begin{align*}
+\sim ((p\wedge q)\to r)\amp =\amp \sim ((\sim p \vee \sim q) \vee r)\\
+\amp =\amp \sim (\sim p \vee \sim q) \wedge \sim r\\
+\amp =\amp  (\sim \sim p  \wedge \sim \sim q) \wedge \sim r\\
+\amp =\amp (p\wedge q)\wedge \sim r
+\end{align*}
+</div>
+<p id="p-382">We would read this as ``It IS sunny and I'm in a good mood and for some reason I'm not going to walk." which is the opposite of what was promised before.</p></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.4</span> <span class="title">Misconceptions</span>
+</h3>
+<p id="p-383">There are some common misinterpretations of the conditional statement that should be addressed. In particular, there are colloquial statements which people believe that are equivalent to the conditional which are not.</p>
+<p id="p-384">Given the statement \(p\to q\text{,}\) is it equivalent to say \(q\to p\text{?}\) (We say that \(q\to p\) is the <dfn class="terminology">converse</dfn> of \(p\to q\text{.}\)) We can check with truth tables, but before that, let's ask ourselves this: Suppose that \(p=\) “I drink bleach” and \(q=\) “I get sick.” I think we can all buy that \(p\to q\) i.e. if I drink bleach then I will get sick. Now the converse, \(q\to p\) is the statement “If I get sick, then I drank bleach”. Is this the same statement?</p>
+<p id="p-385">Doesn't seem so, you could have gotten sick from any sort of things, it didn't have to be bleach. Another example is if \(p=\)``I'm a square" and \(q=\)``I'm a rectangle." All squares are rectangles, not all rectangles are squares. So if \(p\to q\text{,}\) we can think of that as all the circumstances where \(p\) is true lives inside the collection of circumstances where \(q\) is true, and that the reverse is not the same thing. And of course:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c} p \amp  q \amp  p\to q \amp  q\to p\\ \hline T \amp  T \amp  T \amp  T\\ T \amp  F \amp  F \amp  T\\ F \amp  T \amp  T \amp  F \\ F \amp  F \amp  T \amp  T \end{array}
+\end{equation*}
+</div>
+<p id="p-386">So these columns are not the same and so the statements are not equal.</p>
+<p id="p-387">What about \(\sim p \to \sim q\text{?}\) (This is the <dfn class="terminology">inverse</dfn> of \(p\to q\)) Well this would be ``If I'm not drinking bleach then I won't get sick" or ``If I'm not a square then I'm not a rectangle." This doesn't seem like it's true either. You can not drink bleach, but then drink paint thinner instead and you'd be sick, and of course there are plenty of rectangles that aren't squares. That and:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c} p \amp  q \amp  p\to q \amp \sim p \amp  \sim q\amp  \sim p\to \sim q\\ \hline T \amp  T \amp  T \amp  F \amp  F \amp  T\\ T \amp  F \amp  F \amp  F \amp  T \amp T\\ F \amp  T \amp  T \amp  T \amp  F \amp  F \\ F \amp  F \amp  T \amp  T \amp  T \amp  T \end{array}
+\end{equation*}
+</div>
+<p id="p-388">What about \(\sim q \to \sim p\) (the <dfn class="terminology">contrapositive"</dfn> of \(p\to q\))? In our example, that would be, ``If I didn't get sick then I didn't drink bleach" or ``If I'm not a rectangle then I'm not a square". These DO seem true. If you didn't get sick you couldn't have drank bleach, if you're not a rectangle, there's no way you could be a square. Rather than use truth tables, consider:</p>
+<div class="displaymath">
+\begin{align*}
+\sim q \to \sim p\amp =\amp (\sim \sim q \vee \sim p)\\
+\amp =\amp q \vee \sim p\\
+\amp =\amp \sim p \vee q\\
+\amp =\amp p\to q\text{.}
+\end{align*}
+</div>
+<p id="p-389">So these things ARE the same.</p></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.5</span> <span class="title">Biconditional</span>
+</h3>
+<p id="p-390">Maybe you want to describe 2 statements where \(p\to q\) and \(q\to p\text{,}\) i.e. whenever 1 is true then the other is true. Well this is literally \((p\to q)\wedge (q\to p)\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c} p \amp  q \amp  p\to q \amp  q\to p\amp  (p\to q)\wedge (q\to p)\\ \hline T \amp  T \amp  T \amp  T\amp T\\ T \amp  F \amp  F \amp  T\amp F\\ F \amp  T \amp  T \amp  F \amp F\\ F \amp  F \amp  T \amp  T\amp T \end{array}
+\end{equation*}
+</div>
+<p id="p-391">We symbolize this with \(p\leftrightarrow q:\)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c} p \amp  q \amp  p\leftrightarrow q \\ \hline T \amp  T \amp  T \\ T \amp  F \amp  F\\ F \amp  T \amp  F \\ F \amp  F \amp  T \end{array}
+\end{equation*}
+</div></section></section></div></main>
+</div>
+</body>
+</html>

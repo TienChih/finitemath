@@ -1,0 +1,88 @@
+<section xml:id="Sec_Arguments">
+  <title>Argument Types</title>
+  <introduction>
+    <p>
+      Here are some valid types of arguments.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Modus Ponens</title>
+    <me>
+      \begin{array}{l}
+      p\to q \\
+      p\\
+      \hline
+      q
+      \end{array}
+    </me>
+    <p>
+      In other words, if you know <m>p\to q</m> and <m>p</m>,
+      then <m>q</m> must be true.
+      So say
+      <q>If your pet is a pitbull, then it is a dog.</q>
+      <q>Your pet is a pitbull.</q>
+      It would then be fair to conclude
+      <q>Therefore your pet is a dog.</q>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Modus Tollens</title>
+    <me>
+      \begin{array}{l}
+      p\to q \\
+      \sim q\\
+      \hline
+      \sim p
+      \end{array}
+    </me>
+    <p>
+      In other words, if you know <m>p\to q</m> and <m>\sim q</m>,
+      then <m>\sim p</m> must be true.
+      So say
+      <q>If your pet is a pitbull, then it is a dog.</q>
+      <q>Your pet is not a dog.</q>
+      It would then be fair to conclude
+      <q>Therefore your pet is not a pitbull.</q>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Disjunctive Syllogism</title>
+    <me>
+      \begin{array}{l}
+      p\vee q \\
+      \sim q\\
+      \hline
+      p
+      \end{array}
+    </me>
+    <me>
+      \begin{array}{l}
+      p\vee q \\
+      \sim p\\
+      \hline
+      q
+      \end{array}
+    </me>
+    <p>
+      If you know <m>p \vee q</m> and one isn't true,
+      then the other must be true. ``I have to take either math or science next semester, I'm not going to take math,
+      so therefore, I must take science."
+    </p>
+  </subsection>
+  <subsection>
+    <title>Reasoning by Transitivity</title>
+    <me>
+      \begin{array}{l}
+      p\to q \\
+      q\to r\\
+      \hline
+      p\to r
+      \end{array}
+    </me>
+    <p>
+      ``If it rains then I will get wet.
+      If I get wet, I will get sick." <m>\to</m>
+      <q>Therefore, if it rains, I will get sick.</q>
+    </p>
+  </subsection>
+</section>

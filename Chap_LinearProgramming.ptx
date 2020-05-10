@@ -1,0 +1,6 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_LinearProgramming">
+  <title>Linear Programming</title>
+  <xi:include  href="Sec_LinearInequalities.ptx"/>
+  <xi:include  href="Sec_SystemsLinearInequalities.ptx"/>
+  <xi:include  href="Sec_LinearOptimization.ptx"/>
+</chapter>

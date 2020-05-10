@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2015/07/12)                     -->
+<!--                                               -->
+<!--   Abstract Algebra: Theory and Applications   -->
+<!--                                               -->
+<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
+
+<chapter xml:id="sets" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- % TWJ, 2010/03/31 -->
+<!-- % Chapters now begin with Chapter 1 -->
+
+<title>Preliminaries</title>
+
+
+    <introduction>
+        <p>A certain amount of mathematical maturity is necessary to find and study applications of abstract algebra.  A basic knowledge of set theory, mathematical induction, equivalence relations, and matrices is a must.  Even more important is the ability to read and understand mathematical proofs.  In this chapter we will outline the background needed for a course in abstract algebra.</p>
+    </introduction>
+
+    <section xml:id="section-note-on-proofs">
+        <title>A Short Note on Proofs</title>
+
+        <introduction>
+
+            <p>Abstract mathematics is different from other sciences. In laboratory sciences such as chemistry and physics, scientists perform experiments to discover new principles and verify theories.  Although mathematics is often motivated by physical experimentation or by computer simulations, it is made rigorous through the use of logical arguments.  In studying abstract mathematics, we take what is called an  axiomatic approach; that is, we take a collection of objects <m>\mathcal S</m> and assume some rules about their structure.  These rules are called <term>axioms</term>.  Using the axioms for <m>\mathcal S</m>, we wish to derive other information about <m>\mathcal S</m> by using logical arguments.  We require that our axioms be consistent; that is, they should not contradict one another.  We also demand that there not be too many axioms. If a system of axioms is too restrictive,  there will be few examples of the mathematical structure.</p>  
+
+            <p>A <term>statement</term> in logic or mathematics is an assertion that is either true or false.  Consider the following examples:<ul>
+                <li><p><m>3 + 56 - 13 + 8/2 </m>.</p></li>
+                <li><p>All cats are black.</p></li>
+                <li><p><m>2 + 3 = 5</m>.</p></li>
+                <li><p><m>2x = 6</m> exactly when <m>x = 4</m>.</p></li>
+                <li><p>If <m>ax^2 + bx + c = 0</m> and <m>a \neq 0</m>, then <me>x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.</me></p></li>
+                <li><p><m>x^3 - 4x^2 + 5 x - 6</m>.</p></li>
+            </ul>All but the first and last examples are statements, and must be either true or false.</p> 
+
+            <p>A <term>mathematical proof</term> is nothing more than a convincing argument about the accuracy  of a statement. Such an argument should contain enough detail to convince the audience; for instance, we can see that the statement <q><m>2x = 6</m> exactly when <m>x = 4</m></q> is false by evaluating <m>2 \cdot 4</m> and noting that <m>6 \neq 8</m>, an argument that would satisfy anyone. Of course, audiences may vary widely: proofs can be addressed to another student, to a professor, or to the reader of a text.  If more detail than  needed is presented in the proof, then the  explanation will be either long-winded or poorly written.  If too much detail is omitted, then the proof may  not be convincing.  Again it is important to keep the audience in mind.  High school students require much more detail than do graduate students.  A good rule of thumb for an argument in an introductory abstract algebra course is that it should be written to convince one's peers, whether those peers be other students or other readers of the text.</p>
+
+            <p>Let us examine different types of statements.  A statement could be as simple as <q><m>10/5 = 2</m>;</q> however, mathematicians are usually interested in more complex statements such as <q>If <m>p</m>, then <m>q</m>,</q> where <m>p</m> and <m>q</m> are both statements.  If certain statements are known or assumed to be true, we wish to know what we can say about other statements.  Here <m>p</m> is called the <term>hypothesis</term> and <m>q</m> is known as the <term>conclusion</term>.  Consider the following statement: If <m>ax^2 + bx + c = 0</m> and <m>a \neq 0</m>, then  
+                <me>x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.</me>
+            The hypothesis is <m>ax^2 + bx + c = 0</m> and <m>a \neq 0</m>; the conclusion is 
+                <me>x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.</me>
+            Notice that the  statement says nothing about whether or not the hypothesis is true. However, if this entire statement is true and we can show that <m>ax^2 + bx + c = 0</m> with <m>a \neq 0</m> is true, then the conclusion <em>must</em> be true.  A proof of this statement might simply be a series of equations:<md>
+                <mrow>ax^2 + bx + c &amp; =  0</mrow>
+                <mrow>x^2 + \frac{b}{a}x &amp; =  - \frac{c}{a}</mrow>
+                <mrow>x^2 + \frac{b}{a}x + \left( \frac{b}{2a} \right)^2 &amp; =  \left( \frac{b}{2a} \right)^2 - \frac{c}{a}</mrow>
+                <mrow>\left(x + \frac{b}{2a} \right)^2 &amp; =  \frac{b^2 - 4ac}{4a^2}</mrow>
+                <mrow>x + \frac{b}{2a}  &amp; =  \frac{ \pm \sqrt{ b^2 -4ac}}{2a}</mrow>
+                <mrow>x &amp; =  \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.</mrow>
+            </md></p>
+
+            <p>If we can prove a statement true, then that statement is called a <term>proposition</term>.  A proposition of major importance is called a <term>theorem</term>.  Sometimes instead of proving a theorem or proposition all at once, we break the proof down into modules; that is, we prove several supporting propositions, which are called <term>lemmas</term>, and use the results of these propositions to prove the main result. If we can prove a proposition or a theorem, we will often, with very little effort, be able to derive other related propositions called <term>corollaries</term>.</p>
+
+        </introduction>
+
+        <subsection>
+            <title>Some Cautions and Suggestions</title>
+
+            <p>There are several different strategies for proving propositions.  In addition to using different methods of proof, students often make some common mistakes when they are first learning how to prove theorems. To aid students who are studying abstract mathematics for the first time, we list here some of the difficulties that they may encounter and some of the strategies of proof available to them. It is a good idea to keep referring back to this list as a reminder. (Other techniques of proof will become apparent throughout this chapter and the remainder of the text.)<ul>
+                <li><p>A theorem cannot be proved by example; however, the standard way to show that a statement is not a theorem is to provide a counterexample.</p></li>
+                <li><p>Quantifiers are important. Words and phrases such as <em>only</em>, <em>for all</em>, <em>for every</em>, and <em>for some</em> possess different meanings.</p></li>
+                <li><p>Never assume any hypothesis that is not explicitly stated in the theorem.  <em>You cannot take things for granted.</em></p></li>
+                <li><p>Suppose you wish to show that an object <em>exists</em> and is <em>unique</em>.  First show that there actually is such an object.  To show that it is unique, assume that there are two such objects, say <m>r</m> and <m>s</m>, and then show that <m>r = s</m>.</p></li>
+                <li><p>Sometimes it is easier to prove the contrapositive of a statement.  Proving the statement <q>If <m>p</m>, then <m>q</m></q> is exactly the same as proving the statement <q>If not <m>q</m>, then not <m>p</m>.</q></p></li>
+                <li><p>Although it is usually better to find a direct proof of a theorem, this task  can sometimes be difficult. It may be easier to assume that the theorem that you are trying to prove is false, and to hope that in the course of your argument you are forced to make some statement that cannot possibly be true.</p></li>
+            </ul></p>
+
+            <p>Remember that one of the main objectives of higher mathematics is proving theorems. Theorems are tools that make new and productive applications of mathematics possible.  We use examples to give insight  into existing theorems and to foster intuitions as to what new theorems might be true.  Applications, examples, and proofs are tightly interconnected<mdash />much more so than they may seem at first appearance.</p>
+
+        </subsection>
+
+    </section>
+
+  
+
+
+</chapter>

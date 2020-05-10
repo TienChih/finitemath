@@ -1,0 +1,237 @@
+<section xml:id="Sec_ConditionalStatements">
+  <title>Conditional Statements</title>
+  <introduction>
+    <p>
+      These things go by a few names,
+      conditional statements, if-then statements.
+      They are statements of the form
+      <q>If <m>p</m>, then <m>q</m>.</q>
+      When the condition <m>p</m> is satisfied,
+      it implies the statement <m>q</m>.
+      This is written in formal logic as <m>p\to q</m>.
+    </p>
+    <p>
+      Let's suppose that you have a child and you say to them ``If you are clean your room, I'll buy you ice-cream!" What would make you a liar and what would make you a truth teller.
+    </p>
+    <p>
+      If your kid cleans their room,
+      and you buy them ice-cream, then hooray, you kept your promise!
+      If your kid cleans their room and and you don't buy them ice-cream,
+      then you didn't keep your promise and are a liar.
+    </p>
+    <p>
+      Now this part is sometimes tricky for students, but bear with me.
+      If your kid doesn't clean their room,
+      you can do whatever you want.
+      You only said that you would do something if they cleaned their room,
+      you made no promises as to what you would do if they didn't.
+      So now whether or not you buy them ice-cream,
+      you've technically kept your promise.
+      This may make you a pushover parent, depending,
+      but it wouldn't make you a liar.
+    </p>
+    <p>
+      So, if we let <m>p</m>=
+      <q>kid cleans room</q>
+      and <m>q</m>=
+      <q>you buy them ice-cream</q>
+      Then the above sentence may be written as <m>p\to q</m> which has the following truth table:
+      <me>
+        \begin{array}{c|c|c} p\amp q\amp p\to q\\ \hline T\amp T\amp T\\ T\amp F\amp F\\ F\amp T\amp T\\ F\amp F\amp T \end{array}
+      </me>
+    </p>
+    <p>
+      As we can see
+      <q>If <m>p</m> then <m>q</m></q>
+      is always true unless <m>p</m> happens and then <m>q</m> does not happen as promised.
+    </p>
+  </introduction>
+  <subsection>
+    <title>An equivalent statement</title>
+    <p>
+      Notice that <m>p\to q</m> is only false under one circumstance.
+      So is the statement <m>p\vee q</m>.
+      Is it possible then to rewrite <m>p\to q</m> as an
+      <q>or</q>
+      statement somehow?
+    </p>
+    <p>
+      I claim that <m>p \to q = \sim p \vee q</m>.
+      To see this, consider:
+      <me>
+        \begin{array}{c|c|c|c|c} p\amp q\amp p\to q\amp \sim p \amp  \sim p \vee q\\ \hline T\amp T\amp T\amp F\amp T\\ T\amp F\amp F\amp F\amp F\\ F\amp T\amp T\amp T\amp T\\ F\amp F\amp T\amp T\amp T \end{array}
+      </me>
+    </p>
+    <p>
+      And we see that these things have the same truth values and are equivalent statements.
+      But, more importantly, consider what
+      <m>\sim p \vee q</m> would mean in our example. ``Either you don't clean your room or you can have ice-cream." One might rephrase this as ``You can either not clean your room or you can have ice-cream." Isn't this basically saying
+      <q>If you clean your room you can have ice-cream?</q>
+      So that definitely sounds like an equivalent statement to me.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Negation</title>
+    <p>
+      What about the negation of <m>p\to q</m>?
+      Well, one can try all sorts of combinations of <m>p, q</m>,
+      but what we do know is how to negate and/or statements,
+      and how to rewrite <m>p\to q</m> so:
+      <md>
+        <mrow>\sim(p\to q)\amp =\amp \sim(\sim p \vee q)</mrow>
+        <mrow>\amp =\amp \sim\sim p\wedge \sim q</mrow>
+        <mrow>\amp =\amp p\wedge \sim q</mrow>
+      </md>.
+    </p>
+    <p>
+      How does that play out in practice,
+      again using our parenting example,
+      <m>p\wedge \sim q</m> is ``You cleaned your room and I'm not buying you ice-cream." Damn.
+      That's basically exactly the opposite of what you said before,
+      which is what a negation is supposed to be.
+    </p>
+  </subsection>
+  <subsection>
+    <title>A Longer Example</title>
+    <p>
+      Using these facts, we can take relatively complicated statements,
+      break them down, and negate them with relative ease.
+      Consider this sentence:
+    </p>
+    <p>
+      ``If it is sunny and I am in a good mood, then I will take a walk."
+    </p>
+    <p>
+      So let's let:
+      <ul>
+        <li>
+          <p>
+            <m>p</m>=``It's Sunny"
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>q</m>=``I'm in a good mood."
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>r</m>=
+            <q>I take a walk</q>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      We can summarize this whole thing as <m>(p\wedge q)\to r</m>.
+      It's not the easiest thing to see when this statement may be true.
+      So, we can break this thing down as follows:
+      <md>
+        <mrow>(p\wedge q)\to r\amp =\amp \sim (p\wedge q)\vee r</mrow>
+        <mrow>\amp =\amp (\sim p \vee \sim q) \vee r</mrow>
+      </md>
+    </p>
+    <p>
+      So this is an equivalent statement,
+      and it's not much easier to see that it is true as long as it isn't sunny,
+      you're in a bad mood, or if you take a walk.
+      We would read this as ``Either it's not sunny,
+      or I'm not in a good mood, or I'm taking a walk."
+    </p>
+    <p>
+      If we negate this thing:
+      <md>
+        <mrow>\sim ((p\wedge q)\to r)\amp =\amp \sim ((\sim p \vee \sim q) \vee r)</mrow>
+        <mrow>\amp =\amp \sim (\sim p \vee \sim q) \wedge \sim r</mrow>
+        <mrow>\amp =\amp  (\sim \sim p  \wedge \sim \sim q) \wedge \sim r</mrow>
+        <mrow>\amp =\amp (p\wedge q)\wedge \sim r</mrow>
+      </md>
+    </p>
+    <p>
+      We would read this as ``It IS sunny and I'm in a good mood and for some reason I'm not going to walk." which is the opposite of what was promised before.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Misconceptions</title>
+    <p>
+      There are some common misinterpretations of the conditional statement that should be addressed.
+      In particular,
+      there are colloquial statements which people believe that are equivalent to the conditional which are not.
+    </p>
+    <p>
+      Given the statement <m>p\to q</m>,
+      is it equivalent to say <m>q\to p</m>? (We say that <m>q\to p</m> is the <term>converse</term>
+      of <m>p\to q</m>.) We can check with truth tables,
+      but before that, let's ask ourselves this: Suppose that <m>p=</m>
+      <q>I drink bleach</q>
+      and <m>q=</m>
+      <q>I get sick.</q>
+      I think we can all buy that <m>p\to q</m> i.e.<nbsp/>if I drink bleach then I will get sick.
+      Now the converse, <m>q\to p</m> is the statement
+      <q>If I get sick, then I drank bleach</q>. Is this the same statement?
+    </p>
+    <p>
+      Doesn't seem so,
+      you could have gotten sick from any sort of things,
+      it didn't have to be bleach.
+      Another example is if <m>p=</m>``I'm a square" and <m>q=</m>``I'm a rectangle." All squares are rectangles,
+      not all rectangles are squares.
+      So if <m>p\to q</m>,
+      we can think of that as all the circumstances where <m>p</m> is true lives inside the collection of circumstances where <m>q</m> is true,
+      and that the reverse is not the same thing.
+      And of course:
+      <me>
+        \begin{array}{c|c|c|c} p \amp  q \amp  p\to q \amp  q\to p\\ \hline T \amp  T \amp  T \amp  T\\ T \amp  F \amp  F \amp  T\\ F \amp  T \amp  T \amp  F \\ F \amp  F \amp  T \amp  T \end{array}
+      </me>
+    </p>
+    <p>
+      So these columns are not the same and so the statements are not equal.
+    </p>
+    <p>
+      What about <m>\sim p \to \sim q</m>? (This is the <term>inverse</term>
+      of <m>p\to q</m>) Well this would be ``If I'm not drinking bleach then I won't get sick" or ``If I'm not a square then I'm not a rectangle." This doesn't seem like it's true either.
+      You can not drink bleach,
+      but then drink paint thinner instead and you'd be sick,
+      and of course there are plenty of rectangles that aren't squares.
+      That and:
+      <me>
+        \begin{array}{c|c|c|c|c|c} p \amp  q \amp  p\to q \amp \sim p \amp  \sim q\amp  \sim p\to \sim q\\ \hline T \amp  T \amp  T \amp  F \amp  F \amp  T\\ T \amp  F \amp  F \amp  F \amp  T \amp T\\ F \amp  T \amp  T \amp  T \amp  F \amp  F \\ F \amp  F \amp  T \amp  T \amp  T \amp  T \end{array}
+      </me>
+    </p>
+    <p>
+      What about <m>\sim q \to \sim p</m> (the
+      <term> contrapositive"</term> of <m>p\to q</m>)?
+      In our example,
+      that would be, ``If I didn't get sick then I didn't drink bleach" or ``If I'm not a rectangle then I'm not a square". These DO seem true.
+      If you didn't get sick you couldn't have drank bleach,
+      if you're not a rectangle, there's no way you could be a square.
+      Rather than use truth tables, consider:
+      <md>
+        <mrow>\sim q \to \sim p\amp =\amp (\sim \sim q \vee \sim p)</mrow>
+        <mrow>\amp =\amp q \vee \sim p</mrow>
+        <mrow>\amp =\amp \sim p \vee q</mrow>
+        <mrow>\amp =\amp p\to q</mrow>
+      </md>.
+    </p>
+    <p>
+      So these things ARE the same.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Biconditional</title>
+    <p>
+      Maybe you want to describe 2 statements where <m>p\to q</m> and <m>q\to p</m>,
+      i.e. whenever 1 is true then the other is true.
+      Well this is literally <m>(p\to q)\wedge (q\to p)</m>.
+      <me>
+        \begin{array}{c|c|c|c|c} p \amp  q \amp  p\to q \amp  q\to p\amp  (p\to q)\wedge (q\to p)\\ \hline T \amp  T \amp  T \amp  T\amp T\\ T \amp  F \amp  F \amp  T\amp F\\ F \amp  T \amp  T \amp  F \amp F\\ F \amp  F \amp  T \amp  T\amp T \end{array}
+      </me>
+    </p>
+    <p>
+      We symbolize this with <m>p\leftrightarrow q:</m>
+      <me>
+        \begin{array}{c|c|c} p \amp  q \amp  p\leftrightarrow q \\ \hline T \amp  T \amp  T \\ T \amp  F \amp  F\\ F \amp  T \amp  F \\ F \amp  F \amp  T \end{array}
+      </me>
+    </p>
+  </subsection>
+</section>

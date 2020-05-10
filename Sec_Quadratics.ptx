@@ -1,0 +1,78 @@
+<section xml:id="Sec_Quadratics">
+  <title>Quadratic Functions</title>
+  <subsection>
+    <title>Form of Quadratic functions</title>
+    <definition>
+      <statement>
+        <p>
+          A function <m>q(x)</m> is a <term> quadratic function</term> if it may be written as:
+          <me>
+            q(x)=ax^2+bx+c
+          </me>.
+          where <m>a\neq0</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The classic example is the standard parabola,
+      <m>y=x^2</m> or a quadratic with
+      <m>a=1. b,c=0</m>. \url{https://www.desmos.com/calculator/aktz8g8cbh}. We should be familiar with some of the properties of this shape,
+      it's symmetric on both sides and it goes to positive infinity in both directions
+      (as <m>x^2</m> cannot be negative).
+    </p>
+    <p>
+      It would be nice if we could show that all quadratics had the same essential shape.
+      To do this, we must first show that all quadratics also have the form
+      <me>
+        q(x)=a(x-h)^2+k
+      </me>.
+    </p>
+    <p>
+      To see this:
+      <md>
+        <mrow>q(x)\amp =\amp ax^2+bx+c</mrow>
+        <mrow>\amp =\amp a(x^2+\frac{b}{a}x)+c</mrow>
+        <mrow>\amp =\amp a(x^2+2\frac{b}{2a}x+\frac{b^2}{4a^2})+c-\frac{b^2}{4a}</mrow>
+        <mrow>\amp =\amp a(x+\frac{b}{2a})^2+c-\frac{b^2}{4a}</mrow>
+      </md>
+    </p>
+    <p>
+      So by letting <m>h=-\frac{b}{2a}</m> and <m>k=c-\frac{b^2}{4a}</m>,
+      we have our form.
+    </p>
+    <p>
+      An interesting byproduct of this is that if we were to solve <m>ax^2+bx+c=0</m>,
+      we would get:
+      <md>
+        <mrow>ax^2+bx+c\amp =\amp 0</mrow>
+        <mrow>a(x+\frac{b}{2a})^2+c-\frac{b^2}{4a}\amp =\amp 0</mrow>
+        <mrow>a(x+\frac{b}{2a})^2=\frac{b^2}{4a}-c</mrow>
+        <mrow>a(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a}</mrow>
+        <mrow>(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a^2}</mrow>
+        <mrow>x+\frac{b}{2a}=\frac{\pm\sqrt{b^2-4ac}}{2a}</mrow>
+        <mrow>x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
+      </md>
+    </p>
+    <p>
+      Which is the quadratic formula.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Parabolas</title>
+    <p>
+      Now that we have this form
+      <m>a(x-h)^2+k</m>, consider how <m>a,h</m>,
+      and <m>k</m> affect the shape of the graph: \url{https://www.desmos.com/calculator/4zqd9chlna}.
+    </p>
+    <p>
+      Sliding <m>k</m> shifts the parabola up and down.
+      We can think of this as adding to or detracting from the value of <m>x^2</m>.
+      Sliding <m>h</m> shifts the graph left and right.
+      We can think of this as slowing down or speeding up <m>x^2</m> by <m>h</m> units.
+      <m>a</m> stretches or squashes <m>x^2</m>,
+      or if <m>a</m> is negative, also reflects this across the <m>x</m> axis.
+      But all of these transformations preserve the fundamental shape of a parabola,
+      so all quadratic functions have this shape.
+    </p>
+  </subsection>
+</section>
