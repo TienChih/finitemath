@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
   <docinfo>
+      <brandlogo source="images/cover.jpg" />
+
+    <covers front="images/cover.jpg"/>
+
 <macros>
 \newcommand{\Q}{\terminology{Question:\ }}
 \newcommand{\Sol}{\terminology{Solution:\ }}
@@ -48,6 +52,7 @@
 \usepackage{pgfplots}
 </latex-image-preamble>
   </docinfo>
+x
   <book>
     <title>Finite Mathematics</title>
     <frontmatter>
