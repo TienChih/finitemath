@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-13T11:42:49-06:00    *-->
+<!--*    on 2020-06-23T12:50:18-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Systems of Linear  Equations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -184,7 +184,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_SystemsofEquations"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Systems of Linear  Equations</span>
 </h2>
-<a href="Sec_SystemsofEquations.html" class="permalink">¶</a><section class="introduction" id="introduction-5"><p id="p-150">A system of equations with unknowns \(x_1,\ldots,x_n\) is a collection of first degree equations:</p>
+<section class="introduction" id="introduction-5"><p id="p-150">A system of equations with unknowns \(x_1,\ldots,x_n\) is a collection of first degree equations:</p>
 <div class="displaymath">
 \begin{align*}
 a_{1,1}x_1+a_{1,2}x_2+\cdots+a_{1,n}x_n\amp =\amp b_1\\
@@ -210,7 +210,7 @@ x-y\amp =\amp 0
 </div>
 <p data-braille="continuation">is a collection of points that satisfy the first AND the second linear equalities. The first equation describes the line: \(y=-\frac{2}{3}x+5\text{,}\) whereas the second describes the line \(y=x\text{.}\) Each of these equations represent lines, so each individually has infinitely many solutions. The question is, how many solutions do these lines have in common?</p>
 <p id="p-156">There are a number of ways to find out, but the most straight forward is simply to graph the system:</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-29.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-28.svg" style="width: 100%; height: auto;" alt=""></div>
 <p id="p-157">\url{https://www.desmos.com/calculator/cdrgyxm2al}.</p>
 <p id="p-158">As one can see, although each line has infinitely many points, the only solution they have in common is the point \((3,3)\text{.}\) To verify this, we note that \(2(3)+3(3)=15\) and \(3-3=0\text{,}\) so both equations are satisfied. This system has <dfn class="terminology">a unique solution</dfn></p>
 <p id="p-159">What else could happen when solving a system of equations? Well, consider:</p>
@@ -221,7 +221,7 @@ x+y\amp =\amp 5\\
 \end{align*}
 </div>
 <p id="p-160">If we look at the graph of both lines, we only see one actual line:</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-30.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-29.svg" style="width: 100%; height: auto;" alt=""></div>
 <p id="p-161">\url{https://www.desmos.com/calculator/oaqbrkruhl}.</p>
 <p id="p-162">This is because both equations describe the same line. After all, whenever \(x+y=5\text{,}\) it would have to be true that \(2(x+y)=5\cdot2\) and thus \(2x+2y=10\text{.}\) So ANY point that is a solution to one equation is a solution to the other, this system has <dfn class="terminology">infinitely many solutions</dfn>.</p>
 <p id="p-163">Another possibility arises from the following example:</p>
@@ -232,7 +232,7 @@ x+y\amp =\amp 6
 \end{align*}
 </div>
 <p id="p-164">If we graph these lines side by side:</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-31.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-30.svg" style="width: 100%; height: auto;" alt=""></div>
 <p id="p-165">\url{https://www.desmos.com/calculator/djqxxge4ce}.</p>
 <p id="p-166">We can see that these lines are parallel and do not actually have any points in common. After all, how many pairs of numbers \(x\) and \(y\) sum to both 5 AND 6? It should be clear that this system has <dfn class="terminology">no solutions</dfn>.</p>
 <p id="p-167">Of course, these have all been Systems of Linear Equations in 2 variables. When we increase the number of variables, we increase the dimensionality of the potential solution space, and what it means to be “linear” changes somewhat. Nevertheless, these examples illustrate the 3 possible outcomes of a system of linear equations in any dimension:</p>

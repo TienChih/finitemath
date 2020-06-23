@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-13T11:42:49-06:00    *-->
+<!--*    on 2020-06-23T12:50:18-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Products and Sums of Matrices</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -184,7 +184,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_MatrixArithmetic"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Products and Sums of Matrices</span>
 </h2>
-<a href="Sec_MatrixArithmetic.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><p id="p-253">In the previous sections, we saw how the entries of matrix may be used to record relationships between two collections of variables. For example in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a>, the entries in the \(3\times 3\) portion of the matrix represents the proportion of vitamins contained by a collection of supplements, with each entry representing a vitamin-supplement pair. It is natural then, to wonder if we could combine relationships between variables or compose them. The operations behind these ideas are the sums and products of matrices.</p></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-7"><p id="p-253">In the previous sections, we saw how the entries of matrix may be used to record relationships between two collections of variables. For example in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a>, the entries in the \(3\times 3\) portion of the matrix represents the proportion of vitamins contained by a collection of supplements, with each entry representing a vitamin-supplement pair. It is natural then, to wonder if we could combine relationships between variables or compose them. The operations behind these ideas are the sums and products of matrices.</p></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Products of Matrices</span>
 </h3>
 <p id="p-254">We begin with a motivating example:</p>
@@ -200,7 +200,7 @@ A= \left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ 0.2 \amp  0.3 \amp  0.1\\
 </div>
 <p data-braille="continuation">represent the relation between vitamins and supplements, where each row corresponds to vitamins, and each column corresponds to supplements. So the entry in the second row, second column corresponds to the proportion of supplement 2 which is vitamin D, 30%.</p>
 <p id="p-258">A useful way to conceptualize this matrix is as an arrow or transformation, whose inputs are mg of various supplements, and whose outputs are mg of various vitamins.</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-33.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-32.svg" style="width: 100%; height: auto;" alt=""></div>
 <p id="p-259">Next, we record the relationship between days of the week and supplements:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -208,9 +208,9 @@ B= \left( \begin{array}{rrr} 100 \amp  150\\ 100 \amp  50\\ 150 \amp  100 \end{a
 \end{equation*}
 </div>
 <p id="p-260">Where now the rows are quantities of supplements and columns are days of the week. So the 100 in the third row second column represents the 100mg taken on Wednesday of Supplement 3. This to may be conceptualized as an arrow or transformation whose inputs are days of the week, and whose outputs are quantities of supplements.</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-34.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-33.svg" style="width: 100%; height: auto;" alt=""></div>
 <p id="p-261">Our goal now is to establish a relationship between days of the week and quantity of vitamins.</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-35.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-34.svg" style="width: 100%; height: auto;" alt=""></div>
 <p id="p-262">So, how much Vitamin A does Margo get on Monday? She took 100 mg of Supplement 1, of which 20% is Vitamin A, 100 mg of Supplement 2, of which 10% is Vitamin A, and 150 mg of Supplement 1, of which 50% is Vitamin A:</p>
 <div class="displaymath">
 \begin{equation*}

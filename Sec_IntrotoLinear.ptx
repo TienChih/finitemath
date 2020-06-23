@@ -42,9 +42,9 @@
         Graphically we can visualize this:
       </p>
 <figure>
-<caption>Poop </caption>      
+<caption>Visualization of Linear Function </caption>      
       <image>
- <description>A pile of electronic components wired together</description>     
+ <description>Upward sloping straight line.</description>     
 <latex-image>
 <![CDATA[\begin{tikzpicture}[yscale=.2][domain=-0:11]
 \draw[gray!50, thin, step=1] (0,0) grid (11,28);
@@ -64,53 +64,8 @@
 </latex-image>
       </image>
       </figure>
-<figure xml:id="figure-pgfplots-demo">
-                    <caption>Sample pgfplots plot</caption>
-                    <image xml:id="pgfplots-demo">
-                        <description>A pgfplots example, with a function, a parametric curve, and some points plotted.</description>
-                        <latex-image>
-                        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
-                        <![CDATA[\begin{tikzpicture}
-                        \matrix{
-                            \begin{axis}[width = 0.5\linewidth]
-                                \addplot[
-                                    domain = 0.1:10,
-                                    <->,
-                                    smooth,
-                                    thin,
-                                    color = blue,
-                                ]{4*ln(x)/ln(10)};
-                                \addplot[
-                                    only marks,
-                                ]coordinates{
-                                    (0,2)
-                                    (4,3)
-                                    (2,4)
-                                    (3,4)};
-                                \addplot[
-                                    variable = \t,
-                                    domain = 0:360,
-                                    samples = 200,
-                                    color = orange,
-                                ]({3*sin(2*t)}, {2*cos(5*t)});
-                            \end{axis}
-                            \amp
-                            \begin{axis}[axis lines = box, width = 0.5\linewidth]
-                                \addplot3[
-                                    surf,
-                                    faceted color = blue,
-                                    samples = 15,
-                                    domain = 0:1,
-                                    y domain = -1:1
-                                ]{x^2 - y^2};
-                            \end{axis}\\
-                        };
-                        \end{tikzpicture}]]>
-                        </latex-image>
-                    </image>
-                </figure>      
       <p>
-        An interactive version of this graph may be found here:  <figure><caption>Test</caption><interactive desmos="txkz7479z3" /></figure>.
+        An interactive version of this graph may be found here:  <figure><caption>Test</caption><interactive desmos="dxmvkiadgb" /></figure>.
       </p>
     </solution>
   </example>

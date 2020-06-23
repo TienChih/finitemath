@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-13T11:42:51-06:00    *-->
+<!--*    on 2020-06-23T12:50:20-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Polynomials</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -184,7 +184,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Polynomials"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Polynomials</span>
 </h2>
-<a href="Sec_Polynomials.html" class="permalink">¶</a><section class="introduction" id="introduction-14"><article class="definition definition-like" id="definition-3"><h6 class="heading">
+<section class="introduction" id="introduction-14"><article class="definition definition-like" id="definition-3"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
 </h6>
 <p id="p-508">A <dfn class="terminology">polynomial</dfn> \(p(x)\) is a function that can be written in the form</p>
@@ -229,7 +229,7 @@ p(x)=a_n(x-r_1)^{m_1}(x-r_2)^{m_2}\cdots (x-r_k)^{m_k}\cdot q_1(x)q_2(x)\cdots q
 </div>
 <p data-braille="continuation">where the \(q_i(x)\) are irreducible quadratics. We call \(r_1, \ldots, r_k\) the <em class="emphasis">roots</em> of \(r(x)\text{,}\) where root \(r_i\) has <em class="emphasis">multiplicty</em> \(m_i\text{.}\) What this means is if we plug \(r_i\) into \(p(x)\text{,}\) we end up with 0, since that linear factor ends up being 0.</p>
 <p id="p-522">The behavior of \(p(x)\) around these roots is determined by the multiplicity of that root. We know that \(p(x)\) will be 0 at those roots, so the question is whether or not the polynomial crosses the \(x\) axis at a given roots, or bounces off the axis:</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-36.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-35.svg" style="width: 100%; height: auto;" alt=""></div>
 <p id="p-523">We notice that \(p(x)\) only changes sign when it's factors \((x-r_i)^{m_i}\) changes sign. But \((x-r_i)^{m_i}\) only changes sign if \(m_i\) is odd. So we have the following fact:</p>
 <article class="remark remark-like" id="remark-2"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span>
@@ -243,7 +243,7 @@ p(x)=x^3-3x^2=x^2(x-3)\text{.}
 \end{equation*}
 </div>
 <p id="p-526">\url{https://www.desmos.com/calculator/iy0chaljdq} Since it is a odd degree polynomial with positive leading coefficient, it goes up to \(\infty\) as \(x\) goes to \(\infty\) and down to \(-\infty\) as \(x\) goes to \(-\infty\text{.}\) We also see that \(p(x)=0\) whenever \(x=0\) or \(x=3\text{.}\) The multiplicity of 0 is 2, and the multiplicity of 3 is 1, which are even and odd respectively, so \(p(x)\) “bounces” at \(x=0\) and crosses at \(x=1\text{.}\)</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-37.svg" style="width: 100%; height: auto;" alt=""></div></article></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-36.svg" style="width: 100%; height: auto;" alt=""></div></article></div>
 <article class="example example-like" id="example-42"><a data-knowl="" class="id-ref original" data-refid="hk-example-42"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.5</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-42"><article class="example example-like"><p id="p-527">Let</p>
@@ -253,7 +253,7 @@ p(x)=x^4-2x^2+1=(x-1)^2(x+1)^2\text{.}
 \end{equation*}
 </div>
 <p id="p-528">\url{https://www.desmos.com/calculator/wmr67oopgj} Since it is a even degree polynomial with positive leading coefficient, it goes up to \(\infty\) as \(x\) goes to both positive and negative \(\infty\text{.}\) We also see that \(p(x)=0\) whenever \(x=-1\) or \(x=1\text{.}\) The multiplicity of both of these roots is 2, so \(p(x)\) “bounces” at both \(x=1\) and \(x=-1\text{.}\)</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-38.svg" style="width: 100%; height: auto;" alt=""></div></article></div></section></section></div></main>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-37.svg" style="width: 100%; height: auto;" alt=""></div></article></div></section></section></div></main>
 </div>
 </body>
 </html>

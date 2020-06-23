@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-13T11:42:51-06:00    *-->
+<!--*    on 2020-06-23T12:50:20-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Logarithms</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -184,7 +184,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Logarithms"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.5</span> <span class="title">Logarithms</span>
 </h2>
-<a href="Sec_Logarithms.html" class="permalink">¶</a><p id="p-545">So looking at any exponential function, but specifically for increasing ones, we notice that they are 1-1, meaning two different inputs give you 2 different outputs. Thus, \(f(x)=a^x\) is an invertible function. You can see in these graphs \url{https://www.desmos.com/calculator/cvriy608bg} that reflecting the exponential over the \(y=x\) line giving us the green function is another function. We call this function \(\log_a(x)\text{.}\) As the inverse of an exponential function, it has some properties:</p>
+<p id="p-545">So looking at any exponential function, but specifically for increasing ones, we notice that they are 1-1, meaning two different inputs give you 2 different outputs. Thus, \(f(x)=a^x\) is an invertible function. You can see in these graphs \url{https://www.desmos.com/calculator/cvriy608bg} that reflecting the exponential over the \(y=x\) line giving us the green function is another function. We call this function \(\log_a(x)\text{.}\) As the inverse of an exponential function, it has some properties:</p>
 <ul class="disc">
 <li id="li-94"><p id="p-546"><dfn class="terminology">It's domain is only positive numbers</dfn>. Why? Because the only possible outputs of exponential outputs are positive numbers. Taking the inverse reverses the roles of the domain and range, and so the domain of \(\log_a\) is the positives.</p></li>
 <li id="li-95"><p id="p-547"><dfn class="terminology">As \(\mathbf{x}\) goes to 0, \(\mathbf{\log_a(x)}\) goes to \(\mathbf{-\infty}\text{.}\)</dfn> This is the result of the reflection. Normally \(a^x\) (for \(a&gt;1\)) goes to 0 as \(x\to -\infty\text{,}\) so when reflected, that line is now asymptotic to the \(y\)-axis. Also \(\log_a\) returns the power necessary to achieve the value \(x\text{.}\) If \(x\) is a small number like 0.0001, what power would I have to raise \(a\) to to get \(0.0001\text{?}\) It can't be 0, \(a^0=1\text{,}\) so it has to be <dfn class="terminology">less</dfn> than 0, and the smaller \(x\) is, the lower this power must go.</p></li>

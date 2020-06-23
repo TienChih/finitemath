@@ -52,7 +52,7 @@
 \usepackage{pgfplots}
 </latex-image-preamble>
   </docinfo>
-x
+
   <book>
     <title>Finite Mathematics</title>
     <frontmatter>
@@ -62,7 +62,7 @@ x
         </author>
       </titlepage>
     </frontmatter>
-    <xi:include href="./Chap_LinearFunctions.ptx"/>
+        <xi:include href="./Chap_LinearFunctions.ptx"/>
     <xi:include href="./Chap_Matrices.ptx"/> 
     <xi:include href="./Chap_LinearProgramming.ptx"/> 
     <xi:include href="./Chap_Logic.ptx"/> 
