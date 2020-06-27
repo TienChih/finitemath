@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-06-27T12:07:33-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="li"><h6 class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
+</h6>
+<p>Find an expression for the amount of people walking along each street. We first set up our systems of equations. We first note that all 300 people have to walk either along either Anderson or Birmingham, so</p>
+<div class="displaymath">
+\begin{equation*}
+a+b=300\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Next, the 75 at Xavier is the however many people walked down Anderson, and take away whoever veered off onto Central so:</p>
+<div class="displaymath">
+\begin{equation*}
+a-c=75\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">The 225 people at Yoneda is everyone coming across Birmingham and Central so</p>
+<div class="displaymath">
+\begin{equation*}
+b+c=225\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus the system is:</p>
+<div class="displaymath">
+\begin{align*}
+a+b\amp =\amp 300\\
+a-c\amp =\amp 75\\
+b+c\amp =\amp 225\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">with associated augmented matrix:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 1 \amp  1 \amp  0\amp  300\\ 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225 \end{array} \right)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">So the reduced row echelon form of this is:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225\\ 0 \amp  0 \amp  0\amp  0 \end{array} \right)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">What this tells us is that there is not a unique solution, as the system associated with this matrix is:</p>
+<div class="displaymath">
+\begin{align*}
+a-c\amp =\amp 75\\
+b+c\amp =\amp 225\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">Which is two of the original equations. So, depending on what \(c\) is, this will determine how many people traverse Anderson and Birmingham.</p></article><span class="incontext"><a href="Sec_SystemasMatrix.html#li-43">in-context</a></span>
+</body>
+</html>

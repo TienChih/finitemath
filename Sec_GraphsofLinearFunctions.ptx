@@ -21,13 +21,7 @@
   <subsection>
     <title>Slope.</title>
     <p>
-    <sage>
-<input>
-2+2
-</input>
-<output>
-</output>
-</sage>
+
 
       The <term>slope</term> is the constant rate of change of the linear function.
       It is often expressed:   
@@ -35,8 +29,7 @@
         m=\frac{\Delta y}{\Delta x}, m=\frac{\Delta f(x)}{\Delta x}
       </me>.
     </p>
-     <figure><caption>Test</caption><interactive xml:id="desmos-natural-log" desmos="ttox1bvxku" width="60%" aspect="2:3" /></figure>
-    <p>
+         <p>
       These algebraic expressions are just a formal way of saying, ``However much <m>x</m> changes,
       <m>y</m> or <m>f(x)</m> always changes by a proportional amount,
       and this amount is <m>m</m>."
@@ -100,7 +93,7 @@
 </latex-image>
         </image>
         <p>
-          An interactive version of this graph can be found here:   <figure><interactive desmos="9s3kfotxne" width="60%" aspect="4:3" /><caption>Test</caption></figure>
+          An interactive version of this graph can be found here:   <figure><interactive desmos="9s3kfotxne"  /><caption>Test</caption></figure>
         </p>
       </statement>
     </example>

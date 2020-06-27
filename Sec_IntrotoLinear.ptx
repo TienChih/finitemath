@@ -65,7 +65,7 @@
       </image>
       </figure>
       <p>
-        An interactive version of this graph may be found here:  <figure><caption>Test</caption><interactive desmos="dxmvkiadgb" /></figure>.
+        An interactive version of this graph may be found here:  <figure><caption>Graph of $f(x)=2x+8.$</caption><interactive desmos="dxmvkiadgb" /></figure>
       </p>
     </solution>
   </example>
@@ -105,6 +105,11 @@
       <p>
         Graphically we can visualize this:
       </p>
+<figure>   
+<caption>Visualization of a non-Linear Function </caption>      
+      <image>
+ <description>Concave up Parabola.</description>     
+   
       <image>
 <latex-image>
 <![CDATA[\begin{tikzpicture}[scale=1][domain=-0:11]
@@ -124,8 +129,9 @@
 \draw (2,4) --node[below]{\((2,4)\)}(2,4);\end{tikzpicture}]]>
 </latex-image>
       </image>
+</figure>      
       <p>
-        An interactive version of this graph may be found here: <figure><interactive desmos="za4t3zanlr"  /><caption>Graph of $y=x^2$.</caption></figure>.
+        An interactive version of this graph may be found here: <figure><interactive desmos="za4t3zanlr"  /><caption>Graph of $y=x^2$.</caption></figure>
       </p>
     </solution>
   </example>
