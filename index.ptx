@@ -40,6 +40,7 @@
 \def\con{\underline{}}
 </macros>
 <latex-image-preamble>
+\usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{tkz-graph}
 \usepackage{tkz-euclide}

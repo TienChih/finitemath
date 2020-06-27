@@ -39,9 +39,11 @@
 \node at (2,3){\(*\)};\end{tikzpicture}]]>
 </latex-image>
     </image>
+    
+    
     <p>
       Of course there are many more,
-      here's a visualization: \url{https://www.desmos.com/calculator/c3gronrfd3}.
+      here's a visualization:   <figure><caption> </caption><interactive desmos="c3gronrfd3" /></figure>.
     </p>
     <p>
       Is a slope/direction enough?
@@ -66,11 +68,11 @@
     </image>
     <p>
       Of course there are many more,
-      here's a visualization: \url{https://www.desmos.com/calculator/iwcjwhen1b}.
+      here's a visualization: <figure><caption>Adjust the slope to see different lines.  </caption><interactive desmos="iwcjwhen1b" /></figure>.
     </p>
     <p>
       So this begs the question,
-      what <term>IS</term> the mininum amount of information that you'd need to uniquely identify a line?
+      what <term>IS</term> the minimum amount of information that you'd need to uniquely identify a line?
     </p>
   </introduction>
   <subsection>
@@ -103,8 +105,9 @@
 </latex-image>
     </image>
     <p>
-      \url{https://www.desmos.com/calculator/5ikul0ktn5}, \url{https://www.desmos.com/calculator/hcl8ynd0yp}.
-    </p>
+   <figure><caption>Changing $y$-intercept.  </caption><interactive desmos="5ikul0ktn5" /></figure>.
+    <figure><caption>Changing slope.  </caption><interactive desmos="hcl8ynd0yp" /></figure>.
+          </p>
     <p>
       How does this translate Algebraically?
     </p>

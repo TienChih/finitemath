@@ -2,9 +2,9 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-08T12:42:03-06:00    *-->
+<!--*    on 2020-06-26T18:36:51-06:00    *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <head>
@@ -12,18 +12,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="example-like"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">3.3.1</span>
+<article class="example example-like"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h6>
-<p>Find \((x,y)\) such that:</p>
+<p>Suppose that a agriculture student is raising goats and pigs for a project. The goal is to raise some animals and then sell them for profit. She can raise a total of at most 16 animals. It costs $25 per goat and $ 75 per pig, and she has a budget of $900. Finally, she doesn't particularly like goats, so she won't raise more than 10 of them. If the profit per goat is $12 and profit per pig is $40, how many of each should she raise to maximize profits?</p>
+<p>We should note, if \(x\) is the number of goats and \(y\) the number of pigs, then she is maximizing \(P(x,y)=12x+40y\text{.}\) The inequalities she is dealing with are:</p>
+<div class="displaymath">
 \begin{align*}
-2x+3y\amp \leq\amp 12\\
-x\amp \geq\amp 0\\
-y\amp \geq\amp 0
+x+y\amp \leq\amp 16\ \ \text{ at most 16 animals }\\
+25x+75y\amp \leq\amp 900\ \ \text{ \dollar900 budget }\\
+x\amp \leq\amp 10\ \ \text{ hates goats }\\
+x\amp \geq\amp 0\ \ \text{ no negative goats }\\
+y\amp \geq\amp 0\ \ \text{ no negative pigs }
 \end{align*}
-<p>and \(f(x,y)=x+y\) is maximized.</p>
-<p>From above, we know that this region is a triangle in the first quadrant. We want to find the point(s) in this region where by taking the sum of the points, we get as large as a value as possible. There are infinitely many points in this region, how are we ever going to find the one that makes this sum the largest?</p>
-<p>Well, we know that given every possible output from the objective function \(f\) i.e. every possible \(k\) so that \(x+y=k\text{,}\) this actually defines a line: \url{https://www.desmos.com/calculator/qststwgxro}. In the link you can see the line when \(k=0\text{.}\) There is one point \((0,0)\) which is actually a part of our region which would give this output. As we drag \(k\) upwards, we see that there is a line segment worth of points in our region which would give that \(k\) as an output. At \(k=4\) \url{https://www.desmos.com/calculator/iy5rq5hpxa} we hit a corner of the region but we see that we can still increase \(k\text{.}\) Now at \(k=6\) \url{https://www.desmos.com/calculator/qwrti1mxln}, we see that we've hit another corner. Very importantly, if we try to increase \(k\) at all, our line will fall outside of the feasible region and there will be no points that would give such a \(k\) as an output.</p>
-<p>So, it must be that the largest \(k\) can be is 6, and that this happens at \((6,0)\text{.}\) One can check to see that this point satisfies all the criteria above. Most importantly though: <b class="terminology">IT MEANS TO FIND OPTIMAL SOLUTIONS ONE JUST NEEDS TO FIND THE CORNERS OF THE REGION</b>. This is because if your line isn't on a corner, you can still slide that value up or down, so the corresponding \(k\) value is neither maximal or minimal.</p></article><span class="incontext"><a href="Sec_LinearOptimization.html#example-25">in-context</a></span>
+</div>
+<p>Sketching our region out we get: \url{https://www.desmos.com/calculator/lwbkvibuyq}, with corner points:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c} x \amp  y \amp  P(x,y)\\ \hline 0 \amp  0 \amp  12(0)+40(0)=0\\ 10 \amp  0 \amp  12(10)+40(0)=120\\ 10 \amp  6 \amp  12(10)+40(6)=360\\ 6 \amp  10 \amp  12(6)+40(10)=472\\ 0 \amp  12 \amp  12(0)+40(12)=480 \end{array}
+\end{equation*}
+</div>
+<p>So the profit is maximized when you raise 12 pigs and no goats. To get a better sense of how we found these corners, these are just system of \(2\times 2\) systems of equations: \url{https://www.desmos.com/calculator/bzczxrkggy}</p></article><span class="incontext"><a href="Sec_LinearOptimization.html#example-25">in-context</a></span>
 </body>
 </html>

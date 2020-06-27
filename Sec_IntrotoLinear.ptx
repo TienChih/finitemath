@@ -125,7 +125,7 @@
 </latex-image>
       </image>
       <p>
-        An interactive version of this graph may be found here: \url{https://www.desmos.com/calculator/za4t3zanlr}.
+        An interactive version of this graph may be found here: <figure><interactive desmos="za4t3zanlr"  /><caption>Graph of $y=x^2$.</caption></figure>.
       </p>
     </solution>
   </example>
