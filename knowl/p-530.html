@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:09:51-06:00    *-->
+<!--*    on 2020-06-28T16:20:47-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p><dfn class="terminology">As \(\mathbf{x}\) goes to 0, \(\mathbf{\log_a(x)}\) goes to \(\mathbf{-\infty}\text{.}\)</dfn> This is the result of the reflection. Normally \(a^x\) (for \(a&gt;1\)) goes to 0 as \(x\to -\infty\text{,}\) so when reflected, that line is now asymptotic to the \(y\)-axis. Also \(\log_a\) returns the power necessary to achieve the value \(x\text{.}\) If \(x\) is a small number like 0.0001, what power would I have to raise \(a\) to to get \(0.0001\text{?}\) It can't be 0, \(a^0=1\text{,}\) so it has to be <dfn class="terminology">less</dfn> than 0, and the smaller \(x\) is, the lower this power must go.</p>
-<span class="incontext"><a href="Sec_Logarithms.html#p-530">in-context</a></span>
+<p>An interesting byproduct of this is that if we were to solve \(ax^2+bx+c=0\text{,}\) we would get:</p>
+<div class="displaymath">
+\begin{align*}
+ax^2+bx+c\amp =\amp 0\\
+a(x+\frac{b}{2a})^2+c-\frac{b^2}{4a}\amp =\amp 0\\
+a(x+\frac{b}{2a})^2=\frac{b^2}{4a}-c\\
+a(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a}\\
+(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a^2}\\
+x+\frac{b}{2a}=\frac{\pm\sqrt{b^2-4ac}}{2a}\\
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\end{align*}
+</div>
+<span class="incontext"><a href="Sec_Quadratics.html#p-530">in-context</a></span>
 </body>
 </html>

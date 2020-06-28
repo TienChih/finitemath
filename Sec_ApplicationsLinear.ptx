@@ -46,9 +46,9 @@
               Then choosing either point,
               say <m>\TCB{(32,0)}</m>, and point slope form, we have:
               <md>
-                <mrow>C-C_0\amp =\amp m(F-F_0)</mrow>
-                <mrow>C-\TCB{0}\amp =\amp \TCR{\frac{5}{9}}(F-\TCB{32})</mrow>
-                <mrow>C\amp =\amp \frac{5}{9}F-\frac{160}{9}</mrow>
+                <mrow>C-C_0\amp = m(F-F_0)</mrow>
+                <mrow>C-\TCB{0}\amp = \TCR{\frac{5}{9}}(F-\TCB{32})</mrow>
+                <mrow>C\amp = \frac{5}{9}F-\frac{160}{9}</mrow>
               </md>.
               Thus <m>T(F)=\frac{5}{9}F-\frac{160}{9}</m>
               <image>
@@ -60,10 +60,10 @@
             <p>
               When it's 10 degrees, we have that <m>\TCG{F=10}</m> and so:
               <md>
-                <mrow>C\amp =\amp \frac{5}{9}F-\frac{160}{9}</mrow>
-                <mrow>C\amp =\amp \frac{5}{9}\cdot\TCG{10}-\frac{160}{9}</mrow>
-                <mrow>C\amp =\amp \frac{50}{9}-\frac{160}{9}</mrow>
-                <mrow>C\amp =\amp -\frac{110}{9}\approx-12.2222</mrow>
+                <mrow>C\amp = \frac{5}{9}F-\frac{160}{9}</mrow>
+                <mrow>C\amp = \frac{5}{9}\cdot\TCG{10}-\frac{160}{9}</mrow>
+                <mrow>C\amp = \frac{50}{9}-\frac{160}{9}</mrow>
+                <mrow>C\amp = -\frac{110}{9}\approx-12.2222</mrow>
               </md>.
               So 10 degrees Fahrenheit is <m>-\frac{110}{9}\approx-12.2222</m> degrees Celsius.
               <image>
@@ -75,11 +75,11 @@
             <p>
               When it's 30 degrees Celsius i.e.<nbsp/><m>\TCO{C=30}</m> we have:
               <md>
-                <mrow>C\amp =\amp \frac{5}{9}F-\frac{160}{9}</mrow>
-                <mrow>\TCO{30}\amp =\amp \frac{5}{9}F-\frac{160}{9}</mrow>
-                <mrow>30+\frac{160}{9}\amp =\amp \frac{5}{9}F</mrow>
-                <mrow>\frac{430}{9}\amp =\amp \frac{5}{9}F</mrow>
-                <mrow>F\amp =\amp \frac{430}{5}=86</mrow>
+                <mrow>C\amp = \frac{5}{9}F-\frac{160}{9}</mrow>
+                <mrow>\TCO{30}\amp = \frac{5}{9}F-\frac{160}{9}</mrow>
+                <mrow>30+\frac{160}{9}\amp = \frac{5}{9}F</mrow>
+                <mrow>\frac{430}{9}\amp = \frac{5}{9}F</mrow>
+                <mrow>F\amp = \frac{430}{5}=86</mrow>
               </md>.
               So when it's 30 degrees Celsius,
               it is 86 degrees Fahrenheit.
@@ -91,7 +91,7 @@
         </ol>
       </p>
       <p>
-        Desmos representation here: \url{https://www.desmos.com/calculator/tyoznzrk53}.
+        Desmos representation here: <interactive desmos="tyoznzrk53"  />
       </p>
     </statement>
   </example>
@@ -158,7 +158,9 @@
           <image>
              <latex-image> <![CDATA[\begin{tikzpicture}[yscale=1/20, xscale=1/5] \draw[gray!50, thin, step=5] (0,-20) grid (40,120); \draw[very thick,->] (0,0) -- (40.1,0) node[right] {\(x\)}; \draw[very thick,->] (0,-20) -- (0,120.1) node[above] {\(y\)};  \foreach \x in {0,5,...,40} \draw (\x,0.05) -- (\x,-0.05) node[below] {\x}; \foreach \y in {0,20,...,120} \draw (-0.05,\y) -- (0.05,\y) node[left] {\y};   \draw[scale=1,domain=0:34,smooth,variable=\x,blue] plot ({\x},{3*\x+20});  \draw[scale=1,domain=0:24,smooth,variable=\x,red] plot ({\x},{5*\x});  \draw[scale=1,domain=0:40,smooth,variable=\x,purple] plot ({\x},{2*\x-20});  \draw[blue] (25,95) --node[below right]{\(C(x)=3x+20\)}(25,95); \draw[red] (20,100) --node[left]{\(R(x)=5x\)}(20,100); \draw[purple] (25,30) --node[below right]{\(P(x)=2x-20\)}(25,30);\end{tikzpicture}]]> </latex-image>
           </image>
-          \url{https://www.desmos.com/calculator/d6l9b3kqho}
+          <p>
+            <interactive desmos="d6l9b3kqho"  />
+          </p>
         </li>
         <li>
           <p>
@@ -171,32 +173,32 @@
           <p>
             When you produce <m>\TCG{x=30}</m> widgets, the cost will be:
             <md>
-              <mrow>C(x)\amp =\amp 3x+20</mrow>
-              <mrow>C(x)\amp =\amp 3\cdot\TCG{30}+20</mrow>
-              <mrow>C(x)\amp =\amp 90+20</mrow>
-              <mrow>C(x)\amp =\amp 110</mrow>
+              <mrow>C(x)\amp = 3x+20</mrow>
+              <mrow>C(x)\amp = 3\cdot\TCG{30}+20</mrow>
+              <mrow>C(x)\amp = 90+20</mrow>
+              <mrow>C(x)\amp = 110</mrow>
             </md>.
             The cost of producing 30 widgets is $110.
             <image>
                <latex-image> <![CDATA[\begin{tikzpicture}[yscale=1/20, xscale=1/5] \draw[gray!50, thin, step=5] (0,-20) grid (40,120); \draw[very thick,->] (0,0) -- (40.1,0) node[right] {\(x\)}; \draw[very thick,->] (0,-20) -- (0,120.1) node[above] {\(y\)};  \foreach \x in {0,5,...,40} \draw (\x,0.05) -- (\x,-0.05) node[below] {\x}; \foreach \y in {0,20,...,120} \draw (-0.05,\y) -- (0.05,\y) node[left] {\y};   \draw[scale=1,domain=0:34,smooth,variable=\x,blue] plot ({\x},{3*\x+20});    \draw[blue] (25,95) --node[below right]{\(C(x)=3x+20\)}(25,95);  \draw[ultra thick, dashed, ForestGreen] (30,-20) --node[right]{\(x=30\)} (30,120);  \node at (30,110){\(*\)}; \draw (30,110) --node[left]{\((30,110)\)}(30,110);\end{tikzpicture}]]> </latex-image>
             </image>
-            \url{https://www.desmos.com/calculator/cmoor2agyv}
+            <interactive desmos="cmoor2agyv"  />
           </p>
         </li>
         <li>
           <p>
             The break even occurs when the profit is zero, <m>\TCO{P(x)=0}</m>.
             <md>
-              <mrow>P(x)\amp =\amp 2x-20</mrow>
-              <mrow>\TCO{0}\amp =\amp 2x-20</mrow>
-              <mrow>2x\amp =\amp 20</mrow>
-              <mrow>x\amp =\amp 10</mrow>
+              <mrow>P(x)\amp = 2x-20</mrow>
+              <mrow>\TCO{0}\amp = 2x-20</mrow>
+              <mrow>2x\amp = 20</mrow>
+              <mrow>x\amp = 10</mrow>
             </md>.
             The break even point occurs when <m>x=10</m> widgets are sold.
             <image>
                <latex-image> <![CDATA[\begin{tikzpicture}[yscale=1/20, xscale=1/5] \draw[gray!50, thin, step=5] (0,-20) grid (40,60); \draw[very thick,->] (0,0) -- (40.1,0) node[right] {\(x\)}; \draw[very thick,->] (0,-20) -- (0,60.1) node[above] {\(y\)};  \foreach \x in {0,5,...,40} \draw (\x,0.05) -- (\x,-0.05) node[below] {\x}; \foreach \y in {0,10,...,60} \draw (-0.05,\y) -- (0.05,\y) node[left] {\y};     \draw[scale=1,domain=0:40,smooth,variable=\x,purple] plot ({\x},{2*\x-20});  \draw[purple] (25,30) --node[below right]{\(P(x)=2x-20\)}(25,30);  \draw[ultra thick, dashed, orange] (0,0) --node[above]{\(P(x)=0\)} (40,0);  \node at (10,0){\(*\)}; \draw (10,0) --node[above left]{\((10,0)\)}(10,0);\end{tikzpicture}]]> </latex-image>
             </image>
-            \url{https://www.desmos.com/calculator/bdtdeqzqqa}
+            <interactive desmos="bdtdeqzqqa"  />
           </p>
         </li>
       </ol>
@@ -241,22 +243,22 @@
               Recall the techniques from <xref ref="Example_PandS">Examples</xref>,
               <xref ref="Example_PandSagain"></xref>.
               <md>
-                <mrow>D(t)\amp =\amp -75t+b</mrow>
-                <mrow>\TCB{200}\amp =\amp \TCR{-75}\cdot\TCB{3}+b</mrow>
-                <mrow>200\amp =\amp -225+b</mrow>
-                <mrow>b\amp =\amp 200+225=425</mrow>
+                <mrow>D(t)\amp = -75t+b</mrow>
+                <mrow>\TCB{200}\amp = \TCR{-75}\cdot\TCB{3}+b</mrow>
+                <mrow>200\amp = -225+b</mrow>
+                <mrow>b\amp = 200+225=425</mrow>
               </md>.
               Thus <m>D(t)=-75t+425</m>.
               <image>
                  <latex-image> <![CDATA[\begin{tikzpicture}[yscale=1/70] \draw[very thick,->] (0,0) -- (6.1,0) node[right] {\(t\)}; \draw[very thick,->] (0,0) -- (0,425.1) node[above] {\(D(t)\)};  \foreach \x in {0,1,...,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\x}; \foreach \y in {0,50,...,425} \draw (-0.05,\y) -- (0.05,\y) node[left] {\y};    \draw[scale=1,domain=0:6,smooth,variable=\x,blue] plot ({\x},{-75*\x+425});  \draw (3,200) --node[above right]{\(D(t)=-75t+425\)}(3,200);\end{tikzpicture}]]> </latex-image>
               </image>
-              \url{https://www.desmos.com/calculator/uoul2cdsjs}
+              <interactive desmos="uoul2cdsjs"  />
             </p>
           </li>
           <li>
             <p>
               At the start of the journey, <m>\TCG{t=0}</m>,
-              and so she was <m>D(\TCG{0})=-75\cdot\TCG{0}+425=425</m> miles from her mother's house. \url{https://www.desmos.com/calculator/xuzh7xcgwk}
+              and so she was <m>D(\TCG{0})=-75\cdot\TCG{0}+425=425</m> miles from her mother's house. <interactive desmos="xuzh7xcgwk"  />
             </p>
           </li>
           <li>
@@ -264,16 +266,16 @@
               When she arrives,
               her distance from her mothers house is <m>\TCO{D(t)=0}</m> miles and so:
               <md>
-                <mrow>D(t)\amp =\amp -75t+425</mrow>
-                <mrow>\TCO{0}\amp =\amp -75t+425</mrow>
-                <mrow>75t\amp =\amp 425</mrow>
-                <mrow>t\amp =\amp \frac{425}{75}\approx 5.6667</mrow>
+                <mrow>D(t)\amp = -75t+425</mrow>
+                <mrow>\TCO{0}\amp = -75t+425</mrow>
+                <mrow>75t\amp = 425</mrow>
+                <mrow>t\amp = \frac{425}{75}\approx 5.6667</mrow>
               </md>.
               So the trip takes <m>t=\frac{425}{75}\approx 5.6667</m> hours or 5 hours and 40 minutes.
               <image>
                  <latex-image> <![CDATA[\begin{tikzpicture}[yscale=1/70] \draw[very thick,->] (0,0) -- (6.1,0) node[right] {\(t\)}; \draw[very thick,->] (0,0) -- (0,425.1) node[above] {\(D(t)\)};  \foreach \x in {0,1,...,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\x}; \foreach \y in {0,50,...,425} \draw (-0.05,\y) -- (0.05,\y) node[left] {\y};    \draw[scale=1,domain=0:6,smooth,variable=\x,blue] plot ({\x},{-75*\x+425});  \draw (3,200) --node[above right]{\(D(t)=-75t+425\)}(3,200);   \node at (0,425){\(*\)}; \draw[ForestGreen] (0,425) --node[right]{\((0,425)\)}(0,425);  \node at (17/3,0){\(*\)}; \draw[orange] (17/3,0) --node[above right]{\((\frac{425}{75},0)\)}(17/3,0);\end{tikzpicture}]]> </latex-image>
               </image>
-              \url{https://www.desmos.com/calculator/dilrensiar}
+              <interactive desmos="dilrensiar"  />
             </p>
           </li>
         </ol>
@@ -372,7 +374,7 @@
             <image>
                <latex-image> <![CDATA[\begin{tikzpicture}[yscale=6/60, xscale=10/12] \draw[gray!50, thin, step=4] (0,0) grid (12,60); \draw[very thick,->] (0,0) -- (12.1,0) node[right] {\(p\)}; \draw[very thick,->] (0,0) -- (0,60.1) node[above] {\(q\)};  \foreach \x in {0,2,...,12} \draw (\x,0.05) -- (\x,-0.05) node[below] {\x00}; \foreach \y in {0,4,...,60} \draw (-0.05,\y) -- (0.05,\y) node[left] {\y00};    \draw[scale=1,domain=0:12,smooth,variable=\x,blue] plot ({\x},{3*\x});  \draw[scale=1,domain=0:10.4,smooth,variable=\x,red] plot ({\x},{-5*\x+52});  \draw[dashed, ultra thick, ForestGreen] (3.5,0) --node[left]{\(p=350\)} (3.5,60);  \draw[red] (0,52) --node[right]{\(D(p)=-5p+5200\)}(0,52); \draw[blue] (12,36) --node[above left]{\(S(p)=3p\)}(12,36);  \node at (3.5,34.5){\(*\)}; \draw (3.5,34.5) --node[above right]{\((350,3450)\)}(3.5,34.5);  \node at (3.5,10.5){\(*\)}; \draw (3.5,10.5) --node[below right]{\((350,1050)\)}(3.5,10.5);\end{tikzpicture}]]> </latex-image>
             </image>
-            \url{https://www.desmos.com/calculator/dee7rqh07j}
+            <interactive desmos="dee7rqh07j"  />
           </p>
         </li>
         <li>
@@ -380,9 +382,9 @@
             The equilibrium point is the point where the quantity supplied and demanded are the same.
             Algebraically, this means <m>D(p)=S(p)</m>, and so:
             <md>
-              <mrow>-5p+5200\amp =\amp 3p</mrow>
-              <mrow>5200\amp =\amp 8p</mrow>
-              <mrow>p\amp =\amp \frac{5200}{8}=650</mrow>
+              <mrow>-5p+5200\amp = 3p</mrow>
+              <mrow>5200\amp = 8p</mrow>
+              <mrow>p\amp = \frac{5200}{8}=650</mrow>
             </md>.
             So the equilibrium happens when <m>p=650</m> that is $650 per unit.
             Then, we note that <m>S(650)=3*650=1950</m> and <m>D(p)=-5*650+5200=1950</m>,
@@ -391,7 +393,7 @@
             <image>
                <latex-image> <![CDATA[\begin{tikzpicture}[yscale=6/60, xscale=10/12] \draw[gray!50, thin, step=4] (0,0) grid (12,60); \draw[very thick,->] (0,0) -- (12.1,0) node[right] {\(p\)}; \draw[very thick,->] (0,0) -- (0,60.1) node[above] {\(q\)};  \foreach \x in {0,2,...,12} \draw (\x,0.05) -- (\x,-0.05) node[below] {\x00}; \foreach \y in {0,4,...,60} \draw (-0.05,\y) -- (0.05,\y) node[left] {\y00};    \draw[scale=1,domain=0:12,smooth,variable=\x,blue] plot ({\x},{3*\x});  \draw[scale=1,domain=0:10.4,smooth,variable=\x,red] plot ({\x},{-5*\x+52});  \draw[red] (0,52) --node[right]{\(D(p)=-5p+5200\)}(0,52); \draw[blue] (12,36) --node[above left]{\(S(p)=3p\)}(12,36);  \node at (6.5,19.5){\(*\)}; \draw (6.5,19.5) --node[left]{\((650,1950)\)}(6.5,19.5);\end{tikzpicture}]]> </latex-image>
             </image>
-            \url{https://www.desmos.com/calculator/aywru3gvxu}
+            <interactive desmos="aywru3gvxu"  />
           </p>
         </li>
       </ol>

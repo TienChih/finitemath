@@ -43,7 +43,7 @@
     
     <p>
       Of course there are many more,
-      here's a visualization:   <figure><caption> </caption><interactive desmos="c3gronrfd3" /></figure>.
+      here's a visualization:   <interactive desmos="c3gronrfd3" />.
     </p>
     <p>
       Is a slope/direction enough?
@@ -105,8 +105,8 @@
 </latex-image>
     </image>
     <p>
-   <figure><caption>Changing $y$-intercept.  </caption><interactive desmos="5ikul0ktn5" /></figure>.
-    <figure><caption>Changing slope.  </caption><interactive desmos="hcl8ynd0yp" /></figure>.
+   <interactive desmos="5ikul0ktn5" />
+   <interactive desmos="hcl8ynd0yp" />
           </p>
     <p>
       How does this translate Algebraically?
@@ -126,10 +126,10 @@
           Note that we are given <m>\textcolor{red}{m=3}</m> and <m>\textcolor{blue}{(x_0,y_0)=(2,5)}</m>.
           The general form for a line is <m>y=mx+b</m>, thus:
           <md>
-            <mrow>y\amp =\amp mx+b</mrow>
-            <mrow>\textcolor{blue}{5}\amp =\amp \textcolor{red}{3}\cdot\textcolor{blue}{2}+b</mrow>
-            <mrow>5\amp =\amp 6+b</mrow>
-            <mrow>b\amp =\amp 5-6=-1</mrow>
+            <mrow>y\amp = mx+b</mrow>
+            <mrow>\textcolor{blue}{5}\amp = \textcolor{red}{3}\cdot\textcolor{blue}{2}+b</mrow>
+            <mrow>5\amp = 6+b</mrow>
+            <mrow>b\amp = 5-6=-1</mrow>
           </md>.
         </p>
         <p>
@@ -149,7 +149,7 @@
 </latex-image>
         </image>
         <p>
-          \url{https://www.desmos.com/calculator/w3nixbtfrs}.
+          <interactive desmos="w3nixbtfrs" />
         </p>
         <p>
           We can verify that this line has slope <m>m=3</m> and when <m>x=2, y=3\cdot 2-1=6-1=5</m>.
@@ -182,9 +182,9 @@
     <p>
       We know it's a line because:
       <md>
-        <mrow>y-y_0\amp =\amp m(x-x_0)</mrow>
-        <mrow>y\amp =\amp mx-mx_0+y_0</mrow>
-        <mrow>y\amp =\amp mx+(y_0-mx_0)</mrow>
+        <mrow>y-y_0\amp = m(x-x_0)</mrow>
+        <mrow>y\amp = mx-mx_0+y_0</mrow>
+        <mrow>y\amp = mx+(y_0-mx_0)</mrow>
       </md>
       so if we let <m>b=y_0-mx_0</m>,
       we get the standard form for a line.
@@ -199,10 +199,10 @@
           knowing that <m>\textcolor{blue}{(2,5)}</m> lies on the line,
           and that <m>\textcolor{red}{m}</m>:
           <md>
-            <mrow>y-y_0\amp =\amp m(x-x_0)</mrow>
-            <mrow>y-\textcolor{blue}{5}\amp =\amp \textcolor{red}{3}(x-\textcolor{blue}{2})</mrow>
-            <mrow>y\amp =\amp 3x-6+5</mrow>
-            <mrow>y\amp =\amp 3x-1</mrow>
+            <mrow>y-y_0\amp = m(x-x_0)</mrow>
+            <mrow>y-\textcolor{blue}{5}\amp = \textcolor{red}{3}(x-\textcolor{blue}{2})</mrow>
+            <mrow>y\amp = 3x-6+5</mrow>
+            <mrow>y\amp = 3x-1</mrow>
           </md>.
         </p>
         <p>
@@ -264,19 +264,19 @@
         <p>
           We won't go through all the possibilities but if we considered the point <m>\textcolor{blue}{(2,3)}</m>:
           <md>
-            <mrow>y\amp =\amp mx+b</mrow>
-            <mrow>\textcolor{blue}{3}\amp =\amp \textcolor{red}{-1}\cdot \textcolor{blue}{2}+b</mrow>
-            <mrow>b\amp =\amp 3+2=5</mrow>
-            <mrow>y\amp =\amp -x+5</mrow>
+            <mrow>y\amp = mx+b</mrow>
+            <mrow>\textcolor{blue}{3}\amp = \textcolor{red}{-1}\cdot \textcolor{blue}{2}+b</mrow>
+            <mrow>b\amp = 3+2=5</mrow>
+            <mrow>y\amp = -x+5</mrow>
           </md>.
         </p>
         <p>
           Or if we picked <m>\textcolor{blue}{(1,4)}</m>:
           <md>
-            <mrow>y-y_0\amp =\amp m(x-x_0)</mrow>
-            <mrow>y-\textcolor{blue}{1}\amp =\amp \textcolor{red}{-1}\cdot(x-\textcolor{blue}{4})</mrow>
-            <mrow>y\amp =\amp -x+4+1</mrow>
-            <mrow>y\amp =\amp -x+5</mrow>
+            <mrow>y-y_0\amp = m(x-x_0)</mrow>
+            <mrow>y-\textcolor{blue}{1}\amp = \textcolor{red}{-1}\cdot(x-\textcolor{blue}{4})</mrow>
+            <mrow>y\amp = -x+4+1</mrow>
+            <mrow>y\amp = -x+5</mrow>
           </md>.
         </p>
         <p>
@@ -297,9 +297,83 @@
 </latex-image>
         </image>
         <p>
-          \url{https://www.desmos.com/calculator/yohrdbuwuc}
+          <interactive desmos="yohrdbuwuc"  />
         </p>
       </statement>
     </example>
   </subsection>
+  <subsection>
+    <title>Utilizing the Linear Function</title>
+  <p>
+    Once you obtain a linear function,
+    this gives you a relationship between the <m>x</m> and <m>y</m> variables.
+    It allows you to identify,
+    given an <m>x</m> or <m>y</m> value, the other value:
+  </p>
+  <example xml:id="Example_LinearFindValue">
+    <statement>
+      <p>
+        Consider the linear function <m>y=2x-3</m>.
+        <ol>
+          <li>
+            <p>
+              When <m>y=0</m>, what is <m>x</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              When <m>x=3</m> what is <m>y</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        These can be identified algebraically:
+        <ol>
+          <li>
+            <p>
+              When <m>\textcolor{ForestGreen}{y=0}</m>, we have:
+              <md>
+                <mrow>y\amp =\amp 2x-3</mrow>
+                <mrow>\textcolor{ForestGreen}{0}\amp =\amp 2x-3</mrow>
+                <mrow>3\amp =\amp 2x</mrow>
+                <mrow>x\amp =\amp 1.5</mrow>
+              </md>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>\textcolor{orange}{x=3}</m>:
+              <md>
+                <mrow>y\amp = 2x-3</mrow>
+                <mrow>y\amp = 2(\textcolor{orange}{3})-3</mrow>
+                <mrow>y\amp = 6-3=3</mrow>
+              </md>.
+              We can identify both points graphically as well:   <interactive desmos="gukgr4sjfm"  />
+            </p>
+          </li>
+        </ol>
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[yscale=0.3][domain=-1:10]
+\draw[gray!50, thin, step=1] (-1,-5) grid (10,20);
+\draw[very thick,->] (-1,0) -- (10.1,0) node[right] {\(x\)};
+\draw[very thick,->] (0,-5) -- (0,20.1) node[above] {\(y\)};
+\draw[scale=1,domain=0:10,smooth,variable=\x,blue] plot ({\x},{(2)*\x-3});
+\node at (1.5,0){\(*\)};
+\draw (1.5,0) --node[below right]{\((1.5,0)\)}(1.5,0);
+\node at (3,3){\(*\)};
+\draw (3,3) --node[below right]{\((3,3)\)}(3,3);
+\draw[ForestGreen, dashed, ultra thick] (-1,0) --node[below]{\(y=0\)}(10,0);
+\draw[orange, dashed, ultra thick] (3,-5) --node[left]{\(x=3\)}(3,20);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </statement>
+  </example>
+  </subsection>
+  
+  
+  
+  
 </section>

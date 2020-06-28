@@ -93,7 +93,7 @@
 </latex-image>
         </image>
         <p>
-          An interactive version of this graph can be found here:   <figure><interactive desmos="9s3kfotxne"  /><caption>Test</caption></figure>
+          An interactive version of this graph can be found here:   <figure><interactive desmos="9s3kfotxne"  /><caption>Graph of  <m> -x+4</m></caption></figure>
         </p>
       </statement>
     </example>
@@ -149,7 +149,7 @@
 </latex-image>
         </image>
         <p>
-          An interactive version of this graph can be found here: \url{https://www.desmos.com/calculator/pv7m6fbugb}.
+          An interactive version of this graph can be found here:  <interactive desmos="pv7m6fbugb"  />
         </p>
       </statement>
     </example>
@@ -285,7 +285,7 @@
           </ol>
         </p>
         <p>
-          Modern technology also let's us readily draw these functions: \url{https://www.desmos.com/calculator/gyvulordwz}.
+          Modern technology also let's us readily draw these functions: <figure><interactive desmos="gyvulordwz"  /><caption>Graph of  <m> -\frac{2}{3}x+4</m></caption></figure> 
         </p>
       </statement>
     </example>
@@ -322,14 +322,14 @@
           </ol>
         </p>
         <p>
-          Again, utilizing technology: \url{https://www.desmos.com/calculator/lprlevpf6q}.
+          Again, utilizing technology:  <figure><interactive desmos="lprlevpf6q"  /><caption>Graph of  <m> 2x+4y=8</m></caption></figure> 
         </p>
         <p>
           Note that we could have taken <m>2x+4y=8</m> and rewritten it:
           <md>
-            <mrow>2x+4y\amp =\amp 8</mrow>
-            <mrow>4y\amp =\amp -2x+8</mrow>
-            <mrow>y\amp =\amp -\frac{1}{2}x+2</mrow>
+            <mrow>2x+4y\amp = 8</mrow>
+            <mrow>4y\amp = -2x+8</mrow>
+            <mrow>y\amp = -\frac{1}{2}x+2</mrow>
           </md>,
           and from here,
           treated it the same way as in <xref ref="Example_DrawLine">Example</xref>.

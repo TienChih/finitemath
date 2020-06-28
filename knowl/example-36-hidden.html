@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:09:49-06:00    *-->
+<!--*    on 2020-06-28T16:20:45-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,21 +11,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><p>Suppose that I want to invest some money at 8% annual interest compounded annually (so no shenanigans), and after 20 years I want $2000. How much should I invest?</p>
-<p>So we note that:</p>
+<body><article class="example example-like"><p>Is \(\sim((p \vee q)\wedge \sim r)=(\sim p \wedge \sim q )\vee r\text{?}\)</p>
+<p>So yeah sure, we could go ahead and build truth tables for all this, but at this point Im sure laying out 8 rows of T and F and all these combinations is a real hassle. On the other hand, we have in fact these very nice laws described above. One of the reasons we develop algebraic rules is convenience, so let's go ahead:</p>
 <div class="displaymath">
 \begin{align*}
-A\amp =\amp 2000, \ \text{ the future value }\\
-i\amp =\amp 0.08, \ \text{ the actual interest rate }\\
-n\amp =\amp 20, \ \text{ number of years }
+\sim((p \vee q)\wedge \sim r)\amp =\amp \sim(p \vee q)\vee \sim\sim r\ \ \text{ By DeMorgan's Law }\\
+\amp =\amp \sim(p \vee q)\vee r \ \ \text{ since \(\sim\sim r=r\) }\\
+\amp =\amp (\sim p \wedge \sim q )\vee r \ \ \text{ by DeMorgans law again. }
 \end{align*}
 </div>
-<p>So we are solving:</p>
-<div class="displaymath">
-\begin{align*}
-2000\amp =\amp P(1.08)^{20}\\
-P\amp =\amp \frac{2000}{1.08^{20}}\approx429.10
-\end{align*}
-</div>
-<p>\url{https://www.desmos.com/calculator/2cavnhsskf}</p></article></body>
+<p>So yes, they are equal, fairly nice.</p></article></body>
 </html>

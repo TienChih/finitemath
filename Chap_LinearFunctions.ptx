@@ -15,7 +15,7 @@
   <xi:include  href="Sec_IntroLinear.ptx"/>
     <xi:include  href="Sec_GraphsofLinearFunctions.ptx"/>
   <xi:include  href="Sec_IndentifyLinear.ptx"/>
-  <xi:include  href="Sec_UtilityLinear.ptx"/>
-<!--  <xi:include  href="Sec_ApplicationsLinear.ptx"/>-->
+<!--  <xi:include  href="Sec_UtilityLinear.ptx"/>-->
+<xi:include  href="Sec_ApplicationsLinear.ptx"/>
   <xi:include  href="Sec_LinearRegression.ptx"/>
 </chapter>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:09:49-06:00    *-->
+<!--*    on 2020-06-28T16:20:45-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So suppose you lend your friend some money at 2% weekly interest, and after 10 weeks they owe you $240, how much did you lend them? Well, we know that in this case \(r=0.02,
-m=10\) and the future value \(A=240\) so:</p>
+<p>Using these circuit diagrams, we can model any logical statement. For example \(p\wedge ((q\wedge r) \vee (\sim q \wedge \sim r))\) would be:</p>
 <div class="displaymath">
-\begin{align*}
-A\amp =\amp P+mrP\\
-240\amp =\amp P+(10)(.02)P\\
-240\amp =\amp 1.2P\\
-P\amp =\amp 200
-\end{align*}
+\begin{equation*}
+\begin{circuitikz}  \draw (0,0) to[ospst=$p$] (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$q$] (3,1); \draw (3,1) to[ospst=$r$] (4,1);  \draw (2,-1) to[ospst=$\sim q$] (3,-1); \draw (3,-1) to[ospst=$\sim r$] (4,-1);  \draw(4,1) to (4,0); \draw(4,-1) to (4,0);  \draw(4,0) to (5,0);   \end{circuitikz}
+\end{equation*}
 </div>
-<span class="incontext"><a href="Sec_SimpleInterest.html#p-425">in-context</a></span>
+<span class="incontext"><a href="Sec_Circuits.html#p-425">in-context</a></span>
 </body>
 </html>

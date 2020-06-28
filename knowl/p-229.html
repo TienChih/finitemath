@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:09:46-06:00    *-->
+<!--*    on 2020-06-28T16:20:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,20 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>This gives us the system:</p>
-<div class="displaymath">
-\begin{align*}
-0.2x+0.1y+0.5z\amp =\amp 200\\
-0.2x+0.3y+0.1z\amp =\amp 100\\
-0.2x+0.4y+0.2z\amp =\amp 140
-\end{align*}
-</div>
-<p data-braille="continuation">with corresponding matrix:</p>
-<div class="displaymath">
-\begin{equation*}
-\left( \begin{array}{rrr|r} 0.2 \amp  0.1 \amp  0.5\amp  200\\ 0.2 \amp  0.3 \amp  0.1 \amp  100\\ 0.2 \amp  0.4 \amp  0.2 \amp  140 \end{array} \right)\text{.}
-\end{equation*}
-</div>
+<p>A matrix with 1's across the diagonal, and 0's above and below these 1's (as above) is called <dfn class="terminology">reduced row-echelon form</dfn>. A process to obtain a reduced row echelon form matrix is called the <dfn class="terminology">Gauss-Jordan Method</dfn>. The methodology is:</p>
+<ol class="decimal">
+<li><p>Starting with the first row, multiply by a number so it's leading (leftmost) value is 1.</p></li>
+<li><p>Multiply and add copies of this row to all rows below so that every entry below this leading 1 is a 0.</p></li>
+<li><p>Repeat steps (1) and (2) for subsequent rows until the last row.</p></li>
+<li><p>Starting with the bottom row working up, repeat steps (1)-(3) except working upwards and making entries <dfn class="terminology">above</dfn> the leading 1's 0.</p></li>
+</ol>
 <span class="incontext"><a href="Sec_SystemasMatrix.html#p-229">in-context</a></span>
 </body>
 </html>
