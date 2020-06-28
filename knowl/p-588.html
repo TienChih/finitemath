@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-27T10:49:43-06:00    *-->
+<!--*    on 2020-06-28T12:48:37-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So what now? Lets start by asking an easier question, what is the average speed of the rocket over the first 3 seconds?</p>
-<span class="incontext"><a href="Sec_AvgRoC.html#p-588">in-context</a></span>
+<p>How do we know that? Well:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{d}{dx}[a(f)x)+bg(x)]\amp =\amp \limit{h}{0}\frac{af(x+h)+bg(x+h)-(af(x)-bg(x))}{h}\\
+\amp =\amp \limit{h}{0}\frac{af(x+h)-af(x)}{h}+\limit{h}{0}\frac{bg(x+h)-bg(x)}{h}\\
+\amp =\amp a\limit{h}{0}\frac{f(x+h)-f(x)}{h}+b\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp af'(x)+bg'(x)\text{.}
+\end{align*}
+</div>
+<span class="incontext"><a href="Sec_RulesofDerivative.html#p-588">in-context</a></span>
 </body>
 </html>

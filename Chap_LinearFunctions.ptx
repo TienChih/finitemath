@@ -12,7 +12,7 @@
       It is also a good introduction to the theory of functions more generally.
     </p>
   </introduction>
-  <xi:include  href="Sec_IntrotoLinear.ptx"/>
+  <xi:include  href="Sec_IntroLinear.ptx"/>
     <xi:include  href="Sec_GraphsofLinearFunctions.ptx"/>
   <xi:include  href="Sec_IndentifyLinear.ptx"/>
   <xi:include  href="Sec_UtilityLinear.ptx"/>

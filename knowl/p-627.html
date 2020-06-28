@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-27T10:49:43-06:00    *-->
+<!--*    on 2020-06-28T12:48:38-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Similarly, the derivative of \(g(x)=\frac{x}{x^2+1}\text{:}\)</p>
+<p>So, to compute the actual derivative of \(a^x\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
-g'(x)\amp =\amp \frac{(x^2+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x^2+1]}{(x^2+1)^2}\\
-\amp =\amp \frac{(x^2+1)(1)-x(2x)}{(x^2+1)^2}\\
-\amp =\amp \frac{1-x^2}{(x^2+1)^2}
+\frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
+\amp =\amp \frac{d}{dx}[e^{\ln(a)x}]\\
+\amp =\amp e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }\\
+\amp =\amp e^{\ln(a)x}\ln(a)\cdot1\\
+\amp =\amp a^x\ln(a)\text{.}
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_QuotientRule.html#p-627">in-context</a></span>
+<span class="incontext"><a href="DerivativeExp.html#p-627">in-context</a></span>
 </body>
 </html>

@@ -4,8 +4,8 @@
     <p>
       Algebraically, linear functions are expressible as:
       <md>
-        <mrow>y\amp =\amp mx+b, \text{ or }</mrow>
-        <mrow>f(x)\amp =\amp mx+b</mrow>
+        <mrow>y\amp = mx+b, \text{ or }</mrow>
+        <mrow>f(x)\amp = mx+b</mrow>
       </md>.
     </p>
     <p>
@@ -30,7 +30,7 @@
       </me>.
     </p>
          <p>
-      These algebraic expressions are just a formal way of saying, ``However much <m>x</m> changes,
+      These algebraic expressions are just a formal way of saying, "However much <m>x</m> changes,
       <m>y</m> or <m>f(x)</m> always changes by a proportional amount,
       and this amount is <m>m</m>."
     </p>

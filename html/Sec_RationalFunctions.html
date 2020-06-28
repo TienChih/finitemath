@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-06-28T13:09:42-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Rational Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_Polynomials.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_NonLinear.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_Exponentials.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_Polynomials.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_NonLinear.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_Exponentials.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_UtilityLinear.html" data-scroll="Sec_UtilityLinear">Utilizing the Linear Function</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_OperationsStatements.html" data-scroll="Sec_OperationsStatements">Operations on Statements</a></li>
+<li><a href="Sec_CompoundStatements.html" data-scroll="Sec_CompoundStatements">Compound Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Sec_Circuits.html" data-scroll="Sec_Circuits">Circuits</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Argument Types</a></li>
+<li><a href="Fallacies.html" data-scroll="Fallacies">Fallacies</a></li>
+<li><a href="Sec_ValidArguments.html" data-scroll="Sec_ValidArguments">Valid and invalid arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions" class="active">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative as a Limit</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
+<li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
+<li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Product Rule</a></li>
+<li><a href="section-38.html" data-scroll="section-38">Quotient Rule</a></li>
+<li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_RationalFunctions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">Rational Functions</span>
+</h2>
+<section class="introduction" id="introduction-15"><article class="definition definition-like" id="definition-4"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-512">A <dfn class="terminology">rational function</dfn> is a function \(r(x)\) which may be written as \(r(x)=\frac{p(x)}{q(x)}\) where \(p(x),
+q(x)\) are both polynomials, and \(q(x)\neq 0\text{.}\)</p></article><p id="p-513">Now when we say \(q(x)\neq0\text{,}\) we mean that \(q(x)\) is not the polynomial 0, not that \(q(x)\) could never be 0. As before, we will consider the long and short term behavior of polynomials.</p></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.3.1</span> <span class="title">Long Term Behavior</span>
+</h3>
+<p id="p-514">For Polynomials, what determined the long term behavior of a polynomial was the leading term. So it makes sense that a rational function will be determined the same way. Given</p>
+<div class="displaymath">
+\begin{equation*}
+r(x)=\frac{a_nx^n+\cdots a_0x^0}{b_mx^m+\cdots b_0x^0}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">we can determine the long term behavior with</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{a_nx^n}{b_mx^m}
+\end{equation*}
+</div>
+<p data-braille="continuation">which simplifies to \(\frac{a_n}{b_m}x^{n-m}\text{.}\) So there are some cases to consider here:</p>
+<ul class="disc">
+<li id="li-91"><p id="p-515">If \(n&gt;m\text{,}\) then \(\frac{a_n}{b_m}x^{n-m}\) is just a regular monomial. This doesn't mean that \(r(x)\)'s graph will look like a polynomial's, but it does mean the long term behavior will be the same as that of a polynomial. For example consider \(y=\frac{-x^4+x}{x+1}\text{.}\) We should note: \(\frac{-x^4-x}{x+1}\sim\frac{-x^4}{x} \sim -x^3\text{,}\) so the long term behavior of \(y\) will be the same as \(-x^3\)'s: positive infinity to the left, negative infinity to the right. \url{https://www.desmos.com/calculator/jzxyyrcgep}.</p></li>
+<li id="li-92"><p id="p-516">If \(n=m\text{,}\) then \(\frac{a_n}{b_m}x^{n-m}=\frac{a_n}{b_m}\) is just a constant. So as the magnitude of \(x\) grows, these values approach \(\frac{a_n}{b_m}\text{.}\) For example consider \(y=\frac{-2x^4+x}{3x^4+1}\text{.}\) We should note: \(\frac{-2x^4-x}{3x^4+1}\sim\frac{-2x^4}{3x^4} \sim -\frac{2}{3}\text{,}\) so the long term behavior of \(y\) will be the same as \(-\frac{2}{3}\)'s: \url{https://www.desmos.com/calculator/qaeq86mivp}.</p></li>
+<li id="li-93"><p id="p-517">If \(n\lt m\text{,}\) then \(\frac{a_n}{b_m}x^{n-m}=\frac{a_n}{b_m}\frac{1}{x^{m-n}}\text{.}\) As the magnitude of \(x\) grows, the more \(\frac{1}{x^{m-n}}\) will shrink and the entire function converges to 0. For example consider \(y=\frac{-2x^2+x}{3x^4+1}\text{.}\) We should note: \(\frac{-2x^2-x}{3x^4+1}\sim\frac{-2x^2}{3x^4} \sim -\frac{2}{3}\frac{1}{x^2}\text{,}\) so the long term behavior of \(y\) will be converging to 0: \url{https://www.desmos.com/calculator/n0ftbxmcod}.</p></li>
+</ul></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.3.2</span> <span class="title">Short term behavior</span>
+</h3>
+<p id="p-518">Here, we once again care about the multiplicity of the roots, that is, if \(r(x)=\frac{p(x)}{q(x)}\text{,}\) what we care about is when \(p(x)\) or \(q(x)\) is 0, and what the multiplicity is.</p>
+<p id="p-519">Well, turns out, 0 divided by anything is 0. So if the numerator is 0, then \(r(x)\) is 0. Moreover, it bounces or crosses in the same way as a polynomial. So if the multiplicity is odd, the function crosses and if it's even, it bounces.</p>
+<p id="p-520">For example, consider \(r_1(x)=\frac{x-1}{x}\text{.}\) It is clearly 0 when \(x=1\text{,}\) and since the multiplicity is odd, we cross \url{https://www.desmos.com/calculator/9graa40kq1}. But if we change that to \(r_2(x)=\frac{(x-1)^2}{x}\text{,}\) the multiplicity is now even so we bounce \url{https://www.desmos.com/calculator/iy9kvoac37}.</p>
+<p id="p-521">It also turns out you can't divide by 0. So at those points, the function is undefined. And as the values in the denominator towards 0, the overall value of the quotient approaches either positive or negative infinity. Just like roots, whether or not we change signs at these asymptotes depends on the multiplicity of the root.</p>
+<p id="p-522">For example, again consider \(r_1(x)=\frac{x-1}{x}\text{.}\) The denominator is 0 when \(x=0\text{,}\) so we have a vertical asymptote there. Since the multiplicity is odd, we change signs there: \url{https://www.desmos.com/calculator/ik9xwhui5i}. If we made that multiplicity even, the function would not change sign at \(x=0\text{,}\) so for \(r_2(x)=\frac{x-1}{x^2}\text{:}\) \url{https://www.desmos.com/calculator/h5famtu30t}</p></section></section></div></main>
+</div>
+</body>
+</html>

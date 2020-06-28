@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-27T10:49:43-06:00    *-->
+<!--*    on 2020-06-28T12:48:38-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Since the behavior of derivatives of sums behave so well, its tempting to believe that the derivatives of products would behave similarly well, that is, it may be reasonable to guess that \(\frac{d}{dx}[f(x)g(x)]=f'(x)g'(x)\text{.}\) To try to see if this is true, we should ask, is:</p>
+<p>We can use the chain rule to find the derivative of log functions as well. Let's first compute \(\frac{d}{dx}[\ln(x)]\text{:}\)</p>
 <div class="displaymath">
-\begin{equation*}
-\frac{d}{dx}[x\cdot x]=\frac{d}{dx}[x]\frac{d}{dx}[x]?
-\end{equation*}
+\begin{align*}
+x\amp =\amp e^{\ln(x)}\\
+\frac{d}{dx}[x]\amp =\amp \frac{d}{dx}[e^{\ln(x)}]\\
+1\amp =\amp e^{\ln(x)}\frac{d}{dx}[\ln(x)]\\
+1\amp =\amp x\frac{d}{dx}[\ln(x)]\\
+\frac{d}{dx}[\ln(x)]\amp =\amp \frac{1}{x}\text{.}
+\end{align*}
 </div>
-<span class="incontext"><a href="section-38.html#p-628">in-context</a></span>
+<span class="incontext"><a href="DerivativeLogs.html#p-628">in-context</a></span>
 </body>
 </html>
