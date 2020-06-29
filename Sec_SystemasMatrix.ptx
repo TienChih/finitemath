@@ -7,9 +7,9 @@
     <p>
       So for example the system of equations:
       <md>
-        <mrow>2x+3y+z\amp =\amp 3</mrow>
-        <mrow>-2x+4y+2z\amp =\amp 0</mrow>
-        <mrow>x-y+2z\amp =\amp 3</mrow>
+        <mrow>2x+3y+z\amp = 3</mrow>
+        <mrow>-2x+4y+2z\amp = 0</mrow>
+        <mrow>x-y+2z\amp = 3</mrow>
       </md>
     </p>
     <p>
@@ -37,8 +37,8 @@
     <p>
       This represent the system of equations:
       <md>
-        <mrow>x+2y\amp =\amp 4</mrow>
-        <mrow>3x+3y\amp =\amp 9</mrow>
+        <mrow>x+2y\amp = 4</mrow>
+        <mrow>3x+3y\amp = 9</mrow>
       </md>
     </p>
   </introduction>
@@ -96,8 +96,8 @@
       What system of equations of this?
       It is:
       <md>
-        <mrow>x+0y\amp =\amp 2</mrow>
-        <mrow>0x+y\amp =\amp 1</mrow>
+        <mrow>x+0y\amp = 2</mrow>
+        <mrow>0x+y\amp = 1</mrow>
       </md>
     </p>
     <p>
@@ -147,9 +147,9 @@
         <p>
           Solve the linear system:
           <md>
-            <mrow>3x+2y+z\amp =\amp 1</mrow>
-            <mrow>x+y-z\amp =\amp 3</mrow>
-            <mrow>2x-y+2z\amp =\amp -2</mrow>
+            <mrow>3x+2y+z\amp = 1</mrow>
+            <mrow>x+y-z\amp = 3</mrow>
+            <mrow>2x-y+2z\amp = -2</mrow>
           </md>
         </p>
         <p>
@@ -181,18 +181,18 @@
         <p>
           Which corresponds to the linear system:
           <md>
-            <mrow>1x+0y+0z\amp =\amp 1</mrow>
-            <mrow>0x+1y+0z\amp =\amp 0</mrow>
-            <mrow>0x+0y+z\amp =\amp -2</mrow>
+            <mrow>1x+0y+0z\amp = 1</mrow>
+            <mrow>0x+1y+0z\amp = 0</mrow>
+            <mrow>0x+0y+z\amp = -2</mrow>
           </md>
         </p>
         <p>
           Which has solution <m>x=1, y=0, z=2</m>.
           To verify this works, we can check:
           <md>
-            <mrow>3(1)+2(0)+(-2)\amp =\amp 1</mrow>
-            <mrow>(1)+(0)-(-2)\amp =\amp 3</mrow>
-            <mrow>2(1)-(0)+2(-2)\amp =\amp -2</mrow>
+            <mrow>3(1)+2(0)+(-2)\amp = 1</mrow>
+            <mrow>(1)+(0)-(-2)\amp = 3</mrow>
+            <mrow>2(1)-(0)+2(-2)\amp = -2</mrow>
           </md>
           and we have solved our linear system.
         </p>
@@ -215,13 +215,17 @@
       So, we should be able to do this with a machine.
     </p>
     <p>
-      Following this link to an independent sagecell: \url{https://sagecell.sagemath.org/?z=eJxztM1NLCnKrNAIDNRRiI420jHWMdQxjtWJ1jXSMdEx0jEAMg11dA2BTOPYWE1eroKizLwSDUcES6-oKDVNQ1MTAN6nE6M=&amp;amp;lang=sage}. You see the following code:
+      <sage>
+        <input>
+        A=matrix(QQ, [[2,3,1,3],[-2,4,2,0],[1,-1,2,3]])
+        print(A)
+        print(A.rref())
+        </input>
+        <output>
+        </output>
+      </sage>
     </p>
-<pre>
-A=matrix(QQ, [[2,3,1,3],[-2,4,2,0],[1,-1,2,3]])
-print(A)
-print(A.rref())
-</pre>
+
     <p>
       The first line defines the matrix <m>A</m> with the rows identical to the rows we defined in our above matrix.
       Then the code returns a printout of that matrix,
@@ -235,9 +239,9 @@ print(A.rref())
       Is this right?
       Well,
       <md>
-        <mrow>2(1)+3(0)+1\amp =\amp 3</mrow>
-        <mrow>-2(1)+4(0)+2(1)\amp =\amp 0</mrow>
-        <mrow>1-0+2(1)\amp =\amp 3</mrow>
+        <mrow>2(1)+3(0)+1\amp = 3</mrow>
+        <mrow>-2(1)+4(0)+2(1)\amp = 0</mrow>
+        <mrow>1-0+2(1)\amp = 3</mrow>
       </md>
     </p>
     <p>
@@ -259,9 +263,9 @@ A=matrix(QQ, [[3,2,1,1],[1,1,1,3],[2,-1,2,-2]])
     <p>
       Consider the system:
       <md>
-        <mrow>x+2y+z\amp =\amp 3</mrow>
-        <mrow>-x+y+0z\amp =\amp 0</mrow>
-        <mrow>0x+3y+z\amp =\amp 3</mrow>
+        <mrow>x+2y+z\amp = 3</mrow>
+        <mrow>-x+y+0z\amp = 0</mrow>
+        <mrow>0x+3y+z\amp = 3</mrow>
       </md>
     </p>
     <p>
@@ -279,9 +283,9 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,3]])
     <p>
       Which gives us the system:
       <md>
-        <mrow>x+0y+(1/3)z\amp =\amp 1</mrow>
-        <mrow>0x+y+(1/3)z\amp =\amp 1</mrow>
-        <mrow>0x+0y+0z\amp =\amp 0</mrow>
+        <mrow>x+0y+(1/3)z\amp = 1</mrow>
+        <mrow>0x+y+(1/3)z\amp = 1</mrow>
+        <mrow>0x+0y+0z\amp = 0</mrow>
       </md>
     </p>
     <p>
@@ -290,15 +294,15 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,3]])
       which is true but useless.
       Let's break down the remaining equations:
       <md>
-        <mrow>x+(1/3)z\amp =\amp 1</mrow>
-        <mrow>y+(1/3)z\amp =\amp 1</mrow>
+        <mrow>x+(1/3)z\amp = 1</mrow>
+        <mrow>y+(1/3)z\amp = 1</mrow>
       </md>
     </p>
     <p>
       Which can be thought of as:
       <md>
-        <mrow>x\amp =\amp 1-(1/3)z</mrow>
-        <mrow>y\amp =\amp 1-(1/3)z</mrow>
+        <mrow>x\amp = 1-(1/3)z</mrow>
+        <mrow>y\amp = 1-(1/3)z</mrow>
       </md>
     </p>
     <p>
@@ -318,9 +322,9 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,3]])
     <p>
       Consider a similar system:
       <md>
-        <mrow>x+2y+z\amp =\amp 3</mrow>
-        <mrow>-x+y+0z\amp =\amp 0</mrow>
-        <mrow>0x+3y+z\amp =\amp 0</mrow>
+        <mrow>x+2y+z\amp = 3</mrow>
+        <mrow>-x+y+0z\amp = 0</mrow>
+        <mrow>0x+3y+z\amp = 0</mrow>
       </md>
     </p>
     <p>
@@ -441,16 +445,16 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
         <p>
           Finally, there are twice as many 787-9s as 767-300ERs:
           <md>
-            <mrow>z\amp =\amp 2y</mrow>
-            <mrow>-2y+z\amp =\amp 0</mrow>
+            <mrow>z\amp = 2y</mrow>
+            <mrow>-2y+z\amp = 0</mrow>
           </md>.
         </p>
         <p>
           Giving us a system:
           <md>
-            <mrow>330x+270y+240z\amp =\amp 9300</mrow>
-            <mrow>250x+200y+250z\amp =\amp 8100</mrow>
-            <mrow>-2y+z\amp =\amp 0</mrow>
+            <mrow>330x+270y+240z\amp = 9300</mrow>
+            <mrow>250x+200y+250z\amp = 8100</mrow>
+            <mrow>-2y+z\amp = 0</mrow>
           </md>
           and corresponding augmented matrix:
           <me>
@@ -468,9 +472,9 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
         <p>
           To verify that this is a legitimate solution, check:
           <md>
-            <mrow>330(10)+270(8)+240(16)\amp =\amp 9300</mrow>
-            <mrow>250(10)+200(8)+250(16)\amp =\amp 8100</mrow>
-            <mrow>-2(8)+16\amp =\amp 0</mrow>
+            <mrow>330(10)+270(8)+240(16)\amp = 9300</mrow>
+            <mrow>250(10)+200(8)+250(16)\amp = 8100</mrow>
+            <mrow>-2(8)+16\amp = 0</mrow>
           </md>.
         </p>
       </statement>
@@ -502,9 +506,9 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
         <p>
           This gives us the system:
           <md>
-            <mrow>0.2x+0.1y+0.5z\amp =\amp 200</mrow>
-            <mrow>0.2x+0.3y+0.1z\amp =\amp 100</mrow>
-            <mrow>0.2x+0.4y+0.2z\amp =\amp 140</mrow>
+            <mrow>0.2x+0.1y+0.5z\amp = 200</mrow>
+            <mrow>0.2x+0.3y+0.1z\amp = 100</mrow>
+            <mrow>0.2x+0.4y+0.2z\amp = 140</mrow>
           </md>
           with corresponding matrix:
           <me>
@@ -568,9 +572,9 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
                 </me>.
                 Thus the system is:
                 <md>
-                  <mrow>a+b\amp =\amp 300</mrow>
-                  <mrow>a-c\amp =\amp 75</mrow>
-                  <mrow>b+c\amp =\amp 225</mrow>
+                  <mrow>a+b\amp = 300</mrow>
+                  <mrow>a-c\amp = 75</mrow>
+                  <mrow>b+c\amp = 225</mrow>
                 </md>,
                 with associated augmented matrix:
                 <me>
@@ -583,8 +587,8 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
                 What this tells us is that there is not a unique solution,
                 as the system associated with this matrix is:
                 <md>
-                  <mrow>a-c\amp =\amp 75</mrow>
-                  <mrow>b+c\amp =\amp 225</mrow>
+                  <mrow>a-c\amp = 75</mrow>
+                  <mrow>b+c\amp = 225</mrow>
                 </md>,
                 Which is two of the original equations.
                 So, depending on what <m>c</m> is,
@@ -597,12 +601,12 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
                 how many people crossed Anderson and Birmingham?
                 So letting <m>c=50</m>, we would have:
                 <md>
-                  <mrow>a-c\amp =\amp 75</mrow>
-                  <mrow>a-50\amp =\amp 75</mrow>
-                  <mrow>a\amp =\amp 125</mrow>
-                  <mrow>b+c\amp =\amp 225</mrow>
-                  <mrow>b+50\amp =\amp 225</mrow>
-                  <mrow>b\amp =\amp 175</mrow>
+                  <mrow>a-c\amp = 75</mrow>
+                  <mrow>a-50\amp = 75</mrow>
+                  <mrow>a\amp = 125</mrow>
+                  <mrow>b+c\amp = 225</mrow>
+                  <mrow>b+50\amp = 225</mrow>
+                  <mrow>b\amp = 175</mrow>
                 </md>,
                 So 125 people across Anderson and 175 across Birmingham.
                 Another way to do this would be to add an equation <m>c=50</m> to our system:
@@ -622,12 +626,12 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
                 how many go through Birmingham or Central?
                 We can revisit our linear system from (a):
                 <md>
-                  <mrow>a-c\amp =\amp 75</mrow>
-                  <mrow>100-c\amp =\amp 75</mrow>
-                  <mrow>c\amp =\amp 25</mrow>
-                  <mrow>b+c\amp =\amp 225</mrow>
-                  <mrow>b+25\amp =\amp 225</mrow>
-                  <mrow>b\amp =\amp 200</mrow>
+                  <mrow>a-c\amp = 75</mrow>
+                  <mrow>100-c\amp = 75</mrow>
+                  <mrow>c\amp = 25</mrow>
+                  <mrow>b+c\amp = 225</mrow>
+                  <mrow>b+25\amp = 225</mrow>
+                  <mrow>b\amp = 200</mrow>
                 </md>,
                 so 200 across Birmingham and 25 across Central.
                 We can also add the linear equation <m>a=100</m>:

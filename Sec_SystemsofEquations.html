@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T16:20:33-06:00    *-->
+<!--*    on 2020-06-28T19:21:51-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <title>Systems of Linear  Equations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']]
@@ -186,10 +186,10 @@ MathJax.Hub.Config({
 <section class="introduction" id="introduction-5"><p id="p-176">A system of equations with unknowns \(x_1,\ldots,x_n\) is a collection of first degree equations:</p>
 <div class="displaymath">
 \begin{align*}
-a_{1,1}x_1+a_{1,2}x_2+\cdots+a_{1,n}x_n\amp =\amp b_1\\
-a_{2,1}x_1+a_{2,2}x_2+\cdots+a_{2,n}x_n\amp =\amp b_1\\
-\vdots \amp =\amp \vdots\\
-a_{m,1}x_1+a_{m,2}x_2+\cdots+a_{m,n}x_n\amp =\amp b_1
+a_{1,1}x_1+a_{1,2}x_2+\cdots+a_{1,n}x_n\amp = b_1\\
+a_{2,1}x_1+a_{2,2}x_2+\cdots+a_{2,n}x_n\amp = b_1\\
+\vdots \amp = \vdots\\
+a_{m,1}x_1+a_{m,2}x_2+\cdots+a_{m,n}x_n\amp = b_1
 \end{align*}
 </div></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title">What Exactly is  a Solution to a System of Linear Equations?</span>
@@ -203,36 +203,36 @@ a_{m,1}x_1+a_{m,2}x_2+\cdots+a_{m,n}x_n\amp =\amp b_1
 <p id="p-181">So a solution to the system:</p>
 <div class="displaymath">
 \begin{align*}
-2x+3y\amp =\amp 15\\
-x-y\amp =\amp 0
+2x+3y\amp = 15\\
+x-y\amp = 0
 \end{align*}
 </div>
 <p data-braille="continuation">is a collection of points that satisfy the first AND the second linear equalities. The first equation describes the line: \(y=-\frac{2}{3}x+5\text{,}\) whereas the second describes the line \(y=x\text{.}\) Each of these equations represent lines, so each individually has infinitely many solutions. The question is, how many solutions do these lines have in common?</p>
 <p id="p-182">There are a number of ways to find out, but the most straight forward is simply to graph the system:</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-37.svg" style="width: 100%; height: auto;" alt=""></div>
-<p id="p-183">\url{https://www.desmos.com/calculator/cdrgyxm2al}.</p>
+<p id="p-183"><iframe src="https://www.desmos.com/calculator/cdrgyxm2al" id="interactive-24" width="600" height="600"></iframe></p>
 <p id="p-184">As one can see, although each line has infinitely many points, the only solution they have in common is the point \((3,3)\text{.}\) To verify this, we note that \(2(3)+3(3)=15\) and \(3-3=0\text{,}\) so both equations are satisfied. This system has <dfn class="terminology">a unique solution</dfn></p>
 <p id="p-185">What else could happen when solving a system of equations? Well, consider:</p>
 <div class="displaymath">
 \begin{align*}
-x+y\amp =\amp 5\\
-2x+2y\amp =\amp 10\text{.}
+x+y\amp = 5\\
+2x+2y\amp = 10\text{.}
 \end{align*}
 </div>
 <p id="p-186">If we look at the graph of both lines, we only see one actual line:</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-38.svg" style="width: 100%; height: auto;" alt=""></div>
-<p id="p-187">\url{https://www.desmos.com/calculator/oaqbrkruhl}.</p>
+<p id="p-187"><iframe src="https://www.desmos.com/calculator/oaqbrkruhl" id="interactive-25" width="600" height="600"></iframe></p>
 <p id="p-188">This is because both equations describe the same line. After all, whenever \(x+y=5\text{,}\) it would have to be true that \(2(x+y)=5\cdot2\) and thus \(2x+2y=10\text{.}\) So ANY point that is a solution to one equation is a solution to the other, this system has <dfn class="terminology">infinitely many solutions</dfn>.</p>
 <p id="p-189">Another possibility arises from the following example:</p>
 <div class="displaymath">
 \begin{align*}
-x+y\amp =\amp 5\\
-x+y\amp =\amp 6
+x+y\amp = 5\\
+x+y\amp = 6
 \end{align*}
 </div>
 <p id="p-190">If we graph these lines side by side:</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-39.svg" style="width: 100%; height: auto;" alt=""></div>
-<p id="p-191">\url{https://www.desmos.com/calculator/djqxxge4ce}.</p>
+<p id="p-191"><iframe src="https://www.desmos.com/calculator/djqxxge4ce" id="interactive-26" width="600" height="600"></iframe></p>
 <p id="p-192">We can see that these lines are parallel and do not actually have any points in common. After all, how many pairs of numbers \(x\) and \(y\) sum to both 5 AND 6? It should be clear that this system has <dfn class="terminology">no solutions</dfn>.</p>
 <p id="p-193">Of course, these have all been Systems of Linear Equations in 2 variables. When we increase the number of variables, we increase the dimensionality of the potential solution space, and what it means to be “linear” changes somewhat. Nevertheless, these examples illustrate the 3 possible outcomes of a system of linear equations in any dimension:</p>
 <ul class="disc">
@@ -248,64 +248,64 @@ x+y\amp =\amp 6
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-20"><article class="example example-like"><div class="displaymath">
 \begin{align*}
-2x+3y\amp =\amp 1\\
-x+y\amp =\amp 0
+2x+3y\amp = 1\\
+x+y\amp = 0
 \end{align*}
 </div>
 <p id="p-199">We note that whatever the solutions to this are, they should be the same as the solutions to:</p>
 <div class="displaymath">
 \begin{align*}
-x+\frac{3}{2}y\amp =\amp \frac{1}{2}\\
-x+y\amp =\amp 0
+x+\frac{3}{2}y\amp = \frac{1}{2}\\
+x+y\amp = 0
 \end{align*}
 </div>
 <p id="p-200">We've divided the first equation in half, but we haven't actually changed what points will make that equation true. Then:</p>
 <div class="displaymath">
 \begin{align*}
-x+\frac{3}{2}y\amp =\amp \frac{1}{2}\\
-x+y-(x+\frac{3}{2}y)\amp =\amp 0-\frac{1}{2}
+x+\frac{3}{2}y\amp = \frac{1}{2}\\
+x+y-(x+\frac{3}{2}y)\amp = 0-\frac{1}{2}
 \end{align*}
 </div>
 <p id="p-201">Must also be true, since we can add and subtract the same values from 2 sides of an equation and preserve the solutions. By doing this, we kill off the \(x\) in the second equation and we can solve for \(y\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
-x+\frac{3}{2}y\amp =\amp \frac{1}{2}\\
--\frac{1}{2}y\amp =\amp -\frac{1}{2}
+x+\frac{3}{2}y\amp = \frac{1}{2}\\
+-\frac{1}{2}y\amp = -\frac{1}{2}
 \end{align*}
 </div>
 <p id="p-202">So \(y=1\) based on the second line.</p>
 <div class="displaymath">
 \begin{align*}
-x+\frac{3}{2}y\amp =\amp \frac{1}{2}\\
-y\amp =\amp 1
+x+\frac{3}{2}y\amp = \frac{1}{2}\\
+y\amp = 1
 \end{align*}
 </div>
 <p id="p-203">If we take \(-\frac{3}{2}\) times the second line and add it to the first:</p>
 <div class="displaymath">
 \begin{align*}
-x+\frac{3}{2}y-\frac{3}{2}(y)\amp =\amp \frac{1}{2}-\frac{3}{2}(1)\\
-y\amp =\amp 1
+x+\frac{3}{2}y-\frac{3}{2}(y)\amp = \frac{1}{2}-\frac{3}{2}(1)\\
+y\amp = 1
 \end{align*}
 </div>
 <p id="p-204">We obtain:</p>
 <div class="displaymath">
 \begin{align*}
-x\amp =\amp -1\\
-y\amp =\amp 1
+x\amp = -1\\
+y\amp = 1
 \end{align*}
 </div>
 <p id="p-205">We can verify that if we consider the original system:</p>
 <div class="displaymath">
 \begin{align*}
-2x+3y\amp =\amp 1\\
-x+y\amp =\amp 0
+2x+3y\amp = 1\\
+x+y\amp = 0
 \end{align*}
 </div>
 <p data-braille="continuation">then by evaluating at \(x=-1, y=1\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
-2(-1)+3(1)=-2+3\amp =\amp 1\\
--1+1\amp =\amp 0
+2(-1)+3(1)=-2+3\amp = 1\\
+-1+1\amp = 0
 \end{align*}
 </div></article></div>
 <article class="example example-like" id="example-21"><a data-knowl="" class="id-ref original" data-refid="hk-example-21"><h6 class="heading">
@@ -313,22 +313,22 @@ x+y\amp =\amp 0
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-21"><article class="example example-like"><p id="p-206">So if we consider:</p>
 <div class="displaymath">
 \begin{align*}
-x+y\amp =\amp 2\\
-2x+2y\amp =\amp 4\text{.}
+x+y\amp = 2\\
+2x+2y\amp = 4\text{.}
 \end{align*}
 </div>
 <p id="p-207">Just like before, we want to kill the \(x\) in the second equation:</p>
 <div class="displaymath">
 \begin{align*}
-x+y\amp =\amp 2\\
-2x+2y-2(x+y)\amp =\amp 4-2(2)\text{.}
+x+y\amp = 2\\
+2x+2y-2(x+y)\amp = 4-2(2)\text{.}
 \end{align*}
 </div>
 <p id="p-208">Which gives us:</p>
 <div class="displaymath">
 \begin{align*}
-x+y\amp =\amp 2\\
-0\amp =\amp 0\text{.}
+x+y\amp = 2\\
+0\amp = 0\text{.}
 \end{align*}
 </div>
 <p id="p-209">Well..., certainly that second line doesn't contribute much, zero is always equal to itself. So the solutions are just whenever \(x+y=2\text{,}\) which happens for infinitely many possible pairs.</p></article></div>
@@ -337,22 +337,22 @@ x+y\amp =\amp 2\\
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-22"><article class="example example-like"><p id="p-210">Lastly, when we look at:</p>
 <div class="displaymath">
 \begin{align*}
-x+y\amp =\amp 0\\
-x+y\amp =\amp 1\text{.}
+x+y\amp = 0\\
+x+y\amp = 1\text{.}
 \end{align*}
 </div>
 <p id="p-211">We can try to kill the \(x\) in the second line as before:</p>
 <div class="displaymath">
 \begin{align*}
-x+y\amp =\amp 0\\
-x+y-(x+y)\amp =\amp 1-0\text{.}
+x+y\amp = 0\\
+x+y-(x+y)\amp = 1-0\text{.}
 \end{align*}
 </div>
 <p id="p-212">Where we get:</p>
 <div class="displaymath">
 \begin{align*}
-x+y\amp =\amp 0\\
-0\amp =\amp 1\text{.}
+x+y\amp = 0\\
+0\amp = 1\text{.}
 \end{align*}
 </div>
 <p id="p-213">So all you have to do is find a pair \((x,y)\) so that \(0=1\text{...}\) which is not ever going to happen. So this will never have a solution.</p></article></div></section></section></div></main>

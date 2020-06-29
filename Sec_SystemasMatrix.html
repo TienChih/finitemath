@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T16:20:34-06:00    *-->
+<!--*    on 2020-06-28T19:21:52-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <title>Representing a System of Linear Equations as a Matrix</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']]
@@ -41,7 +41,15 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -187,9 +195,9 @@ MathJax.Hub.Config({
 <p id="p-215">So for example the system of equations:</p>
 <div class="displaymath">
 \begin{align*}
-2x+3y+z\amp =\amp 3\\
--2x+4y+2z\amp =\amp 0\\
-x-y+2z\amp =\amp 3
+2x+3y+z\amp = 3\\
+-2x+4y+2z\amp = 0\\
+x-y+2z\amp = 3
 \end{align*}
 </div>
 <p id="p-216">Would have matrix representation:</p>
@@ -208,8 +216,8 @@ x-y+2z\amp =\amp 3
 <p id="p-219">This represent the system of equations:</p>
 <div class="displaymath">
 \begin{align*}
-x+2y\amp =\amp 4\\
-3x+3y\amp =\amp 9
+x+2y\amp = 4\\
+3x+3y\amp = 9
 \end{align*}
 </div></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">Solving Systems of Linear Equations</span>
@@ -240,8 +248,8 @@ x+2y\amp =\amp 4\\
 <p id="p-227">What system of equations of this? It is:</p>
 <div class="displaymath">
 \begin{align*}
-x+0y\amp =\amp 2\\
-0x+y\amp =\amp 1
+x+0y\amp = 2\\
+0x+y\amp = 1
 \end{align*}
 </div>
 <p id="p-228">Which must mean: \(x=2, y=1\text{,}\) alright! By the way, one can test your answers to see if they are correct!</p>
@@ -263,9 +271,9 @@ x+0y\amp =\amp 2\\
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_GaussJordan"><article class="example example-like"><p id="p-234">Solve the linear system:</p>
 <div class="displaymath">
 \begin{align*}
-3x+2y+z\amp =\amp 1\\
-x+y-z\amp =\amp 3\\
-2x-y+2z\amp =\amp -2
+3x+2y+z\amp = 1\\
+x+y-z\amp = 3\\
+2x-y+2z\amp = -2
 \end{align*}
 </div>
 <p id="p-235">This corresponds to augmented matrix:</p>
@@ -297,17 +305,17 @@ x+y-z\amp =\amp 3\\
 <p id="p-238">Which corresponds to the linear system:</p>
 <div class="displaymath">
 \begin{align*}
-1x+0y+0z\amp =\amp 1\\
-0x+1y+0z\amp =\amp 0\\
-0x+0y+z\amp =\amp -2
+1x+0y+0z\amp = 1\\
+0x+1y+0z\amp = 0\\
+0x+0y+z\amp = -2
 \end{align*}
 </div>
 <p id="p-239">Which has solution \(x=1, y=0, z=2\text{.}\) To verify this works, we can check:</p>
 <div class="displaymath">
 \begin{align*}
-3(1)+2(0)+(-2)\amp =\amp 1\\
-(1)+(0)-(-2)\amp =\amp 3\\
-2(1)-(0)+2(-2)\amp =\amp -2
+3(1)+2(0)+(-2)\amp = 1\\
+(1)+(0)-(-2)\amp = 3\\
+2(1)-(0)+2(-2)\amp = -2
 \end{align*}
 </div>
 <p data-braille="continuation">and we have solved our linear system.</p></article></div></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
@@ -320,11 +328,10 @@ x+y-z\amp =\amp 3\\
 \end{equation*}
 </div>
 <p id="p-241">We could solve this the same way we did <a class="xref" data-knowl="./knowl/Example_GaussJordan.html" title="Example 2.2.1">Example 2.2.1</a>, but your first thought here is probably ``I don't want to do this." Yeah, me neither. One thing to note is that this process of finding a reduced row echelon form of a matrix is fairly mechanical. So, we should be able to do this with a machine.</p>
-<p id="p-242">Following this link to an independent sagecell: \url{https://sagecell.sagemath.org/?z=eJxztM1NLCnKrNAIDNRRiI420jHWMdQxjtWJ1jXSMdEx0jEAMg11dA2BTOPYWE1eroKizLwSDUcES6-oKDVNQ1MTAN6nE6M=&amp;amp;lang=sage}. You see the following code:</p>
-<pre class="code-block tex2jax_ignore">A=matrix(QQ, [[2,3,1,3],[-2,4,2,0],[1,-1,2,3]])
+<p id="p-242"><div class="sagecell-sage" id="sage-1"><script type="text/x-sage">A=matrix(QQ, [[2,3,1,3],[-2,4,2,0],[1,-1,2,3]])
 print(A)
 print(A.rref())
-</pre>
+</script></div></p>
 <p id="p-243">The first line defines the matrix \(A\) with the rows identical to the rows we defined in our above matrix. Then the code returns a printout of that matrix, and it's reduced row echelon form:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -334,9 +341,9 @@ print(A.rref())
 <p id="p-244">So \(x=1, y=0, z=1\text{.}\) Is this right? Well,</p>
 <div class="displaymath">
 \begin{align*}
-2(1)+3(0)+1\amp =\amp 3\\
--2(1)+4(0)+2(1)\amp =\amp 0\\
-1-0+2(1)\amp =\amp 3
+2(1)+3(0)+1\amp = 3\\
+-2(1)+4(0)+2(1)\amp = 0\\
+1-0+2(1)\amp = 3
 \end{align*}
 </div>
 <p id="p-245">Works for me.</p>
@@ -349,9 +356,9 @@ print(A.rref())
 <p id="p-248">Consider the system:</p>
 <div class="displaymath">
 \begin{align*}
-x+2y+z\amp =\amp 3\\
--x+y+0z\amp =\amp 0\\
-0x+3y+z\amp =\amp 3
+x+2y+z\amp = 3\\
+-x+y+0z\amp = 0\\
+0x+3y+z\amp = 3
 \end{align*}
 </div>
 <p id="p-249">Then by using rref using as \(A\text{:}\)</p>
@@ -366,23 +373,23 @@ x+2y+z\amp =\amp 3\\
 <p id="p-251">Which gives us the system:</p>
 <div class="displaymath">
 \begin{align*}
-x+0y+(1/3)z\amp =\amp 1\\
-0x+y+(1/3)z\amp =\amp 1\\
-0x+0y+0z\amp =\amp 0
+x+0y+(1/3)z\amp = 1\\
+0x+y+(1/3)z\amp = 1\\
+0x+0y+0z\amp = 0
 \end{align*}
 </div>
 <p id="p-252">Well, the last line is useless, it basically says that \(0=0\text{,}\) which is true but useless. Let's break down the remaining equations:</p>
 <div class="displaymath">
 \begin{align*}
-x+(1/3)z\amp =\amp 1\\
-y+(1/3)z\amp =\amp 1
+x+(1/3)z\amp = 1\\
+y+(1/3)z\amp = 1
 \end{align*}
 </div>
 <p id="p-253">Which can be thought of as:</p>
 <div class="displaymath">
 \begin{align*}
-x\amp =\amp 1-(1/3)z\\
-y\amp =\amp 1-(1/3)z
+x\amp = 1-(1/3)z\\
+y\amp = 1-(1/3)z
 \end{align*}
 </div>
 <p id="p-254">So basically what this is saying, no matter what \(z\) is, you can fin \(x\) and \(y\text{.}\) So if \(z=0\text{,}\) then \(x,y=1\text{.}\) But if \(z=6\text{,}\) then \(x,y=-1\text{.}\) Well, what is \(z\text{?}\) Apparently it can be whatever we want, both of the above triplets provide perfectly legitimate solutions to the original system. What you see described is a line of solutions. The 3 equations describe 3 planes in 3 dimensional (\(x,y,z)\) space and they intersect at this line which can be describes as the solution to this equation.</p></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
@@ -391,9 +398,9 @@ y\amp =\amp 1-(1/3)z
 <p id="p-255">Consider a similar system:</p>
 <div class="displaymath">
 \begin{align*}
-x+2y+z\amp =\amp 3\\
--x+y+0z\amp =\amp 0\\
-0x+3y+z\amp =\amp 0
+x+2y+z\amp = 3\\
+-x+y+0z\amp = 0\\
+0x+3y+z\amp = 0
 \end{align*}
 </div>
 <p id="p-256">Then by using rref using as \(A\text{:}\)</p>
@@ -441,16 +448,16 @@ x+0y+(1/3)z\amp =\amp 1\\
 <p id="p-265">Finally, there are twice as many 787-9s as 767-300ERs:</p>
 <div class="displaymath">
 \begin{align*}
-z\amp =\amp 2y\\
--2y+z\amp =\amp 0\text{.}
+z\amp = 2y\\
+-2y+z\amp = 0\text{.}
 \end{align*}
 </div>
 <p id="p-266">Giving us a system:</p>
 <div class="displaymath">
 \begin{align*}
-330x+270y+240z\amp =\amp 9300\\
-250x+200y+250z\amp =\amp 8100\\
--2y+z\amp =\amp 0
+330x+270y+240z\amp = 9300\\
+250x+200y+250z\amp = 8100\\
+-2y+z\amp = 0
 \end{align*}
 </div>
 <p data-braille="continuation">and corresponding augmented matrix:</p>
@@ -470,9 +477,9 @@ y=8, z=16\) or 10 A330-300s, 8 767300ERs and 16 787-9s.</p>
 <p id="p-268">To verify that this is a legitimate solution, check:</p>
 <div class="displaymath">
 \begin{align*}
-330(10)+270(8)+240(16)\amp =\amp 9300\\
-250(10)+200(8)+250(16)\amp =\amp 8100\\
--2(8)+16\amp =\amp 0\text{.}
+330(10)+270(8)+240(16)\amp = 9300\\
+250(10)+200(8)+250(16)\amp = 8100\\
+-2(8)+16\amp = 0\text{.}
 \end{align*}
 </div></article></div>
 <article class="example example-like" id="Example_Vitamin"><a data-knowl="" class="id-ref original" data-refid="hk-Example_Vitamin"><h6 class="heading">
@@ -499,9 +506,9 @@ y=8, z=16\) or 10 A330-300s, 8 767300ERs and 16 787-9s.</p>
 <p id="p-272">This gives us the system:</p>
 <div class="displaymath">
 \begin{align*}
-0.2x+0.1y+0.5z\amp =\amp 200\\
-0.2x+0.3y+0.1z\amp =\amp 100\\
-0.2x+0.4y+0.2z\amp =\amp 140
+0.2x+0.1y+0.5z\amp = 200\\
+0.2x+0.3y+0.1z\amp = 100\\
+0.2x+0.4y+0.2z\amp = 140
 \end{align*}
 </div>
 <p data-braille="continuation">with corresponding matrix:</p>
@@ -546,9 +553,9 @@ b+c=225\text{.}
 <p data-braille="continuation">Thus the system is:</p>
 <div class="displaymath">
 \begin{align*}
-a+b\amp =\amp 300\\
-a-c\amp =\amp 75\\
-b+c\amp =\amp 225\text{,}
+a+b\amp = 300\\
+a-c\amp = 75\\
+b+c\amp = 225\text{,}
 \end{align*}
 </div>
 <p data-braille="continuation">with associated augmented matrix:</p>
@@ -566,8 +573,8 @@ b+c\amp =\amp 225\text{,}
 <p data-braille="continuation">What this tells us is that there is not a unique solution, as the system associated with this matrix is:</p>
 <div class="displaymath">
 \begin{align*}
-a-c\amp =\amp 75\\
-b+c\amp =\amp 225\text{,}
+a-c\amp = 75\\
+b+c\amp = 225\text{,}
 \end{align*}
 </div>
 <p data-braille="continuation">Which is two of the original equations. So, depending on what \(c\) is, this will determine how many people traverse Anderson and Birmingham.</p>
@@ -576,12 +583,12 @@ b+c\amp =\amp 225\text{,}
 <p id="p-277">If 50 people crossed central, how many people crossed Anderson and Birmingham? So letting \(c=50\text{,}\) we would have:</p>
 <div class="displaymath">
 \begin{align*}
-a-c\amp =\amp 75\\
-a-50\amp =\amp 75\\
-a\amp =\amp 125\\
-b+c\amp =\amp 225\\
-b+50\amp =\amp 225\\
-b\amp =\amp 175\text{,}
+a-c\amp = 75\\
+a-50\amp = 75\\
+a\amp = 125\\
+b+c\amp = 225\\
+b+50\amp = 225\\
+b\amp = 175\text{,}
 \end{align*}
 </div>
 <p data-braille="continuation">So 125 people across Anderson and 175 across Birmingham. Another way to do this would be to add an equation \(c=50\) to our system:</p>
@@ -602,12 +609,12 @@ b\amp =\amp 175\text{,}
 <p id="p-278">If 100 people go through Anderson, how many go through Birmingham or Central? We can revisit our linear system from (a):</p>
 <div class="displaymath">
 \begin{align*}
-a-c\amp =\amp 75\\
-100-c\amp =\amp 75\\
-c\amp =\amp 25\\
-b+c\amp =\amp 225\\
-b+25\amp =\amp 225\\
-b\amp =\amp 200\text{,}
+a-c\amp = 75\\
+100-c\amp = 75\\
+c\amp = 25\\
+b+c\amp = 225\\
+b+25\amp = 225\\
+b\amp = 200\text{,}
 \end{align*}
 </div>
 <p data-braille="continuation">so 200 across Birmingham and 25 across Central. We can also add the linear equation \(a=100\text{:}\)</p>

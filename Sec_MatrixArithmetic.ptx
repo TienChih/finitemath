@@ -4,7 +4,7 @@
     <p>
       In the previous sections,
       we saw how the entries of matrix may be used to record relationships between two collections of variables.
-      For example in <xref ref="Example_Vitamin">Example</xref>,
+      For example in <xref text="global" ref="Example_Vitamin">Example</xref>,
       the entries in the <m>3\times 3</m> portion of the matrix represents the proportion of vitamins contained by a collection of supplements,
       with each entry representing a vitamin-supplement pair.
       It is natural then,

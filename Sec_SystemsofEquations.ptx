@@ -5,10 +5,10 @@
       A system of equations with unknowns
       <m>x_1,\ldots,x_n</m> is a collection of first degree equations:
       <md>
-        <mrow>a_{1,1}x_1+a_{1,2}x_2+\cdots+a_{1,n}x_n\amp =\amp b_1</mrow>
-        <mrow>a_{2,1}x_1+a_{2,2}x_2+\cdots+a_{2,n}x_n\amp =\amp b_1</mrow>
-        <mrow>\vdots \amp =\amp \vdots</mrow>
-        <mrow>a_{m,1}x_1+a_{m,2}x_2+\cdots+a_{m,n}x_n\amp =\amp b_1</mrow>
+        <mrow>a_{1,1}x_1+a_{1,2}x_2+\cdots+a_{1,n}x_n\amp = b_1</mrow>
+        <mrow>a_{2,1}x_1+a_{2,2}x_2+\cdots+a_{2,n}x_n\amp = b_1</mrow>
+        <mrow>\vdots \amp = \vdots</mrow>
+        <mrow>a_{m,1}x_1+a_{m,2}x_2+\cdots+a_{m,n}x_n\amp = b_1</mrow>
       </md>
     </p>
   </introduction>
@@ -44,8 +44,8 @@
     <p>
       So a solution to the system:
       <md>
-        <mrow>2x+3y\amp =\amp 15</mrow>
-        <mrow>x-y\amp =\amp 0</mrow>
+        <mrow>2x+3y\amp = 15</mrow>
+        <mrow>x-y\amp = 0</mrow>
       </md>
       is a collection of points that satisfy the first AND the second linear equalities.
       The first equation describes the line:
@@ -73,7 +73,7 @@
 </latex-image>
     </image>
     <p>
-      \url{https://www.desmos.com/calculator/cdrgyxm2al}.
+      <interactive desmos="cdrgyxm2al"  />
     </p>
     <p>
       As one can see, although each line has infinitely many points,
@@ -86,8 +86,8 @@
       What else could happen when solving a system of equations?
       Well, consider:
       <md>
-        <mrow>x+y\amp =\amp 5</mrow>
-        <mrow>2x+2y\amp =\amp 10</mrow>
+        <mrow>x+y\amp = 5</mrow>
+        <mrow>2x+2y\amp = 10</mrow>
       </md>.
     </p>
     <p>
@@ -107,7 +107,7 @@
 </latex-image>
     </image>
     <p>
-      \url{https://www.desmos.com/calculator/oaqbrkruhl}.
+      <interactive desmos="oaqbrkruhl"  />
     </p>
     <p>
       This is because both equations describe the same line.
@@ -120,8 +120,8 @@
     <p>
       Another possibility arises from the following example:
       <md>
-        <mrow>x+y\amp =\amp 5</mrow>
-        <mrow>x+y\amp =\amp 6</mrow>
+        <mrow>x+y\amp = 5</mrow>
+        <mrow>x+y\amp = 6</mrow>
       </md>
     </p>
     <p>
@@ -140,7 +140,7 @@
 </latex-image>
     </image>
     <p>
-      \url{https://www.desmos.com/calculator/djqxxge4ce}.
+      <interactive desmos="djqxxge4ce"  />
     </p>
     <p>
       We can see that these lines are parallel and do not actually have any points in common.
@@ -192,15 +192,15 @@
     <example>
       <statement>
         <md>
-          <mrow>2x+3y\amp =\amp 1</mrow>
-          <mrow>x+y\amp =\amp 0</mrow>
+          <mrow>2x+3y\amp = 1</mrow>
+          <mrow>x+y\amp = 0</mrow>
         </md>
         <p>
           We note that whatever the solutions to this are,
           they should be the same as the solutions to:
           <md>
-            <mrow>x+\frac{3}{2}y\amp =\amp \frac{1}{2}</mrow>
-            <mrow>x+y\amp =\amp 0</mrow>
+            <mrow>x+\frac{3}{2}y\amp = \frac{1}{2}</mrow>
+            <mrow>x+y\amp = 0</mrow>
           </md>
         </p>
         <p>
@@ -208,8 +208,8 @@
           but we haven't actually changed what points will make that equation true.
           Then:
           <md>
-            <mrow>x+\frac{3}{2}y\amp =\amp \frac{1}{2}</mrow>
-            <mrow>x+y-(x+\frac{3}{2}y)\amp =\amp 0-\frac{1}{2}</mrow>
+            <mrow>x+\frac{3}{2}y\amp = \frac{1}{2}</mrow>
+            <mrow>x+y-(x+\frac{3}{2}y)\amp = 0-\frac{1}{2}</mrow>
           </md>
         </p>
         <p>
@@ -218,41 +218,41 @@
           By doing this,
           we kill off the <m>x</m> in the second equation and we can solve for <m>y</m>:
           <md>
-            <mrow>x+\frac{3}{2}y\amp =\amp \frac{1}{2}</mrow>
-            <mrow>-\frac{1}{2}y\amp =\amp -\frac{1}{2}</mrow>
+            <mrow>x+\frac{3}{2}y\amp = \frac{1}{2}</mrow>
+            <mrow>-\frac{1}{2}y\amp = -\frac{1}{2}</mrow>
           </md>
         </p>
         <p>
           So <m>y=1</m> based on the second line.
           <md>
-            <mrow>x+\frac{3}{2}y\amp =\amp \frac{1}{2}</mrow>
-            <mrow>y\amp =\amp 1</mrow>
+            <mrow>x+\frac{3}{2}y\amp = \frac{1}{2}</mrow>
+            <mrow>y\amp = 1</mrow>
           </md>
         </p>
         <p>
           If we take <m>-\frac{3}{2}</m> times the second line and add it to the first:
           <md>
-            <mrow>x+\frac{3}{2}y-\frac{3}{2}(y)\amp =\amp \frac{1}{2}-\frac{3}{2}(1)</mrow>
-            <mrow>y\amp =\amp 1</mrow>
+            <mrow>x+\frac{3}{2}y-\frac{3}{2}(y)\amp = \frac{1}{2}-\frac{3}{2}(1)</mrow>
+            <mrow>y\amp = 1</mrow>
           </md>
         </p>
         <p>
           We obtain:
           <md>
-            <mrow>x\amp =\amp -1</mrow>
-            <mrow>y\amp =\amp 1</mrow>
+            <mrow>x\amp = -1</mrow>
+            <mrow>y\amp = 1</mrow>
           </md>
         </p>
         <p>
           We can verify that if we consider the original system:
           <md>
-            <mrow>2x+3y\amp =\amp 1</mrow>
-            <mrow>x+y\amp =\amp 0</mrow>
+            <mrow>2x+3y\amp = 1</mrow>
+            <mrow>x+y\amp = 0</mrow>
           </md>
           then by evaluating at <m>x=-1, y=1</m>:
           <md>
-            <mrow>2(-1)+3(1)=-2+3\amp =\amp 1</mrow>
-            <mrow>-1+1\amp =\amp 0</mrow>
+            <mrow>2(-1)+3(1)=-2+3\amp = 1</mrow>
+            <mrow>-1+1\amp = 0</mrow>
           </md>
         </p>
       </statement>
@@ -262,23 +262,23 @@
         <p>
           So if we consider:
           <md>
-            <mrow>x+y\amp =\amp 2</mrow>
-            <mrow>2x+2y\amp =\amp 4</mrow>
+            <mrow>x+y\amp = 2</mrow>
+            <mrow>2x+2y\amp = 4</mrow>
           </md>.
         </p>
         <p>
           Just like before,
           we want to kill the <m>x</m> in the second equation:
           <md>
-            <mrow>x+y\amp =\amp 2</mrow>
-            <mrow>2x+2y-2(x+y)\amp =\amp 4-2(2)</mrow>
+            <mrow>x+y\amp = 2</mrow>
+            <mrow>2x+2y-2(x+y)\amp = 4-2(2)</mrow>
           </md>.
         </p>
         <p>
           Which gives us:
           <md>
-            <mrow>x+y\amp =\amp 2</mrow>
-            <mrow>0\amp =\amp 0</mrow>
+            <mrow>x+y\amp = 2</mrow>
+            <mrow>0\amp = 0</mrow>
           </md>.
         </p>
         <p>
@@ -294,22 +294,22 @@
         <p>
           Lastly, when we look at:
           <md>
-            <mrow>x+y\amp =\amp 0</mrow>
-            <mrow>x+y\amp =\amp 1</mrow>
+            <mrow>x+y\amp = 0</mrow>
+            <mrow>x+y\amp = 1</mrow>
           </md>.
         </p>
         <p>
           We can try to kill the <m>x</m> in the second line as before:
           <md>
-            <mrow>x+y\amp =\amp 0</mrow>
-            <mrow>x+y-(x+y)\amp =\amp 1-0</mrow>
+            <mrow>x+y\amp = 0</mrow>
+            <mrow>x+y-(x+y)\amp = 1-0</mrow>
           </md>.
         </p>
         <p>
           Where we get:
           <md>
-            <mrow>x+y\amp =\amp 0</mrow>
-            <mrow>0\amp =\amp 1</mrow>
+            <mrow>x+y\amp = 0</mrow>
+            <mrow>0\amp = 1</mrow>
           </md>.
         </p>
         <p>
