@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:14:23-06:00    *-->
+<!--*    on 2020-06-30T20:03:40Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,12 +14,16 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\frac{dy}{dx}\amp =\amp \frac{d}{dx}[(x^2+100)^{300}],\ \text{ so by the chain rule: }\\
-\amp =\amp 300(x^2+100)^{299}\frac{d}{dx}[x^2+100]\\
-\amp =\amp 300(x^2+100)^{299}(2x)\\
-\amp =\amp 600x(x^2+100)^{299}
+Q(x)\amp =\amp \frac{f(x)}{g(x)}\\
+Q(x)g(x)\amp =\amp f(x),\ \text{ now we can differentiate both sides }\\
+\frac{d}{dx}[Q(x)g(x)]\amp =\amp f'(x),\ \text{ then by the product rule: }\\
+Q'(x)g(x)+Q(x)g'(x)\amp =\amp f'(x)\\
+Q'(x)g(x)\amp =\amp f'(x)-Q(x)g'(x),\ \text{then recall that  \(Q(x)=\frac{f(x)}{g(x)}\)}\\
+Q'(x)g(x)\amp =\amp f'(x)-\frac{f(x)g'(x)}{g(x)}\\
+Q'(x)g(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)}\\
+Q'(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_ChainRule.html#mjx-eqn-mrow-383">in-context</a></span>
+<span class="incontext"><a href="Sec_QuotientRule.html#mjx-eqn-mrow-383">in-context</a></span>
 </body>
 </html>

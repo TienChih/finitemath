@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:14:23-06:00    *-->
+<!--*    on 2020-06-30T20:03:40Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,13 +14,16 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-x\amp =\amp a^{\log_a(x)}\\
-\frac{d}{dx}[x]\amp =\amp \frac{d}{dx}[a^{\log_a(x)}]\\
-1\amp =\amp a^{\log_a(x)}\ln(a)\frac{d}{dx}[\log_a(x)]\\
-1\amp =\amp x\ln(a)\frac{d}{dx}[\log_a(x)]\\
-\frac{d}{dx}[\log_a(x)]\amp =\amp \frac{1}{x\ln(a)}
+Q(x)\amp =\amp \frac{f(x)}{g(x)}\\
+Q(x)g(x)\amp =\amp f(x),\ \text{ now we can differentiate both sides }\\
+\frac{d}{dx}[Q(x)g(x)]\amp =\amp f'(x),\ \text{ then by the product rule: }\\
+Q'(x)g(x)+Q(x)g'(x)\amp =\amp f'(x)\\
+Q'(x)g(x)\amp =\amp f'(x)-Q(x)g'(x),\ \text{then recall that  \(Q(x)=\frac{f(x)}{g(x)}\)}\\
+Q'(x)g(x)\amp =\amp f'(x)-\frac{f(x)g'(x)}{g(x)}\\
+Q'(x)g(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)}\\
+Q'(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}
 \end{align*}
 </div>
-<span class="incontext"><a href="DerivativeLogs.html#mjx-eqn-mrow-402">in-context</a></span>
+<span class="incontext"><a href="section-38.html#mjx-eqn-mrow-402">in-context</a></span>
 </body>
 </html>

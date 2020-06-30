@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:14:23-06:00    *-->
+<!--*    on 2020-06-30T20:03:40Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,11 +14,15 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-g'(x)\amp =\amp \frac{(x^2+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x^2+1]}{(x^2+1)^2}\\
-\amp =\amp \frac{(x^2+1)(1)-x(2x)}{(x^2+1)^2}\\
-\amp =\amp \frac{1-x^2}{(x^2+1)^2}
+f'(x)\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
+\amp =\amp \limit{h}{0} \frac{-5(x+h)^2+20(x+h)-(-5x^2+20x)}{h}\\
+\amp =\amp \limit{h}{0}\frac{-5x^2-10xh-5h^2+20x+20h+5x^2-20x}{h}\\
+\amp =\amp \limit{h}{0}\frac{-10xh-5h^2+20h}{h}\\
+\amp =\amp \limit{h}{0}\frac{(-10x-5h+20)h}{h}\\
+\amp =\amp \limit{h}{0} -10x-5h+20\\
+\amp =\amp -10x+20
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_QuotientRule.html#mjx-eqn-mrow-344">in-context</a></span>
+<span class="incontext"><a href="Sec_DefofDerivative.html#mjx-eqn-mrow-344">in-context</a></span>
 </body>
 </html>

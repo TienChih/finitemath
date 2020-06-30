@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:14:18-06:00    *-->
+<!--*    on 2020-06-30T20:03:36Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,61 +11,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><p>A new airline has recently purchased a fleet of Airbus A330-300s, Boeing 767-300ERs, and Boeing Dreamliner 787-9s to meet an estimated demand for 9,300 seats. The A330-300s seat 330 passengers and cost $250 million each, the 767-300ERs seat 270 passengers and cost $200 million each, while the 787-9s seat 240 passengers and cost $250 million each. The total cost of the fleet, which had twice as many 787-9s as 767s, was $8,100 million. How many of each type of aircraft did the company purchase?</p>
-<p>It helps perhaps if we organize some of this information in a table.</p>
+<body><article class="example example-like"><p>From fbi.gov from 2004-2013, the murder rates per 100,000 people are listed below:</p>
 <div class="displaymath">
 \begin{equation*}
-
+\begin{array}{c|c} \text{ Years after 2000 }  \amp  \text{ Murders per 100,000 people } \\ x\amp y\\ \hline 4\amp 5.5\\ 5\amp 5.6\\ 6\amp 5.8\\ 7\amp 5.7\\ 8\amp 5.4\\ 9\amp 5\\ 10\amp 4.8\\ 11\amp 4.7\\ 12\amp 4.7\\ 13\amp 4.5 \end{array}
 \end{equation*}
 </div>
-<p>By letting \(x\) denote the numbere of A330-300's, \(y\) denote the number of 767-300ERs and \(z\) denote the number of 787-9s, we obtain the following linear equalities:</p>
-<p>First, the total capacity is 9,300 seats:</p>
-<div class="displaymath">
-\begin{equation*}
-330x+270y+240z=9300\text{.}
-\end{equation*}
-</div>
-<p>Next, the total cost is $8,100 million:</p>
-<div class="displaymath">
-\begin{equation*}
-250x+200y+250z=8100\text{.}
-\end{equation*}
-</div>
-<p>Finally, there are twice as many 787-9s as 767-300ERs:</p>
-<div class="displaymath">
-\begin{align*}
-z\amp =\amp 2y\\
--2y+z\amp =\amp 0\text{.}
-\end{align*}
-</div>
-<p>Giving us a system:</p>
-<div class="displaymath">
-\begin{align*}
-330x+270y+240z\amp =\amp 9300\\
-250x+200y+250z\amp =\amp 8100\\
--2y+z\amp =\amp 0
-\end{align*}
-</div>
-<p data-braille="continuation">and corresponding augmented matrix:</p>
-<div class="displaymath">
-\begin{equation*}
-\left( \begin{array}{rrr|r} 330 \amp  270 \amp  240\amp  9300\\ 250 \amp  200 \amp  250 \amp  8100\\ 0 \amp  -2 \amp  1 \amp  0 \end{array} \right)\text{.}
-\end{equation*}
-</div>
-<p>Using any method we'd like, we find row reduced echelon form:</p>
-<div class="displaymath">
-\begin{equation*}
-\left( \begin{array}{rrr|r} 1 \amp  0 \amp  0\amp  10\\ 0 \amp  1 \amp  0 \amp  8\\ 0 \amp  0 \amp  1 \amp  16 \end{array} \right)
-\end{equation*}
-</div>
-<p data-braille="continuation">which corresponds to \(x=10,
-y=8, z=16\) or 10 A330-300s, 8 767300ERs and 16 787-9s.</p>
-<p>To verify that this is a legitimate solution, check:</p>
-<div class="displaymath">
-\begin{align*}
-330(10)+270(8)+240(16)\amp =\amp 9300\\
-250(10)+200(8)+250(16)\amp =\amp 8100\\
--2(8)+16\amp =\amp 0\text{.}
-\end{align*}
-</div></article></body>
+<ol class="decimal">
+<li><p>Determine the best fit line for murders (per 100,000 people) \(x\) years after 2000.</p></li>
+<li><p>How much of a factor is the year in predictiung the number of murders?</p></li>
+<li><p>Predict the murder rate in 2018.</p></li>
+</ol>
+<p>Entering this data in desmos: <iframe src="https://www.desmos.com/calculator/em6xkq7udn" id="interactive-24" width="600" height="600"></iframe></p>
+<ol class="decimal">
+<li><p>It seems that the best fit line is \(y=-0.144848x+6.40121\text{.}\)</p></li>
+<li><p>Since \(r^2=0.8318\text{,}\) we can say the murder rate is 83.18% predictable by the year.</p></li>
+<li><p>In 2018, the murder rate should be \(-0.144848(18)+6.40121=3.793946\) or roughly 3.8 murders per 100,000 people in 2018.</p></li>
+</ol></article></body>
 </html>

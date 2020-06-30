@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:14:12-06:00    *-->
+<!--*    on 2020-06-30T20:03:31Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <title>Systems of Linear Inequalities</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']]
@@ -109,9 +109,10 @@ MathJax.Hub.Config({
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
 <li class="link">
 <a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntroLin.html" data-scroll="Sec_IntroLin">What is a Linear Function?</a></li>
 <li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
 <li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
-<li><a href="Sec_UtilityLinear.html" data-scroll="Sec_UtilityLinear">Utilizing the Linear Function</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
 <li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
 </ul>
 </li>
@@ -120,7 +121,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
-<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
 </ul>
 </li>
 <li class="link">
@@ -183,19 +183,81 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_SystemsLinearInequalities"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Systems of Linear Inequalities</span>
 </h2>
-<p id="p-275">If a solution to a system of equations is a set of points that make several equations true, then the same is true of systems of linear inequalities. It's just going to be the collection of points that make all the inequalities true.</p>
-<article class="example example-like" id="example-27"><a data-knowl="" class="id-ref original" data-refid="hk-example-27"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-27"><article class="example example-like"><p id="p-276">What is the solution to the following system:</p>
+<p id="p-339">If a solution to a system of equations is a set of points that make several equations true, then the same is true of systems of linear inequalities. It's just going to be the collection of points that make all the inequalities true.</p>
+<p id="p-340">So if say we had the system of linear inequalities:</p>
 <div class="displaymath">
 \begin{align*}
-2x+3y\amp \leq\amp 12\\
-x\amp \geq\amp 0\\
-y\amp \geq\amp 0
+x+y\amp \geq 4\\
+x-2y\amp \leq 3
 \end{align*}
 </div>
-<p id="p-277">We know from earlier that the solutions have to lie in the bottom right hand of the plane on or below the line \(2x+3y=12\text{.}\) We also know that neither the \(x\) or \(y\) values can be negative. What's left is a sort of triangle: \url{https://www.desmos.com/calculator/2dekmagipa}, the overlap of regions where all 3 inequalities are true.</p>
-<p id="p-278">This may be easier to see: \url{https://www.desmos.com/calculator/apmcey4kfa}.</p></article></div></section></div></main>
+<p data-braille="continuation">We could ask ourselves if \((0,0), (4,4), (6,0), (2,-2)\) belong to the region.</p>
+<ol class="decimal">
+<li id="li-89">For \((0,0)\)  note that:<div class="displaymath">
+\begin{align*}
+0+0\amp \not\geq 4\\
+0-2(0)\amp \leq 3
+\end{align*}
+</div>So we satisfy the second but not the first inequality, so \((0,0)\) does <em class="emphasis">not</em> belong to the region.</li>
+<li id="li-90">For \((4,4)\)  note that:<div class="displaymath">
+\begin{align*}
+4+4\amp \geq 4\\
+4-2(4)\amp \leq 3
+\end{align*}
+</div>So we satisfy both inequalities, and \((4,4)\)  <em class="emphasis">does</em> belong to the region!</li>
+<li id="li-91">For \((6,0)\)  note that:<div class="displaymath">
+\begin{align*}
+6+0\amp \geq 4\\
+6-2(0)\amp \not\leq 3
+\end{align*}
+</div>So we satisfy the first inequality but not the second, so \((6,0)\) does <em class="emphasis">not</em> belong to the region.</li>
+<li id="li-92">For \((-2,2)\)  note that:<div class="displaymath">
+\begin{align*}
+2+(-2+\amp \not\geq 4\\
+2-2(-2)\amp \not\leq 3
+\end{align*}
+</div>So we satisfy neither inequality but not the second, and \((2,-2)\) does <em class="emphasis">not</em> belong to the region.</li>
+</ol>
+<p data-braille="continuation">We can use the Desmos graph and drag the point \((a,b)\) around to verify which region satisfies both inequalities. <iframe src="https://www.desmos.com/calculator/is7lwibg4t" id="interactive-35" width="600" height="600"></iframe></p>
+<article class="example example-like" id="Example_SysLinearInequality"><a data-knowl="" class="id-ref original" data-refid="hk-Example_SysLinearInequality"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_SysLinearInequality"><article class="example example-like"><p id="p-341">What are the solutions to the following system:</p>
+<div class="displaymath">
+\begin{align*}
+2x+3y\amp \leq 12\\
+x\amp \geq 0\\
+y\amp \geq 0
+\end{align*}
+</div>
+<p id="p-342">We know from earlier that the solutions have to lie in the bottom right hand of the plane on or below the line \(2x+3y=12\text{.}\) We also know that neither the \(x\) or \(y\) values can be negative. What's left is a sort of triangle: <iframe src="https://www.desmos.com/calculator/2dekmagipa" id="interactive-36" width="600" height="600"></iframe> This is the overlap of regions where all 3 inequalities are true.</p>
+<p id="p-343">It is easier to see this region by nesting the inequalities as follows: <iframe src="https://www.desmos.com/calculator/apmcey4kfa" id="interactive-37" width="600" height="600"></iframe></p></article></div>
+<article class="exercise exercise-like" id="exercise-2"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-2"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-344">Use Desmos to graph the following system of inequalities:</p>
+<div class="displaymath">
+\begin{align*}
+3x-5y\amp \leq 8\\
+x\amp \geq 0\\
+x+y\amp \leq 10
+\end{align*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-345">By nesting the inequalities, we obtain the following Desmos graph: <iframe src="https://www.desmos.com/calculator/fmb6kti4m2" id="interactive-38" width="600" height="600"></iframe></p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-3"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-3"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-346">Use Desmos to graph the following system of inequalities:</p>
+<div class="displaymath">
+\begin{align*}
+3x+5y\amp \geq 7\\
+x+2y\amp \leq 8\\
+x\amp \geq 0\\
+y\amp \geq 0
+\end{align*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><p id="p-347">By nesting the inequalities, we obtain the following Desmos graph: <iframe src="https://www.desmos.com/calculator/hmsfqtjfia" id="interactive-39" width="600" height="600"></iframe></p></div></div>
+</div></article></div></section></div></main>
 </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:14:21-06:00    *-->
+<!--*    on 2020-06-30T20:03:38Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,23 +13,25 @@
 </head>
 <body>
 <article class="example example-like"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h6>
-<p>Suppose that I take out a loan for $500 at 12% annual interest charged biannually. How much will I owe in 10 years?</p>
-<p>So we note that:</p>
+<p>Suppose that a agriculture student is raising goats and pigs for a project. The goal is to raise some animals and then sell them for profit. She can raise a total of at most 16 animals. It costs $25 per goat and $ 75 per pig, and she has a budget of $900. Finally, she doesn't particularly like goats, so she won't raise more than 10 of them. If the profit per goat is $12 and profit per pig is $40, how many of each should she raise to maximize profits?</p>
+<p>We should note, if \(x\) is the number of goats and \(y\) the number of pigs, then she is maximizing \(P(x,y)=12x+40y\text{.}\) The inequalities she is dealing with are:</p>
 <div class="displaymath">
 \begin{align*}
-P\amp =\amp 500\ \text{ the initial loan }\\
-i\amp =\amp 0.12/2=0.06 \ \text{ the interest rate per half-year }\\
-n\amp =\amp 10\cdot 2=20 \ \text{ the number of half-years }
+x+y\amp \leq\amp 16\ \ \text{ at most 16 animals }\\
+25x+75y\amp \leq\amp 900\ \ \text{ \dollar900 budget }\\
+x\amp \leq\amp 10\ \ \text{ hates goats }\\
+x\amp \geq\amp 0\ \ \text{ no negative goats }\\
+y\amp \geq\amp 0\ \ \text{ no negative pigs }
 \end{align*}
 </div>
-<p>So we are solving:</p>
+<p>Sketching our region out we get: \url{https://www.desmos.com/calculator/lwbkvibuyq}, with corner points:</p>
 <div class="displaymath">
 \begin{equation*}
-A=500(1+.06)^{20}\approx 1603.57\text{.}
+\begin{array}{c|c|c} x \amp  y \amp  P(x,y)\\ \hline 0 \amp  0 \amp  12(0)+40(0)=0\\ 10 \amp  0 \amp  12(10)+40(0)=120\\ 10 \amp  6 \amp  12(10)+40(6)=360\\ 6 \amp  10 \amp  12(6)+40(10)=472\\ 0 \amp  12 \amp  12(0)+40(12)=480 \end{array}
 \end{equation*}
 </div>
-<p>\url{https://www.desmos.com/calculator/fuvteaqq2q}</p></article><span class="incontext"><a href="Sec_CompoundInterest.html#example-35">in-context</a></span>
+<p>So the profit is maximized when you raise 12 pigs and no goats. To get a better sense of how we found these corners, these are just system of \(2\times 2\) systems of equations: \url{https://www.desmos.com/calculator/bzczxrkggy}</p></article><span class="incontext"><a href="Sec_LinearOptimization.html#example-35">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:14:14-06:00    *-->
+<!--*    on 2020-06-30T20:03:32Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <title>Valid and invalid arguments</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']]
@@ -109,9 +109,10 @@ MathJax.Hub.Config({
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
 <li class="link">
 <a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntroLin.html" data-scroll="Sec_IntroLin">What is a Linear Function?</a></li>
 <li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
 <li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
-<li><a href="Sec_UtilityLinear.html" data-scroll="Sec_UtilityLinear">Utilizing the Linear Function</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
 <li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
 </ul>
 </li>
@@ -120,7 +121,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
-<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
 </ul>
 </li>
 <li class="link">
@@ -183,33 +183,33 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_ValidArguments"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.10</span> <span class="title">Valid and invalid arguments</span>
 </h2>
-<p id="p-407">So are the following valid?</p>
-<article class="example example-like" id="example-33"><a data-knowl="" class="id-ref original" data-refid="hk-example-33"><h6 class="heading">
+<p id="p-476">So are the following valid?</p>
+<article class="example example-like" id="example-39"><a data-knowl="" class="id-ref original" data-refid="hk-example-39"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.10.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-33"><article class="example example-like"><p id="p-408">If I read the handouts and I watch the videos then I will pass. I didn't pass. I read the handouts, therefore I didn't watch the videos.</p>
-<p id="p-409">So let:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-39"><article class="example example-like"><p id="p-477">If I read the handouts and I watch the videos then I will pass. I didn't pass. I read the handouts, therefore I didn't watch the videos.</p>
+<p id="p-478">So let:</p>
 <ul class="disc">
-<li id="li-72"><p id="p-410">\(h=\) “read handouts.”</p></li>
-<li id="li-73"><p id="p-411">\(v=\) “watch videos.”</p></li>
-<li id="li-74"><p id="p-412">\(p=\) “pass class.”</p></li>
+<li id="li-113"><p id="p-479">\(h=\) “read handouts.”</p></li>
+<li id="li-114"><p id="p-480">\(v=\) “watch videos.”</p></li>
+<li id="li-115"><p id="p-481">\(p=\) “pass class.”</p></li>
 </ul>
-<p id="p-413">So what we know is \((h\wedge v)\to p, h, \sim p\text{.}\) So:</p>
+<p id="p-482">So what we know is \((h\wedge v)\to p, h, \sim p\text{.}\) So:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{lcl} (h\wedge v)\to p\amp \ \ \ \amp \\ \sim p\\ \hline \sim(h\wedge v)=\sim h \vee\sim v \amp  \amp \text{ Modus Tollens } \\ \\ \sim h \vee \sim v \\ h=\sim \sim h\\ \hline \sim v  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
 \end{equation*}
 </div>
-<p id="p-414">Therefore \(\sim v\text{,}\) I did not watch the videos. This was a valid argument.</p></article></div>
-<article class="example example-like" id="example-34"><a data-knowl="" class="id-ref original" data-refid="hk-example-34"><h6 class="heading">
+<p id="p-483">Therefore \(\sim v\text{,}\) I did not watch the videos. This was a valid argument.</p></article></div>
+<article class="example example-like" id="example-40"><a data-knowl="" class="id-ref original" data-refid="hk-example-40"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.10.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-34"><article class="example example-like"><p id="p-415">If I drink coffee, I will be happy. If I drink coffee, I will be wired. If I am happy, then I am wired.</p>
-<p id="p-416">So let:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-40"><article class="example example-like"><p id="p-484">If I drink coffee, I will be happy. If I drink coffee, I will be wired. If I am happy, then I am wired.</p>
+<p id="p-485">So let:</p>
 <ul class="disc">
-<li id="li-75"><p id="p-417">\(c=\) “drink coffee.”</p></li>
-<li id="li-76"><p id="p-418">\(h=\) “be happy.”</p></li>
-<li id="li-77"><p id="p-419">\(w=\) “be wired.”</p></li>
+<li id="li-116"><p id="p-486">\(c=\) “drink coffee.”</p></li>
+<li id="li-117"><p id="p-487">\(h=\) “be happy.”</p></li>
+<li id="li-118"><p id="p-488">\(w=\) “be wired.”</p></li>
 </ul>
-<p id="p-420">What we have is \(c\to h, c\to w\text{.}\) But there's nothing here to connect \(h\) to \(w\text{.}\) If we knew this person drank coffee, we could make that conclusion, but since we don't know that, if we knew that they were happy, it could be for some reason other than drinking coffee. So we have no idea whether or not they'd be wired as well. So we cannot conclude \(h \to w\) and this is NOT a valid argument.</p></article></div></section></div></main>
+<p id="p-489">What we have is \(c\to h, c\to w\text{.}\) But there's nothing here to connect \(h\) to \(w\text{.}\) If we knew this person drank coffee, we could make that conclusion, but since we don't know that, if we knew that they were happy, it could be for some reason other than drinking coffee. So we have no idea whether or not they'd be wired as well. So we cannot conclude \(h \to w\) and this is NOT a valid argument.</p></article></div></section></div></main>
 </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:14:19-06:00    *-->
+<!--*    on 2020-06-30T20:03:37Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,64 @@
 </head>
 <body>
 <article class="example example-like"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
 </h6>
-<p>Company \(B\) gets in on this action and will give 2 dollars to each charity for each student who attends. NOW given \(F\) female and \(M\) male students, how much money will go to Elderly and the Homeless?</p>
+<p>A new airline has recently purchased a fleet of Airbus A330-300s, Boeing 767-300ERs, and Boeing Dreamliner 787-9s to meet an estimated demand for 9,300 seats. The A330-300s seat 330 passengers and cost $250 million each, the 767-300ERs seat 270 passengers and cost $200 million each, while the 787-9s seat 240 passengers and cost $250 million each. The total cost of the fleet, which had twice as many 787-9s as 767s, was $8,100 million. How many of each type of aircraft did the company purchase?</p>
+<p>It helps perhaps if we organize some of this information in a table.</p>
+<div class="displaymath">
+\begin{equation*}
+
+\end{equation*}
+</div>
+<p>By letting \(x\) denote the numbere of A330-300's, \(y\) denote the number of 767-300ERs and \(z\) denote the number of 787-9s, we obtain the following linear equalities:</p>
+<p>First, the total capacity is 9,300 seats:</p>
+<div class="displaymath">
+\begin{equation*}
+330x+270y+240z=9300\text{.}
+\end{equation*}
+</div>
+<p>Next, the total cost is $8,100 million:</p>
+<div class="displaymath">
+\begin{equation*}
+250x+200y+250z=8100\text{.}
+\end{equation*}
+</div>
+<p>Finally, there are twice as many 787-9s as 767-300ERs:</p>
 <div class="displaymath">
 \begin{align*}
-\begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \left( \begin{pmatrix}2 \amp  1 \\ 1 \amp  2 \\ 2 \amp  2 \end{pmatrix}  + \begin{pmatrix}2 \amp  2 \\ 2 \amp  2 \\ 2 \amp  2 \end{pmatrix}    \right)\begin{pmatrix}F\\M \end{pmatrix} \amp =\amp \begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \begin{pmatrix}4 \amp  3 \\ 3 \amp  4 \\ 4 \amp  4 \end{pmatrix}  \begin{pmatrix}F\\M \end{pmatrix}\\
-\amp =\amp \begin{pmatrix}4.7 \amp  4.4 \\ 7.3 \amp   6.6 \end{pmatrix} \begin{pmatrix}F\\M \end{pmatrix}\\
-\amp =\amp \begin{pmatrix}4.7F+4.4M\\ 7.3F+6.6M \end{pmatrix}
+z\amp = 2y\\
+-2y+z\amp = 0\text{.}
 \end{align*}
 </div>
-<p>So $\(4.7 F+4.4M\) for Elderly and \(\dollar7.3 F+6.6M\) for Homeless.</p></article><span class="incontext"><a href="Sec_MatrixArithmetic.html#example-26">in-context</a></span>
+<p>Giving us a system:</p>
+<div class="displaymath">
+\begin{align*}
+330x+270y+240z\amp = 9300\\
+250x+200y+250z\amp = 8100\\
+-2y+z\amp = 0
+\end{align*}
+</div>
+<p data-braille="continuation">and corresponding augmented matrix:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 330 \amp  270 \amp  240\amp  9300\\ 250 \amp  200 \amp  250 \amp  8100\\ 0 \amp  -2 \amp  1 \amp  0 \end{array} \right)\text{.}
+\end{equation*}
+</div>
+<p>Using any method we'd like, we find row reduced echelon form:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 1 \amp  0 \amp  0\amp  10\\ 0 \amp  1 \amp  0 \amp  8\\ 0 \amp  0 \amp  1 \amp  16 \end{array} \right)
+\end{equation*}
+</div>
+<p data-braille="continuation">which corresponds to \(x=10,
+y=8, z=16\) or 10 A330-300s, 8 767300ERs and 16 787-9s.</p>
+<p>To verify that this is a legitimate solution, check:</p>
+<div class="displaymath">
+\begin{align*}
+330(10)+270(8)+240(16)\amp = 9300\\
+250(10)+200(8)+250(16)\amp = 8100\\
+-2(8)+16\amp = 0\text{.}
+\end{align*}
+</div></article><span class="incontext"><a href="Sec_SystemasMatrix.html#example-26">in-context</a></span>
 </body>
 </html>

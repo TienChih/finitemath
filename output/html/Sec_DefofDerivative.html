@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:14:15-06:00    *-->
+<!--*    on 2020-06-30T20:03:33Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <title>The Derivative as a Limit</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']]
@@ -109,9 +109,10 @@ MathJax.Hub.Config({
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
 <li class="link">
 <a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntroLin.html" data-scroll="Sec_IntroLin">What is a Linear Function?</a></li>
 <li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
 <li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
-<li><a href="Sec_UtilityLinear.html" data-scroll="Sec_UtilityLinear">Utilizing the Linear Function</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
 <li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
 </ul>
 </li>
@@ -120,7 +121,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
-<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
 </ul>
 </li>
 <li class="link">
@@ -183,19 +183,19 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_DefofDerivative"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">The Derivative as a Limit</span>
 </h2>
-<p id="p-581">Let's be a bit more general for just a moment, suppose that we had a function \(f(x)\) and we wanted to know what the instantaneous rate of change of a function was at some given \(x\text{.}\) Well, if we stepped forward by \(h\) units, we could measure the average rate of change of \(f(x)\) over \([x, x+h]\text{,}\) this would be</p>
+<p id="p-650">Let's be a bit more general for just a moment, suppose that we had a function \(f(x)\) and we wanted to know what the instantaneous rate of change of a function was at some given \(x\text{.}\) Well, if we stepped forward by \(h\) units, we could measure the average rate of change of \(f(x)\) over \([x, x+h]\text{,}\) this would be</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{f(x+h)-f(x)}{x+h-x}=\frac{f(x+h)-f(x)}{h}\text{.}
 \end{equation*}
 </div>
-<p id="p-582">What we just observed is that if we let \(h\) converge towards 0, that it seems as if our quotient also converges to some value. This value is the derivative of \(f(x)\) at \(x\) and is denoted and defined as</p>
+<p id="p-651">What we just observed is that if we let \(h\) converge towards 0, that it seems as if our quotient also converges to some value. This value is the derivative of \(f(x)\) at \(x\) and is denoted and defined as</p>
 <div class="displaymath">
 \begin{equation*}
 f'(x)=\limit{h}{0}\frac{f(x+h)-f(x)}{h}\text{.}
 \end{equation*}
 </div>
-<p id="p-583">So how does this play out given our rocket? Well:</p>
+<p id="p-652">So how does this play out given our rocket? Well:</p>
 <div class="displaymath">
 \begin{align*}
 f'(x)\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
@@ -207,7 +207,7 @@ f'(x)\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
 \amp =\amp -10x+20\text{.}
 \end{align*}
 </div>
-<p id="p-584">So this means that in \(0\) seconds, the change in the height was \(f'(0)=-10(0)+20=20\) meters/second as we suspected! But now we can compute all the other instantaneous rates of change as well. So at \(t=1\) second, it'll be \(f'(1)=-10(1)+20=10\) meters per second. In 2 seconds we are at the top with \(f'(2)=0\) meters per second, at 3 seconds, \(f'(3)=-10\) meters/second to reflect the negative change in height at this point. Finally in 4 seconds, the rocket hits the ground at \(f'(4)=-20\) meters per second. (drag \(a\) around and see for yourself! \url{https://www.desmos.com/calculator/3po0qezgel})</p></section></div></main>
+<p id="p-653">So this means that in \(0\) seconds, the change in the height was \(f'(0)=-10(0)+20=20\) meters/second as we suspected! But now we can compute all the other instantaneous rates of change as well. So at \(t=1\) second, it'll be \(f'(1)=-10(1)+20=10\) meters per second. In 2 seconds we are at the top with \(f'(2)=0\) meters per second, at 3 seconds, \(f'(3)=-10\) meters/second to reflect the negative change in height at this point. Finally in 4 seconds, the rocket hits the ground at \(f'(4)=-20\) meters per second. (drag \(a\) around and see for yourself! \url{https://www.desmos.com/calculator/3po0qezgel})</p></section></div></main>
 </div>
 </body>
 </html>

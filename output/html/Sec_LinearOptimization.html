@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T13:14:12-06:00    *-->
+<!--*    on 2020-06-30T20:03:31Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <title>Linear Optimization</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']]
@@ -109,9 +109,10 @@ MathJax.Hub.Config({
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
 <li class="link">
 <a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntroLin.html" data-scroll="Sec_IntroLin">What is a Linear Function?</a></li>
 <li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
 <li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
-<li><a href="Sec_UtilityLinear.html" data-scroll="Sec_UtilityLinear">Utilizing the Linear Function</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
 <li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
 </ul>
 </li>
@@ -120,7 +121,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
-<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
 </ul>
 </li>
 <li class="link">
@@ -183,9 +183,9 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_LinearOptimization"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Linear Optimization</span>
 </h2>
-<article class="example example-like" id="example-28"><a data-knowl="" class="id-ref original" data-refid="hk-example-28"><h6 class="heading">
+<article class="example example-like" id="example-34"><a data-knowl="" class="id-ref original" data-refid="hk-example-34"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-28"><article class="example example-like"><p id="p-279">Find \((x,y)\) such that:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-34"><article class="example example-like"><p id="p-348">Find \((x,y)\) such that:</p>
 <div class="displaymath">
 \begin{align*}
 2x+3y\amp \leq\amp 12\\
@@ -194,13 +194,13 @@ y\amp \geq\amp 0
 \end{align*}
 </div>
 <p data-braille="continuation">and \(f(x,y)=x+y\) is maximized.</p>
-<p id="p-280">From above, we know that this region is a triangle in the first quadrant. We want to find the point(s) in this region where by taking the sum of the points, we get as large as a value as possible. There are infinitely many points in this region, how are we ever going to find the one that makes this sum the largest?</p>
-<p id="p-281">Well, we know that given every possible output from the objective function \(f\) i.e. every possible \(k\) so that \(x+y=k\text{,}\) this actually defines a line: \url{https://www.desmos.com/calculator/qststwgxro}. In the link you can see the line when \(k=0\text{.}\) There is one point \((0,0)\) which is actually a part of our region which would give this output. As we drag \(k\) upwards, we see that there is a line segment worth of points in our region which would give that \(k\) as an output. At \(k=4\) \url{https://www.desmos.com/calculator/iy5rq5hpxa} we hit a corner of the region but we see that we can still increase \(k\text{.}\) Now at \(k=6\) \url{https://www.desmos.com/calculator/qwrti1mxln}, we see that we've hit another corner. Very importantly, if we try to increase \(k\) at all, our line will fall outside of the feasible region and there will be no points that would give such a \(k\) as an output.</p>
-<p id="p-282">So, it must be that the largest \(k\) can be is 6, and that this happens at \((6,0)\text{.}\) One can check to see that this point satisfies all the criteria above. Most importantly though: <dfn class="terminology">IT MEANS TO FIND OPTIMAL SOLUTIONS ONE JUST NEEDS TO FIND THE CORNERS OF THE REGION</dfn>. This is because if your line isn't on a corner, you can still slide that value up or down, so the corresponding \(k\) value is neither maximal or minimal.</p></article></div>
-<article class="example example-like" id="example-29"><a data-knowl="" class="id-ref original" data-refid="hk-example-29"><h6 class="heading">
+<p id="p-349">From above, we know that this region is a triangle in the first quadrant. We want to find the point(s) in this region where by taking the sum of the points, we get as large as a value as possible. There are infinitely many points in this region, how are we ever going to find the one that makes this sum the largest?</p>
+<p id="p-350">Well, we know that given every possible output from the objective function \(f\) i.e. every possible \(k\) so that \(x+y=k\text{,}\) this actually defines a line: \url{https://www.desmos.com/calculator/qststwgxro}. In the link you can see the line when \(k=0\text{.}\) There is one point \((0,0)\) which is actually a part of our region which would give this output. As we drag \(k\) upwards, we see that there is a line segment worth of points in our region which would give that \(k\) as an output. At \(k=4\) \url{https://www.desmos.com/calculator/iy5rq5hpxa} we hit a corner of the region but we see that we can still increase \(k\text{.}\) Now at \(k=6\) \url{https://www.desmos.com/calculator/qwrti1mxln}, we see that we've hit another corner. Very importantly, if we try to increase \(k\) at all, our line will fall outside of the feasible region and there will be no points that would give such a \(k\) as an output.</p>
+<p id="p-351">So, it must be that the largest \(k\) can be is 6, and that this happens at \((6,0)\text{.}\) One can check to see that this point satisfies all the criteria above. Most importantly though: <dfn class="terminology">IT MEANS TO FIND OPTIMAL SOLUTIONS ONE JUST NEEDS TO FIND THE CORNERS OF THE REGION</dfn>. This is because if your line isn't on a corner, you can still slide that value up or down, so the corresponding \(k\) value is neither maximal or minimal.</p></article></div>
+<article class="example example-like" id="example-35"><a data-knowl="" class="id-ref original" data-refid="hk-example-35"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-29"><article class="example example-like"><p id="p-283">Suppose that a agriculture student is raising goats and pigs for a project. The goal is to raise some animals and then sell them for profit. She can raise a total of at most 16 animals. It costs $25 per goat and $ 75 per pig, and she has a budget of $900. Finally, she doesn't particularly like goats, so she won't raise more than 10 of them. If the profit per goat is $12 and profit per pig is $40, how many of each should she raise to maximize profits?</p>
-<p id="p-284">We should note, if \(x\) is the number of goats and \(y\) the number of pigs, then she is maximizing \(P(x,y)=12x+40y\text{.}\) The inequalities she is dealing with are:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><p id="p-352">Suppose that a agriculture student is raising goats and pigs for a project. The goal is to raise some animals and then sell them for profit. She can raise a total of at most 16 animals. It costs $25 per goat and $ 75 per pig, and she has a budget of $900. Finally, she doesn't particularly like goats, so she won't raise more than 10 of them. If the profit per goat is $12 and profit per pig is $40, how many of each should she raise to maximize profits?</p>
+<p id="p-353">We should note, if \(x\) is the number of goats and \(y\) the number of pigs, then she is maximizing \(P(x,y)=12x+40y\text{.}\) The inequalities she is dealing with are:</p>
 <div class="displaymath">
 \begin{align*}
 x+y\amp \leq\amp 16\ \ \text{ at most 16 animals }\\
@@ -210,13 +210,13 @@ x\amp \geq\amp 0\ \ \text{ no negative goats }\\
 y\amp \geq\amp 0\ \ \text{ no negative pigs }
 \end{align*}
 </div>
-<p id="p-285">Sketching our region out we get: \url{https://www.desmos.com/calculator/lwbkvibuyq}, with corner points:</p>
+<p id="p-354">Sketching our region out we get: \url{https://www.desmos.com/calculator/lwbkvibuyq}, with corner points:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c} x \amp  y \amp  P(x,y)\\ \hline 0 \amp  0 \amp  12(0)+40(0)=0\\ 10 \amp  0 \amp  12(10)+40(0)=120\\ 10 \amp  6 \amp  12(10)+40(6)=360\\ 6 \amp  10 \amp  12(6)+40(10)=472\\ 0 \amp  12 \amp  12(0)+40(12)=480 \end{array}
 \end{equation*}
 </div>
-<p id="p-286">So the profit is maximized when you raise 12 pigs and no goats. To get a better sense of how we found these corners, these are just system of \(2\times 2\) systems of equations: \url{https://www.desmos.com/calculator/bzczxrkggy}</p></article></div></section></div></main>
+<p id="p-355">So the profit is maximized when you raise 12 pigs and no goats. To get a better sense of how we found these corners, these are just system of \(2\times 2\) systems of equations: \url{https://www.desmos.com/calculator/bzczxrkggy}</p></article></div></section></div></main>
 </div>
 </body>
 </html>
