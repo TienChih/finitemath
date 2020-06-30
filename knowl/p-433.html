@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T21:31:05-06:00    *-->
+<!--*    on 2020-06-29T22:44:00-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>How about this?</p>
+<p>If we negate this thing:</p>
 <div class="displaymath">
-\begin{equation*}
-\begin{circuitikz}  \draw (0,0) to (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$p$] (4,1);  \draw (2,-1) to[ospst=$q$] (4,-1);  \draw(4,1) to (4,0); \draw(4,-1) to (4,0);  \draw(4,0) to (6,0);   \end{circuitikz}
-\end{equation*}
+\begin{align*}
+\sim ((p\wedge q)\to r)\amp =\amp \sim ((\sim p \vee \sim q) \vee r)\\
+\amp =\amp \sim (\sim p \vee \sim q) \wedge \sim r\\
+\amp =\amp  (\sim \sim p  \wedge \sim \sim q) \wedge \sim r\\
+\amp =\amp (p\wedge q)\wedge \sim r
+\end{align*}
 </div>
-<span class="incontext"><a href="Sec_Circuits.html#p-433">in-context</a></span>
+<span class="incontext"><a href="Sec_ConditionalStatements.html#p-433">in-context</a></span>
 </body>
 </html>

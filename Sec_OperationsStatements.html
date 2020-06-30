@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T21:30:52-06:00    *-->
+<!--*    on 2020-06-29T22:43:48-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -109,6 +109,7 @@ MathJax.Hub.Config({
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
 <li class="link">
 <a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntroLin.html" data-scroll="Sec_IntroLin">What is a Linear Function?</a></li>
 <li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
 <li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
 <li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
@@ -168,8 +169,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-36.html" data-scroll="section-36">Product Rule</a></li>
-<li><a href="section-37.html" data-scroll="section-37">Quotient Rule</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Product Rule</a></li>
+<li><a href="section-38.html" data-scroll="section-38">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -185,9 +186,9 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-24"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2.1</span> <span class="title">Not</span>
 </h3>
-<p id="p-346">The first sort of operation we can perform is <dfn class="terminology">negation</dfn>. Given any statement, the negation is a statement that is false whenever the original statement is true, and true when the original is false.</p>
-<p id="p-347">For example if \(p=\text{ ``It will rain today'' }\text{,}\) then it's negation \(\sim p=\text{ ``it will not rain today'' }\text{,}\) similarly if \(q=``x&gt;10''\text{,}\) then it's negation \(\sim q =``x\leq 10''\text{.}\) These are statements that are true whenever the original statement is false and false when they are true.</p>
-<p id="p-348">A convenient way to record when a statement is true or false is by something called a “truth table”. By listing all the truth values of \(p\text{,}\) we can see when \(\sim p\) is true:</p>
+<p id="p-362">The first sort of operation we can perform is <dfn class="terminology">negation</dfn>. Given any statement, the negation is a statement that is false whenever the original statement is true, and true when the original is false.</p>
+<p id="p-363">For example if \(p=\text{ ``It will rain today'' }\text{,}\) then it's negation \(\sim p=\text{ ``it will not rain today'' }\text{,}\) similarly if \(q=``x&gt;10''\text{,}\) then it's negation \(\sim q =``x\leq 10''\text{.}\) These are statements that are true whenever the original statement is false and false when they are true.</p>
+<p id="p-364">A convenient way to record when a statement is true or false is by something called a “truth table”. By listing all the truth values of \(p\text{,}\) we can see when \(\sim p\) is true:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c} p\amp \sim p\\ \hline T \amp  F\\ F\amp T \end{array}
@@ -195,24 +196,24 @@ MathJax.Hub.Config({
 </div></section><section class="subsection" id="subsection-25"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2.2</span> <span class="title">And</span>
 </h3>
-<p id="p-349">Given statements \(p\text{,}\) \(q\text{,}\) the statement \(p\wedge q\) pronounced \(p\) and \(q\) is when \(p\) and \(q\) are both true, otherwise it is false.</p>
-<p id="p-350">For example, if \(p=\) “I will eat breakfast today” and \(q=\) “I will eat lunch today”, then the statement \(p\wedge q\) is the statement “I will breakfast today and I will eat lunch today” which is only true if you eat both meals, if you skip one or both, then it is false.</p>
+<p id="p-365">Given statements \(p\text{,}\) \(q\text{,}\) the statement \(p\wedge q\) pronounced \(p\) and \(q\) is when \(p\) and \(q\) are both true, otherwise it is false.</p>
+<p id="p-366">For example, if \(p=\) “I will eat breakfast today” and \(q=\) “I will eat lunch today”, then the statement \(p\wedge q\) is the statement “I will breakfast today and I will eat lunch today” which is only true if you eat both meals, if you skip one or both, then it is false.</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c} p\amp q\amp p\wedge q\\ \hline T \amp  T\amp T\\ T\amp F\amp F\\ F\amp T\amp F\\ F\amp F\amp F \end{array}
 \end{equation*}
 </div>
-<p id="p-351">So if you skipped breakfast but had lunch, you could take a look at the third line and see that the compound statement “I will breakfast today and I will eat lunch today” is false.</p></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
+<p id="p-367">So if you skipped breakfast but had lunch, you could take a look at the third line and see that the compound statement “I will breakfast today and I will eat lunch today” is false.</p></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2.3</span> <span class="title">Or</span>
 </h3>
-<p id="p-352">Given statements \(p\text{,}\) \(q\text{,}\) the statement \(p\vee q\) pronounced \(p\) or \(q\) is when either \(p\) or \(q\) is true, otherwise it is false.</p>
-<p id="p-353">So as in the above example, \(p\vee q\) would be ``I will eat breakfast today or I will eat lunch today" and you're covered as long as you either have breakfast or lunch. If you skip both, then you're lying, but as long as you had either you're telling the truth.</p>
+<p id="p-368">Given statements \(p\text{,}\) \(q\text{,}\) the statement \(p\vee q\) pronounced \(p\) or \(q\) is when either \(p\) or \(q\) is true, otherwise it is false.</p>
+<p id="p-369">So as in the above example, \(p\vee q\) would be ``I will eat breakfast today or I will eat lunch today" and you're covered as long as you either have breakfast or lunch. If you skip both, then you're lying, but as long as you had either you're telling the truth.</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c} p\amp q\amp p\vee q\\ \hline T \amp  T\amp T\\ T\amp F\amp T\\ F\amp T\amp T\\ F\amp F\amp F \end{array}
 \end{equation*}
 </div>
-<p id="p-354">So if you had breakfast and skipped lunch, you can look at the second row and see that the statement ``I will eat breakfast today or I will eat lunch today" is still true.</p></section></section></div></main>
+<p id="p-370">So if you had breakfast and skipped lunch, you can look at the second row and see that the statement ``I will eat breakfast today or I will eat lunch today" is still true.</p></section></section></div></main>
 </div>
 </body>
 </html>

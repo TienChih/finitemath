@@ -1,13 +1,14 @@
 <section xml:id="Sec_IntrotoLinear">
   <title>What is a Linear Function?</title>
+  <introduction>
   <p>
     A linear function is a function whose inputs and outputs are real numbers,
-    and <em>the change in output per unit change increase in input is always the same.</em>
+    and the change in output per unit change increase in input is always the same.
     A linear function may always increase,
     or decrease, or stay the same,
     but the rate at which it does so will never change.
   </p>
-<!--   
+</introduction>
   <example xml:id="Example_IsLinear">
     <statement>
       <p>
@@ -134,5 +135,5 @@
         An interactive version of this graph may be found here: <interactive desmos="za4t3zanlr"  />
       </p>
     </solution>
-  </example>-->
+  </example>
 </section>

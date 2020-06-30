@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T21:31:03-06:00    *-->
+<!--*    on 2020-06-29T22:43:57-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,109 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(a,b,c\) denote the number of people walking along Anderson, Birmingham and Central.</p>
-<ol class="decimal">
-<li>
-<p>Find an expression for the amount of people walking along each street. We first set up our systems of equations. We first note that all 300 people have to walk either along either Anderson or Birmingham, so</p>
-<div class="displaymath">
-\begin{equation*}
-a+b=300\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">Next, the 75 at Xavier is the however many people walked down Anderson, and take away whoever veered off onto Central so:</p>
-<div class="displaymath">
-\begin{equation*}
-a-c=75\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">The 225 people at Yoneda is everyone coming across Birmingham and Central so</p>
-<div class="displaymath">
-\begin{equation*}
-b+c=225\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">Thus the system is:</p>
-<div class="displaymath">
-\begin{align*}
-a+b\amp = 300\\
-a-c\amp = 75\\
-b+c\amp = 225\text{,}
-\end{align*}
-</div>
-<p data-braille="continuation">with associated augmented matrix:</p>
-<div class="displaymath">
-\begin{equation*}
-\left( \begin{array}{rrr|r} 1 \amp  1 \amp  0\amp  300\\ 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225 \end{array} \right)\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">So the reduced row echelon form of this is:</p>
-<div class="displaymath">
-\begin{equation*}
-\left( \begin{array}{rrr|r} 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225\\ 0 \amp  0 \amp  0\amp  0 \end{array} \right)\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">What this tells us is that there is not a unique solution, as the system associated with this matrix is:</p>
-<div class="displaymath">
-\begin{align*}
-a-c\amp = 75\\
-b+c\amp = 225\text{,}
-\end{align*}
-</div>
-<p data-braille="continuation">Which is two of the original equations. So, depending on what \(c\) is, this will determine how many people traverse Anderson and Birmingham.</p>
-</li>
-<li>
-<p>If 50 people crossed central, how many people crossed Anderson and Birmingham? So letting \(c=50\text{,}\) we would have:</p>
-<div class="displaymath">
-\begin{align*}
-a-c\amp = 75\\
-a-50\amp = 75\\
-a\amp = 125\\
-b+c\amp = 225\\
-b+50\amp = 225\\
-b\amp = 175\text{,}
-\end{align*}
-</div>
-<p data-braille="continuation">So 125 people across Anderson and 175 across Birmingham. Another way to do this would be to add an equation \(c=50\) to our system:</p>
-<div class="displaymath">
-\begin{equation*}
-\left( \begin{array}{rrr|r} 1 \amp  1 \amp  0\amp  300\\ 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225\\ 0 \amp  0 \amp  1 \amp  50 \end{array} \right)\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">Which has reduced row echelon form:</p>
-<div class="displaymath">
-\begin{equation*}
-\left( \begin{array}{rrr|r} 1 \amp  0 \amp  0 \amp  125\\ 0 \amp  1 \amp  0 \amp  175\\ 0 \amp  0 \amp  1\amp  50\\ 0 \amp  0 \amp  0\amp  0 \end{array} \right)\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">That is \(a=125, b=125, c=50\) which is our solution above.</p>
-</li>
-<li>
-<p>If 100 people go through Anderson, how many go through Birmingham or Central? We can revisit our linear system from (a):</p>
-<div class="displaymath">
-\begin{align*}
-a-c\amp = 75\\
-100-c\amp = 75\\
-c\amp = 25\\
-b+c\amp = 225\\
-b+25\amp = 225\\
-b\amp = 200\text{,}
-\end{align*}
-</div>
-<p data-braille="continuation">so 200 across Birmingham and 25 across Central. We can also add the linear equation \(a=100\text{:}\)</p>
-<div class="displaymath">
-\begin{equation*}
-\left( \begin{array}{rrr|r} 1 \amp  1 \amp  0\amp  300\\ 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225\\ 1 \amp  0 \amp  0 \amp  100 \end{array} \right)
-\end{equation*}
-</div>
-<p data-braille="continuation">with reduced row echelon form:</p>
-<div class="displaymath">
-\begin{equation*}
-\left( \begin{array}{rrr|r} 1 \amp  0 \amp  0 \amp  100\\ 0 \amp  1 \amp  0 \amp  200\\ 0 \amp  0 \amp  1\amp  25\\ 0 \amp  0 \amp  0\amp  0 \end{array} \right)\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">So 100 across Anderson, 200 across Birmingham and 25 across Central.</p>
-</li>
-</ol>
+<p>Well, what does this last line mean? It says that \(0=1\text{.}\) When will this happen? Well basically never, no choice of \(x,y,z\) will ever make this true, our 3 planes do not intersect at a point or line or at all, so there is no solution.</p>
 <span class="incontext"><a href="Sec_SystemasMatrix.html#p-275">in-context</a></span>
 </body>
 </html>

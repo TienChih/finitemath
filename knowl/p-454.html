@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T21:31:05-06:00    *-->
+<!--*    on 2020-06-29T22:44:00-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>In other words, if you know \(p\to q\) and \(p\text{,}\) then \(q\) must be true. So say “If your pet is a pitbull, then it is a dog.” “Your pet is a pitbull.” It would then be fair to conclude “Therefore your pet is a dog.”</p>
-<span class="incontext"><a href="Sec_Arguments.html#p-454">in-context</a></span>
+<p>So it's circuit would be:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{circuitikz}  \draw (0,0) to (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$p$] (4,1);  \draw (2,-1) to[ospst=$q$] (4,-1);  \draw(4,1) to (4,0); \draw(4,-1) to (4,0);  \draw(4,0) to[ospst=$\sim r$] (6,0);   \end{circuitikz}
+\end{equation*}
+</div>
+<span class="incontext"><a href="Sec_Circuits.html#p-454">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T21:31:03-06:00    *-->
+<!--*    on 2020-06-29T22:43:58-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,30 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>For any matrix \(M\text{,}\) let \((M)_{ij}=m_{ij}\) denote the entry in the \(i\)th row and \(j\)th column. Then, given a \(m\times n\) matrix \(A\) and a \(n\times k\) matrix \(B\text{,}\) we define \(AB\) the product of \(A\) and \(B\) to be a \(m\times k\) matrix where:</p>
+<p>If 50 people crossed central, how many people crossed Anderson and Birmingham? So letting \(c=50\text{,}\) we would have:</p>
+<div class="displaymath">
+\begin{align*}
+a-c\amp = 75\\
+a-50\amp = 75\\
+a\amp = 125\\
+b+c\amp = 225\\
+b+50\amp = 225\\
+b\amp = 175\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">So 125 people across Anderson and 175 across Birmingham. Another way to do this would be to add an equation \(c=50\) to our system:</p>
 <div class="displaymath">
 \begin{equation*}
-(AB)_{ij}=\begin{pmatrix}\color{red}{a_{i1}} \amp  \color{red}{a_{i2}} \amp  \cdots \amp  \color{red}{a_{in}} \end{pmatrix} \begin{pmatrix}\color{blue}{b_{1j}} \\ \color{blue}{b_{2j}} \\ \vdots \\ \color{blue}{b_{nj}} \end{pmatrix} =\begin{pmatrix}\color{red}{a_{i1}}\color{blue}{b_{1j}}+\color{red}{a_{i2}}\color{blue}{b_{2j}}+\cdots+\color{red}{a_{in}}\color{blue}{b_{nj}} \end{pmatrix}
+\left( \begin{array}{rrr|r} 1 \amp  1 \amp  0\amp  300\\ 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225\\ 0 \amp  0 \amp  1 \amp  50 \end{array} \right)\text{.}
 \end{equation*}
 </div>
-<span class="incontext"><a href="Sec_MatrixArithmetic.html#p-293">in-context</a></span>
+<p data-braille="continuation">Which has reduced row echelon form:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 1 \amp  0 \amp  0 \amp  125\\ 0 \amp  1 \amp  0 \amp  175\\ 0 \amp  0 \amp  1\amp  50\\ 0 \amp  0 \amp  0\amp  0 \end{array} \right)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">That is \(a=125, b=125, c=50\) which is our solution above.</p>
+<span class="incontext"><a href="Sec_SystemasMatrix.html#p-293">in-context</a></span>
 </body>
 </html>
