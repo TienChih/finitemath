@@ -1,10 +1,12 @@
 <section xml:id="Sec_SystemsLinearInequalities">
   <title>Systems of Linear Inequalities</title>
+  <introduction>
   <p>
     If a solution to a system of equations is a set of points that make several equations true,
     then the same is true of systems of linear inequalities.
     It's just going to be the collection of points that make all the inequalities true.
   </p>
+</introduction>
   <p>
     So if say we had the system of linear inequalities:
     <md>
