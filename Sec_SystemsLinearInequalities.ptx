@@ -5,10 +5,50 @@
     then the same is true of systems of linear inequalities.
     It's just going to be the collection of points that make all the inequalities true.
   </p>
-  <example>
+  <p>
+    So if say we had the system of linear inequalities:
+    <md>
+          <mrow>x+y\amp \geq 4</mrow>
+          <mrow>x-2y\amp \leq 3</mrow>
+    </md>
+    We could ask ourselves if <m> (0,0), (4,4), (6,0), (2,-2)</m> belong to the region.
+    <ol>
+        <li> For <m>(0,0)</m>  note that:
+        <md>
+          <mrow>0+0\amp \not\geq 4</mrow>
+          <mrow>0-2(0)\amp \leq 3</mrow>
+        </md>
+        So we satisfy the second but not the first inequality, so <m>(0,0)</m> does <em>not</em> belong to the region.
+         </li>
+        <li> For <m>(4,4)</m>  note that:
+        <md>
+          <mrow>4+4\amp \geq 4</mrow>
+          <mrow>4-2(4)\amp \leq 3</mrow>
+        </md>
+        So we satisfy both inequalities, and <m>(4,4)</m>  <em>does</em> belong to the region!
+         </li>
+        <li> For <m>(6,0)</m>  note that:
+        <md>
+          <mrow>6+0\amp \geq 4</mrow>
+          <mrow>6-2(0)\amp \not\leq 3</mrow>
+        </md>
+        So we satisfy the first inequality but not the second, so <m>(6,0)</m> does <em>not</em> belong to the region.
+         </li>
+         <li> For <m>(-2,2)</m>  note that:
+        <md>
+          <mrow>2+(-2+\amp \not\geq 4</mrow>
+          <mrow>2-2(-2)\amp \not\leq 3</mrow>
+        </md>
+        So we satisfy neither inequality but not the second, and <m>(2,-2)</m> does <em>not</em> belong to the region.
+         </li>
+      </ol>
+      We can use the Desmos graph and drag the point <m>(a,b)</m> around to verify which region satisfies both inequalities.
+      <interactive desmos="is7lwibg4t"  />
+  </p>  
+  <example xml:id="Example_SysLinearInequality">
     <statement>
       <p>
-        What is the solution to the following system:
+        What are the solutions to the following system:
         <md>
           <mrow>2x+3y\amp \leq 12</mrow>
           <mrow>x\amp \geq 0</mrow>
@@ -28,4 +68,41 @@
       </p>
     </statement>
   </example>
+  <exercise>
+  <statement>
+    <p>
+      Use Desmos to graph the following system of inequalities:
+      <md>
+          <mrow>3x-5y\amp \leq 8</mrow>
+          <mrow>x\amp \geq 0</mrow>
+          <mrow>x+y\amp \leq 10</mrow>
+        </md>
+    </p>  
+  </statement>
+  <solution>
+    <p>
+      By nesting the inequalities, we obtain the following Desmos graph:
+      <interactive desmos="fmb6kti4m2"  />
+    </p>  
+  </solution> 
+</exercise>
+<exercise>
+  <statement>
+    <p>
+      Use Desmos to graph the following system of inequalities:
+      <md>
+          <mrow>3x+5y\amp \geq 7</mrow>
+          <mrow>x+2y\amp \leq 8</mrow>
+          <mrow>x\amp \geq 0</mrow>
+          <mrow>y\amp \geq 0</mrow>
+        </md>
+    </p>  
+  </statement>
+  <solution>
+    <p>
+      By nesting the inequalities, we obtain the following Desmos graph:
+      <interactive desmos="hmsfqtjfia"  />
+    </p>  
+  </solution> 
+</exercise>
 </section>

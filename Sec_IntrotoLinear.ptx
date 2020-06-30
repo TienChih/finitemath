@@ -1,4 +1,4 @@
-<section xml:id="Sec_IntroLinear">
+<section xml:id="Sec_IntrotoLinear">
   <title>What is a Linear Function?</title>
   <p>
     A linear function is a function whose inputs and outputs are real numbers,
@@ -6,7 +6,8 @@
     A linear function may always increase,
     or decrease, or stay the same,
     but the rate at which it does so will never change.
-  </p> 
+  </p>
+<!--   
   <example xml:id="Example_IsLinear">
     <statement>
       <p>
@@ -71,7 +72,7 @@
   <p>
     It always helps to illustrate a concept with a <term>non</term>-example.
   </p>
-  <example xml:id="Example_IsNotLinear">
+ <example xml:id="Example_IsNotLinear">
     <statement>
       <p>
         Consider a function who takes on the following values:
@@ -133,5 +134,5 @@
         An interactive version of this graph may be found here: <interactive desmos="za4t3zanlr"  />
       </p>
     </solution>
-  </example>
+  </example>-->
 </section>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T14:02:06-06:00    *-->
+<!--*    on 2020-06-29T21:31:08-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,11 +14,13 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-g'(x)\amp =\amp \frac{(x^2+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x^2+1]}{(x^2+1)^2}\\
-\amp =\amp \frac{(x^2+1)(1)-x(2x)}{(x^2+1)^2}\\
-\amp =\amp \frac{1-x^2}{(x^2+1)^2}
+\frac{d}{dx}[f(x)g(x)]\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h},\ \text{ at this stage, I'm going to pull a clever trick and add by 0: }\\
+\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)\textcolor{blue}{-f(x)g(x+h)+f(x)g(x+h)}-f(x)g(x)}{h}\\
+\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x+h)}{h}+\limit{h}{0}\frac{f(x)g(x+h)-f(x)g(x)}{h}\\
+\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}g(x+h)+\limit{h}{0}f(x)\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp f'(x)g(x)+f(x)g'(x)
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_QuotientRule.html#mjx-eqn-mrow-377">in-context</a></span>
+<span class="incontext"><a href="Sec_ProductRule.html#mjx-eqn-mrow-377">in-context</a></span>
 </body>
 </html>

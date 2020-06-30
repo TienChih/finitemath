@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T14:02:06-06:00    *-->
+<!--*    on 2020-06-29T21:31:08-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,11 +14,16 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
-\amp =\amp \limit{\textcolor{red}{k}}{0}\frac{f(\textcolor{red}{g(x)+k})-f(g(x))}{\textcolor{red}{k}}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
-\amp =\amp f'(g(x))g'(x)
+Q(x)\amp =\amp \frac{f(x)}{g(x)}\\
+Q(x)g(x)\amp =\amp f(x),\ \text{ now we can differentiate both sides }\\
+\frac{d}{dx}[Q(x)g(x)]\amp =\amp f'(x),\ \text{ then by the product rule: }\\
+Q'(x)g(x)+Q(x)g'(x)\amp =\amp f'(x)\\
+Q'(x)g(x)\amp =\amp f'(x)-Q(x)g'(x),\ \text{then recall that  \(Q(x)=\frac{f(x)}{g(x)}\)}\\
+Q'(x)g(x)\amp =\amp f'(x)-\frac{f(x)g'(x)}{g(x)}\\
+Q'(x)g(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)}\\
+Q'(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_ChainRule.html#mjx-eqn-mrow-406">in-context</a></span>
+<span class="incontext"><a href="section-37.html#mjx-eqn-mrow-406">in-context</a></span>
 </body>
 </html>
