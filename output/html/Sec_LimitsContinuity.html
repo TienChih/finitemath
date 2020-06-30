@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-30T21:17:54Z    *-->
+<!--*    on 2020-06-30T21:35:14Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -183,51 +183,51 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_LimitsContinuity"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Limits &amp; Continuity</span>
 </h2>
-<section class="introduction" id="introduction-18"><p id="p-607">Informally, the limit of a function \(\limit{x}{a} f(x)=L\) (if it exists) is a number \(L\) such that when \(f(x)\) get's closer and closer to \(a\text{,}\) \(f(x)\) gets closer and closer to \(L\text{.}\)</p>
-<p id="p-608">Consider the function \(f(x)=\frac{x^2-1}{x-1}\text{,}\) what happens as \(x\) get's closer and closer to 1?</p>
+<section class="introduction" id="introduction-20"><p id="p-616">Informally, the limit of a function \(\limit{x}{a} f(x)=L\) (if it exists) is a number \(L\) such that when \(f(x)\) get's closer and closer to \(a\text{,}\) \(f(x)\) gets closer and closer to \(L\text{.}\)</p>
+<p id="p-617">Consider the function \(f(x)=\frac{x^2-1}{x-1}\text{,}\) what happens as \(x\) get's closer and closer to 1?</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|c|} \hline x \amp  f(x)\\ \hline 1.1 \amp  2.1\\ 1.01 \amp  2.01\\ 1.001 \amp  2.001\\ .9 \amp  1.9\\ .99\amp 1.99\\ .999 \amp  1.999\\ \hline \end{array}
 \end{equation*}
 </div>
-<p id="p-609">You can test and see these values here: \url{https://www.desmos.com/calculator/w3ycpf3mv4}. It certainly seems as if \(x\) gets closer and closer to \(1\text{,}\) \(f(x)\) approaches the value \(2\text{.}\) Why couldn't we just plug in 1? Because if we did we would get \(f(1)``=''\frac{1^2-1}{1-1}``=''\frac{0}{0}\) which is undefined. Recall that \(1\) would not be a part of the domain of \(f(x)\text{.}\) This, in fact, is the whole point of limits, the entire reason they exist, is in order to give values to things like \(f(1)\) which are not defined.</p>
-<p id="p-610">The left and right limits of a function are values the function approaches as \(x\) \(a\) from the left or the right, so as we see above, they both (the black and orange dots in the linked graph) both approach the same value. So:</p>
+<p id="p-618">You can test and see these values here: \url{https://www.desmos.com/calculator/w3ycpf3mv4}. It certainly seems as if \(x\) gets closer and closer to \(1\text{,}\) \(f(x)\) approaches the value \(2\text{.}\) Why couldn't we just plug in 1? Because if we did we would get \(f(1)``=''\frac{1^2-1}{1-1}``=''\frac{0}{0}\) which is undefined. Recall that \(1\) would not be a part of the domain of \(f(x)\text{.}\) This, in fact, is the whole point of limits, the entire reason they exist, is in order to give values to things like \(f(1)\) which are not defined.</p>
+<p id="p-619">The left and right limits of a function are values the function approaches as \(x\) \(a\) from the left or the right, so as we see above, they both (the black and orange dots in the linked graph) both approach the same value. So:</p>
 <ul class="disc">
-<li id="li-140"><p id="p-611">\(\limit{x}{1^-}\frac{x^2-1}{x-1}=2\text{.}\)</p></li>
-<li id="li-141"><p id="p-612">\(\displaystyle \limit{x}{1^+}\frac{x^2-1}{x-1}=2\)</p></li>
-<li id="li-142"><p id="p-613">\(\displaystyle \limit{x}{1}\frac{x^2-1}{x-1}=2\)</p></li>
-<li id="li-143"><p id="p-614">\(f(1)\) is undefined.</p></li>
+<li id="li-140"><p id="p-620">\(\limit{x}{1^-}\frac{x^2-1}{x-1}=2\text{.}\)</p></li>
+<li id="li-141"><p id="p-621">\(\displaystyle \limit{x}{1^+}\frac{x^2-1}{x-1}=2\)</p></li>
+<li id="li-142"><p id="p-622">\(\displaystyle \limit{x}{1}\frac{x^2-1}{x-1}=2\)</p></li>
+<li id="li-143"><p id="p-623">\(f(1)\) is undefined.</p></li>
 </ul>
-<p id="p-615">So looking at this graph:</p>
+<p id="p-624">So looking at this graph:</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-49.svg" style="width: 100%; height: auto;" alt=""></div>
-<p id="p-616">For \(x=2,4,6,8\text{,}\) find the left and right limits, the limit, and the value of the function. See if you understand why the following are true:</p>
+<p id="p-625">For \(x=2,4,6,8\text{,}\) find the left and right limits, the limit, and the value of the function. See if you understand why the following are true:</p>
 <ul class="disc">
-<li id="li-144"><p id="p-617">\(\limit{x}{2^-}f(x)=2\text{,}\) as we approach \(x\) from the left, this is what \(f(x)\) approaches.</p></li>
-<li id="li-145"><p id="p-618">\(\limit{x}{2^+}f(x)=1\text{,}\) as we approach \(x\) from the right, this is what \(f(x)\) approaches.</p></li>
-<li id="li-146"><p id="p-619">\(\limit{x}{2}f(x)\) is undefined, there is no single number that \(f(x)\) get's closer to, so there is no limit.</p></li>
-<li id="li-147"><p id="p-620">\(f(2)=1\text{,}\) that's the actual value of \(f(2)\text{.}\)</p></li>
+<li id="li-144"><p id="p-626">\(\limit{x}{2^-}f(x)=2\text{,}\) as we approach \(x\) from the left, this is what \(f(x)\) approaches.</p></li>
+<li id="li-145"><p id="p-627">\(\limit{x}{2^+}f(x)=1\text{,}\) as we approach \(x\) from the right, this is what \(f(x)\) approaches.</p></li>
+<li id="li-146"><p id="p-628">\(\limit{x}{2}f(x)\) is undefined, there is no single number that \(f(x)\) get's closer to, so there is no limit.</p></li>
+<li id="li-147"><p id="p-629">\(f(2)=1\text{,}\) that's the actual value of \(f(2)\text{.}\)</p></li>
 </ul>
-<p id="p-621">Similarly, we should see:</p>
+<p id="p-630">Similarly, we should see:</p>
 <ul class="disc">
-<li id="li-148"><p id="p-622">\(\limit{x}{4^-}f(x)=1\text{.}\)</p></li>
-<li id="li-149"><p id="p-623">\(\limit{x}{4^+}f(x)=1\text{.}\)</p></li>
-<li id="li-150"><p id="p-624">\(\limit{x}{4}f(x)=1\text{.}\)</p></li>
-<li id="li-151"><p id="p-625">\(f(4)=-1\text{.}\)</p></li>
-<li id="li-152"><p id="p-626">\(\limit{x}{6^-}f(x)=-1\text{.}\)</p></li>
-<li id="li-153"><p id="p-627">\(\limit{x}{6^+}f(x)=-1\text{.}\)</p></li>
-<li id="li-154"><p id="p-628">\(\limit{x}{6}f(x)=-1\text{.}\)</p></li>
-<li id="li-155"><p id="p-629">\(f(6)=-1\text{.}\)</p></li>
-<li id="li-156"><p id="p-630">\(\limit{x}{8^-}f(x)=-3\text{.}\)</p></li>
-<li id="li-157"><p id="p-631">\(\limit{x}{8^+}f(x)=-3\text{.}\)</p></li>
-<li id="li-158"><p id="p-632">\(\limit{x}{8}f(x)=-3\text{.}\)</p></li>
-<li id="li-159"><p id="p-633">\(f(8)\) is undefined.</p></li>
+<li id="li-148"><p id="p-631">\(\limit{x}{4^-}f(x)=1\text{.}\)</p></li>
+<li id="li-149"><p id="p-632">\(\limit{x}{4^+}f(x)=1\text{.}\)</p></li>
+<li id="li-150"><p id="p-633">\(\limit{x}{4}f(x)=1\text{.}\)</p></li>
+<li id="li-151"><p id="p-634">\(f(4)=-1\text{.}\)</p></li>
+<li id="li-152"><p id="p-635">\(\limit{x}{6^-}f(x)=-1\text{.}\)</p></li>
+<li id="li-153"><p id="p-636">\(\limit{x}{6^+}f(x)=-1\text{.}\)</p></li>
+<li id="li-154"><p id="p-637">\(\limit{x}{6}f(x)=-1\text{.}\)</p></li>
+<li id="li-155"><p id="p-638">\(f(6)=-1\text{.}\)</p></li>
+<li id="li-156"><p id="p-639">\(\limit{x}{8^-}f(x)=-3\text{.}\)</p></li>
+<li id="li-157"><p id="p-640">\(\limit{x}{8^+}f(x)=-3\text{.}\)</p></li>
+<li id="li-158"><p id="p-641">\(\limit{x}{8}f(x)=-3\text{.}\)</p></li>
+<li id="li-159"><p id="p-642">\(f(8)\) is undefined.</p></li>
 </ul>
-<p id="p-634">A great shorthand for determining when there is or isn't a limit is: ``\(\limit{x}{a}f(x)=L\) and exists if and only if \(\limit{x}{a^-}f(x)=L\) and \(\limit{x}{a^+}f(x)=L\)"</p></section><section class="subsection" id="subsection-50"><h3 class="heading hide-type">
+<p id="p-643">A great shorthand for determining when there is or isn't a limit is: ``\(\limit{x}{a}f(x)=L\) and exists if and only if \(\limit{x}{a^-}f(x)=L\) and \(\limit{x}{a^+}f(x)=L\)"</p></section><section class="subsection" id="subsection-50"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.1</span> <span class="title">Continuity</span>
 </h3>
-<p id="p-635">I'm not going to overblow continuity with to much verbiage here since we intuitive understand what it means to be continuous, it just means that all the points “connect”. So what does tat mean for us above? Out of the values \(x=2,4,6,8\text{,}\) where is \(x\) continuous?</p>
-<p id="p-636">It seems like it's only 6 where it's continuous. 2 and 4 have jump discontinuities, and \(f(x)\) isn't even defined at \(x=8\) so how could it be continuous there? So the definition of continuous is as intuitive as we would like:</p>
-<p id="p-637">\(f(x)\) is continuous at \(a\) if and only of \(f(a)=\limit{x}{a} f(x)\text{.}\) So as in above, out of the 4 points we looked at, \(x=6\) is the only place where everything “behaves properly” and we get continuity.</p></section></section></div></main>
+<p id="p-644">I'm not going to overblow continuity with to much verbiage here since we intuitive understand what it means to be continuous, it just means that all the points “connect”. So what does tat mean for us above? Out of the values \(x=2,4,6,8\text{,}\) where is \(x\) continuous?</p>
+<p id="p-645">It seems like it's only 6 where it's continuous. 2 and 4 have jump discontinuities, and \(f(x)\) isn't even defined at \(x=8\) so how could it be continuous there? So the definition of continuous is as intuitive as we would like:</p>
+<p id="p-646">\(f(x)\) is continuous at \(a\) if and only of \(f(a)=\limit{x}{a} f(x)\text{.}\) So as in above, out of the 4 points we looked at, \(x=6\) is the only place where everything “behaves properly” and we get continuity.</p></section></section></div></main>
 </div>
 </body>
 </html>

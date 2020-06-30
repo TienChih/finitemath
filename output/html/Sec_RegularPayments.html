@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-30T21:17:53Z    *-->
+<!--*    on 2020-06-30T21:35:13Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -186,27 +186,27 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-42"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.1</span> <span class="title">Future Value</span>
 </h3>
-<p id="p-531">Let's say you have a back account that gives you 2% monthly interest (lucky you!) and let's also say that from January to May, you deposit $100 each month. How much will you have in May? Well:</p>
+<p id="p-540">Let's say you have a back account that gives you 2% monthly interest (lucky you!) and let's also say that from January to May, you deposit $100 each month. How much will you have in May? Well:</p>
 <ul class="disc">
-<li id="li-121"><p id="p-532">The 100 dollars you put in January would accrue interests for 4 months, so you'd have \(100(1.02)^4\) dollars.</p></li>
-<li id="li-122"><p id="p-533">The 100 dollars you put in February would accrue interests for 3 months, so you'd have \(100(1.02)^3\) dollars.</p></li>
-<li id="li-123"><p id="p-534">The 100 dollars you put in March would accrue interests for 2 months, so you'd have \(100(1.02)^2\) dollars.</p></li>
-<li id="li-124"><p id="p-535">The 100 dollars you put in April would accrue interests for 1 months, so you'd have \(100(1.02)^1\) dollars.</p></li>
-<li id="li-125"><p id="p-536">The 100 dollars you put in May would accrue interests for 0 months, so you'd have \(100(1.02)^0\) dollars.</p></li>
+<li id="li-121"><p id="p-541">The 100 dollars you put in January would accrue interests for 4 months, so you'd have \(100(1.02)^4\) dollars.</p></li>
+<li id="li-122"><p id="p-542">The 100 dollars you put in February would accrue interests for 3 months, so you'd have \(100(1.02)^3\) dollars.</p></li>
+<li id="li-123"><p id="p-543">The 100 dollars you put in March would accrue interests for 2 months, so you'd have \(100(1.02)^2\) dollars.</p></li>
+<li id="li-124"><p id="p-544">The 100 dollars you put in April would accrue interests for 1 months, so you'd have \(100(1.02)^1\) dollars.</p></li>
+<li id="li-125"><p id="p-545">The 100 dollars you put in May would accrue interests for 0 months, so you'd have \(100(1.02)^0\) dollars.</p></li>
 </ul>
-<p id="p-537">So you'd have:</p>
+<p id="p-546">So you'd have:</p>
 <div class="displaymath">
 \begin{equation*}
 100(1.02)^4+100(1.02)^3+100(1.02)^2+100(1.02)^1+100(1.02)^0\approx \dollar520.40
 \end{equation*}
 </div>
-<p id="p-538">But what if this went on for 10 months? For 10 years? You probably wouldn't want to calculate every single one of these. So is there an easier way to compute something like</p>
+<p id="p-547">But what if this went on for 10 months? For 10 years? You probably wouldn't want to calculate every single one of these. So is there an easier way to compute something like</p>
 <div class="displaymath">
 \begin{equation*}
 100(1.02)^4+100(1.02)^3+100(1.02)^2+100(1.02)^1+100(1.02)^0?
 \end{equation*}
 </div>
-<p id="p-539">So we have a sum of things that look like: \(x^n+x^{n-1}+\cdots+x^1+x^0\text{.}\) There is a funny fact about this sum. if we multiply it by \((x-1)\text{:}\)</p>
+<p id="p-548">So we have a sum of things that look like: \(x^n+x^{n-1}+\cdots+x^1+x^0\text{.}\) There is a funny fact about this sum. if we multiply it by \((x-1)\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 (x^n+x^{n-1}+\cdots+x^1+x^0)(x-1)\amp =\amp (x^n+x^{n-1}+\cdots+x^1+x^0)x-(x^n+x^{n-1}+\cdots+x^1+x^0)\\
@@ -215,14 +215,14 @@ MathJax.Hub.Config({
 \amp =\amp x^{n+1}-1
 \end{align*}
 </div>
-<p id="p-540">Thus:</p>
+<p id="p-549">Thus:</p>
 <div class="displaymath">
 \begin{align*}
 (x^n+x^{n-1}+\cdots+1)(x-1)\amp =\amp x^{n+1}-1\\
 x^n+x^{n-1}+\cdots+1\amp =\amp \frac{x^{n+1}-1}{x-1}
 \end{align*}
 </div>
-<p id="p-541">So, we should note that the future value of our investment above is:</p>
+<p id="p-550">So, we should note that the future value of our investment above is:</p>
 <div class="displaymath">
 \begin{align*}
 100(1.02)^4+100(1.02)^3+100(1.02)^2+100(1.02)^1+100(1.02)^0\amp =\amp 100((1.02)^4+(1.02)^3+(1.02)^2+(1.02)^1+(1.02)^0)\\
@@ -230,35 +230,35 @@ x^n+x^{n-1}+\cdots+1\amp =\amp \frac{x^{n+1}-1}{x-1}
 S\amp =\amp 100\frac{(1.02)^5-1}{.02}
 \end{align*}
 </div>
-<p id="p-542">Where \(S\) is the future value. Now, if we did this for \(n\) months instead of 5, we would have:</p>
+<p id="p-551">Where \(S\) is the future value. Now, if we did this for \(n\) months instead of 5, we would have:</p>
 <div class="displaymath">
 \begin{equation*}
 S=100\frac{(1.02)^n-1}{.02}
 \end{equation*}
 </div>
-<p id="p-543">If the monthly (or whatever time unit) interest rate was \(i\) instead of 2%, we would get:</p>
+<p id="p-552">If the monthly (or whatever time unit) interest rate was \(i\) instead of 2%, we would get:</p>
 <div class="displaymath">
 \begin{equation*}
 S=100\frac{(1+i)^n-1}{i}
 \end{equation*}
 </div>
-<p id="p-544">And if the payments were \(R\) instead of $100, we would have:</p>
+<p id="p-553">And if the payments were \(R\) instead of $100, we would have:</p>
 <div class="displaymath">
 \begin{equation*}
 S=R\frac{(1+i)^n-1}{i}
 \end{equation*}
 </div>
-<p id="p-545">So here we have the formula for the future value of a debt or investment based on a constant payment.</p></section><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
+<p id="p-554">So here we have the formula for the future value of a debt or investment based on a constant payment.</p></section><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.2</span> <span class="title">Present Value</span>
 </h3>
-<p id="p-546">So if we have \(n\) payments of \(R\) at regular interest rate \(i\text{,}\) the future value is \(S=R\frac{(1+i)^n-1}{i}\text{.}\) What is it's present value? Well remember that the relationship between present and future value is:</p>
+<p id="p-555">So if we have \(n\) payments of \(R\) at regular interest rate \(i\text{,}\) the future value is \(S=R\frac{(1+i)^n-1}{i}\text{.}\) What is it's present value? Well remember that the relationship between present and future value is:</p>
 <div class="displaymath">
 \begin{align*}
 S\amp =\amp P(1+i)^n\\
 P\amp =\amp \frac{S}{(1+i)^n}\text{.}
 \end{align*}
 </div>
-<p id="p-547">From this we get:</p>
+<p id="p-556">From this we get:</p>
 <div class="displaymath">
 \begin{align*}
 P\amp =\amp \frac{R\frac{(1+i)^n-1}{i}}{(1+i)^n}\\
@@ -267,8 +267,8 @@ P\amp =\amp \frac{R\frac{(1+i)^n-1}{i}}{(1+i)^n}\\
 P\amp =\amp R\frac{1-(1+i)^{-n}}{i}
 \end{align*}
 </div>
-<p id="p-548">Suppose that we invest $100,000 in an account that gives 1% monthly interest and I'd like to pull money out for the next 10 years. What is the Max that I could pull out?</p>
-<p id="p-549">Well, we have a present value of \(P=100,000\text{,}\) a monthly interest rate of \(i=0.01\) and \(n=120\) months. So:</p>
+<p id="p-557">Suppose that we invest $100,000 in an account that gives 1% monthly interest and I'd like to pull money out for the next 10 years. What is the Max that I could pull out?</p>
+<p id="p-558">Well, we have a present value of \(P=100,000\text{,}\) a monthly interest rate of \(i=0.01\) and \(n=120\) months. So:</p>
 <div class="displaymath">
 \begin{align*}
 100000\amp =\amp R\frac{1-(1.01)^{-120}}{.01}\\
@@ -277,7 +277,7 @@ R\amp \approx\amp \frac{1000}{0.697005}\\
 \amp \approx\amp \dollar1434.71
 \end{align*}
 </div>
-<p id="p-550">So with an investment like that, you can pull out $1434.71 for the next 10 years.</p></section></section></div></main>
+<p id="p-559">So with an investment like that, you can pull out $1434.71 for the next 10 years.</p></section></section></div></main>
 </div>
 </body>
 </html>

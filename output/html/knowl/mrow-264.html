@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-30T21:17:59Z    *-->
+<!--*    on 2020-06-30T21:35:18Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,11 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\sim(\forall p(x))\amp =\amp \exists \sim p(x)\\
-\sim(\exists p(x))\amp =\amp \forall \sim p(x)
+\sim((p \vee q)\wedge \sim r)\amp =\amp \sim(p \vee q)\vee \sim\sim r\ \ \text{ By DeMorgan's Law }\\
+\amp =\amp \sim(p \vee q)\vee r \ \ \text{ since \(\sim\sim r=r\) }\\
+\amp =\amp (\sim p \wedge \sim q )\vee r \ \ \text{ by DeMorgans law again. }
 \end{align*}
 </div>
-<span class="incontext"><a href="Quantifiers.html#mjx-eqn-mrow-264">in-context</a></span>
+<span class="incontext"><a href="Sec_EquivalentStatements.html#mjx-eqn-mrow-264">in-context</a></span>
 </body>
 </html>

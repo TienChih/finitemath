@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-30T21:17:58Z    *-->
+<!--*    on 2020-06-30T21:35:18Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,24 +13,25 @@
 </head>
 <body>
 <article class="example example-like"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
 </h6>
-<p>Is “\(\sim(p \vee q)=\sim p \vee \sim q\text{?}\)”</p>
-<p>Before we jump into the formal stuff, it helps to concretize this with actual statements. Let's say \(p\) is ``I'll eat breakfast" and \(q\) is ``I'll eat lunch". Then \(p \vee q\) is ``I'll eat breakfast or I'll eat lunch". Is NOT doing this the same as \(\sim p \vee \sim q\) which is ``I'll not eat breakfast or I'll not eat lunch?"</p>
-<p>The first statement is basically ``I'm not eating breakfast or lunch", the second is ``I'll not eat breakfast or I'll not eat lunch", they sound similar spoken aloud but there is a subtle difference.</p>
-<p>Let's say you skip breakfast and eat lunch. Since you ate lunch, \(p\vee q\) is true, so \(\sim(p\vee q)\) must be false, you didn't not eat breakfast or eat lunch. What about \(\sim p \vee \sim q\text{?}\) Well you skipped breakfast so \(\sim p\) is true and therefore \(\sim p \vee \sim q\) is true, so it would seem like they are not the same.</p>
-<p>Formally, we can look at these truth tables:</p>
+<p>Suppose that a agriculture student is raising goats and pigs for a project. The goal is to raise some animals and then sell them for profit. She can raise a total of at most 16 animals. It costs $25 per goat and $ 75 per pig, and she has a budget of $900. Finally, she doesn't particularly like goats, so she won't raise more than 10 of them. If the profit per goat is $12 and profit per pig is $40, how many of each should she raise to maximize profits?</p>
+<p>We should note, if \(x\) is the number of goats and \(y\) the number of pigs, then she is maximizing \(P(x,y)=12x+40y\text{.}\) The inequalities she is dealing with are:</p>
+<div class="displaymath">
+\begin{align*}
+x+y\amp \leq\amp 16\ \ \text{ at most 16 animals }\\
+25x+75y\amp \leq\amp 900\ \ \text{ \dollar900 budget }\\
+x\amp \leq\amp 10\ \ \text{ hates goats }\\
+x\amp \geq\amp 0\ \ \text{ no negative goats }\\
+y\amp \geq\amp 0\ \ \text{ no negative pigs }
+\end{align*}
+</div>
+<p>Sketching our region out we get: \url{https://www.desmos.com/calculator/lwbkvibuyq}, with corner points:</p>
 <div class="displaymath">
 \begin{equation*}
-\begin{array}{c|c|c|c} p\amp q\amp p\vee q\amp  \sim (p\vee q)\\ \hline T \amp  T\amp T\amp F\\ T\amp F\amp T\amp F\\ F\amp T\amp T\amp F\\ F\amp F\amp F\amp T \end{array}
+\begin{array}{c|c|c} x \amp  y \amp  P(x,y)\\ \hline 0 \amp  0 \amp  12(0)+40(0)=0\\ 10 \amp  0 \amp  12(10)+40(0)=120\\ 10 \amp  6 \amp  12(10)+40(6)=360\\ 6 \amp  10 \amp  12(6)+40(10)=472\\ 0 \amp  12 \amp  12(0)+40(12)=480 \end{array}
 \end{equation*}
 </div>
-<div class="displaymath">
-\begin{equation*}
-\begin{array}{c|c|c|c|c} p\amp q\amp \sim p\amp  \sim q \amp  \sim p \vee \sim q\\ \hline T \amp  T\amp F\amp F\amp F\\ T\amp F\amp F\amp T\amp T\\ F\amp T\amp T\amp F\amp T\\ F\amp F\amp T\amp T\amp T \end{array}
-\end{equation*}
-</div>
-<p>So \(\sim(p\vee q)\) i.e. ``I'm not eating breakfast or lunch" is only true if you skip both meals. If you eat either then you lied. On the other hand, \(\sim p \vee \sim q\) i.e. ``I'll skip breakfast or I'll skip lunch" is true so long as you skip either meal. It's only false if you go ahead and eat both.</p>
-<p>So what does \(\sim(p \vee q)\) equal?</p></article><span class="incontext"><a href="Sec_EquivalentStatements.html#example-36">in-context</a></span>
+<p>So the profit is maximized when you raise 12 pigs and no goats. To get a better sense of how we found these corners, these are just system of \(2\times 2\) systems of equations: \url{https://www.desmos.com/calculator/bzczxrkggy}</p></article><span class="incontext"><a href="Sec_LinearOptimization.html#example-36">in-context</a></span>
 </body>
 </html>
