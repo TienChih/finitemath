@@ -21,7 +21,8 @@
     we don't want to test every one of infinitely many points to see what's going on.
   </p>
   <p>
-    So, we note that <m>2x+3y=12</m> is a line: \url{https://www.desmos.com/calculator/spsryp8xxl}
+    So, we note that <m>2x+3y=12</m> is a line: 
+    <interactive desmos="spsryp8xxl"  />
   </p>
   <p>
     The inequality <m>2x+3y\leq12</m> is not just this line,
@@ -37,6 +38,33 @@
     In general, you can pick any point you want and test it.
     For example, if we picked (5,5),
     we would observe that <m>2(5)+3(5)=25\not\leq 12</m> and so we should pick the half that DOESN'T contain <m>(5,5)</m>.
-    Either way, we obtain: \url{https://www.desmos.com/calculator/yvb1odxncf}
+    Either way, we obtain: 
+    <interactive desmos="vs7wtdmkjp"  />
+    Drag the point <m>(a,b)</m> to see why the shaded half consists of the points where <m>2x+3y\leq12</m>.
+
   </p>
+<exercise>
+  <statement>
+    <p>
+      Use Desmos to graph the following inequalities:
+      <ol>
+        <li> <m>3x-y>7</m></li>
+        <li> <m>2x+y>5</m></li>
+        <li> <m>-x+2y\leq 8</m></li>
+      </ol>  
+    </p>  
+  </statement>
+  <solution>
+    <p>
+      We can combine all inequalities into one Desmos graph:
+      <interactive desmos="ei31zrzylx"  />
+      Or we can split them into seperate graphs.
+      <ol>
+        <li> <interactive desmos="11eigcqvrn"  /> </li>
+        <li> <interactive desmos="tvps9iifui"  /> </li>
+        <li> <interactive desmos="inxg70usta"  /> </li>
+      </ol>  
+    </p>
+  </solution> 
+</exercise>  
 </section>

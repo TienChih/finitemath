@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T19:21:57-06:00    *-->
+<!--*    on 2020-06-29T14:01:50-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Product Rule</title>
+<title>Quotient Rule</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
@@ -98,10 +98,10 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_QuotientRule.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-38.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-36.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_ChainRule.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_QuotientRule.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-38.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-36.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_ChainRule.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -120,7 +120,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
-<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
 </ul>
 </li>
 <li class="link">
@@ -169,8 +168,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-37.html" data-scroll="section-37" class="active">Product Rule</a></li>
-<li><a href="section-38.html" data-scroll="section-38">Quotient Rule</a></li>
+<li><a href="section-36.html" data-scroll="section-36">Product Rule</a></li>
+<li><a href="section-37.html" data-scroll="section-37" class="active">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -181,25 +180,48 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-37"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">7.8</span> <span class="title">Product Rule</span>
+<span class="type">Section</span> <span class="codenumber">7.9</span> <span class="title">Quotient Rule</span>
 </h2>
-<p id="p-654">Since the behavior of derivatives of sums behave so well, its tempting to believe that the derivatives of products would behave similarly well, that is, it may be reasonable to guess that \(\frac{d}{dx}[f(x)g(x)]=f'(x)g'(x)\text{.}\) To try to see if this is true, we should ask, is:</p>
-<div class="displaymath">
-\begin{equation*}
-\frac{d}{dx}[x\cdot x]=\frac{d}{dx}[x]\frac{d}{dx}[x]?
-\end{equation*}
-</div>
-<p id="p-655">Well on the left hand side \(\frac{d}{dx}[x\cdot x]=\frac{d}{dx}[x^2]=2x\text{.}\) On the right, \(\frac{d}{dx}[x]\frac{d}{dx}[x]=1\cdot1=1\text{,}\) so these are clearly not the same. What should it be?</p>
-<p id="p-656">We do have a rule for products called the <dfn class="terminology">product rule</dfn> and it states \(\frac{d}{dx}[f(x)g(x)]=f'(x)g(x)+f(x)g'(x)\text{.}\) To see why:</p>
+<section class="introduction" id="introduction-20"><p id="p-662">If we have a rule for differentiating products, we should have a rule for differentiating quotients as well, after all, quotients and products are basically the same thing. So let \(Q(x)=\frac{f(x)}{g(x)}\text{,}\) and ask, what is \(Q'(x)\text{.}\) So:</p>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[f(x)g(x)]\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h},\ \text{ at this stage, I'm going to pull a clever trick and add by 0: }\\
-\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)\textcolor{blue}{-f(x)g(x+h)+f(x)g(x+h)}-f(x)g(x)}{h}\\
-\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x+h)}{h}+\limit{h}{0}\frac{f(x)g(x+h)-f(x)g(x)}{h}\\
-\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}g(x+h)+\limit{h}{0}f(x)\frac{g(x+h)-g(x)}{h}\\
-\amp =\amp f'(x)g(x)+f(x)g'(x)\text{.}
+Q(x)\amp =\amp \frac{f(x)}{g(x)}\\
+Q(x)g(x)\amp =\amp f(x),\ \text{ now we can differentiate both sides }\\
+\frac{d}{dx}[Q(x)g(x)]\amp =\amp f'(x),\ \text{ then by the product rule: }\\
+Q'(x)g(x)+Q(x)g'(x)\amp =\amp f'(x)\\
+Q'(x)g(x)\amp =\amp f'(x)-Q(x)g'(x),\ \text{then recall that  \(Q(x)=\frac{f(x)}{g(x)}\)}\\
+Q'(x)g(x)\amp =\amp f'(x)-\frac{f(x)g'(x)}{g(x)}\\
+Q'(x)g(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)}\\
+Q'(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}
 \end{align*}
-</div></section></div></main>
+</div>
+<p id="p-663">So the <dfn class="terminology">quotient rule</dfn> is \(\frac{d}{dx}[\frac{f(x)}{g(x)}]=\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}\text{.}\)</p></section><section class="subsection" id="subsection-53"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.9.1</span> <span class="title">Examples</span>
+</h3>
+<p id="p-664">So, consider the derivative of \(f(x)=x^3(x+1)\text{,}\) which can be computed:</p>
+<div class="displaymath">
+\begin{align*}
+f'(x)\amp =\amp \frac{d}{dx}[x^3](x+1)+x^3\frac{d}{dx}[x+1]\\
+\amp =\amp 3x^2(x+1)+x^3(1)\\
+\amp =\amp 3x^3+3x^2+x^3\\
+\amp =\amp 4x^3+3x^2\text{.}
+\end{align*}
+</div>
+<p id="p-665">Also note we could have computed this some other way:</p>
+<div class="displaymath">
+\begin{align*}
+f(x)\amp =\amp x^3(x+1)=x^4+x^3\\
+f'(x)\amp =\amp 4x^3+3x^2\text{.}
+\end{align*}
+</div>
+<p id="p-666">Similarly, the derivative of \(g(x)=\frac{x}{x^2+1}\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+g'(x)\amp =\amp \frac{(x^2+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x^2+1]}{(x^2+1)^2}\\
+\amp =\amp \frac{(x^2+1)(1)-x(2x)}{(x^2+1)^2}\\
+\amp =\amp \frac{1-x^2}{(x^2+1)^2}
+\end{align*}
+</div></section></section></div></main>
 </div>
 </body>
 </html>

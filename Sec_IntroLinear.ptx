@@ -6,9 +6,8 @@
     A linear function may always increase,
     or decrease, or stay the same,
     but the rate at which it does so will never change.
-  </p>
- 
-  <example>
+  </p> 
+  <example xml:id="Example_IsLinear">
     <statement>
       <p>
         Consider a function who takes on the following values:
@@ -72,7 +71,7 @@
   <p>
     It always helps to illustrate a concept with a <term>non</term>-example.
   </p>
-  <example>
+  <example xml:id="Example_IsNotLinear">
     <statement>
       <p>
         Consider a function who takes on the following values:
@@ -131,17 +130,8 @@
       </image>
 </figure>      
       <p>
-        An interactive version of this graph may be found here: <figure><interactive desmos="za4t3zanlr"  /><caption>Graph of $y=x^2$.</caption></figure>
+        An interactive version of this graph may be found here: <interactive desmos="za4t3zanlr"  />
       </p>
     </solution>
   </example>
-  <p>
-    We can see from the above examples that linear functions are the functions whose graphs may be represented with a straight line.
-    This is sensible: after all,
-    straight lines move in the same direction,
-    and neither deviate one way nor another,
-    just as linear functions increase,
-    stay constant or decrease at a constant rate.
-    This is where the name <term>linear</term> functions come from.
-  </p>
 </section>

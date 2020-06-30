@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T19:21:57-06:00    *-->
+<!--*    on 2020-06-29T14:01:50-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -120,7 +120,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
-<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
 </ul>
 </li>
 <li class="link">
@@ -169,8 +168,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-37.html" data-scroll="section-37">Product Rule</a></li>
-<li><a href="section-38.html" data-scroll="section-38">Quotient Rule</a></li>
+<li><a href="section-36.html" data-scroll="section-36">Product Rule</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -183,18 +182,18 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_AvgRoC"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Average rates of change</span>
 </h2>
-<p id="p-612">Consider a rocket that is launched into the air and has height \(f(x)=-5x^2+20x\) meters in \(x\) seconds. \url{https://www.desmos.com/calculator/1rwsdsbcm9}. How fast is the rocket traveling when it's launched (\(x=0\) seconds)?</p>
-<p id="p-613">Turns out, it's not so easy to think about what this is, we don't typically think about speeds in terms of instantaneous action. Our methods of measuring speed reflects this, it's always stuff like meters <dfn class="terminology">PER SECOND</dfn>, miles <dfn class="terminology">PER HOUR</dfn>, in other words speed is some change in distance <dfn class="terminology">OVER TIME</dfn> and that period of time is not typically 0.</p>
-<p id="p-614">So what now? Lets start by asking an easier question, what is the average speed of the rocket over the first 3 seconds?</p>
-<p id="p-615">It's best in a scenario like this to NOT overthink the underlying problem. At 0 seconds, you're \(f(0)=-5(0)^2+20(0)=0\) meters off the ground. After 3 seconds you are \(f(3)=-5(3^2)+20(3)=15\) meters off the ground. So you rose by 15 meters in 3 seconds? You're aveerage speed must be 5 meters per second. \url{https://www.desmos.com/calculator/6k61owwnrd}.</p>
-<p id="p-616">In fact: <dfn class="terminology">The average rate of change of a function \(f(x)\) over the interval \([a,b]\) is \(m=\frac{f(b)-f(a)}{b-a}\text{.}\)</dfn> This is just the slope of the line connecting \((a,f(a))\) and \((b,f(b))\text{.}\)</p>
-<p id="p-617">Following this idea, the average velocity of our rocket over the 1st 2 seconds is: \(m=\frac{f(2)-f(0)}{2-0}=\frac{20}{2}=10\) meters per second. \url{https://www.desmos.com/calculator/ihauynuflo}</p>
-<p id="p-618">The average velocity of our rocket over the 1st second is: \(m=\frac{f(1)-f(0)}{1-0}=\frac{15}{1}=15\) meters per second. \url{https://www.desmos.com/calculator/jce0fd1bsr}</p>
-<p id="p-619">The average velocity of our rocket over the 1st half second is: \(m=\frac{f(.5)-f(0)}{.5-0}=\frac{8.75}{.5}=17.5\) meters per second. \url{https://www.desmos.com/calculator/xpxlltf8f5}</p>
-<p id="p-620">The average velocity of our rocket over the 1st quarter second is: \(m=\frac{f(.25)-f(0)}{.25-0}=\frac{4.6875}{.25}=18.75\) meters per second. \url{https://www.desmos.com/calculator/74kpvz17c5}</p>
-<p id="p-621">The average velocity of our rocket over the 1st tenth of a second is: \(m=\frac{f(.1)-f(0)}{.1-0}=\frac{1.95}{.1}=19.5\) meters per second. \url{https://www.desmos.com/calculator/qyvtzmyg8k}</p>
-<p id="p-622">The average velocity of our rocket over the 1st hundreth of a second is: \(m=\frac{f(.01)-f(0)}{.01-0}=\frac{.1995}{.1}=19.95\) meters per second. \url{https://www.desmos.com/calculator/hrawtifwdw}</p>
-<p id="p-623">And it does seem like these numbers are getting closer and closer to 20 meters per second as \(b\) gets closer to 0. But if I plug in \(0\) for \(b\text{,}\) I get an undefined \(0/0\) fraction. Oh, if only there were some concept in mathematics to describe the values of a function as your inputs slowly approach a given value.........</p></section></div></main>
+<p id="p-617">Consider a rocket that is launched into the air and has height \(f(x)=-5x^2+20x\) meters in \(x\) seconds. \url{https://www.desmos.com/calculator/1rwsdsbcm9}. How fast is the rocket traveling when it's launched (\(x=0\) seconds)?</p>
+<p id="p-618">Turns out, it's not so easy to think about what this is, we don't typically think about speeds in terms of instantaneous action. Our methods of measuring speed reflects this, it's always stuff like meters <dfn class="terminology">PER SECOND</dfn>, miles <dfn class="terminology">PER HOUR</dfn>, in other words speed is some change in distance <dfn class="terminology">OVER TIME</dfn> and that period of time is not typically 0.</p>
+<p id="p-619">So what now? Lets start by asking an easier question, what is the average speed of the rocket over the first 3 seconds?</p>
+<p id="p-620">It's best in a scenario like this to NOT overthink the underlying problem. At 0 seconds, you're \(f(0)=-5(0)^2+20(0)=0\) meters off the ground. After 3 seconds you are \(f(3)=-5(3^2)+20(3)=15\) meters off the ground. So you rose by 15 meters in 3 seconds? You're aveerage speed must be 5 meters per second. \url{https://www.desmos.com/calculator/6k61owwnrd}.</p>
+<p id="p-621">In fact: <dfn class="terminology">The average rate of change of a function \(f(x)\) over the interval \([a,b]\) is \(m=\frac{f(b)-f(a)}{b-a}\text{.}\)</dfn> This is just the slope of the line connecting \((a,f(a))\) and \((b,f(b))\text{.}\)</p>
+<p id="p-622">Following this idea, the average velocity of our rocket over the 1st 2 seconds is: \(m=\frac{f(2)-f(0)}{2-0}=\frac{20}{2}=10\) meters per second. \url{https://www.desmos.com/calculator/ihauynuflo}</p>
+<p id="p-623">The average velocity of our rocket over the 1st second is: \(m=\frac{f(1)-f(0)}{1-0}=\frac{15}{1}=15\) meters per second. \url{https://www.desmos.com/calculator/jce0fd1bsr}</p>
+<p id="p-624">The average velocity of our rocket over the 1st half second is: \(m=\frac{f(.5)-f(0)}{.5-0}=\frac{8.75}{.5}=17.5\) meters per second. \url{https://www.desmos.com/calculator/xpxlltf8f5}</p>
+<p id="p-625">The average velocity of our rocket over the 1st quarter second is: \(m=\frac{f(.25)-f(0)}{.25-0}=\frac{4.6875}{.25}=18.75\) meters per second. \url{https://www.desmos.com/calculator/74kpvz17c5}</p>
+<p id="p-626">The average velocity of our rocket over the 1st tenth of a second is: \(m=\frac{f(.1)-f(0)}{.1-0}=\frac{1.95}{.1}=19.5\) meters per second. \url{https://www.desmos.com/calculator/qyvtzmyg8k}</p>
+<p id="p-627">The average velocity of our rocket over the 1st hundreth of a second is: \(m=\frac{f(.01)-f(0)}{.01-0}=\frac{.1995}{.1}=19.95\) meters per second. \url{https://www.desmos.com/calculator/hrawtifwdw}</p>
+<p id="p-628">And it does seem like these numbers are getting closer and closer to 20 meters per second as \(b\) gets closer to 0. But if I plug in \(0\) for \(b\text{,}\) I get an undefined \(0/0\) fraction. Oh, if only there were some concept in mathematics to describe the values of a function as your inputs slowly approach a given value.........</p></section></div></main>
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T19:21:54-06:00    *-->
+<!--*    on 2020-06-29T14:01:48-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -120,7 +120,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
-<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
 </ul>
 </li>
 <li class="link">
@@ -169,8 +168,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-37.html" data-scroll="section-37">Product Rule</a></li>
-<li><a href="section-38.html" data-scroll="section-38">Quotient Rule</a></li>
+<li><a href="section-36.html" data-scroll="section-36">Product Rule</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -183,49 +182,49 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Circuits"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.6</span> <span class="title">Circuits</span>
 </h2>
-<p id="p-418">Consider</p>
+<p id="p-423">Consider</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{circuitikz}  \draw (0,0) to[ospst=$p$] (2,0);  \end{circuitikz}
 \end{equation*}
 </div>
-<p id="p-419">This is the diagram of the “circuit” \(p\) Imagine \(T\) as been the bridge open and \(F\) as the bridge closed. Can you cross over, well, yes as long as the bridge is open, i.e. as long as \(p\) is true.</p>
-<p id="p-420">Now how about this:</p>
-<p id="p-421">Consider</p>
+<p id="p-424">This is the diagram of the “circuit” \(p\) Imagine \(T\) as been the bridge open and \(F\) as the bridge closed. Can you cross over, well, yes as long as the bridge is open, i.e. as long as \(p\) is true.</p>
+<p id="p-425">Now how about this:</p>
+<p id="p-426">Consider</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{circuitikz}  \draw (0,0) to[ospst=$p$] (2,0);  \draw (2,0) to[ospst=$q$] (4,0);  \end{circuitikz}
 \end{equation*}
 </div>
-<p id="p-422">Can you get to the other side? Well, as long as both bridges are open, i.e. \(p\wedge q\text{.}\)</p>
-<p id="p-423">How about this?</p>
+<p id="p-427">Can you get to the other side? Well, as long as both bridges are open, i.e. \(p\wedge q\text{.}\)</p>
+<p id="p-428">How about this?</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{circuitikz}  \draw (0,0) to (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$p$] (4,1);  \draw (2,-1) to[ospst=$q$] (4,-1);  \draw(4,1) to (4,0); \draw(4,-1) to (4,0);  \draw(4,0) to (6,0);   \end{circuitikz}
 \end{equation*}
 </div>
-<p id="p-424">Can you get from one side to the other? Yes, as long as either bridge is open we can, so this is \(p\vee q\text{.}\)</p>
-<p id="p-425">Using these circuit diagrams, we can model any logical statement. For example \(p\wedge ((q\wedge r) \vee (\sim q \wedge \sim r))\) would be:</p>
+<p id="p-429">Can you get from one side to the other? Yes, as long as either bridge is open we can, so this is \(p\vee q\text{.}\)</p>
+<p id="p-430">Using these circuit diagrams, we can model any logical statement. For example \(p\wedge ((q\wedge r) \vee (\sim q \wedge \sim r))\) would be:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{circuitikz}  \draw (0,0) to[ospst=$p$] (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$q$] (3,1); \draw (3,1) to[ospst=$r$] (4,1);  \draw (2,-1) to[ospst=$\sim q$] (3,-1); \draw (3,-1) to[ospst=$\sim r$] (4,-1);  \draw(4,1) to (4,0); \draw(4,-1) to (4,0);  \draw(4,0) to (5,0);   \end{circuitikz}
 \end{equation*}
 </div>
-<p id="p-426">And</p>
+<p id="p-431">And</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{circuitikz}  \draw (0,0) to[ospst=$p$] (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$q$] (3,1); \draw (3,1) to[ospst=$r$] (4,1);  \draw (2,-1) to (3,-1); \draw (3,-1) to (3,-.5); \draw (3,-1) to (3,-1.5);  \draw (3,-.5) to[ospst=$\sim s$] (4,-.5); \draw (3,-1.5) to[ospst=$\sim t$] (4,-1.5);      \draw(4,1) to (4,0); \draw(4,-1.5) to (4,0);  \draw(4,0) to (5,0);   \end{circuitikz}
 \end{equation*}
 </div>
 <p data-braille="continuation">would be \(p \wedge ((q\wedge r)\vee (\sim s\vee \sim t))\text{.}\)</p>
-<p id="p-427">Here, it again helps to be able to break everything down into ands/ors. We don't have something for implications, but of we wanted to do the circuit for \(\sim((p\vee q)\to r)\text{,}\) we could note:</p>
+<p id="p-432">Here, it again helps to be able to break everything down into ands/ors. We don't have something for implications, but of we wanted to do the circuit for \(\sim((p\vee q)\to r)\text{,}\) we could note:</p>
 <div class="displaymath">
 \begin{align*}
 \sim((p\vee q)\to r)\amp =\amp \sim(\sim(p\vee q)\vee r)\\
 \amp =\amp (p\vee q)\wedge \sim r\text{.}
 \end{align*}
 </div>
-<p id="p-428">So it's circuit would be:</p>
+<p id="p-433">So it's circuit would be:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{circuitikz}  \draw (0,0) to (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$p$] (4,1);  \draw (2,-1) to[ospst=$q$] (4,-1);  \draw(4,1) to (4,0); \draw(4,-1) to (4,0);  \draw(4,0) to[ospst=$\sim r$] (6,0);   \end{circuitikz}

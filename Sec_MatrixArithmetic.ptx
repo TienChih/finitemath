@@ -21,7 +21,7 @@
       <statement>
         <p>
           Recall that in <xref ref="Example_Vitamin">Example</xref> Margo has three supplements:
-          the first contains 20% vitamin A, 20% vitamin D and 20\vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E.
+          the first contains 20% vitamin A, 20% vitamin D and 20% vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E.
         </p>
         <p>
           On Monday she eats 100 mg of supplement 1, 100 mg of supplement 2 and 150 mg of supplement 3.
@@ -88,14 +88,14 @@
           So, how much Vitamin A does Margo get on Monday?
           She took 100 mg of Supplement 1, of which 20% is Vitamin A, 100 mg of Supplement 2, of which 10% is Vitamin A, and 150 mg of Supplement 1, of which 50% is Vitamin A:
           <me>
-            \left( \begin{array}{rrr} \textcolor{red}{0.2} \amp  \textcolor{red}{0.1} \amp  \textcolor{red}{0.5}\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} \textcolor{blue}{100} \amp  150\\ \textcolor{blue}{100} \amp  50\\ \textcolor{blue}{150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} \textcolor{red}{0.2}\cdot\textcolor{blue}{100}+\textcolor{red}{0.1}\cdot\textcolor{blue}{100}+\textcolor{red}{0.5}\cdot\textcolor{blue}{150} \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)=\left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)
+            \left( \begin{array}{rrr} \color{red}{0.2} \amp  0.1 \amp  0.5\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} \color{blue}{100} \amp  150\\ \color{blue}{100} \amp  50\\ \color{blue}{150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} \color{red}{0.2}\cdot\color{blue}{100}+\color{red}{0.1}\cdot\color{blue}{100}+\color{red}{0.5}\cdot\color{blue}{150} \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)=\left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)
           </me>.
         </p>
         <p>
           So on Monday, Margo got 105 mg of vitamin A. What about the amount of vitamin D she received on Wednesday?
           She took 150 mg of Supplement 1, of which 20% is Vitamin D, 50 mg of Supplement 2, of which 30% is Vitamin D, and 100 mg of Supplement 1, of which 10% is Vitamin A:
           <md>
-            <mrow>\left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ \textcolor{red}{0.2} \amp  \textcolor{red}{0.3} \amp  \textcolor{red}{0.1}\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} 100 \amp  \textcolor{blue}{150}\\ 100 \amp  \textcolor{blue}{50}\\ 150 \amp  \textcolor{blue}{100} \end{array} \right)\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  \textcolor{red}{0.2}\cdot\textcolor{blue}{150}+\textcolor{red}{0.3}\cdot\textcolor{blue}{50}+\textcolor{red}{0.1}\cdot\textcolor{blue}{100} \\ ? \amp  ? \end{array} \right)</mrow>
+            <mrow>\left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ \color{red}{0.2} \amp  \color{red}{0.3} \amp  \color{red}{0.1}\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} 100 \amp  \color{blue}{150}\\ 100 \amp  \color{blue}{50}\\ 150 \amp  \color{blue}{100} \end{array} \right)\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  \color{red}{0.2}\cdot\color{blue}{150}+\color{red}{0.3}\cdot\color{blue}{50}+\color{red}{0.1}\cdot\color{blue}{100} \\ ? \amp  ? \end{array} \right)</mrow>
             <mrow>\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  55 \\ ? \amp  ? \end{array} \right)</mrow>
           </md>.
         </p>
@@ -126,7 +126,7 @@
           Then, given a <m>m\times n</m> matrix <m>A</m> and a <m>n\times k</m> matrix <m>B</m>,
           we define <m>AB</m> the product of <m>A</m> and <m>B</m> to be a <m>m\times k</m> matrix where:
           <me>
-            (AB)_{ij}=\begin{pmatrix}\textcolor{red}{a_{i1}} \amp  \textcolor{red}{a_{i2}} \amp  \cdots \amp  \textcolor{red}{a_{in}} \end{pmatrix} \begin{pmatrix}\textcolor{blue}{b_{1j}} \\ \textcolor{blue}{b_{2j}} \\ \vdots \\ \textcolor{blue}{b_{nj}} \end{pmatrix} =\begin{pmatrix}\textcolor{red}{a_{i1}}\textcolor{blue}{b_{1j}}+\textcolor{red}{a_{i2}}\textcolor{blue}{b_{2j}}+\cdots+\textcolor{red}{a_{in}}\textcolor{blue}{b_{nj}} \end{pmatrix}
+            (AB)_{ij}=\begin{pmatrix}\color{red}{a_{i1}} \amp  \color{red}{a_{i2}} \amp  \cdots \amp  \color{red}{a_{in}} \end{pmatrix} \begin{pmatrix}\color{blue}{b_{1j}} \\ \color{blue}{b_{2j}} \\ \vdots \\ \color{blue}{b_{nj}} \end{pmatrix} =\begin{pmatrix}\color{red}{a_{i1}}\color{blue}{b_{1j}}+\color{red}{a_{i2}}\color{blue}{b_{2j}}+\cdots+\color{red}{a_{in}}\color{blue}{b_{nj}} \end{pmatrix}
           </me>
         </p>
       </statement>
@@ -250,10 +250,18 @@
       Matrix sums are much more straight forward than their products.
       Two Matrices need to have the same dimensions in order to be summed,
       and the sum is just the sum of the entries, so:
-      <me>
-        \begin{pmatrix}a \amp  b \\ c \amp  d \end{pmatrix} + \begin{pmatrix}w \amp  x \\ y \amp  z \end{pmatrix} =\begin{pmatrix}a+w \amp  b+x \\ c+y \amp  d+z \end{pmatrix}
-      </me>
     </p>
+    <definition xml:id="Defn_MatrixSum">
+      <statement>
+        <p>
+          Given two <m>m\times n</m> matrices <m>A</m> and <m>B</m>,
+          we define <m>A+B</m> the sum of <m>A</m> and <m>B</m> to be a <m>m\times n</m> matrix where:
+          <me>
+            (AB)_{ij}= (A_{ij}+B_{ij})
+          </me>
+        </p>
+      </statement>
+    </definition>    
     <example>
       <statement>
         <p>
@@ -261,15 +269,54 @@
           NOW given <m>F</m> female and <m>M</m> male students,
           how much money will go to Elderly and the Homeless?
           <md>
-            <mrow>\begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \left( \begin{pmatrix}2 \amp  1 \\ 1 \amp  2 \\ 2 \amp  2 \end{pmatrix}  + \begin{pmatrix}2 \amp  2 \\ 2 \amp  2 \\ 2 \amp  2 \end{pmatrix}    \right)\begin{pmatrix}F\\M \end{pmatrix} \amp =\amp \begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \begin{pmatrix}4 \amp  3 \\ 3 \amp  4 \\ 4 \amp  4 \end{pmatrix}  \begin{pmatrix}F\\M \end{pmatrix}</mrow>
-            <mrow>\amp =\amp \begin{pmatrix}4.7 \amp  4.4 \\ 7.3 \amp   6.6 \end{pmatrix} \begin{pmatrix}F\\M \end{pmatrix}</mrow>
-            <mrow>\amp =\amp \begin{pmatrix}4.7F+4.4M\\ 7.3F+6.6M \end{pmatrix}</mrow>
+            <mrow>\begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \left( \begin{pmatrix}2 \amp  1 \\ 1 \amp  2 \\ 2 \amp  2 \end{pmatrix}  + \begin{pmatrix}2 \amp  2 \\ 2 \amp  2 \\ 2 \amp  2 \end{pmatrix}    \right)\begin{pmatrix}F\\M \end{pmatrix} \amp = \begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \begin{pmatrix}4 \amp  3 \\ 3 \amp  4 \\ 4 \amp  4 \end{pmatrix}  \begin{pmatrix}F\\M \end{pmatrix}</mrow>
+            <mrow>\amp = \begin{pmatrix}4.7 \amp  4.4 \\ 7.3 \amp   6.6 \end{pmatrix} \begin{pmatrix}F\\M \end{pmatrix}</mrow>
+            <mrow>\amp = \begin{pmatrix}4.7F+4.4M\\ 7.3F+6.6M \end{pmatrix}</mrow>
           </md>
         </p>
         <p>
-          So $<m>4.7 F+4.4M</m> for Elderly and <m>\dollar7.3 F+6.6M</m> for Homeless.
+          So $<m>(4.7 F+4.4M)</m> for Elderly and $<m>(7.3 F+6.6M)</m> for Homeless.
         </p>
       </statement>
     </example>
   </subsection>
+  <subsection>
+  <title>Computation using Sage</title>
+  <p>
+    As usual, this seems like it should be much easier using technology.
+    Let's suppose <m>A=\begin{pmatrix}1 \amp  2 \\ 3 \amp  4 \end{pmatrix} , B=\begin{pmatrix}5 \amp  6 \\ 7 \amp  8 \end{pmatrix}</m>.  We can use Sage to find <m>A+B</m>:
+    
+  </p>
+    <p>
+      <sage>
+        <input>
+          A=matrix(QQ, [[1,2],[3,4]])
+          B=matrix(QQ, [[5,6],[7,8]])
+          print(A+B)
+        </input>
+        <output>
+        </output>
+      </sage>
+    </p>
+    <p>
+      Use: 
+      <pre>
+        print(A*B)
+      </pre>
+      To find <m>AB</m>  and 
+       <pre>
+        print(B*A)
+      </pre>
+      to find <m>BA</m>.
+
+
+    </p>
+   <solution>
+    <md>
+      <mrow>A+B\amp = \begin{pmatrix}6 \amp  8 \\ 10 \amp  12 \end{pmatrix}</mrow>
+      <mrow>AB\amp = \begin{pmatrix}19 \amp  22 \\ 43 \amp  50 \end{pmatrix}</mrow>
+      <mrow>BA\amp = \begin{pmatrix}23 \amp  34 \\ 31 \amp  46 \end{pmatrix}</mrow>
+    </md>
+  </solution>
+</subsection>
 </section>

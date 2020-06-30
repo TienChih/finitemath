@@ -209,10 +209,10 @@
     </p>
     <p>
       We could solve this the same way we did <xref ref="Example_GaussJordan">Example</xref>,
-      but your first thought here is probably ``I don't want to do this." Yeah,
+      but your first thought here is probably "I don't want to do this." Yeah,
       me neither.
       One thing to note is that this process of finding a reduced row echelon form of a matrix is fairly mechanical.
-      So, we should be able to do this with a machine.
+      Thus, it is only natural that we should  do this with a machine.
     </p>
     <p>
       <sage>

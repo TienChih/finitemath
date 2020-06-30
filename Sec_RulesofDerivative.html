@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T19:21:57-06:00    *-->
+<!--*    on 2020-06-29T14:01:50-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -120,7 +120,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
-<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
 </ul>
 </li>
 <li class="link">
@@ -169,8 +168,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-37.html" data-scroll="section-37">Product Rule</a></li>
-<li><a href="section-38.html" data-scroll="section-38">Quotient Rule</a></li>
+<li><a href="section-36.html" data-scroll="section-36">Product Rule</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -183,20 +182,20 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_RulesofDerivative"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.4</span> <span class="title">Basic rules of the derivative</span>
 </h2>
-<p id="p-628">At this point we probably are, or should be, sick of computing limits like:</p>
+<p id="p-633">At this point we probably are, or should be, sick of computing limits like:</p>
 <div class="displaymath">
 \begin{equation*}
 \limit{h}{0}\frac{2(x+h)^3-4(x+h)-(2x^3-4x)}{h}\text{.}
 \end{equation*}
 </div>
-<p id="p-629">This is technically the derivative of \(f(x)=2x^3-4x\text{.}\) But there's 2 sides to mathematics, theres the formal definition, and then we should leverage our knowledge and try to find shortcuts to some of these things. So let's figure some of these things out.</p>
-<p id="p-630">Given functions \(f(x), g(x)\) and constants \(a,b\) we have:</p>
+<p id="p-634">This is technically the derivative of \(f(x)=2x^3-4x\text{.}\) But there's 2 sides to mathematics, theres the formal definition, and then we should leverage our knowledge and try to find shortcuts to some of these things. So let's figure some of these things out.</p>
+<p id="p-635">Given functions \(f(x), g(x)\) and constants \(a,b\) we have:</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx}[a(f)x)+bg(x)]=af'(x)+bg'(x)\text{.}
 \end{equation*}
 </div>
-<p id="p-631">How do we know that? Well:</p>
+<p id="p-636">How do we know that? Well:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[a(f)x)+bg(x)]\amp =\amp \limit{h}{0}\frac{af(x+h)+bg(x+h)-(af(x)-bg(x))}{h}\\

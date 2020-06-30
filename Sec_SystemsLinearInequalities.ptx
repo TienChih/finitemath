@@ -10,18 +10,21 @@
       <p>
         What is the solution to the following system:
         <md>
-          <mrow>2x+3y\amp \leq\amp 12</mrow>
-          <mrow>x\amp \geq\amp 0</mrow>
-          <mrow>y\amp \geq\amp 0</mrow>
+          <mrow>2x+3y\amp \leq 12</mrow>
+          <mrow>x\amp \geq 0</mrow>
+          <mrow>y\amp \geq 0</mrow>
         </md>
       </p>
       <p>
         We know from earlier that the solutions have to lie in the bottom right hand of the plane on or below the line <m>2x+3y=12</m>.
         We also know that neither the <m>x</m> or <m>y</m> values can be negative.
-        What's left is a sort of triangle: \url{https://www.desmos.com/calculator/2dekmagipa}, the overlap of regions where all 3 inequalities are true.
+        What's left is a sort of triangle:
+        <interactive desmos="2dekmagipa"  />
+        This is the overlap of regions where all 3 inequalities are true.
       </p>
       <p>
-        This may be easier to see: \url{https://www.desmos.com/calculator/apmcey4kfa}.
+        It is easier to see this region by nesting the inequalities as follows:
+        <interactive desmos="apmcey4kfa"  />
       </p>
     </statement>
   </example>

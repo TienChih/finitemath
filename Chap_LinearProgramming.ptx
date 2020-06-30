@@ -1,5 +1,11 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_LinearProgramming">
   <title>Linear Programming</title>
+  <introduction>
+    <p>
+      In this chapter, we introduce the notion of Linear Inequalities and Linear Optimization (or Linear Programming).
+      The goal is to solve maximization and minimization problems, subject to bounds.  For example, a company with limited raw materials tries to decide on which goods to produce to maximize profit, or a nutritionist tries to find a meal that satisfied certain nutrional requirements while minimizing the number of ingredients used.  This will be the type of problem we will solve!
+    </p>
+  </introduction>
   <xi:include  href="Sec_LinearInequalities.ptx"/>
   <xi:include  href="Sec_SystemsLinearInequalities.ptx"/>
   <xi:include  href="Sec_LinearOptimization.ptx"/>

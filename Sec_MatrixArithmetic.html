@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T19:21:53-06:00    *-->
+<!--*    on 2020-06-29T14:01:46-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -41,7 +41,15 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -98,10 +106,10 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_SystemasMatrix.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Matrices.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_MatrixSage.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_SystemasMatrix.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Matrices.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Chap_LinearProgramming.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_SystemasMatrix.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Matrices.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_MatrixSage.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_SystemasMatrix.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Matrices.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Chap_LinearProgramming.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -120,7 +128,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic" class="active">Products and Sums of Matrices</a></li>
-<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
 </ul>
 </li>
 <li class="link">
@@ -169,8 +176,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-37.html" data-scroll="section-37">Product Rule</a></li>
-<li><a href="section-38.html" data-scroll="section-38">Quotient Rule</a></li>
+<li><a href="section-36.html" data-scroll="section-36">Product Rule</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -189,7 +196,7 @@ MathJax.Hub.Config({
 <p id="p-280">We begin with a motivating example:</p>
 <article class="example example-like" id="Example_VitProd"><a data-knowl="" class="id-ref original" data-refid="hk-Example_VitProd"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_VitProd"><article class="example example-like"><p id="p-281">Recall that in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a> Margo has three supplements: the first contains 20% vitamin A, 20% vitamin D and 20\vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_VitProd"><article class="example example-like"><p id="p-281">Recall that in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a> Margo has three supplements: the first contains 20% vitamin A, 20% vitamin D and 20% vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E.</p>
 <p id="p-282">On Monday she eats 100 mg of supplement 1, 100 mg of supplement 2 and 150 mg of supplement 3. On Wednesday she eats 150 mg of supplement 1, 50 mg of supplement 2 and 100 mg of supplement 3. Putting aside that this is an ill advised way to take supplements, how much of each vitamin did she get on each day?</p>
 <p id="p-283">We first let</p>
 <div class="displaymath">
@@ -213,13 +220,13 @@ B= \left( \begin{array}{rrr} 100 \amp  150\\ 100 \amp  50\\ 150 \amp  100 \end{a
 <p id="p-288">So, how much Vitamin A does Margo get on Monday? She took 100 mg of Supplement 1, of which 20% is Vitamin A, 100 mg of Supplement 2, of which 10% is Vitamin A, and 150 mg of Supplement 1, of which 50% is Vitamin A:</p>
 <div class="displaymath">
 \begin{equation*}
-\left( \begin{array}{rrr} \textcolor{red}{0.2} \amp  \textcolor{red}{0.1} \amp  \textcolor{red}{0.5}\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} \textcolor{blue}{100} \amp  150\\ \textcolor{blue}{100} \amp  50\\ \textcolor{blue}{150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} \textcolor{red}{0.2}\cdot\textcolor{blue}{100}+\textcolor{red}{0.1}\cdot\textcolor{blue}{100}+\textcolor{red}{0.5}\cdot\textcolor{blue}{150} \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)=\left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)\text{.}
+\left( \begin{array}{rrr} \color{red}{0.2} \amp  0.1 \amp  0.5\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} \color{blue}{100} \amp  150\\ \color{blue}{100} \amp  50\\ \color{blue}{150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} \color{red}{0.2}\cdot\color{blue}{100}+\color{red}{0.1}\cdot\color{blue}{100}+\color{red}{0.5}\cdot\color{blue}{150} \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)=\left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)\text{.}
 \end{equation*}
 </div>
 <p id="p-289">So on Monday, Margo got 105 mg of vitamin A. What about the amount of vitamin D she received on Wednesday? She took 150 mg of Supplement 1, of which 20% is Vitamin D, 50 mg of Supplement 2, of which 30% is Vitamin D, and 100 mg of Supplement 1, of which 10% is Vitamin A:</p>
 <div class="displaymath">
 \begin{align*}
-\left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ \textcolor{red}{0.2} \amp  \textcolor{red}{0.3} \amp  \textcolor{red}{0.1}\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} 100 \amp  \textcolor{blue}{150}\\ 100 \amp  \textcolor{blue}{50}\\ 150 \amp  \textcolor{blue}{100} \end{array} \right)\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  \textcolor{red}{0.2}\cdot\textcolor{blue}{150}+\textcolor{red}{0.3}\cdot\textcolor{blue}{50}+\textcolor{red}{0.1}\cdot\textcolor{blue}{100} \\ ? \amp  ? \end{array} \right)\\
+\left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ \color{red}{0.2} \amp  \color{red}{0.3} \amp  \color{red}{0.1}\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} 100 \amp  \color{blue}{150}\\ 100 \amp  \color{blue}{50}\\ 150 \amp  \color{blue}{100} \end{array} \right)\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  \color{red}{0.2}\cdot\color{blue}{150}+\color{red}{0.3}\cdot\color{blue}{50}+\color{red}{0.1}\cdot\color{blue}{100} \\ ? \amp  ? \end{array} \right)\\
 \amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  55 \\ ? \amp  ? \end{array} \right)\text{.}
 \end{align*}
 </div>
@@ -237,7 +244,7 @@ B= \left( \begin{array}{rrr} 100 \amp  150\\ 100 \amp  50\\ 150 \amp  100 \end{a
 <p id="p-293">For any matrix \(M\text{,}\) let \((M)_{ij}=m_{ij}\) denote the entry in the \(i\)th row and \(j\)th column. Then, given a \(m\times n\) matrix \(A\) and a \(n\times k\) matrix \(B\text{,}\) we define \(AB\) the product of \(A\) and \(B\) to be a \(m\times k\) matrix where:</p>
 <div class="displaymath">
 \begin{equation*}
-(AB)_{ij}=\begin{pmatrix}\textcolor{red}{a_{i1}} \amp  \textcolor{red}{a_{i2}} \amp  \cdots \amp  \textcolor{red}{a_{in}} \end{pmatrix} \begin{pmatrix}\textcolor{blue}{b_{1j}} \\ \textcolor{blue}{b_{2j}} \\ \vdots \\ \textcolor{blue}{b_{nj}} \end{pmatrix} =\begin{pmatrix}\textcolor{red}{a_{i1}}\textcolor{blue}{b_{1j}}+\textcolor{red}{a_{i2}}\textcolor{blue}{b_{2j}}+\cdots+\textcolor{red}{a_{in}}\textcolor{blue}{b_{nj}} \end{pmatrix}
+(AB)_{ij}=\begin{pmatrix}\color{red}{a_{i1}} \amp  \color{red}{a_{i2}} \amp  \cdots \amp  \color{red}{a_{in}} \end{pmatrix} \begin{pmatrix}\color{blue}{b_{1j}} \\ \color{blue}{b_{2j}} \\ \vdots \\ \color{blue}{b_{nj}} \end{pmatrix} =\begin{pmatrix}\color{red}{a_{i1}}\color{blue}{b_{1j}}+\color{red}{a_{i2}}\color{blue}{b_{2j}}+\cdots+\color{red}{a_{in}}\color{blue}{b_{nj}} \end{pmatrix}
 \end{equation*}
 </div></article><p id="p-294"><dfn class="terminology">Note that the number of columns of \(A\) and the number of rows of \(B\) must be the same.</dfn> Recall <a class="xref" data-knowl="./knowl/Example_VitProd.html" title="Example 2.3.1">Example 2.3.1</a>, the outputs of \(B\) corresponded to the rows, and the inputs of \(A\) corresponded to it's columns, so these had to match up. This number is also the \(n\) is <a class="xref" data-knowl="./knowl/Defn_MatrixProd.html" title="Definition 2.3.2">Definition 2.3.2</a>.</p>
 <article class="example example-like" id="Example_MoreMatrixProducts"><a data-knowl="" class="id-ref original" data-refid="hk-Example_MoreMatrixProducts"><h6 class="heading">
@@ -316,22 +323,42 @@ BA=\begin{pmatrix}2\amp 6\\-1\amp -3 \end{pmatrix} \begin{pmatrix}1\amp 2\\2\amp
 <span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Sums of Matrices</span>
 </h3>
 <p id="p-308">Matrix sums are much more straight forward than their products. Two Matrices need to have the same dimensions in order to be summed, and the sum is just the sum of the entries, so:</p>
+<article class="definition definition-like" id="Defn_MatrixSum"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
+</h6>
+<p id="p-309">Given two \(m\times n\) matrices \(A\) and \(B\text{,}\) we define \(A+B\) the sum of \(A\) and \(B\) to be a \(m\times n\) matrix where:</p>
 <div class="displaymath">
 \begin{equation*}
-\begin{pmatrix}a \amp  b \\ c \amp  d \end{pmatrix} + \begin{pmatrix}w \amp  x \\ y \amp  z \end{pmatrix} =\begin{pmatrix}a+w \amp  b+x \\ c+y \amp  d+z \end{pmatrix}
+(AB)_{ij}= (A_{ij}+B_{ij})
 \end{equation*}
-</div>
-<article class="example example-like" id="example-30"><a data-knowl="" class="id-ref original" data-refid="hk-example-30"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-30"><article class="example example-like"><p id="p-309">Company \(B\) gets in on this action and will give 2 dollars to each charity for each student who attends. NOW given \(F\) female and \(M\) male students, how much money will go to Elderly and the Homeless?</p>
+</div></article><article class="example example-like" id="example-30"><a data-knowl="" class="id-ref original" data-refid="hk-example-30"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-30"><article class="example example-like"><p id="p-310">Company \(B\) gets in on this action and will give 2 dollars to each charity for each student who attends. NOW given \(F\) female and \(M\) male students, how much money will go to Elderly and the Homeless?</p>
 <div class="displaymath">
 \begin{align*}
-\begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \left( \begin{pmatrix}2 \amp  1 \\ 1 \amp  2 \\ 2 \amp  2 \end{pmatrix}  + \begin{pmatrix}2 \amp  2 \\ 2 \amp  2 \\ 2 \amp  2 \end{pmatrix}    \right)\begin{pmatrix}F\\M \end{pmatrix} \amp =\amp \begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \begin{pmatrix}4 \amp  3 \\ 3 \amp  4 \\ 4 \amp  4 \end{pmatrix}  \begin{pmatrix}F\\M \end{pmatrix}\\
-\amp =\amp \begin{pmatrix}4.7 \amp  4.4 \\ 7.3 \amp   6.6 \end{pmatrix} \begin{pmatrix}F\\M \end{pmatrix}\\
-\amp =\amp \begin{pmatrix}4.7F+4.4M\\ 7.3F+6.6M \end{pmatrix}
+\begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \left( \begin{pmatrix}2 \amp  1 \\ 1 \amp  2 \\ 2 \amp  2 \end{pmatrix}  + \begin{pmatrix}2 \amp  2 \\ 2 \amp  2 \\ 2 \amp  2 \end{pmatrix}    \right)\begin{pmatrix}F\\M \end{pmatrix} \amp = \begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \begin{pmatrix}4 \amp  3 \\ 3 \amp  4 \\ 4 \amp  4 \end{pmatrix}  \begin{pmatrix}F\\M \end{pmatrix}\\
+\amp = \begin{pmatrix}4.7 \amp  4.4 \\ 7.3 \amp   6.6 \end{pmatrix} \begin{pmatrix}F\\M \end{pmatrix}\\
+\amp = \begin{pmatrix}4.7F+4.4M\\ 7.3F+6.6M \end{pmatrix}
 \end{align*}
 </div>
-<p id="p-310">So $\(4.7 F+4.4M\) for Elderly and \(\dollar7.3 F+6.6M\) for Homeless.</p></article></div></section></section></div></main>
+<p id="p-311">So $\((4.7 F+4.4M)\) for Elderly and $\((7.3 F+6.6M)\) for Homeless.</p></article></div></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.3</span> <span class="title">Computation using Sage</span>
+</h3>
+<p id="p-312">As usual, this seems like it should be much easier using technology. Let's suppose \(A=\begin{pmatrix}1 \amp  2 \\ 3 \amp  4 \end{pmatrix} , B=\begin{pmatrix}5 \amp  6 \\ 7 \amp  8 \end{pmatrix}\text{.}\)  We can use Sage to find \(A+B\text{:}\)</p>
+<p id="p-313"><div class="sagecell-sage" id="sage-2"><script type="text/x-sage">A=matrix(QQ, [[1,2],[3,4]])
+B=matrix(QQ, [[5,6],[7,8]])
+print(A+B)
+</script></div></p>
+<p id="p-314">Use:<pre class="code-block tex2jax_ignore">print(A*B)
+</pre>To find \(AB\)  and<pre class="code-block tex2jax_ignore">print(B*A)
+</pre>to find \(BA\text{.}\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><div class="displaymath">
+\begin{align*}
+A+B\amp = \begin{pmatrix}6 \amp  8 \\ 10 \amp  12 \end{pmatrix}\\
+AB\amp = \begin{pmatrix}19 \amp  22 \\ 43 \amp  50 \end{pmatrix}\\
+BA\amp = \begin{pmatrix}23 \amp  34 \\ 31 \amp  46 \end{pmatrix}
+\end{align*}
+</div></div></div></section></section></div></main>
 </div>
 </body>
 </html>

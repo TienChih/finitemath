@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T19:22:02-06:00    *-->
+<!--*    on 2020-06-29T14:01:58-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><p>Recall that in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a> Margo has three supplements: the first contains 20% vitamin A, 20% vitamin D and 20\vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E.</p>
+<body><article class="example example-like"><p>Recall that in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a> Margo has three supplements: the first contains 20% vitamin A, 20% vitamin D and 20% vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E.</p>
 <p>On Monday she eats 100 mg of supplement 1, 100 mg of supplement 2 and 150 mg of supplement 3. On Wednesday she eats 150 mg of supplement 1, 50 mg of supplement 2 and 100 mg of supplement 3. Putting aside that this is an ill advised way to take supplements, how much of each vitamin did she get on each day?</p>
 <p>We first let</p>
 <div class="displaymath">
@@ -35,13 +35,13 @@ B= \left( \begin{array}{rrr} 100 \amp  150\\ 100 \amp  50\\ 150 \amp  100 \end{a
 <p>So, how much Vitamin A does Margo get on Monday? She took 100 mg of Supplement 1, of which 20% is Vitamin A, 100 mg of Supplement 2, of which 10% is Vitamin A, and 150 mg of Supplement 1, of which 50% is Vitamin A:</p>
 <div class="displaymath">
 \begin{equation*}
-\left( \begin{array}{rrr} \textcolor{red}{0.2} \amp  \textcolor{red}{0.1} \amp  \textcolor{red}{0.5}\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} \textcolor{blue}{100} \amp  150\\ \textcolor{blue}{100} \amp  50\\ \textcolor{blue}{150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} \textcolor{red}{0.2}\cdot\textcolor{blue}{100}+\textcolor{red}{0.1}\cdot\textcolor{blue}{100}+\textcolor{red}{0.5}\cdot\textcolor{blue}{150} \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)=\left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)\text{.}
+\left( \begin{array}{rrr} \color{red}{0.2} \amp  0.1 \amp  0.5\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} \color{blue}{100} \amp  150\\ \color{blue}{100} \amp  50\\ \color{blue}{150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} \color{red}{0.2}\cdot\color{blue}{100}+\color{red}{0.1}\cdot\color{blue}{100}+\color{red}{0.5}\cdot\color{blue}{150} \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)=\left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)\text{.}
 \end{equation*}
 </div>
 <p>So on Monday, Margo got 105 mg of vitamin A. What about the amount of vitamin D she received on Wednesday? She took 150 mg of Supplement 1, of which 20% is Vitamin D, 50 mg of Supplement 2, of which 30% is Vitamin D, and 100 mg of Supplement 1, of which 10% is Vitamin A:</p>
 <div class="displaymath">
 \begin{align*}
-\left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ \textcolor{red}{0.2} \amp  \textcolor{red}{0.3} \amp  \textcolor{red}{0.1}\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} 100 \amp  \textcolor{blue}{150}\\ 100 \amp  \textcolor{blue}{50}\\ 150 \amp  \textcolor{blue}{100} \end{array} \right)\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  \textcolor{red}{0.2}\cdot\textcolor{blue}{150}+\textcolor{red}{0.3}\cdot\textcolor{blue}{50}+\textcolor{red}{0.1}\cdot\textcolor{blue}{100} \\ ? \amp  ? \end{array} \right)\\
+\left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ \color{red}{0.2} \amp  \color{red}{0.3} \amp  \color{red}{0.1}\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} 100 \amp  \color{blue}{150}\\ 100 \amp  \color{blue}{50}\\ 150 \amp  \color{blue}{100} \end{array} \right)\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  \color{red}{0.2}\cdot\color{blue}{150}+\color{red}{0.3}\cdot\color{blue}{50}+\color{red}{0.1}\cdot\color{blue}{100} \\ ? \amp  ? \end{array} \right)\\
 \amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  55 \\ ? \amp  ? \end{array} \right)\text{.}
 \end{align*}
 </div>

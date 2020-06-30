@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T19:22:02-06:00    *-->
+<!--*    on 2020-06-29T14:01:59-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -10,21 +10,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Remember when we said the solution to something like</p>
-<div class="displaymath">
-\begin{equation*}
-2x+3y=12
-\end{equation*}
-</div>
-<p data-braille="continuation">is the collection of all points \((x,y)\) that make this statement true. For equations of the form above, that forms a line. If however if we replace the \(=\) with an inequality like so:</p>
-<div class="displaymath">
-\begin{equation*}
-2x+3y\leq12
-\end{equation*}
-</div>
-<span class="incontext"><a href="Sec_LinearInequalities.html#p-313">in-context</a></span>
+<p><div class="sagecell-sage" id="sage-2"><script type="text/x-sage">A=matrix(QQ, [[1,2],[3,4]])
+B=matrix(QQ, [[5,6],[7,8]])
+print(A+B)
+</script></div></p>
+<span class="incontext"><a href="Sec_MatrixArithmetic.html#p-313">in-context</a></span>
 </body>
 </html>

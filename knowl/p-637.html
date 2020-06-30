@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T19:22:06-06:00    *-->
+<!--*    on 2020-06-29T14:02:05-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>To generalize this, we have a rule of differentiation called the <dfn class="terminology">power rule</dfn> which goes: \(\frac{d}{dx}[x^n]=nx^{n-1}\text{.}\)</p>
+<p>We may have noticed a pattern with derivatives. But to illustrate it explicitly:</p>
+<ul class="disc">
+<li><p>The derivative of \(f(x)=x^0\text{,}\) it's the derivative of the constant function \(f(x)=1\text{,}\) and since its a horizontal line, it never has any slope and \(f'(x)=0\text{.}\)</p></li>
+<li><p>The derivative of \(f(x)=x^1\text{,}\) it's the derivative of the line \(f(x)=x\) which always has slope 1, so \(f'(x)=1\text{.}\)</p></li>
+<li>
+<p>The derivative of \(f(x)=x^2\) is:</p>
+<div class="displaymath">
+\begin{align*}
+f(x)\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
+\amp =\amp \limit{h}{0} \frac{(x+h)^2-x^2}{h}\\
+\amp =\amp \limit{h}{0} \frac{x^2+2xh+h^2-x^2}{h}\\
+\amp =\amp \limit{h}{0} \frac{(2x+h)h}{h}\\
+\amp =\amp \limit{h}{0} 2x+h=2x\text{.}
+\end{align*}
+</div>
+</li>
+<li>
+<p>The derivative of \(f(x)=x^3\) is:</p>
+<div class="displaymath">
+\begin{align*}
+f(x)\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
+\amp =\amp \limit{h}{0} \frac{(x+h)^3-x^3}{h}\\
+\amp =\amp \limit{h}{0} \frac{x^3+3x^2h+3xh^2+h^3-x^3}{h}\\
+\amp =\amp \limit{h}{0} \frac{(3x^2+3xh+h^2)h}{h}\\
+\amp =\amp \limit{h}{0} 3x^2+3xh+h^2=3x^2\text{.}
+\end{align*}
+</div>
+</li>
+</ul>
 <span class="incontext"><a href="Sec_PowerRule.html#p-637">in-context</a></span>
 </body>
 </html>
