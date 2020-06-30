@@ -111,7 +111,6 @@
       <image>
  <description>Concave up Parabola.</description>     
    
-      <image>
 <latex-image>
 <![CDATA[\begin{tikzpicture}[scale=1][domain=-0:11]
 \draw[gray!50, thin, step=1] (-3,-1) grid (3,5);

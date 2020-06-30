@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-27T12:02:49-06:00    *-->
+<!--*    on 2020-06-30T21:17:50Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <title>What is a Linear Function?</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']]
@@ -112,7 +112,7 @@ MathJax.Hub.Config({
 <li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear" class="active">What is a Linear Function?</a></li>
 <li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
 <li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
-<li><a href="Sec_UtilityLinear.html" data-scroll="Sec_UtilityLinear">Utilizing the Linear Function</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
 <li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
 </ul>
 </li>
@@ -121,7 +121,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
-<li><a href="Sec_MatrixSage.html" data-scroll="Sec_MatrixSage">Computation using Sage</a></li>
 </ul>
 </li>
 <li class="link">
@@ -170,8 +169,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-38.html" data-scroll="section-38">Product Rule</a></li>
-<li><a href="section-39.html" data-scroll="section-39">Quotient Rule</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Product Rule</a></li>
+<li><a href="section-38.html" data-scroll="section-38">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -184,10 +183,9 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_IntrotoLinear"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">What is a Linear Function?</span>
 </h2>
-<p id="p-2">A linear function is a function whose inputs and outputs are real numbers, and <em class="emphasis">the change in output per unit change increase in input is always the same.</em> A linear function may always increase, or decrease, or stay the same, but the rate at which it does so will never change.</p>
-<article class="example example-like" id="example-1"><a data-knowl="" class="id-ref original" data-refid="hk-example-1"><h6 class="heading">
+<section class="introduction" id="introduction-2"><p id="p-2">A linear function is a function whose inputs and outputs are real numbers, and the change in output per unit change increase in input is always the same. A linear function may always increase, or decrease, or stay the same, but the rate at which it does so will never change.</p></section><article class="example example-like" id="Example_IsLinear"><a data-knowl="" class="id-ref original" data-refid="hk-Example_IsLinear"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><p id="p-3">Consider a function who takes on the following values:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_IsLinear"><article class="example example-like"><p id="p-3">Consider a function who takes on the following values:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c||c|c|c|c|c|} \hline x \amp  1\amp 2\amp 3\amp 4\amp 10\\ \hline f(x)\amp 10\amp 12\amp 14\amp 16\amp 28\\ \hline \end{array}
@@ -205,9 +203,9 @@ MathJax.Hub.Config({
 </div></div>
 </div></article></div>
 <p id="p-10">It always helps to illustrate a concept with a <dfn class="terminology">non</dfn>-example.</p>
-<article class="example example-like" id="example-2"><a data-knowl="" class="id-ref original" data-refid="hk-example-2"><h6 class="heading">
+<article class="example example-like" id="Example_IsNotLinear"><a data-knowl="" class="id-ref original" data-refid="hk-Example_IsNotLinear"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-11">Consider a function who takes on the following values:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_IsNotLinear"><article class="example example-like"><p id="p-11">Consider a function who takes on the following values:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c||c|c|c|c|c|} \hline x \amp  -2\amp -1\amp 0\amp 1\amp 2\\ \hline f(x)\amp 4\amp 1\amp 0\amp 1\amp 4\\ \hline \end{array}
@@ -220,11 +218,10 @@ MathJax.Hub.Config({
 <p id="p-14">However, when we go from \(x=-1\) to \(x=0\text{,}\) we see that \(\Delta f(x)=0-1=-1\text{.}\) Similarly, when we go from \(x=0\) to \(x=1\text{,}\) we see that \(\Delta f(x)=1-0=1\text{,}\) and when we go from \(x=1\) to \(x=2\text{,}\) we see that \(\Delta f(x)=4-1=3\text{.}\)</p>
 <p id="p-15">Thus, this function goes from decreasing, to increasing, and the rate at which it does so changes, thus this function is <dfn class="terminology">not</dfn> a linear function.</p>
 <p id="p-16">Graphically we can visualize this:</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-2.svg" style="width: 100%; height: auto;" alt=""></div>
-<p id="p-17">An interactive version of this graph may be found here: <figure class="figure figure-like" id="figure-3"><iframe src="https://www.desmos.com/calculator/za4t3zanlr" id="interactive-2" width="600" height="600"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.5<span class="period">.</span></span><span class="space"> </span>Graph of $y=x^2$.</figcaption></figure></p>
+<figure class="figure figure-like" id="figure-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-2.svg" style="width: 100%; height: auto;" alt="Concave up Parabola."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.5<span class="period">.</span></span><span class="space"> </span>Visualization of a non-Linear Function</figcaption></figure><p id="p-17">An interactive version of this graph may be found here: <iframe src="https://www.desmos.com/calculator/za4t3zanlr" id="interactive-2" width="600" height="600"></iframe></p>
 </div></div>
-</div></article></div>
-<p id="p-18">We can see from the above examples that linear functions are the functions whose graphs may be represented with a straight line. This is sensible: after all, straight lines move in the same direction, and neither deviate one way nor another, just as linear functions increase, stay constant or decrease at a constant rate. This is where the name <dfn class="terminology">linear</dfn> functions come from.</p></section></div></main>
+</div></article></div></section></div></main>
 </div>
 </body>
 </html>
