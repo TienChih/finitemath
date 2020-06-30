@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T22:44:00-06:00    *-->
+<!--*    on 2020-06-30T14:28:12-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,21 @@
 </head>
 <body>
 <article class="example example-like"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.10.2</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.10.1</span><span class="period">.</span>
 </h6>
-<p>If I drink coffee, I will be happy. If I drink coffee, I will be wired. If I am happy, then I am wired.</p>
+<p>If I read the handouts and I watch the videos then I will pass. I didn't pass. I read the handouts, therefore I didn't watch the videos.</p>
 <p>So let:</p>
 <ul class="disc">
-<li><p>\(c=\) “drink coffee.”</p></li>
-<li><p>\(h=\) “be happy.”</p></li>
-<li><p>\(w=\) “be wired.”</p></li>
+<li><p>\(h=\) “read handouts.”</p></li>
+<li><p>\(v=\) “watch videos.”</p></li>
+<li><p>\(p=\) “pass class.”</p></li>
 </ul>
-<p>What we have is \(c\to h, c\to w\text{.}\) But there's nothing here to connect \(h\) to \(w\text{.}\) If we knew this person drank coffee, we could make that conclusion, but since we don't know that, if we knew that they were happy, it could be for some reason other than drinking coffee. So we have no idea whether or not they'd be wired as well. So we cannot conclude \(h \to w\) and this is NOT a valid argument.</p></article><span class="incontext"><a href="Sec_ValidArguments.html#example-40">in-context</a></span>
+<p>So what we know is \((h\wedge v)\to p, h, \sim p\text{.}\) So:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{lcl} (h\wedge v)\to p\amp \ \ \ \amp \\ \sim p\\ \hline \sim(h\wedge v)=\sim h \vee\sim v \amp  \amp \text{ Modus Tollens } \\ \\ \sim h \vee \sim v \\ h=\sim \sim h\\ \hline \sim v  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
+\end{equation*}
+</div>
+<p>Therefore \(\sim v\text{,}\) I did not watch the videos. This was a valid argument.</p></article><span class="incontext"><a href="Sec_ValidArguments.html#example-40">in-context</a></span>
 </body>
 </html>

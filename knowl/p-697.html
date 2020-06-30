@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T22:44:03-06:00    *-->
+<!--*    on 2020-06-30T14:28:15-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We can use the chain rule to find the derivative of log functions as well. Let's first compute \(\frac{d}{dx}[\ln(x)]\text{:}\)</p>
+<p>We've so far covered sums products and quotients of functions, so how about composition? The <dfn class="terminology">chain rule</dfn> is: \(\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x)\text{.}\) To see why:</p>
 <div class="displaymath">
 \begin{align*}
-x\amp =\amp e^{\ln(x)}\\
-\frac{d}{dx}[x]\amp =\amp \frac{d}{dx}[e^{\ln(x)}]\\
-1\amp =\amp e^{\ln(x)}\frac{d}{dx}[\ln(x)]\\
-1\amp =\amp x\frac{d}{dx}[\ln(x)]\\
-\frac{d}{dx}[\ln(x)]\amp =\amp \frac{1}{x}\text{.}
+\frac{d}{dx}[f(g(x))]\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h}\textcolor{blue}{\frac{g(x+h)-g(x)}{g(x+h)-g(x)}}\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}
 \end{align*}
 </div>
-<span class="incontext"><a href="DerivativeLogs.html#p-697">in-context</a></span>
+<span class="incontext"><a href="Sec_ChainRule.html#p-697">in-context</a></span>
 </body>
 </html>

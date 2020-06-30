@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T22:43:48-06:00    *-->
+<!--*    on 2020-06-30T14:27:59-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -183,81 +183,81 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_CompoundStatements"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Compound Statements</span>
 </h2>
-<section class="introduction" id="introduction-10"><p id="p-371">Suppose a friend of your has a test coming up tomorrow . You ask them about their study plans and they say ``Well, I'll either study today, or I'll skip class tomorrow and study tomorrow." Now your friend says this, but all sorts of things could happen between now and the test, so under what circumstances is your friend telling the truth and when are they lying?</p>
-<p id="p-372">Looking at their statement, there seems to be three fundamental underlying events:</p>
+<section class="introduction" id="introduction-12"><p id="p-380">Suppose a friend of your has a test coming up tomorrow . You ask them about their study plans and they say ``Well, I'll either study today, or I'll skip class tomorrow and study tomorrow." Now your friend says this, but all sorts of things could happen between now and the test, so under what circumstances is your friend telling the truth and when are they lying?</p>
+<p id="p-381">Looking at their statement, there seems to be three fundamental underlying events:</p>
 <ul class="disc">
-<li id="li-96"><p id="p-373">Studying today, lets call this \(p\text{.}\)</p></li>
-<li id="li-97"><p id="p-374">Going to class tomorrow, let's call this \(q\text{.}\)</p></li>
-<li id="li-98"><p id="p-375">Studying tomorrow, let's call this \(r\text{.}\)</p></li>
+<li id="li-96"><p id="p-382">Studying today, lets call this \(p\text{.}\)</p></li>
+<li id="li-97"><p id="p-383">Going to class tomorrow, let's call this \(q\text{.}\)</p></li>
+<li id="li-98"><p id="p-384">Studying tomorrow, let's call this \(r\text{.}\)</p></li>
 </ul>
-<p id="p-376">Then the sentence ``I'll either study today, or I'll skip class tomorrow and study tomorrow." can be broken down as:</p>
+<p id="p-385">Then the sentence ``I'll either study today, or I'll skip class tomorrow and study tomorrow." can be broken down as:</p>
 <div class="displaymath">
 \begin{equation*}
 p\vee (\sim q \wedge r)
 \end{equation*}
 </div>
 <p data-braille="continuation">that is “Either \(p\) OR not \(q\) AND \(r\)”.</p>
-<p id="p-377">So when is this statement true? We first note that \(p,q,r\) could all be true or false, your friend could potentially do or not do any of these things. All the combinations are as follows:</p>
+<p id="p-386">So when is this statement true? We first note that \(p,q,r\) could all be true or false, your friend could potentially do or not do any of these things. All the combinations are as follows:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c} p\amp q\amp r\\ \hline T \amp  T\amp T\\ T\amp T\amp F\\ T\amp F\amp T\\ T\amp F\amp F\\ F \amp  T\amp T\\ F\amp T\amp F\\ F\amp F\amp T\\ F\amp F\amp F \end{array}
 \end{equation*}
 </div>
-<p id="p-378">Since \(\sim q\) is in our expression, it may be helpful to list out what it's values are. Remember, that \(\sim q\) is the opposite of \(q\text{.}\) As you get more experienced one may be tempted to skip stuff like \(\sim q\) but for now let's proceed with caution:</p>
+<p id="p-387">Since \(\sim q\) is in our expression, it may be helpful to list out what it's values are. Remember, that \(\sim q\) is the opposite of \(q\text{.}\) As you get more experienced one may be tempted to skip stuff like \(\sim q\) but for now let's proceed with caution:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} p\amp q\amp r\amp \sim q\\ \hline T \amp  T\amp T\amp F\\ T\amp T\amp F\amp F\\ T\amp F\amp T\amp T\\ T\amp F\amp F\amp T\\ F \amp  T\amp T\amp F\\ F\amp T\amp F\amp F\\ F\amp F\amp T\amp T\\ F\amp F\amp F\amp T \end{array}
 \end{equation*}
 </div>
-<p id="p-379">Next, we have the statement \(\sim q \wedge r\text{,}\) which is true whenever both \(\sim q\) and \(r\) are true…</p>
+<p id="p-388">Next, we have the statement \(\sim q \wedge r\text{,}\) which is true whenever both \(\sim q\) and \(r\) are true…</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\\ \hline T \amp  T\amp T\amp F \amp  \\ T\amp T\amp F\amp F\amp  \\ T\amp F\amp \textcolor{red}{T}\amp \textcolor{red}{T}\amp \textcolor{red}{T}\\ T\amp F\amp F\amp T\\ F \amp  T\amp T\amp F\\ F\amp T\amp F\amp F\\ F\amp F\amp \textcolor{red}{T}\amp \textcolor{red}{T}\amp \textcolor{red}{T}\\ F\amp F\amp F\amp T \end{array}
 \end{equation*}
 </div>
-<p id="p-380">… and false otherwise:</p>
+<p id="p-389">… and false otherwise:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\\ \hline T \amp  T\amp T\amp F\amp F\\ T\amp T\amp F\amp F\amp F \\ T\amp F\amp T\amp T\amp T\\ T\amp F\amp F\amp T\amp F\\ F \amp  T\amp T\amp F\amp F\\ F\amp T\amp F\amp F\amp F\\ F\amp F\amp T\amp T\amp T\\ F\amp F\amp F\amp T\amp F \end{array}
 \end{equation*}
 </div>
-<p id="p-381">Finally, we have the statement \(p\vee (\sim q \wedge r)\) which is true whenever either \(p\) or \(\sim q \wedge r\) is true …</p>
+<p id="p-390">Finally, we have the statement \(p\vee (\sim q \wedge r)\) which is true whenever either \(p\) or \(\sim q \wedge r\) is true …</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\amp  p\vee(\sim q \wedge r)\\ \hline \textcolor{red}{T} \amp  T\amp T\amp F\amp F\amp \textcolor{red}{T}\\ \textcolor{red}{T}\amp T\amp F\amp F\amp F\amp \textcolor{red}{T} \\ \textcolor{red}{T}\amp F\amp T\amp T\amp \textcolor{red}{T}\amp \textcolor{red}{T}\\ \textcolor{red}{T}\amp F\amp F\amp T\amp F\amp \textcolor{red}{T}\\ F \amp  T\amp T\amp F\amp F\\ F\amp T\amp F\amp F\amp F\\ F\amp F\amp T\amp T\amp \textcolor{red}{T}\amp \textcolor{red}{T}\\ F\amp F\amp F\amp T\amp F \end{array}
 \end{equation*}
 </div>
-<p id="p-382">… and false otherwise:</p>
+<p id="p-391">… and false otherwise:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\amp  p\vee (\sim q \wedge r)\\ \hline T \amp  T\amp T\amp F\amp F\amp T\\ T\amp T\amp F\amp F\amp F\amp T \\ T\amp F\amp T\amp T\amp T\amp T\\ T\amp F\amp F\amp T\amp F\amp T\\ F \amp  T\amp T\amp F\amp F\amp F\\ F\amp T\amp F\amp F\amp F\amp F\\ F\amp F\amp T\amp T\amp T\amp T\\ F\amp F\amp F\amp T\amp F\amp F \end{array}
 \end{equation*}
 </div>
-<p id="p-383">If your friend studies today, goes to class tomorrow and studies tomorrow, did they lie? In this case \(p\) is true, \(q\) is true and \(r\) is true, so looking at the first row:</p>
+<p id="p-392">If your friend studies today, goes to class tomorrow and studies tomorrow, did they lie? In this case \(p\) is true, \(q\) is true and \(r\) is true, so looking at the first row:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\amp  p\vee (\sim q \wedge r)\\ \hline \textcolor{blue}{T} \amp  \textcolor{blue}T\amp \textcolor{blue}T\amp F\amp F\amp \textcolor{blue}T\\ T\amp T\amp F\amp F\amp F\amp T \\ T\amp F\amp T\amp T\amp T\amp T\\ T\amp F\amp F\amp T\amp F\amp T\\ F \amp  T\amp T\amp F\amp F\amp F\\ F\amp T\amp F\amp F\amp F\amp F\\ F\amp F\amp T\amp T\amp T\amp T\\ F\amp F\amp F\amp T\amp F\amp F \end{array}
 \end{equation*}
 </div>
-<p id="p-384">Your friend was telling the truth! Let's say instead, they didn't study today, went to class tomorrow and studied tomorrow. Then \(p\) is false, \(q\) is true, \(r\) is true and we have:</p>
+<p id="p-393">Your friend was telling the truth! Let's say instead, they didn't study today, went to class tomorrow and studied tomorrow. Then \(p\) is false, \(q\) is true, \(r\) is true and we have:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\amp  p\vee (\sim q \wedge r)\\ \hline T \amp  T\amp T\amp F\amp F\amp T\\ T\amp T\amp F\amp F\amp F\amp T \\ T\amp F\amp T\amp T\amp T\amp T\\ T\amp F\amp F\amp T\amp F\amp T\\ \textcolor{blue}F \amp  \textcolor{blue}T\amp \textcolor{blue}T\amp F\amp F\amp \textcolor{blue}F\\ F\amp T\amp F\amp F\amp F\amp F\\ F\amp F\amp T\amp T\amp T\amp T\\ F\amp F\amp F\amp T\amp F\amp F \end{array}
 \end{equation*}
 </div>
-<p id="p-385">Then, they would be lying. They said either they would go to class today (they didn't) or, they would skip class AND study tomorrow. They studied tomorrow but didn't skip class, so what they said ultimately wasn't true.</p></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<p id="p-394">Then, they would be lying. They said either they would go to class today (they didn't) or, they would skip class AND study tomorrow. They studied tomorrow but didn't skip class, so what they said ultimately wasn't true.</p></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.3.1</span> <span class="title">Sage</span>
 </h3>
-<p id="p-386">We can automatically generate the truth tables with SageCells. Using the symbols:</p>
+<p id="p-395">We can automatically generate the truth tables with SageCells. Using the symbols:</p>
 <ul class="disc">
-<li id="li-99"><p id="p-387">\(\\amp\) -and</p></li>
-<li id="li-100"><p id="p-388">\(|\)-or</p></li>
-<li id="li-101"><p id="p-389">\(\sim\)-not</p></li>
-<li id="li-102"><p id="p-390">\(\wedge\)-xor</p></li>
-<li id="li-103"><p id="p-391">\(-&gt;\)-if-then</p></li>
-<li id="li-104"><p id="p-392">\(\lt -&gt;\)-if and only if</p></li>
+<li id="li-99"><p id="p-396">\(\\amp\) -and</p></li>
+<li id="li-100"><p id="p-397">\(|\)-or</p></li>
+<li id="li-101"><p id="p-398">\(\sim\)-not</p></li>
+<li id="li-102"><p id="p-399">\(\wedge\)-xor</p></li>
+<li id="li-103"><p id="p-400">\(-&gt;\)-if-then</p></li>
+<li id="li-104"><p id="p-401">\(\lt -&gt;\)-if and only if</p></li>
 </ul>
-<p id="p-393">We haven't covered all these operations yet. But if we wanted to say “\(p\) or (not \(q\) and \(r\))” That could be recorded as \(p|(\sim q\\amp r)\text{.}\) So we could generate the truth table here: \url{https://sagecell.sagemath.org/?z=eJxLU7BVKCjKL0hOzEnWS8svyi3NSdRQKqjRqCtUK9JU0uTlStMrKSotyShJTMpJ1dAEAIzpD_A=&amp;amp;lang=sage} It generates the table in a different order than what we have but the same rows still correspond to the same values.</p></section></section></div></main>
+<p id="p-402">We haven't covered all these operations yet. But if we wanted to say “\(p\) or (not \(q\) and \(r\))” That could be recorded as \(p|(\sim q\\amp r)\text{.}\) So we could generate the truth table here: \url{https://sagecell.sagemath.org/?z=eJxLU7BVKCjKL0hOzEnWS8svyi3NSdRQKqjRqCtUK9JU0uTlStMrKSotyShJTMpJ1dAEAIzpD_A=&amp;amp;lang=sage} It generates the table in a different order than what we have but the same rows still correspond to the same values.</p></section></section></div></main>
 </div>
 </body>
 </html>

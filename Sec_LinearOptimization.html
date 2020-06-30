@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T22:43:48-06:00    *-->
+<!--*    on 2020-06-30T14:27:59-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -183,9 +183,58 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_LinearOptimization"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Linear Optimization</span>
 </h2>
-<article class="example example-like" id="example-34"><a data-knowl="" class="id-ref original" data-refid="hk-example-34"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-34"><article class="example example-like"><p id="p-348">Find \((x,y)\) such that:</p>
+<section class="introduction" id="introduction-11"><p id="p-348">We now have the background to delve into solving Linear Optimization problems.  We will describe a method using the Geometry of linear inequalities to find our optimal solutions.</p></section><p id="p-349">Suppose we were trying to maximize the function \(f(x,y)=x+y \) subject to the following constraints:</p>
+<div class="displaymath">
+\begin{align*}
+3x+2y\amp \leq 8\\
+x-y\amp \leq 3\\
+x\amp \geq 0\\
+y\amp \geq 0
+\end{align*}
+</div>
+<p data-braille="continuation">We can see from the Desmos graph below the region of points that satisfy the above system.  This is called the <dfn class="terminology">feasible region</dfn>, or the collection of points which could be a solution. We can also drag \((a,b)\) around to see what the value of \(f(x,y)\) would be for any point. <iframe src="https://www.desmos.com/calculator/up2wcq351r" id="interactive-40" width="600" height="600"></iframe></p>
+<p id="p-350">As you can see, this is a fairly cumbersome way to identify the optimal solutions.  There are infinitely many points in this region after all!  We should try to use the Algebra and Geometry at our disposal to come up with a more systematic method.</p>
+<p id="p-351">So to start, let's just ask ourselves, what do all the solutions where \(f(x,y)=1\) look like?  By setting \(x+y=1\text{,}\) we obtain \(y=-x+1\) or a line: <iframe src="https://www.desmos.com/calculator/vwfyi4gknp" id="interactive-41" width="600" height="600"></iframe> Go ahead and drag \((a,b)\) around the line and see that every point on the line gives you \(f(x,y)=1\text{.}\)  Some of those points are in our region, fantastic!  Can we find points where \(f(x,y)\) is more than 1?  How about \(f(x,y)=5\text{?}\) <iframe src="https://www.desmos.com/calculator/xi7emiptnv" id="interactive-42" width="600" height="600"></iframe> Notice that every point on this line also gives \(f(x,y)=5\text{,}\) <em class="emphasis">but</em>, none of these points lie in our region.  That's too bad, how big can \(f(x,y)\) get while still having viable solutions?</p>
+<p id="p-352">Observing the animation below, the valid outputs if \(f(x,y)\) range from \(0\) through \(4\text{.}\)  The only point in the region corresponding to \(f(x,y)=4\) is \((x,y)=(0,4)\text{.}\) <iframe src="https://www.desmos.com/calculator/zpvl34jc9p" id="interactive-43" width="600" height="600"></iframe> Thus \(f(x,y)=x+y\) is maximized when \(x=0, y=4\)  We can verify that \(f(0,4)=0+4=4\text{.}\)</p>
+<p id="p-353">Let's consider a different problem, let's <em class="emphasis">minimize</em> \(g(x,y)=-x+y\) subject to:</p>
+<div class="displaymath">
+\begin{align*}
+x+2y\amp \leq 8\\
+x-y\amp \leq 2\\
+x\amp \geq 0\\
+y\amp \geq 0
+\end{align*}
+</div>
+<p id="p-354">Following the same line of thinking as before, this leads us to: <iframe src="https://www.desmos.com/calculator/rjnajia8fh" id="interactive-44" width="600" height="600"></iframe> As we can see, \(g(x,y)\) is minimized when \(g(x,y)=-2\text{.}\)  This includes the points \((0,2), (4,2)\) and every point in between.  We can verify \(g(0,2)0-2=-2\) and \(g(4,2)=2-4=-2\text{.}\)</p>
+<article class="theorem theorem-like" id="Theorem_CornerPoints"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-355">Given a function of the form \(f(x,y)=px+qy\text{,}\) and constraints of the form:</p>
+<div class="displaymath">
+\begin{align*}
+a_1x+b_1y\amp \leq c_1\\
+a_2x+b_2y\amp \leq c_2\\
+\vdots +\vdots \amp \leq \vdots \\
+a_nx+b_ny\amp \leq c_n\\
+x\amp \geq 0\\
+y\amp \geq 0
+\end{align*}
+</div>
+<p data-braille="continuation">Then the maximum (minimum) feasible solutions of \(f(x,y)\text{,}\) if they exist, will include <dfn class="terminology">corner points</dfn> of the region.</p></article><article class="example example-like" id="example-corner"><a data-knowl="" class="id-ref original" data-refid="hk-example-corner"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Corner Point Method.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-corner"><article class="example example-like"><p id="p-356">Let us find both the <em class="emphasis">maximum</em> and  <em class="emphasis">minimum</em> solutions of \(g(x,y)=3x+2y\) subject to:</p>
+<div class="displaymath">
+\begin{align*}
+x+y\amp \leq 8\\
+2x+y\amp \leq 10\\
+x\amp \geq 0\\
+y\amp \geq 0
+\end{align*}
+</div>
+<p data-braille="continuation">Using Desmos to sketch the feasible region, we obtain: <iframe src="https://www.desmos.com/calculator/azokhazd8q" id="interactive-45" width="600" height="600"></iframe> We can observe the corners of this polygon occur at \((0,0), (0,8), (2,6), (5,0)\text{.}\)  We could evaluate \(f(x,y)\) at each of these points, but Desmos can be utilized here as well. <iframe src="https://www.desmos.com/calculator/bznmdwgvdg" id="interactive-46" width="600" height="600"></iframe> Thus \(f(x,y)\) achieves a maximum at \((2,6)\) with maximum value \(f(2,6)=3\cdot2+2\cdot6=18\) and is minimized at \((0,0)\) with minimum value \(f(0,0)=3\cdot0+2\cdot0=0\text{.}\) <iframe src="https://www.desmos.com/calculator/dis5mpr35t" id="interactive-47" width="600" height="600"></iframe></p></article></div>
+<article class="example example-like" id="example-35"><a data-knowl="" class="id-ref original" data-refid="hk-example-35"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><p id="p-357">Find \((x,y)\) such that:</p>
 <div class="displaymath">
 \begin{align*}
 2x+3y\amp \leq\amp 12\\
@@ -194,13 +243,13 @@ y\amp \geq\amp 0
 \end{align*}
 </div>
 <p data-braille="continuation">and \(f(x,y)=x+y\) is maximized.</p>
-<p id="p-349">From above, we know that this region is a triangle in the first quadrant. We want to find the point(s) in this region where by taking the sum of the points, we get as large as a value as possible. There are infinitely many points in this region, how are we ever going to find the one that makes this sum the largest?</p>
-<p id="p-350">Well, we know that given every possible output from the objective function \(f\) i.e. every possible \(k\) so that \(x+y=k\text{,}\) this actually defines a line: \url{https://www.desmos.com/calculator/qststwgxro}. In the link you can see the line when \(k=0\text{.}\) There is one point \((0,0)\) which is actually a part of our region which would give this output. As we drag \(k\) upwards, we see that there is a line segment worth of points in our region which would give that \(k\) as an output. At \(k=4\) \url{https://www.desmos.com/calculator/iy5rq5hpxa} we hit a corner of the region but we see that we can still increase \(k\text{.}\) Now at \(k=6\) \url{https://www.desmos.com/calculator/qwrti1mxln}, we see that we've hit another corner. Very importantly, if we try to increase \(k\) at all, our line will fall outside of the feasible region and there will be no points that would give such a \(k\) as an output.</p>
-<p id="p-351">So, it must be that the largest \(k\) can be is 6, and that this happens at \((6,0)\text{.}\) One can check to see that this point satisfies all the criteria above. Most importantly though: <dfn class="terminology">IT MEANS TO FIND OPTIMAL SOLUTIONS ONE JUST NEEDS TO FIND THE CORNERS OF THE REGION</dfn>. This is because if your line isn't on a corner, you can still slide that value up or down, so the corresponding \(k\) value is neither maximal or minimal.</p></article></div>
-<article class="example example-like" id="example-35"><a data-knowl="" class="id-ref original" data-refid="hk-example-35"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><p id="p-352">Suppose that a agriculture student is raising goats and pigs for a project. The goal is to raise some animals and then sell them for profit. She can raise a total of at most 16 animals. It costs $25 per goat and $ 75 per pig, and she has a budget of $900. Finally, she doesn't particularly like goats, so she won't raise more than 10 of them. If the profit per goat is $12 and profit per pig is $40, how many of each should she raise to maximize profits?</p>
-<p id="p-353">We should note, if \(x\) is the number of goats and \(y\) the number of pigs, then she is maximizing \(P(x,y)=12x+40y\text{.}\) The inequalities she is dealing with are:</p>
+<p id="p-358">From above, we know that this region is a triangle in the first quadrant. We want to find the point(s) in this region where by taking the sum of the points, we get as large as a value as possible. There are infinitely many points in this region, how are we ever going to find the one that makes this sum the largest?</p>
+<p id="p-359">Well, we know that given every possible output from the objective function \(f\) i.e. every possible \(k\) so that \(x+y=k\text{,}\) this actually defines a line: \url{https://www.desmos.com/calculator/qststwgxro}. In the link you can see the line when \(k=0\text{.}\) There is one point \((0,0)\) which is actually a part of our region which would give this output. As we drag \(k\) upwards, we see that there is a line segment worth of points in our region which would give that \(k\) as an output. At \(k=4\) \url{https://www.desmos.com/calculator/iy5rq5hpxa} we hit a corner of the region but we see that we can still increase \(k\text{.}\) Now at \(k=6\) \url{https://www.desmos.com/calculator/qwrti1mxln}, we see that we've hit another corner. Very importantly, if we try to increase \(k\) at all, our line will fall outside of the feasible region and there will be no points that would give such a \(k\) as an output.</p>
+<p id="p-360">So, it must be that the largest \(k\) can be is 6, and that this happens at \((6,0)\text{.}\) One can check to see that this point satisfies all the criteria above. Most importantly though: <dfn class="terminology">IT MEANS TO FIND OPTIMAL SOLUTIONS ONE JUST NEEDS TO FIND THE CORNERS OF THE REGION</dfn>. This is because if your line isn't on a corner, you can still slide that value up or down, so the corresponding \(k\) value is neither maximal or minimal.</p></article></div>
+<article class="example example-like" id="example-36"><a data-knowl="" class="id-ref original" data-refid="hk-example-36"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-36"><article class="example example-like"><p id="p-361">Suppose that a agriculture student is raising goats and pigs for a project. The goal is to raise some animals and then sell them for profit. She can raise a total of at most 16 animals. It costs $25 per goat and $ 75 per pig, and she has a budget of $900. Finally, she doesn't particularly like goats, so she won't raise more than 10 of them. If the profit per goat is $12 and profit per pig is $40, how many of each should she raise to maximize profits?</p>
+<p id="p-362">We should note, if \(x\) is the number of goats and \(y\) the number of pigs, then she is maximizing \(P(x,y)=12x+40y\text{.}\) The inequalities she is dealing with are:</p>
 <div class="displaymath">
 \begin{align*}
 x+y\amp \leq\amp 16\ \ \text{ at most 16 animals }\\
@@ -210,13 +259,13 @@ x\amp \geq\amp 0\ \ \text{ no negative goats }\\
 y\amp \geq\amp 0\ \ \text{ no negative pigs }
 \end{align*}
 </div>
-<p id="p-354">Sketching our region out we get: \url{https://www.desmos.com/calculator/lwbkvibuyq}, with corner points:</p>
+<p id="p-363">Sketching our region out we get: \url{https://www.desmos.com/calculator/lwbkvibuyq}, with corner points:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c} x \amp  y \amp  P(x,y)\\ \hline 0 \amp  0 \amp  12(0)+40(0)=0\\ 10 \amp  0 \amp  12(10)+40(0)=120\\ 10 \amp  6 \amp  12(10)+40(6)=360\\ 6 \amp  10 \amp  12(6)+40(10)=472\\ 0 \amp  12 \amp  12(0)+40(12)=480 \end{array}
 \end{equation*}
 </div>
-<p id="p-355">So the profit is maximized when you raise 12 pigs and no goats. To get a better sense of how we found these corners, these are just system of \(2\times 2\) systems of equations: \url{https://www.desmos.com/calculator/bzczxrkggy}</p></article></div></section></div></main>
+<p id="p-364">So the profit is maximized when you raise 12 pigs and no goats. To get a better sense of how we found these corners, these are just system of \(2\times 2\) systems of equations: \url{https://www.desmos.com/calculator/bzczxrkggy}</p></article></div></section></div></main>
 </div>
 </body>
 </html>

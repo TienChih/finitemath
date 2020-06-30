@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-29T22:44:03-06:00    *-->
+<!--*    on 2020-06-30T14:28:15-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So the <dfn class="terminology">quotient rule</dfn> is \(\frac{d}{dx}[\frac{f(x)}{g(x)}]=\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}\text{.}\)</p>
-<span class="incontext"><a href="section-38.html#p-684">in-context</a></span>
+<p>If we have a rule for differentiating products, we should have a rule for differentiating quotients as well, after all, quotients and products are basically the same thing. So let \(Q(x)=\frac{f(x)}{g(x)}\text{,}\) and ask, what is \(Q'(x)\text{.}\) So:</p>
+<div class="displaymath">
+\begin{align*}
+Q(x)\amp =\amp \frac{f(x)}{g(x)}\\
+Q(x)g(x)\amp =\amp f(x),\ \text{ now we can differentiate both sides }\\
+\frac{d}{dx}[Q(x)g(x)]\amp =\amp f'(x),\ \text{ then by the product rule: }\\
+Q'(x)g(x)+Q(x)g'(x)\amp =\amp f'(x)\\
+Q'(x)g(x)\amp =\amp f'(x)-Q(x)g'(x),\ \text{then recall that  \(Q(x)=\frac{f(x)}{g(x)}\)}\\
+Q'(x)g(x)\amp =\amp f'(x)-\frac{f(x)g'(x)}{g(x)}\\
+Q'(x)g(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)}\\
+Q'(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}
+\end{align*}
+</div>
+<span class="incontext"><a href="Sec_QuotientRule.html#p-684">in-context</a></span>
 </body>
 </html>
