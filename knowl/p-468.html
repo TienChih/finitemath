@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-30T23:46:43Z    *-->
+<!--*    on 2020-06-30T22:13:37-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let's let \(M(x)\) be “\(x\) is a Math Major”, \(C(x)\) be “\(x\) takes Calculus”. Then consider the following equivalences:</p>
+<p>Using these circuit diagrams, we can model any logical statement. For example \(p\wedge ((q\wedge r) \vee (\sim q \wedge \sim r))\) would be:</p>
 <div class="displaymath">
 \begin{equation*}
-
+\begin{circuitikz}  \draw (0,0) to[ospst=$p$] (2,0); \draw (2,0) to (2,1); \draw (2,0) to (2,-1);  \draw (2,1) to[ospst=$q$] (3,1); \draw (3,1) to[ospst=$r$] (4,1);  \draw (2,-1) to[ospst=$\sim q$] (3,-1); \draw (3,-1) to[ospst=$\sim r$] (4,-1);  \draw(4,1) to (4,0); \draw(4,-1) to (4,0);  \draw(4,0) to (5,0);   \end{circuitikz}
 \end{equation*}
 </div>
-<span class="incontext"><a href="Quantifiers.html#p-468">in-context</a></span>
+<span class="incontext"><a href="Sec_Circuits.html#p-468">in-context</a></span>
 </body>
 </html>

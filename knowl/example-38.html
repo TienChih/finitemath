@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-30T23:46:42Z    *-->
+<!--*    on 2020-06-30T22:13:37-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,27 +13,21 @@
 </head>
 <body>
 <article class="example example-like"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.10.1</span><span class="period">.</span>
 </h6>
-<p>Does \(\sim(p \vee q)=\sim p \wedge \sim q\text{?}\)</p>
-<p>Start with the concrete before the formal. In our extended example, \(\sim(p\vee q)\) means ``I'm not eating breakfast or lunch", whereas \(\sim p \wedge \sim q\) means ``I'm not eating breakfast and I'm not eating lunch." It does kinda seem like they're the same…</p>
-<p>So formally:</p>
-<div class="displaymath">
-\begin{equation*}
-\begin{array}{c|c|c|c} p\amp q\amp p\vee q\amp  \sim (p\vee q)\\ \hline T \amp  T\amp T\amp F\\ T\amp F\amp T\amp F\\ F\amp T\amp T\amp F\\ F\amp F\amp F\amp T \end{array}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\begin{array}{c|c|c|c|c} p\amp q\amp \sim p\amp  \sim q \amp  \sim p \wedge \sim q\\ \hline T \amp  T\amp F\amp F\amp F\\ T\amp F\amp F\amp T\amp F\\ F\amp T\amp T\amp F\amp F\\ F\amp F\amp T\amp T\amp T \end{array}
-\end{equation*}
-</div>
-<p data-braille="continuation">now THIS makes more sense. In order to say ``I'm not having breakfast OR lunch" you really are saying ``I'm skipping breakfast AND I'm skipping lunch". So these statements are in fact identical, they have the same values under the same circumstances.</p>
-<p>This is half of a pair of equivalences called <dfn class="terminology">DeMorgan's Laws</dfn>:</p>
+<p>If I read the handouts and I watch the videos then I will pass. I didn't pass. I read the handouts, therefore I didn't watch the videos.</p>
+<p>So let:</p>
 <ul class="disc">
-<li><p>\(\displaystyle \sim(p \vee q)=\sim p \wedge \sim q\)</p></li>
-<li><p>\(\displaystyle \sim(p \wedge q)=\sim p \vee \sim q\)</p></li>
+<li><p>\(h=\) “read handouts.”</p></li>
+<li><p>\(v=\) “watch videos.”</p></li>
+<li><p>\(p=\) “pass class.”</p></li>
 </ul>
-<p>It's not a bad idea to check this second equivalence, build the truth tables and see if they are the same.</p></article><span class="incontext"><a href="Sec_EquivalentStatements.html#example-38">in-context</a></span>
+<p>So what we know is \((h\wedge v)\to p, h, \sim p\text{.}\) So:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{lcl} (h\wedge v)\to p\amp \ \ \ \amp \\ \sim p\\ \hline \sim(h\wedge v)=\sim h \vee\sim v \amp  \amp \text{ Modus Tollens } \\ \\ \sim h \vee \sim v \\ h=\sim \sim h\\ \hline \sim v  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
+\end{equation*}
+</div>
+<p>Therefore \(\sim v\text{,}\) I did not watch the videos. This was a valid argument.</p></article><span class="incontext"><a href="Sec_ValidArguments.html#example-38">in-context</a></span>
 </body>
 </html>
