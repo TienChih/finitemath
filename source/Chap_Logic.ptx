@@ -1,11 +1,11 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_Logic">
   <title>Logic</title>
   <xi:include  href="Sec_Statements.ptx"/>
-  <xi:include  href="Sec_OperationsStatements.ptx"/>
-  <xi:include  href="Sec_CompoundStatements.ptx"/>
+  <!--<xi:include  href="Sec_OperationsStatements.ptx"/>-->
+  <xi:include  href="Sec_CompoundStatements.ptx"/>-->
   <xi:include  href="Sec_EquivalentStatements.ptx"/>
   <xi:include  href="Sec_ConditionalStatements.ptx"/>
-  <xi:include  href="Sec_Circuits.ptx"/>
+  <!--<xi:include  href="Sec_Circuits.ptx"/>-->
   <xi:include  href="Quantifiers.ptx"/>
   <xi:include  href="Sec_Arguments.ptx"/>
   <xi:include  href="Fallacies.ptx"/>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-30T22:13:39-06:00    *-->
+<!--*    on 2020-07-01T11:03:11-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,11 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[e^x]\amp =\amp \limit{h}{0}\frac{e^{x+h}-e^x}{h}\\
-\amp =\amp \limit{h}{0}\frac{e^xe^h-e^x}{h}\\
-\amp =\amp e^x\limit{h}{0}\frac{e^h-1}{h}\\
-\amp =\amp e^x\cdot1=e^x
+\frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
+\amp =\amp \frac{d}{dx}[e^{\ln(a)x}]\\
+\amp =\amp e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }\\
+\amp =\amp e^{\ln(a)x}\ln(a)\cdot1\\
+\amp =\amp a^x\ln(a)
 \end{align*}
 </div>
 <span class="incontext"><a href="DerivativeExp.html#mjx-eqn-mrow-468">in-context</a></span>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-30T22:13:39-06:00    *-->
+<!--*    on 2020-07-01T11:03:11-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider \(f(x)=\sqrt{x^2+1}\text{.}\) We can think of this as \(f(x)=g(h(x))\) where \(g(x)=\sqrt{x}=x^{1/2}, h(x)=x^2+1\text{.}\) So \(g'(x)=\frac{1}{2}x^{-1/2}, h'(x)=2x\) and:</p>
+<p>If we have a rule for differentiating products, we should have a rule for differentiating quotients as well, after all, quotients and products are basically the same thing. So let \(Q(x)=\frac{f(x)}{g(x)}\text{,}\) and ask, what is \(Q'(x)\text{.}\) So:</p>
 <div class="displaymath">
 \begin{align*}
-f'(x)\amp =\amp \frac{d}{dx}[\sqrt{x^2+1}]\\
-\amp =\amp \frac{d}{dx}[g(h(x))]\\
-\amp =\amp g'(h(x))h'(x)\\
-\amp =\amp \frac{1}{2}(x^2+1)^{-1/2}(2x)\\
-\amp =\amp \frac{x}{\sqrt{x^2+1}}\text{.}
+Q(x)\amp =\amp \frac{f(x)}{g(x)}\\
+Q(x)g(x)\amp =\amp f(x),\ \text{ now we can differentiate both sides }\\
+\frac{d}{dx}[Q(x)g(x)]\amp =\amp f'(x),\ \text{ then by the product rule: }\\
+Q'(x)g(x)+Q(x)g'(x)\amp =\amp f'(x)\\
+Q'(x)g(x)\amp =\amp f'(x)-Q(x)g'(x),\ \text{then recall that  \(Q(x)=\frac{f(x)}{g(x)}\)}\\
+Q'(x)g(x)\amp =\amp f'(x)-\frac{f(x)g'(x)}{g(x)}\\
+Q'(x)g(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)}\\
+Q'(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_ChainRule.html#p-707">in-context</a></span>
+<span class="incontext"><a href="section-36.html#p-707">in-context</a></span>
 </body>
 </html>

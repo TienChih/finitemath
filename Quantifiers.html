@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-30T22:13:24-06:00    *-->
+<!--*    on 2020-07-01T11:02:53-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -98,10 +98,10 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_Circuits.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_Arguments.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_ConditionalStatements.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_Arguments.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_Circuits.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_Arguments.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_ConditionalStatements.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_Arguments.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -133,11 +133,9 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
 <li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
-<li><a href="Sec_OperationsStatements.html" data-scroll="Sec_OperationsStatements">Operations on Statements</a></li>
 <li><a href="Sec_CompoundStatements.html" data-scroll="Sec_CompoundStatements">Compound Statements</a></li>
 <li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
 <li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
-<li><a href="Sec_Circuits.html" data-scroll="Sec_Circuits">Circuits</a></li>
 <li><a href="Quantifiers.html" data-scroll="Quantifiers" class="active">Quantifiers</a></li>
 <li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Argument Types</a></li>
 <li><a href="Fallacies.html" data-scroll="Fallacies">Fallacies</a></li>
@@ -169,8 +167,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-37.html" data-scroll="section-37">Product Rule</a></li>
-<li><a href="section-38.html" data-scroll="section-38">Quotient Rule</a></li>
+<li><a href="section-35.html" data-scroll="section-35">Product Rule</a></li>
+<li><a href="section-36.html" data-scroll="section-36">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -181,34 +179,34 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Quantifiers"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4.7</span> <span class="title">Quantifiers</span>
+<span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Quantifiers</span>
 </h2>
-<section class="introduction" id="introduction-14"><p id="p-472">There are a lot of things in the world. A lot of people, a lot of animals, a lot of numbers, a lot of toppings available for pizza, a lot of things I could add to this list. Presumably, sometimes we'd want to make statements about all these things, and sometimes we want to make statements about some of these things.</p>
-<p id="p-473">Suppose \(x\) is an MSUB student and \(I(x)\) is the statement “\(x\) likes ice cream.” We want to perhaps say something more subtle than this. So we introduce the quantifiers \(\forall\) and \(\exists\text{.}\)</p>
-<p id="p-474">The \(\forall\) is pronounced “for all” or “for every”, indicates that the following statement is true for all values of \(x\text{.}\) So \(\forall I(x)\) would denote “For every MSUB student \(x\text{,}\) \(x\) likes Ice Cream.”. In order for a \(\forall\) statement to be true, it has to be true for EVERY possible value of \(x\text{.}\)</p>
-<p id="p-475">The \(\exists\) pronounced “there exists” or “there is” indicates the following statement is true for some values of \(x\text{.}\) It could be true for 1 of them, or a bunch of them, or for all of them. The only thing we know for sure is that there is AT LEAST 1 value of \(x\) for which it is true. So \(\exists I(x)\) would mean “There is an MSUB student who likes Ice Cream.” or “At least one MSUB student likes Ice Cream.”</p>
-<p id="p-476">Let's let \(M(x)\) be “\(x\) is a Math Major”, \(C(x)\) be “\(x\) takes Calculus”. Then consider the following equivalences:</p>
+<section class="introduction" id="introduction-15"><p id="p-479">There are a lot of things in the world. A lot of people, a lot of animals, a lot of numbers, a lot of toppings available for pizza, a lot of things I could add to this list. Presumably, sometimes we'd want to make statements about all these things, and sometimes we want to make statements about some of these things.</p>
+<p id="p-480">Suppose \(x\) is an MSUB student and \(I(x)\) is the statement “\(x\) likes ice cream.” We want to perhaps say something more subtle than this. So we introduce the quantifiers \(\forall\) and \(\exists\text{.}\)</p>
+<p id="p-481">The \(\forall\) is pronounced “for all” or “for every”, indicates that the following statement is true for all values of \(x\text{.}\) So \(\forall I(x)\) would denote “For every MSUB student \(x\text{,}\) \(x\) likes Ice Cream.”. In order for a \(\forall\) statement to be true, it has to be true for EVERY possible value of \(x\text{.}\)</p>
+<p id="p-482">The \(\exists\) pronounced “there exists” or “there is” indicates the following statement is true for some values of \(x\text{.}\) It could be true for 1 of them, or a bunch of them, or for all of them. The only thing we know for sure is that there is AT LEAST 1 value of \(x\) for which it is true. So \(\exists I(x)\) would mean “There is an MSUB student who likes Ice Cream.” or “At least one MSUB student likes Ice Cream.”</p>
+<p id="p-483">Let's let \(M(x)\) be “\(x\) is a Math Major”, \(C(x)\) be “\(x\) takes Calculus”. Then consider the following equivalences:</p>
 <div class="displaymath">
 \begin{equation*}
 
 \end{equation*}
 </div>
-<p id="p-477">Putting aside whether or not the above statements are actually true, here we just see how we can translate statements from english to logical symbols with quantifiers and back.</p>
-<p id="p-478">Also, whenever you see a statement \(\forall p(x)\text{,}\) no matter what \(p(x)\) is, it is fair to deduce \(\exists p(x)\) automatically. If somethings true for EVERY \(x\text{,}\) then it also has to be true for at least 1 \(x\text{.}\) The converse is obviously NOT true. If something is true for a single \(x\text{,}\) it doesn't mean it will be true for more.</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">4.7.1</span> <span class="title">Negating Quantifiers</span>
+<p id="p-484">Putting aside whether or not the above statements are actually true, here we just see how we can translate statements from english to logical symbols with quantifiers and back.</p>
+<p id="p-485">Also, whenever you see a statement \(\forall p(x)\text{,}\) no matter what \(p(x)\) is, it is fair to deduce \(\exists p(x)\) automatically. If somethings true for EVERY \(x\text{,}\) then it also has to be true for at least 1 \(x\text{.}\) The converse is obviously NOT true. If something is true for a single \(x\text{,}\) it doesn't mean it will be true for more.</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.1</span> <span class="title">Negating Quantifiers</span>
 </h3>
-<p id="p-479">Let's consider \(\forall I(x)\) or “Every MSUB student likes Ice Cream.” If this were NOT true, what would that mean? It would mean that there is some poor soul out on our campus who does not like Ice Cream. In other words: \(\exists \sim I(x)\text{.}\)</p>
-<p id="p-480">What would the negation of \(\exists I(x)\) be? The statement is saying “There is a student who likes Ice Cream.” What is the opposite of this? It would mean that every single student doesn't like Ice Cream, i.e. \(\forall \sim I(x)\text{.}\) So our negation rules are:</p>
+<p id="p-486">Let's consider \(\forall I(x)\) or “Every MSUB student likes Ice Cream.” If this were NOT true, what would that mean? It would mean that there is some poor soul out on our campus who does not like Ice Cream. In other words: \(\exists \sim I(x)\text{.}\)</p>
+<p id="p-487">What would the negation of \(\exists I(x)\) be? The statement is saying “There is a student who likes Ice Cream.” What is the opposite of this? It would mean that every single student doesn't like Ice Cream, i.e. \(\forall \sim I(x)\text{.}\) So our negation rules are:</p>
 <div class="displaymath">
 \begin{align*}
 \sim(\forall p(x))\amp =\amp \exists \sim p(x)\\
 \sim(\exists p(x))\amp =\amp \forall \sim p(x)\text{.}
 \end{align*}
 </div>
-<p id="p-481">So let's practice on the statements we made earlier:</p>
+<p id="p-488">So let's practice on the statements we made earlier:</p>
 <ul class="disc">
-<li id="li-110">
-<p id="p-482">The negation of ``For every MSUB student, if you're a Math Major then you take Calculus." is:</p>
+<li id="li-113">
+<p id="p-489">The negation of ``For every MSUB student, if you're a Math Major then you take Calculus." is:</p>
 <div class="displaymath">
 \begin{align*}
 \sim(\forall (M(x)\to C(x)))\amp =\amp \exists\sim (M(x)\to C(x))\\
@@ -218,8 +216,8 @@ MathJax.Hub.Config({
 </div>
 <p data-braille="continuation">``At MSUB, there is a student who is a Math Major and doesn't take Calculus."</p>
 </li>
-<li id="li-111">
-<p id="p-483">The negation of ``There is an MSUB student who isn't a Math Major and doesn't take Calculus." is:</p>
+<li id="li-114">
+<p id="p-490">The negation of ``There is an MSUB student who isn't a Math Major and doesn't take Calculus." is:</p>
 <div class="displaymath">
 \begin{align*}
 \sim(\exists (\sim M(x)\wedge \sim C(x)))\amp =\amp \forall \sim(\sim M(x)\wedge \sim C(x))\\
@@ -228,8 +226,8 @@ MathJax.Hub.Config({
 </div>
 <p data-braille="continuation">``Every student at MSUB either is a Math Major or takes Calculus."</p>
 </li>
-<li id="li-112">
-<p id="p-484">The negation of “Every MSUB student does not take calculus.” is:</p>
+<li id="li-115">
+<p id="p-491">The negation of “Every MSUB student does not take calculus.” is:</p>
 <div class="displaymath">
 \begin{align*}
 \sim(\forall \sim C(x))\amp =\amp \exists \sim\sim C(x)\\
@@ -239,7 +237,7 @@ MathJax.Hub.Config({
 <p data-braille="continuation">“There is an MSUB student taking Calculus.”</p>
 </li>
 </ul>
-<p id="p-485">Again, I'm not claiming any of these things are true IRL. But given the original statements, these should read and feel like real opposites.</p></section></section></div></main>
+<p id="p-492">Again, I'm not claiming any of these things are true IRL. But given the original statements, these should read and feel like real opposites.</p></section></section></div></main>
 </div>
 </body>
 </html>

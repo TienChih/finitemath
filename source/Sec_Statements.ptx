@@ -1,5 +1,6 @@
 <section xml:id="Sec_Statements">
   <title>Statements</title>
+  <introduction>
   <p>
     Something thats often misunderstood about Math is that people think that Math is the study of numbers.
     This is false, and not even historically justifiable.
@@ -7,8 +8,12 @@
     but that is not fundamentally what the discipline is.
     Really, even when Math deals with numbers,
     the fundamental thing that is studied are not numbers but <term>statements</term>.
-    What is a statement?
-    It is a sentence that is true or false, but not both.
+    What is a statement?</p>
+  </introduction>
+  <subsection>
+    <title>What is a Statement?</title>
+    <p>
+    A statement is a sentence that is true or false, but not both.
     For example:
     <ol>
       <li>
@@ -35,6 +40,9 @@
     but at no point can it take on the value of both true and false.
   </p>
   <p>
+    An example of something that is <em>not</em> a statement is something that cannot take on the values true or false.  Consider "The color of my shirt."  The value of my shirts color could potentially take on many different values, whoever, true or false are not amongst them.  On the other hand "The color of my shirt is red." <em>IS</em> a statement, it may be true, it may be false, but those are valid values for that statement.
+  </p>
+  <p>
     So we're going to be doing something in this chapter that seems fairly strange.
     We are going to be working with variables that are placeholders for statements rather than numbers.
     The possible values for these statements then, are
@@ -44,4 +52,185 @@
     but since every variable has only 2 possible values,
     the rules of our algebra are going to be different.
   </p>
+</subsection>
+  <subsection>
+    <title>Operations on Statements</title>
+    <p>
+      The first sort of operation we can perform is <term>negation</term>.
+      Given any statement <m>p</m>,
+      the negation denoted <m>~p</m>, called <term>not</term> <m>p</m>, is a statement that is false whenever the original statement is true,
+      and true when the original is false.
+    </p>
+    <p>
+      For example if <m>p=\text{ "It will rain today" }</m>,
+      then it's negation <m>\sim p=\text{ "It will not rain today" }</m>,
+      similarly if <m>q=(x>10)</m>,
+      then it's negation <m>\sim q =(x\leq 10)</m>.
+      These are statements that are true whenever the original statement is false and false when they are true.
+    </p>
+    <p>
+      A convenient way to record when a statement is true or false is by something called a
+      <q>truth table</q>. By listing all the truth values of <m>p</m>,
+      we can see when <m>\sim p</m> is true:
+      <me>
+        \begin{array}{c|c} p\amp \sim p\\ \hline T \amp  F\\ F\amp T \end{array}
+      </me>
+    </p>
+    <p>
+      Next we consider opertations between two statements.
+    </p>
+    <p>
+      Given statements <m>p</m>, <m>q</m>,
+      the statement <m>p\wedge q</m> pronounced <m>p</m> <term>and</term> <m>q</m> is when <m>p</m> and <m>q</m> are both true,
+      otherwise it is false.
+    </p>
+    <p>
+      For example, if <m>p=</m>
+      <q>I will eat breakfast today</q>
+      and <m>q=</m>
+      <q>I will eat lunch today</q>, then the statement <m>p\wedge q</m> is the statement
+      <q>I will breakfast today and I will eat lunch today</q>
+      which is only true if you eat both meals,
+      if you skip one or both, then it is false.
+      <me>
+        \begin{array}{c|c|c} p\amp q\amp p\wedge q\\ \hline T \amp  T\amp T\\ T\amp F\amp F\\ F\amp T\amp F\\ F\amp F\amp F \end{array}
+      </me>
+    </p>
+    <p>
+      So if you skipped breakfast but had lunch,
+      you could take a look at the third line and see that the compound statement
+      <q>I will breakfast today and I will eat lunch today</q>
+      is false.
+    </p>
+    <p>
+      Given statements <m>p</m>, <m>q</m>,
+      the statement <m>p\vee q</m> pronounced <m>p</m> <term>or</term> <m>q</m> is when either <m>p</m> or <m>q</m> is true,
+      otherwise it is false.
+    </p>
+    <p>
+      So as in the above example,
+      <m>p\vee q</m> would be "I will eat breakfast today or I will eat lunch today" and you're covered as long as you either have breakfast or lunch.
+      If you skip both, then you're lying,
+      but as long as you had either you're telling the truth.
+      <me>
+        \begin{array}{c|c|c} p\amp q\amp p\vee q\\ \hline T \amp  T\amp T\\ T\amp F\amp T\\ F\amp T\amp T\\ F\amp F\amp F \end{array}
+      </me>
+    </p>
+    <p>
+      So if you had breakfast and skipped lunch,
+      you can look at the second row and see that the statement "I will eat breakfast today or I will eat lunch today" is still true.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Compound Statements</title>
+    <p>
+      Suppose a friend of your has a test coming up tomorrow . You ask them about their study plans and they say ``Well, I'll either study today,
+      or I'll skip class tomorrow and study tomorrow." Now your friend says this,
+      but all sorts of things could happen between now and the test,
+      so under what circumstances is your friend telling the truth and when are they lying?
+    </p>
+    <p>
+      Looking at their statement,
+      there seems to be three fundamental underlying events:
+      <ul>
+        <li>
+          <p>
+            Studying today, lets call this <m>p</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Going to class tomorrow, let's call this <m>q</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Studying tomorrow, let's call this <m>r</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Then the sentence ``I'll either study today,
+      or I'll skip class tomorrow and study tomorrow." can be broken down as:
+      <me>
+        p\vee (\sim q \wedge r)
+      </me>
+      that is
+      <q>Either <m>p</m> OR not <m>q</m> AND <m>r</m></q>.
+    </p>
+    <p>
+      So when is this statement true?
+      We first note that <m>p,q,r</m> could all be true or false,
+      your friend could potentially do or not do any of these things.
+      All the combinations are as follows:
+      <me>
+        \begin{array}{c|c|c} p\amp q\amp r\\ \hline T \amp  T\amp T\\ T\amp T\amp F\\ T\amp F\amp T\\ T\amp F\amp F\\ F \amp  T\amp T\\ F\amp T\amp F\\ F\amp F\amp T\\ F\amp F\amp F \end{array}
+      </me>
+    </p>
+    <p>
+      Since <m>\sim q</m> is in our expression,
+      it may be helpful to list out what it's values are.
+      Remember, that <m>\sim q</m> is the opposite of <m>q</m>.
+      As you get more experienced one may be tempted to skip stuff like <m>\sim q</m> but for now let's proceed with caution:
+      <me>
+        \begin{array}{c|c|c|c} p\amp q\amp r\amp \sim q\\ \hline T \amp  T\amp T\amp F\\ T\amp T\amp F\amp F\\ T\amp F\amp T\amp T\\ T\amp F\amp F\amp T\\ F \amp  T\amp T\amp F\\ F\amp T\amp F\amp F\\ F\amp F\amp T\amp T\\ F\amp F\amp F\amp T \end{array}
+      </me>
+    </p>
+    <p>
+      Next, we have the statement <m>\sim q \wedge r</m>,
+      which is true whenever both <m>\sim q</m> and <m>r</m> are true<ellipsis/>
+      <me>
+        \begin{array}{c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\\ \hline T \amp  T\amp T\amp F \amp  \\ T\amp T\amp F\amp F\amp  \\ T\amp F\amp \color{red}{T}\amp \color{red}{T}\amp \color{red}{T}\\ T\amp F\amp F\amp T\\ F \amp  T\amp T\amp F\\ F\amp T\amp F\amp F\\ F\amp F\amp \color{red}{T}\amp \color{red}{T}\amp \color{red}{T}\\ F\amp F\amp F\amp T \end{array}
+      </me>
+    </p>
+    <p>
+      <ellipsis/> and false otherwise:
+      <me>
+        \begin{array}{c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\\ \hline T \amp  T\amp T\amp F\amp F\\ T\amp T\amp F\amp F\amp F \\ T\amp F\amp T\amp T\amp T\\ T\amp F\amp F\amp T\amp F\\ F \amp  T\amp T\amp F\amp F\\ F\amp T\amp F\amp F\amp F\\ F\amp F\amp T\amp T\amp T\\ F\amp F\amp F\amp T\amp F \end{array}
+      </me>
+    </p>
+    <p>
+      Finally, we have the statement
+      <m>p\vee (\sim q \wedge r)</m> which is true whenever either <m>p</m> or <m>\sim q \wedge r</m> is true <ellipsis/>
+      <me>
+        \begin{array}{c|c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\amp  p\vee(\sim q \wedge r)\\ \hline \color{red}{T} \amp  T\amp T\amp F\amp F\amp \color{red}{T}\\ \color{red}{T}\amp T\amp F\amp F\amp F\amp \color{red}{T} \\ \color{red}{T}\amp F\amp T\amp T\amp \color{red}{T}\amp \color{red}{T}\\ \color{red}{T}\amp F\amp F\amp T\amp F\amp \color{red}{T}\\ F \amp  T\amp T\amp F\amp F\\ F\amp T\amp F\amp F\amp F\\ F\amp F\amp T\amp T\amp \color{red}{T}\amp \color{red}{T}\\ F\amp F\amp F\amp T\amp F \end{array}
+      </me>
+    </p>
+    <p>
+      <ellipsis/> and false otherwise:
+      <me>
+        \begin{array}{c|c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\amp  p\vee (\sim q \wedge r)\\ \hline T \amp  T\amp T\amp F\amp F\amp T\\ T\amp T\amp F\amp F\amp F\amp T \\ T\amp F\amp T\amp T\amp T\amp T\\ T\amp F\amp F\amp T\amp F\amp T\\ F \amp  T\amp T\amp F\amp F\amp F\\ F\amp T\amp F\amp F\amp F\amp F\\ F\amp F\amp T\amp T\amp T\amp T\\ F\amp F\amp F\amp T\amp F\amp F \end{array}
+      </me>
+    </p>
+    <p>
+      If your friend studies today,
+      goes to class tomorrow and studies tomorrow, did they lie?
+      In this case <m>p</m> is true,
+      <m>q</m> is true and <m>r</m> is true,
+      so looking at the first row:
+      <me>
+        \begin{array}{c|c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\amp  p\vee (\sim q \wedge r)\\ \hline \color{blue}{T} \amp  \color{blue}T\amp \color{blue}T\amp F\amp F\amp \color{blue}T\\ T\amp T\amp F\amp F\amp F\amp T \\ T\amp F\amp T\amp T\amp T\amp T\\ T\amp F\amp F\amp T\amp F\amp T\\ F \amp  T\amp T\amp F\amp F\amp F\\ F\amp T\amp F\amp F\amp F\amp F\\ F\amp F\amp T\amp T\amp T\amp T\\ F\amp F\amp F\amp T\amp F\amp F \end{array}
+      </me>
+    </p>
+    <p>
+      Your friend was telling the truth!
+      Let's say instead, they didn't study today,
+      went to class tomorrow and studied tomorrow.
+      Then <m>p</m> is false, <m>q</m> is true,
+      <m>r</m> is true and we have:
+      <me>
+        \begin{array}{c|c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\amp  p\vee (\sim q \wedge r)\\ \hline T \amp  T\amp T\amp F\amp F\amp T\\ T\amp T\amp F\amp F\amp F\amp T \\ T\amp F\amp T\amp T\amp T\amp T\\ T\amp F\amp F\amp T\amp F\amp T\\ \color{blue}F \amp  \color{blue}T\amp \color{blue}T\amp F\amp F\amp \color{blue}F\\ F\amp T\amp F\amp F\amp F\amp F\\ F\amp F\amp T\amp T\amp T\amp T\\ F\amp F\amp F\amp T\amp F\amp F \end{array}
+      </me>
+    </p>
+    <p>
+      Then, they would be lying.
+      They said either they would go to class today
+      (they didn't)
+      or, they would skip class AND study tomorrow.
+      They studied tomorrow but didn't skip class,
+      so what they said ultimately wasn't true.
+    </p>
+   </subsection> 
+
 </section>
