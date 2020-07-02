@@ -17,9 +17,11 @@
     What does this really mean?
     In essence, it says that no matter what <m>x</m> is,
     the left hand side and right hand side will yield the same value.
-    If I plug in <m>x=0</m> then <m>2(0+3)=2(0)+6=6</m>,
-    if I plug in <m>x=4</m> then <m>2(4+3)=2(4)+6=14</m>,
-    if I plug in <m>x=-1</m> then <m>2(-1+3)=2(-1)+6=4</m> and so forth.
+    <ul>
+    <li> If I evaluate <m>x=0</m> then <m>2(0+3)=2(0)+6=6</m>.</li>
+    <li> If I evaluate <m>x=4</m> then <m>2(4+3)=2(4)+6=14</m>.</li>
+    <li> If I evaluate <m>x=-1</m> then <m>2(-1+3)=2(-1)+6=4</m> and so forth.</li>
+    </ul>
     The statements <m>2(x+3)</m> and <m>2x+6</m> have the same value under the same circumstances.
     So this is how we define equivalence of logical statements.
     <term>Two logical statements are equivalent if they have the same values under the same circumstances.</term>

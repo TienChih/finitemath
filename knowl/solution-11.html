@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-01T16:52:42-06:00    *-->
+<!--*    on 2020-07-01T21:58:55-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -15,8 +15,9 @@
 <div class="solution solution-like">
 <h6 class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.1.1</span><span class="period">.</span>
-</h6>Let \(a\) be the statement "Max ate his chicken nuggets" and \(b\) be the statement "Max went to the potty". <ol class="decimal">
-<li>Since Max must both eact chicken nuggets and not potty, we have \(a\wedge \sim b\text{.}\)</li>
+</h6>
+<ol class="decimal">
+<li>Since Max must both eat chicken nuggets and not potty, we have \(a\wedge \sim b\text{.}\)</li>
 <li>A truth table could be constructed as follows:\(\ \\ \)<div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} 
@@ -29,8 +30,20 @@ F \amp  F\amp T \amp F\\
 \end{array}
 \end{equation*}
 </div>Which is only true if \(a\) is true (he eats nuggets) and \(b\) is false (he does not potty).</li>
-<li>Write a sentence describing \(\sim p \wedge \sim q\text{.}\)</li>
-<li>Write out a truth table for \(\sim p \wedge \sim q\text{.}\)  Describe when this statement is true.</li>
+<li>"Either Max didn't eat chicken nuggets or he went to the potty.".</li>
+<li>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c} 
+a\amp b\amp  \sim a \amp \sim a\vee b\\ 
+\hline 
+T \amp  T\amp F \amp T\\
+T \amp  F\amp F \amp F\\
+F \amp  T\amp T \amp T\\
+F \amp  F\amp T \amp T\\
+\end{array}
+\end{equation*}
+</div>Which is true in any situation except when he eats nuggets and doesn't go to the potty.</li>
 </ol>
 </div>
 <span class="incontext"><a href="Sec_Statements.html#solution-11">in-context</a></span>

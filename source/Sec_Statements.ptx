@@ -289,22 +289,20 @@
   </subsection>
   <subsection>
     <title>Exercises </title>
-    Poo
-  </subsection>  
+    
   <exercise>
     <statement>
         Let <m>a</m> be the statement "Max ate his chicken nuggets" and <m>b</m> be the statement "Max went to the potty".
         <ol>
           <li> Write a symbolic logical statement for the sentence "Max ate his chicken nuggets but didn't go to the potty".</li>
           <li>Write out a truth table for "Max ate his chicken nuggets but didn't go to the potty".  Describe when this sentence is true.</li>
-          <li> Write a sentence describing <m> \sim p \wedge \sim q</m>.  </li>
-          <li> Write out a truth table for <m> \sim p \wedge \sim q</m>.  Describe when this statement is true. </li>
+          <li> Write a sentence describing <m> \sim a \vee  b</m>.  </li>
+          <li> Write out a truth table for <m> \sim a \vee  b</m>.  Describe when this statement is true. </li>
         </ol> 
     </statement>
     <solution>
-        Let <m>a</m> be the statement "Max ate his chicken nuggets" and <m>b</m> be the statement "Max went to the potty".
         <ol>
-          <li> Since Max must both eact chicken nuggets and not potty, we have <m>a\wedge \sim b</m>.</li>
+          <li> Since Max must both eat chicken nuggets and not potty, we have <m>a\wedge \sim b</m>.</li>
           <li>A truth table could be constructed as follows:<m> \ \\ </m>
               <me>
                 \begin{array}{c|c|c|c} 
@@ -318,11 +316,75 @@
               </me> 
               Which is only true if <m>a</m> is true (he eats nuggets) and <m>b</m> is false (he does not potty).
           </li>
-          <li> Write a sentence describing <m> \sim p \wedge \sim q</m>.  </li>
-          <li> Write out a truth table for <m> \sim p \wedge \sim q</m>.  Describe when this statement is true. </li>
+          <li> "Either Max didn't eat chicken nuggets or he went to the potty.".  </li>
+          <li> <me>
+                \begin{array}{c|c|c|c} 
+                a\amp b\amp  \sim a \amp \sim a\vee b\\ 
+                \hline 
+                T \amp  T\amp F \amp T\\
+                T \amp  F\amp F \amp F\\
+                F \amp  T\amp T \amp T\\
+                F \amp  F\amp T \amp T\\
+                \end{array}
+              </me>  
+              Which is true in any situation except when he eats nuggets and doesn't go to the potty.</li>
         </ol> 
     </solution>  
 
   </exercise>  
+  <exercise>
+    <statement>
+        Let <m>p</m> be the statement "<m>x</m> is square", <m>q</m> be the statement "<m>x</m> is even", and <m>r</m> be the statement "<m>x</m> is divisible by 5".
+        <ol>
+          <li> Write a symbolic logical statement for the sentence "<m>x</m> is either even or divisible by 5, but it's not a square".</li>
+          <li>Write out a truth table for "<m>x</m> is either even or divisible by 5, but it's not a square".  Describe when this sentence is true.</li>
+          <li> Write a sentence describing <m> p \wedge (q \vee r)</m>.  </li>
+          <li> Write out a truth table for <m>  p \wedge (q \vee r)</m>.  Describe when this statement is true. </li>
+        </ol> 
+    </statement>
+    <solution>
+        <ol>
+          <li> We can either be even or divisible by 5 but it must not be square, so we have <m>(q\vee r)\wedge \sim p</m>.</li>
+          <li>A truth table could be constructed as follows:<m> \ \\ </m>
+              <me>
+                \begin{array}{c|c|c|c|c|c} 
+                p\amp q\amp  r \amp \sim p \amp q\vee r \amp (q\vee r)\wedge \sim p\\ 
+                \hline 
+                T \amp  T\amp T \amp F\amp T\amp F\\
+                T \amp  T\amp F \amp F\amp T\amp F\\
+                T \amp  F\amp T \amp F\amp T\amp F\\
+                T \amp  F\amp F \amp F\amp F\amp F\\
+                F \amp  T\amp T \amp T\amp T\amp T\\
+                F \amp  T\amp F \amp T\amp T\amp T\\
+                F \amp  F\amp T \amp T\amp T\amp T\\
+                F \amp  F\amp F \amp T\amp F\amp F\\
+                \end{array}
+              </me> 
+
+              Which is only true if so long as <m>x</m> is not square, but it is either a multiple of 2 or 5 or both.
+          </li>
+          <li>  "<m>x</m> is a square, which is even or divisible by 5".  </li>
+          <li> <m> \ \\ </m>
+            <me>
+                \begin{array}{c|c|c|c|c|c} 
+                p\amp q\amp  r  \amp q\vee r \amp p\wedge (q\vee r)\\ 
+                \hline 
+                T \amp  T\amp T \amp T\amp T\\
+                T \amp  T\amp F \amp T\amp T\\
+                T \amp  F\amp T \amp T\amp T\\
+                T \amp  F\amp F \amp F\amp F\\
+                F \amp  T\amp T \amp T\amp F\\
+                F \amp  T\amp F \amp T\amp F\\
+                F \amp  F\amp T \amp T\amp F\\
+                F \amp  F\amp F \amp F\amp F\\
+                \end{array}
+              </me>  
+
+              This is true so long as <m>x</m> is a square, and is either a multiple of 2 or 5.</li>
+        </ol> 
+    </solution>  
+
+  </exercise> 
+    </subsection>  
 
 </section>

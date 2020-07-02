@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-01T16:52:30-06:00    *-->
+<!--*    on 2020-07-01T21:58:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -307,17 +307,18 @@ p\vee (\sim q \wedge r)
 f.truthtable()
 </script></div> It generates the table in a different order than what we have but the same rows still correspond to the same values.</p></section><section class="subsection" id="subsection-28"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.1.5</span> <span class="title">Exercises</span>
-</h3> Poo</section><article class="exercise exercise-like" id="exercise-8"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-8"><h6 class="heading">
+</h3>
+<article class="exercise exercise-like" id="exercise-8"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-8"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-8"><article class="exercise exercise-like">Let \(a\) be the statement "Max ate his chicken nuggets" and \(b\) be the statement "Max went to the potty". <ol class="decimal">
 <li id="li-105">Write a symbolic logical statement for the sentence "Max ate his chicken nuggets but didn't go to the potty".</li>
 <li id="li-106">Write out a truth table for "Max ate his chicken nuggets but didn't go to the potty".  Describe when this sentence is true.</li>
-<li id="li-107">Write a sentence describing \(\sim p \wedge \sim q\text{.}\)</li>
-<li id="li-108">Write out a truth table for \(\sim p \wedge \sim q\text{.}\)  Describe when this statement is true.</li>
+<li id="li-107">Write a sentence describing \(\sim a \vee  b\text{.}\)</li>
+<li id="li-108">Write out a truth table for \(\sim a \vee  b\text{.}\)  Describe when this statement is true.</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">Let \(a\) be the statement "Max ate his chicken nuggets" and \(b\) be the statement "Max went to the potty". <ol class="decimal">
-<li id="li-109">Since Max must both eact chicken nuggets and not potty, we have \(a\wedge \sim b\text{.}\)</li>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like"><ol class="decimal">
+<li id="li-109">Since Max must both eat chicken nuggets and not potty, we have \(a\wedge \sim b\text{.}\)</li>
 <li id="li-110">A truth table could be constructed as follows:\(\ \\ \)<div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} 
@@ -330,11 +331,68 @@ F \amp  F\amp T \amp F\\
 \end{array}
 \end{equation*}
 </div>Which is only true if \(a\) is true (he eats nuggets) and \(b\) is false (he does not potty).</li>
-<li id="li-111">Write a sentence describing \(\sim p \wedge \sim q\text{.}\)</li>
-<li id="li-112">Write out a truth table for \(\sim p \wedge \sim q\text{.}\)  Describe when this statement is true.</li>
+<li id="li-111">"Either Max didn't eat chicken nuggets or he went to the potty.".</li>
+<li id="li-112">
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c} 
+a\amp b\amp  \sim a \amp \sim a\vee b\\ 
+\hline 
+T \amp  T\amp F \amp T\\
+T \amp  F\amp F \amp F\\
+F \amp  T\amp T \amp T\\
+F \amp  F\amp T \amp T\\
+\end{array}
+\end{equation*}
+</div>Which is true in any situation except when he eats nuggets and doesn't go to the potty.</li>
+</ol></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-9"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-9"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-9"><article class="exercise exercise-like">Let \(p\) be the statement "\(x\) is square", \(q\) be the statement "\(x\) is even", and \(r\) be the statement "\(x\) is divisible by 5". <ol class="decimal">
+<li id="li-113">Write a symbolic logical statement for the sentence "\(x\) is either even or divisible by 5, but it's not a square".</li>
+<li id="li-114">Write out a truth table for "\(x\) is either even or divisible by 5, but it's not a square".  Describe when this sentence is true.</li>
+<li id="li-115">Write a sentence describing \(p \wedge (q \vee r)\text{.}\)</li>
+<li id="li-116">Write out a truth table for \(p \wedge (q \vee r)\text{.}\)  Describe when this statement is true.</li>
 </ol>
-</div></div>
-</div></article></div></section></div></main>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><ol class="decimal">
+<li id="li-117">We can either be even or divisible by 5 but it must not be square, so we have \((q\vee r)\wedge \sim p\text{.}\)</li>
+<li id="li-118">A truth table could be constructed as follows:\(\ \\ \)<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c} 
+p\amp q\amp  r \amp \sim p \amp q\vee r \amp (q\vee r)\wedge \sim p\\ 
+\hline 
+T \amp  T\amp T \amp F\amp T\amp F\\
+T \amp  T\amp F \amp F\amp T\amp F\\
+T \amp  F\amp T \amp F\amp T\amp F\\
+T \amp  F\amp F \amp F\amp F\amp F\\
+F \amp  T\amp T \amp T\amp T\amp T\\
+F \amp  T\amp F \amp T\amp T\amp T\\
+F \amp  F\amp T \amp T\amp T\amp T\\
+F \amp  F\amp F \amp T\amp F\amp F\\
+\end{array}
+\end{equation*}
+</div>Which is only true if so long as \(x\) is not square, but it is either a multiple of 2 or 5 or both.</li>
+<li id="li-119">"\(x\) is a square, which is even or divisible by 5".</li>
+<li id="li-120">\(\ \\ \)<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c} 
+p\amp q\amp  r  \amp q\vee r \amp p\wedge (q\vee r)\\ 
+\hline 
+T \amp  T\amp T \amp T\amp T\\
+T \amp  T\amp F \amp T\amp T\\
+T \amp  F\amp T \amp T\amp T\\
+T \amp  F\amp F \amp F\amp F\\
+F \amp  T\amp T \amp T\amp F\\
+F \amp  T\amp F \amp T\amp F\\
+F \amp  F\amp T \amp T\amp F\\
+F \amp  F\amp F \amp F\amp F\\
+\end{array}
+\end{equation*}
+</div>This is true so long as \(x\) is a square, and is either a multiple of 2 or 5.</li>
+</ol></div></div>
+</div></article></div></section></section></div></main>
 </div>
 </body>
 </html>
