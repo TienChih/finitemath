@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-01T11:03:11-06:00    *-->
+<!--*    on 2020-07-01T16:52:46-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Similarly, the derivative of \(g(x)=\frac{x}{x^2+1}\text{:}\)</p>
+<p>The proof of this is a fairly sophisticated fact and it not trivial, but you can verify it by taking the slider \(h\text{,}\) dragging it towards 0 and seeing what happens: \url{https://www.desmos.com/calculator/4uv0zgguq9}. Using this fact, we can deduce:</p>
 <div class="displaymath">
 \begin{align*}
-g'(x)\amp =\amp \frac{(x^2+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x^2+1]}{(x^2+1)^2}\\
-\amp =\amp \frac{(x^2+1)(1)-x(2x)}{(x^2+1)^2}\\
-\amp =\amp \frac{1-x^2}{(x^2+1)^2}
+\frac{d}{dx}[e^x]\amp =\amp \limit{h}{0}\frac{e^{x+h}-e^x}{h}\\
+\amp =\amp \limit{h}{0}\frac{e^xe^h-e^x}{h}\\
+\amp =\amp e^x\limit{h}{0}\frac{e^h-1}{h}\\
+\amp =\amp e^x\cdot1=e^x\text{.}
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_QuotientRule.html#p-703">in-context</a></span>
+<span class="incontext"><a href="DerivativeExp.html#p-703">in-context</a></span>
 </body>
 </html>

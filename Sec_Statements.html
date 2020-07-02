@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-01T11:02:52-06:00    *-->
+<!--*    on 2020-07-01T16:52:30-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -41,7 +41,15 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -98,10 +106,10 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Chap_Logic.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_CompoundStatements.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Chap_Logic.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_EquivalentStatements.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Chap_Logic.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_CompoundStatements.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Chap_Logic.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_EquivalentStatements.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -133,7 +141,6 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
 <li><a href="Sec_Statements.html" data-scroll="Sec_Statements" class="active">Statements</a></li>
-<li><a href="Sec_CompoundStatements.html" data-scroll="Sec_CompoundStatements">Compound Statements</a></li>
 <li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
 <li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
 <li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
@@ -167,8 +174,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-35.html" data-scroll="section-35">Product Rule</a></li>
-<li><a href="section-36.html" data-scroll="section-36">Quotient Rule</a></li>
+<li><a href="section-34.html" data-scroll="section-34">Product Rule</a></li>
+<li><a href="section-35.html" data-scroll="section-35">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -222,14 +229,14 @@ MathJax.Hub.Config({
 <p id="p-390">So if you had breakfast and skipped lunch, you can look at the second row and see that the statement "I will eat breakfast today or I will eat lunch today" is still true.</p></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.1.3</span> <span class="title">Compound Statements</span>
 </h3>
-<p id="p-391">Suppose a friend of your has a test coming up tomorrow . You ask them about their study plans and they say ``Well, I'll either study today, or I'll skip class tomorrow and study tomorrow." Now your friend says this, but all sorts of things could happen between now and the test, so under what circumstances is your friend telling the truth and when are they lying?</p>
+<p id="p-391">Suppose a friend of your has a test coming up tomorrow . You ask them about their study plans and they say "Well, I'll either study today, or I'll skip class tomorrow and study tomorrow." Now your friend says this, but all sorts of things could happen between now and the test, so under what circumstances is your friend telling the truth and when are they lying?</p>
 <p id="p-392">Looking at their statement, there seems to be three fundamental underlying events:</p>
 <ul class="disc">
 <li id="li-96"><p id="p-393">Studying today, lets call this \(p\text{.}\)</p></li>
 <li id="li-97"><p id="p-394">Going to class tomorrow, let's call this \(q\text{.}\)</p></li>
 <li id="li-98"><p id="p-395">Studying tomorrow, let's call this \(r\text{.}\)</p></li>
 </ul>
-<p id="p-396">Then the sentence ``I'll either study today, or I'll skip class tomorrow and study tomorrow." can be broken down as:</p>
+<p id="p-396">Then the sentence "I'll either study today, or I'll skip class tomorrow and study tomorrow." can be broken down as:</p>
 <div class="displaymath">
 \begin{equation*}
 p\vee (\sim q \wedge r)
@@ -284,7 +291,50 @@ p\vee (\sim q \wedge r)
 \begin{array}{c|c|c|c|c|c} p\amp q\amp r\amp \sim q \amp  \sim q \wedge r\amp  p\vee (\sim q \wedge r)\\ \hline T \amp  T\amp T\amp F\amp F\amp T\\ T\amp T\amp F\amp F\amp F\amp T \\ T\amp F\amp T\amp T\amp T\amp T\\ T\amp F\amp F\amp T\amp F\amp T\\ \color{blue}F \amp  \color{blue}T\amp \color{blue}T\amp F\amp F\amp \color{blue}F\\ F\amp T\amp F\amp F\amp F\amp F\\ F\amp F\amp T\amp T\amp T\amp T\\ F\amp F\amp F\amp T\amp F\amp F \end{array}
 \end{equation*}
 </div>
-<p id="p-405">Then, they would be lying. They said either they would go to class today (they didn't) or, they would skip class AND study tomorrow. They studied tomorrow but didn't skip class, so what they said ultimately wasn't true.</p></section></section></div></main>
+<p id="p-405">Then, they would be lying. They said either they would go to class today (they didn't) or, they would skip class AND study tomorrow. They studied tomorrow but didn't skip class, so what they said ultimately wasn't true.</p></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.4</span> <span class="title">Sage</span>
+</h3>
+<p id="p-406">We can automatically generate the truth tables with SageCells. Using the symbols:</p>
+<ul class="disc">
+<li id="li-99"><p id="p-407">\(&amp;\) -and</p></li>
+<li id="li-100"><p id="p-408">\(|\)-or</p></li>
+<li id="li-101"><p id="p-409">\(\sim\)-not</p></li>
+<li id="li-102"><p id="p-410">\(\wedge\)-xor</p></li>
+<li id="li-103"><p id="p-411">\(-&gt;\)-if-then</p></li>
+<li id="li-104"><p id="p-412">\(\lt -&gt;\)-if and only if</p></li>
+</ul>
+<p id="p-413">We haven't covered all these operations yet. But if we wanted to say “\(p\) or (not \(q\) and \(r\))” That could be recorded as \(p|(\sim q &amp; r)\) So we could generate the truth table here: <div class="sagecell-sage" id="sage-3"><script type="text/x-sage">f = propcalc.formula("p|(~q & r)")
+f.truthtable()
+</script></div> It generates the table in a different order than what we have but the same rows still correspond to the same values.</p></section><section class="subsection" id="subsection-28"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.5</span> <span class="title">Exercises</span>
+</h3> Poo</section><article class="exercise exercise-like" id="exercise-8"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-8"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-8"><article class="exercise exercise-like">Let \(a\) be the statement "Max ate his chicken nuggets" and \(b\) be the statement "Max went to the potty". <ol class="decimal">
+<li id="li-105">Write a symbolic logical statement for the sentence "Max ate his chicken nuggets but didn't go to the potty".</li>
+<li id="li-106">Write out a truth table for "Max ate his chicken nuggets but didn't go to the potty".  Describe when this sentence is true.</li>
+<li id="li-107">Write a sentence describing \(\sim p \wedge \sim q\text{.}\)</li>
+<li id="li-108">Write out a truth table for \(\sim p \wedge \sim q\text{.}\)  Describe when this statement is true.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">Let \(a\) be the statement "Max ate his chicken nuggets" and \(b\) be the statement "Max went to the potty". <ol class="decimal">
+<li id="li-109">Since Max must both eact chicken nuggets and not potty, we have \(a\wedge \sim b\text{.}\)</li>
+<li id="li-110">A truth table could be constructed as follows:\(\ \\ \)<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c} 
+a\amp b\amp  \sim b \amp a\wedge \sim b\\ 
+\hline 
+T \amp  T\amp F \amp F\\
+T \amp  F\amp T \amp T\\
+F \amp  T\amp F \amp F\\
+F \amp  F\amp T \amp F\\
+\end{array}
+\end{equation*}
+</div>Which is only true if \(a\) is true (he eats nuggets) and \(b\) is false (he does not potty).</li>
+<li id="li-111">Write a sentence describing \(\sim p \wedge \sim q\text{.}\)</li>
+<li id="li-112">Write out a truth table for \(\sim p \wedge \sim q\text{.}\)  Describe when this statement is true.</li>
+</ol>
+</div></div>
+</div></article></div></section></div></main>
 </div>
 </body>
 </html>

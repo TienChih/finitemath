@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-01T11:03:09-06:00    *-->
+<!--*    on 2020-07-01T16:52:45-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,33 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Now when we say \(q(x)\neq0\text{,}\) we mean that \(q(x)\) is not the polynomial 0, not that \(q(x)\) could never be 0. As before, we will consider the long and short term behavior of polynomials.</p>
-<span class="incontext"><a href="Sec_RationalFunctions.html#p-606">in-context</a></span>
+<p>So looking at any exponential function, but specifically for increasing ones, we notice that they are 1-1, meaning two different inputs give you 2 different outputs. Thus, \(f(x)=a^x\) is an invertible function. You can see in these graphs \url{https://www.desmos.com/calculator/cvriy608bg} that reflecting the exponential over the \(y=x\) line giving us the green function is another function. We call this function \(\log_a(x)\text{.}\) As the inverse of an exponential function, it has some properties:</p>
+<ul class="disc">
+<li><p><dfn class="terminology">It's domain is only positive numbers</dfn>. Why? Because the only possible outputs of exponential outputs are positive numbers. Taking the inverse reverses the roles of the domain and range, and so the domain of \(\log_a\) is the positives.</p></li>
+<li><p><dfn class="terminology">As \(\mathbf{x}\) goes to 0, \(\mathbf{\log_a(x)}\) goes to \(\mathbf{-\infty}\text{.}\)</dfn> This is the result of the reflection. Normally \(a^x\) (for \(a&gt;1\)) goes to 0 as \(x\to -\infty\text{,}\) so when reflected, that line is now asymptotic to the \(y\)-axis. Also \(\log_a\) returns the power necessary to achieve the value \(x\text{.}\) If \(x\) is a small number like 0.0001, what power would I have to raise \(a\) to to get \(0.0001\text{?}\) It can't be 0, \(a^0=1\text{,}\) so it has to be <dfn class="terminology">less</dfn> than 0, and the smaller \(x\) is, the lower this power must go.</p></li>
+<li><p>As \(\mathbf{x\to\infty, \log_a(x)\to \infty}\text{,}\) again this is the result of the reflection, but we can also think of this as the powers \(a\) needs to be raised to in order to achieve \(x\text{,}\) as this increases, those powers must increase as well.</p></li>
+<li>
+<p>\(\log_a(xy)=\log_a(x)+\log_a(y)\text{.}\) Too see this consider:</p>
+<div class="displaymath">
+\begin{align*}
+xy\amp =\amp a^{\log_a{xy}}\\
+xy\amp =\amp x\cdot y\\
+\amp =\amp a^{\log_a(x)}\cdot a^{\log_a(y)}\\
+\amp =\amp a^{\log_a(x)+\log_a(y)}\text{.}
+\end{align*}
+</div>
+</li>
+<li>
+<p>\(\log_a(x^y)=y\log_a(x)\text{.}\) To see this, consider:</p>
+<div class="displaymath">
+\begin{align*}
+x^y\amp =\amp a^{\log_a(x^y)}.\\
+x^y\amp =\amp (a^{\log_a(x)})^y\\
+\amp =\amp a^{y\log_a(x)}
+\end{align*}
+</div>
+</li>
+</ul>
+<span class="incontext"><a href="Sec_Logarithms.html#p-606">in-context</a></span>
 </body>
 </html>

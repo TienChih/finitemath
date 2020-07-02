@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-01T11:02:57-06:00    *-->
+<!--*    on 2020-07-01T16:52:34-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -98,10 +98,10 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-36.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="DerivativeExp.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-35.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="DerivativeExp.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-36.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a class="next-button button toolbar-item" href="DerivativeExp.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-35.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a class="next-button button toolbar-item" href="DerivativeExp.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -133,7 +133,6 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
 <li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
-<li><a href="Sec_CompoundStatements.html" data-scroll="Sec_CompoundStatements">Compound Statements</a></li>
 <li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
 <li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
 <li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
@@ -167,8 +166,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-35.html" data-scroll="section-35">Product Rule</a></li>
-<li><a href="section-36.html" data-scroll="section-36">Quotient Rule</a></li>
+<li><a href="section-34.html" data-scroll="section-34">Product Rule</a></li>
+<li><a href="section-35.html" data-scroll="section-35">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule" class="active">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -181,7 +180,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_ChainRule"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.10</span> <span class="title">Chain Rule</span>
 </h2>
-<section class="introduction" id="introduction-25"><p id="p-712">We've so far covered sums products and quotients of functions, so how about composition? The <dfn class="terminology">chain rule</dfn> is: \(\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x)\text{.}\) To see why:</p>
+<section class="introduction" id="introduction-24"><p id="p-697">We've so far covered sums products and quotients of functions, so how about composition? The <dfn class="terminology">chain rule</dfn> is: \(\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x)\text{.}\) To see why:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[f(g(x))]\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
@@ -190,17 +189,17 @@ MathJax.Hub.Config({
 \amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}
 \end{align*}
 </div>
-<p id="p-713">We're going tom play a second trick here, we are goin to let \(k=g(x+h)-g(x)\text{,}\) we also note then that \(g(x+h+=g(x)+k\text{.}\) Also note that when \(h\to 0\) It follows that \(k=g(x+h)-g(x)\to g(x+0)-g(x)=0\text{.}\) So we can make some replacements:</p>
+<p id="p-698">We're going tom play a second trick here, we are goin to let \(k=g(x+h)-g(x)\text{,}\) we also note then that \(g(x+h+=g(x)+k\text{.}\) Also note that when \(h\to 0\) It follows that \(k=g(x+h)-g(x)\to g(x+0)-g(x)=0\text{.}\) So we can make some replacements:</p>
 <div class="displaymath">
 \begin{align*}
 \amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
 \amp =\amp \limit{\textcolor{red}{k}}{0}\frac{f(\textcolor{red}{g(x)+k})-f(g(x))}{\textcolor{red}{k}}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
 \amp =\amp f'(g(x))g'(x)
 \end{align*}
-</div></section><section class="subsection" id="subsection-54"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-55"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.10.1</span> <span class="title">Examples</span>
 </h3>
-<p id="p-714">Consider \(f(x)=\sqrt{x^2+1}\text{.}\) We can think of this as \(f(x)=g(h(x))\) where \(g(x)=\sqrt{x}=x^{1/2}, h(x)=x^2+1\text{.}\) So \(g'(x)=\frac{1}{2}x^{-1/2}, h'(x)=2x\) and:</p>
+<p id="p-699">Consider \(f(x)=\sqrt{x^2+1}\text{.}\) We can think of this as \(f(x)=g(h(x))\) where \(g(x)=\sqrt{x}=x^{1/2}, h(x)=x^2+1\text{.}\) So \(g'(x)=\frac{1}{2}x^{-1/2}, h'(x)=2x\) and:</p>
 <div class="displaymath">
 \begin{align*}
 f'(x)\amp =\amp \frac{d}{dx}[\sqrt{x^2+1}]\\
@@ -210,7 +209,7 @@ f'(x)\amp =\amp \frac{d}{dx}[\sqrt{x^2+1}]\\
 \amp =\amp \frac{x}{\sqrt{x^2+1}}\text{.}
 \end{align*}
 </div>
-<p id="p-715">Another example, lets consider the derivative of \(y=(x^2+100)^{300}\text{.}\) We COULD expand this polynomial out, but lets agree no one wants that. On the other hand by the chain rule:</p>
+<p id="p-700">Another example, lets consider the derivative of \(y=(x^2+100)^{300}\text{.}\) We COULD expand this polynomial out, but lets agree no one wants that. On the other hand by the chain rule:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{dy}{dx}\amp =\amp \frac{d}{dx}[(x^2+100)^{300}],\ \text{ so by the chain rule: }\\

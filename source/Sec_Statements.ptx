@@ -124,7 +124,7 @@
   <subsection>
     <title>Compound Statements</title>
     <p>
-      Suppose a friend of your has a test coming up tomorrow . You ask them about their study plans and they say ``Well, I'll either study today,
+      Suppose a friend of your has a test coming up tomorrow . You ask them about their study plans and they say "Well, I'll either study today,
       or I'll skip class tomorrow and study tomorrow." Now your friend says this,
       but all sorts of things could happen between now and the test,
       so under what circumstances is your friend telling the truth and when are they lying?
@@ -151,7 +151,7 @@
       </ul>
     </p>
     <p>
-      Then the sentence ``I'll either study today,
+      Then the sentence "I'll either study today,
       or I'll skip class tomorrow and study tomorrow." can be broken down as:
       <me>
         p\vee (\sim q \wedge r)
@@ -231,6 +231,98 @@
       They studied tomorrow but didn't skip class,
       so what they said ultimately wasn't true.
     </p>
-   </subsection> 
+   </subsection>
+   <subsection>
+    <title>Sage</title>
+    <p>
+      We can automatically generate the truth tables with SageCells.
+      Using the symbols:
+      <ul>
+        <li>
+          <p>
+            <m>&amp;</m> -and
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>|</m>-or
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\sim</m>-not
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\wedge</m>-xor
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>-></m>-if-then
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\lt -></m>-if and only if
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      We haven't covered all these operations yet.
+      But if we wanted to say
+      <q><m>p</m> or (not <m>q</m> and <m>r</m>)</q>
+      That could be recorded as <m>p|(\sim q &amp; r)</m> 
+      So we could generate the truth table here: 
+      <sage>
+        <input>
+          f = propcalc.formula("p|(~q &amp; r)")
+          f.truthtable()
+        </input>
+        <output>
+        </output>
+      </sage>
+        It generates the table in a different order than what we have but the same rows still correspond to the same values.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises </title>
+    Poo
+  </subsection>  
+  <exercise>
+    <statement>
+        Let <m>a</m> be the statement "Max ate his chicken nuggets" and <m>b</m> be the statement "Max went to the potty".
+        <ol>
+          <li> Write a symbolic logical statement for the sentence "Max ate his chicken nuggets but didn't go to the potty".</li>
+          <li>Write out a truth table for "Max ate his chicken nuggets but didn't go to the potty".  Describe when this sentence is true.</li>
+          <li> Write a sentence describing <m> \sim p \wedge \sim q</m>.  </li>
+          <li> Write out a truth table for <m> \sim p \wedge \sim q</m>.  Describe when this statement is true. </li>
+        </ol> 
+    </statement>
+    <solution>
+        Let <m>a</m> be the statement "Max ate his chicken nuggets" and <m>b</m> be the statement "Max went to the potty".
+        <ol>
+          <li> Since Max must both eact chicken nuggets and not potty, we have <m>a\wedge \sim b</m>.</li>
+          <li>A truth table could be constructed as follows:<m> \ \\ </m>
+              <me>
+                \begin{array}{c|c|c|c} 
+                a\amp b\amp  \sim b \amp a\wedge \sim b\\ 
+                \hline 
+                T \amp  T\amp F \amp F\\
+                T \amp  F\amp T \amp T\\
+                F \amp  T\amp F \amp F\\
+                F \amp  F\amp T \amp F\\
+                \end{array}
+              </me> 
+              Which is only true if <m>a</m> is true (he eats nuggets) and <m>b</m> is false (he does not potty).
+          </li>
+          <li> Write a sentence describing <m> \sim p \wedge \sim q</m>.  </li>
+          <li> Write out a truth table for <m> \sim p \wedge \sim q</m>.  Describe when this statement is true. </li>
+        </ol> 
+    </solution>  
+
+  </exercise>  
 
 </section>
