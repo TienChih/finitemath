@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-01T21:58:56-06:00    *-->
+<!--*    on 2020-07-02T12:55:18-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Maybe you want to describe 2 statements where \(p\to q\) and \(q\to p\text{,}\) i.e. whenever 1 is true then the other is true. Well this is literally \((p\to q)\wedge (q\to p)\text{.}\)</p>
+<p>What about \(\sim q \to \sim p\) (the <dfn class="terminology">contrapositive"</dfn> of \(p\to q\))? In our example, that would be, ``If I didn't get sick then I didn't drink bleach" or ``If I'm not a rectangle then I'm not a square". These DO seem true. If you didn't get sick you couldn't have drank bleach, if you're not a rectangle, there's no way you could be a square. Rather than use truth tables, consider:</p>
 <div class="displaymath">
-\begin{equation*}
-\begin{array}{c|c|c|c|c} p \amp  q \amp  p\to q \amp  q\to p\amp  (p\to q)\wedge (q\to p)\\ \hline T \amp  T \amp  T \amp  T\amp T\\ T \amp  F \amp  F \amp  T\amp F\\ F \amp  T \amp  T \amp  F \amp F\\ F \amp  F \amp  T \amp  T\amp T \end{array}
-\end{equation*}
+\begin{align*}
+\sim q \to \sim p\amp =\amp (\sim \sim q \vee \sim p)\\
+\amp =\amp q \vee \sim p\\
+\amp =\amp \sim p \vee q\\
+\amp =\amp p\to q\text{.}
+\end{align*}
 </div>
 <span class="incontext"><a href="Sec_ConditionalStatements.html#p-462">in-context</a></span>
 </body>

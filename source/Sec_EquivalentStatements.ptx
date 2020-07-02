@@ -48,12 +48,12 @@
       <p>
         Before we jump into the formal stuff,
         it helps to concretize this with actual statements.
-        Let's say <m>p</m> is ``I'll eat breakfast" and <m>q</m> is ``I'll eat lunch". Then
-        <m>p \vee q</m> is ``I'll eat breakfast or I'll eat lunch". Is NOT doing this the same as
-        <m>\sim p \vee \sim q</m> which is ``I'll not eat breakfast or I'll not eat lunch?"
+        Let's say <m>p</m> is "I'll eat breakfast" and <m>q</m> is "I'll eat lunch". Then
+        <m>p \vee q</m> is "I'll eat breakfast or I'll eat lunch". Is NOT doing this the same as
+        <m>\sim p \vee \sim q</m> which is "I'll not eat breakfast or I'll not eat lunch?"
       </p>
       <p>
-        The first statement is basically ``I'm not eating breakfast or lunch", the second is ``I'll not eat breakfast or I'll not eat lunch", they sound similar spoken aloud but there is a subtle difference.
+        The first statement is basically "I'm not eating breakfast or lunch", the second is "I'll not eat breakfast or I'll not eat lunch", they sound similar spoken aloud but there is a subtle difference.
       </p>
       <p>
         Let's say you skip breakfast and eat lunch.
@@ -74,10 +74,10 @@
         </me>
       </p>
       <p>
-        So <m>\sim(p\vee q)</m> i.e.<nbsp/>``I'm not eating breakfast or lunch" is only true if you skip both meals.
+        So <m>\sim(p\vee q)</m> i.e.<nbsp/>"I'm not eating breakfast or lunch" is only true if you skip both meals.
         If you eat either then you lied.
         On the other hand,
-        <m>\sim p \vee \sim q</m> i.e.<nbsp/>``I'll skip breakfast or I'll skip lunch" is true so long as you skip either meal.
+        <m>\sim p \vee \sim q</m> i.e.<nbsp/>"I'll skip breakfast or I'll skip lunch" is true so long as you skip either meal.
         It's only false if you go ahead and eat both.
       </p>
       <p>
@@ -93,8 +93,8 @@
       <p>
         Start with the concrete before the formal.
         In our extended example,
-        <m>\sim(p\vee q)</m> means ``I'm not eating breakfast or lunch", whereas
-        <m>\sim p \wedge \sim q</m> means ``I'm not eating breakfast and I'm not eating lunch." It does kinda seem like they're the same<ellipsis/>
+        <m>\sim(p\vee q)</m> means "I'm not eating breakfast or lunch", whereas
+        <m>\sim p \wedge \sim q</m> means "I'm not eating breakfast and I'm not eating lunch." It does kinda seem like they're the same<ellipsis/>
       </p>
       <p>
         So formally:
@@ -105,7 +105,7 @@
           \begin{array}{c|c|c|c|c} p\amp q\amp \sim p\amp  \sim q \amp  \sim p \wedge \sim q\\ \hline T \amp  T\amp F\amp F\amp F\\ T\amp F\amp F\amp T\amp F\\ F\amp T\amp T\amp F\amp F\\ F\amp F\amp T\amp T\amp T \end{array}
         </me>
         now THIS makes more sense.
-        In order to say ``I'm not having breakfast OR lunch" you really are saying ``I'm skipping breakfast AND I'm skipping lunch". So these statements are in fact identical,
+        In order to say "I'm not having breakfast OR lunch" you really are saying "I'm skipping breakfast AND I'm skipping lunch". So these statements are in fact identical,
         they have the same values under the same circumstances.
       </p>
       <p>
@@ -154,4 +154,45 @@
       </p>
     </statement>
   </example>
+
+
+  <exercise>
+    <statement>
+        <p>Are <m>p\wedge (q\vee r)</m> and <m>(p\wedge q)\vee (p\wedge r)</m> equivalent?</p>
+    </statement>
+    <solution>
+      <p>Consider the following truth tables:<m> \ \\ </m>
+              <me>
+                \begin{array}{c|c|c|c|c} 
+                p\amp q\amp  r \amp   q\vee r \amp p\wedge (q\vee r)\\ 
+                \hline 
+                T \amp  T\amp T \amp T\amp T\\
+                T \amp  T\amp F \amp T\amp T\\
+                T \amp  F\amp T \amp T\amp T\\
+                T \amp  F\amp F \amp F\amp F\\
+                F \amp  T\amp T \amp T\amp F\\
+                F \amp  T\amp F \amp T\amp F\\
+                F \amp  F\amp T \amp T\amp F\\
+                F \amp  F\amp F \amp F\amp F\\
+                \end{array}
+              </me> 
+
+              <me>
+                \begin{array}{c|c|c|c|c} 
+                p\amp q\amp  r \amp   p\wedge q \amp p\wedge r \amp (p\wedge q)\vee (p\wedge r)\\ 
+                \hline 
+                T \amp  T\amp T \amp T\amp T\amp T\\
+                T \amp  T\amp F \amp T\amp F\amp T\\
+                T \amp  F\amp T \amp F\amp T\amp T\\
+                T \amp  F\amp F \amp F\amp F\amp F\\
+                F \amp  T\amp T \amp F\amp F\amp F\\
+                F \amp  T\amp F \amp F\amp F\amp F\\
+                F \amp  F\amp T \amp F\amp F\amp F\\
+                F \amp  F\amp F \amp F\amp F\amp F\\
+                \end{array}
+              </me> 
+        </p>
+    </solution>  
+
+  </exercise> 
 </section>

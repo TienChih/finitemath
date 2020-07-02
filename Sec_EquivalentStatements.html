@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-01T21:58:43-06:00    *-->
+<!--*    on 2020-07-02T12:55:07-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -192,8 +192,8 @@ MathJax.Hub.Config({
 <article class="example example-like" id="example-35"><a data-knowl="" class="id-ref original" data-refid="hk-example-35"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><p id="p-417">Is “\(\sim(p \vee q)=\sim p \vee \sim q\text{?}\)”</p>
-<p id="p-418">Before we jump into the formal stuff, it helps to concretize this with actual statements. Let's say \(p\) is ``I'll eat breakfast" and \(q\) is ``I'll eat lunch". Then \(p \vee q\) is ``I'll eat breakfast or I'll eat lunch". Is NOT doing this the same as \(\sim p \vee \sim q\) which is ``I'll not eat breakfast or I'll not eat lunch?"</p>
-<p id="p-419">The first statement is basically ``I'm not eating breakfast or lunch", the second is ``I'll not eat breakfast or I'll not eat lunch", they sound similar spoken aloud but there is a subtle difference.</p>
+<p id="p-418">Before we jump into the formal stuff, it helps to concretize this with actual statements. Let's say \(p\) is "I'll eat breakfast" and \(q\) is "I'll eat lunch". Then \(p \vee q\) is "I'll eat breakfast or I'll eat lunch". Is NOT doing this the same as \(\sim p \vee \sim q\) which is "I'll not eat breakfast or I'll not eat lunch?"</p>
+<p id="p-419">The first statement is basically "I'm not eating breakfast or lunch", the second is "I'll not eat breakfast or I'll not eat lunch", they sound similar spoken aloud but there is a subtle difference.</p>
 <p id="p-420">Let's say you skip breakfast and eat lunch. Since you ate lunch, \(p\vee q\) is true, so \(\sim(p\vee q)\) must be false, you didn't not eat breakfast or eat lunch. What about \(\sim p \vee \sim q\text{?}\) Well you skipped breakfast so \(\sim p\) is true and therefore \(\sim p \vee \sim q\) is true, so it would seem like they are not the same.</p>
 <p id="p-421">Formally, we can look at these truth tables:</p>
 <div class="displaymath">
@@ -206,12 +206,12 @@ MathJax.Hub.Config({
 \begin{array}{c|c|c|c|c} p\amp q\amp \sim p\amp  \sim q \amp  \sim p \vee \sim q\\ \hline T \amp  T\amp F\amp F\amp F\\ T\amp F\amp F\amp T\amp T\\ F\amp T\amp T\amp F\amp T\\ F\amp F\amp T\amp T\amp T \end{array}
 \end{equation*}
 </div>
-<p id="p-422">So \(\sim(p\vee q)\) i.e. ``I'm not eating breakfast or lunch" is only true if you skip both meals. If you eat either then you lied. On the other hand, \(\sim p \vee \sim q\) i.e. ``I'll skip breakfast or I'll skip lunch" is true so long as you skip either meal. It's only false if you go ahead and eat both.</p>
+<p id="p-422">So \(\sim(p\vee q)\) i.e. "I'm not eating breakfast or lunch" is only true if you skip both meals. If you eat either then you lied. On the other hand, \(\sim p \vee \sim q\) i.e. "I'll skip breakfast or I'll skip lunch" is true so long as you skip either meal. It's only false if you go ahead and eat both.</p>
 <p id="p-423">So what does \(\sim(p \vee q)\) equal?</p></article></div>
 <article class="example example-like" id="example-36"><a data-knowl="" class="id-ref original" data-refid="hk-example-36"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-36"><article class="example example-like"><p id="p-424">Does \(\sim(p \vee q)=\sim p \wedge \sim q\text{?}\)</p>
-<p id="p-425">Start with the concrete before the formal. In our extended example, \(\sim(p\vee q)\) means ``I'm not eating breakfast or lunch", whereas \(\sim p \wedge \sim q\) means ``I'm not eating breakfast and I'm not eating lunch." It does kinda seem like they're the same…</p>
+<p id="p-425">Start with the concrete before the formal. In our extended example, \(\sim(p\vee q)\) means "I'm not eating breakfast or lunch", whereas \(\sim p \wedge \sim q\) means "I'm not eating breakfast and I'm not eating lunch." It does kinda seem like they're the same…</p>
 <p id="p-426">So formally:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -223,7 +223,7 @@ MathJax.Hub.Config({
 \begin{array}{c|c|c|c|c} p\amp q\amp \sim p\amp  \sim q \amp  \sim p \wedge \sim q\\ \hline T \amp  T\amp F\amp F\amp F\\ T\amp F\amp F\amp T\amp F\\ F\amp T\amp T\amp F\amp F\\ F\amp F\amp T\amp T\amp T \end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">now THIS makes more sense. In order to say ``I'm not having breakfast OR lunch" you really are saying ``I'm skipping breakfast AND I'm skipping lunch". So these statements are in fact identical, they have the same values under the same circumstances.</p>
+<p data-braille="continuation">now THIS makes more sense. In order to say "I'm not having breakfast OR lunch" you really are saying "I'm skipping breakfast AND I'm skipping lunch". So these statements are in fact identical, they have the same values under the same circumstances.</p>
 <p id="p-427">This is half of a pair of equivalences called <dfn class="terminology">DeMorgan's Laws</dfn>:</p>
 <ul class="disc">
 <li id="li-124"><p id="p-428">\(\displaystyle \sim(p \vee q)=\sim p \wedge \sim q\)</p></li>
@@ -241,7 +241,47 @@ MathJax.Hub.Config({
 \amp =\amp (\sim p \wedge \sim q )\vee r \ \ \text{ by DeMorgans law again. }
 \end{align*}
 </div>
-<p id="p-433">So yes, they are equal, fairly nice.</p></article></div></section></div></main>
+<p id="p-433">So yes, they are equal, fairly nice.</p></article></div>
+<article class="exercise exercise-like" id="exercise-10"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-10"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-10"><article class="exercise exercise-like"><p id="p-434">Are \(p\wedge (q\vee r)\) and \((p\wedge q)\vee (p\wedge r)\) equivalent?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-435">Consider the following truth tables:\(\ \\ \)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c} 
+p\amp q\amp  r \amp   q\vee r \amp p\wedge (q\vee r)\\ 
+\hline 
+T \amp  T\amp T \amp T\amp T\\
+T \amp  T\amp F \amp T\amp T\\
+T \amp  F\amp T \amp T\amp T\\
+T \amp  F\amp F \amp F\amp F\\
+F \amp  T\amp T \amp T\amp F\\
+F \amp  T\amp F \amp T\amp F\\
+F \amp  F\amp T \amp T\amp F\\
+F \amp  F\amp F \amp F\amp F\\
+\end{array}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c} 
+p\amp q\amp  r \amp   p\wedge q \amp p\wedge r \amp (p\wedge q)\vee (p\wedge r)\\ 
+\hline 
+T \amp  T\amp T \amp T\amp T\amp T\\
+T \amp  T\amp F \amp T\amp F\amp T\\
+T \amp  F\amp T \amp F\amp T\amp T\\
+T \amp  F\amp F \amp F\amp F\amp F\\
+F \amp  T\amp T \amp F\amp F\amp F\\
+F \amp  T\amp F \amp F\amp F\amp F\\
+F \amp  F\amp T \amp F\amp F\amp F\\
+F \amp  F\amp F \amp F\amp F\amp F\\
+\end{array}
+\end{equation*}
+</div>
+</div></div>
+</div></article></div></section></div></main>
 </div>
 </body>
 </html>

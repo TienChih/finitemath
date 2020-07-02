@@ -274,7 +274,7 @@
       We haven't covered all these operations yet.
       But if we wanted to say
       <q><m>p</m> or (not <m>q</m> and <m>r</m>)</q>
-      That could be recorded as <m>p|(\sim q &amp; r)</m> 
+      That could be recorded as <m>p|(~q &amp; r)</m> 
       So we could generate the truth table here: 
       <sage>
         <input>
