@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-02T12:55:22-06:00    *-->
+<!--*    on 2020-07-02T22:36:09-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let's try the derivative of \(f(x)=e^{x}x^2\text{:}\)</p>
+<p>So, to compute the actual derivative of \(a^x\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
-f'(x)\amp =\amp \frac{d}{dx}[e^xx^2]\\
-\amp =_{PR}\amp \frac{d}{dx}[e^x]x^2+e^x\frac{d}{dx}[x^2]\\
-\amp =\amp e^xx^2+e^x2x\text{.}
+\frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
+\amp =\amp \frac{d}{dx}[e^{\ln(a)x}]\\
+\amp =\amp e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }\\
+\amp =\amp e^{\ln(a)x}\ln(a)\cdot1\\
+\amp =\amp a^x\ln(a)\text{.}
 \end{align*}
 </div>
-<span class="incontext"><a href="DerivativeLogs.html#p-711">in-context</a></span>
+<span class="incontext"><a href="DerivativeExp.html#p-711">in-context</a></span>
 </body>
 </html>

@@ -178,7 +178,7 @@
               </me> 
 
               <me>
-                \begin{array}{c|c|c|c|c} 
+                \begin{array}{c|c|c|c|c|c} 
                 p\amp q\amp  r \amp   p\wedge q \amp p\wedge r \amp (p\wedge q)\vee (p\wedge r)\\ 
                 \hline 
                 T \amp  T\amp T \amp T\amp T\amp T\\
@@ -191,8 +191,84 @@
                 F \amp  F\amp F \amp F\amp F\amp F\\
                 \end{array}
               </me> 
+
+              So we can verify that they are in fact equivalent, they are true so long as <m>p</m> is true, and either <m>q</m> or <m>r</m>.
         </p>
     </solution>  
 
   </exercise> 
+  <exercise>
+    <statement>
+        <p>Are <m>p\vee (q\wedge r)</m> and <m>(p\vee q)\wedge (p\vee r)</m> equivalent?</p>
+    </statement>
+    <solution>
+      <p>Consider the following truth tables:<m> \ \\ </m>
+              <me>
+                \begin{array}{c|c|c|c|c} 
+                p\amp q\amp  r \amp   q\wedge r \amp p\wedge (q\vee r)\\ 
+                \hline 
+                T \amp  T\amp T \amp T\amp T\\
+                T \amp  T\amp F \amp F\amp T\\
+                T \amp  F\amp T \amp F\amp T\\
+                T \amp  F\amp F \amp F\amp T\\
+                F \amp  T\amp T \amp T\amp T\\
+                F \amp  T\amp F \amp F\amp F\\
+                F \amp  F\amp T \amp F\amp F\\
+                F \amp  F\amp F \amp F\amp F\\
+                \end{array}
+              </me> 
+
+              <me>
+                \begin{array}{c|c|c|c|c|c} 
+                p\amp q\amp  r \amp   p\vee q \amp p\vee r \amp (p\vee q)\wedge (p\vee r)\\ 
+                \hline 
+                T \amp  T\amp T \amp T\amp T\amp T\\
+                T \amp  T\amp F \amp T\amp T\amp T\\
+                T \amp  F\amp T \amp T\amp T\amp T\\
+                T \amp  F\amp F \amp T\amp T\amp T\\
+                F \amp  T\amp T \amp T\amp T\amp T\\
+                F \amp  T\amp F \amp T\amp F\amp F\\
+                F \amp  F\amp T \amp F\amp T\amp F\\
+                F \amp  F\amp F \amp F\amp F\amp F\\
+                \end{array}
+              </me> 
+
+              So we can verify that they are in fact equivalent.
+        </p>
+    </solution>  
+
+  </exercise> 
+  <exercise>
+    <statement>
+        <p>Are <m>p\vee \sim q</m> and <m> \sim p \vee q</m> equivalent?</p>
+    </statement>
+    <solution>
+      <p>Consider the following truth tables:<m> \ \\ </m>
+              <me>
+                \begin{array}{c|c|c|c} 
+                p\amp q\amp  \sim q \amp   p\vee\sim q\\ 
+                \hline 
+                T \amp  T\amp F \amp T\\
+                T \amp  F\amp T \amp T\\
+                F \amp  T\amp F \amp F\\
+                F \amp  F\amp T \amp T\\
+                \end{array}
+              </me> 
+
+              <me>
+                \begin{array}{c|c|c|c} 
+                p\amp q\amp  \sim p \amp   p\vee\sim q\\ 
+                \hline 
+                T \amp  T\amp F \amp T\\
+                T \amp  F\amp F \amp F\\
+                F \amp  T\amp T \amp T\\
+                F \amp  F\amp T \amp T\\
+                \end{array}
+              </me> 
+
+              So notice <m>p\vee \sim q</m> is false when <m>p=F, q=T</m>, but <m> \sim p \vee q</m> is true under those circumstances.  This would be enough to show they are not the same, but also note when <m>p=T, q=F</m>, <m>p\vee \sim q</m> is true but <m>\sim p\vee  q</m> is false.
+        </p>
+    </solution>  
+
+  </exercise>
 </section>

@@ -11,7 +11,7 @@
       This is written in formal logic as <m>p\to q</m>.
     </p>
     <p>
-      Let's suppose that you have a child and you say to them ``If you are clean your room, I'll buy you ice-cream!" What would make you a liar and what would make you a truth teller.
+      Let's suppose that you have a child and you say to them "If you are clean your room, I'll buy you ice-cream!" What would make you a liar and what would make you a truth teller?
     </p>
     <p>
       If your kid cleans their room,
@@ -20,7 +20,7 @@
       then you didn't keep your promise and are a liar.
     </p>
     <p>
-      Now this part is sometimes tricky for students, but bear with me.
+      Now this part may be tricky, but bear with me.
       If your kid doesn't clean their room,
       you can do whatever you want.
       You only said that you would do something if they cleaned their room,
@@ -65,7 +65,7 @@
     <p>
       And we see that these things have the same truth values and are equivalent statements.
       But, more importantly, consider what
-      <m>\sim p \vee q</m> would mean in our example. ``Either you don't clean your room or you can have ice-cream." One might rephrase this as ``You can either not clean your room or you can have ice-cream." Isn't this basically saying
+      <m>\sim p \vee q</m> would mean in our example. "Either you don't clean your room or you can have ice-cream." One might rephrase this as "You can either not clean your room or you can have ice-cream." Isn't this basically saying
       <q>If you clean your room you can have ice-cream?</q>
       So that definitely sounds like an equivalent statement to me.
     </p>
@@ -78,15 +78,15 @@
       but what we do know is how to negate and/or statements,
       and how to rewrite <m>p\to q</m> so:
       <md>
-        <mrow>\sim(p\to q)\amp =\amp \sim(\sim p \vee q)</mrow>
-        <mrow>\amp =\amp \sim\sim p\wedge \sim q</mrow>
-        <mrow>\amp =\amp p\wedge \sim q</mrow>
+        <mrow>\sim(p\to q)\amp = \sim(\sim p \vee q)</mrow>
+        <mrow>\amp = \sim\sim p\wedge \sim q</mrow>
+        <mrow>\amp = p\wedge \sim q</mrow>
       </md>.
     </p>
     <p>
       How does that play out in practice,
       again using our parenting example,
-      <m>p\wedge \sim q</m> is ``You cleaned your room and I'm not buying you ice-cream." Damn.
+      <m>p\wedge \sim q</m> is "You cleaned your room and I'm not buying you ice-cream." Damn.
       That's basically exactly the opposite of what you said before,
       which is what a negation is supposed to be.
     </p>
@@ -99,19 +99,19 @@
       Consider this sentence:
     </p>
     <p>
-      ``If it is sunny and I am in a good mood, then I will take a walk."
+      "If it is sunny and I am in a good mood, then I will take a walk."
     </p>
     <p>
       So let's let:
       <ul>
         <li>
           <p>
-            <m>p</m>=``It's Sunny"
+            <m>p</m>="It's Sunny"
           </p>
         </li>
         <li>
           <p>
-            <m>q</m>=``I'm in a good mood."
+            <m>q</m>="I'm in a good mood."
           </p>
         </li>
         <li>
@@ -127,28 +127,28 @@
       It's not the easiest thing to see when this statement may be true.
       So, we can break this thing down as follows:
       <md>
-        <mrow>(p\wedge q)\to r\amp =\amp \sim (p\wedge q)\vee r</mrow>
-        <mrow>\amp =\amp (\sim p \vee \sim q) \vee r</mrow>
+        <mrow>(p\wedge q)\to r\amp = \sim (p\wedge q)\vee r</mrow>
+        <mrow>\amp = (\sim p \vee \sim q) \vee r</mrow>
       </md>
     </p>
     <p>
       So this is an equivalent statement,
       and it's not much easier to see that it is true as long as it isn't sunny,
       you're in a bad mood, or if you take a walk.
-      We would read this as ``Either it's not sunny,
+      We would read this as "Either it's not sunny,
       or I'm not in a good mood, or I'm taking a walk."
     </p>
     <p>
       If we negate this thing:
       <md>
-        <mrow>\sim ((p\wedge q)\to r)\amp =\amp \sim ((\sim p \vee \sim q) \vee r)</mrow>
-        <mrow>\amp =\amp \sim (\sim p \vee \sim q) \wedge \sim r</mrow>
-        <mrow>\amp =\amp  (\sim \sim p  \wedge \sim \sim q) \wedge \sim r</mrow>
-        <mrow>\amp =\amp (p\wedge q)\wedge \sim r</mrow>
+        <mrow>\sim ((p\wedge q)\to r)\amp = \sim ((\sim p \vee \sim q) \vee r)</mrow>
+        <mrow>\amp = \sim (\sim p \vee \sim q) \wedge \sim r</mrow>
+        <mrow>\amp =  (\sim \sim p  \wedge \sim \sim q) \wedge \sim r</mrow>
+        <mrow>\amp = (p\wedge q)\wedge \sim r</mrow>
       </md>
     </p>
     <p>
-      We would read this as ``It IS sunny and I'm in a good mood and for some reason I'm not going to walk." which is the opposite of what was promised before.
+      We would read this as "It IS sunny and I'm in a good mood and for some reason I'm not going to walk." which is the opposite of what was promised before.
     </p>
   </subsection>
   <subsection>
@@ -174,7 +174,7 @@
       Doesn't seem so,
       you could have gotten sick from any sort of things,
       it didn't have to be bleach.
-      Another example is if <m>p=</m>``I'm a square" and <m>q=</m>``I'm a rectangle." All squares are rectangles,
+      Another example is if <m>p=</m>"I'm a square" and <m>q=</m>"I'm a rectangle." All squares are rectangles,
       not all rectangles are squares.
       So if <m>p\to q</m>,
       we can think of that as all the circumstances where <m>p</m> is true lives inside the collection of circumstances where <m>q</m> is true,
@@ -189,7 +189,7 @@
     </p>
     <p>
       What about <m>\sim p \to \sim q</m>? (This is the <term>inverse</term>
-      of <m>p\to q</m>) Well this would be ``If I'm not drinking bleach then I won't get sick" or ``If I'm not a square then I'm not a rectangle." This doesn't seem like it's true either.
+      of <m>p\to q</m>) Well this would be "If I'm not drinking bleach then I won't get sick" or "If I'm not a square then I'm not a rectangle." This doesn't seem like it's true either.
       You can not drink bleach,
       but then drink paint thinner instead and you'd be sick,
       and of course there are plenty of rectangles that aren't squares.
@@ -202,15 +202,15 @@
       What about <m>\sim q \to \sim p</m> (the
       <term> contrapositive"</term> of <m>p\to q</m>)?
       In our example,
-      that would be, ``If I didn't get sick then I didn't drink bleach" or ``If I'm not a rectangle then I'm not a square". These DO seem true.
+      that would be, "If I didn't get sick then I didn't drink bleach" or "If I'm not a rectangle then I'm not a square". These DO seem true.
       If you didn't get sick you couldn't have drank bleach,
       if you're not a rectangle, there's no way you could be a square.
       Rather than use truth tables, consider:
       <md>
-        <mrow>\sim q \to \sim p\amp =\amp (\sim \sim q \vee \sim p)</mrow>
-        <mrow>\amp =\amp q \vee \sim p</mrow>
-        <mrow>\amp =\amp \sim p \vee q</mrow>
-        <mrow>\amp =\amp p\to q</mrow>
+        <mrow>\sim q \to \sim p\amp = (\sim \sim q \vee \sim p)</mrow>
+        <mrow>\amp = q \vee \sim p</mrow>
+        <mrow>\amp = \sim p \vee q</mrow>
+        <mrow>\amp = p\to q</mrow>
       </md>.
     </p>
     <p>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-02T12:55:19-06:00    *-->
+<!--*    on 2020-07-02T22:36:06-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,10 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Suppose you have a debt of $100 that accrues 10% annual interest. With no other given information, we would say that the amount you owe in \(10\) years would be</p>
+<p>In general, if the interest rate per time unit is \(i\text{,}\) then after \(n\) time units:</p>
 <div class="displaymath">
 \begin{equation*}
-A=100(1.1)^{10}\approx \dollar259.37
-\end{equation*}
-</div>
-<p data-braille="continuation">right? But what a financial institution will do is say that the debt is “compounded quarterly” i.e. 4 times a year. Thus instead of 10% interest per year, it will now be \(10\%/4=2.5\%\) interest <dfn class="terminology">per quarter</dfn>. How much will you owe in 10 years? Well, 10 years is 40 quarters so:</p>
-<div class="displaymath">
-\begin{equation*}
-A=100(1.025)^{40}\approx 268.51
+\begin{array}{|c|c|} \hline \text{ Time Unit }  \amp  \text{ Debt } \\ \hline 0 \amp  P\\ 1\amp  P+iP=(1+i)P\\ 2\amp  (1+i)P+i(1+i)P=(1+i)^2P\\ 3 \amp  (1+i)^2P+i(1+i)^2P=(1+i)^3P\\ \vdots \amp  \vdots\\ n \amp  (1+i)^nP\\ \hline \end{array}
 \end{equation*}
 </div>
 <span class="incontext"><a href="Sec_CompoundInterest.html#p-516">in-context</a></span>
