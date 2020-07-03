@@ -11,24 +11,22 @@
       This is written in formal logic as <m>p\to q</m>.
     </p>
     <p>
-      Let's suppose that you have a child and you say to them "If you are clean your room, I'll buy you ice-cream!" What would make you a liar and what would make you a truth teller?
+      Let's suppose that a parent has achild and they say to them "If you are clean your room, I'll buy you ice-cream!" What would make them a liar and what would make them a truth teller?
     </p>
     <p>
-      If your kid cleans their room,
-      and you buy them ice-cream, then hooray, you kept your promise!
-      If your kid cleans their room and and you don't buy them ice-cream,
-      then you didn't keep your promise and are a liar.
+      If the child cleans their room,
+      and the parent buy them ice-cream, then hooray, they kept their promise!
+      If the child cleans their room and and the parent doesn't buy them ice-cream,
+      then they didn't keep their promise and are a liar.
     </p>
     <p>
-      Now this part may be tricky, but bear with me.
-      If your kid doesn't clean their room,
-      you can do whatever you want.
-      You only said that you would do something if they cleaned their room,
-      you made no promises as to what you would do if they didn't.
-      So now whether or not you buy them ice-cream,
-      you've technically kept your promise.
-      This may make you a pushover parent, depending,
-      but it wouldn't make you a liar.
+      Now what happens if the child doesn't clean their room?  Nothing was stipulated about what the parent would do in this case so they can do whatever you want.
+      They only said that they would do something if the child cleaned their room,
+      no promises were made as to what they would do if the child didn't.
+      So now whether or not the parent buy the chid\ld ice-cream,
+      they've technically kept their promise.
+      This may make them a pushover parent, depending,
+      but it wouldn't make them a liar!
     </p>
     <p>
       So, if we let <m>p</m>=
