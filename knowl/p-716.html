@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-02T23:01:29-06:00    *-->
+<!--*    on 2020-07-03T19:26:37-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(g(x)=\ln(x^2+1)\text{:}\)</p>
+<p>One last one, let \(h(x)=2^{\frac{x}{x+1}}\)</p>
 <div class="displaymath">
 \begin{align*}
-g'(x)\amp =\amp \frac{d}{dx}[\ln(x^2+1)]\\
-\amp =_{CR}\amp \frac{1}{x^2+1}\frac{d}{dx}[x^2+1]\\
-\amp =\amp \frac{2x}{x^2+1}\text{.}
+h'(x)\amp =\amp \frac{d}{dx}[2^{\frac{x}{x+1}}]\\
+\amp =_{CR}\amp 2^{\frac{x}{x+1}}\ln(2)\frac{d}{dx}[\frac{x}{x+1}]\\
+\amp =_{QR}\amp 2^{\frac{x}{x+1}}\ln(2)\frac{(x+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x+1]}{(x+1)^2}\\
+\amp =\amp \frac{2^{\frac{x}{x+1}}\ln(2)}{(x+1)^2}
 \end{align*}
 </div>
 <span class="incontext"><a href="DerivativeLogs.html#p-716">in-context</a></span>

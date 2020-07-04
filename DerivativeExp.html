@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-02T23:01:18-06:00    *-->
+<!--*    on 2020-07-03T19:26:22-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -180,14 +180,14 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="DerivativeExp"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.11</span> <span class="title">Derivative of Exponentials</span>
 </h2>
-<p id="p-707">When we graph an exponential function, say an increasing one \(f(x)=a^x, a&gt;1\text{,}\) we imagine a function that curves up towards infinity on the right and shallows out towards 0 on the left \url{https://www.desmos.com/calculator/51zxitu9xc}. What then should it's derivatives look like? Well it seems like the slopes are initially shallow, and then as we go forward the slopes start to increase, and they get progressively and progressively larger. In other words <dfn class="terminology">the derivative is also an exponential function!</dfn> \url{https://www.desmos.com/calculator/etbmc1ttzo}.</p>
-<p id="p-708">Which one? Let's first start with a special case, what is the derivative of \(f(x)=e^x\text{?}\) \(e\) is a special number, it has the peculiar property that:</p>
+<p id="p-706">When we graph an exponential function, say an increasing one \(f(x)=a^x, a&gt;1\text{,}\) we imagine a function that curves up towards infinity on the right and shallows out towards 0 on the left \url{https://www.desmos.com/calculator/51zxitu9xc}. What then should it's derivatives look like? Well it seems like the slopes are initially shallow, and then as we go forward the slopes start to increase, and they get progressively and progressively larger. In other words <dfn class="terminology">the derivative is also an exponential function!</dfn> \url{https://www.desmos.com/calculator/etbmc1ttzo}.</p>
+<p id="p-707">Which one? Let's first start with a special case, what is the derivative of \(f(x)=e^x\text{?}\) \(e\) is a special number, it has the peculiar property that:</p>
 <div class="displaymath">
 \begin{equation*}
 \limit{h}{0}\frac{e^h-1}{h}=1\text{.}
 \end{equation*}
 </div>
-<p id="p-709">The proof of this is a fairly sophisticated fact and it not trivial, but you can verify it by taking the slider \(h\text{,}\) dragging it towards 0 and seeing what happens: \url{https://www.desmos.com/calculator/4uv0zgguq9}. Using this fact, we can deduce:</p>
+<p id="p-708">The proof of this is a fairly sophisticated fact and it not trivial, but you can verify it by taking the slider \(h\text{,}\) dragging it towards 0 and seeing what happens: \url{https://www.desmos.com/calculator/4uv0zgguq9}. Using this fact, we can deduce:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[e^x]\amp =\amp \limit{h}{0}\frac{e^{x+h}-e^x}{h}\\
@@ -196,8 +196,8 @@ MathJax.Hub.Config({
 \amp =\amp e^x\cdot1=e^x\text{.}
 \end{align*}
 </div>
-<p id="p-710">So this explains why \(e\) is such a significant number in mathematics, it is the unique number so that the exponential \(e^x\) is it's own derivative \url{https://www.desmos.com/calculator/xelrg6t0ez}. Every other \(a^x\) differs from it's derivative slightly: \url{https://www.desmos.com/calculator/aqa6zw4vyz}, you can see that when \(a\) is less than \(e\) (about 2.714), it's derivative falls under the original function, and when \(a&gt;e\text{,}\) it's derivative falls above the original.</p>
-<p id="p-711">So, to compute the actual derivative of \(a^x\text{:}\)</p>
+<p id="p-709">So this explains why \(e\) is such a significant number in mathematics, it is the unique number so that the exponential \(e^x\) is it's own derivative \url{https://www.desmos.com/calculator/xelrg6t0ez}. Every other \(a^x\) differs from it's derivative slightly: \url{https://www.desmos.com/calculator/aqa6zw4vyz}, you can see that when \(a\) is less than \(e\) (about 2.714), it's derivative falls under the original function, and when \(a&gt;e\text{,}\) it's derivative falls above the original.</p>
+<p id="p-710">So, to compute the actual derivative of \(a^x\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\

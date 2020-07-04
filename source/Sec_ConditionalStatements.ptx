@@ -30,9 +30,9 @@
     </p>
     <p>
       So, if we let <m>p</m>=
-      <q>kid cleans room</q>
+      <q>child cleans room</q>
       and <m>q</m>=
-      <q>you buy them ice-cream</q>
+      <q>parent buys them ice-cream</q>
       Then the above sentence may be written as <m>p\to q</m> which has the following truth table:
       <me>
         \begin{array}{c|c|c} p\amp q\amp p\to q\\ \hline T\amp T\amp T\\ T\amp F\amp F\\ F\amp T\amp T\\ F\amp F\amp T \end{array}
@@ -65,7 +65,7 @@
       But, more importantly, consider what
       <m>\sim p \vee q</m> would mean in our example. "Either you don't clean your room or you can have ice-cream." One might rephrase this as "You can either not clean your room or you can have ice-cream." Isn't this basically saying
       <q>If you clean your room you can have ice-cream?</q>
-      So that definitely sounds like an equivalent statement to me.
+      These statements are not just logically equivalent, they should sound linguistically equivalent as well.
     </p>
   </subsection>
   <subsection>
@@ -82,11 +82,9 @@
       </md>.
     </p>
     <p>
-      How does that play out in practice,
-      again using our parenting example,
-      <m>p\wedge \sim q</m> is "You cleaned your room and I'm not buying you ice-cream." Damn.
-      That's basically exactly the opposite of what you said before,
-      which is what a negation is supposed to be.
+      How does that play out in practice?
+      Again using our parenting example,
+      <m>p\wedge \sim q</m> is "The child cleaned their room and the parent does not buy them ice-cream." That is precisely the exact opposite of what was promised, as would be expected by a negation.
     </p>
   </subsection>
   <subsection>

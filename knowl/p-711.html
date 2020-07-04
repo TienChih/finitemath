@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-02T23:01:29-06:00    *-->
+<!--*    on 2020-07-03T19:26:36-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So, to compute the actual derivative of \(a^x\text{:}\)</p>
+<p>We can use the chain rule to find the derivative of log functions as well. Let's first compute \(\frac{d}{dx}[\ln(x)]\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
-\amp =\amp \frac{d}{dx}[e^{\ln(a)x}]\\
-\amp =\amp e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }\\
-\amp =\amp e^{\ln(a)x}\ln(a)\cdot1\\
-\amp =\amp a^x\ln(a)\text{.}
+x\amp =\amp e^{\ln(x)}\\
+\frac{d}{dx}[x]\amp =\amp \frac{d}{dx}[e^{\ln(x)}]\\
+1\amp =\amp e^{\ln(x)}\frac{d}{dx}[\ln(x)]\\
+1\amp =\amp x\frac{d}{dx}[\ln(x)]\\
+\frac{d}{dx}[\ln(x)]\amp =\amp \frac{1}{x}\text{.}
 \end{align*}
 </div>
-<span class="incontext"><a href="DerivativeExp.html#p-711">in-context</a></span>
+<span class="incontext"><a href="DerivativeLogs.html#p-711">in-context</a></span>
 </body>
 </html>

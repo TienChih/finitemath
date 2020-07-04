@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-02T23:01:14-06:00    *-->
+<!--*    on 2020-07-03T19:26:18-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -223,17 +223,65 @@ MathJax.Hub.Config({
 \begin{array}{c|c|c|c|c} p\amp q\amp \sim p\amp  \sim q \amp  \sim p \wedge \sim q\\ \hline T \amp  T\amp F\amp F\amp F\\ T\amp F\amp F\amp T\amp F\\ F\amp T\amp T\amp F\amp F\\ F\amp F\amp T\amp T\amp T \end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">now THIS makes more sense. In order to say "I'm not having breakfast OR lunch" you really are saying "I'm skipping breakfast AND I'm skipping lunch". So these statements are in fact identical, they have the same values under the same circumstances.</p>
-<p id="p-427">This is half of a pair of equivalences called <dfn class="terminology">DeMorgan's Laws</dfn>:</p>
+<p data-braille="continuation">now THIS makes more sense. In order to say "I'm not having breakfast OR lunch" you really are saying "I'm skipping breakfast AND I'm skipping lunch". So these statements are in fact identical, they have the same values under the same circumstances.</p></article></div>
+<article class="theorem theorem-like" id="theorem-2"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">De Morgan's Laws.</span>
+</h6>
+<p id="p-427">Given statments \(p, q\text{:}\)</p>
 <ul class="disc">
-<li id="li-124"><p id="p-428">\(\displaystyle \sim(p \vee q)=\sim p \wedge \sim q\)</p></li>
-<li id="li-125"><p id="p-429">\(\displaystyle \sim(p \wedge q)=\sim p \vee \sim q\)</p></li>
-</ul>
-<p id="p-430">It's not a bad idea to check this second equivalence, build the truth tables and see if they are the same.</p></article></div>
+<li id="li-124"><p id="p-428">\(\sim(p \vee q)=\sim p \wedge \sim q\text{.}\)</p></li>
+<li id="li-125"><p id="p-429">\(\sim(p \wedge q)=\sim p \vee \sim q\text{.}\)</p></li>
+</ul></article><article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof">Consider the following truth tables:\(\ \\ \)<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c} 
+p\amp q\amp  p\vee q \amp   \sim(p\vee q)\\ 
+\hline 
+T \amp  T\amp T \amp F\\
+T \amp  F\amp T \amp F\\
+F \amp  T\amp T \amp F\\
+F \amp  F\amp F \amp T\\
+\end{array}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c} 
+p\amp q\amp  \sim p \amp \sim q \amp \sim p \wedge \sim q\\ 
+\hline 
+T \amp  T\amp F \amp F\amp F\\
+T \amp  F\amp F \amp T\amp F\\
+F \amp  T\amp T \amp F\amp F\\
+F \amp  F\amp T \amp T\amp T\\
+\end{array}
+\end{equation*}
+</div>Thus \(\sim(p \vee q)=\sim p \wedge \sim q\text{.}\)  Similarly:\(\ \\ \)<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c} 
+p\amp q\amp  p\wedge q \amp   \sim(p\wedge q)\\ 
+\hline 
+T \amp  T\amp T \amp F\\
+T \amp  F\amp F \amp T\\
+F \amp  T\amp F \amp T\\
+F \amp  F\amp F \amp T\\
+\end{array}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c} 
+p\amp q\amp  \sim p \amp \sim q \amp \sim p \vee \sim q\\ 
+\hline 
+T \amp  T\amp F \amp F\amp F\\
+T \amp  F\amp F \amp T\amp T\\
+F \amp  T\amp T \amp F\amp T\\
+F \amp  F\amp T \amp T\amp T\\
+\end{array}
+\end{equation*}
+</div>Thus \(\sim(p \wedge q)=\sim p \vee \sim q\text{.}\)</article></div>
 <article class="example example-like" id="example-37"><a data-knowl="" class="id-ref original" data-refid="hk-example-37"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-37"><article class="example example-like"><p id="p-431">Is \(\sim((p \vee q)\wedge \sim r)=(\sim p \wedge \sim q )\vee r\text{?}\)</p>
-<p id="p-432">So yeah sure, we could go ahead and build truth tables for all this, but at this point Im sure laying out 8 rows of T and F and all these combinations is a real hassle. On the other hand, we have in fact these very nice laws described above. One of the reasons we develop algebraic rules is convenience, so let's go ahead:</p>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-37"><article class="example example-like"><p id="p-430">Is \(\sim((p \vee q)\wedge \sim r)=(\sim p \wedge \sim q )\vee r\text{?}\)</p>
+<p id="p-431">So yeah sure, we could go ahead and build truth tables for all this, but at this point Im sure laying out 8 rows of T and F and all these combinations is a real hassle. On the other hand, we have in fact these very nice laws described above. One of the reasons we develop algebraic rules is convenience, so let's go ahead:</p>
 <div class="displaymath">
 \begin{align*}
 \sim((p \vee q)\wedge \sim r)\amp =\amp \sim(p \vee q)\vee \sim\sim r\ \ \text{ By DeMorgan's Law }\\
@@ -241,13 +289,13 @@ MathJax.Hub.Config({
 \amp =\amp (\sim p \wedge \sim q )\vee r \ \ \text{ by DeMorgans law again. }
 \end{align*}
 </div>
-<p id="p-433">So yes, they are equal, fairly nice.</p></article></div>
+<p id="p-432">So yes, they are equal, fairly nice.</p></article></div>
 <article class="exercise exercise-like" id="exercise-10"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-10"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-10"><article class="exercise exercise-like"><p id="p-434">Are \(p\wedge (q\vee r)\) and \((p\wedge q)\vee (p\wedge r)\) equivalent?</p>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-10"><article class="exercise exercise-like"><p id="p-433">Are \(p\wedge (q\vee r)\) and \((p\wedge q)\vee (p\wedge r)\) equivalent?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
-<p id="p-435">Consider the following truth tables:\(\ \\ \)</p>
+<p id="p-434">Consider the following truth tables:\(\ \\ \)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c} 
@@ -284,11 +332,11 @@ F \amp  F\amp F \amp F\amp F\amp F\\
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-11"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-11"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-11"><article class="exercise exercise-like"><p id="p-436">Are \(p\vee (q\wedge r)\) and \((p\vee q)\wedge (p\vee r)\) equivalent?</p>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-11"><article class="exercise exercise-like"><p id="p-435">Are \(p\vee (q\wedge r)\) and \((p\vee q)\wedge (p\vee r)\) equivalent?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
-<p id="p-437">Consider the following truth tables:\(\ \\ \)</p>
+<p id="p-436">Consider the following truth tables:\(\ \\ \)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c} 
@@ -325,11 +373,11 @@ F \amp  F\amp F \amp F\amp F\amp F\\
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-12"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-12"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-12"><article class="exercise exercise-like"><p id="p-438">Are \(p\vee \sim q\) and \(\sim p \vee q\) equivalent?</p>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-12"><article class="exercise exercise-like"><p id="p-437">Are \(p\vee \sim q\) and \(\sim p \vee q\) equivalent?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
-<p id="p-439">Consider the following truth tables:\(\ \\ \)</p>
+<p id="p-438">Consider the following truth tables:\(\ \\ \)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} 

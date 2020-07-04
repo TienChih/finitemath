@@ -108,28 +108,75 @@
         In order to say "I'm not having breakfast OR lunch" you really are saying "I'm skipping breakfast AND I'm skipping lunch". So these statements are in fact identical,
         they have the same values under the same circumstances.
       </p>
+      
+    </statement>
+  </example>
+  <theorem>
+    <title> De Morgan's Laws</title>
+    <statement>
       <p>
-        This is half of a pair of equivalences called
-        <term>DeMorgan's Laws</term>:
+        Given statments <m> p, q</m>:
         <ul>
           <li>
             <p>
-              <m>\sim(p \vee q)=\sim p \wedge \sim q</m>
+              <m>\sim(p \vee q)=\sim p \wedge \sim q</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>\sim(p \wedge q)=\sim p \vee \sim q</m>
+              <m>\sim(p \wedge q)=\sim p \vee \sim q</m>.
             </p>
           </li>
         </ul>
       </p>
-      <p>
-        It's not a bad idea to check this second equivalence,
-        build the truth tables and see if they are the same.
-      </p>
-    </statement>
-  </example>
+      </statement>
+      <proof>
+        Consider the following truth tables:<m> \ \\ </m>
+              <me>
+                \begin{array}{c|c|c|c} 
+                p\amp q\amp  p\vee q \amp   \sim(p\vee q)\\ 
+                \hline 
+                T \amp  T\amp T \amp F\\
+                T \amp  F\amp T \amp F\\
+                F \amp  T\amp T \amp F\\
+                F \amp  F\amp F \amp T\\
+                \end{array}
+              </me> 
+              <me>
+                \begin{array}{c|c|c|c|c} 
+                p\amp q\amp  \sim p \amp \sim q \amp \sim p \wedge \sim q\\ 
+                \hline 
+                T \amp  T\amp F \amp F\amp F\\
+                T \amp  F\amp F \amp T\amp F\\
+                F \amp  T\amp T \amp F\amp F\\
+                F \amp  F\amp T \amp T\amp T\\
+                \end{array}
+              </me> 
+              Thus <m>\sim(p \vee q)=\sim p \wedge \sim q</m>.  Similarly:<m> \ \\ </m>
+              <me>
+                \begin{array}{c|c|c|c} 
+                p\amp q\amp  p\wedge q \amp   \sim(p\wedge q)\\ 
+                \hline 
+                T \amp  T\amp T \amp F\\
+                T \amp  F\amp F \amp T\\
+                F \amp  T\amp F \amp T\\
+                F \amp  F\amp F \amp T\\
+                \end{array}
+              </me> 
+              <me>
+                \begin{array}{c|c|c|c|c} 
+                p\amp q\amp  \sim p \amp \sim q \amp \sim p \vee \sim q\\ 
+                \hline 
+                T \amp  T\amp F \amp F\amp F\\
+                T \amp  F\amp F \amp T\amp T\\
+                F \amp  T\amp T \amp F\amp T\\
+                F \amp  F\amp T \amp T\amp T\\
+                \end{array}
+              </me> 
+              Thus <m>\sim(p \wedge q)=\sim p \vee \sim q</m>.
+      </proof>  
+  </theorem>      
+
   <example>
     <statement>
       <p>
