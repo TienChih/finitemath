@@ -2,151 +2,223 @@
   <title>Quantifiers</title>
   <introduction>
     <p>
-      There are a lot of things in the world.
-      A lot of people, a lot of animals, a lot of numbers,
-      a lot of toppings available for pizza,
-      a lot of things I could add to this list.
-      Presumably, sometimes we'd want to make statements about all these things,
-      and sometimes we want to make statements about some of these things.
+      In this section we introduce quantifiers.  Sometimes, we want to make statements about something always happening (Everyone who gets hurt should...).  Sometimes we want to make a statement about something that will happen but not all the time (Out of all cattle on a ranch, there will be some that...).  Sometimes we will want to combine these (For every student in the school, there will be a professor that...).  Here, we will discuss how to state such things formally.
     </p>
+    </introduction>
+    <subsection>
+      <title>For All</title>
     <p>
-      Suppose <m>x</m> is an MSUB student and <m>I(x)</m> is the statement
-      <q><m>x</m> likes ice cream.</q>
-      We want to perhaps say something more subtle than this.
-      So we introduce the quantifiers <m>\forall</m> and <m>\exists</m>.
+      Consider the statement "Every student at State U likes ice cream." How could we say that formally?
+
+      Suppose <m>x</m> is a State U student and <m>I(x)</m> is the statement
+      <q><m>x</m> likes ice cream.</q>.  Just saying <m>I(x)</m> is fine for each individual student <m>x</m>,  but our goal is to say something about <em>all</em> State U students.
+      So we introduce the quantifiers <term><m>\forall</m></term>.
     </p>
     <p>
       The <m>\forall</m> is pronounced
       <q>for all</q>
       or
-      <q>for every</q>, indicates that the following statement is true for all values of <m>x</m>.
-      So <m>\forall I(x)</m> would denote
-      <q>For every MSUB student <m>x</m>,
+      <q>for every</q>, and it indicates that the  statement that follows is true for all values of <m>x</m>.
+      So <m>\forall x, I(x)</m> would denote
+      <q>For every State U student <m>x</m>,
       <m>x</m> likes Ice Cream.</q>. In order for a <m>\forall</m> statement to be true,
-      it has to be true for EVERY possible value of <m>x</m>.
+      it has to be true for <em>every</em> possible value of <m>x</m>.
     </p>
     <p>
-      The <m>\exists</m> pronounced
+      More generally, if <m>S(x)</m> is a statement about <m>x</m>, then <me> \forall x, S(x) </me> means that <m>S(x)</m> is true for every choice of <m>x</m>.
+    </p>
+    <example>
+    <statement>
+        <p>For each of the following sentences, write the formal accompanying statement.
+          <ol>
+            <li>"Every child watches YouTube."  Let <m>x</m> be a child, <m>Y(x)</m> denote "<m>x</m> watches Youtube".</li>
+            <li>"Each problem has a solution."  Let <m>x</m> be a problem, <m>S(x)</m> denote "<m>x</m> has a solution".</li>
+            <li>"All square numbers are non-prime."  Let <m>x</m> be a square number, <m>P(x)</m> denote "<m>x</m> is a prime".</li>
+            <li>"For any integer, if it is prime, then it is either two or odd."  Let <m>x</m> be an integer, <m>P(x)</m> denote "<m>x</m> is a prime", <m>T(x)</m> denote "<m>x=2</m>", and <m>O(x)</m> denote "<m>x</m> is odd".</li>
+          </ol></p>
+    </statement>
+    <solution>
+      <p>Consider these statements:
+          <ol>
+            <li><m>\forall x, Y(x)</m>. </li>
+            <li><m>\forall x, S(x)</m>. </li>
+            <li><m>\forall x, \sim P(x)</m>.  </li>
+            <li><m>\forall x,  P(x) \to (T(x)\vee O(x))</m>. </li>
+          </ol></p>
+    </solution>  
+
+  </example>
+
+  <example>
+    <statement>
+        <p>For each of the following statements, write out the sentence accompanying it.
+          <ol>
+            <li> <m>\forall x, M(x)</m>,  where <m>x</m> is an accordianist, <m>M(x)</m> denotes "<m>x</m> has a trained monkey".</li>
+            <li> <m>\forall x, \sim L(x)</m>.  Let <m>x</m> be a joke, <m>L(x)</m> denotes "the audience laughed at <m>x</m>".</li>
+            <li> <m>\forall x, F(x)\to E(x)</m>  Let <m>x</m> be an integer, <m>F(x)</m> denotes "<m>x</m> is a mutliple of four", and <m>E(x)</m> denote "<m>x</m> is even".</li>
+            <li> <m>\forall x, S(x)\wedge I(x)</m>   Let <m>x</m> be a linear function, <m>S(x)</m> denotes "<m>x</m> has a slope", <m>I(x)</m> denotes "<m>x</m> has a <m>y</m>-intercept".</li>
+          </ol></p>
+    </statement>
+    <solution>
+      <p>Consider these sentences:
+          <ol>
+            <li>"Each accordianist has a trained monkey."</li>
+            <li>"No one laughed at any of the jokes."</li>
+            <li> "For each integer, if it's a multiple of four, then it's even." </li>
+            <li> "Each linear function has a slope and <m>y</m>-intercept."</li>
+          </ol></p>
+    </solution>  
+
+  </example>    
+</subsection>
+<subsection>
+    <title> Exists </title>
+    <p>
+      The <term><m>\exists</m></term> pronounced
       <q>there exists</q>
       or
       <q>there is</q>
       indicates the following statement is true for some values of <m>x</m>.
       It could be true for 1 of them,
       or a bunch of them, or for all of them.
-      The only thing we know for sure is that there is AT LEAST 1 value of <m>x</m> for which it is true.
-      So <m>\exists I(x)</m> would mean
-      <q>There is an MSUB student who likes Ice Cream.</q>
+      The only thing we know for sure is that there is <em>at least</em> one value of <m>x</m> for which it is true.
+      So <m>\exists x, I(x)</m> would mean
+      <q>There is a State U student who likes ice cream.</q>
       or
-      <q>At least one MSUB student likes Ice Cream.</q>
+      <q>At least one State U student likes ice cream.</q>  In order for a <m>\exists</m> statement to be true, it has to be true for at least one, possibly more, choice(s) of <m>x</m>.
     </p>
     <p>
-      Let's let <m>M(x)</m> be
-      <q><m>x</m> is a Math Major</q>, <m>C(x)</m> be
-      <q><m>x</m> takes Calculus</q>. Then consider the following equivalences:
-      <me>
-        <tabular>
-          <row>
-            <cell><term> Logic</term></cell>
-            <cell><term> English</term></cell>
-          </row>
-          <row bottom="minor">
-            <cell></cell>
-            <cell></cell>
-          </row>
-          <row>
-            <cell>\(\forall (M(x)\to C(x))\)</cell>
-            <cell>For every MSUB student, if you're a Math Major then you take Calculus.</cell>
-          </row>
-          <row>
-            <cell>\(\exists (\sim M(x)\wedge \sim C(x))\)</cell>
-            <cell>There is an MSUB student who isn't a Math Major and doesn't take Calculus.</cell>
-          </row>
-          <row>
-            <cell>\(\forall \sim C(x)\)</cell>
-            <cell>Every MSUB student does not take calculus.</cell>
-          </row>
-        </tabular>
-      </me>
+      More generally, if <m>S(x)</m> is a statement about <m>x</m>, then <me> \exists x, S(x) </me> means that <m>S(x)</m> is true for at least one choice of <m>x</m>.
     </p>
-    <p>
-      Putting aside whether or not the above statements are actually true,
-      here we just see how we can translate statements from english to logical symbols with quantifiers and back.
-    </p>
-    <p>
-      Also, whenever you see a statement <m>\forall p(x)</m>,
-      no matter what <m>p(x)</m> is,
-      it is fair to deduce <m>\exists p(x)</m> automatically.
-      If somethings true for EVERY <m>x</m>,
-      then it also has to be true for at least 1 <m>x</m>.
-      The converse is obviously NOT true.
-      If something is true for a single <m>x</m>,
-      it doesn't mean it will be true for more.
-    </p>
-  </introduction>
+
+    <example>
+    <statement>
+        <p>For each of the following sentences, write the formal accompanying statement.
+          <ol>
+            <li>"There is a type of candy which is my favourite."  Let <m>x</m> be a type of candy, <m>F(x)</m> denote "<m>x</m> is my favourite".</li>
+            <li>"There is a movie that I don't like."  Let <m>x</m> be a movie, <m>L(x)</m> denote "I like <m>x</m>".</li>
+            <li>"There is at least one function that is both even and odd."  Let <m>x</m> be a function, <m>E(x)</m> denote "<m>x</m> is even", <m>O(x)</m> denote "<m>x</m> is odd".</li>
+            <li>"There is at least one integer both a square number and  not even."  Let <m>x</m> be an integer, <m>E(x)</m> denote "<m>x</m> is even", and <m>S(x)</m> denote "<m>x</m> is square".</li>
+          </ol></p>
+    </statement>
+    <solution>
+      <p>Consider these statements:
+          <ol>
+            <li><m>\exists x, F(x)</m>. </li>
+            <li><m>\exists x, \sim L(x)</m>. </li>
+            <li><m>\exists x, E(x)\wedge O(x)</m>. For each <m>x</m>, <m>x</m> is not prime. </li>
+            <li><m>\forall x,  S(x) \wedge \sim E(x)</m>.</li>
+          </ol></p>
+    </solution>  
+
+  </example>
+
+    <example>
+    <statement>
+        <p>For each of the following statements, write out the sentence accompanying it.
+          <ol>
+            <li> <m>\exists x, P(x)</m>,  where <m>x</m> is a student, <m>P(x)</m> denotes "<m>x</m> has to present to the class".</li>
+            <li> <m>\exists x, \sim R(x)</m>.  Let <m>x</m> be a city bus, <m>Y(x)</m> denotes "<m>x</m> runs late today".</li>
+            <li> <m>\exists x, P(x)\wedge E(x)</m>  Let <m>x</m> be a integer, <m>P(x)</m> denotes "<m>x</m> is prime", and <m>E(x)</m> denotes "<m>x</m> is even".</li>
+            <li> <m>\exists x, E(x)\to Z(x)</m>   Let <m>x</m> be a function, <m>Z(x)</m> denotes "<m>x</m> has a output zero", <m>E(x)</m> denotes "<m>x</m> has an even integer input".</li>
+          </ol></p>
+    </statement>
+    <solution>
+      <p>Consider these sentences:
+          <ol>
+            <li>"There is at least one student who will present to the class today."</li>
+            <li>"There is at least one city bus who won't run late today."</li>
+            <li> "There is at least one integer who is prime and even." </li>
+            <li> "There is at least one function who, whenever it has an even input, it outputs zero."</li>
+          </ol></p>
+    </solution>  
+
+  </example>
+
+  </subsection>
   <subsection>
     <title>Negating Quantifiers</title>
     <p>
-      Let's consider <m>\forall I(x)</m> or
-      <q>Every MSUB student likes Ice Cream.</q>
-      If this were NOT true, what would that mean?
-      It would mean that there is some poor soul out on our campus who does not like Ice Cream.
-      In other words: <m>\exists \sim I(x)</m>.
+      Let's consider <m>\forall x,  I(x)</m> or
+      <q>Every State U student likes ice Cream.</q>
+      If this were <em>not</em> true, what would that mean?
+      It would mean that there is some student at State U who does not like ice cream.
+      In other words: <m>\exists x, \sim I(x)</m>.
     </p>
     <p>
-      What would the negation of <m>\exists I(x)</m> be?
+      What would the negation of <m>\exists x, I(x)</m> be?
       The statement is saying
       <q>There is a student who likes Ice Cream.</q>
-      What is the opposite of this?
+      What would it mean for this not to be true?
       It would mean that every single student doesn't like Ice Cream,
-      i.e.<nbsp/><m>\forall \sim I(x)</m>.
+      i.e.<nbsp/><m>\forall x,  \sim I(x)</m>.
       So our negation rules are:
       <md>
-        <mrow>\sim(\forall p(x))\amp =\amp \exists \sim p(x)</mrow>
-        <mrow>\sim(\exists p(x))\amp =\amp \forall \sim p(x)</mrow>
-      </md>.
+        <mrow>\sim(\forall x, p(x))\amp = \exists x,  \sim p(x)</mrow>
+        <mrow>\sim(\exists x, p(x))\amp = \forall x, \sim p(x)</mrow>
+      </md>
     </p>
-    <p>
-      So let's practice on the statements we made earlier:
-      <ul>
-        <li>
-          <p>
-            The negation of ``For every MSUB student,
-            if you're a Math Major then you take Calculus." is:
-            <md>
-              <mrow>\sim(\forall (M(x)\to C(x)))\amp =\amp \exists\sim (M(x)\to C(x))</mrow>
-              <mrow>\amp =\amp \exists\sim (\sim M(x)\vee C(x))</mrow>
-              <mrow>\amp =\amp \exists(M(x)\wedge \sim C(x))</mrow>
-            </md>
-            ``At MSUB, there is a student who is a Math Major and doesn't take Calculus."
-          </p>
-        </li>
-        <li>
-          <p>
-            The negation of ``There is an MSUB student who isn't a Math Major and doesn't take Calculus." is:
-            <md>
-              <mrow>\sim(\exists (\sim M(x)\wedge \sim C(x)))\amp =\amp \forall \sim(\sim M(x)\wedge \sim C(x))</mrow>
-              <mrow>\amp =\amp \forall M(x)\vee C(x)</mrow>
-            </md>
-            ``Every student at MSUB either is a Math Major or takes Calculus."
-          </p>
-        </li>
-        <li>
-          <p>
-            The negation of
-            <q>Every MSUB student does not take calculus.</q>
-            is:
-            <md>
-              <mrow>\sim(\forall \sim C(x))\amp =\amp \exists \sim\sim C(x)</mrow>
-              <mrow>\amp =\amp \exists C(x)</mrow>
-            </md>
-            <q>There is an MSUB student taking Calculus.</q>
-          </p>
-        </li>
-      </ul>
-    </p>
-    <p>
-      Again, I'm not claiming any of these things are true IRL. But given the original statements,
-      these should read and feel like real opposites.
-    </p>
+     <example>
+    <statement>
+        <p>Negate <m>\forall x, p(x)\to q(x)</m></p>
+    </statement>
+    <solution>
+      <p>Consider these equivalences:
+          <md>
+            <mrow>\sim(\forall x, p(x)\to q(x))\amp = \exists x, \sim(p(x)\to q(x))</mrow>]
+            <mrow>\amp = \exists x, \sim(\sim p(x)\vee q(x))</mrow>
+            <mrow>\amp = \exists x, p(x)\wedge \sim q(x).</mrow>
+          </md>
+      </p>
+    </solution>  
+  </example>
+
+     <example>
+    <statement>
+        <p>Negate <m>\exists x, a(x)\vee b(x)</m></p>
+    </statement>
+    <solution>
+      <p>Consider these equivalences:
+          <md>
+            <mrow>\sim(\exists x, a(x)\vee b(x))\amp = \forall x, \sim(a(x)\vee b(x))</mrow>]
+            <mrow>\amp = \forall x, \sim a(x)\wedge \sim b(x).</mrow>
+          </md>
+      </p>
+    </solution> 
+
+    </example>
+
+    <example>
+    <statement>
+        <p>Translate the sentence "Every real number is either positive or negative" into a logical statement, negate it, and then translate the negation back to a sentence.  Let  <m>x</m> be a real number, <m>P(x)</m> be "<m>x</m> is positive", and <m>N(x)</m> be "<m>x</m> is negative". </p>
+    </statement>
+    <solution>
+      <p> The statement is "<m>\forall x, P(x)\vee N(x)</m>".  It's negation would be:
+          <md>
+            <mrow>\sim(\forall x, P(x)\vee N(x))\amp = \exists x, \sim (P(x)\vee N(x))</mrow>]
+            <mrow>\amp = \exists x, \sim P(x)\wedge \sim N(x).</mrow>
+          </md>
+          This translates to "There is at least one number which is both not even and not odd".
+      </p>
+    </solution> 
+    </example>
+
+    <example>
+    <statement>
+        <p>Translate the sentence "There is a function who if one evaluates it at zero, the output is negative" into a logical statement, negate it, and then translate the negation back to a sentence.  Let  <m>x</m> be a function, <m>I(x)</m> be "<m>x</m> is evaluated at 0", and <m>N(x)</m> be "<m>x</m> has a negative output". </p>
+    </statement>
+    <solution>
+      <p> The statement is "<m>\exists x, I(x)\to N(x)</m>".  It's negation would be:
+          <md>
+            <mrow>\sim(\exists x, I(x)\to N(x))\amp = \forall x, \sim (I(x)\to N(x))</mrow>]
+            <mrow>\amp = \forall x, \sim (\sim I(x)\vee N(x))</mrow>
+            <mrow>\amp = \forall x, I(x)\wedge \sim N(x).</mrow>
+          </md>
+          This translates to "For every function, we evaluate at zero and the output is not negative".  (This isn't true, but it's the negation of the original statement).
+      </p>
+    </solution> 
+    </example>
+
+
   </subsection>
 </section>

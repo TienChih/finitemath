@@ -159,17 +159,17 @@
       is it equivalent to say <m>q\to p</m>? (We say that <m>q\to p</m> is the <term>converse</term>
       of <m>p\to q</m>.) We can check with truth tables,
       but before that, let's ask ourselves this: Suppose that <m>p=</m>
-      <q>I drink bleach</q>
+      <q>I eat bad food.</q>
       and <m>q=</m>
       <q>I get sick.</q>
-      I think we can all buy that <m>p\to q</m> i.e.<nbsp/>if I drink bleach then I will get sick.
+      I think we can all buy that <m>p\to q</m> i.e.<nbsp/>If I eat bad food then I will get sick.
       Now the converse, <m>q\to p</m> is the statement
-      <q>If I get sick, then I drank bleach</q>. Is this the same statement?
+      <q>If I get sick, then I ate bad food</q>. Is this the same statement?
     </p>
     <p>
       Doesn't seem so,
       you could have gotten sick from any sort of things,
-      it didn't have to be bleach.
+      it didn't have to be bad food.
       Another example is if <m>p=</m>"I'm a square" and <m>q=</m>"I'm a rectangle." All squares are rectangles,
       not all rectangles are squares.
       So if <m>p\to q</m>,
@@ -185,10 +185,10 @@
     </p>
     <p>
       What about <m>\sim p \to \sim q</m>? (This is the <term>inverse</term>
-      of <m>p\to q</m>) Well this would be "If I'm not drinking bleach then I won't get sick" or "If I'm not a square then I'm not a rectangle." This doesn't seem like it's true either.
-      You can not drink bleach,
-      but then drink paint thinner instead and you'd be sick,
-      and of course there are plenty of rectangles that aren't squares.
+      of <m>p\to q</m>) Well this would be "If I'm not eating bad food then I won't get sick" or "If I'm not a square then I'm not a rectangle." This doesn't seem like it's true either.
+      You can not eat bad food,
+      but can get sick by other means.  
+      Similarly there are plenty of rectangles that aren't squares.
       That and:
       <me>
         \begin{array}{c|c|c|c|c|c} p \amp  q \amp  p\to q \amp \sim p \amp  \sim q\amp  \sim p\to \sim q\\ \hline T \amp  T \amp  T \amp  F \amp  F \amp  T\\ T \amp  F \amp  F \amp  F \amp  T \amp T\\ F \amp  T \amp  T \amp  T \amp  F \amp  F \\ F \amp  F \amp  T \amp  T \amp  T \amp  T \end{array}
@@ -198,10 +198,10 @@
       What about <m>\sim q \to \sim p</m> (the
       <term> contrapositive"</term> of <m>p\to q</m>)?
       In our example,
-      that would be, "If I didn't get sick then I didn't drink bleach" or "If I'm not a rectangle then I'm not a square". These DO seem true.
-      If you didn't get sick you couldn't have drank bleach,
-      if you're not a rectangle, there's no way you could be a square.
-      Rather than use truth tables, consider:
+      that would be, "If I didn't get sick then I didn't eat bad food" or "If I'm not a rectangle then I'm not a square". These <em>so</em> seem true.
+      If you didn't get sick you couldn't have eaten bad food (otherwise you'd have gotten sick). 
+      If you're not a rectangle, there's no way you could be a square.
+      We can verify this:
       <md>
         <mrow>\sim q \to \sim p\amp = (\sim \sim q \vee \sim p)</mrow>
         <mrow>\amp = q \vee \sim p</mrow>
@@ -210,7 +210,7 @@
       </md>.
     </p>
     <p>
-      So these things ARE the same.
+      So these things <em>are</em> the same.
     </p>
   </subsection>
   <subsection>
@@ -229,5 +229,81 @@
         \begin{array}{c|c|c} p \amp  q \amp  p\leftrightarrow q \\ \hline T \amp  T \amp  T \\ T \amp  F \amp  F\\ F \amp  T \amp  F \\ F \amp  F \amp  T \end{array}
       </me>
     </p>
+  </subsection>
+  <subsection>
+    <title>Exercises</title>
+    <exercise>
+    <statement>
+        <p>Find a truth table for  <m>\sim p\vee (q\to r)</m>.</p>
+    </statement>
+    <solution>
+      <p>
+              <me>
+                \begin{array}{c|c|c|c|c|c} 
+                p\amp q\amp  r \amp   \sim p \amp (q\to r)\amp \sim p\vee (q\to r)\\ 
+                \hline 
+                T \amp  T\amp T \amp F\amp T\amp T\\
+                T \amp  T\amp F \amp F\amp F\amp F\\
+                T \amp  F\amp T \amp F\amp T\amp T\\
+                T \amp  F\amp F \amp F\amp T\amp T\\
+                F \amp  T\amp T \amp T\amp T\amp T\\
+                F \amp  T\amp F \amp T\amp F\amp T\\
+                F \amp  F\amp T \amp T\amp T\amp T\\
+                F \amp  F\amp F \amp T\amp T\amp T\\
+                \end{array}
+              </me> 
+        </p>
+    </solution>  
+
+  </exercise>
+
+    <exercise>
+    <statement>
+        <p>Find a truth table for  <m>(\sim p\wedge r)\to q</m>.</p>
+    </statement>
+    <solution>
+      <p>
+              <me>
+                \begin{array}{c|c|c|c|c|c} 
+                p\amp q\amp  r \amp   \sim p \amp \sim p \wedge r \amp (\sim p\vee r)\to q\\ 
+                \hline 
+                T \amp  T\amp T \amp F\amp F\amp T\\
+                T \amp  T\amp F \amp F\amp F\amp T\\
+                T \amp  F\amp T \amp F\amp F\amp T\\
+                T \amp  F\amp F \amp F\amp F\amp T\\
+                F \amp  T\amp T \amp T\amp T\amp T\\
+                F \amp  T\amp F \amp T\amp F\amp T\\
+                F \amp  F\amp T \amp T\amp T\amp F\\
+                F \amp  F\amp F \amp T\amp F\amp T\\
+                \end{array}
+              </me> 
+        </p>
+    </solution>  
+
+  </exercise>  
+  <exercise>
+    <statement>
+        <p>Find a truth table for  <m>(p\to \sim q)\leftrightarrow r</m>.</p>
+    </statement>
+    <solution>
+      <p>
+              <me>
+                \begin{array}{c|c|c|c|c|c} 
+                p\amp q\amp  r \amp   \sim q \amp p\to \sim q \amp (p\to \sim q)\leftrightarrow r\\ 
+                \hline 
+                T \amp  T\amp T \amp F\amp F\amp F\\
+                T \amp  T\amp F \amp F\amp F\amp T\\
+                T \amp  F\amp T \amp T\amp T\amp T\\
+                T \amp  F\amp F \amp T\amp T\amp F\\
+                F \amp  T\amp T \amp F\amp T\amp T\\
+                F \amp  T\amp F \amp F\amp T\amp F\\
+                F \amp  F\amp T \amp T\amp T\amp T\\
+                F \amp  F\amp F \amp T\amp T\amp F\\
+                \end{array}
+              </me> 
+        </p>
+    </solution>  
+
+  </exercise>  
   </subsection>
 </section>

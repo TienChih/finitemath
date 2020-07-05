@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-03T19:26:36-06:00    *-->
+<!--*    on 2020-07-04T22:15:11-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,9 +14,10 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
-\amp =\amp \limit{\textcolor{red}{k}}{0}\frac{f(\textcolor{red}{g(x)+k})-f(g(x))}{\textcolor{red}{k}}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
-\amp =\amp f'(g(x))g'(x)
+\frac{d}{dx}[f(g(x))]\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h}\textcolor{blue}{\frac{g(x+h)-g(x)}{g(x+h)-g(x)}}\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}
 \end{align*}
 </div>
 <span class="incontext"><a href="Sec_ChainRule.html#mjx-eqn-mrow-453">in-context</a></span>

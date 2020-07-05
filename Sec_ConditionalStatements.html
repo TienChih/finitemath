@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-03T19:26:19-06:00    *-->
+<!--*    on 2020-07-04T22:14:54-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -243,21 +243,21 @@ MathJax.Hub.Config({
 <span class="type">Subsection</span> <span class="codenumber">4.3.4</span> <span class="title">Misconceptions</span>
 </h3>
 <p id="p-460">There are some common misinterpretations of the conditional statement that should be addressed. In particular, there are colloquial statements which people believe that are equivalent to the conditional which are not.</p>
-<p id="p-461">Given the statement \(p\to q\text{,}\) is it equivalent to say \(q\to p\text{?}\) (We say that \(q\to p\) is the <dfn class="terminology">converse</dfn> of \(p\to q\text{.}\)) We can check with truth tables, but before that, let's ask ourselves this: Suppose that \(p=\) “I drink bleach” and \(q=\) “I get sick.” I think we can all buy that \(p\to q\) i.e. if I drink bleach then I will get sick. Now the converse, \(q\to p\) is the statement “If I get sick, then I drank bleach”. Is this the same statement?</p>
-<p id="p-462">Doesn't seem so, you could have gotten sick from any sort of things, it didn't have to be bleach. Another example is if \(p=\)"I'm a square" and \(q=\)"I'm a rectangle." All squares are rectangles, not all rectangles are squares. So if \(p\to q\text{,}\) we can think of that as all the circumstances where \(p\) is true lives inside the collection of circumstances where \(q\) is true, and that the reverse is not the same thing. And of course:</p>
+<p id="p-461">Given the statement \(p\to q\text{,}\) is it equivalent to say \(q\to p\text{?}\) (We say that \(q\to p\) is the <dfn class="terminology">converse</dfn> of \(p\to q\text{.}\)) We can check with truth tables, but before that, let's ask ourselves this: Suppose that \(p=\) “I eat bad food.” and \(q=\) “I get sick.” I think we can all buy that \(p\to q\) i.e. If I eat bad food then I will get sick. Now the converse, \(q\to p\) is the statement “If I get sick, then I ate bad food”. Is this the same statement?</p>
+<p id="p-462">Doesn't seem so, you could have gotten sick from any sort of things, it didn't have to be bad food. Another example is if \(p=\)"I'm a square" and \(q=\)"I'm a rectangle." All squares are rectangles, not all rectangles are squares. So if \(p\to q\text{,}\) we can think of that as all the circumstances where \(p\) is true lives inside the collection of circumstances where \(q\) is true, and that the reverse is not the same thing. And of course:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} p \amp  q \amp  p\to q \amp  q\to p\\ \hline T \amp  T \amp  T \amp  T\\ T \amp  F \amp  F \amp  T\\ F \amp  T \amp  T \amp  F \\ F \amp  F \amp  T \amp  T \end{array}
 \end{equation*}
 </div>
 <p id="p-463">So these columns are not the same and so the statements are not equal.</p>
-<p id="p-464">What about \(\sim p \to \sim q\text{?}\) (This is the <dfn class="terminology">inverse</dfn> of \(p\to q\)) Well this would be "If I'm not drinking bleach then I won't get sick" or "If I'm not a square then I'm not a rectangle." This doesn't seem like it's true either. You can not drink bleach, but then drink paint thinner instead and you'd be sick, and of course there are plenty of rectangles that aren't squares. That and:</p>
+<p id="p-464">What about \(\sim p \to \sim q\text{?}\) (This is the <dfn class="terminology">inverse</dfn> of \(p\to q\)) Well this would be "If I'm not eating bad food then I won't get sick" or "If I'm not a square then I'm not a rectangle." This doesn't seem like it's true either. You can not eat bad food, but can get sick by other means. Similarly there are plenty of rectangles that aren't squares. That and:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c|c} p \amp  q \amp  p\to q \amp \sim p \amp  \sim q\amp  \sim p\to \sim q\\ \hline T \amp  T \amp  T \amp  F \amp  F \amp  T\\ T \amp  F \amp  F \amp  F \amp  T \amp T\\ F \amp  T \amp  T \amp  T \amp  F \amp  F \\ F \amp  F \amp  T \amp  T \amp  T \amp  T \end{array}
 \end{equation*}
 </div>
-<p id="p-465">What about \(\sim q \to \sim p\) (the <dfn class="terminology">contrapositive"</dfn> of \(p\to q\))? In our example, that would be, "If I didn't get sick then I didn't drink bleach" or "If I'm not a rectangle then I'm not a square". These DO seem true. If you didn't get sick you couldn't have drank bleach, if you're not a rectangle, there's no way you could be a square. Rather than use truth tables, consider:</p>
+<p id="p-465">What about \(\sim q \to \sim p\) (the <dfn class="terminology">contrapositive"</dfn> of \(p\to q\))? In our example, that would be, "If I didn't get sick then I didn't eat bad food" or "If I'm not a rectangle then I'm not a square". These <em class="emphasis">so</em> seem true. If you didn't get sick you couldn't have eaten bad food (otherwise you'd have gotten sick). If you're not a rectangle, there's no way you could be a square. We can verify this:</p>
 <div class="displaymath">
 \begin{align*}
 \sim q \to \sim p\amp = (\sim \sim q \vee \sim p)\\
@@ -266,7 +266,7 @@ MathJax.Hub.Config({
 \amp = p\to q\text{.}
 \end{align*}
 </div>
-<p id="p-466">So these things ARE the same.</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<p id="p-466">So these things <em class="emphasis">are</em> the same.</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.3.5</span> <span class="title">Biconditional</span>
 </h3>
 <p id="p-467">Maybe you want to describe 2 statements where \(p\to q\) and \(q\to p\text{,}\) i.e. whenever 1 is true then the other is true. Well this is literally \((p\to q)\wedge (q\to p)\text{.}\)</p>
@@ -280,7 +280,72 @@ MathJax.Hub.Config({
 \begin{equation*}
 \begin{array}{c|c|c} p \amp  q \amp  p\leftrightarrow q \\ \hline T \amp  T \amp  T \\ T \amp  F \amp  F\\ F \amp  T \amp  F \\ F \amp  F \amp  T \end{array}
 \end{equation*}
-</div></section></section></div></main>
+</div></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3.6</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-13"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-13"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-13"><article class="exercise exercise-like"><p id="p-469">Find a truth table for  \(\sim p\vee (q\to r)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><div class="displaymath" id="p-470">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c} 
+p\amp q\amp  r \amp   \sim p \amp (q\to r)\amp \sim p\vee (q\to r)\\ 
+\hline 
+T \amp  T\amp T \amp F\amp T\amp T\\
+T \amp  T\amp F \amp F\amp F\amp F\\
+T \amp  F\amp T \amp F\amp T\amp T\\
+T \amp  F\amp F \amp F\amp T\amp T\\
+F \amp  T\amp T \amp T\amp T\amp T\\
+F \amp  T\amp F \amp T\amp F\amp T\\
+F \amp  F\amp T \amp T\amp T\amp T\\
+F \amp  F\amp F \amp T\amp T\amp T\\
+\end{array}
+\end{equation*}
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-14"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-14"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-14"><article class="exercise exercise-like"><p id="p-471">Find a truth table for  \((\sim p\wedge r)\to q\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><div class="displaymath" id="p-472">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c} 
+p\amp q\amp  r \amp   \sim p \amp \sim p \wedge r \amp (\sim p\vee r)\to q\\ 
+\hline 
+T \amp  T\amp T \amp F\amp F\amp T\\
+T \amp  T\amp F \amp F\amp F\amp T\\
+T \amp  F\amp T \amp F\amp F\amp T\\
+T \amp  F\amp F \amp F\amp F\amp T\\
+F \amp  T\amp T \amp T\amp T\amp T\\
+F \amp  T\amp F \amp T\amp F\amp T\\
+F \amp  F\amp T \amp T\amp T\amp F\\
+F \amp  F\amp F \amp T\amp F\amp T\\
+\end{array}
+\end{equation*}
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-15"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-15"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like"><p id="p-473">Find a truth table for  \((p\to \sim q)\leftrightarrow r\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><div class="displaymath" id="p-474">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c} 
+p\amp q\amp  r \amp   \sim q \amp p\to \sim q \amp (p\to \sim q)\leftrightarrow r\\ 
+\hline 
+T \amp  T\amp T \amp F\amp F\amp F\\
+T \amp  T\amp F \amp F\amp F\amp T\\
+T \amp  F\amp T \amp T\amp T\amp T\\
+T \amp  F\amp F \amp T\amp T\amp F\\
+F \amp  T\amp T \amp F\amp T\amp T\\
+F \amp  T\amp F \amp F\amp T\amp F\\
+F \amp  F\amp T \amp T\amp T\amp T\\
+F \amp  F\amp F \amp T\amp T\amp F\\
+\end{array}
+\end{equation*}
+</div></div></div>
+</div></article></div></section></section></div></main>
 </div>
 </body>
 </html>

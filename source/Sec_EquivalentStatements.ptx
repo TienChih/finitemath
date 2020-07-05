@@ -131,7 +131,7 @@
       </p>
       </statement>
       <proof>
-        Consider the following truth tables:<m> \ \\ </m>
+        Consider the following truth tables:
               <me>
                 \begin{array}{c|c|c|c} 
                 p\amp q\amp  p\vee q \amp   \sim(p\vee q)\\ 
@@ -152,7 +152,7 @@
                 F \amp  F\amp T \amp T\amp T\\
                 \end{array}
               </me> 
-              Thus <m>\sim(p \vee q)=\sim p \wedge \sim q</m>.  Similarly:<m> \ \\ </m>
+              Thus <m>\sim(p \vee q)=\sim p \wedge \sim q</m>.  Similarly:
               <me>
                 \begin{array}{c|c|c|c} 
                 p\amp q\amp  p\wedge q \amp   \sim(p\wedge q)\\ 
@@ -249,7 +249,7 @@
         <p>Are <m>p\vee (q\wedge r)</m> and <m>(p\vee q)\wedge (p\vee r)</m> equivalent?</p>
     </statement>
     <solution>
-      <p>Consider the following truth tables:<m> \ \\ </m>
+      <p>Consider the following truth tables:
               <me>
                 \begin{array}{c|c|c|c|c} 
                 p\amp q\amp  r \amp   q\wedge r \amp p\wedge (q\vee r)\\ 
