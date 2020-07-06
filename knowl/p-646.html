@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-06T15:37:37-06:00    *-->
+<!--*    on 2020-07-06T17:47:58-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>If \(n\lt m\text{,}\) then \(\frac{a_n}{b_m}x^{n-m}=\frac{a_n}{b_m}\frac{1}{x^{m-n}}\text{.}\) As the magnitude of \(x\) grows, the more \(\frac{1}{x^{m-n}}\) will shrink and the entire function converges to 0. For example consider \(y=\frac{-2x^2+x}{3x^4+1}\text{.}\) We should note: \(\frac{-2x^2-x}{3x^4+1}\sim\frac{-2x^2}{3x^4} \sim -\frac{2}{3}\frac{1}{x^2}\text{,}\) so the long term behavior of \(y\) will be converging to 0: \url{https://www.desmos.com/calculator/n0ftbxmcod}.</p>
-<span class="incontext"><a href="Sec_RationalFunctions.html#p-646">in-context</a></span>
+<p>By the <dfn class="terminology">Fundamental Theorem of Algebra</dfn>, we can write \(p(x)=a_nx^n+\cdots +a_0\) as:</p>
+<div class="displaymath">
+\begin{equation*}
+p(x)=a_n(x-r_1)^{m_1}(x-r_2)^{m_2}\cdots (x-r_k)^{m_k}\cdot q_1(x)q_2(x)\cdots q_\ell(x)
+\end{equation*}
+</div>
+<p data-braille="continuation">where the \(q_i(x)\) are irreducible quadratics. We call \(r_1, \ldots, r_k\) the <em class="emphasis">roots</em> of \(r(x)\text{,}\) where root \(r_i\) has <em class="emphasis">multiplicty</em> \(m_i\text{.}\) What this means is if we plug \(r_i\) into \(p(x)\text{,}\) we end up with 0, since that linear factor ends up being 0.</p>
+<span class="incontext"><a href="Sec_Polynomials.html#p-646">in-context</a></span>
 </body>
 </html>

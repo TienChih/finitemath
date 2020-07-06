@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-06T15:37:39-06:00    *-->
+<!--*    on 2020-07-06T17:48:00-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,12 +14,16 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[f(g(x))]\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
-\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h}\textcolor{blue}{\frac{g(x+h)-g(x)}{g(x+h)-g(x)}}\\
-\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}\\
-\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}
+Q(x)\amp =\amp \frac{f(x)}{g(x)}\\
+Q(x)g(x)\amp =\amp f(x),\ \text{ now we can differentiate both sides }\\
+\frac{d}{dx}[Q(x)g(x)]\amp =\amp f'(x),\ \text{ then by the product rule: }\\
+Q'(x)g(x)+Q(x)g'(x)\amp =\amp f'(x)\\
+Q'(x)g(x)\amp =\amp f'(x)-Q(x)g'(x),\ \text{then recall that  \(Q(x)=\frac{f(x)}{g(x)}\)}\\
+Q'(x)g(x)\amp =\amp f'(x)-\frac{f(x)g'(x)}{g(x)}\\
+Q'(x)g(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)}\\
+Q'(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_ChainRule.html#mjx-eqn-mrow-451">in-context</a></span>
+<span class="incontext"><a href="section-33.html#mjx-eqn-mrow-451">in-context</a></span>
 </body>
 </html>

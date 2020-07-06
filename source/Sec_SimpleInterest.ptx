@@ -1,18 +1,42 @@
 <section xml:id="Sec_SimpleInterest">
   <title>Simple Interest</title>
+  <introduction>
+    <p>
+      In this section, we discuss <em>simple interest</em>, a way of computing interest based solely on the principle.
+    </p>
+  </introduction>  
+  <p>
+    <definition>
+      Given a initial investment or loan of <m>\$P</m>, often called a <em>principle</em> or <em>present value</em> of an investment/loan, then the <term>simple interest</term> of that principle at a rate of <m>r</m> per time unit, over <m>t</m> time units will be <me>i=Prt.</me>
+    </definition>  
+  </p>  
+
+  <example>
+      <statement>
+        <p>
+          <ol>
+            <li>If you invest <m>\$500</m> at a rate of <m>1\%</m> simple interest a month, then in 18 months, you will have accumulated <m>i=500\cdot 0.01\cdot18=\$90</m> of interest. </li>
+             <li>If you put <m>\$1000</m> at a rate of <m>8\%</m> annual simple interest, then in 6 years, you will have accumulated <m>i=1000\cdot 0.08\cdot6=\$240</m> of interest. </li>
+              <li>If you borrow <m>\$5000</m> from a loan shark at a rate of <m>2\%</m> simple interest a day, then in a week, you will have accumulated <m>i=5000\cdot 0.02\cdot7=\$700</m> of interest. </li>
+          </ol>  
+      </p>
+  </statement>
+    </example> 
+    <p> Assuming no payments or additional principles are taken out, this interest is accumalated in addition to the original principle.  If we let <m>A</m> denote the accumalated future value: <me> A=P+it</me> at time <m>t</m>.</p>
   <p>
     Let's say you take out a loan at $100 dollars and are charged 5% monthly simple interest.
     What this means is that every month, 5% of your initial debt is added on as interest.
     Over time you would see something like:
     <me>
-      \begin{array}{|c|c|} \hline \text{ Month }  \amp  \text{ Debt } \\ \hline 0 \amp  100\\ 1\amp  100+(.05)(100)=100+5=105\\ 2\amp  105+(.05)(100)=105+5=110\\ 3 \amp  110+(.05)(100)=110+5=115\\ \vdots \amp  \vdots\\ n \amp  100+(.05)(100)n=100+5n\\ \hline \end{array}
+      \begin{array}{|c|c|} \hline \text{ Month }  \amp  \text{ Debt } \\ \hline 0 \amp  100\\ 1\amp  100+(.05)(100)(1)=100+5=105\\ 2\amp  100+(.05)(100)(2)=100+10=110\\ 3 \amp  100+(.05)(100(3)=100+15=115\\ \vdots \amp  \vdots\\ n \amp  100+(.05)(100)n=100+5n\\ \hline \end{array}
     </me>
   </p>
   <p>
-    So in say 5 months you would owe <m>100+5*5=\dollar125</m>.
+    So in say 5 months you would owe <m>100+5\cdot 5=\$125</m>.
     In general, we could track how much we owe <m>A</m> in month <m>m</m> as
     <m>A=100+5m</m>, which is, as we know,
-    a linear equation: \url{https://www.desmos.com/calculator/m0k43cprhq}
+    a linear equation:
+    <interactive desmos="3sk7jwznnx"  />
   </p>
   <p>
     Now of course,
@@ -25,23 +49,120 @@
     </me>
   </p>
   <p>
-    This still expresses <m>A</m> as a line with <m>y</m>-intercept <m>P</m> and slope <m>rP</m>: \url{https://www.desmos.com/calculator/hdj0ublnkk}
+    This still expresses <m>A</m> as a line with <m>y</m>-intercept <m>P</m> and slope <m>rP</m>:
+    <interactive desmos="e6aaic6jus"  />
   </p>
   <p>
     So suppose you lend your friend some money at 2% weekly interest,
     and after 10 weeks they owe you $240, how much did you lend them?
     Well, we know that in this case
     <m>r=0.02,
-    m=10</m> and the future value <m>A=240</m> so:
+    w=10</m> and the future value <m>A=240</m> so:
     <md>
-      <mrow>A\amp =\amp P+mrP</mrow>
-      <mrow>240\amp =\amp P+(10)(.02)P</mrow>
-      <mrow>240\amp =\amp 1.2P</mrow>
-      <mrow>P\amp =\amp 200</mrow>
+      <mrow>A\amp = P+wrP</mrow>
+      <mrow>240\amp = P+(10)(.02)P</mrow>
+      <mrow>240\amp = 1.2P</mrow>
+      <mrow>P\amp = 200</mrow>
     </md>
   </p>
   <p>
-    So <m>P=\dollar200</m> is how much they borrowed.
-    One can verify this graphically: \url{https://www.desmos.com/calculator/lq0r43ctb0}.
+    So <m>P=\$200</m> is how much they borrowed.
+    One can verify this graphically:
+    <interactive desmos="nbrldn5oy4"  />
   </p>
+
+  <exercise>
+      <statement>
+        <p>
+          If I invest <m>\$1000 </m> at 12% simple annual interest, how long until my investment is worth <m>\$2000</m>?
+      </p>
+      </statement>
+      <solution>
+        <p>
+          We're given <m>P=1000, A=2000, r=0.12</m>  Thus we have:
+          <md>
+      <mrow>A\amp = P+Prt</mrow>
+      <mrow>2000\amp = 1000+(1000)(.12)t</mrow>
+      <mrow>1000\amp = 120t</mrow>
+      <mrow>t\amp = \frac{1000}{120}\approx 8.333\ldots</mrow>
+      </md>
+      So in 8 years and four months:
+      <interactive desmos="9yhnvatmfg"  />
+    
+        </p>
+      </solution>    
+    </exercise> 
+
+      <exercise>
+      <statement>
+        <p>
+          If I borrow <m>\$750 </m> and in 5 years, I owe <m>\$1000</m>, how much was the annual simple interest rate?
+      </p>
+      </statement>
+      <solution>
+        <p>
+          We're given <m>P=750, A=1000, t=5</m>  Thus we have:
+          <md>
+      <mrow>A\amp = P+Prt</mrow>
+      <mrow>1000\amp = 750+(750)r(5)</mrow>
+      <mrow>250\amp = 3750t</mrow>
+      <mrow>r\amp = \frac{250}{3750}\approx 0.066\ldots</mrow>
+      </md>
+      So about 6.67\% annual simple interest:
+      <interactive desmos="turr6ag5tb"  />
+    
+        </p>
+      </solution>    
+    </exercise> 
+
+
+    <exercise>
+      <statement>
+        <p>
+          How much should I invest so that in 20 years, I have <m>\$10,000</m> at an 8% annual simple interest rate?
+      </p>
+      </statement>
+      <solution>
+        <p>
+          We're given <m>A=10000, t=20, i=0.08</m>  Thus we have:
+          <md>
+      <mrow>A\amp = P+Prt</mrow>
+      <mrow>10000\amp = P+P(0.08)(20)</mrow>
+      <mrow>10000\amp = P(1+1.6)</mrow>
+      <mrow>P\amp = \frac{10000}{2.6}\approx 3846.15\ldots</mrow>
+      </md>
+      So about <m>\$3846.15</m> in inital investment:
+      <interactive desmos="slwvaqvcst"  />
+    
+        </p>
+      </solution>    
+    </exercise> 
+
+    <exercise>
+      <statement>
+        <p>
+          How much should will I owe in 15 weeks, if I borrow <m>\$5,000</m> at an 2% weekly simple interest rate?
+      </p>
+      </statement>
+      <solution>
+        <p>
+          We're given <m>P=5000, t=15, i=0.02</m>  Thus we have:
+          <md>
+      <mrow>A\amp = P+Prt</mrow>
+      <mrow>A\amp = 5000+5000(0.02)(15)= 6500.00</mrow>
+      </md>
+      So  <m>\$6500.00</m> in debt:
+      <interactive desmos="9hfwu4k50w"  />
+    
+        </p>
+      </solution>    
+    </exercise> 
+
+
+
+
+
+
+
+
 </section>

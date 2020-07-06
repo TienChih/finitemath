@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-06T15:37:39-06:00    *-->
+<!--*    on 2020-07-06T17:48:00-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So this explains why \(e\) is such a significant number in mathematics, it is the unique number so that the exponential \(e^x\) is it's own derivative \url{https://www.desmos.com/calculator/xelrg6t0ez}. Every other \(a^x\) differs from it's derivative slightly: \url{https://www.desmos.com/calculator/aqa6zw4vyz}, you can see that when \(a\) is less than \(e\) (about 2.714), it's derivative falls under the original function, and when \(a&gt;e\text{,}\) it's derivative falls above the original.</p>
-<span class="incontext"><a href="DerivativeExp.html#p-755">in-context</a></span>
+<p>We do have a rule for products called the <dfn class="terminology">product rule</dfn> and it states \(\frac{d}{dx}[f(x)g(x)]=f'(x)g(x)+f(x)g'(x)\text{.}\) To see why:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{d}{dx}[f(x)g(x)]\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h},\ \text{ at this stage, I'm going to pull a clever trick and add by 0: }\\
+\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)\textcolor{blue}{-f(x)g(x+h)+f(x)g(x+h)}-f(x)g(x)}{h}\\
+\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x+h)}{h}+\limit{h}{0}\frac{f(x)g(x+h)-f(x)g(x)}{h}\\
+\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}g(x+h)+\limit{h}{0}f(x)\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp f'(x)g(x)+f(x)g'(x)\text{.}
+\end{align*}
+</div>
+<span class="incontext"><a href="section-32.html#p-755">in-context</a></span>
 </body>
 </html>
