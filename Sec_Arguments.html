@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-05T20:38:39-06:00    *-->
+<!--*    on 2020-07-06T12:14:14-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Argument Types</title>
+<title>Arguments</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
@@ -136,7 +136,7 @@ MathJax.Hub.Config({
 <li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
 <li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
 <li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
-<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments" class="active">Argument Types</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments" class="active">Arguments</a></li>
 </ul>
 </li>
 <li class="link">
@@ -176,7 +176,7 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Arguments"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Argument Types</span>
+<span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Arguments</span>
 </h2>
 <section class="introduction" id="introduction-15"><p id="p-499">In this section, we discuss logical arguments.  The point of logic, is to take certain facts or statements known to be true, and from that draw certain conclusions.  We will use what we've learned about logic to describe some valid argument types.  We will then put these argument types together to deduce what is and isn't a valid or appropriate argument.</p></section><section class="subsection" id="subsection-38"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.5.1</span> <span class="title">Argument types</span>
@@ -295,12 +295,136 @@ p\to r
 <li id="li-185">Disjunctive Syllogism.</li>
 <li id="li-186">Modus Tollens.</li>
 <li id="li-187">Reasoning by Transitivity.</li>
-<li id="li-188">Modus Ponens."</li>
+<li id="li-188">Modus Ponens.</li>
 <li id="li-189">Modus Tollens</li>
 <li id="li-190">Reasoning by Transitivity.</li>
 <li id="li-191">Disjunctive Syllogism.</li>
 <li id="li-192">Modus Ponens.</li>
 </ol>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.2</span> <span class="title">Fallacies</span>
+</h3>
+<section class="introduction" id="introduction-16"><p id="p-514">The following are common <dfn class="terminology">Fallacies</dfn>. They seem like they could be legitimate arguments, and are often employed, but they are not.</p></section><p id="p-515">The first fallacy we discuss is the <dfn class="terminology">Fallacy of the Converse</dfn>.  The Fallacy of the Converse takes an implication \(p\to q\) and then argues that if \(q\) is true than \(p\) must be true as well.</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{l}
+p\to q \\
+q\\
+\hline
+p
+\end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">So for example "If I sell this TV, I will have $200.  I have $200, so I must have sold the TV."  The reason this is a fallacy is because, absent more information, you could have acquired $200 in any other way, it was never suggested that this is your only avenue to have acquired this money.  Recall that both \(F\to T, T\to T\) are true statements, so knowing that \(q\) is true, does not allow you to conclude automatically that \(p\) is true.</p>
+<article class="example example-like" id="example-50"><a data-knowl="" class="id-ref original" data-refid="hk-example-50"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-50"><article class="example example-like"><p id="p-516">The following are also examples of Fallacy of Converse:</p>
+<ol class="decimal">
+<li id="li-193">"If I speed, I'll get pulled over.  I got pulled over, it must be for speeding."</li>
+<li id="li-194">"If the crime stops, then there will be no reported cases.  We stopped reporting cases, so crime must have stopped."</li>
+<li id="li-195">"If \(S\) is a square, then \(S\) is a rectangle.  \(S\) is a   rectangle, thus \(S\) must  be a square."</li>
+</ol></article></div>
+<p id="p-517">The next fallacy is the <dfn class="terminology">Fallacy of the Inverse</dfn>.  This supposes that you have an implication \(p\to q\) and then argues tht if \(p\) is false, than \(q\) must be false as well.</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{l}
+p\to q \\
+\sim p\\
+\hline
+\sim q
+\end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">So for example "If I order pizza, then I will have lunch.  I didn't order pizza, I must not have had lunch." The reason this is a fallacy is because it is clear that you could potentially have had anything else for lunch.  Without more knowledge, it can't be concluded based on this alone that you had no lunch options.  Recall that \(F\to q\) is always true no matter what \(q\) is.  So if you didn't get pizza, could have had lunch?  Yes.  Could you not have had lunch?  Also yes.  You simply can't conclude anything.</p>
+<article class="example example-like" id="example-51"><a data-knowl="" class="id-ref original" data-refid="hk-example-51"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-51"><article class="example example-like"><p id="p-518">The following are also examples of Fallacy of the Inverse:</p>
+<ol class="decimal">
+<li id="li-196">"If I am hungry, then I will eat lunch.  I'm not hungry, so I won't eat lunch."</li>
+<li id="li-197">"If profits don't go up, people will get fired.  Profits did go up, so no one will get fired."</li>
+<li id="li-198">"If \((x,y)\) is an optimal solutin to a linear programming problem, then it is a corner point.  \((x,y)\) is not an optimal solution, so it is not a corner point."</li>
+</ol></article></div>
+<article class="exercise exercise-like" id="exercise-17"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-17"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.8</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-17"><article class="exercise exercise-like"><p id="p-519">Identify if the argument is valid, and the argument or fallacy type for each of the following:</p>
+<ol class="decimal">
+<li id="li-199">"If there's an accident, traffic will be bad. Traffic wasn't bad, so there was no accident."</li>
+<li id="li-200">"If someone eats rotten food, they will get sick. Someone got sick so they must have eaten rotten food."</li>
+<li id="li-201">"If \(x\) is a multiple of 4, then it is not prime.  Since \(x\) is not a multiple of 4, then it must be prime."</li>
+<li id="li-202">"If \(\ell(x)\) is a linear function, than it has a slope.  Since \(\ell(x)\) is a linear function, we can conclude it must have a slope."</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-28" id="solution-28"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like">
+<p id="p-520">The arugments are:</p>
+<ol class="decimal">
+<li id="li-203">Modus Tollens</li>
+<li id="li-204">Fallacy of Converse.</li>
+<li id="li-205">Fallacy of Inverse.</li>
+<li id="li-206">Modus Ponens.</li>
+</ol>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.3</span> <span class="title">Valid Arguments</span>
+</h3>
+<p id="p-521">Here, we will use our examples and fallacies above to construct examples of arguments, both valid and invalid.</p>
+<p id="p-522">Consider the following: If I fill the lawnmower with gas, and change the oil, it will start. I didn't start and I filled us the gas. Therefore I didn't change the oil.</p>
+<p id="p-523">So let:</p>
+<ul class="disc">
+<li id="li-207"><p id="p-524">\(g=\) “fill the lawnmmower with gas.”</p></li>
+<li id="li-208"><p id="p-525">\(o=\) “change the oil.”</p></li>
+<li id="li-209"><p id="p-526">\(s=\) “lawnmower starts.”</p></li>
+</ul>
+<p id="p-527">So what we know is \((g\wedge o)\to s, g \sim s\text{.}\) So:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{lcl} (g\wedge o)\to s\amp \ \ \ \amp \\ \sim s\\ \hline \sim(g\wedge o)=\sim g \vee\sim o \amp  \amp \text{ Modus Tollens } \\ \\ \sim g \vee \sim o \\ g=\sim (\sim g)\\ \hline \sim o  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
+\end{equation*}
+</div>
+<p id="p-528">Therefore \(\sim o\text{:}\) "I did not change the oil". This was a valid argument.</p>
+<p id="p-529">Next we give an example of a flawed argument.</p>
+<p id="p-530">Consider the following: If I drink coffee, I will be happy. If I drink coffee, I will be wired. If I am happy, then I am wired.</p>
+<p id="p-531">So let:</p>
+<ul class="disc">
+<li id="li-210"><p id="p-532">\(c=\) “drink coffee.”</p></li>
+<li id="li-211"><p id="p-533">\(h=\) “be happy.”</p></li>
+<li id="li-212"><p id="p-534">\(w=\) “be wired.”</p></li>
+</ul>
+<p id="p-535">What we have is \(c\to h, c\to w\text{.}\) But there's nothing here to connect \(h\) to \(w\text{.}\) If we knew this person drank coffee, we could make that conclusion, but since we don't know that, if we knew that they were happy, it could be for some reason other than drinking coffee. So we have no idea whether or not they'd be wired as well. So we cannot conclude \(h \to w\) and this is NOT a valid argument.</p>
+<article class="exercise exercise-like" id="exercise-18"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-18"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.9</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-18"><article class="exercise exercise-like"><p id="p-536">Suppose you knew the following:</p>
+<p id="p-537">If \(A, B\) are the same point, then the distance between them is zero.  If \(A, B\) are different points, there is exactly one line containing both \(A\) and \(B\text{.}\)  There is not exactly one line containing both \(A\) and \(B\text{.}\)</p>
+<p id="p-538">Construct a valid argument to show the distance betweem \(A\) and \(B\) is zero.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like">
+<p id="p-539">Let's define the following:</p>
+<ul class="disc">
+<li id="li-213">\(s\)="\(A, B\) are the same point."</li>
+<li id="li-214">\(z\)="The distance between \(A, B\) is zero."</li>
+<li id="li-215">\(\ell\)="There is exactly one line cointaining both \(A\) and \(B\text{.}\)"</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li id="li-216">\(\displaystyle s\to z\)</li>
+<li id="li-217">\(\displaystyle \sim s \to \ell\)</li>
+<li id="li-218">\(\displaystyle \sim\ell\)</li>
+</ul>
+<p data-braille="continuation">Thus we can proceed as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{lcl} 
+\sim s\to \ell\amp \ \ \ \amp \\ 
+\sim \ell
+\\ \hline 
+\sim (\sim s)=s \amp  \amp \text{ Modus Tollens } \\ \\ 
+s\to z \\ 
+s\\ 
+\hline 
+z  \amp  \amp \text{ Modus Ponnens } \end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus concluding \(z\)="The distance between \(A, B\) is zero."</p>
 </div></div>
 </div></article></div></section></section></div></main>
 </div>

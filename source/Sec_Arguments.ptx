@@ -1,5 +1,5 @@
 <section xml:id="Sec_Arguments">
-  <title>Argument Types</title>
+  <title>Arguments</title>
   <introduction>
     <p>
       In this section, we discuss logical arguments.  The point of logic, is to take certain facts or statements known to be true, and from that draw certain conclusions.  We will use what we've learned about logic to describe some valid argument types.  We will then put these argument types together to deduce what is and isn't a valid or appropriate argument.
@@ -169,4 +169,221 @@
   </solution>
     </exercise>  
   </subsection>
+<subsection>
+<title>Fallacies</title>
+  <introduction>
+    <p>
+      The following are common <term> Fallacies</term>.
+      They seem like they could be legitimate arguments, and are often employed, but they are not.
+    </p>
+  </introduction>
+  <p>
+    The first fallacy we discuss is the <term>Fallacy of the Converse</term>.  The Fallacy of the Converse takes an implication <m>p\to q</m> and then argues that if <m>q</m> is true than <m>p</m> must be true as well.
+    <me>
+      \begin{array}{l}
+      p\to q \\
+      q\\
+      \hline
+      p
+      \end{array}
+    </me>
+    So for example "If I sell this TV, I will have $200.  I have $200, so I must have sold the TV."  The reason this is a fallacy is because, absent more information, you could have acquired $200 in any other way, it was never suggested that this is your only avenue to have acquired this money.  Recall that both <m>F\to T, T\to T</m> are true statements, so knowing that <m>q</m> is true, does not allow you to conclude automatically that <m>p</m> is true.
+  </p>
+  <example>
+      <statement>
+        <p>
+      The following are also examples of Fallacy of Converse:
+      <ol>
+        <li>"If I speed, I'll get pulled over.  I got pulled over, it must be for speeding."</li>
+        <li>"If the crime stops, then there will be no reported cases.  We stopped reporting cases, so crime must have stopped."</li>
+        <li>"If <m>S</m> is a square, then <m>S</m> is a rectangle.  <m>S</m> is a   rectangle, thus <m>S</m> must  be a square."</li>
+      </ol>  
+    </p>
+  </statement>
+    </example>  
+  <p>
+    The next fallacy is the <term>Fallacy of the Inverse</term>.  This supposes that you have an implication <m>p\to q</m> and then argues tht if <m>p</m> is false, than <m>q</m> must be false as well.
+    <me>
+      \begin{array}{l}
+      p\to q \\
+      \sim p\\
+      \hline
+      \sim q
+      \end{array}
+    </me>
+      So for example "If I order pizza, then I will have lunch.  I didn't order pizza, I must not have had lunch." The reason this is a fallacy is because it is clear that you could potentially have had anything else for lunch.  Without more knowledge, it can't be concluded based on this alone that you had no lunch options.  Recall that <m>F\to q</m> is always true no matter what <m>q</m> is.  So if you didn't get pizza, could have had lunch?  Yes.  Could you not have had lunch?  Also yes.  You simply can't conclude anything.
+    </p>
+    <example>
+      <statement>
+        <p>
+      The following are also examples of Fallacy of the Inverse:
+      <ol>
+        <li>"If I am hungry, then I will eat lunch.  I'm not hungry, so I won't eat lunch."</li>
+        <li>"If profits don't go up, people will get fired.  Profits did go up, so no one will get fired."</li>
+        <li>"If <m>(x,y)</m> is an optimal solutin to a linear programming problem, then it is a corner point.  <m>(x,y)</m> is not an optimal solution, so it is not a corner point."</li>
+      </ol>  
+    </p>
+  </statement>
+    </example>
+
+<exercise>
+      <statement>
+        <p>
+      Identify if the argument is valid, and the argument or fallacy type for each of the following:
+      <ol>
+        <li>"If there's an accident, traffic will be bad. Traffic wasn't bad, so there was no accident."</li>
+        <li>"If someone eats rotten food, they will get sick. Someone got sick so they must have eaten rotten food."</li>
+        <li>"If <m>x</m> is a multiple of 4, then it is not prime.  Since <m>x</m> is not a multiple of 4, then it must be prime."</li>
+        <li>"If <m>\ell(x)</m> is a linear function, than it has a slope.  Since <m>\ell(x)</m> is a linear function, we can conclude it must have a slope."</li>
+      </ol>  
+    </p>
+  </statement>
+  <solution>
+        <p>
+      The arugments are:
+      <ol>
+        <li>Modus Tollens</li>
+        <li>Fallacy of Converse.</li>
+        <li>Fallacy of Inverse.</li>
+        <li> Modus Ponens.</li>
+
+      </ol>  
+    </p>
+  </solution>
+    </exercise> 
+
+  </subsection>
+
+<subsection>
+  <title>Valid Arguments</title>
+  <p>  Here, we will use our examples and fallacies above to construct examples of arguments, both valid and invalid.</p>
+
+      <p>
+        Consider the following: If I fill the lawnmower with gas, and change the oil, it will start.
+        I didn't start and I filled us the gas.
+        Therefore I didn't change the oil.
+      </p>
+      <p>
+        So let:
+        <ul>
+          <li>
+            <p>
+              <m>g=</m>
+              <q>fill the lawnmmower with gas.</q>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>o=</m>
+              <q>change the oil.</q>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>s=</m>
+              <q>lawnmower starts.</q>
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        So what we know is <m>(g\wedge o)\to s, g \sim s</m>.
+        So:
+        <me>
+          \begin{array}{lcl} (g\wedge o)\to s\amp \ \ \ \amp \\ \sim s\\ \hline \sim(g\wedge o)=\sim g \vee\sim o \amp  \amp \text{ Modus Tollens } \\ \\ \sim g \vee \sim o \\ g=\sim (\sim g)\\ \hline \sim o  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
+        </me>
+      </p>
+      <p>
+        Therefore <m>\sim o</m>: "I did not change the oil".
+        This was a valid argument.
+      </p>
+    
+      <p>Next we give an example of a flawed argument.</p>
+      <p>
+        Consider the following: If I drink coffee, I will be happy.
+        If I drink coffee, I will be wired.
+        If I am happy, then I am wired.
+      </p>
+      <p>
+        So let:
+        <ul>
+          <li>
+            <p>
+              <m>c=</m>
+              <q>drink coffee.</q>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>h=</m>
+              <q>be happy.</q>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>w=</m>
+              <q>be wired.</q>
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        What we have is <m>c\to h, c\to w</m>.
+        But there's nothing here to connect <m>h</m> to <m>w</m>.
+        If we knew this person drank coffee,
+        we could make that conclusion,
+        but since we don't know that,
+        if we knew that they were happy,
+        it could be for some reason other than drinking coffee.
+        So we have no idea whether or not they'd be wired as well.
+        So we cannot conclude <m>h \to w</m> and this is NOT a valid argument.
+      </p>
+
+      <exercise>
+      <statement>
+        <p>
+      Suppose you knew the following:</p><p> If <m>A, B</m> are the same point, then the distance between them is zero.  If <m>A, B</m> are different points, there is exactly one line containing both <m>A</m> and <m>B</m>.  There is not exactly one line containing both <m>A</m> and <m>B</m>.</p>
+      <p>Construct a valid argument to show the distance betweem <m>A</m> and <m>B</m> is zero.
+      
+    </p>
+  </statement>
+  <solution>
+        <p>
+      Let's define the following:
+      <ul>
+        <li><m>s=</m>"<m>A, B</m> are the same point."</li>
+        <li><m>z=</m>"The distance between <m>A, B</m> is zero."</li>
+        <li><m>\ell=</m>"There is exactly one line cointaining both <m>A</m> and <m>B</m>."</li>
+
+      </ul>  
+      Then what we are given is:
+      <ul>
+        <li><m>s\to z</m></li>
+        <li><m>\sim s \to \ell</m></li>
+        <li><m>\sim\ell</m></li>
+
+      </ul>  
+      Thus we can proceed as follows:
+
+      <me>
+          \begin{array}{lcl} 
+          \sim s\to \ell\amp \ \ \ \amp \\ 
+          \sim \ell
+          \\ \hline 
+          \sim (\sim s)=s \amp  \amp \text{ Modus Tollens } \\ \\ 
+          s\to z \\ 
+          s\\ 
+          \hline 
+          z  \amp  \amp \text{ Modus Ponnens } \end{array}
+        </me>
+        Thus concluding <m>z=</m>"The distance between <m>A, B</m> is zero."
+
+    </p>
+  </solution>
+    </exercise> 
+
+
+</subsection>
+
+
 </section>
