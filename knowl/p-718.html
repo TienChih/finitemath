@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-04T22:15:11-06:00    *-->
+<!--*    on 2020-07-05T20:38:54-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We've so far covered sums products and quotients of functions, so how about composition? The <dfn class="terminology">chain rule</dfn> is: \(\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x)\text{.}\) To see why:</p>
+<p>The proof of this is a fairly sophisticated fact and it not trivial, but you can verify it by taking the slider \(h\text{,}\) dragging it towards 0 and seeing what happens: \url{https://www.desmos.com/calculator/4uv0zgguq9}. Using this fact, we can deduce:</p>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[f(g(x))]\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
-\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h}\textcolor{blue}{\frac{g(x+h)-g(x)}{g(x+h)-g(x)}}\\
-\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}\\
-\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}
+\frac{d}{dx}[e^x]\amp =\amp \limit{h}{0}\frac{e^{x+h}-e^x}{h}\\
+\amp =\amp \limit{h}{0}\frac{e^xe^h-e^x}{h}\\
+\amp =\amp e^x\limit{h}{0}\frac{e^h-1}{h}\\
+\amp =\amp e^x\cdot1=e^x\text{.}
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_ChainRule.html#p-718">in-context</a></span>
+<span class="incontext"><a href="DerivativeExp.html#p-718">in-context</a></span>
 </body>
 </html>

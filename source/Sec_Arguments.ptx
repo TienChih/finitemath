@@ -2,11 +2,12 @@
   <title>Argument Types</title>
   <introduction>
     <p>
-      Here are some valid types of arguments.
+      In this section, we discuss logical arguments.  The point of logic, is to take certain facts or statements known to be true, and from that draw certain conclusions.  We will use what we've learned about logic to describe some valid argument types.  We will then put these argument types together to deduce what is and isn't a valid or appropriate argument.
     </p>
   </introduction>
   <subsection>
-    <title>Modus Ponens</title>
+    <title>Argument types</title>
+    <p>The first type of argument is <term>Modus Ponens</term>, it is based on the <em>implication</em> <m>p\to q</m>.  If you know that whenever <m>p</m> is true, then we can deduce <m>q</m> is true.
     <me>
       \begin{array}{l}
       p\to q \\
@@ -15,18 +16,29 @@
       q
       \end{array}
     </me>
+  </p>
     <p>
-      In other words, if you know <m>p\to q</m> and <m>p</m>,
-      then <m>q</m> must be true.
       So say
-      <q>If your pet is a pitbull, then it is a dog.</q>
-      <q>Your pet is a pitbull.</q>
+      <q>If your pet is a pitbull, then it is a dog</q>.
+      <q>Your pet is a pitbull</q>.
       It would then be fair to conclude
-      <q>Therefore your pet is a dog.</q>
+      <q>Therefore your pet is a dog</q>.
     </p>
-  </subsection>
-  <subsection>
-    <title>Modus Tollens</title>
+    <example>
+      <statement>
+        <p>
+      The following are also examples of Modus Ponones:
+      <ol>
+        <li>"If we drive faster, we will make it in time.  We drove faster.  Thus we made it in time."</li>
+        <li>"If I get sick, I will stay home.  I got sick.  Therefore I stayed home."</li>
+        <li>"If <m>x</m> is even, then <m>x^2</m> is even.  <m>x</m> is even, thus <m>x^2</m> is even."</li>
+        <li>"If <m>S</m> is a square, then <m>S</m> is a rectangle.  <m>S</m> is a square, thus <m>S</m> is a rectangle."</li>
+      </ol>  
+    </p>
+  </statement>
+    </example>  
+    <p>
+    The next argument type is <term>Modus Tollens</term>.  This is analagous to the <em>contrapositive</em>. So if you're given that <m>p\to q</m>, and you know that <m>q</m> isn't true, that is <m>\sim q</m>, then it follows that <m>p</m> isn't true, or <m>\sim p</m>.
     <me>
       \begin{array}{l}
       p\to q \\
@@ -35,18 +47,29 @@
       \sim p
       \end{array}
     </me>
-    <p>
-      In other words, if you know <m>p\to q</m> and <m>\sim q</m>,
-      then <m>\sim p</m> must be true.
-      So say
-      <q>If your pet is a pitbull, then it is a dog.</q>
-      <q>Your pet is not a dog.</q>
-      It would then be fair to conclude
-      <q>Therefore your pet is not a pitbull.</q>
     </p>
-  </subsection>
-  <subsection>
-    <title>Disjunctive Syllogism</title>
+    <p>
+      So suppose the following were true:
+      <q>If your eat peanuts, then you will have an allergic reaction</q> and
+      <q>You do not have an allergic reaction</q>.
+      It would then be fair to conclude
+      <q>Therefore you did not eat peanuts</q>.
+    </p>
+     <example>
+      <statement>
+        <p>
+      The following are also examples of Modus Tollens:
+      <ol>
+        <li>"If I eat lunch, I won't be hungry.  I'm hungry.  Thus I must not have eaten lunch."</li>
+        <li>"If we stay behind the line, no one will get hurt.  Someone got hurt.  We must not have stayed behind the line."</li>
+        <li>"If <m>x</m> is even, then <m>x^2</m> is even.  <m>x^2</m> is odd, thus <m>x</m> is odd."</li>
+        <li>"If <m>S</m> is a square, then <m>S</m> is a rectangle.  <m>S</m> is a not a rectangle, thus <m>S</m> must not be a square."</li>
+      </ol>  
+    </p>
+  </statement>
+    </example>  
+    <p>
+    The next arugment type is <term>Disjunctive Syllogism </term>.  This is based on   <em> or</em>.  If you're given that either <m>p</m> or <m>q</m> is true, that is <m>p\vee q </m>, and then one of them is false (<m>\sim p</m> or <m>\sim q</m>) , then it follows that the other must be true  (<m>q</m> or <m>p</m>).
     <me>
       \begin{array}{l}
       p\vee q \\
@@ -63,14 +86,26 @@
       q
       \end{array}
     </me>
+  </p>
     <p>
-      If you know <m>p \vee q</m> and one isn't true,
-      then the other must be true. ``I have to take either math or science next semester, I'm not going to take math,
+      "I have to take either math or science next semester, I'm not going to take math,
       so therefore, I must take science."
     </p>
-  </subsection>
-  <subsection>
-    <title>Reasoning by Transitivity</title>
+     <example>
+      <statement>
+        <p>
+      The following are also examples of Disjunctive Syllogism:
+      <ol>
+        <li>"Either I or my spouse has the card.  I don't have it so my spouse must have it."</li>
+        <li>"She can order the fish or the chicken.  She didn't order the chicken so she must have ordered the fish."</li>
+        <li>"A linear function <m>\ell(x)</m> either has nonero slope or is constant.  It's not constant so <m>\ell(x)</m> must have nonzero slope."</li>
+        <li>"An integer greater than 1 <m>n</m> is either prime or composite.  Since <m>n</m> isn't prime, it must be composite."</li>
+      </ol>  
+    </p>
+  </statement>
+    </example>  
+    <p>
+      The final type of argument is <term >Reasoning by Transitivity</term>.  It connects two implications together.  If you have <m>p\to q</m> and <m>q\to r</m>, then it must follow that <m>p\to r</m>.
     <me>
       \begin{array}{l}
       p\to q \\
@@ -79,10 +114,59 @@
       p\to r
       \end{array}
     </me>
+  </p>
     <p>
-      ``If it rains then I will get wet.
+      "If it rains then I will get wet.
       If I get wet, I will get sick." <m>\to</m>
-      <q>Therefore, if it rains, I will get sick.</q>
+      <q>Therefore, if it rains, then I will get sick.</q>
     </p>
+     <example>
+      <statement>
+        <p>
+      The following are also examples of Reasoning by Transitivity:
+      <ol>
+        <li>"If we drive faster, we will make it in time.  If we make it in time, we can have lunch.  Thus if we drive faster, we can have lunch."</li>
+        <li>"If I get sick, I will stay home.  If I stay home, I will work on my book.  So if I get sick, I will work on my book."</li>
+        <li>"If it rains, I will have to move the clothes inside.  If I move the clothes inside, I will be late.  So if it rains, I will be late."</li>
+        <li>"If <m>S</m> is a square, then <m>S</m> is a rectangle.  If <m>S</m> is a rectangle, all it's angles are right angles.  Thus if <m>S</m> is a square, then all of it's angles are right angles."</li>
+      </ol>  
+    </p>
+  </statement>
+    </example>  
+
+    <exercise>
+      <statement>
+        <p>
+      Identify the argument type for each of the following:
+      <ol>
+        <li>"I can either pay the gas or electric bil.  I didn't pay gas so I must have paid the electric bill."</li>
+        <li>"If it snows, the children can go sledding, they didn't go sledding, thus it didn't snow."</li>
+        <li>"If it snows, the children can go sledding, if the children go sledding the house will be quiet.  Thus if it snows then the house will be quiet."</li>
+        <li>"If the firm makes enough money, then we will hire new staff members.  The firm enough money, thus we will hire new staff members."</li>
+        <li>"If <m>x</m> is a multiple of 4, then <m>x</m> is not prime.  <m>x</m> is prime, thus <m>x</m> is not a multiple of four."</li>
+        <li>"If a  function has a constant slope, then it is linear.  If a function is linear, then it is a polynomial.  Thus every function with positive slope is a polynomial."</li>
+        <li>"All nonzero numbers <m>x</m>are either positive or negative.  If <m>x</m> is not positive, then it is negative."</li>
+        <li> "If a linear programming problem has a solution, it will have a corner point solution.  This one has a solution, thus it has a corner point solution."</li>
+
+      </ol>  
+    </p>
+  </statement>
+  <solution>
+        <p>
+      The arugments are:
+      <ol>
+        <li>Disjunctive Syllogism.</li>
+        <li>Modus Tollens.</li>
+        <li>Reasoning by Transitivity.</li>
+        <li>Modus Ponens.</li>
+        <li>Modus Tollens</li>
+        <li>Reasoning by Transitivity.</li>
+        <li>Disjunctive Syllogism.</li>
+        <li> Modus Ponens.</li>
+
+      </ol>  
+    </p>
+  </solution>
+    </exercise>  
   </subsection>
 </section>

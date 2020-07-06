@@ -8,6 +8,6 @@
   <!--<xi:include  href="Sec_Circuits.ptx"/>-->
   <xi:include  href="Quantifiers.ptx"/>
   <xi:include  href="Sec_Arguments.ptx"/>
-  <xi:include  href="Fallacies.ptx"/>
-  <xi:include  href="Sec_ValidArguments.ptx"/>
+  <!--<xi:include  href="Fallacies.ptx"/>
+  <xi:include  href="Sec_ValidArguments.ptx"/>-->
 </chapter>

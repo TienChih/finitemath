@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-04T22:14:58-06:00    *-->
+<!--*    on 2020-07-05T20:38:42-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -137,8 +137,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
 <li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
 <li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Argument Types</a></li>
-<li><a href="Fallacies.html" data-scroll="Fallacies">Fallacies</a></li>
-<li><a href="Sec_ValidArguments.html" data-scroll="Sec_ValidArguments">Valid and invalid arguments</a></li>
 </ul>
 </li>
 <li class="link">
@@ -166,8 +164,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-34.html" data-scroll="section-34">Product Rule</a></li>
-<li><a href="section-35.html" data-scroll="section-35">Quotient Rule</a></li>
+<li><a href="section-32.html" data-scroll="section-32">Product Rule</a></li>
+<li><a href="section-33.html" data-scroll="section-33">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp" class="active">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -180,14 +178,14 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="DerivativeExp"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.11</span> <span class="title">Derivative of Exponentials</span>
 </h2>
-<p id="p-722">When we graph an exponential function, say an increasing one \(f(x)=a^x, a&gt;1\text{,}\) we imagine a function that curves up towards infinity on the right and shallows out towards 0 on the left \url{https://www.desmos.com/calculator/51zxitu9xc}. What then should it's derivatives look like? Well it seems like the slopes are initially shallow, and then as we go forward the slopes start to increase, and they get progressively and progressively larger. In other words <dfn class="terminology">the derivative is also an exponential function!</dfn> \url{https://www.desmos.com/calculator/etbmc1ttzo}.</p>
-<p id="p-723">Which one? Let's first start with a special case, what is the derivative of \(f(x)=e^x\text{?}\) \(e\) is a special number, it has the peculiar property that:</p>
+<p id="p-716">When we graph an exponential function, say an increasing one \(f(x)=a^x, a&gt;1\text{,}\) we imagine a function that curves up towards infinity on the right and shallows out towards 0 on the left \url{https://www.desmos.com/calculator/51zxitu9xc}. What then should it's derivatives look like? Well it seems like the slopes are initially shallow, and then as we go forward the slopes start to increase, and they get progressively and progressively larger. In other words <dfn class="terminology">the derivative is also an exponential function!</dfn> \url{https://www.desmos.com/calculator/etbmc1ttzo}.</p>
+<p id="p-717">Which one? Let's first start with a special case, what is the derivative of \(f(x)=e^x\text{?}\) \(e\) is a special number, it has the peculiar property that:</p>
 <div class="displaymath">
 \begin{equation*}
 \limit{h}{0}\frac{e^h-1}{h}=1\text{.}
 \end{equation*}
 </div>
-<p id="p-724">The proof of this is a fairly sophisticated fact and it not trivial, but you can verify it by taking the slider \(h\text{,}\) dragging it towards 0 and seeing what happens: \url{https://www.desmos.com/calculator/4uv0zgguq9}. Using this fact, we can deduce:</p>
+<p id="p-718">The proof of this is a fairly sophisticated fact and it not trivial, but you can verify it by taking the slider \(h\text{,}\) dragging it towards 0 and seeing what happens: \url{https://www.desmos.com/calculator/4uv0zgguq9}. Using this fact, we can deduce:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[e^x]\amp =\amp \limit{h}{0}\frac{e^{x+h}-e^x}{h}\\
@@ -196,8 +194,8 @@ MathJax.Hub.Config({
 \amp =\amp e^x\cdot1=e^x\text{.}
 \end{align*}
 </div>
-<p id="p-725">So this explains why \(e\) is such a significant number in mathematics, it is the unique number so that the exponential \(e^x\) is it's own derivative \url{https://www.desmos.com/calculator/xelrg6t0ez}. Every other \(a^x\) differs from it's derivative slightly: \url{https://www.desmos.com/calculator/aqa6zw4vyz}, you can see that when \(a\) is less than \(e\) (about 2.714), it's derivative falls under the original function, and when \(a&gt;e\text{,}\) it's derivative falls above the original.</p>
-<p id="p-726">So, to compute the actual derivative of \(a^x\text{:}\)</p>
+<p id="p-719">So this explains why \(e\) is such a significant number in mathematics, it is the unique number so that the exponential \(e^x\) is it's own derivative \url{https://www.desmos.com/calculator/xelrg6t0ez}. Every other \(a^x\) differs from it's derivative slightly: \url{https://www.desmos.com/calculator/aqa6zw4vyz}, you can see that when \(a\) is less than \(e\) (about 2.714), it's derivative falls under the original function, and when \(a&gt;e\text{,}\) it's derivative falls above the original.</p>
+<p id="p-720">So, to compute the actual derivative of \(a^x\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\

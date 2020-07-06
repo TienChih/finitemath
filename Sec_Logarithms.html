@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-04T22:14:56-06:00    *-->
+<!--*    on 2020-07-05T20:38:40-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -137,8 +137,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
 <li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
 <li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Argument Types</a></li>
-<li><a href="Fallacies.html" data-scroll="Fallacies">Fallacies</a></li>
-<li><a href="Sec_ValidArguments.html" data-scroll="Sec_ValidArguments">Valid and invalid arguments</a></li>
 </ul>
 </li>
 <li class="link">
@@ -166,8 +164,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-34.html" data-scroll="section-34">Product Rule</a></li>
-<li><a href="section-35.html" data-scroll="section-35">Quotient Rule</a></li>
+<li><a href="section-32.html" data-scroll="section-32">Product Rule</a></li>
+<li><a href="section-33.html" data-scroll="section-33">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -180,13 +178,13 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Logarithms"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.5</span> <span class="title">Logarithms</span>
 </h2>
-<p id="p-627">So looking at any exponential function, but specifically for increasing ones, we notice that they are 1-1, meaning two different inputs give you 2 different outputs. Thus, \(f(x)=a^x\) is an invertible function. You can see in these graphs \url{https://www.desmos.com/calculator/cvriy608bg} that reflecting the exponential over the \(y=x\) line giving us the green function is another function. We call this function \(\log_a(x)\text{.}\) As the inverse of an exponential function, it has some properties:</p>
+<p id="p-621">So looking at any exponential function, but specifically for increasing ones, we notice that they are 1-1, meaning two different inputs give you 2 different outputs. Thus, \(f(x)=a^x\) is an invertible function. You can see in these graphs \url{https://www.desmos.com/calculator/cvriy608bg} that reflecting the exponential over the \(y=x\) line giving us the green function is another function. We call this function \(\log_a(x)\text{.}\) As the inverse of an exponential function, it has some properties:</p>
 <ul class="disc">
-<li id="li-183"><p id="p-628"><dfn class="terminology">It's domain is only positive numbers</dfn>. Why? Because the only possible outputs of exponential outputs are positive numbers. Taking the inverse reverses the roles of the domain and range, and so the domain of \(\log_a\) is the positives.</p></li>
-<li id="li-184"><p id="p-629"><dfn class="terminology">As \(\mathbf{x}\) goes to 0, \(\mathbf{\log_a(x)}\) goes to \(\mathbf{-\infty}\text{.}\)</dfn> This is the result of the reflection. Normally \(a^x\) (for \(a&gt;1\)) goes to 0 as \(x\to -\infty\text{,}\) so when reflected, that line is now asymptotic to the \(y\)-axis. Also \(\log_a\) returns the power necessary to achieve the value \(x\text{.}\) If \(x\) is a small number like 0.0001, what power would I have to raise \(a\) to to get \(0.0001\text{?}\) It can't be 0, \(a^0=1\text{,}\) so it has to be <dfn class="terminology">less</dfn> than 0, and the smaller \(x\) is, the lower this power must go.</p></li>
-<li id="li-185"><p id="p-630">As \(\mathbf{x\to\infty, \log_a(x)\to \infty}\text{,}\) again this is the result of the reflection, but we can also think of this as the powers \(a\) needs to be raised to in order to achieve \(x\text{,}\) as this increases, those powers must increase as well.</p></li>
-<li id="li-186">
-<p id="p-631">\(\log_a(xy)=\log_a(x)+\log_a(y)\text{.}\) Too see this consider:</p>
+<li id="li-209"><p id="p-622"><dfn class="terminology">It's domain is only positive numbers</dfn>. Why? Because the only possible outputs of exponential outputs are positive numbers. Taking the inverse reverses the roles of the domain and range, and so the domain of \(\log_a\) is the positives.</p></li>
+<li id="li-210"><p id="p-623"><dfn class="terminology">As \(\mathbf{x}\) goes to 0, \(\mathbf{\log_a(x)}\) goes to \(\mathbf{-\infty}\text{.}\)</dfn> This is the result of the reflection. Normally \(a^x\) (for \(a&gt;1\)) goes to 0 as \(x\to -\infty\text{,}\) so when reflected, that line is now asymptotic to the \(y\)-axis. Also \(\log_a\) returns the power necessary to achieve the value \(x\text{.}\) If \(x\) is a small number like 0.0001, what power would I have to raise \(a\) to to get \(0.0001\text{?}\) It can't be 0, \(a^0=1\text{,}\) so it has to be <dfn class="terminology">less</dfn> than 0, and the smaller \(x\) is, the lower this power must go.</p></li>
+<li id="li-211"><p id="p-624">As \(\mathbf{x\to\infty, \log_a(x)\to \infty}\text{,}\) again this is the result of the reflection, but we can also think of this as the powers \(a\) needs to be raised to in order to achieve \(x\text{,}\) as this increases, those powers must increase as well.</p></li>
+<li id="li-212">
+<p id="p-625">\(\log_a(xy)=\log_a(x)+\log_a(y)\text{.}\) Too see this consider:</p>
 <div class="displaymath">
 \begin{align*}
 xy\amp =\amp a^{\log_a{xy}}\\
@@ -196,8 +194,8 @@ xy\amp =\amp x\cdot y\\
 \end{align*}
 </div>
 </li>
-<li id="li-187">
-<p id="p-632">\(\log_a(x^y)=y\log_a(x)\text{.}\) To see this, consider:</p>
+<li id="li-213">
+<p id="p-626">\(\log_a(x^y)=y\log_a(x)\text{.}\) To see this, consider:</p>
 <div class="displaymath">
 \begin{align*}
 x^y\amp =\amp a^{\log_a(x^y)}.\\
@@ -207,9 +205,9 @@ x^y\amp =\amp (a^{\log_a(x)})^y\\
 </div>
 </li>
 </ul>
-<p id="p-633">Typically most textbooks include a whole bunch of other arithmetic rules, but they can all be distilled from the 2 above so they're all totally pointless.</p>
-<p id="p-634">Special cases of logs are log base 10 which is usually just denoted \(\log\) and log based \(e\text{,}\) which is denoted \(\ln\text{.}\) Astronomers and other scientists like \(\log\) since taking \(\log\) base 10 gives you approximate magnitude of stuff. As a mathematician, I prefer \(\ln\) since \(e\) has pretty special mathematical properties, plus it's shorter, which makes it better.</p>
-<p id="p-635">The main use of logs algebraically is to de-exponentiate expressions. So if one is trying to solve \(10=2^x\text{,}\) we could do this via:</p>
+<p id="p-627">Typically most textbooks include a whole bunch of other arithmetic rules, but they can all be distilled from the 2 above so they're all totally pointless.</p>
+<p id="p-628">Special cases of logs are log base 10 which is usually just denoted \(\log\) and log based \(e\text{,}\) which is denoted \(\ln\text{.}\) Astronomers and other scientists like \(\log\) since taking \(\log\) base 10 gives you approximate magnitude of stuff. As a mathematician, I prefer \(\ln\) since \(e\) has pretty special mathematical properties, plus it's shorter, which makes it better.</p>
+<p id="p-629">The main use of logs algebraically is to de-exponentiate expressions. So if one is trying to solve \(10=2^x\text{,}\) we could do this via:</p>
 <div class="displaymath">
 \begin{align*}
 10\amp =\amp 2^x\\
@@ -218,7 +216,7 @@ x^y\amp =\amp (a^{\log_a(x)})^y\\
 x\amp =\amp \frac{\ln(10)}{\ln(2)}\approx 3.3219\text{.}
 \end{align*}
 </div>
-<p id="p-636">One can also solve problems like this visually: \url{https://www.desmos.com/calculator/t0pojr0gel}.</p></section></div></main>
+<p id="p-630">One can also solve problems like this visually: \url{https://www.desmos.com/calculator/t0pojr0gel}.</p></section></div></main>
 </div>
 </body>
 </html>
