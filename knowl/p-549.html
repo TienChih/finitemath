@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-06T12:14:26-06:00    *-->
+<!--*    on 2020-07-06T15:37:35-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,29 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Well, If I owe \(X\) dollars in any given month, then the next month I'll owe \(X+0.05X=(1.05)X\) dollars. In another month I'll owe \(1.05X+(.05)(1.05)X=(1.05)(1.05)X=X(1.05)^2\) dollars. If we apply this logic to our situation, we can see:</p>
+<p>Let's define the following:</p>
+<ul class="disc">
+<li>\(s=\)"It snows."</li>
+<li>\(p=\)"The city sends out snow plows."</li>
+<li>\(t=\)"Traffic got bad."</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li>\(\displaystyle s\to p\)</li>
+<li>\(\displaystyle p\to t\)</li>
+<li>\(\displaystyle t\)</li>
+</ul>
+<p data-braille="continuation">So one hypothetically start with Reasoning by Transitivity:</p>
 <div class="displaymath">
 \begin{equation*}
-\begin{array}{|c|c|} \hline \text{ Month }  \amp  \text{ Debt } \\ \hline 0 \amp  100\\ 1\amp  100+(.05)(100)=(1.05)100\\ 2\amp  (1.05)100+(.05)((1.05)100)=(1.05)(1.05)100=(1.05)^2 100\\ 3 \amp  (1.05)^2100+(.05)((1.05)^2100)=(1.05)(1.05)^2 100=(1.05)^3 100\\ \vdots \amp  \vdots\\ n \amp  (1.05)^n100\\ \hline \end{array}
+\begin{array}{lcl} 
+s\to p\amp \ \ \ \amp \\ 
+p\to t
+\\ \hline 
+s\to t\amp  \amp \text{ Reasnoning by Transitivity }  \end{array}
 \end{equation*}
 </div>
-<span class="incontext"><a href="Sec_CompoundInterest.html#p-549">in-context</a></span>
+<p data-braille="continuation">Next we are given \(t\text{.}\)  But we cannot from \(t\) conclude \(s\text{.}\)  This would be the Fallacy of the Converse.  There's all sorts of reasons traffic might be bad, it may have nothing to do with snows or snow plows.</p>
+<span class="incontext"><a href="Sec_Arguments.html#p-549">in-context</a></span>
 </body>
 </html>

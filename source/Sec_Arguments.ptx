@@ -382,6 +382,134 @@
   </solution>
     </exercise> 
 
+    
+
+    <exercise>
+      <statement>
+        <p>
+      Suppose you knew the following:</p>
+
+      <p> If Frida has breakfast, she will have either pancakes or waffles.  Frida had breakfast and did not have waffles.  </p>
+
+      <p>Construct a valid argument to show Frida had pancakes.
+    </p>
+  </statement>
+  <solution>
+        <p>
+      Let's define the following:
+      <ul>
+        <li><m>b=</m>"Frida had breakfast."</li>
+        <li><m>p=</m>"Frida had pancakes."</li>
+        <li><m>w=</m>"Frida had waffles."</li>
+
+      </ul>  
+      Then what we are given is:
+      <ul>
+        <li><m>b\to (p\vee w)</m></li>
+        <li><m>b</m></li>
+        <li><m>\sim w</m></li>
+
+      </ul>  
+      Thus we can proceed as follows:
+
+      <me>
+          \begin{array}{lcl} 
+          b\to (p\vee w)\amp \ \ \ \amp \\ 
+          b
+          \\ \hline 
+          p\vee w \amp  \amp \text{ Modus Ponnens } \\ \\ 
+          p\vee w \\ 
+          \sim w\\ 
+          \hline 
+          p  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
+        </me>
+        Thus concluding <m>p=</m>"Frida had pancakes."
+
+    </p>
+  </solution>
+    </exercise> 
+
+
+    <exercise>
+      <statement>
+        <p>
+      Find the flaw in the following line of reasoning:</p>
+
+      <p> If <m>x</m>is a multiple of 5 and a multiple of 2, then <m>x</m> is a multiple of 10.  <m>x</m> is not a multiple of 10 or 2, so it must be a multiple of 5.  </p>
+  </statement>
+  <solution>
+        <p>
+      Let's define the following:
+      <ul>
+        <li><m>t=</m>"<m>x</m> is a multiple of ten."</li>
+        <li><m>f=</m>"<m>x</m> is a multiple of five."</li>
+        <li><m>e=</m>"<m>x</m> is a multiple of two."</li>
+
+      </ul>  
+      Then what we are given is:
+      <ul>
+        <li><m>f\wedge e\to t</m></li>
+        <li><m>\sim t</m></li>
+        <li><m>\sim e</m></li>
+
+      </ul>  
+      So one hypothetically start with Modus Tollens:
+
+      <me>
+          \begin{array}{lcl} 
+          (f\wedge e)\to t\amp \ \ \ \amp \\ 
+          \sim t
+          \\ \hline 
+          \sim(f\wedge e)=\sim f \vee\sim e\amp  \amp \text{ Modus Tollens }  \end{array}
+        </me>
+
+        Next we are given <m>\sim e</m>.  But from this we <em>cannot</em> use Disjunctive Syllogism to conclude <m>\sim (\sim f)=f</m>.  Notice that in an or statement, both statements can be true.  So if <m>x</m> isn't a multiple of two, it doesn't have to be a multiple of five. 7 is neither a multiple of 2, 5 nor 10.
+
+    </p>
+  </solution>
+    </exercise> 
+
+
+    <exercise>
+      <statement>
+        <p>
+      Find the flaw in the following line of reasoning:</p>
+
+      <p> If it  snows, the city will send out snow plows.  If the city sends out snow plows, traffic will get bad.  Traffic got bad, so therefore it snowed. </p>
+  </statement>
+  <solution>
+        <p>
+      Let's define the following:
+      <ul>
+        <li><m>s=</m>"It snows."</li>
+        <li><m>p=</m>"The city sends out snow plows."</li>
+        <li><m>t=</m>"Traffic got bad."</li>
+
+      </ul>  
+      Then what we are given is:
+      <ul>
+        <li><m>s\to p</m></li>
+        <li><m>p\to t</m></li>
+        <li><m>t</m></li>
+
+      </ul>  
+      So one hypothetically start with Reasoning by Transitivity:
+
+      <me>
+          \begin{array}{lcl} 
+          s\to p\amp \ \ \ \amp \\ 
+          p\to t
+          \\ \hline 
+          s\to t\amp  \amp \text{ Reasnoning by Transitivity }  \end{array}
+        </me>
+
+        Next we are given <m>t</m>.  But we cannot from <m>t</m> conclude <m>s</m>.  This would be the Fallacy of the Converse.  There's all sorts of reasons traffic might be bad, it may have nothing to do with snows or snow plows.
+
+    </p>
+  </solution>
+    </exercise> 
+
+
 
 </subsection>
 

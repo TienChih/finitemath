@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-06T12:14:14-06:00    *-->
+<!--*    on 2020-07-06T15:37:19-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -400,9 +400,9 @@ p\to q \\
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like">
 <p id="p-539">Let's define the following:</p>
 <ul class="disc">
-<li id="li-213">\(s\)="\(A, B\) are the same point."</li>
-<li id="li-214">\(z\)="The distance between \(A, B\) is zero."</li>
-<li id="li-215">\(\ell\)="There is exactly one line cointaining both \(A\) and \(B\text{.}\)"</li>
+<li id="li-213">\(s=\)"\(A, B\) are the same point."</li>
+<li id="li-214">\(z=\)"The distance between \(A, B\) is zero."</li>
+<li id="li-215">\(\ell=\)"There is exactly one line cointaining both \(A\) and \(B\text{.}\)"</li>
 </ul>
 <p data-braille="continuation">Then what we are given is:</p>
 <ul class="disc">
@@ -424,7 +424,105 @@ s\\
 z  \amp  \amp \text{ Modus Ponnens } \end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">Thus concluding \(z\)="The distance between \(A, B\) is zero."</p>
+<p data-braille="continuation">Thus concluding \(z=\)"The distance between \(A, B\) is zero."</p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-19"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-19"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.10</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-19"><article class="exercise exercise-like"><p id="p-540">Suppose you knew the following:</p>
+<p id="p-541">If Frida has breakfast, she will have either pancakes or waffles.  Frida had breakfast and did not have waffles.</p>
+<p id="p-542">Construct a valid argument to show Frida had pancakes.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-30" id="solution-30"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like">
+<p id="p-543">Let's define the following:</p>
+<ul class="disc">
+<li id="li-219">\(b=\)"Frida had breakfast."</li>
+<li id="li-220">\(p=\)"Frida had pancakes."</li>
+<li id="li-221">\(w=\)"Frida had waffles."</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li id="li-222">\(\displaystyle b\to (p\vee w)\)</li>
+<li id="li-223">\(\displaystyle b\)</li>
+<li id="li-224">\(\displaystyle \sim w\)</li>
+</ul>
+<p data-braille="continuation">Thus we can proceed as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{lcl} 
+b\to (p\vee w)\amp \ \ \ \amp \\ 
+b
+\\ \hline 
+p\vee w \amp  \amp \text{ Modus Ponnens } \\ \\ 
+p\vee w \\ 
+\sim w\\ 
+\hline 
+p  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus concluding \(p=\)"Frida had pancakes."</p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-20"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-20"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.11</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-20"><article class="exercise exercise-like"><p id="p-544">Find the flaw in the following line of reasoning:</p>
+<p id="p-545">If \(x\)is a multiple of 5 and a multiple of 2, then \(x\) is a multiple of 10.  \(x\) is not a multiple of 10 or 2, so it must be a multiple of 5.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like">
+<p id="p-546">Let's define the following:</p>
+<ul class="disc">
+<li id="li-225">\(t=\)"\(x\) is a multiple of ten."</li>
+<li id="li-226">\(f=\)"\(x\) is a multiple of five."</li>
+<li id="li-227">\(e=\)"\(x\) is a multiple of two."</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li id="li-228">\(\displaystyle f\wedge e\to t\)</li>
+<li id="li-229">\(\displaystyle \sim t\)</li>
+<li id="li-230">\(\displaystyle \sim e\)</li>
+</ul>
+<p data-braille="continuation">So one hypothetically start with Modus Tollens:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{lcl} 
+(f\wedge e)\to t\amp \ \ \ \amp \\ 
+\sim t
+\\ \hline 
+\sim(f\wedge e)=\sim f \vee\sim e\amp  \amp \text{ Modus Tollens }  \end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">Next we are given \(\sim e\text{.}\)  But from this we <em class="emphasis">cannot</em> use Disjunctive Syllogism to conclude \(\sim (\sim f)=f\text{.}\)  Notice that in an or statement, both statements can be true.  So if \(x\) isn't a multiple of two, it doesn't have to be a multiple of five. 7 is neither a multiple of 2, 5 nor 10.</p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-21"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-21"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.12</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-21"><article class="exercise exercise-like"><p id="p-547">Find the flaw in the following line of reasoning:</p>
+<p id="p-548">If it  snows, the city will send out snow plows.  If the city sends out snow plows, traffic will get bad.  Traffic got bad, so therefore it snowed.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-32" id="solution-32"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like">
+<p id="p-549">Let's define the following:</p>
+<ul class="disc">
+<li id="li-231">\(s=\)"It snows."</li>
+<li id="li-232">\(p=\)"The city sends out snow plows."</li>
+<li id="li-233">\(t=\)"Traffic got bad."</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li id="li-234">\(\displaystyle s\to p\)</li>
+<li id="li-235">\(\displaystyle p\to t\)</li>
+<li id="li-236">\(\displaystyle t\)</li>
+</ul>
+<p data-braille="continuation">So one hypothetically start with Reasoning by Transitivity:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{lcl} 
+s\to p\amp \ \ \ \amp \\ 
+p\to t
+\\ \hline 
+s\to t\amp  \amp \text{ Reasnoning by Transitivity }  \end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">Next we are given \(t\text{.}\)  But we cannot from \(t\) conclude \(s\text{.}\)  This would be the Fallacy of the Converse.  There's all sorts of reasons traffic might be bad, it may have nothing to do with snows or snow plows.</p>
 </div></div>
 </div></article></div></section></section></div></main>
 </div>
