@@ -309,12 +309,14 @@
           and after 20 years I want $2000.
           How much should I invest?
         </p>
+      </statement>
+      <solution>
         <p>
           So we note that:
           <md>
-            <mrow>A\amp =\amp 2000, \ \text{ the future value }</mrow>
-            <mrow>i\amp =\amp 0.08, \ \text{ the actual interest rate }</mrow>
-            <mrow>n\amp =\amp 20, \ \text{ number of years }</mrow>
+            <mrow>A\amp = 2000, \ \text{ the future value }</mrow>
+            <mrow>i\amp = 0.08, \ \text{ the actual interest rate }</mrow>
+            <mrow>n\amp = 20, \ \text{ number of years }</mrow>
           </md>
           (Since interest is compounded annually, 0.08 is the actual annual interest rate.)
         </p>
@@ -328,7 +330,7 @@
         <p>
            <interactive desmos="egm3vuqa11"  />
         </p>
-      </statement>
+      </solution>
     </exercise>
     <exercise>
       <statement>
@@ -336,28 +338,30 @@
           Suppose that I want to invest $500 and in 10 years I want this to grow to $2000.
           What sort of interest would make that possible?
         </p>
+      </statement>
+      <solution>
         <p>
           So we have:
           <md>
-            <mrow>P\amp =\amp 500</mrow>
-            <mrow>A\amp =\amp 2000</mrow>
-            <mrow>n\amp =\amp 10</mrow>
+            <mrow>P\amp = 500</mrow>
+            <mrow>A\amp = 2000</mrow>
+            <mrow>n\amp = 10</mrow>
           </md>
         </p>
         <p>
           So we are solving:
           <md>
-            <mrow>2000\amp =\amp 500(1+i)^{10}</mrow>
-            <mrow>4\amp =\amp (1+i)^{10}</mrow>
-            <mrow>4^{1/10}=1+i</mrow>
-            <mrow>i\amp =\amp 4^{1/10}-1\approx0.1487</mrow>
+            <mrow>2000\amp = 500(1+i)^{10}</mrow>
+            <mrow>4\amp = (1+i)^{10}</mrow>
+            <mrow>4^{1/10}\amp=1+i</mrow>
+            <mrow>i\amp = 4^{1/10}-1\approx0.1487</mrow>
           </md>
           or 14.87% annual interest.
         </p>
         <p>
-          \url{https://www.desmos.com/calculator/tzcuetbwgc}
+          <interactive desmos="cenkwb1j5r"  />
         </p>
-      </statement>
+      </solution>
     </exercise>
     <exercise>
       <statement>
@@ -365,30 +369,32 @@
           Suppose that I borrow $1000 at 24% annual interest compounded monthly.
           How long until I owe $20,000?
         </p>
+      </statement>
+      <solution>
         <p>
           So we have:
           <md>
-            <mrow>P\amp =\amp 1000</mrow>
-            <mrow>A\amp =\amp 20000</mrow>
-            <mrow>i\amp =\amp 0.24.12=0.02</mrow>
+            <mrow>P\amp = 1000</mrow>
+            <mrow>A\amp = 20000</mrow>
+            <mrow>i\amp = 0.24.12=0.02</mrow>
           </md>
         </p>
         <p>
           So we are solving:
           <md>
-            <mrow>20000\amp =\amp 1000(1.02)^n</mrow>
-            <mrow>20\amp =\amp (1.02)^n</mrow>
-            <mrow>\ln(20)\amp =\amp n\ln(1.02)</mrow>
-            <mrow>n\amp =\amp \ln(20)/\ln(1.02)\approx151.28</mrow>
+            <mrow>20000\amp = 1000(1.02)^n</mrow>
+            <mrow>20\amp = (1.02)^n</mrow>
+            <mrow>\ln(20)\amp = n\ln(1.02)</mrow>
+            <mrow>n\amp = \ln(20)/\ln(1.02)\approx151.28</mrow>
           </md>
         </p>
         <p>
-          So in about 151-152 <term> MONTHS</term>, I will owe 20,000 dollars.
+          So in about 151-152 <em> months</em>, I will owe 20,000 dollars.
         </p>
         <p>
-          \url{https://www.desmos.com/calculator/rpq1zumxyw}
+          <interactive desmos="i4omuhugqh"  />
         </p>
-      </statement>
+      </solution>
     </exercise>
   </subsection>
 </section>

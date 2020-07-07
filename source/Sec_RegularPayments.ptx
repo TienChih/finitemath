@@ -1,10 +1,20 @@
 <section xml:id="Sec_RegularPayments">
   <title>Regular Payments</title>
+  <introduction>
+    <p>
+    Up until this point, we have discussed one time loans or investments.  But the fact is that most loans and investments aren't made or paid off in single lump sums.  You may purchase a car or a vehicle, and then slowly pay off that debt over time.  Maybe you're lucky enough to recieve an inheritance in an account that you slowly draw money from until it is depleted.  Maybe you make regular payments into a retirement or rainy day fund until a certain date or time is reached.
+    </p>
+    <p>
+      This complicates the process of computing the present and future value of loans and investments.  If you make regular payments into an account, then each payment will accrue interest, but for different lengths of time.  Similarly, if you have an account earning interest you draw from regularly, then the account is still generating interest, but less and less as you draw the funds out.
+    </p>
+    <p>
+      In this section, we will address these issues.
+    </p>
+  </introduction>  
   <subsection>
     <title>Future Value</title>
     <p>
       Let's say you have a back account that gives you 2% monthly interest
-      (lucky you!)
       and let's also say that from January to May,
       you deposit $100 each month.
       How much will you have in May?
@@ -45,7 +55,7 @@
     <p>
       So you'd have:
       <me>
-        100(1.02)^4+100(1.02)^3+100(1.02)^2+100(1.02)^1+100(1.02)^0\approx \dollar520.40
+        100(1.02)^4+100(1.02)^3+100(1.02)^2+100(1.02)^1+100(1.02)^0\approx \$520.40
       </me>
     </p>
     <p>
@@ -62,91 +72,380 @@
       <m>x^n+x^{n-1}+\cdots+x^1+x^0</m>.
       There is a funny fact about this sum. if we multiply it by <m>(x-1)</m>:
       <md>
-        <mrow>(x^n+x^{n-1}+\cdots+x^1+x^0)(x-1)\amp =\amp (x^n+x^{n-1}+\cdots+x^1+x^0)x-(x^n+x^{n-1}+\cdots+x^1+x^0)</mrow>
-        <mrow>\amp =\amp x^{n+1}+x^n+\cdots+x-x^n-x^{n-1}-\cdots-x^0</mrow>
-        <mrow>\amp =\amp x^{n+1}-x^0</mrow>
-        <mrow>\amp =\amp x^{n+1}-1</mrow>
+        <mrow>\amp\  (x^n+x^{n-1}+\cdots+x^1+x^0)(x-1)</mrow>
+        <mrow>\amp = (x^n+x^{n-1}+\cdots+x^1+x^0)x-(x^n+x^{n-1}+\cdots+x^1+x^0)</mrow>
+        <mrow>\amp = x^{n+1}+x^n+\cdots+x-x^n-x^{n-1}-\cdots-x^0</mrow>
+        <mrow>\amp = x^{n+1}-x^0</mrow>
+        <mrow>\amp = x^{n+1}-1</mrow>
       </md>
     </p>
     <p>
       Thus:
       <md>
-        <mrow>(x^n+x^{n-1}+\cdots+1)(x-1)\amp =\amp x^{n+1}-1</mrow>
-        <mrow>x^n+x^{n-1}+\cdots+1\amp =\amp \frac{x^{n+1}-1}{x-1}</mrow>
+        <mrow>(x^n+x^{n-1}+\cdots+1)(x-1)\amp = x^{n+1}-1</mrow>
+        <mrow>x^n+x^{n-1}+\cdots+1\amp = \frac{x^{n+1}-1}{x-1}</mrow>
       </md>
     </p>
     <p>
       So, we should note that the future value of our investment above is:
       <md>
-        <mrow>100(1.02)^4+100(1.02)^3+100(1.02)^2+100(1.02)^1+100(1.02)^0\amp =\amp 100((1.02)^4+(1.02)^3+(1.02)^2+(1.02)^1+(1.02)^0)</mrow>
-        <mrow>\amp =\amp 100\frac{(1.02)^5-1}{1.02-1}</mrow>
-        <mrow>S\amp =\amp 100\frac{(1.02)^5-1}{.02}</mrow>
+        <mrow>\amp\  100(1.02)^4+100(1.02)^3+100(1.02)^2+100(1.02)^1+100(1.02)^0</mrow>
+        <mrow>\amp = 100((1.02)^4+(1.02)^3+(1.02)^2+(1.02)^1+(1.02)^0)</mrow>
+        <mrow>\amp = 100\frac{(1.02)^5-1}{1.02-1}</mrow>
+        <mrow>S\amp = 100\frac{(1.02)^5-1}{.02}\approx \$520.40.</mrow>
       </md>
     </p>
     <p>
-      Where <m>S</m> is the future value.
-      Now, if we did this for <m>n</m> months instead of 5, we would have:
+      Where <m>S</m> is the future value.  In 5 months, you would have <m>\$520.40</m> in this account!</p>
+      <p>
+      Now, if we did this for <m>n</m> months instead of 5, we would obtain:
       <me>
         S=100\frac{(1.02)^n-1}{.02}
       </me>
     </p>
     <p>
       If the monthly
-      (or whatever time unit)
-      interest rate was <m>i</m> instead of 2%, we would get:
+      (or whichever time unit)
+      interest rate was <m>i</m> instead of 2%, we would obtain:
       <me>
         S=100\frac{(1+i)^n-1}{i}
       </me>
     </p>
     <p>
-      And if the payments were <m>R</m> instead of $100, we would have:
+      And if the payments were <m>\$R</m> instead of $100, we would finally have:
       <me>
         S=R\frac{(1+i)^n-1}{i}
       </me>
+      To verify, see the Desmos calculator below, adjust <m>n, i</m> and <m>R</m> as needed:
+      <interactive desmos="kccfq8z6vm"  />
     </p>
     <p>
-      So here we have the formula for the future value of a debt or investment based on a constant payment.
+      So here we have constructed the formula for the future value of a debt or investment based on a constant payment.
     </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Suppose that I deposit $100 into an account at 1% monthly interest compounded monthly.
+          How much will be in the account in 5 years?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we have:
+          <md>
+            <mrow>R\amp = 100</mrow>
+            <mrow>n\amp = 60</mrow>
+            <mrow>i\amp = 0.01</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>S\amp = 100\frac{(1.01)^{60}-1}{0.01}\approx8166.97</mrow>
+          </md>
+        </p>
+        <p>
+          So in 5 years, this account will be worth <m>\$8166.97</m>.
+        </p>
+        <p>
+          <interactive desmos="0ic58nymvp"  />
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Suppose that Aziz borrowed a fixed amount of money per year at a rate of <m>12\%</m> interest compounded annually.
+          If in 10 years, he owed <m>\$20000</m>, how much did he borrow each year?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we have:
+          <md>
+            <mrow>S\amp = 20000</mrow>
+            <mrow>n\amp = 10</mrow>
+            <mrow>i\amp = 0.12</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>20000\amp = R\frac{(1.12)^{10}-1}{0.12}</mrow>
+            <mrow>20000\frac{0.12}{1.12^{10}-1}\amp = R</mrow>
+            <mrow>R\amp \approx 1139.68</mrow>
+          </md>
+        </p>
+        <p>
+          So each year, Aziz borrowed about <m>\$1139.68</m>.
+        </p>
+        <p>
+          <interactive desmos="n0o0omxpwn"  />
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Olive wants to deposit <m>\$500</m> a month into an account, how much monthly interest would this account need to return in order for her to save <m>\$8000</m> in a year?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we have:
+          <md>
+            <mrow>R\amp = 500</mrow>
+            <mrow>S\amp = 8000</mrow>
+            <mrow>n\amp = 12</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>8000\amp = 500\frac{(1+i)^{12}-1}{i}</mrow>
+            <mrow>16\amp = \frac{(1+i)^{12}-1}{i}</mrow>
+          </md>
+          Then, rather than engage in a nightmarish algebraic exercise, we will simply plot <m>y=\frac{(1+x)^{12}-1}{x}</m> and see when it reaches the value <m>y=12</m>.
+          <interactive desmos="gcisbmg5wi"  />
+          We can observe that these curves intersect when <m>x\approx 0.0509</m>.
+        </p>
+        <p>
+          So each year, Olive's account would have to accrue <m>5.09\%</m> interest.
+        </p>
+        <p>
+          <interactive desmos="hnffoxp9kn"  />
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Katya wants to save <m>\$2000</m> a year into a savings account with <m>10\%</m> annual interest. How long would she have to save before accumulating <m>\$50000</m>?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we have:
+          <md>
+            <mrow>R\amp = 2000</mrow>
+            <mrow>S\amp = 50000</mrow>
+            <mrow>i\amp = 0.10</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>50000\amp = 2000\frac{(1.1)^{n}-1}{.1}</mrow>
+            <mrow>2.5\amp = 1.1^n-1</mrow>
+            <mrow>3.5\amp = 1.1^n</mrow>
+            <mrow>\ln(3.5)\amp= n\ln(1.1)</mrow>
+            <mrow>n\amp = \frac{\ln(3.5)}{\ln(1.1)}\approx 13.144</mrow>
+          </md>
+          We could also plot <m>y=1.1^x</m> and set this against <m>y=3.5</m> to see what <m>n</m> should be:
+          <interactive desmos="hllf3d9syk"  />
+
+          We can observe that these curves intersect when <m>x\approx 13.144</m>.
+        </p>
+        <p>
+          So each year, Katya will have saved <m>\$50000</m> in just over 13 years.
+        </p>
+        <p>
+          <interactive desmos="vfmixtfrje"  />
+        </p>
+      </solution>
+    </exercise>
+
+
+
   </subsection>
   <subsection>
     <title>Present Value</title>
     <p>
+      Just as a series of regular payments or withdrawals has a future value <m>S</m>, so to do they have a present value <m>P</m>.
       So if we have <m>n</m> payments of <m>R</m> at regular interest rate <m>i</m>,
       the future value is <m>S=R\frac{(1+i)^n-1}{i}</m>.
-      What is it's present value?
-      Well remember that the relationship between present and future value is:
+      What is it's present value <m>P</m>?
+      To see this, recall that in   <xref ref="Sec_CompoundInterest" />, we have established the following relationship between present and future value:
       <md>
-        <mrow>S\amp =\amp P(1+i)^n</mrow>
-        <mrow>P\amp =\amp \frac{S}{(1+i)^n}</mrow>
+        <mrow>S\amp = P(1+i)^n</mrow>
+        <mrow>P\amp = \frac{S}{(1+i)^n}</mrow>
       </md>.
     </p>
     <p>
-      From this we get:
+      From this point, we may substitute <m>S=R\frac{(1+i)^n-1}{i}</m>:
       <md>
-        <mrow>P\amp =\amp \frac{R\frac{(1+i)^n-1}{i}}{(1+i)^n}</mrow>
-        <mrow>\amp =\amp R\frac{((1+i)^n-1)\frac{1}{(1+i)^n}}{i}</mrow>
-        <mrow>\amp =\amp R\frac{1-\frac{1}{(1+i)^n}}{i}</mrow>
-        <mrow>P\amp =\amp R\frac{1-(1+i)^{-n}}{i}</mrow>
+        <mrow>P\amp = \frac{R\frac{(1+i)^n-1}{i}}{(1+i)^n}</mrow>
+        <mrow>\amp = R\frac{((1+i)^n-1)\frac{1}{(1+i)^n}}{i}</mrow>
+        <mrow>\amp = R\frac{1-\frac{1}{(1+i)^n}}{i}</mrow>
+        <mrow>P\amp = R\frac{1-(1+i)^{-n}}{i}.</mrow>
       </md>
     </p>
     <p>
-      Suppose that we invest $100,000 in an account that gives 1% monthly interest and I'd like to pull money out for the next 10 years.
-      What is the Max that I could pull out?
+      Suppose that we invest $100,000 in an account that gives 1% monthly interest and I'd like to pull a regular sum of money out of the account for the next 10 years.
+      What is the maximum that I could pull out?
     </p>
     <p>
       Well, we have a present value of <m>P=100,000</m>,
       a monthly interest rate of <m>i=0.01</m> and <m>n=120</m> months.
       So:
       <md>
-        <mrow>100000\amp =\amp R\frac{1-(1.01)^{-120}}{.01}</mrow>
-        <mrow>1000\amp \approx\amp R(1-0.302995)</mrow>
-        <mrow>R\amp \approx\amp \frac{1000}{0.697005}</mrow>
-        <mrow>\amp \approx\amp \dollar1434.71</mrow>
+        <mrow>100000\amp = R\frac{1-(1.01)^{-120}}{.01}</mrow>
+        <mrow>1000\amp \approx R(1-0.302995)</mrow>
+        <mrow>R\amp \approx \frac{1000}{0.697005}</mrow>
+        <mrow>\amp \approx 1434.71</mrow>
       </md>
     </p>
     <p>
       So with an investment like that,
-      you can pull out $1434.71 for the next 10 years.
+      you could pull out <m>\$1434.71</m> a month for the next 10 years.
+      <interactive desmos="ktiqxw1eke"  />
     </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Zhou wishes to purchase a <m>\$200000</m> home.  After putting down a down payment, he takes out a 20 year mortgage of <m>\$160000</m> at a monthly rate of <m>0.3\%</m>.  How much will his monthly payments be?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we have:
+          <md>
+            <mrow>P\amp = 160000</mrow>
+            <mrow>n\amp = 240</mrow>
+            <mrow>i\amp = 0.003</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>160000\amp = R\frac{1-(1.003)^{-240}}{.003}</mrow>
+            <mrow>160000\amp \approx R(170.9076)</mrow>
+            <mrow>R\amp \approx \frac{160000}{170.9076}\approx 936.18</mrow>
+          </md>
+          
+        </p>
+        <p>
+          So Zhou's monthly mortage payment will be about <m>\$936.18</m> a month.
+        </p>
+        <p>
+          <interactive desmos="5wp8kabffs"  />
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Tyrone authorizes a loan to a debtor who will make payments of <m>\$1000</m> a year for 10 years at <m>6\%</m> interest.  How much was the loan for?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we have:
+          <md>
+            <mrow>R\amp = 1000</mrow>
+            <mrow>n\amp = 10</mrow>
+            <mrow>i\amp = 0.06</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>P\amp = 1000\frac{1-(1.06)^{-10}}{.06}</mrow>
+            <mrow>\amp \approx 7360.09.</mrow>
+          </md>
+          
+        </p>
+        <p>
+          So the loan would have been for <m>\$7360.09</m>.
+        </p>
+        <p>
+          <interactive desmos="zgggwvppup"  />
+        </p>
+      </solution>
+    </exercise>
+
+
+    <exercise>
+      <statement>
+        <p>
+          Karen racked up <m>\$4000</m> in credit card debit with a <m>2\%</m> monthly interest rate.  She can only make <m>\$100</m> monthly payments on it.  How long will it take for her to pay this debt off?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we have:
+          <md>
+            <mrow>R\amp = 100</mrow>
+            <mrow>P\amp = 4000</mrow>
+            <mrow>i\amp = 0.02</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>4000\amp = 100\frac{1-(1.02)^{-n}}{.02}</mrow>
+            <mrow>40 \amp = \frac{1-(1.02)^{-n}}{.02}</mrow>
+            <mrow>0.8 \amp = 1-(1.02)^{-n}</mrow>
+            <mrow>(1.02)^{-n} \amp = 0.2</mrow>
+            <mrow>-n\ln((1.02)) \amp = \ln(0.2)</mrow>
+            <mrow>n\amp = \frac{\ln(0.2)}{-\ln(1.02)}\approx 81.274</mrow>
+          </md>
+        Or, by plotting <m>y=\frac{1-(1.02)^{-x}}{.02}</m> and <m>y=40</m>, we can see what the value of <m>n</m> should be:
+        <interactive desmos="0guujzgatk"  />
+        <m>n\approx 81.274</m>.
+        </p>
+        <p>
+          So she would have paid the loan off in 82 months, 7 years and 10 months.
+        </p>
+        <p>
+          <interactive desmos="hirkvzdhib"  />
+        </p>
+      </solution>
+    </exercise>
+
+
+    <exercise>
+      <statement>
+        <p>
+          Jasmine lends <m>\$2500</m> to a friend who will make <m>\$200</m> weekly payments on it for 15 weeks.  What in effect is the weekly interest rate of her loan?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we have:
+          <md>
+            <mrow>R\amp = 200</mrow>
+            <mrow>P\amp = 2500</mrow>
+            <mrow>n\amp = 15</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>2500\amp = 200\frac{1-(1+i)^{-15}}{i}</mrow>
+            <mrow>12.5\amp = \frac{1-(1+i)^{-15}}{i}</mrow>
+          </md>
+        So by plotting <m>y=\frac{1-(1+x)^{-15}}{x}</m> and <m>y=12.5</m>, we can see what the value of <m>i</m> should be:
+        <interactive desmos="hfebx0pt6m"  />
+        <m>i\approx 0.0237</m>.
+        </p>
+        <p>
+          So the effective weekly interest she charged was <m>2.37\%</m>.
+        </p>
+        <p>
+          <interactive desmos="ewvd9gpxnh"  />
+        </p>
+      </solution>
+    </exercise>
+
+
+
+
   </subsection>
 </section>
