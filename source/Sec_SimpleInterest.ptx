@@ -7,7 +7,7 @@
   </introduction>  
   <p>
     <definition>
-      Given a initial investment or loan of <m>\$P</m>, often called a <em>principle</em> or <em>present value</em> of an investment/loan, then the <term>simple interest</term> of that principle at a rate of <m>r</m> per time unit, over <m>t</m> time units will be <me>i=Prt.</me>
+      Given a initial investment or loan of <m>\$P</m>, often called a <em>principle</em> or <em>present value</em> of an investment/loan, then the <term>simple interest</term> of that principle at a rate of <m>r</m> per time unit, over <m>t</m> time units will be <me>I=Prt.</me>
     </definition>  
   </p>  
 
@@ -22,7 +22,7 @@
       </p>
   </statement>
     </example> 
-    <p> Assuming no payments or additional principles are taken out, this interest is accumalated in addition to the original principle.  If we let <m>A</m> denote the accumalated future value: <me> A=P+it</me> at time <m>t</m>.</p>
+    <p> Assuming no payments or additional principles are taken out, this interest is accumalated in addition to the original principle.  If we let <m>A</m> denote the accumalated future value: <me> A=P+It</me> at time <m>t</m>.</p>
   <p>
     Let's say you take out a loan at $100 dollars and are charged 5% monthly simple interest.
     What this means is that every month, 5% of your initial debt is added on as interest.
@@ -79,7 +79,7 @@
       </statement>
       <solution>
         <p>
-          We're given <m>P=1000, A=2000, r=0.12</m>  Thus we have:
+          We're given <m>P=1000, A=2000, r=0.12</m>.  Thus we have:
           <md>
       <mrow>A\amp = P+Prt</mrow>
       <mrow>2000\amp = 1000+(1000)(.12)t</mrow>
@@ -101,7 +101,7 @@
       </statement>
       <solution>
         <p>
-          We're given <m>P=750, A=1000, t=5</m>  Thus we have:
+          We're given <m>P=750, A=1000, t=5</m>.  Thus we have:
           <md>
       <mrow>A\amp = P+Prt</mrow>
       <mrow>1000\amp = 750+(750)r(5)</mrow>
@@ -124,7 +124,7 @@
       </statement>
       <solution>
         <p>
-          We're given <m>A=10000, t=20, i=0.08</m>  Thus we have:
+          We're given <m>A=10000, t=20, r=0.08</m>.  Thus we have:
           <md>
       <mrow>A\amp = P+Prt</mrow>
       <mrow>10000\amp = P+P(0.08)(20)</mrow>
@@ -146,7 +146,7 @@
       </statement>
       <solution>
         <p>
-          We're given <m>P=5000, t=15, i=0.02</m>  Thus we have:
+          We're given <m>P=5000, t=15, r=0.02</m>.  Thus we have:
           <md>
       <mrow>A\amp = P+Prt</mrow>
       <mrow>A\amp = 5000+5000(0.02)(15)= 6500.00</mrow>

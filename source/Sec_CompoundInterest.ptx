@@ -6,6 +6,9 @@
       The most common type of interest is compound interest which charges interest not just on your principle loan,
       but also on previously accrued interest as well.
     </p>
+  </introduction>
+  <subsection>
+    <title>A first look at compound interest</title>
     <p>
       So lets say you took out $100 in a loan that charged 5% monthly interest compounded monthly.
       That means each month,
@@ -30,8 +33,9 @@
     </p>
     <p>
       So in 10 months,
-      we'd owe <m>100*(1.05)^10\approx \dollar162.89</m>.
-      In general, this forms an <term>exponential function</term>: \url{https://www.desmos.com/calculator/r51afj5zwr}
+      we'd owe <m>100\cdot (1.05)^{10}\approx \$162.89</m>.
+      In general, this forms an <term>exponential function</term>:
+      <interactive desmos="r51afj5zwr"  />
     </p>
     <p>
       In general, if the interest rate per time unit is <m>i</m>,
@@ -41,22 +45,151 @@
       </me>
     </p>
     <p>
-      \url{https://www.desmos.com/calculator/kqz7bwj8ip}
+      <interactive desmos="kqz7bwj8ip"  />
     </p>
     <p>
       So we have the general equation
-      <me>
-        A=P(1+i)^n
-      </me>,
-      so as usual, if you know any 3 of these values,
-      in principle we should be able to find the 4th.
+      <md>
+        <mrow>A\amp =P(1+i)^n,</mrow>
+        <mrow>I\amp =P(1+i)^n-P.</mrow>
+      </md>
+      Where <m>A</m> is the accumulated value, <m>P</m> is the value of the principle, <m>i</m> is the interest rate, <m>n</m> is the number of time units, and <m>I</m> is the total value of the interest.</p>
+
+      <p> But looking at <m> A =P(1+i)^n</m>, if one  knew any 3 of these values,
+      in principle one should be able to find the 4th.
     </p>
-  </introduction>
+
+    <example>
+      <statement>
+        <p>
+          Suppose that I make an investment $500 at 8% annual interest.
+          How much will this investment be worth in 10 years?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we note that:
+          <md>
+            <mrow>P\amp = 500</mrow>
+            <mrow>i\amp = 0.08</mrow>
+            <mrow>n\amp = 10</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <me>
+            A=500(1+.08)^{10}\approx 10794.62.
+          </me>
+        </p>
+        <p>
+          <interactive desmos="dmodfltuzf"  />
+        </p>
+      </solution>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Suppose that I take out a loan at 4% a year, and after 5 years, I owe <m>\$7,000</m>.
+          How much was the initial loan?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we note that:
+          <md>
+            <mrow>A\amp = 7000</mrow>
+            <mrow>i\amp = 0.04</mrow>
+            <mrow>n\amp = 5</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>7000\amp =P(1+.04)^{5}</mrow>
+            <mrow>P\amp =\frac{7000}{(1.04)^5}\approx 5753.49.</mrow>
+          </md>
+          So the initial value of the loan is of <m>\$5753.49</m>.
+        </p>
+        <p>
+          <interactive desmos="7ueajflwk6"  />
+        </p>
+      </solution>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Suppose that I purchase a property for <m>\$200,000</m> and in 30 years it is worth <m>\$350,000</m>.  What is the annual interest rate of the value of this property?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we note that:
+          <md>
+            <mrow>A\amp = 350000</mrow>
+            <mrow>P\amp = 200000</mrow>
+            <mrow>n\amp = 30</mrow>
+          </md>
+        </p>
+        <p>
+          So we are solving:
+          <md>
+            <mrow>350000\amp =200000(1+i)^{30}</mrow>
+            <mrow>\frac{350000}{200000}\amp =(1+i)^{30}</mrow>
+            <mrow>(1+i)^{30}\amp= 1.75</mrow>
+            <mrow>(1+i)\amp= (1.75)^{1/30}\approx 1.018829</mrow>
+            <mrow>i\amp \approx 0.018829</mrow>
+          </md>
+          So the interest is about <m>1.8829\%</m>.
+        </p>
+        <p>
+          <interactive desmos="tnllurbsie"  />
+        </p>
+      </solution>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Suppose that I invested <m>\$50,000</m> at 7% annual interest.  How long would it take for this investment to be worth <m>\$100,000</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          So we note that:
+          <md>
+            <mrow>A\amp = 100000</mrow>
+            <mrow>P\amp = 50000</mrow>
+            <mrow>i\amp = 0.07</mrow>
+          </md>
+        </p>
+        <p>
+          If one is familiar with the properties of logs and natural logs:
+          <md>
+            <mrow>100000\amp =50000(1.07)^{n}</mrow>
+            <mrow>2\amp =(1.07)^{n}</mrow>
+            <mrow>\ln(2)\amp= \ln(1.07^n)</mrow>
+           <mrow>\ln(2)\amp= n\ln(1.07)</mrow>
+            <mrow>n\amp=\frac{\ln(2)}{\ln(1.07)} \approx 10.24477</mrow>
+          </md>
+          So about <m>10.24477</m> years.
+        </p>
+        Otherwise, since we know <m>P, i</m>  we can simply plot the graph and see when it reaches 50000:
+        <interactive desmos="lsapccwwfe"  />
+        So about 10.245 years.
+        <p>
+          <interactive desmos="sve97pxkpq"  />
+        </p>
+      </solution>
+    </example>
+
+
+  </subsection>
   <subsection>
     <title>AN ISSUE OF EXTREME ANNOYANCE</title>
     <p>
-      The formulas we have found above is not so very complicated,
-      and neither is solving for values found therein.
+      In the above examples, we work with interest rates described in terms of the time units in which they are discussed.
       However, financial companies have devised a concept that obfuscates this principle via an artificial notion of
       <q>compounding periods</q>.
     </p>
@@ -65,7 +198,7 @@
       With no other given information,
       we would say that the amount you owe in <m>10</m> years would be
       <me>
-        A=100(1.1)^{10}\approx \dollar259.37
+        A=100(1.1)^{10}\approx \$259.37
       </me>
       right?
       But what a financial institution will do is say that the debt is
@@ -81,12 +214,12 @@
       </me>
     </p>
     <p>
-      Similarly, if the compounding is done <term> monthly</term>,
+      Similarly, if the compounding is done <em> monthly</em>,
       then this is 12 times a year,
       and each month you'd be charged at a rate of <m>\frac{10\%}{12}</m>.
       So in 10 years or 120 months, you would owe:
       <me>
-        A=100(1+\frac{0.1}{12})^{120}\approx 270.70
+        A=100\left(1+\frac{0.1}{12}\right)^{120}\approx 270.70
       </me>
     </p>
     <p>
@@ -122,9 +255,9 @@
       How much yearly interest is there really?
       It's how much interest you end up accruing in a year: Let <m>r_E</m> be the effective annual interest:
       <md>
-        <mrow>P(1+r_E)\amp =\amp P(1+r/m)^{m}</mrow>
-        <mrow>1+r_E\amp =\amp (1+r/m)^{m}</mrow>
-        <mrow>r_E\amp =\amp (1+r/m)^{m}-1</mrow>
+        <mrow>P(1+r_E)\amp = P(1+r/m)^{m}</mrow>
+        <mrow>1+r_E\amp = (1+r/m)^{m}</mrow>
+        <mrow>r_E\amp = (1+r/m)^{m}-1</mrow>
       </md>
     </p>
     <p>
@@ -139,25 +272,23 @@
       </me>
       or 10.47% annual interest.
     </p>
-  </subsection>
-  <subsection>
-    <title>Solving</title>
     <p>
-      Now that we got that annoyance out of the way,
-      let's solve some example problems.
-    </p>
-    <example>
+      This artifical interest rate is often referred to as <term>APR</term> or <em>Annual Percentage Rate</em>.  
+    </p>  
+    <exercise>
       <statement>
         <p>
           Suppose that I take out a loan for $500 at 12% annual interest charged biannually.
           How much will I owe in 10 years?
         </p>
+      </statement>
+      <solution>
         <p>
           So we note that:
           <md>
-            <mrow>P\amp =\amp 500\ \text{ the initial loan }</mrow>
-            <mrow>i\amp =\amp 0.12/2=0.06 \ \text{ the interest rate per half-year }</mrow>
-            <mrow>n\amp =\amp 10\cdot 2=20 \ \text{ the number of half-years }</mrow>
+            <mrow>P\amp = 500\ \text{ the initial loan }</mrow>
+            <mrow>i\amp = 0.12/2=0.06 \ \text{ the interest rate per half-year }</mrow>
+            <mrow>n\amp = 10\cdot 2=20 \ \text{ the number of half-years }</mrow>
           </md>
         </p>
         <p>
@@ -167,15 +298,14 @@
           </me>.
         </p>
         <p>
-          \url{https://www.desmos.com/calculator/fuvteaqq2q}
+          <interactive desmos="hcfddozrqd"  />
         </p>
-      </statement>
-    </example>
-    <example>
+      </solution>
+    </exercise>
+    <exercise>
       <statement>
         <p>
           Suppose that I want to invest some money at 8% annual interest compounded annually
-          (so no shenanigans),
           and after 20 years I want $2000.
           How much should I invest?
         </p>
@@ -186,6 +316,7 @@
             <mrow>i\amp =\amp 0.08, \ \text{ the actual interest rate }</mrow>
             <mrow>n\amp =\amp 20, \ \text{ number of years }</mrow>
           </md>
+          (Since interest is compounded annually, 0.08 is the actual annual interest rate.)
         </p>
         <p>
           So we are solving:
@@ -195,11 +326,11 @@
           </md>
         </p>
         <p>
-          \url{https://www.desmos.com/calculator/2cavnhsskf}
+           <interactive desmos="egm3vuqa11"  />
         </p>
       </statement>
-    </example>
-    <example>
+    </exercise>
+    <exercise>
       <statement>
         <p>
           Suppose that I want to invest $500 and in 10 years I want this to grow to $2000.
@@ -227,8 +358,8 @@
           \url{https://www.desmos.com/calculator/tzcuetbwgc}
         </p>
       </statement>
-    </example>
-    <example>
+    </exercise>
+    <exercise>
       <statement>
         <p>
           Suppose that I borrow $1000 at 24% annual interest compounded monthly.
@@ -258,6 +389,6 @@
           \url{https://www.desmos.com/calculator/rpq1zumxyw}
         </p>
       </statement>
-    </example>
+    </exercise>
   </subsection>
 </section>
