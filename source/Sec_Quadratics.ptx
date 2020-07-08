@@ -16,7 +16,11 @@
     <p>
       The classic example is the standard parabola,
       <m>y=x^2</m> or a quadratic with
-      <m>a=1. b,c=0</m>. \url{https://www.desmos.com/calculator/aktz8g8cbh}. We should be familiar with some of the properties of this shape,
+      <m>a=1. b,c=0</m>. 
+
+      <interactive desmos="aktz8g8cbh"  />
+
+      We should be familiar with some of the properties of this shape,
       it's symmetric on both sides and it goes to positive infinity in both directions
       (as <m>x^2</m> cannot be negative).
     </p>
@@ -28,12 +32,16 @@
       </me>.
     </p>
     <p>
-      To see this:
+      To see this:</p>
+      <image source="images/completesquare.gif" width="50%" >
+      <description>Animation of completing the square.</description>
+    </image>
+  <p>
       <md>
-        <mrow>q(x)\amp =\amp ax^2+bx+c</mrow>
-        <mrow>\amp =\amp a(x^2+\frac{b}{a}x)+c</mrow>
-        <mrow>\amp =\amp a(x^2+2\frac{b}{2a}x+\frac{b^2}{4a^2})+c-\frac{b^2}{4a}</mrow>
-        <mrow>\amp =\amp a(x+\frac{b}{2a})^2+c-\frac{b^2}{4a}</mrow>
+        <mrow>q(x)\amp = ax^2+bx+c</mrow>
+        <mrow>\amp = a\left(x^2+\frac{b}{a}x\right)+c</mrow>
+        <mrow>\amp = a\left(x^2+2\frac{b}{2a}x+\frac{b^2}{4a^2}\right)+c-\frac{b^2}{4a}</mrow>
+        <mrow>\amp = a\left(x+\frac{b}{2a}\right)^2+c-\frac{b^2}{4a}</mrow>
       </md>
     </p>
     <p>
@@ -44,13 +52,13 @@
       An interesting byproduct of this is that if we were to solve <m>ax^2+bx+c=0</m>,
       we would get:
       <md>
-        <mrow>ax^2+bx+c\amp =\amp 0</mrow>
-        <mrow>a(x+\frac{b}{2a})^2+c-\frac{b^2}{4a}\amp =\amp 0</mrow>
-        <mrow>a(x+\frac{b}{2a})^2=\frac{b^2}{4a}-c</mrow>
-        <mrow>a(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a}</mrow>
-        <mrow>(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a^2}</mrow>
-        <mrow>x+\frac{b}{2a}=\frac{\pm\sqrt{b^2-4ac}}{2a}</mrow>
-        <mrow>x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
+        <mrow>ax^2+bx+c\amp = 0</mrow>
+        <mrow>a(x+\frac{b}{2a})^2+c-\frac{b^2}{4a}\amp = 0</mrow>
+        <mrow>a(x+\frac{b}{2a})^2\amp=\frac{b^2}{4a}-c</mrow>
+        <mrow>a(x+\frac{b}{2a})^2\amp=\frac{b^2-4ac}{4a}</mrow>
+        <mrow>(x+\frac{b}{2a})^2\amp=\frac{b^2-4ac}{4a^2}</mrow>
+        <mrow>x+\frac{b}{2a}\amp=\frac{\pm\sqrt{b^2-4ac}}{2a}</mrow>
+        <mrow>x\amp =\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
       </md>
     </p>
     <p>
@@ -62,7 +70,9 @@
     <p>
       Now that we have this form
       <m>a(x-h)^2+k</m>, consider how <m>a,h</m>,
-      and <m>k</m> affect the shape of the graph: \url{https://www.desmos.com/calculator/4zqd9chlna}.
+      and <m>k</m> affect the shape of the graph: 
+
+      <interactive desmos="21eduimmih"  />
     </p>
     <p>
       Sliding <m>k</m> shifts the parabola up and down.

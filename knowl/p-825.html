@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-07T14:37:14-06:00    *-->
+<!--*    on 2020-07-07T22:46:26-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Another example, lets consider the derivative of \(y=(x^2+100)^{300}\text{.}\) We COULD expand this polynomial out, but lets agree no one wants that. On the other hand by the chain rule:</p>
+<p>Consider \(f(x)=\sqrt{x^2+1}\text{.}\) We can think of this as \(f(x)=g(h(x))\) where \(g(x)=\sqrt{x}=x^{1/2}, h(x)=x^2+1\text{.}\) So \(g'(x)=\frac{1}{2}x^{-1/2}, h'(x)=2x\) and:</p>
 <div class="displaymath">
 \begin{align*}
-\frac{dy}{dx}\amp =\amp \frac{d}{dx}[(x^2+100)^{300}],\ \text{ so by the chain rule: }\\
-\amp =\amp 300(x^2+100)^{299}\frac{d}{dx}[x^2+100]\\
-\amp =\amp 300(x^2+100)^{299}(2x)\\
-\amp =\amp 600x(x^2+100)^{299}\text{.}
+f'(x)\amp =\amp \frac{d}{dx}[\sqrt{x^2+1}]\\
+\amp =\amp \frac{d}{dx}[g(h(x))]\\
+\amp =\amp g'(h(x))h'(x)\\
+\amp =\amp \frac{1}{2}(x^2+1)^{-1/2}(2x)\\
+\amp =\amp \frac{x}{\sqrt{x^2+1}}\text{.}
 \end{align*}
 </div>
 <span class="incontext"><a href="Sec_ChainRule.html#p-825">in-context</a></span>

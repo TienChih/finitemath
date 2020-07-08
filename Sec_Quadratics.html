@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-07T14:36:55-06:00    *-->
+<!--*    on 2020-07-07T22:46:05-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -190,7 +190,7 @@ MathJax.Hub.Config({
 q(x)=ax^2+bx+c\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(a\neq0\text{.}\)</p></article><p id="p-686">The classic example is the standard parabola, \(y=x^2\) or a quadratic with \(a=1. b,c=0\text{.}\) \url{https://www.desmos.com/calculator/aktz8g8cbh}. We should be familiar with some of the properties of this shape, it's symmetric on both sides and it goes to positive infinity in both directions (as \(x^2\) cannot be negative).</p>
+<p data-braille="continuation">where \(a\neq0\text{.}\)</p></article><p id="p-686">The classic example is the standard parabola, \(y=x^2\) or a quadratic with \(a=1. b,c=0\text{.}\) <iframe src="https://www.desmos.com/calculator/aktz8g8cbh" id="interactive-85" width="600" height="600"></iframe> We should be familiar with some of the properties of this shape, it's symmetric on both sides and it goes to positive infinity in both directions (as \(x^2\) cannot be negative).</p>
 <p id="p-687">It would be nice if we could show that all quadratics had the same essential shape. To do this, we must first show that all quadratics also have the form</p>
 <div class="displaymath">
 \begin{equation*}
@@ -198,32 +198,33 @@ q(x)=a(x-h)^2+k\text{.}
 \end{equation*}
 </div>
 <p id="p-688">To see this:</p>
-<div class="displaymath">
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/completesquare.gif" style="width: 100%; height: auto;" alt="Animation of completing the square."></div>
+<div class="displaymath" id="p-689">
 \begin{align*}
-q(x)\amp =\amp ax^2+bx+c\\
-\amp =\amp a(x^2+\frac{b}{a}x)+c\\
-\amp =\amp a(x^2+2\frac{b}{2a}x+\frac{b^2}{4a^2})+c-\frac{b^2}{4a}\\
-\amp =\amp a(x+\frac{b}{2a})^2+c-\frac{b^2}{4a}
+q(x)\amp = ax^2+bx+c\\
+\amp = a\left(x^2+\frac{b}{a}x\right)+c\\
+\amp = a\left(x^2+2\frac{b}{2a}x+\frac{b^2}{4a^2}\right)+c-\frac{b^2}{4a}\\
+\amp = a\left(x+\frac{b}{2a}\right)^2+c-\frac{b^2}{4a}
 \end{align*}
 </div>
-<p id="p-689">So by letting \(h=-\frac{b}{2a}\) and \(k=c-\frac{b^2}{4a}\text{,}\) we have our form.</p>
-<p id="p-690">An interesting byproduct of this is that if we were to solve \(ax^2+bx+c=0\text{,}\) we would get:</p>
+<p id="p-690">So by letting \(h=-\frac{b}{2a}\) and \(k=c-\frac{b^2}{4a}\text{,}\) we have our form.</p>
+<p id="p-691">An interesting byproduct of this is that if we were to solve \(ax^2+bx+c=0\text{,}\) we would get:</p>
 <div class="displaymath">
 \begin{align*}
-ax^2+bx+c\amp =\amp 0\\
-a(x+\frac{b}{2a})^2+c-\frac{b^2}{4a}\amp =\amp 0\\
-a(x+\frac{b}{2a})^2=\frac{b^2}{4a}-c\\
-a(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a}\\
-(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a^2}\\
-x+\frac{b}{2a}=\frac{\pm\sqrt{b^2-4ac}}{2a}\\
-x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+ax^2+bx+c\amp = 0\\
+a(x+\frac{b}{2a})^2+c-\frac{b^2}{4a}\amp = 0\\
+a(x+\frac{b}{2a})^2\amp=\frac{b^2}{4a}-c\\
+a(x+\frac{b}{2a})^2\amp=\frac{b^2-4ac}{4a}\\
+(x+\frac{b}{2a})^2\amp=\frac{b^2-4ac}{4a^2}\\
+x+\frac{b}{2a}\amp=\frac{\pm\sqrt{b^2-4ac}}{2a}\\
+x\amp =\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 \end{align*}
 </div>
-<p id="p-691">Which is the quadratic formula.</p></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
+<p id="p-692">Which is the quadratic formula.</p></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.1.2</span> <span class="title">Parabolas</span>
 </h3>
-<p id="p-692">Now that we have this form \(a(x-h)^2+k\text{,}\) consider how \(a,h\text{,}\) and \(k\) affect the shape of the graph: \url{https://www.desmos.com/calculator/4zqd9chlna}.</p>
-<p id="p-693">Sliding \(k\) shifts the parabola up and down. We can think of this as adding to or detracting from the value of \(x^2\text{.}\) Sliding \(h\) shifts the graph left and right. We can think of this as slowing down or speeding up \(x^2\) by \(h\) units. \(a\) stretches or squashes \(x^2\text{,}\) or if \(a\) is negative, also reflects this across the \(x\) axis. But all of these transformations preserve the fundamental shape of a parabola, so all quadratic functions have this shape.</p></section></section></div></main>
+<p id="p-693">Now that we have this form \(a(x-h)^2+k\text{,}\) consider how \(a,h\text{,}\) and \(k\) affect the shape of the graph: <iframe src="https://www.desmos.com/calculator/21eduimmih" id="interactive-86" width="600" height="600"></iframe></p>
+<p id="p-694">Sliding \(k\) shifts the parabola up and down. We can think of this as adding to or detracting from the value of \(x^2\text{.}\) Sliding \(h\) shifts the graph left and right. We can think of this as slowing down or speeding up \(x^2\) by \(h\) units. \(a\) stretches or squashes \(x^2\text{,}\) or if \(a\) is negative, also reflects this across the \(x\) axis. But all of these transformations preserve the fundamental shape of a parabola, so all quadratic functions have this shape.</p></section></section></div></main>
 </div>
 </body>
 </html>
