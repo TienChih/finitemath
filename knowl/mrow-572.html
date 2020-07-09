@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-07T22:46:26-06:00    *-->
+<!--*    on 2020-07-09T07:05:34-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,11 +14,10 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-x\amp =\amp a^{\log_a(x)}\\
-\frac{d}{dx}[x]\amp =\amp \frac{d}{dx}[a^{\log_a(x)}]\\
-1\amp =\amp a^{\log_a(x)}\ln(a)\frac{d}{dx}[\log_a(x)]\\
-1\amp =\amp x\ln(a)\frac{d}{dx}[\log_a(x)]\\
-\frac{d}{dx}[\log_a(x)]\amp =\amp \frac{1}{x\ln(a)}
+h'(x)\amp =\amp \frac{d}{dx}[2^{\frac{x}{x+1}}]\\
+\amp =_{CR}\amp 2^{\frac{x}{x+1}}\ln(2)\frac{d}{dx}[\frac{x}{x+1}]\\
+\amp =_{QR}\amp 2^{\frac{x}{x+1}}\ln(2)\frac{(x+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x+1]}{(x+1)^2}\\
+\amp =\amp \frac{2^{\frac{x}{x+1}}\ln(2)}{(x+1)^2}
 \end{align*}
 </div>
 <span class="incontext"><a href="DerivativeLogs.html#mjx-eqn-mrow-572">in-context</a></span>

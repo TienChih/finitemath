@@ -48,7 +48,7 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{matrix,arrows}
 \usetikzlibrary{calc}
-\usetikzlibrary{shapes}
+\usetikzlibrary{shapes, fit}
 \usetikzlibrary{through,intersections,decorations,shadows,fadings}
 \usepackage{pgfplots}
 </latex-image-preamble>

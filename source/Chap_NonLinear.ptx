@@ -1,5 +1,6 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_NonLinear">
   <title>Non-Linear Functions</title>
+  <xi:include  href="Sec_Functions.ptx"/>
   <xi:include  href="Sec_Quadratics.ptx"/>
   <xi:include  href="Sec_Polynomials.ptx"/>
   <xi:include  href="Sec_RationalFunctions.ptx"/>

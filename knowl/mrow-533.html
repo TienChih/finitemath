@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-07T22:46:26-06:00    *-->
+<!--*    on 2020-07-09T07:05:34-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,12 +14,11 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-f'(x)\amp =\amp \frac{d}{dx}[x^3](x+1)+x^3\frac{d}{dx}[x+1]\\
-\amp =\amp 3x^2(x+1)+x^3(1)\\
-\amp =\amp 3x^3+3x^2+x^3\\
-\amp =\amp 4x^3+3x^2
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp \limit{\textcolor{red}{k}}{0}\frac{f(\textcolor{red}{g(x)+k})-f(g(x))}{\textcolor{red}{k}}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp f'(g(x))g'(x)
 \end{align*}
 </div>
-<span class="incontext"><a href="section-33.html#mjx-eqn-mrow-533">in-context</a></span>
+<span class="incontext"><a href="Sec_ChainRule.html#mjx-eqn-mrow-533">in-context</a></span>
 </body>
 </html>

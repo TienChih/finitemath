@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-07T22:46:26-06:00    *-->
+<!--*    on 2020-07-09T07:05:34-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,12 +14,13 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\frac{dy}{dx}\amp =\amp \frac{d}{dx}[(x^2+100)^{300}],\ \text{ so by the chain rule: }\\
-\amp =\amp 300(x^2+100)^{299}\frac{d}{dx}[x^2+100]\\
-\amp =\amp 300(x^2+100)^{299}(2x)\\
-\amp =\amp 600x(x^2+100)^{299}
+\frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
+\amp =\amp \frac{d}{dx}[e^{\ln(a)x}]\\
+\amp =\amp e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }\\
+\amp =\amp e^{\ln(a)x}\ln(a)\cdot1\\
+\amp =\amp a^x\ln(a)
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_ChainRule.html#mjx-eqn-mrow-553">in-context</a></span>
+<span class="incontext"><a href="DerivativeExp.html#mjx-eqn-mrow-553">in-context</a></span>
 </body>
 </html>
