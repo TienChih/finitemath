@@ -127,10 +127,6 @@
         <mrow>A\amp = -w^2+100w.</mrow>
       </md>
       Thus the fenced region has area 0 when <m>w=0,100</m>  the vertex must occur halfway in between at <m>w=50, \ell=100-50=50, A=50\cdot 50=2500</m> square feet.
-
-
-
-</m>.
     <interactive desmos="loyfuh8y5w" />
   </p>
 </solution>

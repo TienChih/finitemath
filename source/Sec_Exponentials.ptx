@@ -1,5 +1,6 @@
 <section xml:id="Sec_Exponentials">
   <title>Exponentials</title>
+  <introduction>
   <definition>
     <statement>
       <p>
@@ -8,23 +9,31 @@
       </p>
     </statement>
   </definition>
+  <p> Exponential functions describe functions rate of growth, or decay is proportional to their current value.  That is, either functions who, the larger their value the faster the grow, or the smaller their value the slower their decay.
+  </p>
+</introduction>
+<subsection>
+  <title>Connections to previous concepts.</title>
   <p>
-    We should note that we've seen exponential functions before,
+    We should note that we've seen exponential functions before, <xref ref="Chap_Financial" />
     in the guise of compound interest.
     If the future value of a debt is
-    <m>S=P(1+i)^x</m> after <m>x</m> unites of time,
+    <m>S=P(1+i)^x</m> after <m>x</m> units of time,
     then <m>P</m> is your <m>b</m> and <m>1+i</m> is your <m>a</m>.
   </p>
   <p>
     We should also note that there is a real kinship between exponential functions and linear functions.
     Linear functions have the form <m>\ell(x)=mx+b</m>,
-    which we can think of as <m>\ell(x)=\overbrace{m+m+\cdots+m}^x+b</m>,
+    which we can think of as <me>\ell(x)=\overbrace{m+m+\cdots+m}^x+b</me>,
     with <m>x</m> copies of <m>m</m>.
-    Similarly we can see that <m>f(x)=b\cdot a^x=\overbrace{a\cdot a\cdots a}^x\cdot b</m>,
+    Similarly we can see that <me>f(x)=b\cdot a^x=\overbrace{a\cdot a\cdots a}^x\cdot b</me>,
     so it is really the multiplicative analogue of the linear function,
     where the <m>b</m>'s are the initial value of the function when <m>x=0</m> and the growth rate of the function is totally determined by <m>a</m>
     (whereas it's determined by <m>m</m> for linear functions).
   </p>
+</subsection>
+<subsection>
+  <title>Properties of Exponentials Functions</title>
   <p>
     In that way, we can also tell when
     <m>f(x)=b\cdot a^x</m> is increasing or decreasing,
@@ -38,4 +47,5 @@
     the greater the population,
     the more reproduction there will be within that population and the greater the increase in population.
   </p>
+</subsection>
 </section>

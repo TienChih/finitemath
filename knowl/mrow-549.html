@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-09T07:05:34-06:00    *-->
+<!--*    on 2020-07-09T14:30:59-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,13 +14,11 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
-\amp =\amp \frac{d}{dx}[e^{\ln(a)x}]\\
-\amp =\amp e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }\\
-\amp =\amp e^{\ln(a)x}\ln(a)\cdot1\\
-\amp =\amp a^x\ln(a)
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp \limit{\textcolor{red}{k}}{0}\frac{f(\textcolor{red}{g(x)+k})-f(g(x))}{\textcolor{red}{k}}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp f'(g(x))g'(x)
 \end{align*}
 </div>
-<span class="incontext"><a href="DerivativeExp.html#mjx-eqn-mrow-549">in-context</a></span>
+<span class="incontext"><a href="Sec_ChainRule.html#mjx-eqn-mrow-549">in-context</a></span>
 </body>
 </html>

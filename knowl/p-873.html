@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-08T22:09:06-06:00    *-->
+<!--*    on 2020-07-09T14:30:59-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>When we graph an exponential function, say an increasing one \(f(x)=a^x, a&gt;1\text{,}\) we imagine a function that curves up towards infinity on the right and shallows out towards 0 on the left \url{https://www.desmos.com/calculator/51zxitu9xc}. What then should it's derivatives look like? Well it seems like the slopes are initially shallow, and then as we go forward the slopes start to increase, and they get progressively and progressively larger. In other words <dfn class="terminology">the derivative is also an exponential function!</dfn> \url{https://www.desmos.com/calculator/etbmc1ttzo}.</p>
-<span class="incontext"><a href="DerivativeExp.html#p-873">in-context</a></span>
+<p>We do have a rule for products called the <dfn class="terminology">product rule</dfn> and it states \(\frac{d}{dx}[f(x)g(x)]=f'(x)g(x)+f(x)g'(x)\text{.}\) To see why:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{d}{dx}[f(x)g(x)]\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h},\ \text{ at this stage, I'm going to pull a clever trick and add by 0: }\\
+\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)\textcolor{blue}{-f(x)g(x+h)+f(x)g(x+h)}-f(x)g(x)}{h}\\
+\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x+h)}{h}+\limit{h}{0}\frac{f(x)g(x+h)-f(x)g(x)}{h}\\
+\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}g(x+h)+\limit{h}{0}f(x)\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp f'(x)g(x)+f(x)g'(x)\text{.}
+\end{align*}
+</div>
+<span class="incontext"><a href="section-33.html#p-873">in-context</a></span>
 </body>
 </html>

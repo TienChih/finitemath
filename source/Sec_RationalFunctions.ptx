@@ -13,7 +13,7 @@
     <p>
       Now when we say <m>q(x)\neq0</m>,
       we mean that <m>q(x)</m> is not the polynomial 0, not that <m>q(x)</m> could never be 0.
-      As before, we will consider the long and short term behavior of polynomials.
+      As before, we will consider the long and short term behavior of rational functions.
     </p>
   </introduction>
   <subsection>
@@ -21,7 +21,7 @@
     <p>
       For Polynomials,
       what determined the long term behavior of a polynomial was the leading term.
-      So it makes sense that a rational function will be determined the same way.
+      So it makes sense that a rational functions long term behavior will be determined the same way.
       Given
       <me>
         r(x)=\frac{a_nx^n+\cdots a_0x^0}{b_mx^m+\cdots b_0x^0}
@@ -43,7 +43,8 @@
             <m>\frac{-x^4-x}{x+1}\sim\frac{-x^4}{x} \sim -x^3</m>,
             so the long term behavior of <m>y</m> will be the same as <m>-x^3</m>'s:
             positive infinity to the left,
-            negative infinity to the right. \url{https://www.desmos.com/calculator/jzxyyrcgep}.
+            negative infinity to the right.
+            <interactive desmos="jzxyyrcgep" />
           </p>
         </li>
         <li>
@@ -56,7 +57,8 @@
             We should note:
             <m>\frac{-2x^4-x}{3x^4+1}\sim\frac{-2x^4}{3x^4} \sim -\frac{2}{3}</m>,
             so the long term behavior of <m>y</m> will be the same as
-            <m>-\frac{2}{3}</m>'s: \url{https://www.desmos.com/calculator/qaeq86mivp}.
+            <m>-\frac{2}{3}</m>'s: 
+            <interactive desmos="qaeq86mivp" />
           </p>
         </li>
         <li>
@@ -68,10 +70,13 @@
             For example consider <m>y=\frac{-2x^2+x}{3x^4+1}</m>.
             We should note:
             <m>\frac{-2x^2-x}{3x^4+1}\sim\frac{-2x^2}{3x^4} \sim -\frac{2}{3}\frac{1}{x^2}</m>,
-            so the long term behavior of <m>y</m> will be converging to 0: \url{https://www.desmos.com/calculator/n0ftbxmcod}.
+            so the long term behavior of <m>y</m> will be converging to 0: 
+            <interactive desmos="n0ftbxmcod" />
           </p>
         </li>
       </ul>
+      We can explore the possibilities in the graph below:
+      <interactive desmos="ktunv08xvx" />
     </p>
   </subsection>
   <subsection>
@@ -82,7 +87,7 @@
       what we care about is when <m>p(x)</m> or <m>q(x)</m> is 0, and what the multiplicity is.
     </p>
     <p>
-      Well, turns out, 0 divided by anything is 0.
+      Well, turns out, 0 divided by anything else (non-zero) is 0.
       So if the numerator is 0, then <m>r(x)</m> is 0.
       Moreover, it bounces or crosses in the same way as a polynomial.
       So if the multiplicity is odd,
@@ -92,8 +97,12 @@
       For example, consider <m>r_1(x)=\frac{x-1}{x}</m>.
       It is clearly 0 when <m>x=1</m>,
       and since the multiplicity is odd,
-      we cross \url{https://www.desmos.com/calculator/9graa40kq1}. But if we change that to <m>r_2(x)=\frac{(x-1)^2}{x}</m>,
-      the multiplicity is now even so we bounce \url{https://www.desmos.com/calculator/iy9kvoac37}.
+      we cross 
+      <interactive desmos="9graa40kq1" />
+      But if we change that to <m>r_2(x)=\frac{(x-1)^2}{x}</m>,
+      the multiplicity is now even so we bounce:
+      <interactive desmos="iy9kvoac37" />
+      
     </p>
     <p>
       It also turns out you can't divide by 0.
@@ -107,9 +116,13 @@
       The denominator is 0 when <m>x=0</m>,
       so we have a vertical asymptote there.
       Since the multiplicity is odd,
-      we change signs there: \url{https://www.desmos.com/calculator/ik9xwhui5i}. If we made that multiplicity even,
+      we change signs there: 
+      <interactive desmos="ik9xwhui5i" />
+      If we made that multiplicity even,
       the function would not change sign at <m>x=0</m>,
-      so for <m>r_2(x)=\frac{x-1}{x^2}</m>: \url{https://www.desmos.com/calculator/h5famtu30t}
+      so for <m>r_2(x)=\frac{x-1}{x^2}</m>:
+      <interactive desmos="h5famtu30t" />
+
     </p>
   </subsection>
 </section>

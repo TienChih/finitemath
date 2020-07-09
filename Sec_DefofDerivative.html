@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-09T07:05:12-06:00    *-->
+<!--*    on 2020-07-09T14:30:40-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -149,6 +149,7 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
 <li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
 <li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
 <li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
 <li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
@@ -164,8 +165,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-32.html" data-scroll="section-32">Product Rule</a></li>
-<li><a href="section-33.html" data-scroll="section-33">Quotient Rule</a></li>
+<li><a href="section-33.html" data-scroll="section-33">Product Rule</a></li>
+<li><a href="section-34.html" data-scroll="section-34">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -178,19 +179,19 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_DefofDerivative"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">The Derivative as a Limit</span>
 </h2>
-<p id="p-815">Let's be a bit more general for just a moment, suppose that we had a function \(f(x)\) and we wanted to know what the instantaneous rate of change of a function was at some given \(x\text{.}\) Well, if we stepped forward by \(h\) units, we could measure the average rate of change of \(f(x)\) over \([x, x+h]\text{,}\) this would be</p>
+<p id="p-841">Let's be a bit more general for just a moment, suppose that we had a function \(f(x)\) and we wanted to know what the instantaneous rate of change of a function was at some given \(x\text{.}\) Well, if we stepped forward by \(h\) units, we could measure the average rate of change of \(f(x)\) over \([x, x+h]\text{,}\) this would be</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{f(x+h)-f(x)}{x+h-x}=\frac{f(x+h)-f(x)}{h}\text{.}
 \end{equation*}
 </div>
-<p id="p-816">What we just observed is that if we let \(h\) converge towards 0, that it seems as if our quotient also converges to some value. This value is the derivative of \(f(x)\) at \(x\) and is denoted and defined as</p>
+<p id="p-842">What we just observed is that if we let \(h\) converge towards 0, that it seems as if our quotient also converges to some value. This value is the derivative of \(f(x)\) at \(x\) and is denoted and defined as</p>
 <div class="displaymath">
 \begin{equation*}
 f'(x)=\limit{h}{0}\frac{f(x+h)-f(x)}{h}\text{.}
 \end{equation*}
 </div>
-<p id="p-817">So how does this play out given our rocket? Well:</p>
+<p id="p-843">So how does this play out given our rocket? Well:</p>
 <div class="displaymath">
 \begin{align*}
 f'(x)\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
@@ -202,7 +203,7 @@ f'(x)\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
 \amp =\amp -10x+20\text{.}
 \end{align*}
 </div>
-<p id="p-818">So this means that in \(0\) seconds, the change in the height was \(f'(0)=-10(0)+20=20\) meters/second as we suspected! But now we can compute all the other instantaneous rates of change as well. So at \(t=1\) second, it'll be \(f'(1)=-10(1)+20=10\) meters per second. In 2 seconds we are at the top with \(f'(2)=0\) meters per second, at 3 seconds, \(f'(3)=-10\) meters/second to reflect the negative change in height at this point. Finally in 4 seconds, the rocket hits the ground at \(f'(4)=-20\) meters per second. (drag \(a\) around and see for yourself! \url{https://www.desmos.com/calculator/3po0qezgel})</p></section></div></main>
+<p id="p-844">So this means that in \(0\) seconds, the change in the height was \(f'(0)=-10(0)+20=20\) meters/second as we suspected! But now we can compute all the other instantaneous rates of change as well. So at \(t=1\) second, it'll be \(f'(1)=-10(1)+20=10\) meters per second. In 2 seconds we are at the top with \(f'(2)=0\) meters per second, at 3 seconds, \(f'(3)=-10\) meters/second to reflect the negative change in height at this point. Finally in 4 seconds, the rocket hits the ground at \(f'(4)=-20\) meters per second. (drag \(a\) around and see for yourself! \url{https://www.desmos.com/calculator/3po0qezgel})</p></section></div></main>
 </div>
 </body>
 </html>

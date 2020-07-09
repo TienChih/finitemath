@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-09T07:05:11-06:00    *-->
+<!--*    on 2020-07-09T14:30:40-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -149,6 +149,7 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
 <li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
 <li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
 <li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
 <li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
@@ -164,8 +165,8 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-32.html" data-scroll="section-32">Product Rule</a></li>
-<li><a href="section-33.html" data-scroll="section-33">Quotient Rule</a></li>
+<li><a href="section-33.html" data-scroll="section-33">Product Rule</a></li>
+<li><a href="section-34.html" data-scroll="section-34">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -176,15 +177,15 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Logarithms"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">6.5</span> <span class="title">Logarithms</span>
+<span class="type">Section</span> <span class="codenumber">6.6</span> <span class="title">Logarithms</span>
 </h2>
-<p id="p-762">So looking at any exponential function, but specifically for increasing ones, we notice that they are 1-1, meaning two different inputs give you 2 different outputs. Thus, \(f(x)=a^x\) is an invertible function. You can see in these graphs \url{https://www.desmos.com/calculator/cvriy608bg} that reflecting the exponential over the \(y=x\) line giving us the green function is another function. We call this function \(\log_a(x)\text{.}\) As the inverse of an exponential function, it has some properties:</p>
+<p id="p-788">So looking at any exponential function, but specifically for increasing ones, we notice that they are 1-1, meaning two different inputs give you 2 different outputs. Thus, \(f(x)=a^x\) is an invertible function. You can see in these graphs \url{https://www.desmos.com/calculator/cvriy608bg} that reflecting the exponential over the \(y=x\) line giving us the green function is another function. We call this function \(\log_a(x)\text{.}\) As the inverse of an exponential function, it has some properties:</p>
 <ul class="disc">
-<li id="li-312"><p id="p-763"><dfn class="terminology">It's domain is only positive numbers</dfn>. Why? Because the only possible outputs of exponential outputs are positive numbers. Taking the inverse reverses the roles of the domain and range, and so the domain of \(\log_a\) is the positives.</p></li>
-<li id="li-313"><p id="p-764"><dfn class="terminology">As \(\mathbf{x}\) goes to 0, \(\mathbf{\log_a(x)}\) goes to \(\mathbf{-\infty}\text{.}\)</dfn> This is the result of the reflection. Normally \(a^x\) (for \(a&gt;1\)) goes to 0 as \(x\to -\infty\text{,}\) so when reflected, that line is now asymptotic to the \(y\)-axis. Also \(\log_a\) returns the power necessary to achieve the value \(x\text{.}\) If \(x\) is a small number like 0.0001, what power would I have to raise \(a\) to to get \(0.0001\text{?}\) It can't be 0, \(a^0=1\text{,}\) so it has to be <dfn class="terminology">less</dfn> than 0, and the smaller \(x\) is, the lower this power must go.</p></li>
-<li id="li-314"><p id="p-765">As \(\mathbf{x\to\infty, \log_a(x)\to \infty}\text{,}\) again this is the result of the reflection, but we can also think of this as the powers \(a\) needs to be raised to in order to achieve \(x\text{,}\) as this increases, those powers must increase as well.</p></li>
-<li id="li-315">
-<p id="p-766">\(\log_a(xy)=\log_a(x)+\log_a(y)\text{.}\) Too see this consider:</p>
+<li id="li-322"><p id="p-789"><dfn class="terminology">It's domain is only positive numbers</dfn>. Why? Because the only possible outputs of exponential outputs are positive numbers. Taking the inverse reverses the roles of the domain and range, and so the domain of \(\log_a\) is the positives.</p></li>
+<li id="li-323"><p id="p-790"><dfn class="terminology">As \(\mathbf{x}\) goes to 0, \(\mathbf{\log_a(x)}\) goes to \(\mathbf{-\infty}\text{.}\)</dfn> This is the result of the reflection. Normally \(a^x\) (for \(a&gt;1\)) goes to 0 as \(x\to -\infty\text{,}\) so when reflected, that line is now asymptotic to the \(y\)-axis. Also \(\log_a\) returns the power necessary to achieve the value \(x\text{.}\) If \(x\) is a small number like 0.0001, what power would I have to raise \(a\) to to get \(0.0001\text{?}\) It can't be 0, \(a^0=1\text{,}\) so it has to be <dfn class="terminology">less</dfn> than 0, and the smaller \(x\) is, the lower this power must go.</p></li>
+<li id="li-324"><p id="p-791">As \(\mathbf{x\to\infty, \log_a(x)\to \infty}\text{,}\) again this is the result of the reflection, but we can also think of this as the powers \(a\) needs to be raised to in order to achieve \(x\text{,}\) as this increases, those powers must increase as well.</p></li>
+<li id="li-325">
+<p id="p-792">\(\log_a(xy)=\log_a(x)+\log_a(y)\text{.}\) Too see this consider:</p>
 <div class="displaymath">
 \begin{align*}
 xy\amp =\amp a^{\log_a{xy}}\\
@@ -194,8 +195,8 @@ xy\amp =\amp x\cdot y\\
 \end{align*}
 </div>
 </li>
-<li id="li-316">
-<p id="p-767">\(\log_a(x^y)=y\log_a(x)\text{.}\) To see this, consider:</p>
+<li id="li-326">
+<p id="p-793">\(\log_a(x^y)=y\log_a(x)\text{.}\) To see this, consider:</p>
 <div class="displaymath">
 \begin{align*}
 x^y\amp =\amp a^{\log_a(x^y)}.\\
@@ -205,9 +206,9 @@ x^y\amp =\amp (a^{\log_a(x)})^y\\
 </div>
 </li>
 </ul>
-<p id="p-768">Typically most textbooks include a whole bunch of other arithmetic rules, but they can all be distilled from the 2 above so they're all totally pointless.</p>
-<p id="p-769">Special cases of logs are log base 10 which is usually just denoted \(\log\) and log based \(e\text{,}\) which is denoted \(\ln\text{.}\) Astronomers and other scientists like \(\log\) since taking \(\log\) base 10 gives you approximate magnitude of stuff. As a mathematician, I prefer \(\ln\) since \(e\) has pretty special mathematical properties, plus it's shorter, which makes it better.</p>
-<p id="p-770">The main use of logs algebraically is to de-exponentiate expressions. So if one is trying to solve \(10=2^x\text{,}\) we could do this via:</p>
+<p id="p-794">Typically most textbooks include a whole bunch of other arithmetic rules, but they can all be distilled from the 2 above so they're all totally pointless.</p>
+<p id="p-795">Special cases of logs are log base 10 which is usually just denoted \(\log\) and log based \(e\text{,}\) which is denoted \(\ln\text{.}\) Astronomers and other scientists like \(\log\) since taking \(\log\) base 10 gives you approximate magnitude of stuff. As a mathematician, I prefer \(\ln\) since \(e\) has pretty special mathematical properties, plus it's shorter, which makes it better.</p>
+<p id="p-796">The main use of logs algebraically is to de-exponentiate expressions. So if one is trying to solve \(10=2^x\text{,}\) we could do this via:</p>
 <div class="displaymath">
 \begin{align*}
 10\amp =\amp 2^x\\
@@ -216,7 +217,7 @@ x^y\amp =\amp (a^{\log_a(x)})^y\\
 x\amp =\amp \frac{\ln(10)}{\ln(2)}\approx 3.3219\text{.}
 \end{align*}
 </div>
-<p id="p-771">One can also solve problems like this visually: \url{https://www.desmos.com/calculator/t0pojr0gel}.</p></section></div></main>
+<p id="p-797">One can also solve problems like this visually: \url{https://www.desmos.com/calculator/t0pojr0gel}.</p></section></div></main>
 </div>
 </body>
 </html>
