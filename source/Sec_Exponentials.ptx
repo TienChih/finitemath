@@ -35,17 +35,183 @@
 <subsection>
   <title>Properties of Exponentials Functions</title>
   <p>
+    For an exponential function <m>f(x)=b\cdot a^x</m> the <term>growth factor</term> is <m>a</m>, the factor by which the function grows for each incrementation of <m>x</m>.
+  </p>
+  <p>
+    So for <m>f(x)=2^x</m>, each time we increase <m>x</m> by 1, the value of <m>f(x)</m> doubles, and each time we decrease <m>x</m> by 1, the value of <m>>f(x)</m> is halved.
+
+    <me>
+          \begin{array}{|c||c|c|c|c|c|c|} \hline x \amp  0\amp 1\amp 2\amp 3\amp -1 \amp -2\\ \hline f(x)\amp2^0=1\amp 2^1=2\amp 2^2=4\amp 2^3=8\amp 2^{-1}=\frac{1}{2} \amp 2^{-2}=\frac{1}{4}\\ \hline \end{array}
+        </me>
+        We may plot the results:
+        <interactive desmos="n9fwaxmptr" />
+    </p>
+    <p>
+    For <m>g(t)=(0.8)^t</m>, each time we increase <m>t</m> by 1, the value of <m>g(t)</m> decreases by a factor of 0.8, and each time we decrease <m>t</m> by 1, the value of <m>>g(x)</m> increases by a factor of <m>\frac{1}{0.8}=1.25</m>.
+
+    <me>
+          \begin{array}{|c||c|c|c|c|c|c|} \hline t \amp  0\amp 1\amp 2\amp 3\amp -1 \amp -2\\ \hline g(t)\amp(0.8)^0=1\amp (0.8)^1=0.8\amp (0.8)^2=0.64\amp (0.8)^3=0.512\amp (0.8)^{-1}=1.25 \amp 2^{-2}=1.5625\\ \hline \end{array}
+        </me>
+        We may plot the results:
+        <interactive desmos="tby4u5naqm" />
+    </p>
+    <p>
     In that way, we can also tell when
     <m>f(x)=b\cdot a^x</m> is increasing or decreasing,
     just by looking at whether or not <m>a>1</m> or <m>a\lt 1</m>.
-    If <m>a>1</m> it is increasing: \url{https://www.desmos.com/calculator/edktzphc6x} if <m>a\lt 1</m> then it's decreasing: \url{https://www.desmos.com/calculator/rpiu9qc4ty}.
+    If <m>a>1</m> it is increasing, and if <m>a\lt 1</m> then it is decreasing.
   </p>
+
+  <p>
+    Notice that in either case, we grow quickly and approach infinity in one direction, and decay and approach zero in the other, depending on whether or not your exponential is increasing or decreasing.
+  </p>  
+</subsection>
+<subsection>
+  <title>Finding Exponential Functions</title>
+  <p>
+    Like linear functions, we may identify an exponential function by it's growth factor and any point.
+ </p>
+<example>
+  <statement>
+<p> Find a exponential function <m>h(x)</m> with growth factor 1.2 and where <m>h(2)=5</m>.
+    </p>
+    </statement>
+    <solution>
+<p> We note that since we are given <m>a=1.2</m>, it suffices to find <m>b</m>.  Consider that:
+      <md>
+        <mrow>5=h(2)\amp = b(1.2)^2</mrow>
+         <mrow>1.44b\amp = 5</mrow>
+         <mrow>b\amp = \frac{5}{1.44}=\frac{125}{36}\approx 3.47222</mrow>
+      </md>
+      Thus <m>h(x)=\frac{125}{36}\cdot (1.2)^x</m>.
+    <interactive desmos="c3n2wm30tz" />
+  </p>
+</solution>
+</example>
+
+ <p>
+    Also like linear functions, we may identify an exponential function by two points.
+ </p>
+<example>
+  <statement>
+     <p> Find a exponential function <m>d(t)</m> passing through <m>(1,4)</m> and <m> (4,2)</m>.
+    </p>
+    </statement>
+    <solution>
+<p> We first find the growth factor <m>a</m>:
+      <md>
+        <mrow>4=d(1)\amp = ba^1</mrow>
+         <mrow>2=d(4)\amp = ba^4</mrow>
+         <mrow>\frac{4}{2}\amp = \frac{ba^1}{ba^4}</mrow>
+         <mrow>2\amp = \frac{1}{a^3}</mrow>
+         <mrow>a^3\amp = \frac{1}{2}</mrow>
+         <mrow>a\amp = (\frac{1}{2})^{1/3}=\frac{1}{2^{1/3}}=2^{-1/3}\approx 0.7937</mrow>
+      </md>
+      From here we may find <m>b</m>:</p>
+      <p>
+      <md>
+        <mrow>4=d(1)\amp = b(2^{-1/3})^1</mrow>
+        <mrow>b\amp=4\cdot 2^{1/3}=2^{7/3}\approx 5.0396842</mrow>
+      </md>
+      Thus <m>d(t)=2^{7/3}\cdot (2^{-1/3})^t</m>.
+    <interactive desmos="yyjhu4u544" />
+  </p>
+</solution>
+</example>
+</subsection>
+<subsection>
+ <title>Applications</title>   
   <p>
     Exponential functions are used to model anything that grows or decays proportionately to it's current value.
     So for example debts or investment accrue proportionately to how much debt/investment there already is.
     Population is another example,
     the greater the population,
-    the more reproduction there will be within that population and the greater the increase in population.
+    the more reproduction there will be within that population and the greater the increase in population.  An example of decay will be the decay of a radioactive substance.  The less of it there is, the less of it there is to decay and so the slower the decay rate goes.
   </p>
+
+<exercise>
+  <statement>
+<p> Suppose a warren of rabbits grows at an exponential rate.  In 5 weeks, there are 100 rabbits, and in 10 weeks, there were 125 rabbits.
+  <ol>
+    <li>How many rabbits were there initially?</li>
+    <li>Find a function <m>R(t)</m> that expresses the number of rabbits in <m>t</m> weeks.</li>
+    <li>How many rabbits will there be in 30 weeks?</li>
+  </ol>
+    </p>
+    </statement>
+    <solution>
+<p> We let <m>R(t)</m> be the number of rabbits in <m>t</m> weeks.
+      <ol>
+    <li>We first notice that 
+      <md>
+        <mrow>100=R(5)\amp = ba^5</mrow>
+         <mrow>125=R(10)\amp = ba^{10}</mrow>
+      </md>
+      From here we may deduce:
+      <md>
+        <mrow>1.25\frac{125}{100}\amp = \frac{ba^10}{ba^5}=a^5</mrow>
+         <mrow>100=ba^5\amp = b(1.25)</mrow>
+         <mrow>b\amp =80</mrow>
+      </md>
+      Thus there were 80 rabbits initially.
+    </li>
+    <li> Knowing that <m>a^5=1.25</m>  we have that <m>a=(1.25)^{1/5}\approx 1.04563955</m>.  Thus <m>R(t)=80\cdot((1.25)^{1/5})^t</m>.
+     <interactive desmos="6t0he6wapz" />
+
+  </li>
+    <li>We have <m>R(30)=80\cdot((1.25)^{1/5})^{30}\approx 305</m>
+<interactive desmos="8aymvvbx01" />
+    About 305 rabbits.
+  </li>
+
+  </ol>  
+  </p>
+</solution>
+</exercise>
+
+<exercise>
+  <statement>
+<p> Suppose the half-life of Madeupinium in 25 minutes.  Suppose that a professor acquires a sample of Madeupinium, and after an hour, there is 300g left.
+  <ol>
+    <li>How much Madeupinium was there initially?</li>
+    <li>Find a function <m>M(t)</m> that expresses how many grams are there in <m>t</m> minutes.</li>
+    <li>How much Madeupinium will there be in 75 minutes?</li>
+  </ol>
+    </p>
+    </statement>
+    <solution>
+<p> We let <m>M(t)</m> be the amount .
+      <ol>
+    <li>We first notice that <m>300=M(25)=b\cdot a^{25}</m>.  We also note that whatever <m>b</m> is, we have that <m>M(0)=b\cdot a^0=b</m> and <m>\frac{b}{2}=M(25)=ba^{25}</m>.  Thus:
+      <md>
+        <mrow>\frac{1}{2}\amp = a^{25}</mrow>
+         <mrow>a\amp = \left(\frac{1}{2}\right)^{1/25}\approx 0.972655</mrow>
+      </md>
+      From here we may deduce:
+      <md>
+         <mrow>300=ba^{60}\amp = b(\left(\left(\frac{1}{2}\right)^{1/25}\right)^{60}</mrow>
+         <mrow>b\amp =300\cdot \left(\frac{1}{2}\right)^{-\frac{60}{25}}\approx 1583.409</mrow>
+      </md>
+      Thus there were about 15803.409 grams initially.
+    </li>
+    <li> Knowing that <m>a=\left(\frac{1}{2}\right)^{1/25}</m>  we have that  <m>M(t)=300\cdot\left(\frac{1}{2}\right)^{-\frac{60}{25}}\left(\frac{1}{2}^{\frac{1}{25}}\right)^{t}</m>.
+     <interactive desmos="8eaou0dgdw" />
+
+  </li>
+    <li>We have <m>%(75)=80300\cdot\left(\frac{1}{2}\right)^{-\frac{60}{25}}\left(\frac{1}{2}^{\frac{1}{25}}\right)^{75}\approx 197.926</m>
+<interactive desmos="zqbcolgj8c" />
+    About 197.926 grams.
+  </li>
+
+  </ol>  
+  </p>
+</solution>
+</exercise>
+
+
+
+
+
+
 </subsection>
 </section>
