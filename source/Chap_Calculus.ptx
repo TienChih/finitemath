@@ -7,8 +7,6 @@
   <xi:include  href="Sec_PowerRule.ptx"/>
   <xi:include  href="Sec_ProductRule.ptx"/>
   <xi:include  href="Sec_QuotientRule.ptx"/>
-  <xi:include  href="section7-8.ptx"/>
-  <xi:include  href="section7-9.ptx"/>
   <xi:include  href="Sec_ChainRule.ptx"/>
   <xi:include  href="DerivativeExp.ptx"/>
   <xi:include  href="DerivativeLogs.ptx"/>

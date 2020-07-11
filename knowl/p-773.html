@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-10T06:39:04-06:00    *-->
+<!--*    on 2020-07-10T21:53:30-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,25 +13,8 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>For Polynomials, what determined the long term behavior of a polynomial was the leading term. So it makes sense that a rational functions long term behavior will be determined the same way. Given</p>
-<div class="displaymath">
-\begin{equation*}
-r(x)=\frac{a_nx^n+\cdots a_0x^0}{b_mx^m+\cdots b_0x^0}\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">we can determine the long term behavior with</p>
-<div class="displaymath">
-\begin{equation*}
-\frac{a_nx^n}{b_mx^m}
-\end{equation*}
-</div>
-<p data-braille="continuation">which simplifies to \(\frac{a_n}{b_m}x^{n-m}\text{.}\) So there are some cases to consider here:</p>
-<ul class="disc">
-<li><p>If \(n&gt;m\text{,}\) then \(\frac{a_n}{b_m}x^{n-m}\) is just a regular monomial. This doesn't mean that \(r(x)\)'s graph will look like a polynomial's, but it does mean the long term behavior will be the same as that of a polynomial. For example consider \(y=\frac{-x^4+x}{x+1}\text{.}\) We should note: \(\frac{-x^4-x}{x+1}\sim\frac{-x^4}{x} \sim -x^3\text{,}\) so the long term behavior of \(y\) will be the same as \(-x^3\)'s: positive infinity to the left, negative infinity to the right. <iframe src="https://www.desmos.com/calculator/jzxyyrcgep" id="interactive-112" width="600" height="600"></iframe></p></li>
-<li><p>If \(n=m\text{,}\) then \(\frac{a_n}{b_m}x^{n-m}=\frac{a_n}{b_m}\) is just a constant. So as the magnitude of \(x\) grows, these values approach \(\frac{a_n}{b_m}\text{.}\) For example consider \(y=\frac{-2x^4+x}{3x^4+1}\text{.}\) We should note: \(\frac{-2x^4-x}{3x^4+1}\sim\frac{-2x^4}{3x^4} \sim -\frac{2}{3}\text{,}\) so the long term behavior of \(y\) will be the same as \(-\frac{2}{3}\)'s: <iframe src="https://www.desmos.com/calculator/qaeq86mivp" id="interactive-113" width="600" height="600"></iframe></p></li>
-<li><p>If \(n\lt m\text{,}\) then \(\frac{a_n}{b_m}x^{n-m}=\frac{a_n}{b_m}\frac{1}{x^{m-n}}\text{.}\) As the magnitude of \(x\) grows, the more \(\frac{1}{x^{m-n}}\) will shrink and the entire function converges to 0. For example consider \(y=\frac{-2x^2+x}{3x^4+1}\text{.}\) We should note: \(\frac{-2x^2-x}{3x^4+1}\sim\frac{-2x^2}{3x^4} \sim -\frac{2}{3}\frac{1}{x^2}\text{,}\) so the long term behavior of \(y\) will be converging to 0: <iframe src="https://www.desmos.com/calculator/n0ftbxmcod" id="interactive-114" width="600" height="600"></iframe></p></li>
-</ul>
-<p data-braille="continuation">We can explore the possibilities in the graph below: <iframe src="https://www.desmos.com/calculator/ktunv08xvx" id="interactive-115" width="600" height="600"></iframe></p>
+<p>A <dfn class="terminology">rational function</dfn> is a function \(r(x)\) which may be written as \(r(x)=\frac{p(x)}{q(x)}\) where \(p(x),
+q(x)\) are both polynomials, and \(q(x)\neq 0\text{.}\)</p>
 <span class="incontext"><a href="Sec_RationalFunctions.html#p-773">in-context</a></span>
 </body>
 </html>

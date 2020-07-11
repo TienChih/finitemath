@@ -1,12 +1,21 @@
 <section xml:id="Sec_Logarithms">
   <title>Logarithms</title>
-  <p>
+    <introduction>
+      <statement>
+    <p>    
     So looking at any exponential function,
     but specifically for increasing ones,
     we notice that they are 1-1, meaning two different inputs give you 2 different outputs.
     Thus, <m>f(x)=a^x</m> is an invertible function.
-    You can see in these graphs \url{https://www.desmos.com/calculator/cvriy608bg} that reflecting the exponential over the <m>y=x</m> line giving us the green function is another function.
+    You can see in these graphs that reflecting the exponential over the <m>y=x</m> line giving us  another function:
+    <interactive desmos="cerccrco9k" />
     We call this function <m>\log_a(x)</m>.
+  </p>
+      </statement>
+   </introduction>
+   <subsection>
+      <title>Properties of Logarithms</title>
+      <p>
     As the inverse of an exponential function, it has some properties:
     <ul>
       <li>
@@ -49,10 +58,10 @@
           <m>\log_a(xy)=\log_a(x)+\log_a(y)</m>.
           Too see this consider:
           <md>
-            <mrow>xy\amp =\amp a^{\log_a{xy}}</mrow>
-            <mrow>xy\amp =\amp x\cdot y</mrow>
-            <mrow>\amp =\amp a^{\log_a(x)}\cdot a^{\log_a(y)}</mrow>
-            <mrow>\amp =\amp a^{\log_a(x)+\log_a(y)}</mrow>
+            <mrow>xy\amp = a^{\log_a{xy}}</mrow>
+            <mrow>xy\amp = x\cdot y</mrow>
+            <mrow>\amp = a^{\log_a(x)}\cdot a^{\log_a(y)}</mrow>
+            <mrow>\amp = a^{\log_a(x)+\log_a(y)}</mrow>
           </md>.
         </p>
       </li>
@@ -61,9 +70,9 @@
           <m>\log_a(x^y)=y\log_a(x)</m>.
           To see this, consider:
           <md>
-            <mrow>x^y\amp =\amp a^{\log_a(x^y)}.</mrow>
-            <mrow>x^y\amp =\amp (a^{\log_a(x)})^y</mrow>
-            <mrow>\amp =\amp a^{y\log_a(x)}</mrow>
+            <mrow>x^y\amp = a^{\log_a(x^y)}.</mrow>
+            <mrow>x^y\amp = (a^{\log_a(x)})^y</mrow>
+            <mrow>\amp = a^{y\log_a(x)}</mrow>
           </md>
         </p>
       </li>
@@ -73,6 +82,28 @@
     Typically most textbooks include a whole bunch of other arithmetic rules,
     but they can all be distilled from the 2 above so they're all totally pointless.
   </p>
+</subsection>
+<subsection>
+  <title>Utility of logs</title>
+  <p>
+    Since each logarithm is an inverse of an exponential function, and exponential equation has an equivalent logathrithmic equation.
+    <me>
+          \begin{array}{|c|c|}
+           \hline 
+           \text{Exponential Equation} \amp  \text{Logarithmic Equation}\\
+            \hline 
+            2^3=8\amp \log_2(8)=3\\
+            10^2=100\amp \log_{10}(100)=2\\
+            (0.9)^2=0.81\amp \log_{0.9}(0.81)=2\\
+            9^{1/2}=3\amp \log_3(9)=\frac{1}{2}\\
+            2^{-2}\frac{1}{4}\amp \log_2(\frac{1}{4})=-2\\
+            3^x=4\amp \log_3(4)=x\\
+            a^b=c\amp \log_a(c)=b\\
+            \hline
+           \end{array}
+        </me>
+
+  </p>  
   <p>
     Special cases of logs are log base 10 which is usually just denoted <m>\log</m> and log based <m>e</m>,
     which is denoted <m>\ln</m>.
@@ -84,13 +115,135 @@
     The main use of logs algebraically is to de-exponentiate expressions.
     So if one is trying to solve <m>10=2^x</m>, we could do this via:
     <md>
-      <mrow>10\amp =\amp 2^x</mrow>
-      <mrow>\ln(10)\amp =\amp \ln(2^x)</mrow>
-      <mrow>\ln(10)\amp =\amp x\ln(2)</mrow>
-      <mrow>x\amp =\amp \frac{\ln(10)}{\ln(2)}\approx 3.3219</mrow>
+      <mrow>10\amp = 2^x</mrow>
+      <mrow>\ln(10)\amp = \ln(2^x)</mrow>
+      <mrow>\ln(10)\amp = x\ln(2)</mrow>
+      <mrow>x\amp = \frac{\ln(10)}{\ln(2)}\approx 3.3219</mrow>
     </md>.
   </p>
   <p>
-    One can also solve problems like this visually: \url{https://www.desmos.com/calculator/t0pojr0gel}.
+    One can also solve problems like this visually:
+    <interactive desmos="t0pojr0gel" />
   </p>
+ </subsection>
+ <subsection> 
+  <title>Computations</title>
+
+<exercise>
+  <statement>
+<p> Solve for <m>x</m>:
+  <ol>
+    <li><m>e^{x+2}=100</m>.</li>
+    <li><m>\log(x)+\log(x+3)=1</m></li>
+  </ol>
+    </p>
+    </statement>
+    <solution>
+<p> Consider the following:
+      <ol>
+    <li> Starting with:
+      <md>
+        <mrow>e^{x+2}\amp = 100</mrow>
+        <mrow>\ln(e^{x+2})\amp = \ln(100)</mrow>
+        <mrow>x+2\amp = \ln(100)</mrow>
+         <mrow>x\amp = \ln(100)-2\approx  2.60517</mrow>
+      </md>
+    </li>
+    <li> Recall that <m>\log</m> is <m>\log_{10}</m>.
+       <md>
+        <mrow>\log(x)+\log(x+3)\amp = 1</mrow>
+        <mrow>\log(x(x+3))\amp = 1</mrow>
+        <mrow>10^{\log(x(x+3))}\amp = 10^1</mrow>
+        <mrow>x(x+3)\amp = 10</mrow>
+        <mrow>x^2+3x-10\amp = 0</mrow>
+        <mrow>(x+5)(x-2)\amp = 0</mrow>
+        <mrow>x\amp = -5, 2</mrow>
+      </md>
+
+  </li>
+    
+
+  </ol>  
+  </p>
+</solution>
+</exercise>
+
+
+<exercise>
+  <statement>
+<p> Suppose a resturaunt's weekly revenue in thousands of dollars is <m>R(t)=50-30e^{-0.1t}</m> in <m>t</m> weeks after opening.
+  <ol>
+    <li>How much revenue did it make in it's initial week?</li>
+    <li>When will the resturaunt generate <m>\$40</m> thousand a week?</li>
+  </ol>
+    </p>
+    </statement>
+    <solution>
+<p> Consider the following:</p>
+      <ol>
+    <li> <p>In week 0, we have <m>R(0)=50-30e^0=20</m> or <m>\$20</m> thousand dollars.</p>
+    </li>
+    <li> <p>We solve:
+       <md>
+        <mrow>R(t)=50-30e^{-0.1t}\amp = 40</mrow>
+        <mrow>R(t)10\amp =30e^{-0.1t}</mrow>
+        <mrow>e^{-0.1t}\amp = \frac{1}{3}</mrow>
+         <mrow>\ln(e^{-0.1t})\amp = \ln(\frac{1}{2})</mrow>
+        <mrow>-0.1t\amp = \ln(\frac{1}{3})</mrow>  
+        <mrow>t\amp = -10\ln(\frac{1}{3})\approx 10.9861</mrow>  
+      </md>
+      <interactive desmos="sjdorxtzos" />
+      So at almost the 7th week.</p>
+  </li>
+    
+
+  </ol>  
+  
+</solution>
+</exercise>
+
+
+<exercise>
+  <statement>
+<p> Consider a radioactive compound Imaginarium which has halflife of 100 minutes.  Let <m>I(t)</m> be the amount of Imaginarium left in grams after <m>t</m> minutes if you started with 1000g.
+  <ol>
+    <li>Find <m>I(t)</m>.</li>
+    <li>When will you have 10g left?</li>
+  </ol>
+    </p>
+    </statement>
+    <solution>
+<p> Consider the following:</p>
+      <ol>
+    <li> <p>We note that since the halflife is 100 minutes:
+    <md>
+        <mrow>\frac{1}{2}\amp = a^5</mrow>
+        <mrow>a\amp = (\frac{1}{2})^{1/5}\approx0.87055</mrow>
+      </md>
+      So <m>I(t)=1000\cdot ((\frac{1}{2})^{1/5})^t=1000\cdot(\frac{1}{2})^{t/5}</m>.
+    </p>
+    </li>
+    <li> <p>We solve:
+       <md>
+        <mrow>10=I(t)\amp = 1000\cdot\left(\frac{1}{2}\right)^{t/5}</mrow>
+        <mrow>\frac{1}{100}\amp = \left(\frac{1}{2}\right)^{t/5}</mrow>
+        <mrow>\ln\left(\frac{1}{100}\right)\amp = \ln\left(\left(\frac{1}{2}\right)^{t/5}\right)</mrow>
+        <mrow>\ln\left(\frac{1}{100}\right)\amp = \frac{t}{5}\cdot\ln\left(\frac{1}{2}\right)</mrow>
+        <mrow> t\amp = \frac{5\ln\left(\frac{1}{100}\right)}{\ln\left(\frac{1}{2}\right)}\approx 33.21928</mrow>
+      </md>
+
+      So in just over 33 minutes.</p>
+  </li>
+    
+
+  </ol>  
+  
+</solution>
+</exercise>
+
+
+
+
+
+ </subsection> 
 </section>

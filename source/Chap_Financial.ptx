@@ -1,5 +1,10 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_Financial">
   <title>Financial Mathematics</title>
+  <introduction>
+    <p>
+      In this chapter, we explore the Mathematics of finance.  How debts and investments grow, different types of interests, and how to address one time or regular transactions.
+    </p>
+  </introduction>
   <xi:include  href="Sec_SimpleInterest.ptx"/>
   <xi:include  href="Sec_CompoundInterest.ptx"/>
   <xi:include  href="Sec_RegularPayments.ptx"/>

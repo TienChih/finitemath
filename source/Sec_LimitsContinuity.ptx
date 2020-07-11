@@ -7,6 +7,9 @@
       is a number <m>L</m> such that when <m>f(x)</m> get's closer and closer to <m>a</m>,
       <m>f(x)</m> gets closer and closer to <m>L</m>.
     </p>
+  </introduction>
+  <subsection>
+    <title>The Limit</title>
     <p>
       Consider the function <m>f(x)=\frac{x^2-1}{x-1}</m>,
       what happens as <m>x</m> get's closer and closer to 1?
@@ -15,12 +18,14 @@
       </me>
     </p>
     <p>
-      You can test and see these values here: \url{https://www.desmos.com/calculator/w3ycpf3mv4}. It certainly seems as if <m>x</m> gets closer and closer to <m>1</m>,
+      You can test and see these values here: 
+      <interactive desmos="w3ycpf3mv4" />
+       It certainly seems as if <m>x</m> gets closer and closer to <m>1</m>,
       <m>f(x)</m> approaches the value <m>2</m>.
       Why couldn't we just plug in 1?
-      Because if we did we would get <m>f(1)``=''\frac{1^2-1}{1-1}``=''\frac{0}{0}</m> which is undefined.
+      Because if we did we would get <m>f(1)"="\frac{1^2-1}{1-1}"="\frac{0}{0}</m> which is undefined.
       Recall that <m>1</m> would not be a part of the domain of <m>f(x)</m>.
-      This, in fact, is the whole point of limits,
+      <em>This, in fact, is the whole point of limits</em>,
       the entire reason they exist,
       is in order to give values to things like <m>f(1)</m> which are not defined.
     </p>
@@ -177,13 +182,13 @@
       A great shorthand for determining when there is or isn't a limit is: ``<m>\limit{x}{a}f(x)=L</m> and exists if and only if
       <m>\limit{x}{a^-}f(x)=L</m> and <m>\limit{x}{a^+}f(x)=L</m>"
     </p>
-  </introduction>
+  </subsection>
   <subsection>
     <title>Continuity</title>
     <p>
       I'm not going to overblow continuity with to much verbiage here since we intuitive understand what it means to be continuous,
       it just means that all the points
-      <q>connect</q>. So what does tat mean for us above?
+      <q>connect</q>. So what does that mean for us above?
       Out of the values <m>x=2,4,6,8</m>,
       where is <m>x</m> continuous?
     </p>

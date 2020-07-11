@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-10T06:38:44-06:00    *-->
+<!--*    on 2020-07-10T21:53:08-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -165,8 +165,6 @@ MathJax.Hub.Config({
 <li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
 <li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
 <li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="section-33.html" data-scroll="section-33">Product Rule</a></li>
-<li><a href="section-34.html" data-scroll="section-34">Quotient Rule</a></li>
 <li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
 <li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
@@ -179,14 +177,14 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Exponentials"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.5</span> <span class="title">Exponentials</span>
 </h2>
-<section class="introduction" id="introduction-24"><article class="definition definition-like" id="definition-9"><h6 class="heading">
+<section class="introduction" id="introduction-26"><article class="definition definition-like" id="definition-9"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.5.1</span><span class="period">.</span>
 </h6>
-<p id="p-782">An <dfn class="terminology">exponential function</dfn> is a function \(f(x)\) which may be written as \(f(x)=b\cdot a^x\text{.}\)</p></article><p id="p-783">Exponential functions describe functions rate of growth, or decay is proportional to their current value.  That is, either functions who, the larger their value the faster the grow, or the smaller their value the slower their decay.</p></section><section class="subsection" id="subsection-55"><h3 class="heading hide-type">
+<p id="p-784">An <dfn class="terminology">exponential function</dfn> is a function \(f(x)\) which may be written as \(f(x)=b\cdot a^x\text{.}\)</p></article><p id="p-785">Exponential functions describe functions rate of growth, or decay is proportional to their current value.  That is, either functions who, the larger their value the faster the grow, or the smaller their value the slower their decay.</p></section><section class="subsection" id="subsection-55"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.5.1</span> <span class="title">Connections to previous concepts.</span>
 </h3>
-<p id="p-784">We should note that we've seen exponential functions before, <a href="Chap_Financial.html" class="internal" title="Chapter 5: Financial Mathematics">Chapter 5</a> in the guise of compound interest. If the future value of a debt is \(S=P(1+i)^x\) after \(x\) units of time, then \(P\) is your \(b\) and \(1+i\) is your \(a\text{.}\)</p>
-<p id="p-785">We should also note that there is a real kinship between exponential functions and linear functions. Linear functions have the form \(\ell(x)=mx+b\text{,}\) which we can think of as</p>
+<p id="p-786">We should note that we've seen exponential functions before, <a href="Chap_Financial.html" class="internal" title="Chapter 5: Financial Mathematics">Chapter 5</a> in the guise of compound interest. If the future value of a debt is \(S=P(1+i)^x\) after \(x\) units of time, then \(P\) is your \(b\) and \(1+i\) is your \(a\text{.}\)</p>
+<p id="p-787">We should also note that there is a real kinship between exponential functions and linear functions. Linear functions have the form \(\ell(x)=mx+b\text{,}\) which we can think of as</p>
 <div class="displaymath">
 \begin{equation*}
 \ell(x)=\overbrace{m+m+\cdots+m}^x+b\text{,}
@@ -201,32 +199,32 @@ f(x)=b\cdot a^x=\overbrace{a\cdot a\cdots a}^x\cdot b\text{,}
 <p data-braille="continuation">so it is really the multiplicative analogue of the linear function, where the \(b\)'s are the initial value of the function when \(x=0\) and the growth rate of the function is totally determined by \(a\) (whereas it's determined by \(m\) for linear functions).</p></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.5.2</span> <span class="title">Properties of Exponentials Functions</span>
 </h3>
-<p id="p-786">For an exponential function \(f(x)=b\cdot a^x\) the <dfn class="terminology">growth factor</dfn> is \(a\text{,}\) the factor by which the function grows for each incrementation of \(x\text{.}\)</p>
-<p id="p-787">So for \(f(x)=2^x\text{,}\) each time we increase \(x\) by 1, the value of \(f(x)\) doubles, and each time we decrease \(x\) by 1, the value of \(&gt;f(x)\) is halved.</p>
+<p id="p-788">For an exponential function \(f(x)=b\cdot a^x\) the <dfn class="terminology">growth factor</dfn> is \(a\text{,}\) the factor by which the function grows for each incrementation of \(x\text{.}\)</p>
+<p id="p-789">So for \(f(x)=2^x\text{,}\) each time we increase \(x\) by 1, the value of \(f(x)\) doubles, and each time we decrease \(x\) by 1, the value of \(&gt;f(x)\) is halved.</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c||c|c|c|c|c|c|} \hline x \amp  0\amp 1\amp 2\amp 3\amp -1 \amp -2\\ \hline f(x)\amp2^0=1\amp 2^1=2\amp 2^2=4\amp 2^3=8\amp 2^{-1}=\frac{1}{2} \amp 2^{-2}=\frac{1}{4}\\ \hline \end{array}
 \end{equation*}
 </div>
 <p data-braille="continuation">We may plot the results: <iframe src="https://www.desmos.com/calculator/n9fwaxmptr" id="interactive-120" width="600" height="600"></iframe></p>
-<p id="p-788">For \(g(t)=(0.8)^t\text{,}\) each time we increase \(t\) by 1, the value of \(g(t)\) decreases by a factor of 0.8, and each time we decrease \(t\) by 1, the value of \(&gt;g(x)\) increases by a factor of \(\frac{1}{0.8}=1.25\text{.}\)</p>
+<p id="p-790">For \(g(t)=(0.8)^t\text{,}\) each time we increase \(t\) by 1, the value of \(g(t)\) decreases by a factor of 0.8, and each time we decrease \(t\) by 1, the value of \(&gt;g(x)\) increases by a factor of \(\frac{1}{0.8}=1.25\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c||c|c|c|c|c|c|} \hline t \amp  0\amp 1\amp 2\amp 3\amp -1 \amp -2\\ \hline g(t)\amp(0.8)^0=1\amp (0.8)^1=0.8\amp (0.8)^2=0.64\amp (0.8)^3=0.512\amp (0.8)^{-1}=1.25 \amp 2^{-2}=1.5625\\ \hline \end{array}
 \end{equation*}
 </div>
 <p data-braille="continuation">We may plot the results: <iframe src="https://www.desmos.com/calculator/tby4u5naqm" id="interactive-121" width="600" height="600"></iframe></p>
-<p id="p-789">In that way, we can also tell when \(f(x)=b\cdot a^x\) is increasing or decreasing, just by looking at whether or not \(a&gt;1\) or \(a\lt 1\text{.}\) If \(a&gt;1\) it is increasing, and if \(a\lt 1\) then it is decreasing.</p>
-<p id="p-790">Notice that in either case, we grow quickly and approach infinity in one direction, and decay and approach zero in the other, depending on whether or not your exponential is increasing or decreasing.</p></section><section class="subsection" id="subsection-57"><h3 class="heading hide-type">
+<p id="p-791">In that way, we can also tell when \(f(x)=b\cdot a^x\) is increasing or decreasing, just by looking at whether or not \(a&gt;1\) or \(a\lt 1\text{.}\) If \(a&gt;1\) it is increasing, and if \(a\lt 1\) then it is decreasing.</p>
+<p id="p-792">Notice that in either case, we grow quickly and approach infinity in one direction, and decay and approach zero in the other, depending on whether or not your exponential is increasing or decreasing.</p></section><section class="subsection" id="subsection-57"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.5.3</span> <span class="title">Finding Exponential Functions</span>
 </h3>
-<p id="p-791">Like linear functions, we may identify an exponential function by it's growth factor and any point.</p>
+<p id="p-793">Like linear functions, we may identify an exponential function by it's growth factor and any point.</p>
 <article class="example example-like" id="example-64"><a data-knowl="" class="id-ref original" data-refid="hk-example-64"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.5.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-64"><article class="example example-like"><p id="p-792">Find a exponential function \(h(x)\) with growth factor 1.2 and where \(h(2)=5\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-64"><article class="example example-like"><p id="p-794">Find a exponential function \(h(x)\) with growth factor 1.2 and where \(h(2)=5\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-66" id="solution-66"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-66"><div class="solution solution-like">
-<p id="p-793">We note that since we are given \(a=1.2\text{,}\) it suffices to find \(b\text{.}\)  Consider that:</p>
+<p id="p-795">We note that since we are given \(a=1.2\text{,}\) it suffices to find \(b\text{.}\)  Consider that:</p>
 <div class="displaymath">
 \begin{align*}
 5=h(2)\amp = b(1.2)^2\\
@@ -237,13 +235,13 @@ b\amp = \frac{5}{1.44}=\frac{125}{36}\approx 3.47222
 <p data-braille="continuation">Thus \(h(x)=\frac{125}{36}\cdot (1.2)^x\text{.}\) <iframe src="https://www.desmos.com/calculator/c3n2wm30tz" id="interactive-122" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
-<p id="p-794">Also like linear functions, we may identify an exponential function by two points.</p>
+<p id="p-796">Also like linear functions, we may identify an exponential function by two points.</p>
 <article class="example example-like" id="example-65"><a data-knowl="" class="id-ref original" data-refid="hk-example-65"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.5.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-65"><article class="example example-like"><p id="p-795">Find a exponential function \(d(t)\) passing through \((1,4)\) and \((4,2)\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-65"><article class="example example-like"><p id="p-797">Find a exponential function \(d(t)\) passing through \((1,4)\) and \((4,2)\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-67" id="solution-67"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-67"><div class="solution solution-like">
-<p id="p-796">We first find the growth factor \(a\text{:}\)</p>
+<p id="p-798">We first find the growth factor \(a\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 4=d(1)\amp = ba^1\\
@@ -255,7 +253,7 @@ a\amp = (\frac{1}{2})^{1/3}=\frac{1}{2^{1/3}}=2^{-1/3}\approx 0.7937
 \end{align*}
 </div>
 <p data-braille="continuation">From here we may find \(b\text{:}\)</p>
-<div class="displaymath" id="p-797">
+<div class="displaymath" id="p-799">
 \begin{align*}
 4=d(1)\amp = b(2^{-1/3})^1\\
 b\amp=4\cdot 2^{1/3}=2^{7/3}\approx 5.0396842
@@ -266,10 +264,10 @@ b\amp=4\cdot 2^{1/3}=2^{7/3}\approx 5.0396842
 </div></article></div></section><section class="subsection" id="subsection-58"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.5.4</span> <span class="title">Applications</span>
 </h3>
-<p id="p-798">Exponential functions are used to model anything that grows or decays proportionately to it's current value. So for example debts or investment accrue proportionately to how much debt/investment there already is. Population is another example, the greater the population, the more reproduction there will be within that population and the greater the increase in population.  An example of decay will be the decay of a radioactive substance.  The less of it there is, the less of it there is to decay and so the slower the decay rate goes.</p>
+<p id="p-800">Exponential functions are used to model anything that grows or decays proportionately to it's current value. So for example debts or investment accrue proportionately to how much debt/investment there already is. Population is another example, the greater the population, the more reproduction there will be within that population and the greater the increase in population.  An example of decay will be the decay of a radioactive substance.  The less of it there is, the less of it there is to decay and so the slower the decay rate goes.</p>
 <article class="exercise exercise-like" id="exercise-49"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-49"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.5.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-49"><article class="exercise exercise-like"><p id="p-799">Suppose a warren of rabbits grows at an exponential rate.  In 5 weeks, there are 100 rabbits, and in 10 weeks, there were 125 rabbits.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-49"><article class="exercise exercise-like"><p id="p-801">Suppose a warren of rabbits grows at an exponential rate.  In 5 weeks, there are 100 rabbits, and in 10 weeks, there were 125 rabbits.</p>
 <ol class="decimal">
 <li id="li-322">How many rabbits were there initially?</li>
 <li id="li-323">Find a function \(R(t)\) that expresses the number of rabbits in \(t\) weeks.</li>
@@ -277,7 +275,7 @@ b\amp=4\cdot 2^{1/3}=2^{7/3}\approx 5.0396842
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-68" id="solution-68"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-68"><div class="solution solution-like">
-<p id="p-800">We let \(R(t)\) be the number of rabbits in \(t\) weeks.</p>
+<p id="p-802">We let \(R(t)\) be the number of rabbits in \(t\) weeks.</p>
 <ol class="decimal">
 <li id="li-325">We first notice that<div class="displaymath">
 \begin{align*}
@@ -299,7 +297,7 @@ b\amp =80
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-50"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-50"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.5.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-50"><article class="exercise exercise-like"><p id="p-801">Suppose the half-life of Madeupinium in 25 minutes.  Suppose that a professor acquires a sample of Madeupinium, and after an hour, there is 300g left.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-50"><article class="exercise exercise-like"><p id="p-803">Suppose the half-life of Madeupinium in 25 minutes.  Suppose that a professor acquires a sample of Madeupinium, and after an hour, there is 300g left.</p>
 <ol class="decimal">
 <li id="li-328">How much Madeupinium was there initially?</li>
 <li id="li-329">Find a function \(M(t)\) that expresses how many grams are there in \(t\) minutes.</li>
@@ -307,7 +305,7 @@ b\amp =80
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like">
-<p id="p-802">We let \(M(t)\) be the amount .</p>
+<p id="p-804">We let \(M(t)\) be the amount of Madeupinium in \(t\) minutes.</p>
 <ol class="decimal">
 <li id="li-331">We first notice that \(300=M(25)=b\cdot a^{25}\text{.}\)  We also note that whatever \(b\) is, we have that \(M(0)=b\cdot a^0=b\) and \(\frac{b}{2}=M(25)=ba^{25}\text{.}\)  Thus:<div class="displaymath">
 \begin{align*}

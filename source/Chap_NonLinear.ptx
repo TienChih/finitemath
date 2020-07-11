@@ -1,5 +1,10 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_NonLinear">
   <title>Non-Linear Functions</title>
+  <introduction>
+    <p>
+      In this chapter, we discuss several types of non-linear functions, their properties and applications.
+    </p>
+  </introduction>
   <xi:include  href="Sec_Functions.ptx"/>
   <xi:include  href="Sec_Quadratics.ptx"/>
   <xi:include  href="Sec_Polynomials.ptx"/>

@@ -180,7 +180,7 @@
     </p>
     </statement>
     <solution>
-<p> We let <m>M(t)</m> be the amount .
+<p> We let <m>M(t)</m> be the amount of Madeupinium in <m>t</m> minutes.
       <ol>
     <li>We first notice that <m>300=M(25)=b\cdot a^{25}</m>.  We also note that whatever <m>b</m> is, we have that <m>M(0)=b\cdot a^0=b</m> and <m>\frac{b}{2}=M(25)=ba^{25}</m>.  Thus:
       <md>
