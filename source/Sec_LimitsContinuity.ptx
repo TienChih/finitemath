@@ -1,12 +1,17 @@
 <section xml:id="Sec_LimitsContinuity">
   <title>Limits &amp; Continuity</title>
   <introduction>
+    In this section, we discuss the idea of <term>limits</term>, or the math about approaching something infinitesimally closely.
+    <definition>
+      <statement>
     <p>
       Informally, the limit of a function <m>\limit{x}{a} f(x)=L</m>
       (if it exists)
       is a number <m>L</m> such that when <m>f(x)</m> get's closer and closer to <m>a</m>,
       <m>f(x)</m> gets closer and closer to <m>L</m>.
     </p>
+  </statement>
+</definition>
   </introduction>
   <subsection>
     <title>The Limit</title>
@@ -34,6 +39,15 @@
       so as we see above, they both
       (the black and orange dots in the linked graph)
       both approach the same value.
+    </p>
+    <definition>
+      <statement>
+    <p>
+      We use <m>\limit{x}{a^-} f(x)</m> to denote the <term>limit of <m>f(x)</m> as <m>x</m> approaches <m>a</m> from the left.</term> Similarly <m>\limit{x}{a^+} f(x)</m> denotes the <term>limit of <m>f(x)</m> as <m>x</m> approaches <m>a</m> from the right.</term>  (If they exist).
+    </p>
+  </statement>
+</definition>
+    <p>
       So:
       <ul>
         <li>
@@ -58,8 +72,11 @@
         </li>
       </ul>
     </p>
+
+<example xml:id="ExampleLimit">
+<statement>
     <p>
-      So looking at this graph:
+      So looking at this graph of <m>y=f(x)</m>:
     </p>
     <image>
 <latex-image>
@@ -178,10 +195,180 @@
         </li>
       </ul>
     </p>
-    <p>
-      A great shorthand for determining when there is or isn't a limit is: ``<m>\limit{x}{a}f(x)=L</m> and exists if and only if
-      <m>\limit{x}{a^-}f(x)=L</m> and <m>\limit{x}{a^+}f(x)=L</m>"
+    
+  </statement>
+</example>
+
+<p>
+      A great shorthand for determining when there is or isn't a limit is: <em><m>\limit{x}{a}f(x)=L</m> and exists if and only if
+      <m>\limit{x}{a^-}f(x)=L</m> and <m>\limit{x}{a^+}f(x)=L.</m></em>
     </p>
+
+
+  <exercise>
+  <statement>
+  <p>
+    Consider the graph of <m>y=g(x)</m>:
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}[scale=.8][domain=-5:11]
+    \draw[gray!50, thin, step=1] (-5,-3) grid (11,3);
+    \draw[very thick,->] (-5,0) -- (11.1,0) node[right] {$x$};
+    \draw[very thick,->] (0,-3) -- (0,3.1) node[above] {$y$};
+
+    \foreach \x in {-4,...,10} \draw (\x,0.05) -- (\x,-0.05) node[below] {\tiny\x};
+    \foreach \y in {-2,...,2} \draw (-0.05,\y) -- (0.05,\y) node[right] {\tiny\y};
+
+    \draw[blue] (0,2) circle (3pt);
+    \draw[ blue] (0,-1) circle (3pt);
+    \draw[blue] (4,0) circle (3pt);
+    \draw[fill, blue] (0,1) circle (3pt);
+
+
+  \draw[scale=1,domain=-4:-.1,smooth,variable=\x,blue] plot ({\x},{2*cos(3.141595*\x r/6)});
+  \draw[scale=1,domain=0:3.9,smooth,variable=\x,blue] plot ({\x},{\x/4-1});
+  \draw[scale=1,domain=4.1:8,smooth,variable=\x,blue] plot ({\x},{\x/4-1});
+  \draw[scale=1,domain=8:10,smooth,variable=\x,blue] plot ({\x},{(\x-9)*(\x-9)});
+
+
+\end{tikzpicture}]]>
+</latex-image>
+    </image>
+  Find the following:
+    <ul>
+        <li>
+          <p>
+            <m>\limit{x}{0^-}g(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{0^+}g(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{0}g(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>g(0)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{4^-}g(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{4^+}g(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{4}g(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>g(4)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{8^-}g(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{8^+}g(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{8}g(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>g(8)</m>.
+          </p>
+        </li>
+      </ul>
+  </p>
+</statement>
+<solution>
+<p>
+<ul>
+        <li>
+          <p>
+            <m>\limit{x}{0^-}g(x)=2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{0^+}g(x)=-1</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{0}g(x)\text{ is undefined}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>g(0)=1</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{4^-}g(x)=0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{4^+}g(x)=0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{4}g(x)=0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>g(4)\text{ is undefined}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{8^-}g(x)=1</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{8^+}g(x)=1</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\limit{x}{8}g(x)=1</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>g(8)=1</m>.
+          </p>
+        </li>
+      </ul>
+</p>  
+</solution>  
+</exercise>
+
+
+
   </subsection>
   <subsection>
     <title>Continuity</title>
