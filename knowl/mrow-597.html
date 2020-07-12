@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-11T19:07:26-06:00    *-->
+<!--*    on 2020-07-12T07:47:25-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,13 +14,12 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-x\amp =\amp a^{\log_a(x)}\\
-\frac{d}{dx}[x]\amp =\amp \frac{d}{dx}[a^{\log_a(x)}]\\
-1\amp =\amp a^{\log_a(x)}\ln(a)\frac{d}{dx}[\log_a(x)]\\
-1\amp =\amp x\ln(a)\frac{d}{dx}[\log_a(x)]\\
-\frac{d}{dx}[\log_a(x)]\amp =\amp \frac{1}{x\ln(a)}
+\frac{d}{dx}[f(g(x))]\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h}\textcolor{blue}{\frac{g(x+h)-g(x)}{g(x+h)-g(x)}}\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}
 \end{align*}
 </div>
-<span class="incontext"><a href="DerivativeLogs.html#mjx-eqn-mrow-597">in-context</a></span>
+<span class="incontext"><a href="Sec_ChainRule.html#mjx-eqn-mrow-597">in-context</a></span>
 </body>
 </html>

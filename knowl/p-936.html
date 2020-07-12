@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-11T19:07:26-06:00    *-->
+<!--*    on 2020-07-12T07:47:25-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The proof of this is a fairly sophisticated fact and it not trivial, but you can verify it by taking the slider \(h\text{,}\) dragging it towards 0 and seeing what happens: \url{https://www.desmos.com/calculator/4uv0zgguq9}. Using this fact, we can deduce:</p>
+<p>So, to compute the actual derivative of \(a^x\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[e^x]\amp =\amp \limit{h}{0}\frac{e^{x+h}-e^x}{h}\\
-\amp =\amp \limit{h}{0}\frac{e^xe^h-e^x}{h}\\
-\amp =\amp e^x\limit{h}{0}\frac{e^h-1}{h}\\
-\amp =\amp e^x\cdot1=e^x\text{.}
+\frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
+\amp =\amp \frac{d}{dx}[e^{\ln(a)x}]\\
+\amp =\amp e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }\\
+\amp =\amp e^{\ln(a)x}\ln(a)\cdot1\\
+\amp =\amp a^x\ln(a)\text{.}
 \end{align*}
 </div>
 <span class="incontext"><a href="DerivativeExp.html#p-936">in-context</a></span>

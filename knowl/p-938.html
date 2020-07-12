@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-11T19:07:26-06:00    *-->
+<!--*    on 2020-07-12T07:47:25-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So, to compute the actual derivative of \(a^x\text{:}\)</p>
+<p>You can see it graphically verified here: \url{https://www.desmos.com/calculator/u89fjxup7q}. For general \(\log_a(x)\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
-\amp =\amp \frac{d}{dx}[e^{\ln(a)x}]\\
-\amp =\amp e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }\\
-\amp =\amp e^{\ln(a)x}\ln(a)\cdot1\\
-\amp =\amp a^x\ln(a)\text{.}
+x\amp =\amp a^{\log_a(x)}\\
+\frac{d}{dx}[x]\amp =\amp \frac{d}{dx}[a^{\log_a(x)}]\\
+1\amp =\amp a^{\log_a(x)}\ln(a)\frac{d}{dx}[\log_a(x)]\\
+1\amp =\amp x\ln(a)\frac{d}{dx}[\log_a(x)]\\
+\frac{d}{dx}[\log_a(x)]\amp =\amp \frac{1}{x\ln(a)}\text{.}
 \end{align*}
 </div>
-<span class="incontext"><a href="DerivativeExp.html#p-938">in-context</a></span>
+<span class="incontext"><a href="DerivativeLogs.html#p-938">in-context</a></span>
 </body>
 </html>

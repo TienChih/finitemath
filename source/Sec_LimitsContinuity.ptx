@@ -383,26 +383,28 @@
         </statement>
      </definition>
      
-     <example>
+    <example>
      <statement>
      <p>
      In <xref ref="ExampleLimit"/>, <m>f(x)</m> is continuous at each <m>x</m> except for <m>x=2, 4</m>, since the limits are either undefined or don't agree with the function at these values.
      </p>
      </statement>
    </example>
-
+ 
    <exercise>
      <statement>
      <p>
-     In <xref ref="ExerciseLimit"/>, for what values of <m>x</m> is <m>g(x)</m> continuous?
+     In <xref ref="ExerciseLimit"/>, identify when <m>g(x)</m> is continuous.
      </p>
      </statement>
      <solution>
       <p>
-        We can see that <m>g(x)</m> is continuous everywhere but <m>x=0, 4</m>.  The limit is undefined at <m>x=0</m> and <m>g(x)</m> isn't defined for <m>x=4</m>.
-      </p>
-    </solution>
+        We can see that <m>g(x)</m> is continuous everywhere but at <m>x=0,4</m>.  We note that <m>g(x)</m> has no defined limit at <m>x=0</m>, and <m>g(x)</m> is undefined when <m>x-4</m>.
+       </p>
+      </solution>  
    </exercise>
+
+   
 
     
   </subsection>

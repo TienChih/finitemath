@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-11T19:07:26-06:00    *-->
+<!--*    on 2020-07-12T07:47:24-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,16 +14,12 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-Q(x)\amp =\amp \frac{f(x)}{g(x)}\\
-Q(x)g(x)\amp =\amp f(x),\ \text{ now we can differentiate both sides }\\
-\frac{d}{dx}[Q(x)g(x)]\amp =\amp f'(x),\ \text{ then by the product rule: }\\
-Q'(x)g(x)+Q(x)g'(x)\amp =\amp f'(x)\\
-Q'(x)g(x)\amp =\amp f'(x)-Q(x)g'(x),\ \text{then recall that  \(Q(x)=\frac{f(x)}{g(x)}\)}\\
-Q'(x)g(x)\amp =\amp f'(x)-\frac{f(x)g'(x)}{g(x)}\\
-Q'(x)g(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)}\\
-Q'(x)\amp =\amp \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}
+\frac{d}{dx}[a(f)x)+bg(x)]\amp =\amp \limit{h}{0}\frac{af(x+h)+bg(x+h)-(af(x)-bg(x))}{h}\\
+\amp =\amp \limit{h}{0}\frac{af(x+h)-af(x)}{h}+\limit{h}{0}\frac{bg(x+h)-bg(x)}{h}\\
+\amp =\amp a\limit{h}{0}\frac{f(x+h)-f(x)}{h}+b\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp af'(x)+bg'(x)
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_QuotientRule.html#mjx-eqn-mrow-554">in-context</a></span>
+<span class="incontext"><a href="Sec_RulesofDerivative.html#mjx-eqn-mrow-554">in-context</a></span>
 </body>
 </html>

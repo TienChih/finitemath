@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-11T19:07:00-06:00    *-->
+<!--*    on 2020-07-12T07:47:01-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -177,18 +177,123 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_AvgRoC"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Average rates of change</span>
 </h2>
-<p id="p-888">Consider a rocket that is launched into the air and has height \(f(x)=-5x^2+20x\) meters in \(x\) seconds. \url{https://www.desmos.com/calculator/1rwsdsbcm9}. How fast is the rocket traveling when it's launched (\(x=0\) seconds)?</p>
-<p id="p-889">Turns out, it's not so easy to think about what this is, we don't typically think about speeds in terms of instantaneous action. Our methods of measuring speed reflects this, it's always stuff like meters <dfn class="terminology">PER SECOND</dfn>, miles <dfn class="terminology">PER HOUR</dfn>, in other words speed is some change in distance <dfn class="terminology">OVER TIME</dfn> and that period of time is not typically 0.</p>
-<p id="p-890">So what now? Lets start by asking an easier question, what is the average speed of the rocket over the first 3 seconds?</p>
-<p id="p-891">It's best in a scenario like this to NOT overthink the underlying problem. At 0 seconds, you're \(f(0)=-5(0)^2+20(0)=0\) meters off the ground. After 3 seconds you are \(f(3)=-5(3^2)+20(3)=15\) meters off the ground. So you rose by 15 meters in 3 seconds? You're aveerage speed must be 5 meters per second. \url{https://www.desmos.com/calculator/6k61owwnrd}.</p>
-<p id="p-892">In fact: <dfn class="terminology">The average rate of change of a function \(f(x)\) over the interval \([a,b]\) is \(m=\frac{f(b)-f(a)}{b-a}\text{.}\)</dfn> This is just the slope of the line connecting \((a,f(a))\) and \((b,f(b))\text{.}\)</p>
-<p id="p-893">Following this idea, the average velocity of our rocket over the 1st 2 seconds is: \(m=\frac{f(2)-f(0)}{2-0}=\frac{20}{2}=10\) meters per second. \url{https://www.desmos.com/calculator/ihauynuflo}</p>
-<p id="p-894">The average velocity of our rocket over the 1st second is: \(m=\frac{f(1)-f(0)}{1-0}=\frac{15}{1}=15\) meters per second. \url{https://www.desmos.com/calculator/jce0fd1bsr}</p>
-<p id="p-895">The average velocity of our rocket over the 1st half second is: \(m=\frac{f(.5)-f(0)}{.5-0}=\frac{8.75}{.5}=17.5\) meters per second. \url{https://www.desmos.com/calculator/xpxlltf8f5}</p>
-<p id="p-896">The average velocity of our rocket over the 1st quarter second is: \(m=\frac{f(.25)-f(0)}{.25-0}=\frac{4.6875}{.25}=18.75\) meters per second. \url{https://www.desmos.com/calculator/74kpvz17c5}</p>
-<p id="p-897">The average velocity of our rocket over the 1st tenth of a second is: \(m=\frac{f(.1)-f(0)}{.1-0}=\frac{1.95}{.1}=19.5\) meters per second. \url{https://www.desmos.com/calculator/qyvtzmyg8k}</p>
-<p id="p-898">The average velocity of our rocket over the 1st hundreth of a second is: \(m=\frac{f(.01)-f(0)}{.01-0}=\frac{.1995}{.1}=19.95\) meters per second. \url{https://www.desmos.com/calculator/hrawtifwdw}</p>
-<p id="p-899">And it does seem like these numbers are getting closer and closer to 20 meters per second as \(b\) gets closer to 0. But if I plug in \(0\) for \(b\text{,}\) I get an undefined \(0/0\) fraction. Oh, if only there were some concept in mathematics to describe the values of a function as your inputs slowly approach a given value.........</p></section></div></main>
+<section class="introduction" id="introduction-29"><p id="p-888">Linear functions have a coinstant rate of change, the slope.  But as we have seen, other functions can increase, or decrease, at varying rates. Can we, looking at an interval of time, determine the <em class="emphasis">average</em> rate of change of a function?</p></section><section class="subsection" id="subsection-64"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.2.1</span> <span class="title">Average Rate of Change as a Slope</span>
+</h3>
+<p id="p-889">Consider a rocket that is launched into the air and has height \(f(x)=-5x^2+20x\) meters in \(x\) seconds. <iframe src="https://www.desmos.com/calculator/ju4uz0bnhg" id="interactive-133" width="600" height="600"></iframe> How fast is the rocket traveling when it's launched (\(x=0\) seconds)?</p>
+<p id="p-890">Turns out, it's not so easy to think about what this is. We don't typically consider speeds in terms of instantaneous action. Our methods of measuring speed reflects this, units of speed or velocity take the form of  meters <dfn class="terminology">per second</dfn>, miles <dfn class="terminology">per hour</dfn>, in other words speed is some change in distance <dfn class="terminology">per time unit</dfn> and that unit of time is not typically zero.</p>
+<p id="p-891">So what now? Lets start by asking an easier question, what is the average speed of the rocket over the first 3 seconds?</p>
+<p id="p-892">It's best in a scenario like this to <em class="emphasis">not</em> overthink the underlying problem. At 0 seconds, the rocket is \(f(0)=-5(0)^2+20(0)=0\) meters off the ground. After 3 seconds it is now \(f(3)=-5(3^2)+20(3)=15\) meters off the ground. So if the rocket  rose by 15 meters in 3 seconds? You're average speed must be <em class="emphasis">5 meters per second</em>. <iframe src="https://www.desmos.com/calculator/sw2w61jkcb" id="interactive-134" width="600" height="600"></iframe></p>
+<article class="definition definition-like" id="definition-13"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-893">The <dfn class="terminology">average rate of change</dfn> of a function \(f(x)\) over the interval \([a,b]\) is:</p>
+<div class="displaymath">
+\begin{equation*}
+m=\frac{f(b)-f(a)}{b-a}
+\end{equation*}
+</div>
+<p data-braille="continuation">This is just the slope of the line connecting \((a,f(a))\) and \((b,f(b))\text{.}\)</p></article><article class="example example-like" id="example-68"><a data-knowl="" class="id-ref original" data-refid="hk-example-68"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-68"><article class="example example-like"><p id="p-894">In our rocket example above, where the height is \(f(x)=-5x^2+20x\) meters in \(x\) seconds, find the rate of change of the rocket over the following periods of time:</p>
+<ul class="disc">
+<li id="li-395">The interval \([0,2]\text{.}\)</li>
+<li id="li-396">The interval \([0,1]\text{.}\)</li>
+<li id="li-397">The interval \([0,0.5]\text{.}\)</li>
+<li id="li-398">The interval \([1,2]\text{.}\)</li>
+<li id="li-399">The interval \([1,1.25]\text{.}\)</li>
+<li id="li-400">The interval \([1,1+h]\text{.}\)</li>
+<li id="li-401">The interval \([a,a+h]\text{.}\)</li>
+</ul>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-75" id="solution-75"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-75"><div class="solution solution-like">
+<p id="p-895">We can use either the Desmos calculator above, or algebra:</p>
+<ul class="disc">
+<li id="li-402">The average rate of change of \(f(x)\) over the interval \([0,2]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(2)-f(0)}{2-0}\amp = \frac{-5(2^2)+20(2)-(-5(0^2)+20(0))}{2}\\
+\amp = \frac{20-0}{2}\\
+\amp = 10.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 0 and 2 seconds is 10 m/s.</li>
+<li id="li-403">The average rate of change of \(f(x)\) over the interval \([0,1]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(1)-f(0)}{2-0}\amp = \frac{-5(1^2)+20(1)-(-5(0^2)+20(0))}{1}\\
+\amp = \frac{15-0}{1}\\
+\amp = 15.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 0 and 1 seconds is 15 m/s.</li>
+<li id="li-404">The average rate of change of \(f(x)\) over the interval \([0,0.5]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(0.5)-f(0)}{0.5-0}\amp = \frac{-5(0.5^2)+20(0.5)-(-5(0^2)+20(0))}{0.5}\\
+\amp = \frac{8.75-0}{0.5}\\
+\amp = 17.5.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 0 and 0.5 seconds is 17.5 m/s.</li>
+<li id="li-405">The average rate of change of \(f(x)\) over the interval \([0,2]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(2)-f(1)}{2-1}\amp = \frac{-5(2^2)+20(2)-(-5(1^2)+20(1))}{1}\\
+\amp = \frac{20-15}{1}\\
+\amp = 5.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 1 and 2 seconds is 5 m/s.</li>
+<li id="li-406">The average rate of change of \(f(x)\) over the interval \([1,1.25]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(1.25)-f(1)}{1.25-1}\amp = \frac{-5(1.25^2)+20(1.25)-(-5(1^2)+20(1))}{0.25}\\
+\amp = \frac{17.1875-15}{0.25}\\
+\amp = 8.75.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 1 and 1.25 seconds is 8.75 m/s.</li>
+<li id="li-407">The average rate of change of \(f(x)\) over the interval \([1,1+h]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(1+h)-f(1)}{1+h-1}\amp = \frac{-5((1+h)^2)+20(1+h)-(-5(1^2)+20(1))}{h}\\
+\amp = \frac{-5(h^2+2h+1)+20(1+h)-15}{h}\\
+\amp = \frac{-5h^2-10h-5+20+20h-15}{h}\\
+\amp = \frac{-5h^2+10h}{h}=\frac{(-5h+10)h}{h}\\
+\amp = -5h+10.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 1 and \(1+h\) seconds is \(-5h+10\) m/s.</li>
+<li id="li-408">The average rate of change of \(f(x)\) over the interval \([a,a+h]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(a+h)-f(a)}{a+h-a}\amp = \frac{-5((a+h)^2)+20(a+h)-(-5(a^2)+20(a))}{h}\\
+\amp = \frac{-5(a^2+2ah+h^2)+20(a+h)-(-5a^2+20a)}{h}\\
+\amp = \frac{-5a^2-10ah-5h^2+20a+20h+5a^2-20a}{h}\\
+\amp = \frac{-10ah-5h^2+20h}{h}=\frac{(-10a-5h+20)h}{h}\\
+\amp = -10a-5h+20.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between \(a\) and \(a+h\) seconds is \(-10a-5h+20\) m/s.</li>
+</ul>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-56"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-56"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-56"><article class="exercise exercise-like"><p id="p-896">Consider a restaurant, whose weekly revenut, \(t\) weeks after opening is \(R(t)=60-40e^{-0.05t}\) thousand dollars.  Find the average rates of change in weekly revenue over the following periods of time:</p>
+<ul class="disc">
+<li id="li-409">The interval \([1,3]\text{.}\)</li>
+<li id="li-410">The interval \([2,2.5]\text{.}\)</li>
+</ul>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-76"><div class="solution solution-like">
+<p id="p-897">We can use either the Desmos calculator above, or algebra:</p>
+<ul class="disc">
+<li id="li-411">The average rate of change of \(R(t)\) over the interval \([1,3]\) is<div class="displaymath">
+\begin{align*}
+\frac{R(3)-R(1)}{3-1}\amp = \frac{60-40e^{-0.05(3)}-(60-40e^{-0.05(1)})}{2}\\
+\amp = \frac{-40e^{-0.05(3)}+40e^{-0.05(1)}}{2}\\
+\amp\approx 1.81042896.
+\end{align*}
+</div>So the average rate of change in the weekly revenue between 1 and 3 weeks is about \(\$1810.43\text{.}\)</li>
+<li id="li-412">The average rate of change of \(R(t)\) over the interval \([2,2.5]\) is<div class="displaymath">
+\begin{align*}
+\frac{R(2.5)-R(2)}{2.5-2}\amp = \frac{60-40e^{-0.05(2.5)}-(60-40e^{-0.05(2)})}{0.5}\\
+\amp = \frac{-40e^{-0.05(2.5)}+40e^{-0.05(2)}}{0.5}\\
+\amp\approx 1.78724123611.
+\end{align*}
+</div>So the average rate of change in the weekly revenue between 2 and 2.5 weeks is about \(\$1787.24\text{.}\)</li>
+</ul>
+<p data-braille="continuation">We can see these average rates of change below: <iframe src="https://www.desmos.com/calculator/ieqgfjjnfl" id="interactive-135" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div></section></section></div></main>
 </div>
 </body>
 </html>

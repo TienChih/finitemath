@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-11T19:07:01-06:00    *-->
+<!--*    on 2020-07-12T07:47:01-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -177,7 +177,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_ChainRule"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.8</span> <span class="title">Chain Rule</span>
 </h2>
-<section class="introduction" id="introduction-31"><p id="p-930">We've so far covered sums products and quotients of functions, so how about composition? The <dfn class="terminology">chain rule</dfn> is: \(\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x)\text{.}\) To see why:</p>
+<section class="introduction" id="introduction-32"><p id="p-928">We've so far covered sums products and quotients of functions, so how about composition? The <dfn class="terminology">chain rule</dfn> is: \(\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x)\text{.}\) To see why:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[f(g(x))]\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
@@ -186,17 +186,17 @@ MathJax.Hub.Config({
 \amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}
 \end{align*}
 </div>
-<p id="p-931">We're going tom play a second trick here, we are goin to let \(k=g(x+h)-g(x)\text{,}\) we also note then that \(g(x+h+=g(x)+k\text{.}\) Also note that when \(h\to 0\) It follows that \(k=g(x+h)-g(x)\to g(x+0)-g(x)=0\text{.}\) So we can make some replacements:</p>
+<p id="p-929">We're going tom play a second trick here, we are goin to let \(k=g(x+h)-g(x)\text{,}\) we also note then that \(g(x+h+=g(x)+k\text{.}\) Also note that when \(h\to 0\) It follows that \(k=g(x+h)-g(x)\to g(x+0)-g(x)=0\text{.}\) So we can make some replacements:</p>
 <div class="displaymath">
 \begin{align*}
 \amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
 \amp =\amp \limit{\textcolor{red}{k}}{0}\frac{f(\textcolor{red}{g(x)+k})-f(g(x))}{\textcolor{red}{k}}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
 \amp =\amp f'(g(x))g'(x)
 \end{align*}
-</div></section><section class="subsection" id="subsection-66"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-67"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.8.1</span> <span class="title">Examples</span>
 </h3>
-<p id="p-932">Consider \(f(x)=\sqrt{x^2+1}\text{.}\) We can think of this as \(f(x)=g(h(x))\) where \(g(x)=\sqrt{x}=x^{1/2}, h(x)=x^2+1\text{.}\) So \(g'(x)=\frac{1}{2}x^{-1/2}, h'(x)=2x\) and:</p>
+<p id="p-930">Consider \(f(x)=\sqrt{x^2+1}\text{.}\) We can think of this as \(f(x)=g(h(x))\) where \(g(x)=\sqrt{x}=x^{1/2}, h(x)=x^2+1\text{.}\) So \(g'(x)=\frac{1}{2}x^{-1/2}, h'(x)=2x\) and:</p>
 <div class="displaymath">
 \begin{align*}
 f'(x)\amp =\amp \frac{d}{dx}[\sqrt{x^2+1}]\\
@@ -206,7 +206,7 @@ f'(x)\amp =\amp \frac{d}{dx}[\sqrt{x^2+1}]\\
 \amp =\amp \frac{x}{\sqrt{x^2+1}}\text{.}
 \end{align*}
 </div>
-<p id="p-933">Another example, lets consider the derivative of \(y=(x^2+100)^{300}\text{.}\) We COULD expand this polynomial out, but lets agree no one wants that. On the other hand by the chain rule:</p>
+<p id="p-931">Another example, lets consider the derivative of \(y=(x^2+100)^{300}\text{.}\) We COULD expand this polynomial out, but lets agree no one wants that. On the other hand by the chain rule:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{dy}{dx}\amp =\amp \frac{d}{dx}[(x^2+100)^{300}],\ \text{ so by the chain rule: }\\

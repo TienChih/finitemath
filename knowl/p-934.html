@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-11T19:07:26-06:00    *-->
+<!--*    on 2020-07-12T07:47:25-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>When we graph an exponential function, say an increasing one \(f(x)=a^x, a&gt;1\text{,}\) we imagine a function that curves up towards infinity on the right and shallows out towards 0 on the left \url{https://www.desmos.com/calculator/51zxitu9xc}. What then should it's derivatives look like? Well it seems like the slopes are initially shallow, and then as we go forward the slopes start to increase, and they get progressively and progressively larger. In other words <dfn class="terminology">the derivative is also an exponential function!</dfn> \url{https://www.desmos.com/calculator/etbmc1ttzo}.</p>
+<p>The proof of this is a fairly sophisticated fact and it not trivial, but you can verify it by taking the slider \(h\text{,}\) dragging it towards 0 and seeing what happens: \url{https://www.desmos.com/calculator/4uv0zgguq9}. Using this fact, we can deduce:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{d}{dx}[e^x]\amp =\amp \limit{h}{0}\frac{e^{x+h}-e^x}{h}\\
+\amp =\amp \limit{h}{0}\frac{e^xe^h-e^x}{h}\\
+\amp =\amp e^x\limit{h}{0}\frac{e^h-1}{h}\\
+\amp =\amp e^x\cdot1=e^x\text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="DerivativeExp.html#p-934">in-context</a></span>
 </body>
 </html>
