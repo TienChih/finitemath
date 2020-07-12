@@ -205,7 +205,7 @@
     </p>
 
 
-  <exercise>
+  <exercise xml:id="ExerciseLimit">
   <statement>
   <p>
     Consider the graph of <m>y=g(x)</m>:
@@ -373,23 +373,37 @@
   <subsection>
     <title>Continuity</title>
     <p>
-      I'm not going to overblow continuity with to much verbiage here since we intuitive understand what it means to be continuous,
-      it just means that all the points
-      <q>connect</q>. So what does that mean for us above?
-      Out of the values <m>x=2,4,6,8</m>,
-      where is <m>x</m> continuous?
+      Most people have an intuitive understanding of what it means for a function to be continuous, that it doesn't have any jumps, and the curve of the function <q>connect</q>.  This leads to a bit more formal of a definition:
     </p>
-    <p>
-      It seems like it's only 6 where it's continuous. 2 and 4 have jump discontinuities,
-      and <m>f(x)</m> isn't even defined at <m>x=8</m> so how could it be continuous there?
-      So the definition of continuous is as intuitive as we would like:
-    </p>
-    <p>
-      <m>f(x)</m> is continuous at <m>a</m> if and only of <m>f(a)=\limit{x}{a} f(x)</m>.
-      So as in above, out of the 4 points we looked at,
-      <m>x=6</m> is the only place where everything
-      <q>behaves properly</q>
-      and we get continuity.
-    </p>
+      <definition>
+        <statement>
+          <p>
+            A function <m>f(x)</m> is <term>continuous at <m>x=a</m></term> if <m>\limit{x}{a}f(x)=f(a).</m>  It is <term>continuous</term> if it is continuous at each <m>x</m> in it's domain.
+          </p>
+        </statement>
+     </definition>
+     
+     <example>
+     <statement>
+     <p>
+     In <xref ref="ExampleLimit"/>, <m>f(x)</m> is continuous at each <m>x</m> except for <m>x=2, 4</m>, since the limits are either undefined or don't agree with the function at these values.
+     </p>
+     </statement>
+   </example>
+
+   <exercise>
+     <statement>
+     <p>
+     In <xref ref="ExerciseLimit"/>, for what values of <m>x</m> is <m>g(x)</m> continuous?
+     </p>
+     </statement>
+     <solution>
+      <p>
+        We can see that <m>g(x)</m> is continuous everywhere but <m>x=0, 4</m>.  The limit is undefined at <m>x=0</m> and <m>g(x)</m> isn't defined for <m>x=4</m>.
+      </p>
+    </solution>
+   </exercise>
+
+    
   </subsection>
 </section>
