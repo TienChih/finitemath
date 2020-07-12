@@ -399,12 +399,97 @@
      </statement>
      <solution>
       <p>
-        We can see that <m>g(x)</m> is continuous everywhere but at <m>x=0,4</m>.  We note that <m>g(x)</m> has no defined limit at <m>x=0</m>, and <m>g(x)</m> is undefined when <m>x-4</m>.
+        We can see that <m>g(x)</m> is continuous everywhere but at <m>x=0,4</m>.  We note that <m>g(x)</m> has no defined limit at <m>x=0</m>, and <m>g(x)</m> is undefined when <m>x=4</m>.
        </p>
       </solution>  
    </exercise>
 
-   
+   <example>
+    <statement>
+      <p>
+    For what values of <m>x</m> is <me>f(x)=\begin{cases} 2^x \amp x\lt 0 \\ x+1 \amp 0\leq x \leq 4 \\ \sqrt{x} \amp x>4\end{cases}</me>
+    continuous?
+  </p>
+</statement>
+<solution>
+  <p>
+    We note that we only really need to check <m>x=0</m> and <m>x=4</m>.  At <m>x=0</m>, we have <me> \limit{x}{0^-} f(x)=2^0=1, \limit{x}{0^+} f(x)=0+1=1.</me>.  Thus <m>\limit{x}{0}f(x)=1</m>.  Since <m>f(0)=0+1=1</m> we have that <m>f(x)</m> is continuous at <m>x=0</m>.
+  </p>  
+  <p>
+    On the other hand, at <m>x=4</m>, we have <me> \limit{x}{4^-} f(x)=4+1=5, \limit{x}{4^+} f(x)=\sqrt{4}=2.</me>.  Thus <m>\limit{x}{4}f(x)</m> is undefined and  <m>f(x)</m> is <em>not</em> continuous at <m>x=4</m>.
+  </p>  
+  <p>
+    We observe this visually:
+     <interactive desmos="io24ldyfpn" />
+  </p>   
+</solution>  
+</example>
+
+
+<example>
+    <statement>
+      <p>
+    For what value of <m>k</m> is <me>g(x)=\begin{cases} -x^2+4 \amp x\leq 1 \\ kc \amp x>1\end{cases}</me>
+    continuous?
+  </p>
+</statement>
+<solution>
+  <p>
+    We note that <m>\limit{x}{1^-}g(x)=g(1)=-1+4=3</m>.  We also note that <m>\limit{x}{1^+}g(x)=k(1)=k</m>.  So for <m>g(x)</m> to be continuous at <m>x=1</m>, we need <me>3=\limit{x}{1^+}g(x)=k.</me>  Thus <m>k=3</m>.
+  </p>  
+  
+  <p>
+    We observe this visually:
+     <interactive desmos="kdac8jjpzv" />
+     Slide the value of <m>k</m> to see how other values of <m>k</m> will <em>not</em> give you a continuous function.
+  </p>   
+</solution>  
+</example>
+
+
+
+
+<exercise>
+    <statement>
+      <p>
+    For what values of <m>x</m> is <me>a(x)=\begin{cases} x \amp x\lt 1 \\ x^2+1 \amp 1\leq x \lt 3 \\ 2^x \amp x\geq 3\end{cases}</me>
+    continuous?
+  </p>
+</statement>
+<solution>
+  <p>
+    We note that we only really need to check <m>x=1</m> and <m>x=3</m>.  At <m>x=1</m>, we have <me> \limit{x}{1^-} a(x)=1, \limit{x}{1^+} a(x)=1^2+1=2.</me>.  Thus <m>\limit{x}{1}a(x)</m> is undefined and <m>a(x)</m> is <em>not</em> continuous at <m>x=1</m>.  
+  </p>  
+  <p>
+    At <m>x=3</m>, we have <me> \limit{x}{3^-} a(x)=3^2+1=10, \limit{x}{3^+} a(x)=2^3=8.</me>  Thus <m>\limit{x}{3}</m> is undefined and  <m>f(x)</m> is <em>not</em> continuous at <m>x=3</m>.
+  </p>  
+  <p>
+    We observe this visually:
+     <interactive desmos="zcv7owo4du" />
+  </p>   
+</solution>  
+</exercise>
+
+
+<exercise>
+    <statement>
+      <p>
+    For what value of <m>k</m> is <me>b(x)=\begin{cases} 2^x \amp x\lt 2 \\ -x+k \amp x\geq2\end{cases}</me>
+    continuous?
+  </p>
+</statement>
+<solution>
+  <p>
+    We note that <m>\limit{x}{2^-}b(x)=2^2=4</m>.  We also note that <m>\limit{x}{2^+}b(x)=b(2)=-(2)+k=-2+k</m>.  So for <m>b(x)</m> to be continuous at <m>x=2</m>, we need <me>4=\limit{x}{2^+}b(x)=b(2)=-2+k.</me>  Thus <m>k=6</m>.
+  </p>  
+  
+  <p>
+    We observe this visually:
+     <interactive desmos="8ajqy7ful8" />
+     Slide the value of <m>k</m> to see how other values of <m>k</m> will <em>not</em> give you a continuous function.
+  </p>   
+</solution>  
+</exercise>
 
     
   </subsection>

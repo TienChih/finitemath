@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T07:47:25-06:00    *-->
+<!--*    on 2020-07-12T10:47:06-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>One last one, let \(h(x)=2^{\frac{x}{x+1}}\)</p>
+<p>We've so far covered sums products and quotients of functions, so how about composition? The <dfn class="terminology">chain rule</dfn> is: \(\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x)\text{.}\) To see why:</p>
 <div class="displaymath">
 \begin{align*}
-h'(x)\amp =\amp \frac{d}{dx}[2^{\frac{x}{x+1}}]\\
-\amp =_{CR}\amp 2^{\frac{x}{x+1}}\ln(2)\frac{d}{dx}[\frac{x}{x+1}]\\
-\amp =_{QR}\amp 2^{\frac{x}{x+1}}\ln(2)\frac{(x+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x+1]}{(x+1)^2}\\
-\amp =\amp \frac{2^{\frac{x}{x+1}}\ln(2)}{(x+1)^2}
+\frac{d}{dx}[f(g(x))]\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h}\textcolor{blue}{\frac{g(x+h)-g(x)}{g(x+h)-g(x)}}\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}\\
+\amp =\amp \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}
 \end{align*}
 </div>
-<span class="incontext"><a href="DerivativeLogs.html#p-942">in-context</a></span>
+<span class="incontext"><a href="Sec_ChainRule.html#p-942">in-context</a></span>
 </body>
 </html>

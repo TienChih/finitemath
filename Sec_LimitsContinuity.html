@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T07:47:00-06:00    *-->
+<!--*    on 2020-07-12T10:46:40-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -274,7 +274,105 @@ MathJax.Hub.Config({
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.1.7</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-55"><article class="exercise exercise-like"><p id="p-886">In <a class="xref" data-knowl="./knowl/ExerciseLimit.html" title="Checkpoint 7.1.4">Checkpoint 7.1.4</a>, identify when \(g(x)\) is continuous.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-74" id="solution-74"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-74"><div class="solution solution-like"><p id="p-887">We can see that \(g(x)\) is continuous everywhere but at \(x=0,4\text{.}\)  We note that \(g(x)\) has no defined limit at \(x=0\text{,}\) and \(g(x)\) is undefined when \(x-4\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-74" id="solution-74"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-74"><div class="solution solution-like"><p id="p-887">We can see that \(g(x)\) is continuous everywhere but at \(x=0,4\text{.}\)  We note that \(g(x)\) has no defined limit at \(x=0\text{,}\) and \(g(x)\) is undefined when \(x=4\text{.}\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-68"><a data-knowl="" class="id-ref original" data-refid="hk-example-68"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.8</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-68"><article class="example example-like"><p id="p-888">For what values of \(x\) is</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)=\begin{cases} 2^x \amp x\lt 0 \\ x+1 \amp 0\leq x \leq 4 \\ \sqrt{x} \amp x&gt;4\end{cases}
+\end{equation*}
+</div>
+<p data-braille="continuation">continuous?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-75" id="solution-75"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-75"><div class="solution solution-like">
+<p id="p-889">We note that we only really need to check \(x=0\) and \(x=4\text{.}\)  At \(x=0\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\limit{x}{0^-} f(x)=2^0=1, \limit{x}{0^+} f(x)=0+1=1.\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus \(\limit{x}{0}f(x)=1\text{.}\)  Since \(f(0)=0+1=1\) we have that \(f(x)\) is continuous at \(x=0\text{.}\)</p>
+<p id="p-890">On the other hand, at \(x=4\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\limit{x}{4^-} f(x)=4+1=5, \limit{x}{4^+} f(x)=\sqrt{4}=2.\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus \(\limit{x}{4}f(x)\) is undefined and  \(f(x)\) is <em class="emphasis">not</em> continuous at \(x=4\text{.}\)</p>
+<p id="p-891">We observe this visually: <iframe src="https://www.desmos.com/calculator/io24ldyfpn" id="interactive-133" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-69"><a data-knowl="" class="id-ref original" data-refid="hk-example-69"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.9</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-69"><article class="example example-like"><p id="p-892">For what value of \(k\) is</p>
+<div class="displaymath">
+\begin{equation*}
+g(x)=\begin{cases} -x^2+4 \amp x\leq 1 \\ kc \amp x&gt;1\end{cases}
+\end{equation*}
+</div>
+<p data-braille="continuation">continuous?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-76"><div class="solution solution-like">
+<p id="p-893">We note that \(\limit{x}{1^-}g(x)=g(1)=-1+4=3\text{.}\)  We also note that \(\limit{x}{1^+}g(x)=k(1)=k\text{.}\)  So for \(g(x)\) to be continuous at \(x=1\text{,}\) we need</p>
+<div class="displaymath">
+\begin{equation*}
+3=\limit{x}{1^+}g(x)=k.
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus \(k=3\text{.}\)</p>
+<p id="p-894">We observe this visually: <iframe src="https://www.desmos.com/calculator/kdac8jjpzv" id="interactive-134" width="600" height="600"></iframe> Slide the value of \(k\) to see how other values of \(k\) will <em class="emphasis">not</em> give you a continuous function.</p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-56"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-56"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.1.10</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-56"><article class="exercise exercise-like"><p id="p-895">For what values of \(x\) is</p>
+<div class="displaymath">
+\begin{equation*}
+a(x)=\begin{cases} x \amp x\lt 1 \\ x^2+1 \amp 1\leq x \lt 3 \\ 2^x \amp x\geq 3\end{cases}
+\end{equation*}
+</div>
+<p data-braille="continuation">continuous?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-77" id="solution-77"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-77"><div class="solution solution-like">
+<p id="p-896">We note that we only really need to check \(x=1\) and \(x=3\text{.}\)  At \(x=1\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\limit{x}{1^-} a(x)=1, \limit{x}{1^+} a(x)=1^2+1=2.\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus \(\limit{x}{1}a(x)\) is undefined and \(a(x)\) is <em class="emphasis">not</em> continuous at \(x=1\text{.}\)</p>
+<p id="p-897">At \(x=3\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\limit{x}{3^-} a(x)=3^2+1=10, \limit{x}{3^+} a(x)=2^3=8.\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus \(\limit{x}{3}\) is undefined and  \(f(x)\) is <em class="emphasis">not</em> continuous at \(x=3\text{.}\)</p>
+<p id="p-898">We observe this visually: <iframe src="https://www.desmos.com/calculator/zcv7owo4du" id="interactive-135" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-57"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-57"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.1.11</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-57"><article class="exercise exercise-like"><p id="p-899">For what value of \(k\) is</p>
+<div class="displaymath">
+\begin{equation*}
+b(x)=\begin{cases} 2^x \amp x\lt 2 \\ -x+k \amp x\geq2\end{cases}
+\end{equation*}
+</div>
+<p data-braille="continuation">continuous?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-78" id="solution-78"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-78"><div class="solution solution-like">
+<p id="p-900">We note that \(\limit{x}{2^-}b(x)=2^2=4\text{.}\)  We also note that \(\limit{x}{2^+}b(x)=b(2)=-(2)+k=-2+k\text{.}\)  So for \(b(x)\) to be continuous at \(x=2\text{,}\) we need</p>
+<div class="displaymath">
+\begin{equation*}
+4=\limit{x}{2^+}b(x)=b(2)=-2+k.
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus \(k=6\text{.}\)</p>
+<p id="p-901">We observe this visually: <iframe src="https://www.desmos.com/calculator/8ajqy7ful8" id="interactive-136" width="600" height="600"></iframe> Slide the value of \(k\) to see how other values of \(k\) will <em class="emphasis">not</em> give you a continuous function.</p>
+</div></div>
 </div></article></div></section></section></div></main>
 </div>
 </body>
