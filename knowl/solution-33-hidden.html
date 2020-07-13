@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:18-06:00    *-->
+<!--*    on 2020-07-13T15:04:31-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,15 +12,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>We're given \(P=1000, A=2000, r=0.12\text{.}\)  Thus we have:</p>
+<p>Let's define the following:</p>
+<ul class="disc">
+<li>\(s=\)"\(A, B\) are the same point."</li>
+<li>\(z=\)"The distance between \(A, B\) is zero."</li>
+<li>\(\ell=\)"There is exactly one line cointaining both \(A\) and \(B\text{.}\)"</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li>\(\displaystyle s\to z\)</li>
+<li>\(\displaystyle \sim s \to \ell\)</li>
+<li>\(\displaystyle \sim\ell\)</li>
+</ul>
+<p data-braille="continuation">Thus we can proceed as follows:</p>
 <div class="displaymath">
-\begin{align*}
-A\amp = P+Prn\\
-2000\amp = 1000+(1000)(.12)n\\
-1000\amp = 120n\\
-n\amp = \frac{1000}{120}\approx 8.333\ldots
-\end{align*}
+\begin{equation*}
+\begin{array}{lcl} 
+\sim s\to \ell\amp \ \ \ \amp \\ 
+\sim \ell
+\\ \hline 
+\sim (\sim s)=s \amp  \amp \text{ Modus Tollens } \\ \\ 
+s\to z \\ 
+s\\ 
+\hline 
+z  \amp  \amp \text{ Modus Ponnens } \end{array}
+\end{equation*}
 </div>
-<p data-braille="continuation">So in 8 years and four months: <iframe src="https://www.desmos.com/calculator/9yhnvatmfg" id="interactive-56" width="600" height="600"></iframe></p>
+<p data-braille="continuation">Thus concluding \(z=\)"The distance between \(A, B\) is zero."</p>
 </div></body>
 </html>

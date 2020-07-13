@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:36-06:00    *-->
+<!--*    on 2020-07-13T15:04:45-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,13 +14,11 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-f'(x)\amp =\amp \frac{d}{dx}[\sqrt{x^2+1}]\\
-\amp =\amp \frac{d}{dx}[g(h(x))]\\
-\amp =\amp g'(h(x))h'(x)\\
-\amp =\amp \frac{1}{2}(x^2+1)^{-1/2}(2x)\\
-\amp =\amp \frac{x}{\sqrt{x^2+1}}
+\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
+\amp = \limit{\color{red}{k}}{0}\frac{f(\color{red}{g(x)+k})-f(g(x))}{\color{red}{k}}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
+\amp = f'(g(x))g'(x)
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_ChainRule.html#mjx-eqn-mrow-640">in-context</a></span>
+<span class="incontext"><a href="Sec_AdvancedDerivative.html#mjx-eqn-mrow-640">in-context</a></span>
 </body>
 </html>

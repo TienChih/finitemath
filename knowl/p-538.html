@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:17-06:00    *-->
+<!--*    on 2020-07-13T15:04:31-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,33 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>If \(A, B\) are the same point, then the distance between them is zero.  If \(A, B\) are different points, there is exactly one line containing both \(A\) and \(B\text{.}\)  There is not exactly one line containing both \(A\) and \(B\text{.}\)</p>
+<p>Let's define the following:</p>
+<ul class="disc">
+<li>\(s=\)"\(A, B\) are the same point."</li>
+<li>\(z=\)"The distance between \(A, B\) is zero."</li>
+<li>\(\ell=\)"There is exactly one line cointaining both \(A\) and \(B\text{.}\)"</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li>\(\displaystyle s\to z\)</li>
+<li>\(\displaystyle \sim s \to \ell\)</li>
+<li>\(\displaystyle \sim\ell\)</li>
+</ul>
+<p data-braille="continuation">Thus we can proceed as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{lcl} 
+\sim s\to \ell\amp \ \ \ \amp \\ 
+\sim \ell
+\\ \hline 
+\sim (\sim s)=s \amp  \amp \text{ Modus Tollens } \\ \\ 
+s\to z \\ 
+s\\ 
+\hline 
+z  \amp  \amp \text{ Modus Ponnens } \end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus concluding \(z=\)"The distance between \(A, B\) is zero."</p>
 <span class="incontext"><a href="Sec_Arguments.html#p-538">in-context</a></span>
 </body>
 </html>

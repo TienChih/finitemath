@@ -9,7 +9,7 @@
   <example xml:id="Example_LinearTemp">
     <statement>
       <p>
-        <term>Question:<nbsp/></term> The freezing point of water is <m>0^\circ</m> Celsius and <m>32^\circ</m> Fahrenheit.
+        The freezing point of water is <m>0^\circ</m> Celsius and <m>32^\circ</m> Fahrenheit.
         The boiling point of water is
         <m>100^\circ</m> Celsius and <m>212^\circ</m> Fahrenheit.
         <ol>
@@ -32,8 +32,10 @@
           </li>
         </ol>
       </p>
+    </statement>
+    <solution>
       <p>
-        <term>Solution:<nbsp/></term> We are given that <m>T(32)=0</m> and <m>T(212)=100</m>.
+        We are given that <m>T(32)=0</m> and <m>T(212)=100</m>.
         This gives us points <m>(32,0)</m> and <m>(212,100)</m>,
         so this bears some similarity to <xref ref="Example_PandP">Example</xref>.
         <ol>
@@ -41,13 +43,13 @@
             <p>
               We first identify the slope of the function:
               <me>
-                m=\frac{\Delta C}{\Delta F}=\frac{100-0}{212-32}=\frac{100}{180}=\TCR{\frac{5}{9}}
+                m=\frac{\Delta C}{\Delta F}=\frac{100-0}{212-32}=\frac{100}{180}=\color{red}{\frac{5}{9}}
               </me>.
               Then choosing either point,
-              say <m>\TCB{(32,0)}</m>, and point slope form, we have:
+              say <m>\color{blue}{(32,0)}</m>, and point slope form, we have:
               <md>
                 <mrow>C-C_0\amp = m(F-F_0)</mrow>
-                <mrow>C-\TCB{0}\amp = \TCR{\frac{5}{9}}(F-\TCB{32})</mrow>
+                <mrow>C-\color{blue}{0}\amp = \color{red}{\frac{5}{9}}(F-\color{blue}{32})</mrow>
                 <mrow>C\amp = \frac{5}{9}F-\frac{160}{9}</mrow>
               </md>.
               Thus <m>T(F)=\frac{5}{9}F-\frac{160}{9}</m>
@@ -58,10 +60,10 @@
           </li>
           <li>
             <p>
-              When it's 10 degrees, we have that <m>\TCG{F=10}</m> and so:
+              When it's 10 degrees, we have that <m>\color{teal}{F=10}</m> and so:
               <md>
                 <mrow>C\amp = \frac{5}{9}F-\frac{160}{9}</mrow>
-                <mrow>C\amp = \frac{5}{9}\cdot\TCG{10}-\frac{160}{9}</mrow>
+                <mrow>C\amp = \frac{5}{9}\cdot\color{teal}{10}-\frac{160}{9}</mrow>
                 <mrow>C\amp = \frac{50}{9}-\frac{160}{9}</mrow>
                 <mrow>C\amp = -\frac{110}{9}\approx-12.2222</mrow>
               </md>.
@@ -73,10 +75,10 @@
           </li>
           <li>
             <p>
-              When it's 30 degrees Celsius i.e.<nbsp/><m>\TCO{C=30}</m> we have:
+              When it's 30 degrees Celsius i.e.<nbsp/><m>\color{orange}{C=30}</m> we have:
               <md>
                 <mrow>C\amp = \frac{5}{9}F-\frac{160}{9}</mrow>
-                <mrow>\TCO{30}\amp = \frac{5}{9}F-\frac{160}{9}</mrow>
+                <mrow>\color{orange}{30}\amp = \frac{5}{9}F-\frac{160}{9}</mrow>
                 <mrow>30+\frac{160}{9}\amp = \frac{5}{9}F</mrow>
                 <mrow>\frac{430}{9}\amp = \frac{5}{9}F</mrow>
                 <mrow>F\amp = \frac{430}{5}=86</mrow>
@@ -93,12 +95,12 @@
       <p>
         Desmos representation here: <interactive desmos="tyoznzrk53"  />
       </p>
-    </statement>
+    </solution>
   </example>
   <example xml:id="Example_Proft">
     <statement>
       <p>
-        <term>Question:<nbsp/></term> Suppose you were selling widgets for $5 a unit,
+        Suppose you were selling widgets for $5 a unit,
         they have a marginal cost of $3 per unit,
         and a fixed cost of production of $20.
         <ol>
@@ -124,9 +126,9 @@
           </li>
         </ol>
       </p>
-      <p>
-        <term>Solution:<nbsp/></term>
-      </p>
+    </statement>
+    <solution>
+      
       <ol>
         <li>
           <p>
@@ -171,10 +173,10 @@
         </li>
         <li>
           <p>
-            When you produce <m>\TCG{x=30}</m> widgets, the cost will be:
+            When you produce <m>\color{teal}{x=30}</m> widgets, the cost will be:
             <md>
               <mrow>C(x)\amp = 3x+20</mrow>
-              <mrow>C(x)\amp = 3\cdot\TCG{30}+20</mrow>
+              <mrow>C(x)\amp = 3\cdot\color{teal}{30}+20</mrow>
               <mrow>C(x)\amp = 90+20</mrow>
               <mrow>C(x)\amp = 110</mrow>
             </md>.
@@ -187,10 +189,10 @@
         </li>
         <li>
           <p>
-            The break even occurs when the profit is zero, <m>\TCO{P(x)=0}</m>.
+            The break even occurs when the profit is zero, <m>\color{orange}{P(x)=0}</m>.
             <md>
               <mrow>P(x)\amp = 2x-20</mrow>
-              <mrow>\TCO{0}\amp = 2x-20</mrow>
+              <mrow>\color{orange}{0}\amp = 2x-20</mrow>
               <mrow>2x\amp = 20</mrow>
               <mrow>x\amp = 10</mrow>
             </md>.
@@ -202,7 +204,7 @@
           </p>
         </li>
       </ol>
-    </statement>
+    </solution>
   </example>
   <example>
     <statement>
@@ -230,21 +232,22 @@
           </li>
         </ol>
       </p>
+    </statement>
+    <solution>
       <p>
-        <term>Solution:<nbsp/></term>
         <ol>
           <li>
             <p>
               Since she is driving towards her mom's house,
               the distance from her to the house decreases at a rate of 75 miles per hour.
-              Thus <m>\TCR{m=-75}</m>.
+              Thus <m>\color{red}{m=-75}</m>.
               At <m>t=3</m> hours, her distance was 200 miles away.
-              Thus <m>\TCB{(3,200)}</m> falls on the line representing this function.
+              Thus <m>\color{blue}{(3,200)}</m> falls on the line representing this function.
               Recall the techniques from <xref ref="Example_PandS">Examples</xref>,
               <xref ref="Example_PandSagain"></xref>.
               <md>
                 <mrow>D(t)\amp = -75t+b</mrow>
-                <mrow>\TCB{200}\amp = \TCR{-75}\cdot\TCB{3}+b</mrow>
+                <mrow>\color{blue}{200}\amp = \color{red}{-75}\cdot\color{blue}{3}+b</mrow>
                 <mrow>200\amp = -225+b</mrow>
                 <mrow>b\amp = 200+225=425</mrow>
               </md>.
@@ -257,17 +260,17 @@
           </li>
           <li>
             <p>
-              At the start of the journey, <m>\TCG{t=0}</m>,
-              and so she was <m>D(\TCG{0})=-75\cdot\TCG{0}+425=425</m> miles from her mother's house. <interactive desmos="xuzh7xcgwk"  />
+              At the start of the journey, <m>\color{teal}{t=0}</m>,
+              and so she was <m>D(\color{teal}{0})=-75\cdot\color{teal}{0}+425=425</m> miles from her mother's house. <interactive desmos="xuzh7xcgwk"  />
             </p>
           </li>
           <li>
             <p>
               When she arrives,
-              her distance from her mothers house is <m>\TCO{D(t)=0}</m> miles and so:
+              her distance from her mothers house is <m>\color{orange}{D(t)=0}</m> miles and so:
               <md>
                 <mrow>D(t)\amp = -75t+425</mrow>
-                <mrow>\TCO{0}\amp = -75t+425</mrow>
+                <mrow>\color{orange}{0}\amp = -75t+425</mrow>
                 <mrow>75t\amp = 425</mrow>
                 <mrow>t\amp = \frac{425}{75}\approx 5.6667</mrow>
               </md>.
@@ -280,7 +283,7 @@
           </li>
         </ol>
       </p>
-    </statement>
+    </solution>
   </example>
   <example xml:id="Example_">
     <statement>
@@ -323,9 +326,8 @@
           </p>
         </li>
       </ol>
-      <p>
-        <term>Solution:<nbsp/></term>
-      </p>
+    </statement>
+      <solution>
       <ol>
         <li>
           <p>
@@ -397,7 +399,7 @@
           </p>
         </li>
       </ol>
-    </statement>
+    </solution>
   </example>
   <p>
     These examples barely scratch the surface on how linear functions may be applied,

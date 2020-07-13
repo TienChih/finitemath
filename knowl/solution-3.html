@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:11-06:00    *-->
+<!--*    on 2020-07-13T15:04:20-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,16 +14,55 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.3.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.4.1.1</span><span class="period">.</span>
 </h6>
+<p>We are given that \(T(32)=0\) and \(T(212)=100\text{.}\) This gives us points \((32,0)\) and \((212,100)\text{,}\) so this bears some similarity to <a class="xref" data-knowl="./knowl/Example_PandP.html" title="Example 1.3.4">Example 1.3.4</a>.</p>
+<ol class="decimal">
+<li>
+<p>We first identify the slope of the function:</p>
+<div class="displaymath">
+\begin{equation*}
+m=\frac{\Delta C}{\Delta F}=\frac{100-0}{212-32}=\frac{100}{180}=\color{red}{\frac{5}{9}}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Then choosing either point, say \(\color{blue}{(32,0)}\text{,}\) and point slope form, we have:</p>
 <div class="displaymath">
 \begin{align*}
-A+B\amp = \begin{pmatrix}6 \amp  8 \\ 10 \amp  12 \end{pmatrix}\\
-AB\amp = \begin{pmatrix}19 \amp  22 \\ 43 \amp  50 \end{pmatrix}\\
-BA\amp = \begin{pmatrix}23 \amp  34 \\ 31 \amp  46 \end{pmatrix}
+C-C_0\amp = m(F-F_0)\\
+C-\color{blue}{0}\amp = \color{red}{\frac{5}{9}}(F-\color{blue}{32})\\
+C\amp = \frac{5}{9}F-\frac{160}{9}\text{.}
 \end{align*}
 </div>
+<p data-braille="continuation">Thus \(T(F)=\frac{5}{9}F-\frac{160}{9}\) <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-19.svg" style="width: 100%; height: auto;" alt=""></div></p>
+</li>
+<li>
+<p>When it's 10 degrees, we have that \(\color{teal}{F=10}\) and so:</p>
+<div class="displaymath">
+\begin{align*}
+C\amp = \frac{5}{9}F-\frac{160}{9}\\
+C\amp = \frac{5}{9}\cdot\color{teal}{10}-\frac{160}{9}\\
+C\amp = \frac{50}{9}-\frac{160}{9}\\
+C\amp = -\frac{110}{9}\approx-12.2222\text{.}
+\end{align*}
 </div>
-<span class="incontext"><a href="Sec_MatrixArithmetic.html#solution-3">in-context</a></span>
+<p data-braille="continuation">So 10 degrees Fahrenheit is \(-\frac{110}{9}\approx-12.2222\) degrees Celsius. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-20.svg" style="width: 100%; height: auto;" alt=""></div></p>
+</li>
+<li>
+<p>When it's 30 degrees Celsius i.e. \(\color{orange}{C=30}\) we have:</p>
+<div class="displaymath">
+\begin{align*}
+C\amp = \frac{5}{9}F-\frac{160}{9}\\
+\color{orange}{30}\amp = \frac{5}{9}F-\frac{160}{9}\\
+30+\frac{160}{9}\amp = \frac{5}{9}F\\
+\frac{430}{9}\amp = \frac{5}{9}F\\
+F\amp = \frac{430}{5}=86\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">So when it's 30 degrees Celsius, it is 86 degrees Fahrenheit. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-21.svg" style="width: 100%; height: auto;" alt=""></div></p>
+</li>
+</ol>
+<p>Desmos representation here: <iframe src="https://www.desmos.com/calculator/tyoznzrk53" id="interactive-14" width="600" height="600"></iframe></p>
+</div>
+<span class="incontext"><a href="Sec_ApplicationsLinear.html#solution-3">in-context</a></span>
 </body>
 </html>

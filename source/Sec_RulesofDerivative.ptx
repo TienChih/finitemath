@@ -1,33 +1,288 @@
 <section xml:id="Sec_RulesofDerivative">
   <title>Basic rules of the derivative</title>
-  <p>
-    At this point we probably are,
-    or should be, sick of computing limits like:
-    <me>
-      \limit{h}{0}\frac{2(x+h)^3-4(x+h)-(2x^3-4x)}{h}
-    </me>.
-  </p>
-  <p>
-    This is technically the derivative of <m>f(x)=2x^3-4x</m>.
-    But there's 2 sides to mathematics,
-    theres the formal definition,
-    and then we should leverage our knowledge and try to find shortcuts to some of these things.
-    So let's figure some of these things out.
-  </p>
+  <introduction>
+    <statement>
+      <p>
+        While there is a formal definition of a derivative, it is a somewhat cumbersome and computationally intense definition.  In this section, we begin introducing some properties of the derivative which simplify computation.
+      </p>
+    </statement>
+  </introduction>
+  <subsection>
+  <title>Basic Rules</title>      
+  
+    <remark xml:id="RemarkLinear">
+      <statement>
   <p>
     Given functions <m>f(x), g(x)</m> and constants <m>a,b</m> we have:
     <me>
       \frac{d}{dx}[a(f)x)+bg(x)]=af'(x)+bg'(x)
     </me>.
+    Where <m>\frac{d}{dx}</m> means <q>to take the dertivative with respect to <m>x</m></q>.
   </p>
+</statement>
+</remark>
   <p>
     How do we know that?
     Well:
     <md>
-      <mrow>\frac{d}{dx}[a(f)x)+bg(x)]\amp =\amp \limit{h}{0}\frac{af(x+h)+bg(x+h)-(af(x)-bg(x))}{h}</mrow>
-      <mrow>\amp =\amp \limit{h}{0}\frac{af(x+h)-af(x)}{h}+\limit{h}{0}\frac{bg(x+h)-bg(x)}{h}</mrow>
-      <mrow>\amp =\amp a\limit{h}{0}\frac{f(x+h)-f(x)}{h}+b\limit{h}{0}\frac{g(x+h)-g(x)}{h}</mrow>
-      <mrow>\amp =\amp af'(x)+bg'(x)</mrow>
+      <mrow>\frac{d}{dx}[a(f)x)+bg(x)]\amp = \limit{h}{0}\frac{af(x+h)+bg(x+h)-(af(x)-bg(x))}{h}</mrow>
+      <mrow>\amp = \limit{h}{0}\frac{af(x+h)-af(x)}{h}+\limit{h}{0}\frac{bg(x+h)-bg(x)}{h}</mrow>
+      <mrow>\amp = a\limit{h}{0}\frac{f(x+h)-f(x)}{h}+b\limit{h}{0}\frac{g(x+h)-g(x)}{h}</mrow>
+      <mrow>\amp = af'(x)+bg'(x)</mrow>
     </md>.
   </p>
+
+</subsection>
+
+<subsection>
+  <title>Power Rule </title>
+<p>
+      We may have noticed a pattern with derivatives.
+      But to illustrate it explicitly:
+      <ul>
+        <li>
+          <p>
+            The derivative of <m>f(x)=x^0</m>,
+            it's the derivative of the constant function <m>f(x)=1</m>,
+            and since its a horizontal line,
+            it never has any slope and <m>f'(x)=0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The derivative of <m>f(x)=x^1</m>,
+            it's the derivative of the line <m>f(x)=x</m> which always has slope 1, so <m>f'(x)=1</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The derivative of <m>f(x)=x^2</m> is:
+            <md>
+              <mrow>\frac{d}{dx}[x^2]\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}</mrow>
+              <mrow>\amp = \limit{h}{0} \frac{(x+h)^2-x^2}{h}</mrow>
+              <mrow>\amp = \limit{h}{0} \frac{x^2+2xh+h^2-x^2}{h}</mrow>
+              <mrow>\amp = \limit{h}{0} \frac{(2x+h)h}{h}</mrow>
+              <mrow>\amp = \limit{h}{0} 2x+h=2x</mrow>
+            </md>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The derivative of <m>f(x)=x^3</m> is:
+            <md>
+              <mrow>\frac{d}{dx}[x^3]\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}</mrow>
+              <mrow>\amp = \limit{h}{0} \frac{(x+h)^3-x^3}{h}</mrow>
+              <mrow>\amp = \limit{h}{0} \frac{x^3+3x^2h+3xh^2+h^3-x^3}{h}</mrow>
+              <mrow>\amp = \limit{h}{0} \frac{(3x^2+3xh+h^2)h}{h}</mrow>
+              <mrow>\amp = \limit{h}{0} 3x^2+3xh+h^2=3x^2</mrow>
+            </md>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      To generalize this, we have a rule of differentiation:
+      <term> power rule</term>.</p>
+    <remark>
+      <statement>
+      <p>
+      <m>\frac{d}{dx}[x^n]=nx^{n-1}</m>.
+    </p>
+  </statement>
+</remark>
+    <p>
+      To verify:
+      <ul>
+        <li>
+          <p>
+            <m>\frac{d}{dx}[x^0]=0x^{0-1}=0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\frac{d}{dx}[x^1]=1x^{1-1}=1</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\frac{d}{dx}[x^2]=2x^{2-1}=2x</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\frac{d}{dx}[x^3]=3x^{3-1}=3x^2</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      What's fascinating is that this rule applies to <term> all</term>
+      powers, not just integer powers.
+    </p>
+
+<remark xml:id="RemarkPower">
+      <statement>
+  <p>
+    By rewriting functions into their power rule form:
+    <ul>
+      <li><m>\frac{d}{dx}[\frac{1}{x^n}]=\frac{d}{dx}[x^{-n}]=-nx^{-n+1}=\frac{-n}{x^{-n+1}}</m>.</li>
+      <li><m>\frac{d}{dx}[\sqrt[n]{x}]=\frac{d}{dx}[x^{1/n}]=-\frac{1}{n}x^{\frac{1-n}{n}}=\frac{1}{\sqrt[n]{x^{n-1}}}</m>.</li>
+    </ul>  
+  </p>
+</statement>
+</remark>
+
+
+<example>
+  <statement>
+    <p>
+      Find the derivative of <m>f(x)=x^4-2x^2+7x-3</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+    By <xref ref="RemarkPower"/> and <xref ref="RemarkLinear"/> we have:
+      <md>
+        <mrow>f'(x)\amp = \frac{d}{dx}[x^4-2x^2+7x-3]</mrow>
+        <mrow>\amp = \frac{d}{dx}[x^4-2x^2+7x^1-3x^0]</mrow>
+        <mrow>\amp = 4x^3-2(2x^1)+7(1x^0)-3(0x^{-1})</mrow>
+        <mrow>\amp = 4x^3-4x+7</mrow>
+      </md>.
+    We can see this below:
+    <interactive desmos="f7rllemfvp"  />
+      </p>
+    </solution>
+</example> 
+
+
+<example>
+  <statement>
+    <p>
+      Find the derivative of <m>g(x)=\sqrt{4x}+\frac{3}{x}-\frac{2}{x^2}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+    By <xref ref="RemarkPower"/> and <xref ref="RemarkLinear"/> we have:
+      <md>
+        <mrow>g'(x)\amp = \frac{d}{dx}[\sqrt{4x}+\frac{3}{x}-\frac{2}{x^2}]</mrow>
+        <mrow>\amp = \frac{d}{dx}[2x^{1/2}+3x^{-1}-2x^{-2}]</mrow>
+        <mrow>\amp = 2(1/2)x^{-1/2}+3(-1x^{-2})-2(2x^{-3})</mrow>
+        <mrow>\amp = x^{-1/2}-3x^{-2}+4x^{-3}</mrow>
+        <mrow>\amp = \frac{1}{\sqrt{x}}-\frac{3}{x^2}+\frac{4}{x^3}</mrow>
+      </md>.
+    We can see this below:
+    <interactive desmos="fi1nqzbrpf"  />
+      </p>
+    </solution>
+</example>  
+
+
+
+<exercise>
+  <statement>
+    <p>
+      An analyst has found that a company’s costs and revenues
+in dollars for one product are given by
+<me>C(x)=2x, R(x)=6x-\frac{x^2}{100}</me>
+respectively, where <m>x</m> is the number of items produced.
+
+    <ol>
+      <li>Find the marginal cost function (<m>R'(x)</m> ).</li>
+      <li> Find the marginal revenue function (<m>C'(x)</m> ).</li>
+      <li> Using the fact that profit is the difference between revenue and costs, find the marginal profit function.</li>
+      <li> What value of <m>x</m> makes marginal profit equal 0?</li>
+      <li>Find the profit when the marginal profit is 0.</li>
+    </ol>
+    </p>
+  </statement>
+  <solution>
+    <p>
+    We have:
+      <ol>
+      <li> <m>C'(x)=\frac{d}{dx}[2x]=2</m>.  So <m>\$2</m> per product </li>
+      <li> <m>R'(x)=\frac{d}{dx}[6x-\frac{x^2}{100}]=6-\frac{x}{50}</m>.  So <m>\$(6-\frac{x}{50})</m> per product </li>
+      <li> <m>P(x)=R(x)-C(x)=6x-\frac{x^2}{100}-2x=4x-\frac{x^2}{100}.</m>.</li>
+      <li> Since <m>P'(x)=\frac{d}{dx}[4x-\frac{x^2}{100}]=4-\frac{x}{50} </m>, we note that this is zero when:
+      <md>
+        <mrow>4-\frac{x}{50}\amp =0</mrow>
+        <mrow>4\amp= \frac{x}{50}</mrow>
+        <mrow>x\amp=200</mrow>
+      </md>.
+      So marginal profit is 0 when 200 units of the product are produced.
+    </li>
+      <li>We have <m>P(200)=4(200)-\frac{200^2}{100} =\$400</m>.</li>
+    </ol>
+    We can see this below:
+    <interactive desmos="zmm7wvosxu"  />
+      </p>
+    </solution>
+</exercise>  
+
+
+
+<exercise>
+  <statement>
+    <p>
+     If the price in dollars of a product is given by <me>p(q)=\frac{500}{q^2}+800</me> where <m>q</m> represents the demand for the product, find the marginal
+revenue when the demand is 4.
+    </p>
+  </statement>
+  <solution>
+    <p>
+    We  note that revenue is price times quantity demanded so <m>R(q)=p(q)q=(\frac{500}{q^2}+800)q=\frac{500}{q}+800q.</m>  From here we can find the marginal revenue: <m>R'(q)=\frac{d}{dq}[\frac{500}{q}+800q]=\frac{d}{dq}[500q^{-1}+800q]=-500q^{-2}+800=\frac{-500}{q^2}+800</m>.</p>
+    <p>
+    Thus, when demand is 4, the marginal revenue is <m>R'(4)=\frac{-500}{4^2}+800=\$768.75</m> per unit. We can see this below:
+    <interactive desmos="l5leccci0i"  />
+      </p>
+    </solution>
+</exercise>   
+
+
+<exercise>
+  <statement>
+    <p>
+    Insulin affects the glucose, or blood sugar,
+level of some diabetics according to the function <me>G(x)=-0.2x^2 +450,</me>
+where <m>G(x)</m> is the blood sugar level 1 hour after <m>x</m> units of
+insulin are injected. (This mathematical model is only approximate,
+and it is valid only for values of x less than about 40.)
+</p>
+<p>
+<ol>
+<li>Find the blood sugar level after 10 units of insulin are injected.</li>
+<li>Find the blood sugar level after 25 units of insulin are injected.</li>
+<li>Find the rate of change of blood sugar level after 10 units of insulin are injected.</li>
+<li>Find the rate of change of blood sugar level after 25 units of insulin are injected.</li>
+</ol>
+    </p>
+  </statement>
+  <solution>
+    <p>
+    We  note that <m>G'(x)=\frac{d}{dx}[-0.2x^2 +450]=-0.4x </m>.
+    <ol>
+<li><m>G(10)=-0.2(10)^2 +450=430.</m></li>
+<li><m>G(25)=-0.2(25)^2 +450=325.</m></li>
+<li><m>G'(10)=-0.4(10)=-4.</m></li>
+<li><m>G'(25)=-0.4(25) =-10.</m></li>
+
+</ol>
+
+
+   We can see this below:
+    <interactive desmos="2u2ktccdm7"  />
+      </p>
+    </solution>
+</exercise> 
+
+
+
+
+
+
+
+
+
+
+</subsection>
 </section>

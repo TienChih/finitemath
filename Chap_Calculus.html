@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:43:59-06:00    *-->
+<!--*    on 2020-07-13T15:04:13-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -41,7 +41,15 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -162,12 +170,10 @@ MathJax.Hub.Config({
 <li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
 <li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
 <li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
-<li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
-<li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
-<li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
-<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
@@ -182,12 +188,10 @@ MathJax.Hub.Config({
 <li><a href="Sec_AvgRoC.html"><span class="codenumber">7.2</span> <span class="title">Average rates of change</span></a></li>
 <li><a href="Sec_DefofDerivative.html"><span class="codenumber">7.3</span> <span class="title">The Derivative Function</span></a></li>
 <li><a href="Sec_RulesofDerivative.html"><span class="codenumber">7.4</span> <span class="title">Basic rules of the derivative</span></a></li>
-<li><a href="Sec_PowerRule.html"><span class="codenumber">7.5</span> <span class="title">Power Rule</span></a></li>
-<li><a href="Sec_ProductRule.html"><span class="codenumber">7.6</span> <span class="title">Product Rule</span></a></li>
-<li><a href="Sec_QuotientRule.html"><span class="codenumber">7.7</span> <span class="title">Quotient Rule</span></a></li>
-<li><a href="Sec_ChainRule.html"><span class="codenumber">7.8</span> <span class="title">Chain Rule</span></a></li>
-<li><a href="DerivativeExp.html"><span class="codenumber">7.9</span> <span class="title">Derivative of Exponentials</span></a></li>
-<li><a href="DerivativeLogs.html"><span class="codenumber">7.10</span> <span class="title">Logarithms</span></a></li>
+<li><a href="Sec_AdvancedDerivative.html"><span class="codenumber">7.5</span> <span class="title">Advanced Derivatve Techniques</span></a></li>
+<li><a href="DerivativeExp.html"><span class="codenumber">7.6</span> <span class="title">Derivative of Exponentials</span></a></li>
+<li><a href="DerivativeLogs.html"><span class="codenumber">7.7</span> <span class="title">Derivative of Logarithms</span></a></li>
+<li><a href="Sec_DerivativeHints.html"><span class="codenumber">7.8</span> <span class="title">Hints when Differentating</span></a></li>
 </ul></nav></section></div></main>
 </div>
 </body>

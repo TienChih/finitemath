@@ -1,15 +1,27 @@
 <section xml:id="DerivativeExp">
   <title>Derivative of Exponentials</title>
+  <introduction>
+    <statement>
   <p>
     When we graph an exponential function,
     say an increasing one <m>f(x)=a^x, a>1</m>,
-    we imagine a function that curves up towards infinity on the right and shallows out towards 0 on the left \url{https://www.desmos.com/calculator/51zxitu9xc}. What then should it's derivatives look like?
+    we imagine a function that curves up towards infinity as <m>x</m> increases and converges  to 0  as <m>x</m> decreases.
+
+    <interactive desmos="51zxitu9xc"/>
+
+
+    What then should it's derivatives look like?
     Well it seems like the slopes are initially shallow,
     and then as we go forward the slopes start to increase,
     and they get progressively and progressively larger.
-    In other words <term> the derivative is also an exponential function!</term>
-    \url{https://www.desmos.com/calculator/etbmc1ttzo}.
+    In other words <em> the derivative is also an exponential function!</em>
+
+     <interactive desmos="etbmc1ttzo"/>
   </p>
+</statement>
+</introduction>
+<subsection>
+  <title>Computing the derivative of Exponentials</title>
   <p>
     Which one?
     Let's first start with a special case,
@@ -21,31 +33,129 @@
     </me>.
   </p>
   <p>
-    The proof of this is a fairly sophisticated fact and it not trivial,
-    but you can verify it by taking the slider <m>h</m>,
-    dragging it towards 0 and seeing what happens: \url{https://www.desmos.com/calculator/4uv0zgguq9}. Using this fact,
+    The proof of this is a fairly sophisticated fact and is not trivial,
+    but we may still visualize the limit itself:
+     <interactive desmos="iscxmzoqip"/>
+
+     Using this fact,
     we can deduce:
     <md>
-      <mrow>\frac{d}{dx}[e^x]\amp =\amp \limit{h}{0}\frac{e^{x+h}-e^x}{h}</mrow>
-      <mrow>\amp =\amp \limit{h}{0}\frac{e^xe^h-e^x}{h}</mrow>
-      <mrow>\amp =\amp e^x\limit{h}{0}\frac{e^h-1}{h}</mrow>
-      <mrow>\amp =\amp e^x\cdot1=e^x</mrow>
+      <mrow>\frac{d}{dx}[e^x]\amp = \limit{h}{0}\frac{e^{x+h}-e^x}{h}</mrow>
+      <mrow>\amp = \limit{h}{0}\frac{e^xe^h-e^x}{h}</mrow>
+      <mrow>\amp = e^x\limit{h}{0}\frac{e^h-1}{h}</mrow>
+      <mrow>\amp = e^x\cdot1=e^x</mrow>
     </md>.
   </p>
   <p>
-    So this explains why <m>e</m> is such a significant number in mathematics,
-    it is the unique number so that the exponential <m>e^x</m> is it's own derivative \url{https://www.desmos.com/calculator/xelrg6t0ez}. Every other <m>a^x</m> differs from it's derivative slightly: \url{https://www.desmos.com/calculator/aqa6zw4vyz}, you can see that when <m>a</m> is less than <m>e</m> (about 2.714),
-    it's derivative falls under the original function,
-    and when <m>a>e</m>, it's derivative falls above the original.
+    So this explains one of the reaons why <m>e</m> is such a significant number in mathematics,
+    it is the unique number so that the exponential <m>e^x</m> is it's own derivative.
   </p>
   <p>
     So, to compute the actual derivative of <m>a^x</m>:
     <md>
-      <mrow>\frac{d}{dx}[a^x]\amp =\amp \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }</mrow>
-      <mrow>\amp =\amp \frac{d}{dx}[e^{\ln(a)x}]</mrow>
-      <mrow>\amp =\amp e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }</mrow>
-      <mrow>\amp =\amp e^{\ln(a)x}\ln(a)\cdot1</mrow>
-      <mrow>\amp =\amp a^x\ln(a)</mrow>
+      <mrow>\frac{d}{dx}[a^x]\amp = \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }</mrow>
+      <mrow>\amp = \frac{d}{dx}[e^{\ln(a)x}]</mrow>
+      <mrow>\amp = e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }</mrow>
+      <mrow>\amp = e^{\ln(a)x}\ln(a)\cdot1</mrow>
+      <mrow>\amp = a^x\ln(a)</mrow>
     </md>.
   </p>
+
+<example>
+<statement>
+  <p>
+      Let's try the derivative of <m>f(x)=e^{x}x^2</m> and <m>h(x)=2^{\frac{x}{x+1}}</m>
+  </p>
+</statement>
+<solution>
+  <p> We first have:
+      <md>
+        <mrow>f'(x)\amp = \frac{d}{dx}[e^xx^2]</mrow>
+        <mrow>\amp =_{PR} \frac{d}{dx}[e^x]x^2+e^x\frac{d}{dx}[x^2]</mrow>
+        <mrow>\amp = e^xx^2+e^x2x</mrow>
+      </md>.
+    </p>
+    
+    <p>
+      Next, we compute:
+      <md>
+        <mrow>h'(x)\amp = \frac{d}{dx}[2^{\frac{x}{x+1}}]</mrow>
+        <mrow>\amp =_{CR} 2^{\frac{x}{x+1}}\ln(2)\frac{d}{dx}[\frac{x}{x+1}]</mrow>
+        <mrow>\amp =_{QR} 2^{\frac{x}{x+1}}\ln(2)\frac{(x+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x+1]}{(x+1)^2}</mrow>
+        <mrow>\amp = \frac{2^{\frac{x}{x+1}}\ln(2)}{(x+1)^2}</mrow>
+      </md>
+    </p>
+  </solution>  
+ </example>   
+
+
+  <exercise>
+    <statement>
+      <p>
+        The daily revenue of a local convient store, <m>t</m> days after opening is <m>R(t)=10-8e^{-0.02t}</m> in thousands of dollars.  How is the daily revenue increasing or decreasing after 30 days?
+      </p>
+     </statement>
+     <solution>
+      <p>
+     We note that:
+     <md>
+      <mrow>R'(t)\amp = \frac{d}{dt}[10-8e^{-0.02t}]</mrow>
+      <mrow>\amp = 0-8e^{-0.02t}\frac{d}{dt}[-0.02t]</mrow>
+      <mrow>\amp = -8e^{-0.02t}(-0.02)</mrow>
+      <mrow>\amp = 0.16e^{-0.02t}</mrow>
+    </md>. 
+
+    Thus <m>R'(30)=0.16e^{-0.02(30)}\approx 0.088</m> so increasing by about <m>\$88 </m> a day.
+    <interactive desmos="f1qvuthw3h"/>
+  </p>
+</solution>
+</exercise>
+
+<exercise>
+    <statement>
+      <p>
+        The quantity of a drug injected in a patient is <me>D(t)=te^{-0.25t}</me> where <m>D</m> is measured in mL and <m>t</m> is in minutes after injection.
+        <ol>
+          <li>How is the drug quantity changing in 2 minutes?</li>
+          <li>When does the drug quantity start to decrease?</li>
+        </ol>  
+      </p>
+     </statement>
+     <solution>
+      <p>
+     We note that:
+     <md>
+      <mrow>D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]</mrow>
+      <mrow>\amp = t\frac{d}{dt}[e^{-0.25t}]+\frac{d}{dt}[t]e^{-0.25t}</mrow>
+      <mrow>\amp = te^{-0.25t}\frac{d}{dt}[-0.25t]+1\cdot e^{-0.25t}</mrow>
+      <mrow>\amp = te^{-0.25t}\cdot(-0.25t)+e^{-0.25t}</mrow>
+       <mrow>\amp = (1-0.25t)e^{-0.25t}</mrow>
+    </md>. 
+    So with that:
+    <ol>
+          <li>Notce <m>D'(2)=(1-0.25(2))e^{-0.25(2)}\approx 0.303 </m> or increasing by 0.303 mL/minute.</li>
+          <li>We note that the quantity decreases when <m>D'(t)=(1-0.25t)e^{-0.25t}\lt 0</m> so:
+           <md>
+      <mrow>(1-0.25t)e^{-0.25t}\amp \lt 0</mrow>
+      <mrow>(1-0.25t)\amp \lt 0</mrow>
+      <mrow>1\amp \lt 0.25t</mrow>
+      <mrow>t\amp > 4</mrow>
+    </md>. 
+So after 4 minutes
+        </li>
+        </ol>  
+        We can see this:
+    <interactive desmos="uow1nliujd"/>
+  </p>
+</solution>
+</exercise>
+
+
+
+
+
+
+
+
+</subsection>
 </section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:43:47-06:00    *-->
+<!--*    on 2020-07-13T15:04:06-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -162,12 +162,10 @@ MathJax.Hub.Config({
 <li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
 <li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
 <li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
-<li><a href="Sec_PowerRule.html" data-scroll="Sec_PowerRule">Power Rule</a></li>
-<li><a href="Sec_ProductRule.html" data-scroll="Sec_ProductRule">Product Rule</a></li>
-<li><a href="Sec_QuotientRule.html" data-scroll="Sec_QuotientRule">Quotient Rule</a></li>
-<li><a href="Sec_ChainRule.html" data-scroll="Sec_ChainRule">Chain Rule</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
 <li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
-<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Logarithms</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
@@ -177,7 +175,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_LinearInequalities"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Linear Inequalities</span>
 </h2>
-<p id="p-332">Remember when we said the solution to something like</p>
+<p id="p-330">Remember when we said the solution to something like</p>
 <div class="displaymath">
 \begin{equation*}
 2x+3y=12
@@ -189,21 +187,21 @@ MathJax.Hub.Config({
 2x+3y\leq12
 \end{equation*}
 </div>
-<p id="p-333">What we now mean is every pair \((x,y)\) that make THIS statement true. So that would include every point on the line \(2x+3y=12\text{,}\) as well as say \((0,0), (1,2), (1,3)\) but not \((1,4)\) (plug them in to see why.) Obviously, just like in lines, we don't want to test every one of infinitely many points to see what's going on.</p>
-<p id="p-334">So, we note that \(2x+3y=12\) is a line: <iframe src="https://www.desmos.com/calculator/spsryp8xxl" id="interactive-29" width="600" height="600"></iframe></p>
-<p id="p-335">The inequality \(2x+3y\leq12\) is not just this line, but the entire half of the plane where \(2x+3y\) is some value that is less than 12. The number 12 cuts the number line in half, numbers less than, and greater than 12, so it makes sense that this line cuts the \(x,y\) plane in half as well, we just need to pick a half.</p>
-<p id="p-336">Well, we know that \(2(0)+3(0)=0\leq12\text{,}\) and so our half should be the half that contains \((0,0)\text{.}\) In general, you can pick any point you want and test it. For example, if we picked (5,5), we would observe that \(2(5)+3(5)=25\not\leq 12\) and so we should pick the half that DOESN'T contain \((5,5)\text{.}\) Either way, we obtain: <iframe src="https://www.desmos.com/calculator/vs7wtdmkjp" id="interactive-30" width="600" height="600"></iframe> Drag the point \((a,b)\) to see why the shaded half consists of the points where \(2x+3y\leq12\text{.}\)</p>
+<p id="p-331">What we now mean is every pair \((x,y)\) that make THIS statement true. So that would include every point on the line \(2x+3y=12\text{,}\) as well as say \((0,0), (1,2), (1,3)\) but not \((1,4)\) (plug them in to see why.) Obviously, just like in lines, we don't want to test every one of infinitely many points to see what's going on.</p>
+<p id="p-332">So, we note that \(2x+3y=12\) is a line: <iframe src="https://www.desmos.com/calculator/spsryp8xxl" id="interactive-29" width="600" height="600"></iframe></p>
+<p id="p-333">The inequality \(2x+3y\leq12\) is not just this line, but the entire half of the plane where \(2x+3y\) is some value that is less than 12. The number 12 cuts the number line in half, numbers less than, and greater than 12, so it makes sense that this line cuts the \(x,y\) plane in half as well, we just need to pick a half.</p>
+<p id="p-334">Well, we know that \(2(0)+3(0)=0\leq12\text{,}\) and so our half should be the half that contains \((0,0)\text{.}\) In general, you can pick any point you want and test it. For example, if we picked (5,5), we would observe that \(2(5)+3(5)=25\not\leq 12\) and so we should pick the half that DOESN'T contain \((5,5)\text{.}\) Either way, we obtain: <iframe src="https://www.desmos.com/calculator/vs7wtdmkjp" id="interactive-30" width="600" height="600"></iframe> Drag the point \((a,b)\) to see why the shaded half consists of the points where \(2x+3y\leq12\text{.}\)</p>
 <article class="exercise exercise-like" id="exercise-1"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-1"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-337">Use Desmos to graph the following inequalities:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-335">Use Desmos to graph the following inequalities:</p>
 <ol class="decimal">
 <li id="li-83">\(\displaystyle 3x-y&gt;7\)</li>
 <li id="li-84">\(\displaystyle 2x+y&gt;5\)</li>
 <li id="li-85">\(\displaystyle -x+2y\leq 8\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<p id="p-338">We can combine all inequalities into one Desmos graph: <iframe src="https://www.desmos.com/calculator/ei31zrzylx" id="interactive-31" width="600" height="600"></iframe> Or we can split them into seperate graphs.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-336">We can combine all inequalities into one Desmos graph: <iframe src="https://www.desmos.com/calculator/ei31zrzylx" id="interactive-31" width="600" height="600"></iframe> Or we can split them into seperate graphs.</p>
 <ol class="decimal">
 <li id="li-86"><iframe src="https://www.desmos.com/calculator/11eigcqvrn" id="interactive-32" width="600" height="600"></iframe></li>
 <li id="li-87"><iframe src="https://www.desmos.com/calculator/tvps9iifui" id="interactive-33" width="600" height="600"></iframe></li>

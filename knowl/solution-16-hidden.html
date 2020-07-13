@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:14-06:00    *-->
+<!--*    on 2020-07-13T15:04:27-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,20 +11,40 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><div class="displaymath">
+<body><div class="solution solution-like"><ol class="decimal">
+<li>We can either be even or divisible by 5 but it must not be square, so we have \((q\vee r)\wedge \sim p\text{.}\)</li>
+<li>A truth table could be constructed as follows:\(\ \\ \)<div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c|c} 
-p\amp q\amp  r \amp   \sim p \amp (q\to r)\amp \sim p\vee (q\to r)\\ 
+p\amp q\amp  r \amp \sim p \amp q\vee r \amp (q\vee r)\wedge \sim p\\ 
 \hline 
-T \amp  T\amp T \amp F\amp T\amp T\\
-T \amp  T\amp F \amp F\amp F\amp F\\
-T \amp  F\amp T \amp F\amp T\amp T\\
-T \amp  F\amp F \amp F\amp T\amp T\\
+T \amp  T\amp T \amp F\amp T\amp F\\
+T \amp  T\amp F \amp F\amp T\amp F\\
+T \amp  F\amp T \amp F\amp T\amp F\\
+T \amp  F\amp F \amp F\amp F\amp F\\
 F \amp  T\amp T \amp T\amp T\amp T\\
-F \amp  T\amp F \amp T\amp F\amp T\\
+F \amp  T\amp F \amp T\amp T\amp T\\
 F \amp  F\amp T \amp T\amp T\amp T\\
-F \amp  F\amp F \amp T\amp T\amp T\\
+F \amp  F\amp F \amp T\amp F\amp F\\
 \end{array}
 \end{equation*}
-</div></div></body>
+</div>Which is only true if so long as \(x\) is not square, but it is either a multiple of 2 or 5 or both.</li>
+<li>"\(x\) is a square, which is even or divisible by 5".</li>
+<li>\(\ \\ \)<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c} 
+p\amp q\amp  r  \amp q\vee r \amp p\wedge (q\vee r)\\ 
+\hline 
+T \amp  T\amp T \amp T\amp T\\
+T \amp  T\amp F \amp T\amp T\\
+T \amp  F\amp T \amp T\amp T\\
+T \amp  F\amp F \amp F\amp F\\
+F \amp  T\amp T \amp T\amp F\\
+F \amp  T\amp F \amp T\amp F\\
+F \amp  F\amp T \amp T\amp F\\
+F \amp  F\amp F \amp F\amp F\\
+\end{array}
+\end{equation*}
+</div>This is true so long as \(x\) is a square, and is either a multiple of 2 or 5.</li>
+</ol></div></body>
 </html>

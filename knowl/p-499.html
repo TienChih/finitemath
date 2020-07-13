@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:16-06:00    *-->
+<!--*    on 2020-07-13T15:04:30-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,17 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The statement is "\(\exists x, I(x)\to N(x)\)".  It's negation would be:</p>
+<p>The first type of argument is <dfn class="terminology">Modus Ponens</dfn>, it is based on the <em class="emphasis">implication</em> \(p\to q\text{.}\)  If you know that whenever \(p\) is true, then we can deduce \(q\) is true.</p>
 <div class="displaymath">
-\begin{align*}
-\sim(\exists x, I(x)\to N(x))\amp = \forall x, \sim (I(x)\to N(x))\\
-\amp = \forall x, \sim (\sim I(x)\vee N(x))\\
-\amp = \forall x, I(x)\wedge \sim N(x).
-\end{align*}
+\begin{equation*}
+\begin{array}{l}
+p\to q \\
+p\\
+\hline
+q
+\end{array}
+\end{equation*}
 </div>
-<p data-braille="continuation">This translates to "For every function, we evaluate at zero and the output is not negative".  (This isn't true, but it's the negation of the original statement).</p>
-<span class="incontext"><a href="Quantifiers.html#p-499">in-context</a></span>
+<span class="incontext"><a href="Sec_Arguments.html#p-499">in-context</a></span>
 </body>
 </html>

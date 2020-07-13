@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:14-06:00    *-->
+<!--*    on 2020-07-13T15:04:28-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,20 +11,40 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><div class="displaymath">
+<body><div class="solution solution-like">
+<p>Consider the following truth tables:</p>
+<div class="displaymath">
 \begin{equation*}
-\begin{array}{c|c|c|c|c|c} 
-p\amp q\amp  r \amp   \sim q \amp p\to \sim q \amp (p\to \sim q)\leftrightarrow r\\ 
+\begin{array}{c|c|c|c|c} 
+p\amp q\amp  r \amp   q\wedge r \amp p\wedge (q\vee r)\\ 
 \hline 
-T \amp  T\amp T \amp F\amp F\amp F\\
-T \amp  T\amp F \amp F\amp F\amp T\\
-T \amp  F\amp T \amp T\amp T\amp T\\
-T \amp  F\amp F \amp T\amp T\amp F\\
-F \amp  T\amp T \amp F\amp T\amp T\\
-F \amp  T\amp F \amp F\amp T\amp F\\
-F \amp  F\amp T \amp T\amp T\amp T\\
-F \amp  F\amp F \amp T\amp T\amp F\\
+T \amp  T\amp T \amp T\amp T\\
+T \amp  T\amp F \amp F\amp T\\
+T \amp  F\amp T \amp F\amp T\\
+T \amp  F\amp F \amp F\amp T\\
+F \amp  T\amp T \amp T\amp T\\
+F \amp  T\amp F \amp F\amp F\\
+F \amp  F\amp T \amp F\amp F\\
+F \amp  F\amp F \amp F\amp F\\
 \end{array}
 \end{equation*}
-</div></div></body>
+</div>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c} 
+p\amp q\amp  r \amp   p\vee q \amp p\vee r \amp (p\vee q)\wedge (p\vee r)\\ 
+\hline 
+T \amp  T\amp T \amp T\amp T\amp T\\
+T \amp  T\amp F \amp T\amp T\amp T\\
+T \amp  F\amp T \amp T\amp T\amp T\\
+T \amp  F\amp F \amp T\amp T\amp T\\
+F \amp  T\amp T \amp T\amp T\amp T\\
+F \amp  T\amp F \amp T\amp F\amp F\\
+F \amp  F\amp T \amp F\amp T\amp F\\
+F \amp  F\amp F \amp F\amp F\amp F\\
+\end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">So we can verify that they are in fact equivalent.</p>
+</div></body>
 </html>

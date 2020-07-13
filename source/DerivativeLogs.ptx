@@ -1,57 +1,102 @@
 <section xml:id="DerivativeLogs">
-  <title>Logarithms</title>
+  <title>Derivative of Logarithms</title>
   <introduction>
+    <p>
+    We recall that log functions are inverses of exponential functions.  We first conceptualized them in <xref ref="Sec_Logarithms"/> as reflections of exponentials across the <m>y=x</m> line.  It is sensible then that the derivatives of logs should be based on those of exponentials.</p>
+
+    <p> In fact, we can see it below.  Each point on the <m>y=e^x</m> line corresponds to a point on the <m>y=\ln(x)</m> line, and the slopes are reciprocals of each other:
+    <interactive desmos="5fxsak3xaa"/></p>
+    </introduction>
+    <subsection>
+      <title>Computing Logarithmic Derivatives</title>
     <p>
       We can use the chain rule to find the derivative of log functions as well.
       Let's first compute <m>\frac{d}{dx}[\ln(x)]</m>:
       <md>
-        <mrow>x\amp =\amp e^{\ln(x)}</mrow>
-        <mrow>\frac{d}{dx}[x]\amp =\amp \frac{d}{dx}[e^{\ln(x)}]</mrow>
-        <mrow>1\amp =\amp e^{\ln(x)}\frac{d}{dx}[\ln(x)]</mrow>
-        <mrow>1\amp =\amp x\frac{d}{dx}[\ln(x)]</mrow>
-        <mrow>\frac{d}{dx}[\ln(x)]\amp =\amp \frac{1}{x}</mrow>
+        <mrow>x\amp = e^{\ln(x)}</mrow>
+        <mrow>\frac{d}{dx}[x]\amp = \frac{d}{dx}[e^{\ln(x)}]</mrow>
+        <mrow>1\amp = e^{\ln(x)}\frac{d}{dx}[\ln(x)]</mrow>
+        <mrow>1\amp = x\frac{d}{dx}[\ln(x)]</mrow>
+        <mrow>\frac{d}{dx}[\ln(x)]\amp = \frac{1}{x}</mrow>
       </md>.
+      Visually:
+      <interactive desmos="9vsyzdkzro"/>
     </p>
     <p>
-      You can see it graphically verified here: \url{https://www.desmos.com/calculator/u89fjxup7q}. For general <m>\log_a(x)</m>:
+      For general <m>\log_a(x)</m>:
       <md>
-        <mrow>x\amp =\amp a^{\log_a(x)}</mrow>
-        <mrow>\frac{d}{dx}[x]\amp =\amp \frac{d}{dx}[a^{\log_a(x)}]</mrow>
-        <mrow>1\amp =\amp a^{\log_a(x)}\ln(a)\frac{d}{dx}[\log_a(x)]</mrow>
-        <mrow>1\amp =\amp x\ln(a)\frac{d}{dx}[\log_a(x)]</mrow>
-        <mrow>\frac{d}{dx}[\log_a(x)]\amp =\amp \frac{1}{x\ln(a)}</mrow>
+        <mrow>x\amp = a^{\log_a(x)}</mrow>
+        <mrow>\frac{d}{dx}[x]\amp = \frac{d}{dx}[a^{\log_a(x)}]</mrow>
+        <mrow>1\amp = a^{\log_a(x)}\ln(a)\frac{d}{dx}[\log_a(x)]</mrow>
+        <mrow>1\amp = x\ln(a)\frac{d}{dx}[\log_a(x)]</mrow>
+        <mrow>\frac{d}{dx}[\log_a(x)]\amp = \frac{1}{x\ln(a)}</mrow>
       </md>.
     </p>
     <p>
-      Verified graphically here as well: \url{https://www.desmos.com/calculator/znr3xikwcc}. Drag <m>a</m> around and see how everything matches up.
+      Verified graphically here as well:
+      <interactive desmos="znr3xikwcc"/>
+
     </p>
-  </introduction>
+  </subsection>
   <subsection>
-    <title>Examples</title>
+    <title>Exercises</title>
+
+
+    <example>
+      <statement>
     <p>
-      Let's try the derivative of <m>f(x)=e^{x}x^2</m>:
+      Let <m>g(x)=\ln(x^2+1)</m>.  Find <m>g'(x)</m>.</p></statement>
+      <solution>
+        <p>
+          Notice:
       <md>
-        <mrow>f'(x)\amp =\amp \frac{d}{dx}[e^xx^2]</mrow>
-        <mrow>\amp =_{PR}\amp \frac{d}{dx}[e^x]x^2+e^x\frac{d}{dx}[x^2]</mrow>
-        <mrow>\amp =\amp e^xx^2+e^x2x</mrow>
+        <mrow>g'(x)\amp = \frac{d}{dx}[\ln(x^2+1)]</mrow>
+        <mrow>\amp =_{CR} \frac{1}{x^2+1}\frac{d}{dx}[x^2+1]</mrow>
+        <mrow>\amp = \frac{2x}{x^2+1}</mrow>
       </md>.
+      Visually: <interactive desmos="b8ut6gfomr"/>
     </p>
+  </solution>
+</example>
+
+
+
+ <exercise>
+      <statement>
     <p>
-      Let <m>g(x)=\ln(x^2+1)</m>:
-      <md>
-        <mrow>g'(x)\amp =\amp \frac{d}{dx}[\ln(x^2+1)]</mrow>
-        <mrow>\amp =_{CR}\amp \frac{1}{x^2+1}\frac{d}{dx}[x^2+1]</mrow>
-        <mrow>\amp =\amp \frac{2x}{x^2+1}</mrow>
+      Suppose the demand function for q units of a certain
+item is
+<me> p=D(q)=150+\frac{40}{\ln(q)}, q>1,</me> where <m>p</m> is in dollars.
+
+<ul>
+  <li>Find the marginal revenue.</li>
+  <li> Approximate the revenue from one more unit when 6 units
+are sold.</li>
+</ul>
+
+</p></statement>
+      <solution>
+        <p>
+          Notice:
+      <ul>
+  <li> We note that revenue is <m>R(q)=qD(q)=150q+\frac{40q}{\ln(q)}</m>.  We then differentiate <m>R(q)</m>:
+    <md>
+        <mrow>D'(q)\amp = \frac{d}{dq}[150q+\frac{40q}{\ln(q)}]</mrow>
+        <mrow>\amp = 150 +\frac{d}{dq}[\frac{40q}{\ln(q)}]</mrow>
+        <mrow>\amp =_{QR} 150 +\frac{\frac{d}{dq}[40q]\ln(q)-40q\frac{d}{dq}[\ln(q)]}{(\ln(q))^2}</mrow>
+        <mrow>\amp = 150 +\frac{40\ln(q)-40q\frac{1}{q}}{(\ln(q))^2}</mrow> 
+         <mrow>\amp = 150 +\frac{40\ln(q)-40}{(\ln(q))^2}</mrow> 
       </md>.
+
+   </li>
+  <li> This would be <m>R'(6)= 150 +\frac{40\ln(6)-40}{(\ln(6))^2}\approx  159.87</m> or <m>\$159.87</m> dollars per unit sold.</li>
+</ul>
+      Visually: <interactive desmos="04r4ndvvxr"/>
     </p>
-    <p>
-      One last one, let <m>h(x)=2^{\frac{x}{x+1}}</m>
-      <md>
-        <mrow>h'(x)\amp =\amp \frac{d}{dx}[2^{\frac{x}{x+1}}]</mrow>
-        <mrow>\amp =_{CR}\amp 2^{\frac{x}{x+1}}\ln(2)\frac{d}{dx}[\frac{x}{x+1}]</mrow>
-        <mrow>\amp =_{QR}\amp 2^{\frac{x}{x+1}}\ln(2)\frac{(x+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x+1]}{(x+1)^2}</mrow>
-        <mrow>\amp =\amp \frac{2^{\frac{x}{x+1}}\ln(2)}{(x+1)^2}</mrow>
-      </md>
-    </p>
+  </solution>
+</exercise>
+
+
+    
   </subsection>
 </section>

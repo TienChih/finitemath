@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:18-06:00    *-->
+<!--*    on 2020-07-13T15:04:31-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,19 +14,36 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.1.4.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.5.10.1</span><span class="period">.</span>
 </h6>
-<p>We're given \(P=750, A=1000, n=5\text{.}\)  Thus we have:</p>
+<p>Let's define the following:</p>
+<ul class="disc">
+<li>\(b=\)"Frida had breakfast."</li>
+<li>\(p=\)"Frida had pancakes."</li>
+<li>\(w=\)"Frida had waffles."</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li>\(\displaystyle b\to (p\vee w)\)</li>
+<li>\(\displaystyle b\)</li>
+<li>\(\displaystyle \sim w\)</li>
+</ul>
+<p data-braille="continuation">Thus we can proceed as follows:</p>
 <div class="displaymath">
-\begin{align*}
-A\amp = P+Prn\\
-1000\amp = 750+(750)r(5)\\
-250\amp = 3750r\\
-r\amp = \frac{250}{3750}\approx 0.066\ldots
-\end{align*}
+\begin{equation*}
+\begin{array}{lcl} 
+b\to (p\vee w)\amp \ \ \ \amp \\ 
+b
+\\ \hline 
+p\vee w \amp  \amp \text{ Modus Ponnens } \\ \\ 
+p\vee w \\ 
+\sim w\\ 
+\hline 
+p  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
+\end{equation*}
 </div>
-<p data-braille="continuation">So about 6.67\% annual simple interest: <iframe src="https://www.desmos.com/calculator/turr6ag5tb" id="interactive-57" width="600" height="600"></iframe></p>
+<p data-braille="continuation">Thus concluding \(p=\)"Frida had pancakes."</p>
 </div>
-<span class="incontext"><a href="Sec_SimpleInterest.html#solution-34">in-context</a></span>
+<span class="incontext"><a href="Sec_Arguments.html#solution-34">in-context</a></span>
 </body>
 </html>

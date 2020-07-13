@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:35-06:00    *-->
+<!--*    on 2020-07-13T15:04:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We note that in our rocket situation, there is nothing particularly special about time \(x=0\text{.}\)  In principle, the derivative described in <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> could be applied to any value of \(x\text{.}\)  Also, the rocket has a velocity at any time, and we should be able to compute it.  If we apply <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> to a general \(f(x)\text{,}\) we obtain:</p>
-<div class="displaymath">
-\begin{equation*}
-f'(x)=\limit{h}{0}\frac{f(x+h)-f(x)}{h}\text{.}
-\end{equation*}
-</div>
+<p>So this means that in \(0\) seconds, the change in the height was \(f'(0)=-10(0)+20=20\) meters/second as we suspected! But now we can compute all the other instantaneous rates of change as well.</p>
+<ul class="disc">
+<li>So at \(x=1\) second, it'll be \(f'(1)=-10(1)+20=10\) meters per second.</li>
+<li>In 2 seconds we are at the top with \(f'(2)=0\) meters per second.</li>
+<li>At 3 seconds, \(f'(3)=-10\) meters/second to reflect the negative change in height at this point.</li>
+<li>Finally in 4 seconds, the rocket hits the ground at \(f'(4)=-20\) meters per second.</li>
+</ul>
+<p data-braille="continuation">One can explore this below in the Desmos graph.  Notice how \(y=f'(x), f=-10x+20\) produce the same line: <iframe src="https://www.desmos.com/calculator/wo9lscifnb" id="interactive-143" width="600" height="600"></iframe></p>
 <span class="incontext"><a href="Sec_DefofDerivative.html#p-920">in-context</a></span>
 </body>
 </html>

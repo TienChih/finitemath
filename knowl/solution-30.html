@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:17-06:00    *-->
+<!--*    on 2020-07-13T15:04:30-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,36 +14,18 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.5.10.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.4.8.1</span><span class="period">.</span>
 </h6>
-<p>Let's define the following:</p>
-<ul class="disc">
-<li>\(b=\)"Frida had breakfast."</li>
-<li>\(p=\)"Frida had pancakes."</li>
-<li>\(w=\)"Frida had waffles."</li>
-</ul>
-<p data-braille="continuation">Then what we are given is:</p>
-<ul class="disc">
-<li>\(\displaystyle b\to (p\vee w)\)</li>
-<li>\(\displaystyle b\)</li>
-<li>\(\displaystyle \sim w\)</li>
-</ul>
-<p data-braille="continuation">Thus we can proceed as follows:</p>
+<p>The statement is "\(\exists x, I(x)\to N(x)\)".  It's negation would be:</p>
 <div class="displaymath">
-\begin{equation*}
-\begin{array}{lcl} 
-b\to (p\vee w)\amp \ \ \ \amp \\ 
-b
-\\ \hline 
-p\vee w \amp  \amp \text{ Modus Ponnens } \\ \\ 
-p\vee w \\ 
-\sim w\\ 
-\hline 
-p  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
-\end{equation*}
+\begin{align*}
+\sim(\exists x, I(x)\to N(x))\amp = \forall x, \sim (I(x)\to N(x))\\
+\amp = \forall x, \sim (\sim I(x)\vee N(x))\\
+\amp = \forall x, I(x)\wedge \sim N(x).
+\end{align*}
 </div>
-<p data-braille="continuation">Thus concluding \(p=\)"Frida had pancakes."</p>
+<p data-braille="continuation">This translates to "For every function, we evaluate at zero and the output is not negative".  (This isn't true, but it's the negation of the original statement).</p>
 </div>
-<span class="incontext"><a href="Sec_Arguments.html#solution-30">in-context</a></span>
+<span class="incontext"><a href="Quantifiers.html#solution-30">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:14-06:00    *-->
+<!--*    on 2020-07-13T15:04:27-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,25 +14,28 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.7.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.1.1</span><span class="period">.</span>
 </h6>
-<p>Consider the following truth tables:\(\ \\ \)</p>
-<div class="displaymath">
+<ol class="decimal">
+<li>Since Max must both eat chicken nuggets and not potty, we have \(a\wedge \sim b\text{.}\)</li>
+<li>A truth table could be constructed as follows:\(\ \\ \)<div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} 
-p\amp q\amp  \sim q \amp   p\vee\sim q\\ 
+a\amp b\amp  \sim b \amp a\wedge \sim b\\ 
 \hline 
-T \amp  T\amp F \amp T\\
+T \amp  T\amp F \amp F\\
 T \amp  F\amp T \amp T\\
 F \amp  T\amp F \amp F\\
-F \amp  F\amp T \amp T\\
+F \amp  F\amp T \amp F\\
 \end{array}
 \end{equation*}
-</div>
+</div>Which is only true if \(a\) is true (he eats nuggets) and \(b\) is false (he does not potty).</li>
+<li>"Either Max didn't eat chicken nuggets or he went to the potty.".</li>
+<li>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} 
-p\amp q\amp  \sim p \amp   p\vee\sim q\\ 
+a\amp b\amp  \sim a \amp \sim a\vee b\\ 
 \hline 
 T \amp  T\amp F \amp T\\
 T \amp  F\amp F \amp F\\
@@ -40,9 +43,9 @@ F \amp  T\amp T \amp T\\
 F \amp  F\amp T \amp T\\
 \end{array}
 \end{equation*}
+</div>\(\ \\ \) Which is true in any situation except when he eats nuggets and doesn't go to the potty.</li>
+</ol>
 </div>
-<p data-braille="continuation">So notice \(p\vee \sim q\) is false when \(p=F, q=T\text{,}\) but \(\sim p \vee q\) is true under those circumstances.  This would be enough to show they are not the same, but also note when \(p=T, q=F\text{,}\) \(p\vee \sim q\) is true but \(\sim p\vee  q\) is false.</p>
-</div>
-<span class="incontext"><a href="Sec_EquivalentStatements.html#solution-15">in-context</a></span>
+<span class="incontext"><a href="Sec_Statements.html#solution-15">in-context</a></span>
 </body>
 </html>

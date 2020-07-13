@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T19:44:36-06:00    *-->
+<!--*    on 2020-07-13T15:04:44-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We do have a rule for products called the <dfn class="terminology">product rule</dfn> and it states \(\frac{d}{dx}[f(x)g(x)]=f'(x)g(x)+f(x)g'(x)\text{.}\) To see why:</p>
-<div class="displaymath">
+<p>We have:</p>
+<ol class="decimal">
+<li>\(C'(x)=\frac{d}{dx}[2x]=2\text{.}\)  So \(\$2\) per product</li>
+<li>\(R'(x)=\frac{d}{dx}[6x-\frac{x^2}{100}]=6-\frac{x}{50}\text{.}\)  So \(\$(6-\frac{x}{50})\) per product</li>
+<li>\(P(x)=R(x)-C(x)=6x-\frac{x^2}{100}-2x=4x-\frac{x^2}{100}.\text{.}\)</li>
+<li>Since \(P'(x)=\frac{d}{dx}[4x-\frac{x^2}{100}]=4-\frac{x}{50} \text{,}\) we note that this is zero when:<div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[f(x)g(x)]\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h},\ \text{ at this stage, I'm going to pull a clever trick and add by 0: }\\
-\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)\textcolor{blue}{-f(x)g(x+h)+f(x)g(x+h)}-f(x)g(x)}{h}\\
-\amp =\amp \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x+h)}{h}+\limit{h}{0}\frac{f(x)g(x+h)-f(x)g(x)}{h}\\
-\amp =\amp \limit{h}{0}\frac{f(x+h)-f(x)}{h}g(x+h)+\limit{h}{0}f(x)\frac{g(x+h)-g(x)}{h}\\
-\amp =\amp f'(x)g(x)+f(x)g'(x)\text{.}
+4-\frac{x}{50}\amp =0\\
+4\amp= \frac{x}{50}\\
+x\amp=200\text{.}
 \end{align*}
-</div>
-<span class="incontext"><a href="Sec_ProductRule.html#p-949">in-context</a></span>
+</div>So marginal profit is 0 when 200 units of the product are produced.</li>
+<li>We have \(P(200)=4(200)-\frac{200^2}{100} =\$400\text{.}\)</li>
+</ol>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/zmm7wvosxu" id="interactive-150" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="Sec_RulesofDerivative.html#p-949">in-context</a></span>
 </body>
 </html>
