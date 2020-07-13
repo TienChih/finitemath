@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-12T10:47:06-06:00    *-->
+<!--*    on 2020-07-12T19:44:35-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,12 +14,16 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-f'(x)\amp =\amp \frac{d}{dx}[x^3](x+1)+x^3\frac{d}{dx}[x+1]\\
-\amp =\amp 3x^2(x+1)+x^3(1)\\
-\amp =\amp 3x^3+3x^2+x^3\\
-\amp =\amp 4x^3+3x^2
+A'(t)\amp = \limit{h}{0}\frac{A(t+h)-A(t)}{h}\\
+\amp = \limit{h}{0} \frac{1000\pi\sqrt{t+h}-1000\pi\sqrt{t}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{\sqrt{t+h}-\sqrt{t}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{(\sqrt{t+h}-\sqrt{t})(\sqrt{t+h}+\sqrt{t})}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{t+h-t}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{h}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{1}{(\sqrt{t+h}+\sqrt{t})}\\
+\amp =  1000\pi\frac{1}{(\sqrt{t+0}+\sqrt{t})}=\frac{1000\pi}{2\sqrt{t}}=\frac{500\pi}{\sqrt{t}}
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_QuotientRule.html#mjx-eqn-mrow-587">in-context</a></span>
+<span class="incontext"><a href="Sec_DefofDerivative.html#mjx-eqn-mrow-587">in-context</a></span>
 </body>
 </html>
