@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-13T15:04:43-06:00    *-->
+<!--*    on 2020-07-13T15:34:07-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,20 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Since the derivative corresponds to an instantaneous rate of change, given a function \(f(x)\) we have:</p>
-<ul class="disc">
-<li>\(f'(a)&gt;0\) when \(f(x)\) is increasing at \(x=a\text{.}\)</li>
-<li>\(f'(a)\lt 0\) when \(f(x)\) is decreasing at \(x=a\text{.}\)</li>
-<li>\(f'(a)=0\) when \(f(x)\) is neither increasing nor decreasing at \(x=a\text{.}\)</li>
-</ul>
+<p>We have:</p>
+<div class="displaymath">
+\begin{align*}
+A'(t)\amp = \limit{h}{0}\frac{A(t+h)-A(t)}{h}\\
+\amp = \limit{h}{0} \frac{1000\pi\sqrt{t+h}-1000\pi\sqrt{t}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{\sqrt{t+h}-\sqrt{t}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{(\sqrt{t+h}-\sqrt{t})(\sqrt{t+h}+\sqrt{t})}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{t+h-t}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{h}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{1}{(\sqrt{t+h}+\sqrt{t})}\\
+\amp =  1000\pi\frac{1}{(\sqrt{t+0}+\sqrt{t})}=\frac{1000\pi}{2\sqrt{t}}=\frac{500\pi}{\sqrt{t}}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/sbg2pzjqty" id="interactive-145" width="600" height="600"></iframe></p>
 <span class="incontext"><a href="Sec_DefofDerivative.html#p-925">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-13T15:04:43-06:00    *-->
+<!--*    on 2020-07-13T15:34:07-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>To generalize this, we have a rule of differentiation: <dfn class="terminology">power rule</dfn>.</p>
+<p>The derivative of \(f(x)=x^3\) is:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{d}{dx}[x^3]\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
+\amp = \limit{h}{0} \frac{(x+h)^3-x^3}{h}\\
+\amp = \limit{h}{0} \frac{x^3+3x^2h+3xh^2+h^3-x^3}{h}\\
+\amp = \limit{h}{0} \frac{(3x^2+3xh+h^2)h}{h}\\
+\amp = \limit{h}{0} 3x^2+3xh+h^2=3x^2\text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="Sec_RulesofDerivative.html#p-935">in-context</a></span>
 </body>
 </html>

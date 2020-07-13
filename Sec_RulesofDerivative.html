@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-13T15:04:15-06:00    *-->
+<!--*    on 2020-07-13T15:33:39-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -175,19 +175,19 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_RulesofDerivative"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.4</span> <span class="title">Basic rules of the derivative</span>
 </h2>
-<section class="introduction" id="introduction-31"><p id="p-927">While there is a formal definition of a derivative, it is a somewhat cumbersome and computationally intense definition.  In this section, we begin introducing some properties of the derivative which simplify computation.</p></section><section class="subsection" id="subsection-68"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-32"><p id="p-928">While there is a formal definition of a derivative, it is a somewhat cumbersome and computationally intense definition.  In this section, we begin introducing some properties of the derivative which simplify computation.</p></section><section class="subsection" id="subsection-68"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.4.1</span> <span class="title">Basic Rules</span>
 </h3>
 <article class="remark remark-like" id="RemarkLinear"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.4.1</span><span class="period">.</span>
 </h6>
-<p id="p-928">Given functions \(f(x), g(x)\) and constants \(a,b\) we have:</p>
+<p id="p-929">Given functions \(f(x), g(x)\) and constants \(a,b\) we have:</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx}[a(f)x)+bg(x)]=af'(x)+bg'(x)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Where \(\frac{d}{dx}\) means “to take the dertivative with respect to \(x\)”.</p></article><p id="p-929">How do we know that? Well:</p>
+<p data-braille="continuation">Where \(\frac{d}{dx}\) means “to take the dertivative with respect to \(x\)”.</p></article><p id="p-930">How do we know that? Well:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[a(f)x)+bg(x)]\amp = \limit{h}{0}\frac{af(x+h)+bg(x+h)-(af(x)-bg(x))}{h}\\
@@ -198,12 +198,12 @@ MathJax.Hub.Config({
 </div></section><section class="subsection" id="subsection-69"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.4.2</span> <span class="title">Power Rule</span>
 </h3>
-<p id="p-930">We may have noticed a pattern with derivatives. But to illustrate it explicitly:</p>
+<p id="p-931">We may have noticed a pattern with derivatives. But to illustrate it explicitly:</p>
 <ul class="disc">
-<li id="li-420"><p id="p-931">The derivative of \(f(x)=x^0\text{,}\) it's the derivative of the constant function \(f(x)=1\text{,}\) and since its a horizontal line, it never has any slope and \(f'(x)=0\text{.}\)</p></li>
-<li id="li-421"><p id="p-932">The derivative of \(f(x)=x^1\text{,}\) it's the derivative of the line \(f(x)=x\) which always has slope 1, so \(f'(x)=1\text{.}\)</p></li>
+<li id="li-420"><p id="p-932">The derivative of \(f(x)=x^0\text{,}\) it's the derivative of the constant function \(f(x)=1\text{,}\) and since its a horizontal line, it never has any slope and \(f'(x)=0\text{.}\)</p></li>
+<li id="li-421"><p id="p-933">The derivative of \(f(x)=x^1\text{,}\) it's the derivative of the line \(f(x)=x\) which always has slope 1, so \(f'(x)=1\text{.}\)</p></li>
 <li id="li-422">
-<p id="p-933">The derivative of \(f(x)=x^2\) is:</p>
+<p id="p-934">The derivative of \(f(x)=x^2\) is:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[x^2]\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
@@ -215,7 +215,7 @@ MathJax.Hub.Config({
 </div>
 </li>
 <li id="li-423">
-<p id="p-934">The derivative of \(f(x)=x^3\) is:</p>
+<p id="p-935">The derivative of \(f(x)=x^3\) is:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[x^3]\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
@@ -227,31 +227,31 @@ MathJax.Hub.Config({
 </div>
 </li>
 </ul>
-<p id="p-935">To generalize this, we have a rule of differentiation: <dfn class="terminology">power rule</dfn>.</p>
+<p id="p-936">To generalize this, we have a rule of differentiation: <dfn class="terminology">power rule</dfn>.</p>
 <article class="remark remark-like" id="remark-5"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.4.2</span><span class="period">.</span>
 </h6>
-<p id="p-936">\(\frac{d}{dx}[x^n]=nx^{n-1}\text{.}\)</p></article><p id="p-937">To verify:</p>
+<p id="p-937">\(\frac{d}{dx}[x^n]=nx^{n-1}\text{.}\)</p></article><p id="p-938">To verify:</p>
 <ul class="disc">
-<li id="li-424"><p id="p-938">\(\frac{d}{dx}[x^0]=0x^{0-1}=0\text{.}\)</p></li>
-<li id="li-425"><p id="p-939">\(\frac{d}{dx}[x^1]=1x^{1-1}=1\text{.}\)</p></li>
-<li id="li-426"><p id="p-940">\(\frac{d}{dx}[x^2]=2x^{2-1}=2x\text{.}\)</p></li>
-<li id="li-427"><p id="p-941">\(\frac{d}{dx}[x^3]=3x^{3-1}=3x^2\text{.}\)</p></li>
+<li id="li-424"><p id="p-939">\(\frac{d}{dx}[x^0]=0x^{0-1}=0\text{.}\)</p></li>
+<li id="li-425"><p id="p-940">\(\frac{d}{dx}[x^1]=1x^{1-1}=1\text{.}\)</p></li>
+<li id="li-426"><p id="p-941">\(\frac{d}{dx}[x^2]=2x^{2-1}=2x\text{.}\)</p></li>
+<li id="li-427"><p id="p-942">\(\frac{d}{dx}[x^3]=3x^{3-1}=3x^2\text{.}\)</p></li>
 </ul>
-<p id="p-942">What's fascinating is that this rule applies to <dfn class="terminology">all</dfn> powers, not just integer powers.</p>
+<p id="p-943">What's fascinating is that this rule applies to <dfn class="terminology">all</dfn> powers, not just integer powers.</p>
 <article class="remark remark-like" id="RemarkPower"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.4.3</span><span class="period">.</span>
 </h6>
-<p id="p-943">By rewriting functions into their power rule form:</p>
+<p id="p-944">By rewriting functions into their power rule form:</p>
 <ul class="disc">
 <li id="li-428">\(\frac{d}{dx}[\frac{1}{x^n}]=\frac{d}{dx}[x^{-n}]=-nx^{-n+1}=\frac{-n}{x^{-n+1}}\text{.}\)</li>
 <li id="li-429">\(\frac{d}{dx}[\sqrt[n]{x}]=\frac{d}{dx}[x^{1/n}]=-\frac{1}{n}x^{\frac{1-n}{n}}=\frac{1}{\sqrt[n]{x^{n-1}}}\text{.}\)</li>
 </ul></article><article class="example example-like" id="example-71"><a data-knowl="" class="id-ref original" data-refid="hk-example-71"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.4.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-71"><article class="example example-like"><p id="p-944">Find the derivative of \(f(x)=x^4-2x^2+7x-3\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-71"><article class="example example-like"><p id="p-945">Find the derivative of \(f(x)=x^4-2x^2+7x-3\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-89" id="solution-89"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-89"><div class="solution solution-like">
-<p id="p-945">By <a class="xref" data-knowl="./knowl/RemarkPower.html" title="Remark 7.4.3">Remark 7.4.3</a> and <a class="xref" data-knowl="./knowl/RemarkLinear.html" title="Remark 7.4.1">Remark 7.4.1</a> we have:</p>
+<p id="p-946">By <a class="xref" data-knowl="./knowl/RemarkPower.html" title="Remark 7.4.3">Remark 7.4.3</a> and <a class="xref" data-knowl="./knowl/RemarkLinear.html" title="Remark 7.4.1">Remark 7.4.1</a> we have:</p>
 <div class="displaymath">
 \begin{align*}
 f'(x)\amp = \frac{d}{dx}[x^4-2x^2+7x-3]\\
@@ -265,10 +265,10 @@ f'(x)\amp = \frac{d}{dx}[x^4-2x^2+7x-3]\\
 </div></article></div>
 <article class="example example-like" id="example-72"><a data-knowl="" class="id-ref original" data-refid="hk-example-72"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.4.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-72"><article class="example example-like"><p id="p-946">Find the derivative of \(g(x)=\sqrt{4x}+\frac{3}{x}-\frac{2}{x^2}\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-72"><article class="example example-like"><p id="p-947">Find the derivative of \(g(x)=\sqrt{4x}+\frac{3}{x}-\frac{2}{x^2}\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-90" id="solution-90"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-90"><div class="solution solution-like">
-<p id="p-947">By <a class="xref" data-knowl="./knowl/RemarkPower.html" title="Remark 7.4.3">Remark 7.4.3</a> and <a class="xref" data-knowl="./knowl/RemarkLinear.html" title="Remark 7.4.1">Remark 7.4.1</a> we have:</p>
+<p id="p-948">By <a class="xref" data-knowl="./knowl/RemarkPower.html" title="Remark 7.4.3">Remark 7.4.3</a> and <a class="xref" data-knowl="./knowl/RemarkLinear.html" title="Remark 7.4.1">Remark 7.4.1</a> we have:</p>
 <div class="displaymath">
 \begin{align*}
 g'(x)\amp = \frac{d}{dx}[\sqrt{4x}+\frac{3}{x}-\frac{2}{x^2}]\\
@@ -283,7 +283,7 @@ g'(x)\amp = \frac{d}{dx}[\sqrt{4x}+\frac{3}{x}-\frac{2}{x^2}]\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-63"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-63"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.4.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-63"><article class="exercise exercise-like"><p id="p-948">An analyst has found that a company’s costs and revenues in dollars for one product are given by</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-63"><article class="exercise exercise-like"><p id="p-949">An analyst has found that a company’s costs and revenues in dollars for one product are given by</p>
 <div class="displaymath">
 \begin{equation*}
 C(x)=2x, R(x)=6x-\frac{x^2}{100}
@@ -299,7 +299,7 @@ C(x)=2x, R(x)=6x-\frac{x^2}{100}
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-91" id="solution-91"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-91"><div class="solution solution-like">
-<p id="p-949">We have:</p>
+<p id="p-950">We have:</p>
 <ol class="decimal">
 <li id="li-435">\(C'(x)=\frac{d}{dx}[2x]=2\text{.}\)  So \(\$2\) per product</li>
 <li id="li-436">\(R'(x)=\frac{d}{dx}[6x-\frac{x^2}{100}]=6-\frac{x}{50}\text{.}\)  So \(\$(6-\frac{x}{50})\) per product</li>
@@ -318,7 +318,7 @@ x\amp=200\text{.}
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-64"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-64"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.4.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-64"><article class="exercise exercise-like"><p id="p-950">If the price in dollars of a product is given by</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-64"><article class="exercise exercise-like"><p id="p-951">If the price in dollars of a product is given by</p>
 <div class="displaymath">
 \begin{equation*}
 p(q)=\frac{500}{q^2}+800
@@ -327,20 +327,20 @@ p(q)=\frac{500}{q^2}+800
 <p data-braille="continuation">where \(q\) represents the demand for the product, find the marginal revenue when the demand is 4.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-92" id="solution-92"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-92"><div class="solution solution-like">
-<p id="p-951">We  note that revenue is price times quantity demanded so \(R(q)=p(q)q=(\frac{500}{q^2}+800)q=\frac{500}{q}+800q.\)  From here we can find the marginal revenue: \(R'(q)=\frac{d}{dq}[\frac{500}{q}+800q]=\frac{d}{dq}[500q^{-1}+800q]=-500q^{-2}+800=\frac{-500}{q^2}+800\text{.}\)</p>
-<p id="p-952">Thus, when demand is 4, the marginal revenue is \(R'(4)=\frac{-500}{4^2}+800=\$768.75\) per unit. We can see this below: <iframe src="https://www.desmos.com/calculator/l5leccci0i" id="interactive-151" width="600" height="600"></iframe></p>
+<p id="p-952">We  note that revenue is price times quantity demanded so \(R(q)=p(q)q=(\frac{500}{q^2}+800)q=\frac{500}{q}+800q.\)  From here we can find the marginal revenue: \(R'(q)=\frac{d}{dq}[\frac{500}{q}+800q]=\frac{d}{dq}[500q^{-1}+800q]=-500q^{-2}+800=\frac{-500}{q^2}+800\text{.}\)</p>
+<p id="p-953">Thus, when demand is 4, the marginal revenue is \(R'(4)=\frac{-500}{4^2}+800=\$768.75\) per unit. We can see this below: <iframe src="https://www.desmos.com/calculator/l5leccci0i" id="interactive-151" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-65"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-65"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.4.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-65"><article class="exercise exercise-like"><p id="p-953">Insulin affects the glucose, or blood sugar, level of some diabetics according to the function</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-65"><article class="exercise exercise-like"><p id="p-954">Insulin affects the glucose, or blood sugar, level of some diabetics according to the function</p>
 <div class="displaymath">
 \begin{equation*}
 G(x)=-0.2x^2 +450,
 \end{equation*}
 </div>
 <p data-braille="continuation">where \(G(x)\) is the blood sugar level 1 hour after \(x\) units of insulin are injected. (This mathematical model is only approximate, and it is valid only for values of x less than about 40.)</p>
-<ol id="p-954" class="decimal">
+<ol id="p-955" class="decimal">
 <li id="li-440">Find the blood sugar level after 10 units of insulin are injected.</li>
 <li id="li-441">Find the blood sugar level after 25 units of insulin are injected.</li>
 <li id="li-442">Find the rate of change of blood sugar level after 10 units of insulin are injected.</li>
@@ -348,7 +348,7 @@ G(x)=-0.2x^2 +450,
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-93" id="solution-93"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-93"><div class="solution solution-like">
-<p id="p-955">We  note that \(G'(x)=\frac{d}{dx}[-0.2x^2 +450]=-0.4x \text{.}\)</p>
+<p id="p-956">We  note that \(G'(x)=\frac{d}{dx}[-0.2x^2 +450]=-0.4x \text{.}\)</p>
 <ol class="decimal">
 <li id="li-444">\(\displaystyle G(10)=-0.2(10)^2 +450=430.\)</li>
 <li id="li-445">\(\displaystyle G(25)=-0.2(25)^2 +450=325.\)</li>

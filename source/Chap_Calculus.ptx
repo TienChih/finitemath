@@ -1,5 +1,13 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_Calculus">
   <title>Introduction to Differential Calculus</title>
+  <introduction>
+    <statement>
+  <p>
+    In this chapter, we introduce and discuss the <term>derivative</term>, the instantaneous rate of change of a function.  Everything we care about that is modeled by functions, movement of objects, values of investments, growth of populations, they all exhibit change (or lack thereof).  Here we will formally discuss this change.
+
+  </p>
+</statement>
+</introduction>
   <xi:include  href="Sec_LimitsContinuity.ptx"/>
   <xi:include  href="Sec_AvgRoC.ptx"/>
   <xi:include  href="Sec_DefofDerivative.ptx"/>
