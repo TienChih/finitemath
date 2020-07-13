@@ -7,7 +7,7 @@
   <subsection>
     <title>From Average to Instant</title>
     <p>
-      Recall that in <xref ref="ExampleLimit"/>, we found the average rate of change in the height, <m>f(x)=-5x^2+20x</m>, of a rocket <m>x</m> seconds after launch , over the intervals <m>[0,2], [0,1], [0,0.5]</m>.  But what prompted this discussion was what the speed was at the moment of launch.  We can't actually evaluate the average rate of change over <m>[0,0]</m>, but what we can do is find the average rate of change over <m>[0, h]</m> and see what happens as <m>h\to 0</m>.
+      Recall that in <xref ref="ExampleRoC"/>, we found the average rate of change in the height, <m>f(x)=-5x^2+20x</m>, of a rocket <m>x</m> seconds after launch , over the intervals <m>[0,2], [0,1], [0,0.5]</m>.  But what prompted this discussion was what the speed was at the moment of launch.  We can't actually evaluate the average rate of change over <m>[0,0]</m>, but what we can do is find the average rate of change over <m>[0, h]</m> and see what happens as <m>h\to 0</m>.
 
       <interactive desmos="ufwyh8xrwp" />
       As you can observe, it appears as if this slope approaches 20 m/s.

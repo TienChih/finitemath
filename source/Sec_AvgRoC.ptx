@@ -46,7 +46,7 @@
   </p>
 </statement>
 </definition>
-  <example>
+  <example xml:id="ExampleRoC">
     <statement>
       <p>
         In our rocket example above, where the height is <m>f(x)=-5x^2+20x</m> meters in <m>x</m> seconds, find the rate of change of the rocket over the following periods of time:
