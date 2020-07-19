@@ -1,0 +1,377 @@
+<section xml:id="Sec_IntroSets">
+  <title>Introduction to Sets</title>
+  <introduction>
+    <statement>
+      <p>
+        Sets are a formal mathematical way of describing collections of things or objects.  The actual <q>order</q> objects appear, or repition of objects do not matter here.  Set's fundamentally are collections of things, where any object may be described as in it, or not in it.
+      </p>
+    </statement>
+  </introduction>      
+
+  <subsection>
+    <title>Set Basics </title>
+  <p>
+    We often denote <term>sets</term> as actual lists: <me>\{1,2,3,4,5\}</me> or in terms of a condition: <me>\{x\ \text{a natural number}:1\leq x \leq 5\}.</me>
+
+    The above should read <q>All natural numbers <m>x</m> where <m>x</m> is between 1 and 5.</q> That is, the set <m>\{1,2,3,4,5\}</m>.  
+
+</p>
+
+<definition xml:id="DefinitionElement">
+  <statement>
+    <p>
+      We say that an element <m>a</m> <term> is an element</term> of <m>A</m> if <m>a</m> belongs to <m>A</m>.  We denote this <m>x\in A</m>.  Otherwise, <m>a</m> is not an element of <m>A</m> and <m>a\not\in A</m>.
+    </p>
+  </statement>
+</definition>  
+
+<example>
+<statement>
+  <p>
+    Consider the set <m>A=\{2,3,5\}.</m>
+    <ul>
+      <li><m>1\not\in A.</m> since 1 is not in <m>A</m>.</li>
+      <li><m>2\in A.</m> since 2 is in <m>A</m>.</li>
+      <li><m>3\in A.</m> since 3 is in <m>A</m>.</li>
+      <li><m>4\not\in A.</m> since 4 is not in <m>A</m>.</li>
+      <li><m>5\in A.</m> since 5 is in <m>A</m>.</li>
+    </ul>  
+  </p>
+ </statement> 
+</example>  
+
+
+<example>
+<statement>
+  <p>
+    Consider the set <m>S=\{x:x\ \text{is a word starting with an "A"}\}.</m>
+    <ul>
+      <li>Apple, Agnostic, Aggregate, Anchovies <m>\in S</m>.</li>
+      <li>Bannana, Xenomorph, Cumble, Textual, Finite, Mathematics <m>\not\in S</m>.</li>
+    </ul>  
+  </p>
+ </statement> 
+</example>  
+
+For this chapter, the primary goal of sets is to list a collection of possible outcomes, or outcomes which satify certain requirements.  It may be that there may be situations where no outcomes satisfy the requirements.  To describe such scenarios, we require a set with no elements.
+
+<definition xml:id="DefinitionEmptySet">
+  <statement>
+    <p>
+      The set with no elements is the <term>empty set</term> or <term> null set</term> denoted <m>\emptyset</m>.
+    </p>
+  </statement>
+</definition>  
+
+
+<example>
+<statement>
+  <p>
+    Consider the set <me>R=\{a:a^2-2a=0\ \text{and}\ a\ \text{is odd}\}.</me>
+    We note that <m>a^2-2a=0</m> has two solutions, <m>a=0,2</m>.  But they are both even, neither are odd.  Thus <m>R=\emptyset</m>.
+  </p>
+ </statement> 
+</example> 
+
+There are situations where every element which satisfies a condition also satisfies other conditions.  We then need to denote when the elements of a set also belong to another set.
+
+<definition xml:id="DefinitionSubset">
+  <statement>
+    <p>
+      We say <m>A</m> is a <term>subset</term> of <m>B</m> if each element of <m>A</m> is also an element of <m>B</m>, denoted <m>A\subseteq B</m>.  If <m>A</m> contains an element not in <m>B</m>, we say <m>A\not\subseteq B</m>.
+    </p>
+  </statement>
+</definition>  
+
+<remark>
+  <statement>
+    <p>
+      Given <em>any</em> set <m>A</m>:
+      <ul>
+        <li><m>A\subseteq A</m> since each element of <m>A</m> is definitely an element of <m>A</m>.</li>
+        <li><m>\emptyset\subseteq A</m> since all none elements of <m>\emptyset</m> are also elements of <m>A</m>!</li>
+      </ul>
+    </p>
+  </statement>
+</remark>   
+
+
+
+<example>
+<statement>
+  <p>
+    Consider the sets <me>A=\{1,2,3,4,5\}, B=\{1,3,5\}, C=\{1,4\}.</me>
+    <ul>
+        <li><m>B\subseteq A</m> since each element of <m>B</m> is an element of <m>A</m>.</li>
+        <li><m>C\subseteq A</m> since each element of <m>C</m> is an element of <m>A</m>.</li>
+        <li><m>B\not\subseteq C</m> since <m>3,5\in B</m> but <m>3,5\not\in C</m>.</li>
+        <li><m>C\not\subseteq B</m> since <m>4\in C</m> but <m>4\not\in B</m>.</li>
+        <li><m>\emptyset \subseteq A, B,  C, \emptyset</m>.</li>
+      </ul>
+  </p>
+ </statement> 
+</example>      
+
+<definition xml:id="DefinitionSetequal">
+  <statement>
+    <p>
+      We say sets <m>A, B</m> are  <term>equal</term>  if each element of <m>A</m> is also an element of <m>B</m>, and each element of <m>B</m> is also an element of <m>A</m>. This is denoted <m>A=B</m>. Otherwise  <m>A\neq B</m>.
+    </p>
+
+    <p>
+      Note that <m>A=B</m>. is equivalent to sayng <m>A\subseteq B, B\subseteq A</m>.
+    </p>
+  </statement>
+</definition>  
+
+
+<example>
+<statement>
+  <p>
+    Consider the sets <me>V=\{4,1,2\}, W=\{4,2\}, X=\{2,4\}, Y=\{1,2,4,2\}, Z=\{a:x^2-6x+8=0\}.</me>
+    <ul>
+        <li><m>V\neq W</m>, since <m>1\not\in W</m></li>
+        <li><m>V=Y</m> since each element of <m>V</m> is an element of <m>Y</m> and vice versa (one can check them one by one).</li>
+        <li><m>W=X=Z</m> since they all only contain <m>2, 4</m>.</li>
+      </ul>
+  </p>
+ </statement> 
+</example>  
+
+
+
+
+
+</subsection>
+
+
+
+
+<subsection>
+  <title>Set Operations</title>
+
+  Generally speaking, while dealing with sets, there is an understood <term>universal set</term> in which we are working.  In a probability setting, this usually denotes the set of all possible outcomes of an experiment.  For now, we'll just call this set <m>\mcathcal{U}</m>.
+
+
+<definition xml:id="DefinitionComplement">
+  <statement>
+    <p>
+      Given a set <m>A</m> we denote the <term>complement</term> of <m>A</m> to be the set <m>A^c</m> consisting of all elements of <m>\mathcal{U}</m> <em>not</em> in <m>A.</m>
+    </p>
+  </statement>
+</definition>  
+
+
+
+<example xml:id="ExampleSet">
+<statement>
+  <p>
+    Let <me>\mathcal{U}=\{Ailca, Bryan, Corrine, Damien, Esmeralda, Francis\}.</me> Let <m>A=\{Bryan, Esmeralda\}, B=\{Bryan, Francis\}</m>.
+    <ul>
+        <li><m>A^c=\{Alicia, Corrine, Damien, Franics\}</m>, all the elements of <m>\mathcal{U}</m> that aren't in <m>A</m>.</li>
+         <li><m>B^c=\{Ailca,Corrine, Damien, Esmeralda\}</m>, all the elements of <m>\mathcal{U}</m> that aren't in <m>B</m>.</li>
+        <li><m>\emptyset^c=\mathcal{U}=\{Ailca, Bryan, Corrine, Damien, Esmeralda, Francis\}</m> since each element of <m>\mathcal{U}</m> is not contained in the emptyset. </li>
+      </ul>
+
+  </p>
+ </statement> 
+</example>  
+
+
+<remark>
+  <statement>
+    <p>
+      Given <em>any</em> set <m>A</m>, and universal set <m>\mathcal{U}</m>:
+      <ul>
+        <li><m>(A^c)^c=A</m>.</li>
+        <li><m>\emptyset^c=\mathcal{U}</m>.</li>
+        <li><m>\mathcal{U}^c=\emptyset</m>.</li>
+      </ul>
+    </p>
+  </statement>
+</remark> 
+
+
+<definition xml:id="DefinitionUnionIntersect">
+  <statement>
+    <p>
+      Given a sets <m>A, B</m>:
+      <ul>
+        <li>The <term>union</term> of <m>A</m> and <m>B</m> denoted <m>A\cup B</m> consists of all elements that are ether in <m>A</m> <em>or</em> <m>B</m>.</li>
+        <li>The <term>intersection</term> of <m>A</m> and <m>B</m> denoted <m>A\cap B</m> consists of all elements that are both in <m>A</m> <em>and</em> <m>B</m>.</li>
+
+
+      </ul>  
+    </p>
+  </statement>
+</definition>  
+
+<example>
+<statement>
+  <p>
+    Recall <xref ref="ExampleSet"/>.  Find the following:
+    <ul>
+        <li><m>A\cup B</m>.</li>
+        <li><m>A\cap B</m>.</li>
+        <li><m>A^c\cup B</m>.</li>
+        <li><m>A\cap B^c</m>.</li>
+      </ul>
+
+  </p>
+ </statement> 
+ <solution>
+  <p>
+    Recall that <me>A=\{Bryan, Esmeralda\}, B=\{Bryan, Francis\}, </me><me>A^c=\{Alicia, Corrine, Damien, Franics\}, B^c=\{Ailca,Corrine, Damien, Esmeralda\}.</me>
+
+    <ul>
+        <li><m>A\cup B=\{Bryan, Esmeralda, Francis\}</m>.</li>
+        <li><m>A\cap B=\{Bryan\}</m>.</li>
+        <li><m>A^c\cup B=\{Ailca, Bryan, Corrine, Damien,  Francis\}</m>.</li>
+        <li><m>A\cap B^c=\{Esmeralda\}</m>.</li>
+      </ul>
+  </p>  
+
+ </solution>
+</example>  
+
+<remark>
+  <statement>
+    <p>
+      Given <em>any</em> set <m>A</m>:
+      <ul>
+        <li><m>A\cup A^c=\mathcal{U}</m>.</li>
+        <li><m>A\cap A^c=\emptyset</m>.</li>
+      </ul>
+    </p>
+  </statement>
+</remark> 
+
+A good way of visualizing unions and intersections is through Venn Diagrams:
+
+<figure>
+<caption><m>A\cup B</m> </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[scale=0.4]
+\fillA
+\fillB
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+<figure>
+<caption><m>A\cap B</m> </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[scale=0.4]
+\fillACapB
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+<figure>
+<caption><m>A^c\cup B</m> </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[scale=0.4]
+\fillNotA
+\fillB
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+<figure>
+<caption><m>A\cap B^c</m> </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[scale=0.4]
+\fillOnlyA
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>   
+
+<p>
+ Following the argument in <xref ref="TheoremDeMorgans"/>  We have:                    
+</p>
+
+<theorem xml:id="TheoremDeMorgansSet">
+  <statement>
+    <p>
+      Given  sets <m>A, B</m>:
+      <ul>
+        <li><m>(A\cup B)^c=A^c\cap B^c</m>.</li>
+        <li><m>(A\cap B)^c=A^c\cup B^c</m>.</li>
+      </ul>
+      This is also referred to as <q>DeMorgan's Law</q>.
+    </p>
+  </statement>
+  <proof>
+    <p>
+      Consider the following string of diagrams:
+      <figure>
+<caption><m>A\cup B</m> </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[scale=0.4]
+\fillA
+\fillB
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+      <figure>
+<caption><m>(A\cup B)^c=A^c\cap B^c</m> </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[scale=0.4]
+\fillNotAorB
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+ <figure>
+<caption><m>A\cap B</m> </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[scale=0.4]
+\fillACapB
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+<figure>
+<caption><m>(A\cap B)^c=A^c\cup B^c</m> </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[scale=0.4]
+\fillNotA
+\fillNotB
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>      
+
+
+    </p>  
+  </proof>  
+</theorem> 
+
+
+</subsection>
+
+</section>

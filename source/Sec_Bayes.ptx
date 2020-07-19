@@ -1,0 +1,285 @@
+<section xml:id="Sec_Bayes">
+  <title>Bayes Theorem</title>
+  <introduction>
+    <statement>
+      <p>
+        In <xref ref="Sec_Conditional"/> we saw that some events can change the likelihood of other events.  If we consider something like smoking and lung cancer, it's well understood that whether or not one smokes differentiates the probability that one contracts lung cancer.  Thus, we should be able to predict lung cancer rates from smoking rates, and vice versa.  We will make that formal here.
+      </p>
+    </statement>
+  </introduction>      
+
+  <subsection>
+    <title>A Motivating Example </title>
+
+  <p>  Recall <xref ref="ExercisePlants"/>, if we rename our events, let <m>Y</m> denote <q>built in plant A</q> and <m>X</m> denotes <q>passes inspection</q>, then we have <m>P(X|Y)=0.85, P(X|Y^c)=0.7</m> measure the 85% chance for vehicles built in plant A to pass inspection, and the 70% built in B to pass inspection.  Then, how many vehicles pass inspection depends entirely on how many vehicles are manufactured in A as opposed to B.
+
+  <interactive desmos="a4gs4jrer2"/>
+    
+  If 100% of the vehicles were built in plant A, then naturally 85% of cars would pass inspection.  If they were all built in B, then only 70% would pass inspection.  For any mix of plants A and B, the number who pass inspection should be something in between.
+
+  </p> 
+
+</subsection>
+
+<subsection>
+  <title>Bayes's Theorem</title>
+
+  <theorem xml:id="TheoremBayes">
+    <statement>
+      <p>
+        Given events <m>X, Y</m>: <me>P(X) =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y)).</me>
+      </p>
+    </statement>
+   <proof>     
+
+  <p>Recall that:
+    <md>
+      <mrow> P(X)\amp =P(X\cap Y)+P(X\cap Y^c)</mrow>
+      <mrow> \amp =P(X|Y)P(Y)+P(X|Y^c)P(Y^c)</mrow>
+      <mrow> \amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))</mrow>
+    </md>  
+
+
+ </p>   
+
+</proof>
+</theorem>
+
+
+<p>
+  So if 40% of the vehicles are built in plant A, then <m>P(Y)=0.4</m>, and we should be able to determine how many vehicles pass inspection.  We first note that the percent of vehicles who are from plant A and pass inspection is <me>P(X\cap Y)=P(X|Y)P(Y)=(0.85)(0.4)=0.34.</me>  Next, to see the percent of vehicles who are from plant B and pass inspection is <me>P(X\cap Y^c)=P(X|Y^c)P(Y^c)=P(X|Y^c)(1-P(Y))=(0.7)(0.6)=0.42.</me>  So the total percent of cars who pass inspection is:
+
+ <md>
+      <mrow> P(X)\amp =P(X\cap Y)+P(X\cap Y^c)</mrow>
+      <mrow> \amp =P(X|Y)P(Y)+P(X|Y^c)P(Y^c)</mrow>
+      <mrow> \amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))</mrow>
+      <mrow> \amp =(0.85)(0.4)+(0.7)(0.6)</mrow>
+      <mrow> \amp =0.34+0.42=0.76</mrow>
+    </md>  
+
+    We can see this below:
+
+<interactive desmos="ndd9pzxcqp"/>
+
+</p>  
+
+<p>
+  The relation in <xref ref="TheoremBayes" /> should also work the other way, if we saw that 80% of the vehicles pass inspection, what proportion of them were built in Plant A?  We are given <m>P(X)=0.8</m> and asked to find <m>P(Y)</m>.  So:
+
+<md>
+      <mrow> P(X)\amp=P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))</mrow>
+      <mrow> 0.8 \amp =(0.85)P(Y)+(0.7)(1-P(Y)</mrow>
+      <mrow> 0.8 \amp =(0.85)P(Y)+(0.7)-(0.7)P(Y)</mrow>
+      <mrow> 0.1 \amp =(0.15)P(Y)</mrow>
+      <mrow> P(Y) \amp =\frac{.1}{.15}=\frac{2}{3}\approx 0.666666667.</mrow>
+    </md>  
+
+    We can see this below:
+
+<interactive desmos="hyydpbhoud"/>
+
+</p>  
+
+
+<remark>
+    <statement>
+      <p>
+        Reworking <xref ref="TheoremBayes"/>, we obtain:
+
+        <md>
+      <mrow> P(X)\amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))</mrow>
+      <mrow> P(X)\amp =P(X|Y)P(Y)+P(X|Y^c)-P(X|Y^c)P(Y)</mrow>
+      <mrow> P(X)-P(X|Y^c)\amp =(P(X|Y)-P(X|Y^c))P(Y)</mrow>
+      <mrow>   P(Y)\amp =\frac{P(X)-P(X|Y^c)}{P(X|Y)-P(X|Y^c)}.</mrow>
+    </md>  
+And:
+  
+  <md>
+      <mrow> P(Y|X)\amp =\frac{P(Y\cap X)}{P(X)}</mrow>
+      <mrow> \amp =\frac{P(X|Y)P(X)}{P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))}.</mrow>
+    </md>  
+
+      </p>
+    </statement>
+  
+</remark>
+
+
+<example>
+    <statement>
+      <p>
+        Suppose that out of coffee drinkers, 80% of those who use cream also add sugar, and 30% of those who don't use cream add sugar.  Suppose that 70% of coffee drinkers use cream.
+        <ol>
+          <li>What proportion of coffee drinkers use sugar?</li>
+          <li>Given a random coffee drinker who uses sugar, what is the probability they use cream?</li>
+          <li>How many coffee drinkers drink their coffee black?  (no cream or sugar)</li>
+        </ol>
+       </p>
+     </statement>
+     
+     <solution>
+      <p>
+        Let <m>C</m> denote <q>uses cream</q> and <m>S</m> denote <q>uses sugar</q>.  We are given <m>P(S|C)=0.8, P(S|C^c)=0.3, P(C)=0.7.</m>
+         <ol>
+          <li>This is <m>P(S)</m>.  So:
+          <md>
+      <mrow> P(S)\amp =P(S|C)P(C)+P(S|C^c)(1-P(C))</mrow>
+      <mrow> P(S)\amp =(0.8)(0.7)+(0.3)(1-0.7)=0.65</mrow>
+        </md> 
+        Which we can see:
+        <interactive desmos="3gypbhzj6l"/>
+
+        Moreover, we now know <m>P(C)=0.7, P(S)=0.65, P(S\cap C)=P(S|C)P(C)=(0.8)(0.7)=0.56.</m>  So we can fill out the following venn diagram:
+
+        <figure>
+<caption> <m>C, S</m> and their probabilities</caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[labelOnlyA={$0.14$},labelOnlyB={$0.09$}, labelAB={$0.56$}, labelNotAB={$0.21$}, labelA={$C$}, labelB={$S$}]
+
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+        </li>
+          <li>  This is <m>P(C|S)=\frac{P(C\cap S)}{P(S)}=\frac{0.56}{0.65}\approx 0.861538</m>.</li>
+          <li> This is <m>P(C^c\cap S^c)=0.21</m>.</li>
+        </ol>
+      </p>
+     </solution>     
+</example>
+
+
+<example>
+    <statement>
+      <p>
+        Suppose that during the zombie apocalypse, an anti-zombification serum is developed.  People who take the serum have a 10% chance of becoming zombies, but those who don't have an 85% chance of becoming zombies. Suppose half of a city is zombified.
+        <ol>
+          <li>What proportion of the city took the serum?</li>
+          <li> If you weren't zombified, what is the probability you took the serum?</li>
+        </ol>
+       </p>
+     </statement>
+     
+     <solution>
+      <p>
+        Let <m>S</m> denote <q>took serum</q> and <m>Z</m> denote <q>zombified</q>.  We are given <m>P(Z|S)=0.1, P(Z|S^c)=0.85, P(Z)=0.5.</m>
+         <ol>
+          <li>This is <m>P(S)</m>.  So:
+          <md>
+      <mrow> P(Z)\amp =P(Z|S)P(S)+P(Z|S^c)(1-P(S))</mrow>
+      <mrow>   P(S)\amp =\frac{P(Z)-P(Z|S^c)}{P(Z|S)-P(Z|S^c)}</mrow>
+      <mrow>   \amp =\frac{0.5-0.85}{0.1-0.85}=\frac{7}{15}\approx 0.4666666667.</mrow>
+        </md> 
+        Which we can see:
+        <interactive desmos="gdmhlhnxga"/>
+
+        Moreover, we now know <m>P(Z)=0.5, P(S)=\frac{7}{15}, P(S\cap Z)=P(Z|S)P(S)=(0.1)\frac{7}{15}=\frac{7}{150}\approx 0.0466666667</m>  So we can fill out the following venn diagram:
+
+        <figure>
+<caption> <m>Z, S</m> and their probabilities</caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[labelOnlyA={$\frac{68}{150}$},labelOnlyB={$0.42$}, labelAB={$\frac{7}{150}$}, labelNotAB={$0.08$}, labelA={$Z$}, labelB={$S$}]
+
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+        </li>
+          <li>  This is <m>P(S|Z^c)=\frac{P(S\cap Z^c)}{P(Z^c)}=\frac{0.42}{0.5}\approx 0.84</m>.</li>
+        </ol>
+      </p>
+     </solution>     
+</example>
+
+
+<exercise>
+    <statement>
+      <p>
+        For those graduating from State University, those who go to grad school the year afterwards have a 60% chance of also working a job at the same time.  Those who don't go to grad school the year afterwards have a 90% chance of working.  If 15% of the graduates went to grad school the year afterwards, what proprtion were either working or going to grad school.
+       </p>
+     </statement>
+     
+     <solution>
+      <p>
+        Let <m>G</m> denote <q>grad school</q> and <m>W</m> denote <q>working</q>.  We are given <m>P(W|G)=0.6, P(W|G^c)=0.9, P(G)=0.15.</m>  We are asked to find <m>P(G \cup W)</m>.  We first find <m>P(W)</m>:
+         
+          <md>
+      <mrow> P(W)\amp =P(W|G)P(G)+P(W|G^c)(1-P(G))</mrow>
+      <mrow> \amp =(0.6)(0.15)+(0.9)(1-0.15)=0.855</mrow>
+        </md> 
+        Which we can see:
+        <interactive desmos="zzqjesbder"/>
+
+        Moreover, we now know <m>P(G)=0.15, P(W)=0.855, P(G\cap W)=P(W|G)P(G)=(0.6)(0.15)=0.09</m>  So we can fill out the following venn diagram:
+
+        <figure>
+<caption> <m>G, W</m> and their probabilities</caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[labelOnlyA={$0.06$},labelOnlyB={$0.765$}, labelAB={$0.09$}, labelNotAB={$0.085$}, labelA={$G$}, labelB={$W$}]
+
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+      So <m>P(W\cup G)=0.06+0.765+0.09=0.915</m> or <m>P(W\cup G)=P(W)+P(G)-P(W\cap G)=0.855+0.15-0.09=0.915</m>.
+      </p>
+     </solution>     
+</exercise>
+
+
+<exercise>
+    <statement>
+      <p>
+        Suppose that a test for a virus has a 90% chance of returning a positive result if a person is infected with the virus, but a 8% chance of returning a positive result if not infected.  Suppose that people are randomly tested and 30% of the tests are coming back positive.  If Andre went out, took the test and it came back positive, what is the probability he has been infected?
+       </p>
+     </statement>
+     
+     <solution>
+      <p>
+        Let <m>I</m> denote <q>infected</q> and <m>T</m> denote <q>tested positive</q>.  We are given <m>P(T|I)=0.9, P(T|I^c)=0.08, P(T)=0.3.</m>  We are asked to find <m>P(I|T)</m>.  We first find <m>P(I)</m>:
+         
+          <md>
+      <mrow> P(T)\amp =P(T|I)P(I)+P(T|I^c)(1-P(I))</mrow>
+      <mrow> P(I) \amp =\frac{P(T)-P(T|I^c)}{P(T|I)-P(T|I^c)}</mrow>
+      <mrow>  \amp =\frac{0.3-0.08}{0.9-0.08}=\frac{0.22}{0.82}=\frac{11}{41}\approx 0.26829 </mrow>
+        </md> 
+        Which we can see:
+        <interactive desmos="qlwn25vdod"/>
+
+        Moreover, we now know <m>P(I)=\frac{11}{41}, P(T)=0.3, P(T\cap I)=P(T|I)P(I)=(0.9)\frac{11}{41}=\frac{99}{410}</m>  So we can fill out the following venn diagram:
+
+        <figure>
+<caption> <m>I, T</m> and their probabilities</caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[labelOnlyA={$\frac{24}{410}$},labelOnlyB={$\frac{11}{410}$}, labelAB={$\frac{99}{410}$}, labelNotAB={$\frac{276}{410}$}, labelA={$T$}, labelB={$I$}]
+
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+      So <m>P(I|T)=\frac{P(I\cap T)}{P(T)}=\frac{99/410}{0.3}=\frac{33}{41}\approx 0.80488</m>.
+      </p>
+     </solution>     
+</exercise>
+
+
+
+
+</subsection>
+</section>

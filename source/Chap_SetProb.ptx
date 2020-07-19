@@ -1,0 +1,16 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_SetProb">
+  <title>Introduction to Sets and Probabilty</title>
+  <introduction>
+    <statement>
+  <p>
+    Fill in Later.
+
+  </p>
+</statement>
+</introduction>
+  <xi:include  href="Sec_IntroSets.ptx"/>
+  <xi:include  href="Sec_CardProb.ptx"/>
+  <xi:include  href="Sec_Conditional.ptx"/>
+  <xi:include  href="Sec_Bayes.ptx"/>
+  
+</chapter>

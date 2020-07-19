@@ -1,0 +1,579 @@
+<section xml:id="Sec_Conditional">
+  <title>Condtional Probability</title>
+  <introduction>
+    <statement>
+      <p>
+        In this section, we consider how we might compute probabilities if you knew other events took place.  This occurs often in our day to day thinking without us being aware of it. It may be that the chance you have the flu on any random day is fairly low.  But if you woke up one morning, with a high fever and a cough, then certainly you'd think the chances were higher!  It may be difficult to predict the weather in general, but by observing signs like cloud cover, wind and changes in temperature, one could adjust your own assesment of the likelihood of rain.  In other words, the probablity of an event occuring may change depending on what other events do or don't take place. 
+      </p>
+    </statement>
+  </introduction>      
+
+  <subsection>
+    <title>Defining Conditional Probability </title>
+
+  <p>Suppose you rolled a six-sded die.  Let <m>A</m> denoted <q>the outcome is even</q> and <m>B</m> denote <q>the outcome is at least 4</q>.  Let's say someone rolls the dice, looks at the result, and informs you that <m>B</m> is true.  What now is the probability that <m>A</m> is true?</p> 
+
+  <p> In general, <m>P(A)=\frac{3}{6}</m>, however, if we know <m>B</m> is true, there are no longer 6 valid outcomes.  We are restricted to <m>B=\{4,5,6\}</m> as our new sample space.  So we note that out of these, <m>\{4,6\}</m> are are even.  So the probability <em>now</em> that <m>A</m> occurs is <m>\frac{2}{3}</m>.</p>
+
+  <p> We note that this <m>\frac{2}{3}=\frac{|A\cap B|}{|B|}</m>. That is, our of <m>B</m>, how much of <m>B</m> is <m>A</m>?
+
+
+<figure>
+<caption> <m>B</m>, the new sample space.  </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}
+\fillB
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+<figure>
+<caption> <m>A</m> when restricted to <m>B</m>.  </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}
+\fillACapB
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>      
+
+
+</p>
+
+
+<definition xml:id="DefinitionConditional">
+  <statement>
+    <p>
+      We say the probability of <m>A</m> <term>given</term> <m>B</m> is the probability <m>A</m>occurs assuming that <m>B</m> occurs.  This is denoted <m>P(A|B)</m> and is computed <me>P(A|B)=\frac{|A\cap B|}{|B|}=\frac{|A\cap B|/|S|}{|B|/|S|}=\frac{P(A\cap B)}{P(B)}.</me>
+    </p>
+  </statement>
+</definition>
+
+<p>
+
+  We can see this here with the following Desmos graph.  Initially, <m>P(A)=0.6, P(B)=0.4, P(A\cap B)=0.3, P(A\cup B)=0.7</m>.  We see that while <m>P(A)</m> takes up 60% of the <m>[0,1]</m> interval, it takes up 75% of the <m>P(B)</m> interval, so <m>P(A|B)=\frac{0.3}{0.4}=0.75.</m>  Similarly <m>P(B)</m> takes up 40% of the <m>[0,1]</m> interval, it takes up 50% of the <m>P(A)</m> interval, so <m>P(B|A)=\frac{0.3}{0.6}=0.5.</m>  Adjust the probablities, and slide the regions to change the overlap to see how that effects the values!
+
+  <interactive desmos="vq8blapfw7"/>
+
+</p>  
+
+
+
+<remark>
+  <statement>
+    <p>
+      Reworking <xref ref="DefinitionConditional"/> we get:
+      <md>
+        <mrow>P(A|B)\amp=\frac{P(A\cap B)}{P(B)}</mrow>
+        <mrow>P(A\cap B)\amp=P(A|B)P(B)</mrow>
+      </md>
+    </p>
+   </statement>
+ </remark>
+
+ <p>
+  This follows intuitively.  If at a resturaunt, 20% of people order steak (<m>P(S)=0.2</m>) and half the people who order steak order fries (<m>P(F|S)=0.5</m>), then how many people order fries and steak?  It's <m>P(F\cap S)=P(F|S)P(S)=(0.5)(0.2)=0.1</m> or 10% of the patrons had both steak and fries.  But without all of the formal symbolism, if 20 people out of a 100 had steak, and half also had fries, then 10 our of 100 had steak and fries!
+ </p>   
+
+
+<example xml:id="ExampleClass2">
+<statement>
+  <p>
+    Recall <xref ref="ExampleClass"/>, suppose a class of 25 had 12 student athletes, 8 biology majors, and 5 students who were both student athletes and biology majors.
+    <ol>
+      <li>If a student is an athlete, what is the probability they were a biology major?</li>
+      <li>If a student is a biology major, what is the probability they were an athlete?</li>
+      <li>If a student is not an athlete, what is the probability they were a biology major?</li>
+    </ol>
+  </p>
+ </statement>
+ <solution>
+  <p>
+    So recall:
+    <figure>
+<caption>Each set <m>A, B</m> and their respective sizes. </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[labelOnlyA={7},labelOnlyB={3}, labelAB={5}, labelNotAB={10}]
+
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+      <ol>
+      <li>This is <m>P(B|A)=\frac{P(A\cap B)}{P(A)}=\frac{5/25}{12/25}=\frac{5}{12}.</m></li>
+      <li>This is <m>P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{5/25}{8/25}=\frac{5}{8}.</m></li>
+      <li>This is <m>P(B|A^c)=\frac{P(A^c\cap B)}{P(A^c)}=\frac{3/25}{13/25}=\frac{3}{13}.</m></li>
+    </ol>
+
+  </p>
+ </solution>     
+
+
+
+
+</example>
+
+
+
+<example xml:id="ExerciseFood2">
+<statement>
+  <p>
+    Recall <xref ref="ExerciseFood"/>: A food truck sells only burgers and hotdogs.  We have that 20 people ordered something, 18 people ordered burgers, 6 ordered hotdogs.
+    <ol>
+      <li>If someone ordered hotdogs, whats the probability they didn't order a burger?</li>
+      <li>If someone ordered a burger, what's the probability they  ordered a hotdog?</li>
+      <li>If someone didn't order a burger, what's the probability they  ordered a hotdog?</li>
+    </ol>
+  </p>
+ </statement>
+ <solution>
+  <p>
+    So recall:
+    <figure>
+<caption>Each set <m>B, H</m> and their respective sizes. </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[labelOnlyA={14},labelOnlyB={2}, labelAB={4},  labelA={$B$}, labelB={$H$}]
+
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+      <ol>
+      <li>This is <m>P(B^c|H)=\frac{P(B^c\cap H)}{P(H)}=\frac{2/20}{6/20}=\frac{2}{6}.</m></li>
+      <li>This is <m>P(H|B)=\frac{P(B\cap H)}{P(B)}=\frac{4/20}{18/20}=\frac{4}{18}.</m></li>
+      <li>This is <m>P(H|B^c)=\frac{P(B^c\cap H)}{P(B6c)}=\frac{2/20}{2/20}=1.</m> Which makes sense, no one ordered nothing, so if you didn't get a burger you must've gotten a hotdog!</li>
+    </ol>
+
+  </p>
+ </solution>     
+
+
+
+
+</example>
+
+
+
+
+<example>
+<statement>
+  <p>
+    Recall <xref ref="ExerciseWeather"/>: Suppose that today, there is a 20% chance it rains, a 10% chance that I will be in a bad mood, and an 8% chance that it rains <em>and</em> I'm in a bad mood.
+    <ol>
+      <li>If it rains, whats the chance that I'm in a bad mood?</li>
+      <li>If I'm in a good mood, whats the chance it didn't rain?</li>
+    </ol>
+  </p>
+ </statement>
+ <solution>
+  <p>
+    So recall:
+    <figure>
+<caption>Each event <m>R, B</m> and their respective probabilities. </caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[labelOnlyA={$0.12$},labelOnlyB={$0.02$}, labelAB={$0.08$}, labelNotAB={$0.78$}, labelA={$R$}, labelB={$B$}]
+
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+      <ol>
+      <li>This is <m>P(B|R)=\frac{P(B\cap R)}{P(R)}=\frac{0.08}{0.2}=0.4.</m></li>
+      <li>This is <m>P(R^c|B^c)=\frac{P(R^c\cap B^c)}{P(B^c)}=\frac{0.78}{0.9}\approx 0.866667.</m></li>
+    </ol>
+
+  </p>
+ </solution>     
+
+
+
+
+</example>
+
+
+
+
+<example>
+<statement>
+  <p>
+    Recall <xref ref="ExerciseClass"/>: Suppose that in a Mathematics department, 20% of the students have done undergraduate research, 25% have gone to conferences.  We also have that 30% have done either one or the other.
+    <ol>
+      <li>If a student doesn't do undergraduate research, whats the probability that they go to a conference?</li>
+      <li>If a student goes to a conference, what is the probability that they did undergrad research?</li>
+    </ol>
+  </p>
+ </statement>
+ <solution>
+  <p>
+    So recall:
+    <figure>
+<caption> <m>R, C</m> and their probabilities</caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[labelOnlyA={$0.05$},labelOnlyB={$0.1$}, labelAB={$0.15$}, labelNotAB={$0.7$}, labelA={$R$}, labelB={$C$}]
+
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+      <ol>
+      <li>This is <m>P(C|R^c)=\frac{P(C\cap R^c)}{P(R^c)}=\frac{0.01}{0.8}=0.125.</m></li>
+      <li>This is <m>P(R|C)=\frac{P(R\cap C)}{P(C)}=\frac{0.15}{0.25}\approx 0.6.</m></li>
+    </ol>
+
+  </p>
+ </solution>     
+
+
+
+
+</example>
+
+
+
+<exercise>
+<statement>
+  <p>
+    Among users of automated teller machines
+(ATMs), 92% use ATMs to withdraw cash, and 32% use them to
+check their account balance. Suppose that 96% use ATMs to
+either withdraw cash or check their account balance (or both).
+Given a woman who uses an ATM to check her account balance,
+what is the probability that she also uses an ATM to get cash?
+  </p>
+ </statement>
+ <solution>
+  <p>
+    Let <m>W</m> denote <q>withdraw cash</q> and <m>B</m> denote <q>Check Balance</q>.  We are then given <m>P(W)=0.92, P(B)=0.32, P(W\cup B)=0.96</m>.  Notice then that:
+
+    <md>
+      <mrow>P(W\cup B)\amp=P(W)+P(B)-P(W\cap B)</mrow>
+      <mrow>0.96\amp=0.92+0.32-P(W\cap B)</mrow>
+      <mrow>P(W\cap B)\amp=0.28</mrow>
+    </md>
+    Which let's us fill in the following diagram:
+
+    <figure>
+<caption> <m>R, C</m> and their probabilities</caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[labelOnlyA={$0.64$},labelOnlyB={$0.04$}, labelAB={$0.28$}, labelNotAB={$0.04$}, labelA={$W$}, labelB={$B$}]
+
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+      We are tasked with finding <m>P(W|B)</m>.  Note that <m>P(W|B)=\frac{P(W\cap B)}{P(B)}=\frac{0.28}{0.32}=0.875</m> or 87.5%.
+
+  </p>
+ </solution>     
+
+
+
+
+</exercise>
+
+
+
+
+
+<exercise xml:id="ExercisePlants">
+<statement>
+  <p>
+    A company has two plants producing vehicles, plants <m>A</m> and <m>B</m>.  In plant <m>A</m>, 85% of the vehicles pass inspection, and in plant <m>B</m> only 70% do.  Suppose plant <m>A</m> produces 60% of the vehicles, and plant <m>B</m> the other 40%.
+    <ol>
+      <li>What percent of the vehicles produced are from plant <m>A</m> and pass inspection?</li>
+      <li>What percent of the vehicles produced are from plant <m>B</m> and pass inspection?</li>
+      <li>What percent of the vehicles produced pass inspection?</li>
+      <li>If a vehicle passes inspection, what's the probability it was manufactured in plant <m>A</m>?</li>
+    </ol>  
+  </p>
+ </statement>
+ <solution>
+  <p>
+    Let <m>A</m> denote <q>produced in plant <m>A</m></q> and <m>I</m> denote <q>passes inspection</q>.  Note that we denote <q>produced in plant <m>B</m></q> by <m>P(A^c)</m>.  We are then given <m>P(A)=0.6, P(I|A)=0.85, P(I|A^c)=0.7</m>. 
+
+    <ol>
+      <li>We are finding <m>P(A\cap I)=P(I|A)P(A)=(0.85)(0.6)=0.51</m>.  That is, 85% of the 60% of vehicles produced in <m>A</m> pass inspection, which is 51% of the vehicles produced in <m>A</m> and pass inspection.</li>
+      <li>We are finding <m>P(A^c\cap I)=P(I|A^c)P(A^c)=(0.7)(0.4)=0.28</m>.  That is, 70% of the 40% of vehicles produced in <m>B</m> pass inspection, which is 28% of the vehicles produced in <m>B</m> and pass inspection.</li>
+      <li>Since all the vehicles are produced in <m>A</m> or <m>B</m>, if we take the 51% who pass inspection from <m>A</m> and the 28% who pass inspection from <m>B</m>, that is <m>0.51+0.28=0.79</m> or 79% of cars pass inspection in total. This let's us fill out the following:
+
+      <figure>
+<caption> <m>A, I</m> and their probabilities</caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[labelOnlyA={$0.09$},labelOnlyB={$0.28$}, labelAB={$0.51$}, labelNotAB={$0.12$}, labelA={$A$}, labelB={$I$}]
+
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+
+
+    </li>
+      <li>We are finding <m>P(A|I)=\frac{P(A\cap I)}{P(I)}=\frac{0.51}{0.79}\approx 0.6455696</m> or 64.55696%</li>
+    </ol>
+
+
+   
+  </p>
+ </solution>     
+
+
+
+
+</exercise>
+
+
+
+
+
+<exercise xml:id="ExerciseDiner">
+<statement>
+  <p>
+    Some people ordered some food at a restaurant, and over the course of  dinner, it becomes clear that some of the patrons are getting sick.  Consider this table representing how many people ordered what, and how many got sick:
+
+    <me>
+          \begin{array}{|c|c|c|c|}
+\hline
+ \amp \text{Chicken} \amp \text{Fish} \amp \text{Steak} \\
+\hline
+\text{Got Sick} \amp 5 \amp 4 \amp 3\\
+\hline
+\text{Did Not Get Sick} \amp 20 \amp 6 \amp 12\\
+\hline
+\end{array}
+        </me>
+
+    <ol>
+      <li>What is the probability that a random diner got sick?</li>
+      <li>What is the probability that a diner got sick if we knew they ate fish? </li>
+      <li>What is the probability that a random diner had fish or steak?</li>
+      <li>What is the probability that a random diner either had fish or got sick?</li>
+      <li>What is the probability that a diner ate steak, given that they got sick?</li>
+      <li>What food made you most likely to get sick?</li>
+    </ol>  
+  </p>
+ </statement>
+ <solution>
+  <p>
+    We note that there are 50 diners in all.  Let <m>C, F, T, S</m> denote chicken, fish, steak and sick.
+
+    <ol>
+      <li>We have that <m>P(S)=\frac{5+4+3}{50}=0.24</m>.</li>
+     <li> Out of the 10 people who ate fish, 4 got sick, so  <m>P(S|F)=\frac{4}{10}\approx 0.4</m>.</li>
+      <li> We have that <m>P(F\cup T)=\frac{4+6+3+12}{50}=0.5</m>.</li>
+      <li> We have that <m>P(F\cup S)=\frac{4+6+5+3}{50}=0.36</m>.  We could also compute this <m>P(F\cup S)=P(F)+P(S)-P(\cap S)=\frac{10}{50}+\frac{12}{50}-\frac{4}{50}=\frac{18}{50}=0.36.</m></li>
+      <li> Out of the 12 people who got sick, 3 ate steak, so  <m>P(T|S)=\frac{3}{12}=0.25</m>.</li>
+      <li>We note that if you eat chicken, the chance you would get sick is <m>P(S|C)=\frac{5}{25}=0.2</m>.  If you eat fish, the chance you would get sick is <m>P(S|F)=\frac{4}{10}=0.4</m>. If you eat steak, the chance you would get sick is <m>P(S|T)=\frac{3}{15}=0.2</m>.  So Fish is the most likely to get you sick.</li>
+    </ol>
+
+
+   
+  </p>
+ </solution>     
+
+</exercise>
+
+
+</subsection>
+
+
+
+
+
+<subsection>
+  <title>Independence</title>
+
+<p>Part of our motivation for studying conditional probability is to see how knowing certain events occur change the probability that other events occur.  In the dice example above, knowing that the outcome is a <m>4,5</m> or <m>6</m> increases the chance that the outcome is even from one half.  But what if there were events that did not in any way influence each other?
+</p>
+
+<p>
+If someone were to flip a coin, it is a 50% chance that it comes up heads.  It's not clear what exactly the probability of a random person falling down  a well is,  but if they did, and from the bottom of the well, they flipped a coin, we expect that it would still have a 50% chance of coming up heads.  The falling down a well has no bearing on the outcome of coin flips.  We say that these events are <term>independent</term> of each other, meaning that the outcome of one event has no impact on the other.  More formally:
+
+</p>  
+
+<definition xml:id="DefinitionIndependence">
+  <statement>
+    <p>
+      Events <m>A, B</m> are <term>independent</term> of each other if the outcome of one event does not change the probability of the other occuring.  That is <me>P(A|B)=P(A).</me>
+    </p>
+  </statement>
+</definition>
+
+
+  <p> So <m>P(H|W)=P(H)=0.5</m>.  It is not always clear when events are independent.  The world is a complicated and chaotic place, and we all have apriori beliefs and biases.  Things which may seem unrelated may have subtle inflences on each other, and those we may assume to be connected may in fact be independent.  Thus it behooves us to be able to check if events are independent.   While <xref ref="DefinitionIndependence"  /> may give us one avenue, another would be:</p>
+
+
+
+<remark>
+  <statement>
+    <p>
+      Events <m>A, B</m> are <term>independent</term> if and only if:
+       <md>
+        <mrow>P(A|B)\amp= P(A)</mrow>
+        <mrow>\frac{P(A\cap B)}{P(B)}\amp= P(A)</mrow>
+        <mrow>P(A\cap B)\amp= P(A)P(B).</mrow>
+        </md>
+    </p>
+  </statement>
+</remark>
+
+
+
+<example>
+<statement>
+  <p>
+    Recall <xref ref="ExampleClass2"/>: Suppose a class of 25 had 12 student athletes, 8 biology majors, and 5 students who were both student athletes and biology majors.  Are being a biology major and being an athlete independent?
+    
+  </p>
+ </statement>
+ <solution>
+  <p>
+    There are several approaches. You only need to go through one of these to obtain answer.</p>
+
+    <p> First note that <m>P(B)=\frac{8}{25}=0.32</m> and <m>P(B|A)=\frac{5}{12}\approx 0.41666667</m>.  These are not the same (being a biology major seems to improve the odds that you are an athlete) so these are not independent.
+  </p>
+
+  <p>
+    Next note that <m>P(A)=\frac{12}{25}=0.48</m> and <m>P(A|B)=\frac{5}{8}=0.625</m>.  These are not the same (being a student athelete seems to improve the odds that you are a biology major) so these are not independent.
+  </p>
+
+  <p>
+    Finally note that <m>P(A)=\frac{12}{25}=0.48, P(B)=\frac{8}{25}=0.32, P(A\cap B)=\frac{5}{25}=0.2</m> but <m>P(A)P(B)=0.48\cdot 0.32=0.1536\neq 0.2=P(A\cap B)</m>.  So these are not independent.
+  </p>
+ </solution>     
+
+
+
+
+</example>
+
+
+
+<example>
+<statement>
+  <p>
+    Recall <xref ref="ExerciseFood2"/>: A food truck sells only burgers and hotdogs.  We have that 20 people ordered something, 18 people ordered burgers, 6 ordered hotdogs.  Are ordering a burger and hotdog  independent?
+    
+  </p>
+ </statement>
+ <solution>
+  <p>
+    There are several approaches. You only need to go through one of these to obtain answer.  Also recall that 4 people ordered both a burger and a hotdog.</p>
+
+    <p> First note that <m>P(B)=\frac{18}{20}=0.9</m> and <m>P(B|H)=\frac{4}{6}\approx 0.66666667</m>.  These are not the same (ordering a hotdog makes it less likely you ordered a buger) so these are not independent.
+  </p>
+
+  <p>
+    Next note that <m>P(H)=\frac{6}{20}=0.3</m> and <m>P(H|B)=\frac{4}{18}=0.22222</m>.  These are not the same (ordering a hamburger makes it less likelt you also got a hotdog) so these are not independent.
+  </p>
+
+  <p>
+    Finally note that <m>P(B)=\frac{18}{20}=0.9, P(H)=\frac{6}{20}=0.3, P(B\cap H)=\frac{4}{20}=0.2</m> but <m>P(B)P(H)=0.9\cdot 0.3=0.27\neq 0.2=P(B\cap H)</m>.  So these are not independent.
+  </p>
+ </solution>     
+
+
+
+
+</example>
+
+
+
+<exercise>
+<statement>
+  <p>
+    Suppose that in a class, 10% were Math majors, 30% got A's on the last test, and 3% were Math majors who got A's.  Are being a Math major and getting an A independent?
+    
+  </p>
+ </statement>
+ <solution>
+  <p>
+    There are several approaches. You only need to go through one of these to obtain answer.  Let <m>M</m> denote being a Math major and <m>A</m> denote getting an A.</p>
+
+    <p> First note that <m>P(M)=0.1</m> and <m>P(M|A)=\frac{0.03}{0.3}=0.1</m>.  These are  the same (your chances of being a Math major is unaffected by whether you got an A) so these are  independent.
+  </p>
+
+  <p> Next note that <m>P(A)=0.3</m> and <m>P(A|M)=\frac{0.03}{0.1}=0.3</m>.  These are  the same (your chances of getting an A is unaffected by whether you were a Math major) so these are  independent.
+  </p>
+
+  <p>
+    Finally note that <m>P(M)=0.1, P(A)=0.3, P(M\cap A)=0.03</m> so <m>P(M)P(A)=0.1\cdot 0.3=0.03P(M\cap A)</m>.  So these are  independent.
+  </p>
+ </solution>     
+
+
+
+
+</exercise>
+
+
+<exercise>
+  <statement>
+    <p>
+  Let's suppose that 20% of a town were zombified, and half the town were women.  If zombification and gender are independent, what percentage of the town are women who are not zombies?  What about neither zombies nor women?
+</p>
+</statement>
+<solution>
+  <p>
+    Let <m>Z</m> denote <q> is a zombie</q>and <m>W</m> denote is a woman.  Then we are given <m>P(Z)=0.2, P(W)=0.5</m>.  Since we are given that <m>P(Z\cap W)=P(Z)P(W)=0.2\cdot0.5=0.1</m> we have:
+    <figure>
+<caption> <m>Z, W</m> and their probabilities</caption>      
+      <image>
+ <description>Test Venn Diagram.</description>     
+<latex-image>
+<![CDATA[\begin{venndiagram2sets}[labelOnlyA={$0.1$},labelOnlyB={$0.4$}, labelAB={$0.1$}, labelNotAB={$0.4$}, labelA={$Z$}, labelB={$W$}]
+
+
+\end{venndiagram2sets}]]>
+</latex-image>
+      </image>
+      </figure>
+      Thus the proportion of the town who are women and not zombies is <m>P(Z^c\cap W)=0.4</m>.  Similarly, the proportion of the town who is neither women nor zombies is <m>P(Z^c\cap W^c)=0.4</m>.
+
+  </p>
+</solution>    
+
+</exercise>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</subsection>
+
+</section>

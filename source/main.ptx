@@ -41,6 +41,7 @@
 </macros>
 <latex-image-preamble>
 \usepackage{xcolor}
+\usepackage{venndiagram}
 \usepackage{tikz}
 \usepackage{tkz-graph}
 \usepackage{tkz-euclide}
@@ -69,7 +70,8 @@
     <xi:include href="./Chap_Logic.ptx"/> 
     <xi:include href="./Chap_Financial.ptx"/> 
     <xi:include href="./Chap_NonLinear.ptx"/> 
-    <xi:include href="./Chap_Calculus.ptx"/> 
+    <xi:include href="./Chap_Calculus.ptx"/>
+    <xi:include href="./Chap_SetProb.ptx"/> 
     <backmatter>
       <xi:include href="./bibliography.ptx"/>
     </backmatter>

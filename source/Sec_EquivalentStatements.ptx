@@ -111,7 +111,7 @@
       
     </statement>
   </example>
-  <theorem>
+  <theorem xml:id="TheoremDeMorgans">
     <title> De Morgan's Laws</title>
     <statement>
       <p>
