@@ -1,0 +1,232 @@
+<section xml:id="Sec_Permutation">
+  <title>Multiplication Principle and Permutations</title>
+  <introduction>
+    <statement>
+      <p>
+        In this section, we count the number of ways to make selections in order.
+      </p>
+    </statement>
+  </introduction>      
+
+  <subsection>
+    <title>Multiplication Principle </title>
+  <p>
+    If you were eating breakfast, and you could choose from eggs, sausage or pancakes to eat, and coffee and juice to drink, how many ways could you pick one food item and one beverage?
+
+</p>
+<p>
+  It's clear, we have 3 choice for food items say <me>\color{red}{E}, \color{blue}{S}, \color{teal}{P}. </me>  Then for each choice of beverage, we have two options for each of our original options  <me>\color{red}{E}C, \color{red}{E}\color{orange}{J}, \color{blue}{S}C, \color{blue}{S}\color{orange}{J}, \color{teal}{P}C, \color{teal}{P}\color{orange}{J}. </me> 
+Which leaves us with <m>3\cdot 2=6</m> options.  If we have 5 choices for food, and 7 choices for beverage, we can see that we would have <m>5\cdot 7=35</m> choices.  If we then had another 4 choices for eggs, and were picking a main item, a beverage, and eggs, that would leave <m>5\cdot 7\cdot 4=140</m> choices.  This leads to the following:
+
+</p>  
+
+<remark xml:id="RemarkMultiplication">
+  <title>Multiplication Principle</title>
+If we have to make <m>n</m> choices, each with <m>m_1, m_2, m_3,\ldots,m_n</m> choices each, then the number of ways we can pick one of each choice is <me>m_1\cdot m_2\cdots m_n.</me>
+
+</remark>  
+
+<example xml:id="ExampleAlphabet">
+  <statement>
+    <p>
+      Suppose you had to make a 5 letter passcode using the 26 letters in the English alphabet (all lowercase).
+      <ol>
+        <li>How many ways can this be done if you can repeat letters?</li>
+        <li>If you can't?</li>
+      </ol>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the multiplication principle:
+      <ol>
+        <li>If you pick 5 times with 26 choices each, that is <m>26\cdot26\cdot26\cdot26\cdot26=26^5</m> choices.</li>
+        <li>Each time you pick a letter, you reduce the number of choices for the next letter, so you have 26 choices for the first letter, then 25 for the next, then 24 etc. so <m>26\cdot25\cdot24\cdot23\cdot 22</m> choices.</li>
+      </ol>
+  </p>
+</solution>
+</example>
+
+<exercise>
+  <statement>
+    <p>
+      If you flip a coin 3 times, how many different head, tails arrangements are possible?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Since each coin flip has two outcomes, there are <m>2\cdot 2\cdot 2=2^3=8</m> possible outcomes. <me>HHH, HHT, HTH, THH, TTH, THT, TTH, TTT.</me>
+  </p>
+</solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      If a resturaunt offered 4 different appetizers, 7 main courses and 5 desserts, how many ways can you order one of each?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      There would be <m>4\cdot 7\cdot 5=140</m> different possible orders.
+  </p>
+</solution>
+</exercise>
+
+</subsection>
+
+<subsection>
+  <title>Permutations</title>
+<p>
+ The sort of situation described in the second part of  <xref ref="ExampleAlphabet"/> is called a <term> permutation</term>.
+</p>
+
+ <definition>
+  <statement>
+    <p>
+    A <term>permutation</term> is an ordered arrangement of objects.  In partcular, a <m>r</m> permutation on an <m>n</m> element set is a selection of <m>r </m> objects from this set and arranged.
+  </p>
+  <p>
+    The number of <m>r</m> permutations on an <m>n</m> element set would be computed <me>P(n,r)=\overbrace{n\cdot (n-1)\cdots(n-r+1)}^r.</me>
+  </p>
+  </statement>
+  </definition> 
+
+  <p>
+  So the number of ways to take the letters <m> A, B, C, D, E </m> pick 3 and arrange them is <m>P(5,3)=5\cdot 4\cdot 3=60</m>:
+  <me>ABC, ACB, BAC, BCA, CAB, CBA, ABD, ADB, BAD, BDA, DAB, DBA,</me>
+  <me>ABE, AEB, BAE, BEA, EAB, EBA, ACD, ADC, CAD, CDA, DAC, DCA,</me>
+  <me>ACE, AEC, CAE, CEA, EAC, ECA, ADE, AED, DAE, DEA, EAD, EDA,</me>
+  <me>BCD, BDC, CBD, CDB, DBC, DCB, BCE, BEC, CBE, CEB, EBC, ECB,</me>
+  <me>BDE, BED, DBE, DEB, EBD, EDB, CDE, CED, DCE, DEC, ECD, EDC.</me>
+Note that <me>5\cdot 4\cdot 3=\frac{5\cdot 4\cdot 3\cdot \color{blue}{2}\cdot \color{blue}{1}}{\color{blue}{2}\cdot \color{blue}{1}}. </me> This leads us to:
+</p>
+
+<remark>
+  <statement>
+    <p>
+      We note that <m>n!</m> denotes <m>n!=\overbrace{n\cdot (n-1)\cdots 1}^{n}</m> where we let <m>0!=1</m>.
+    </p>  
+    <p>
+      Notice that <me>P(n,n)=\overbrace{n\cdot (n-1)\cdots 1}^{n}=n!.</me>
+    </p>
+    <p>
+      Also notice that more generally <me>P(n,r)=\overbrace{n\cdot (n-1)\cdots (n-r+1)}^{r}=\frac{n\cdot (n-1)\cdots (n-r+1)\cdot \color{blue}{(n-r)\cdots 1}}{\color{blue}{(n-r)\cdots 1}}=\frac{n!}{(n-r)!}.</me>
+    </p>  
+  </statement>
+</remark>  
+
+<example>
+  <statement>
+    <p>
+      If you have 10 books, how many ways can you select 6 of them to arrange on a shelf?
+    </p>
+  </statement>
+  <solution>
+  <p>
+  This would be <me>P(10,6)=\frac{10!}{4!}=10\cdot 9\cdot 8\cdot 7\cdot 6\cdot 5=151200.</me>    
+  Desmos handles this all fairly well:
+  <interactive desmos="acbq34mqum"/>
+</p>
+</solution>
+</example>
+
+
+<exercise>
+  <statement>
+    <p>
+      If a driver had to make 6 deliveries, how many ways could they pick an order to do so?
+    </p>
+  </statement>
+  <solution>
+  <p>
+  This would be <me>P(6,6)=6!= 6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1=72-</me>    
+</p>
+</solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      If a class of 30 had to select 4 students to be class president, vice president, secretary and treasurer?
+    </p>
+  </statement>
+  <solution>
+  <p>
+  This would be <me>P(30,4)=\frac{30!}{26!}= 30\cdot 29\cdot 28\cdot 27=657720-</me>    
+</p>
+</solution>
+</exercise>
+
+</subsection>
+
+<subsection>
+  <title>Repeated Objects</title>
+
+<p>How many ways are there to take <me> A, B, B, B</me> and arrange them?  If the B's were different, there would be <m>4!=24</m> ways to do so: 
+<me>
+  \begin{array}{cccc}
+  AB_1B_2B_3 \amp B_1AB_2B_3 \amp B_1B_2AB_3 \amp B_1B_2B_3A\\
+  AB_1B_3B_2 \amp B_1AB_3B_2 \amp B_1B_3AB_2 \amp B_1B_3B_2A\\
+  AB_2B_1B_3 \amp B_2AB_1B_3 \amp B_2B_1AB_3 \amp B_2B_1B_3A\\
+  AB_2B_3B_1 \amp B_2AB_3B_1 \amp B_2B_3AB_1 \amp B_2B_3B_1A\\
+  AB_3B_1B_2 \amp B_3AB_1B_2 \amp B_3B_1AB_2 \amp B_3B_1B_2A\\
+  AB_3B_2B_1 \amp B_3AB_2B_1 \amp B_3B_2AB_1 \amp B_3B_2B_1A
+  \end{array}
+</me> </p>
+
+<p>In the above arrangement, we have all the <m>B</m>'s in the same <q>position</q>.  Thus of we remove the disntinction between the <m>B</m>'s, we are left with just the <m>\frac{4!}{3!}=4</m> arrangements <me>ABBB, BABB, BBAB, BBBA.</me>  the <m>4!</m> is the number of arrangements with distinction, and the <m>3!</m> the number of ways to arrange the B's. </p>
+
+
+
+<remark>
+  <statement>
+    <p>
+      The number of ways to arrange <m>n</m> objects, where <m>r</m> of them are repeated <m>m_1, \ldots, m_r</m> each is <me>\frac{n!}{m_1!\cdots m_r!}</me>
+    </p>
+  </statement>
+ </remark>
+ 
+ <p>There are <m>n!</m> ways to arrange these objects with distinction, and <m>m_1!\cdots m_r!</m> removes those distinctions.</p>
+
+
+<example>
+  <statement>
+    <p>
+      How many ways can you arrange the letters of MISSISSIPPI?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      There are 11 letters in MISSISSIPPI, 4 I's, 4 S's and 2 P's.  So the number of ways to arrange these letters is <me>\frac{11!}{4!4!2!}=34650.</me>
+    </p>  
+  </solution>  
+ </example>
+
+
+<exercise>
+  <statement>
+    <p>
+      A student buys 3 strawberry yogurts, 2 raspberry yogurts, and 2 blueberry yogurts. They put
+them in their dormitory refrigerator to eat one a day for the next week. Assuming yogurts of the same flavor are indistinguishable, in how many ways can they select yogurts to eat for
+the next week?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      There are 7 yogurts: 3 strawberry yogurts, 2 raspberry yogurts, and 2 blueberry yogurts.  So the number of ways to arrange these yohurts is <me>\frac{7!}{3!2!2!}=210.</me>
+    </p>  
+  </solution>  
+ </exercise>
+
+
+
+
+
+
+
+
+
+</subsection>
+
+</section>

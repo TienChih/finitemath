@@ -1,0 +1,16 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_CountingProb">
+  <title>Counting and more Probabilty</title>
+  <introduction>
+    <statement>
+  <p>
+    Fill in Later.
+
+  </p>
+</statement>
+</introduction>
+  <xi:include  href="Sec_Permutation.ptx"/>
+  <xi:include  href="Sec_Combinations.ptx"/>
+  <xi:include  href="Sec_AppstoProb.ptx"/>
+  <xi:include  href="Sec_ProbabilityDistributions.ptx"/>
+  <xi:include  href="Sec_Binomial.ptx"/>
+</chapter>

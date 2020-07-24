@@ -1,0 +1,220 @@
+<section xml:id="Sec_Combinations">
+  <title>Combinations and Binomial Coefficients</title>
+  <introduction>
+    <statement>
+      <p>
+        In this section, we count the number of ways to make selections <em>without</em> order.
+      </p>
+    </statement>
+  </introduction>      
+
+  <subsection>
+    <title>Combinations </title>
+  <p>
+    Recall that in <xref ref="Sec_Permutation"/> we counted the number of ways to take the letters <m> A, B, C, D, E </m> pick 3 and arrange them.  This was <m>P(5,3)=60</m>.  We now ask ourselves, how many ways are there to pick 3 of these 5 letters?  That is, what if we ignored the arrangement aspect of <m>P(5,3)</m>?
+    
+
+  </p>
+
+  <p>
+    We previously listed these results, but let's do so again, in a different manner this time.
+
+    <me>
+    \begin{array}{|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    ABC \amp ABD \amp ABE \amp ACD \amp ACE \amp ADE \amp BCD \amp BCE \amp BDE \amp CDE\\
+    ACB \amp ADB \amp AEB \amp ADC \amp AEC \amp AED \amp BDC \amp BEC \amp BED \amp CED\\
+    BAC \amp BAD \amp BAE \amp CAD \amp CAE \amp DAE \amp CBD \amp CBE \amp DBE \amp DCE\\
+    BCA \amp BDA \amp BEA \amp CDA \amp CEA \amp DEA \amp CDB \amp CEB \amp DEB \amp DEC\\
+    CAB \amp DAB \amp EAB \amp DAC \amp EAC \amp EAD \amp DBC \amp EBC \amp EBD \amp ECD\\
+    CBA \amp DBA \amp EBA \amp DCA \amp ECA \amp EDA \amp DCB \amp ECB \amp EDB \amp EDC\\
+    \hline
+    \end{array}
+  </me>
+
+  Grouping the arrangements this way, we can see there are really only 10 selections without order: <me>ABC, ABD, ABE, ACE, ADE, BCD, BCE, BDE, CDE.</me>
+
+  We can get these ten by taking the <m>P(5,3)=60</m> arrangements, and arranging them into columns of <m>3!=6</m>, giving us <m>\frac{P(5,3)}{3!}=\frac{60}{6}=10</m> columns.  The <m>3!</m> denotes the number of ways we can arrange any choice of 3 letters.  This may be generalized:
+
+  </p>  
+
+  <definition>
+    <title>Combination</title>
+    <statement>
+      <p>
+        Given <m>n</m> objects, the number of ways to select <m>r</m> of them <em>without order</em>, also called a <term>combination</term> is: <me>C(n,r)=\frac{P(n,r)}{r!}=\frac{n!}{r!(n-r)!}.</me>
+        This is also commonly denoted <m>{n\choose r}</m>, which we will avoid to prevent confusion with fractions.
+      </p>
+    </statement>
+   </definition> 
+
+   <example>
+    <statement>
+      <p>
+    If you had 10 books, how many ways could you select 4 of them to lend a friend?  What about 6 books?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        To select four books out of ten, this would be <m>C(10,4)=\frac{10!}{4!(10-4)!}=\frac{10}{4!6!}=210</m>.  To select six books out of ten, this would be <m>C(10,6)=\frac{10!}{6!(10-6)!}=\frac{10}{6!4!}=210</m>.   We can see it here:
+        <interactive desmos="w8bax0xk9j"/>
+      </p>  
+    </solution>  
+   </example> 
+
+    <p>
+      Notice that the number of ways to pick 4 books out of 10 is the same as picking 6.  This may seem strange, but picking 4 books to lend, is the same as picking 6 books to keep.  This leads us to the following:
+
+    </p>  
+
+  <remark>
+  <statement>
+    <p>
+      Consider the following about combinations.
+      <ul>
+        <li> <m>C(n,n)=1</m>.  There is only one way to pick <m>n</m> of <m>n</m> objects.  Pick them all.</li>
+        <li> <m>C(n,r)=C(n,n-r)</m>.  Picking <m>r</m> objects is the same as selecting <m>n-r</m> objects to <em>not</em> pick. </li>
+        <li> <m>C(n,0)=1</m>.  Combine the above facts.  Alternatively, the only selection of no objects is the empty selection.</li>
+
+      </ul>  
+    </p>
+  </statement>
+ </remark>
+ 
+ <exercise>
+  <statement>
+    <p>
+      In how many ways can a hand of 6 red cards be chosen from an
+ordinary deck?
+    </p>
+  </statement>    
+  <solution>
+    <p>
+      This is <m>C(26,5)=65780</m>.
+    </p>
+  </solution>   
+ </exercise>
+
+
+</subsection>
+
+<subsection>
+  <title>Further Counting</title>
+
+  <p>Sometimes our counting situations can get fairly complex.  In addition to <xref ref="RemarkMultiplication"/> we have:</p>
+
+
+  <remark xml:id="RemarkAddition">
+  <title>Addition Principle</title>
+If we have to choose from one item from <m>S_1, \ldots S_r</m> sets, each with <m>m_1, \ldots m_s</m> choices, and there are no overlaps, then the number of ways to do this is <me> m_1+\cdots m_s.</me>
+
+</remark>  
+
+<example>
+ <statement>
+  <p>
+    Suppose you wanted to pick a committee of  3, 4 or 5 out of 20 people.  How many ways can you do this?
+  </p>
+</statement>
+<solution>
+  <p>
+    There are <m>C(20,3)</m> ways to pick a commttee of 3, <m>C(20,4)</m> ways to pick a commttee of 4 and <m>C(20,5)</m> ways to pick a commttee of 5.  So the total number of ways to pick commttees is <me>C(20,3)+C(20,4)+C(20,5)=1140+4845+15504=21489.</me>  Note that there are no overlaps between these selections, they may share people, but there is no 3 person committee who is also a 4 person committee etc.
+   </p>
+ </solution>
+</example>
+
+<example>
+ <statement>
+  <p>
+    Suppose you wanted to pick a committee of  4 professors, 8 Mathematicians and 12 Historians.
+    <ol>
+      <li>How many ways could you do this?</li>
+      <li>How many ways can you do this if two are Mathematicians, and two are Historians?</li>
+    </ol>  
+
+  </p>
+</statement>
+<solution>
+  <p>
+    Consider:
+    <ol>
+      <li>In this situation, we are simply picking 4 out of 20 so <m>C(20,4)=4845</m></li>
+      <li>Note that since we are picking <em>both</em> 2 Mathematicians and 2 Historians, not one or the other, that the Multiplication Principle, not the Addition Principle applies, so <m>C(8,2)\cdot C(12,2)=28\cdot 66=1848</m>.  We can think of this as 28 ways of picking Mathematicians, 66 ways of picking historians, and 1848 ways of putting the Math and History pairs together.</li>
+    </ol> 
+   </p>
+ </solution>
+</example>    
+
+
+
+
+<exercise>
+  <statement>
+    <p>
+      Suppose there were 15 apples, 5 of which are poisened. How many ways are there to pick 4 apples so that:
+      <ol>
+        <li>Without restrictions?</li>
+        <li>None of the apples are poisened?</li>
+        <li>All of the apples are poisened?</li>
+        <li> Exactly two apples are poisened?</li>
+        <li> Not more than 1 apple is poisened?</li>
+      </ol>
+    </p>
+  </statement>  
+  <solution>
+    <p>
+      We note that there are 11 non-poisened apples.
+      <ol>
+        <li>Ths is picking 4 of 15 objects so <m>C(15,4)=1365</m>.</li>
+        <li>Ths is picking 4 of 11 objects so <m>C(11,4)=330</m>.</li>
+        <li>Ths is picking 4 of 5 objects so <m>C(5,4)=5</m>.</li>
+        <li>Ths is picking 2 of 5 objects to be posiened, 2 of 11 objects for not poisened, and combining these selections, so  <m>C(5,2)\cdot C(11,2)=10\cdot55 =550.</m>.</li>
+        <li> This is either no apples poisened, which has 330 possibilies as seen above, or 1 apple poisened, counted <m>C(5,1)\cdot C(11,3)=5\cdot 165=825</m>.  Thus we have <m>330+825=1155</m> ways to have no or one poisened apple.</li>
+      </ol>
+    </p>
+    </solution> 
+</exercise>
+
+
+<exercise>
+  <statement>
+    <p>
+      A caterer offers 10 entrees, 4 of which are vegetarian.  How many ways can you pick 3 entrees:
+      <ol>
+        <li>Without restrictions?</li>
+        <li>None of the dishes are vegetarian?</li>
+        <li>All of the dishes are vegetarian?</li>
+        <li> Exactly one of the dishes is vegetarian?</li>
+        <li> At least one of the dishes are vegetarian?</li>
+      </ol>
+    </p>
+  </statement>  
+  <solution>
+    <p>
+      We note that there are 6 non-vegetarian dishes.
+      <ol>
+        <li>Ths is picking 3 of 10 objects so <m>C(10,3)=120</m>.</li>
+        <li>Ths is picking 3 of 6 objects so <m>C(6,3)=20</m>.</li>
+        <li>Ths is picking 3 of 4 objects so <m>C(4,3)=4</m>.</li>
+        <li>Ths is picking 1 of 4 objects to be vegetarian, 2 of 6 objects for not vegetarian, and combining these selections, so  <m>C(4,1)\cdot C(6,2)=4\cdot15 =60.</m>.</li>
+        <li> This is one, two or three vegetarian dishes, so <me>C(4,1)\cdot C(6,2)+C(4,2)\cdot C(6,1)+C(4,3)\cdot C(6,0)=4\cdot15 + 6\cdot 6+4\cdot 1 =100 </me> ways to have at least one vegetarian dish.  Or if we took all 120 caterung options, and removed the 20 without vegetarian options, we would have <m>120-20=100</m> dishes.</li>
+      </ol>
+    </p>
+    </solution> 
+</exercise>
+
+
+
+
+
+
+
+
+
+
+
+
+</subsection>
+
+
+</section>

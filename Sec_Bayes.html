@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-19T14:21:40-06:00    *-->
+<!--*    on 2020-07-23T19:53:44-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -98,10 +98,10 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_Conditional.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_SetProb.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_Conditional.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_SetProb.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Chap_CountingProb.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_Conditional.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_SetProb.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_Conditional.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_SetProb.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Chap_CountingProb.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -176,6 +176,15 @@ MathJax.Hub.Config({
 <li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes" class="active">Bayes Theorem</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -190,7 +199,7 @@ MathJax.Hub.Config({
 <span class="type">Subsection</span> <span class="codenumber">8.4.2</span> <span class="title">Bayes's Theorem</span>
 </h3>
 <article class="theorem theorem-like" id="TheoremBayes"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.4.1</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Bayes's Theorem.</span>
 </h6>
 <p id="p-1105">Given events \(X, Y\text{:}\)</p>
 <div class="displaymath">
@@ -228,7 +237,7 @@ P(X)\amp =P(X\cap Y)+P(X\cap Y^c)\\
 \end{align*}
 </div>
 <p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/ndd9pzxcqp" id="interactive-174" width="600" height="600"></iframe></p>
-<p id="p-1108">The relation in <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1">Theorem 8.4.1</a> should also work the other way, if we saw that 80% of the vehicles pass inspection, what proportion of them were built in Plant A?  We are given \(P(X)=0.8\) and asked to find \(P(Y)\text{.}\)  So:</p>
+<p id="p-1108">The relation in <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a> should also work the other way, if we saw that 80% of the vehicles pass inspection, what proportion of them were built in Plant A?  We are given \(P(X)=0.8\) and asked to find \(P(Y)\text{.}\)  So:</p>
 <div class="displaymath">
 \begin{align*}
 P(X)\amp=P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
@@ -242,7 +251,7 @@ P(Y) \amp =\frac{.1}{.15}=\frac{2}{3}\approx 0.666666667.
 <article class="remark remark-like" id="remark-18"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.4.2</span><span class="period">.</span>
 </h6>
-<p id="p-1109">Reworking <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1">Theorem 8.4.1</a>, we obtain:</p>
+<p id="p-1109">Reworking <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a>, we obtain:</p>
 <div class="displaymath">
 \begin{align*}
 P(X)\amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
