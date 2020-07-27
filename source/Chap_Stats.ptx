@@ -1,0 +1,16 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_Stats">
+  <title>Statistics</title>
+  <introduction>
+    <statement>
+  <p>
+    Fill in Later.
+
+  </p>
+</statement>
+</introduction>
+  <xi:include  href="Sec_CentralTendency.ptx"/>
+  <xi:include  href="Sec_Variation.ptx"/>
+  <xi:include  href="Sec_Normal.ptx"/>
+  <xi:include  href="Sec_BinomialApproximation.ptx"/>
+  <xi:include  href="Sec_CLT.ptx"/>
+</chapter>

@@ -73,6 +73,7 @@
     <xi:include href="./Chap_Calculus.ptx"/>
     <xi:include href="./Chap_SetProb.ptx"/> 
     <xi:include href="./Chap_CountingProb.ptx"/> 
+    <xi:include href="./Chap_Stats.ptx"/> 
     <backmatter>
       <xi:include href="./bibliography.ptx"/>
     </backmatter>

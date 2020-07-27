@@ -106,7 +106,7 @@
         The inequalities she is dealing with are:
         <md>
           <mrow>x+y\amp \leq 16,\ \ \text{ at most 16 animals }</mrow>
-          <mrow>25x+75y\amp \leq 900,\ \ \text{$900 budget }</mrow>
+          <mrow>25x+75y\amp \leq 900,\ \ \text{\$900 budget }</mrow>
           <mrow>x\amp \leq 10,\ \ \text{ hates goats }</mrow>
           <mrow>x\amp \geq 0,\ \ \text{ no negative goats }</mrow>
           <mrow>y\amp \geq 0,\ \ \text{ no negative pigs }</mrow>

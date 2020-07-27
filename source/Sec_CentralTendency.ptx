@@ -1,0 +1,149 @@
+<section xml:id="Sec_CentralTendency">
+  <title> Frequency Distribution and Measures of Central Tendency</title>
+  <introduction>
+    <statement>
+      <p>
+        In <xref ref="Sec_ProbabilityDistributions"/> we looked at random variables.  In that context, we knew exactly what the probability distribution was, or we could directly compute it.  In practice, most of the random variables we care about don't come with a well-defined formula for ther distribution.  The birth weights of babies, the profitability of a company month by month, the size and yield of crops etc.  These have to be inferred by collecting a <term>random sample</term> of data and using it to estimate features of the random variable itself.
+      </p>
+    </statement>
+  </introduction>      
+
+  <subsection>
+    <title>Warning </title>
+  
+    <p>Random samples generally speaking are difficult to obtain.  If you wanted to say poll your local congressional district about upcoming candidates, how one conducts the poll can have a huge impact on who actually responds to it.  A phone survey who calls landlines will be biased for people who have landlines and don't use mobile phones primarily, for example.  An internet poll could be biased on where the poll appears and who frequents such sites, as well as biased torwards those who are more likely to be online than others.</p>
+
+    <p>We should also note that even if one can opbtain a truly random sample, sheer chance itself can bias the results.  If we look at our die rolling example from <xref ref="Sec_ProbabilityDistributions"/>:
+    <interactive desmos="ngpuywqgug"/>
+    If I let the sample size just be 10, as I resample the distribution, I get very varied results in the shape of my outcomes, as well as the expectated values.  If I didn't apriori know what the outcome of die rolls would look like, or I didn't know the results came from die rolls, I could well  be convinced that this distribution had a much different shape than it actually does!  Generally speaking the larger the sample, the less likely we are to be fooled in this way.
+
+     </p>
+
+
+   </subsection>
+
+
+   <subsection>
+    <title>Frequency Distributon</title>
+
+    <p>
+    A <term>frequency distribution</term> is a measurement of outcomes in your random sample and how often those outcomes appear.  This is analagous to the <em>probabilty distribution</em> discussed in <xref ref="Sec_ProbabilityDistributions"/>, with the more commonly occuring outcomes in the sample corresponding to more likely outcomes in the underlying random variable.
+  </p>
+
+  <p>
+    So if we had a random sample <me>1,2,3,4,7,2,3,4,3,2,3,5,6,5,3,4,3,2.</me>
+    One way of listing out the frequencies would be to count them in a table:
+    <me>
+    \begin{array}{|c|c|}
+    \hline
+    x \amp \text{Frequency}\\
+    \hline 
+    1 \amp 1\\
+    2 \amp 4\\
+    3 \amp 6\\
+    4 \amp 3\\
+    5 \amp 2\\
+    6 \amp 1\\
+    7 \amp 1\\
+    \hline
+    \end{array}
+
+  </me>
+
+  Or we can display it with a <term>histogram</term>, a bar graph with heights corresponding to frequency:
+  <interactive desmos ="pixksnyh6p"/>
+  </p>  
+
+
+</subsection>
+
+<subsection>
+  <title>Notions of <q>Average</q></title>
+
+  <definition xml:id="DefinitionMean">
+    <p>
+      Given a random sample of size <m>n</m>, the <term>sample mean</term> denoted <m>\bar{x}</m> is computed <me>\bar{x}:=\frac{x_1+\cdots x_n}{n}.</me>
+    </p>
+  </definition>
+
+  <p> <xref ref="DefinitionMean"/> is the traditional <q>average</q>.  The higher values are counterbalanced by the lower values, and it yeilds the value <q>in between</q>.  In our above example, our sample mean would be <me>\bar{x}=\frac{1+2+2+2+2+3+3+3+3+3+3+4+4+4+5+5+6+6}{18}\approx 3.4444.</me>
+  Of course, this is computed directly by Desmos as well.
+</p>
+
+<remark>
+  <p>
+    Note that the sample mean here is our attempt to predict the <term>expected value</term> of a random variable as seen in <xref ref="Sec_ProbabilityDistributions"/>, using a sample.  The larger the sample, the more closely our sample mean will resemble the expectation, but as we saw in die rolling above, there will most likely still be some error.
+ </p>
+</remark>    
+
+<definition xml:id="DefinitionMedian">
+    <p>
+      Given a random sample of size <m>n</m>, the <term>median</term> is the <q>middlemost</q> value if <m>n</m> is odd, and the mean of the two middlemost values if <m>n</m> is even.
+    </p>
+  </definition>
+
+  <p> This is the value closest to the center of our random sample.  In our case, we rewrite the values in order:
+    <me>1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 5, 5, 6, 6</me> since <m>n=18</m> we are taking the mean of the 9th and 10th values so <m>\frac{3+3}{2}=3</m>.  Shown in the Desmos above.
+  </p>
+
+<definition xml:id="DefinitionMode">
+    <p>
+      Given a random sample the <term>mode(s)</term> are the most commonly occung value(s).
+    </p>
+  </definition>
+
+  <p>This is the most <q>likely</q> value.  In our example, it is 3 with 6 occurences.</p>
+
+  <exercise>
+    <statement>
+      <p>
+        Consider the following table of high and low temperatures in a location over the course of a year.
+
+        <me>
+        \begin{array}{|c|c|c|}
+        \hline
+        \text{Month} \amp \text{High} \amp \text{Low}\\
+        \hline
+        \text{January} \amp 40 \amp 16\\
+        \text{February} \amp 38 \amp 17\\
+        \text{March} \amp 43 \amp 22\\
+\text{April}\amp  50 \amp 27\\
+\text{May} \amp 59 \amp  32\\
+ \text{June} \amp 69 \amp 38\\
+\text{July} \amp 82 \amp 45\\
+\text{August}\amp 85 \amp 42\\
+\text{September}\amp 77 \amp 37\\
+\text{October} \amp 51 \amp 31\\
+\text{November}\amp 45 \amp 26\\
+\text{December} \amp 38 \amp 18\\
+\hline
+\end{array}
+</me>
+Find the mean and median temperatures for the highs and lows.
+</p>
+</statement>
+<solution>
+  <p>
+    For the highs, we have, in order <me>38, 38, 40, 43, 45, 50, 51, 59, 69, 77, 82, 85.</me>  So we have mean <me>\bar{x}=\frac{38+38+40+43+45+50+51+59+69+77+82+85}{12}\approx 56.1467.</me>  The median is the mean of the 6th and 7th entries <m>\frac{50+51}{2}=50.5</m>.
+    <interactive desmos="ktbeduabsz"/>
+  </p>  
+
+  <p>
+    For the lows, we have, in order <me>16, 17, 18, 22, 26, 27, 31, 32, 37, 38, 42, 45.</me>  So we have mean <me>\bar{x}=\frac{16+17+18+22+26+27+31+32+37+38+42+45}{12}=29.25.</me>  The median is the mean of the 6th and 7th entries <m>\frac{27+31}{2}=29</m>.
+    <interactive desmos="ahfc4arwmy"/>
+  </p> 
+ </solution> 
+</exercise>
+
+
+
+
+
+
+
+
+
+
+</subsection>
+
+</section>

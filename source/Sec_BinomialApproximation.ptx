@@ -1,0 +1,142 @@
+<section xml:id="Sec_BinomialApproximation">
+  <title> Normal Approximation of the Binomial</title>
+  <introduction>
+    <statement>
+      <p>
+        One of the reasons the normal curve is central to the study of statistics ie because, under the right circumstances, it may be used to approximate the behavior of other probability distributions.  Here, we show how it can be used to approximate binomial distributions under the right circumstances.
+      </p>
+    </statement>
+  </introduction>      
+
+  <subsection>
+    <title>A Motivating Example </title>
+  
+   <p>Suppose you flipped 100 coins, what is the probability 55 or more of them come up heads? Technically, we know how to solve this: <me>P(X=55)+P(X=56)+\cdots +P(X=100)</me> where <m>X</m> is the number of heads.  Understandably, one may be relunctant to compute all of these by hand.</p>
+
+   <p>
+    On the other hand, we know that for a binomial variable with <m>n=100, p=0.5</m> it has a mean or expected value of <m>\mu=np=(100)(0.5)=50</m> and standard deviation <m>\sigma=\sqrt{np(1-p)}=\sqrt{100(0.5)(0.5)}=5</m>.  If we plot the normal curve with <m>\mu=50, \sigma=5</m> alongside the binomial distribution with <m>n=100, p=0.5</m>, we see that they match up remarkably closely!
+    <interactive desmos="khdzyyuxtn"/>
+    So  much so that  if we use the normal curve to approximate this value, we don't end up too far off:
+    <interactive desmos="vzmsc6x5or"/>
+   </p> 
+
+
+</subsection>
+
+<subsection>
+  <title>The Approximation</title>
+
+  <p>
+    Looking at the graphs above, adjust <m>n, p</m> using the sliders, you should see that as we change these values, the normal distribution continues to match up with the binomial fairly well.  This gives us the following:
+  </p>
+  
+  <remark>
+  <p>
+  Given a binomial random variable <m>X</m> with parameters <m>n</m> trials, each with probability of success <m>p</m>, then we may approximate <m>X</m> with <m>X'</m>, a normal variable with mean <m>\mu=np</m> and standard deviation <m>\sigma=\sqrt{np(1-p)}</m>, so long as:
+  <ul>
+    <li><m>np\geq 10</m>.</li>
+    <li><m>n(1-p)\geq 10</m>.</li>
+  </ul>
+  </p>
+  <p>
+  The greater <m>n</m> is, the better the approximation will be.
+  </p>
+  </remark>  
+
+  <example>
+    <statement>
+    <p>
+    Suppose that a University sends oun 2000 acceptance letters, each student who recieves a letter has a 60% chance to attend. 
+    <ol>
+    <li> What is the probability less than 1150 students attend?</li>
+    <li> Find an interval centered at the mean, so that 95% of cases, the attendence level falls within this interval.</li>
+  </ol>
+  </p>
+</statement>
+<solution>
+  <p>
+    Note <m>n=2000, p=0.6</m>, we have <m>\mu=1200, \sigma=\sqrt{480}\approx 21.9089.</m>  Thus <m>P(X\lt 1150)\approx P(X'\lt 1150)\approx 0.01124</m>.
+    <interactive desmos="xhw44mk05b"/>
+  </p>
+ </solution>  
+ <solution>
+  <p>
+    Note <m>n=2000, p=0.6</m>, we have <m>\mu=1200, \sigma=\sqrt{480}\approx 21.9089.</m>  Thus theres a 95% chance between 1157 and 1243 students accept.
+    <interactive desmos="iesovykxkx"/>
+  </p>
+ </solution> 
+</example>
+
+
+
+<exercise>
+    <statement>
+    <p>
+    Consider a group of 100 drivers, each with a 45% chance of speeding. 
+    <ol>
+    <li> What is the probability more than 50 of them are speeding?</li>
+    <li> Find a number <m>k</m> so that there is a 20% chance <m>k</m> or more drivers are speeding.</li>
+  </ol>
+  </p>
+</statement>
+<solution>
+  <p>
+    Note <m>n=100, p=0.45</m>, we have <m>\mu=45, \sigma=\sqrt{24.75}\approx 4.9749.</m>  Thus <m>P(X>50)\approx P(X'> 50)\approx 0.1574</m>.
+    <interactive desmos="vguaabi8ta"/>
+  </p>
+ </solution>  
+ <solution>
+  <p>
+    Note <m>n=100, p=0.45</m>, we have <m>\mu=45, \sigma=\sqrt{24.75}\approx 4.9749.</m>  Thus theres a 10% chance more than 51 drivers speed.
+    <interactive desmos="0wjqpvxxxo"/>
+  </p>
+ </solution> 
+</exercise>
+
+
+<exercise>
+    <statement>
+    <p>
+    A company sends a survey to 200 customers, each has a 53% of liking their product. 
+    <ol>
+    <li> What is the probability less than 100 customers like the product?</li>
+    <li> What is the probability more than than 120 customers like the product?</li>
+  </ol>
+  </p>
+</statement>
+<solution>
+  <p>
+    Note <m>n=200, p=0.53</m>, we have <m>\mu=106, \sigma=\sqrt{49.82}\approx 7.0583.</m>  Thus <m>P(X\lt 100)\approx P(X'\lt 100)\approx 0.1976</m>.
+    <interactive desmos="kvhw32a0a5"/>
+  </p>
+ </solution>  
+ <solution>
+  <p>
+    Note <m>n=200, p=0.53</m>, we have <m>\mu=106, \sigma=\sqrt{49.82}\approx 7.0583.</m>  Thus <m>P(X> 120)\approx P(X'> 120)\approx 0.0237</m>.
+    <interactive desmos="xbxtgdbpcu"/>
+  </p>
+ </solution>  
+</exercise>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</subsection>
+
+</section>

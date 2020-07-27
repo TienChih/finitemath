@@ -1,0 +1,244 @@
+<section xml:id="Sec_Variation">
+  <title> Measures of Variation</title>
+  <introduction>
+    <statement>
+      <p>
+        In <xref ref="Sec_ProbabilityDistributions"/> when we studied random variables, we looked both the average outcome (<m>E(X)</m>) and the <term>variance</term> and <term>standard deviation</term> of the random variables.  In <xref ref="Sec_CentralTendency"/>, we saw the use of the sample mean to predict expectation.  Here, we will give a description of variance and standard deviation.
+      </p>
+    </statement>
+  </introduction>      
+
+  <subsection>
+    <title>How would one meaure Variation? </title>
+  
+    <p>
+      The more <q>spread out</q> a data set is, the farther away the data points are from the mean, either many of them consistently away from the mean, or a few that are really far away.  In a sense, when we measure the <q>spread</q> of a data set, we are measuring the distances from each data point to the mean, and the greater those are, the greater the spread.</p>
+
+
+<p>
+So, given a data set <m>1,2,3,4,5</m>, we should all see the mean is 3.  We could try to measure the spread of this data set by taking the differences between the mean and the data points and summing them up:
+
+ 
+
+<me>(1-3)+(2-3)+(3-3)+(4-3)+(5-3)</me>
+
+ 
+
+However, when we look at this, we see that the sum of these values is 0.  So this, as it stands, is not a great measure of the spread.</p>
+
+ 
+<p>
+Part of the problem is what the data points contribute to the sum.  The data point 1 contributes the total <m>(1-3)=-2</m> to the sum.  First, that something should make a negative contribution makes no sense in this context.  Secondly 1 is the same distance from 3 as 5, and so 1 and 5 should contribute the same value to the sum.</p>
+
+
+ 
+<p>
+We can fix both these issues by squaring all the terms:
+
+ 
+
+<me>(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2=10</me>
+
+ 
+
+This seems like a good way to measure the spreadoutness of the data.  But hold on, what if the data set was:
+
+ 
+
+<me>1,2,3,4,5,1,2,3,4,5</me>
+
+ 
+
+If we apply the same scheme, we would get:
+
+ 
+
+<me>(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2+(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2=20</me>
+
+ 
+
+But, I think we can all agree the second data set isn't any more spread out than the first one.  It's the same distribution repeated.  How can we fix this?</p>
+
+ 
+<p>
+Since the problem is we can scale the size of this sum by increasing the size of the data set, we can reverse that process by dividing by the size of the data set.
+
+ 
+
+<me>\frac{(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2}{5}=\frac{10}{5}=2</me>
+
+ 
+
+<me>\frac{(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2+(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2}{10}=\frac{20}{10}=2</me>
+
+ 
+
+and now these data sets are equally <q>spread out</q>.
+</p>
+
+
+
+</subsection>
+
+
+<subsection>
+  <title>Variance and Standard Deviation</title>
+
+  <p>Following the argument above:</p>
+
+  <definition>
+    <p>
+      We define the <term>population variance</term> as <me>Var(X):=\frac{\sum (x_i-\bar{x})^2}{n}</me> and the <term>population standard deviation</term> is defined <me>\sigma_X:=\sqrt{Var(X)}=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n}}.</me>
+    </p>
+  </definition>
+
+  <p>So what was computed above was the population variance of <m>1,2,3,4,5</m>, and  <m>1,2,3,4,5,1,2,3,4,5</m>, both of whom have population variance 2.</p>
+
+  <p>
+  Note that if <m>n=2</m>, then <m>\sigma_X=\sqrt{\frac{(x_1-\bar{x})^2+(x_2-\bar{x})^2}{2}}</m>, which greatly resembles the distance formula.  This is essentially how we want to view standard deviation, as a <q>distance</q> of a data set from the mean.
+</p>
+
+
+  <p>
+    The above definitions describe the standard deviation and variance if the data set in question represents the entire population being discussed.  As noted though, this is not generally feasible.  When one only has a sample of the random variable or population in question, these values do <em>not</em> predict the population variance of standard deviation of the population/random variable.  In order to predict the true variance and standard deviation, we introduce the following:
+  </p>  
+
+  <definition>
+    <p>
+      We define the <term>sample variance</term> as <me>s^2:=\frac{\sum (x_i-\bar{x})^2}{n-2}</me> and the <term>sample standard deviation</term> is defined <me>s:=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}.</me>
+    </p>
+  </definition>
+
+  <p>
+    This computation more accurately predicts the population variance and standard deviation.
+  </p>  
+
+  <p>
+    So if we had a data set: 
+    <me>1,2,3,4,7,2,3,4,3,2,3,5,6,5,3,4,3,2</me>
+    it's standard deviation would be <m>\sigma\approx 1.49897</m> if this data represented the entirely population in question:
+    <interactive desmos="r14jlmic5u"/>
+    If this were a random sample of a broader population, then the standard deviation would be <m>s\approx1.52424</m>:
+    <interactive desmos="rlgrhuadh4"/>
+    I am not going to write out computing these by hand.  I don't recommend you compute these by hand.  I cannot imagine a greater waste of time.
+  </p>  
+
+
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        Consider the following table of high and low temperatures in a location over the course of a year.
+
+        <me>
+        \begin{array}{|c|c|c|}
+        \hline
+        \text{Month} \amp \text{High} \amp \text{Low}\\
+        \hline
+        \text{January} \amp 40 \amp 16\\
+        \text{February} \amp 38 \amp 17\\
+        \text{March} \amp 43 \amp 22\\
+\text{April}\amp  50 \amp 27\\
+\text{May} \amp 59 \amp  32\\
+ \text{June} \amp 69 \amp 38\\
+\text{July} \amp 82 \amp 45\\
+\text{August}\amp 85 \amp 42\\
+\text{September}\amp 77 \amp 37\\
+\text{October} \amp 51 \amp 31\\
+\text{November}\amp 45 \amp 26\\
+\text{December} \amp 38 \amp 18\\
+\hline
+\end{array}
+</me>
+Find the population and sample standard deviation and variance for temperatures for both the highs and lows.
+</p>
+</statement>
+<solution>
+  <p>
+    For the highs, we have, in order <me>38, 38, 40, 43, 45, 50, 51, 59, 69, 77, 82, 85.</me>  So: 
+    <ul>
+      <li><m>Var(X)\approx 282.4097.</m></li>
+      <li><m>\sigma_X\approx 16.8051.</m></li>
+      <li><m>s^2\approx 308.0833.</m></li>
+      <li><m>s\approx 17.5523.</m></li>
+    </ul>  
+    All computed here:
+    <interactive desmos="w5fiojjmd7"/>
+  </p>  
+
+  <p>
+    For the lows, we have, in order <me>16, 17, 18, 22, 26, 27, 31, 32, 37, 38, 42, 45.</me>  So 
+    <ul>
+      <li><m>Var(X)\approx 89.8542.</m></li>
+      <li><m>\sigma_X\approx 9.4791.</m></li>
+      <li><m>s^2\approx 98.0227.</m></li>
+      <li><m>s\approx 9.9006.</m></li>
+    </ul>  
+    All computed here:
+    <interactive desmos="nqwiel6ick"/>
+  </p>  
+ </solution> 
+</exercise>
+
+
+<exercise>
+    <statement>
+      <p>
+        Consider two companies, Company A and Company B, who pay their employees the following salaries:
+<me>
+\begin{array}{|c|c|}
+\hline
+\text{Company A} \amp \text{Company B}\\
+\hline
+\$48,000  \amp \$49,000\\
+\$50,000  \amp \$51,000\\
+\$58,000  \amp \$53,000\\
+\$58,500  \amp \$55,000\\
+\$59,100  \amp \$57,000\\
+\$59,300  \amp \$59,000\\
+\$61,000  \amp \$61,000\\
+\$61,100  \amp \$63,000\\
+\$61,600  \amp \$65,000\\
+\$62,000  \amp \$67,000\\
+\$63,000  \amp \$69,000\\
+\$71,000  \amp \$71,000\\
+\hline
+\end{array}
+</me>
+
+Based on the standard deviation of each distribution, which company has a wider variation in salary?
+</p>
+</statement>
+<solution>
+  <p>
+    For Company A, if we list the data in thousands per year: <me>48,50,58,58,59.1,59.3,61,61.1,61.6,62,63,71</me>
+    we have <m>\sigma_A\approx 5.6779</m>:
+    <interactive desmos="3f6gwu3dtn"/>
+  </p>  
+
+  <p>
+    For Company B, if we list the data in thousands per year: <me>49,51,53,55,57,59,61,63,65,67,69,71</me>
+    we have <m>\sigma_B\approx 6.9041</m>:
+    <interactive desmos="nxwzkbqaqf"/>
+  </p>  
+
+  <p>
+    So Company B has a wider variation of salaries.
+  </p>
+
+ </solution> 
+</exercise>
+
+
+
+
+
+
+
+
+</subsection>
+
+
+</section>
