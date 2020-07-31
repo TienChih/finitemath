@@ -44,7 +44,7 @@
     <p>
       We note the following about cardinality:
       <ul>
-        <li><m>|A^c|=|\mathcal{U}|-|A|</m>, since <m>A^c</m> consists of all elements of <m>\mcathcal{U}</m> not in <m>A</m>.</li>
+        <li><m>|A^c|=|\mathcal{U}|-|A|</m>, since <m>A^c</m> consists of all elements of <m>\mathcal{U}</m> not in <m>A</m>.</li>
         <li><m>|\emptyset|=0</m> since  the empty set contains no elements.</li>
       </ul>
     </p>
