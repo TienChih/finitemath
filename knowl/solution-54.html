@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:39-06:00    *-->
+<!--*    on 2020-08-01T16:12:29-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,25 +14,29 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.3.6.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.3.4.1</span><span class="period">.</span>
 </h6>
 <p>So we have:</p>
 <div class="displaymath">
 \begin{align*}
-R\amp = 1000\\
-n\amp = 10\\
-i\amp = 0.06
+R\amp = 2000\\
+S\amp = 50000\\
+i\amp = 0.10
 \end{align*}
 </div>
 <p>So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
-P\amp = 1000\frac{1-(1.06)^{-10}}{.06}\\
-\amp \approx 7360.09.
+50000\amp = 2000\frac{(1.1)^{n}-1}{.1}\\
+2.5\amp = 1.1^n-1\\
+3.5\amp = 1.1^n\\
+\ln(3.5)\amp= n\ln(1.1)\\
+n\amp = \frac{\ln(3.5)}{\ln(1.1)}\approx 13.144
 \end{align*}
 </div>
-<p>So the loan would have been for \(\$7360.09\text{.}\)</p>
-<p><iframe src="https://www.desmos.com/calculator/zgggwvppup" id="interactive-80" width="600" height="600"></iframe></p>
+<p data-braille="continuation">We could also plot \(y=1.1^x\) and set this against \(y=3.5\) to see what \(n\) should be: <iframe src="https://www.desmos.com/calculator/hllf3d9syk" id="interactive-76" width="600" height="600"></iframe> We can observe that these curves intersect when \(x\approx 13.144\text{.}\)</p>
+<p>So each year, Katya will have saved \(\$50000\) in just over 13 years.</p>
+<p><iframe src="https://www.desmos.com/calculator/vfmixtfrje" id="interactive-77" width="600" height="600"></iframe></p>
 </div>
 <span class="incontext"><a href="Sec_RegularPayments.html#solution-54">in-context</a></span>
 </body>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:59-06:00    *-->
+<!--*    on 2020-08-01T16:12:44-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,24 +14,32 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">7.7.2.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">7.6.3.1</span><span class="period">.</span>
 </h6>
-<p>Notice:</p>
-<ul class="disc">
-<li>We note that revenue is \(R(q)=qD(q)=150q+\frac{40q}{\ln(q)}\text{.}\)  We then differentiate \(R(q)\text{:}\)<div class="displaymath">
+<p>We note that:</p>
+<div class="displaymath">
 \begin{align*}
-D'(q)\amp = \frac{d}{dq}[150q+\frac{40q}{\ln(q)}]\\
-\amp = 150 +\frac{d}{dq}[\frac{40q}{\ln(q)}]\\
-\amp =_{QR} 150 +\frac{\frac{d}{dq}[40q]\ln(q)-40q\frac{d}{dq}[\ln(q)]}{(\ln(q))^2}\\
-\amp = 150 +\frac{40\ln(q)-40q\frac{1}{q}}{(\ln(q))^2}\\
-\amp = 150 +\frac{40\ln(q)-40}{(\ln(q))^2}\text{.}
+D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]\\
+\amp = t\frac{d}{dt}[e^{-0.25t}]+\frac{d}{dt}[t]e^{-0.25t}\\
+\amp = te^{-0.25t}\frac{d}{dt}[-0.25t]+1\cdot e^{-0.25t}\\
+\amp = te^{-0.25t}\cdot(-0.25t)+e^{-0.25t}\\
+\amp = (1-0.25t)e^{-0.25t}\text{.}
 \end{align*}
 </div>
-</li>
-<li>This would be \(R'(6)= 150 +\frac{40\ln(6)-40}{(\ln(6))^2}\approx  159.87\) or \(\$159.87\) dollars per unit sold.</li>
-</ul>
-<p data-braille="continuation">Visually: <iframe src="https://www.desmos.com/calculator/04r4ndvvxr" id="interactive-168" width="600" height="600"></iframe></p>
+<p data-braille="continuation">So with that:</p>
+<ol class="decimal">
+<li>Notce \(D'(2)=(1-0.25(2))e^{-0.25(2)}\approx 0.303 \) or increasing by 0.303 mL/minute.</li>
+<li>We note that the quantity decreases when \(D'(t)=(1-0.25t)e^{-0.25t}\lt 0\) so:<div class="displaymath">
+\begin{align*}
+(1-0.25t)e^{-0.25t}\amp \lt 0\\
+(1-0.25t)\amp \lt 0\\
+1\amp \lt 0.25t\\
+t\amp &gt; 4\text{.}
+\end{align*}
+</div>So after 4 minutes</li>
+</ol>
+<p data-braille="continuation">We can see this: <iframe src="https://www.desmos.com/calculator/uow1nliujd" id="interactive-163" width="600" height="600"></iframe></p>
 </div>
-<span class="incontext"><a href="DerivativeLogs.html#solution-104">in-context</a></span>
+<span class="incontext"><a href="DerivativeExp.html#solution-104">in-context</a></span>
 </body>
 </html>

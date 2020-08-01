@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:33-06:00    *-->
+<!--*    on 2020-08-01T16:12:25-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,29 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We're given \(P=750, A=1000, n=5\text{.}\)  Thus we have:</p>
+<p>Let's define the following:</p>
+<ul class="disc">
+<li>\(s=\)"It snows."</li>
+<li>\(p=\)"The city sends out snow plows."</li>
+<li>\(t=\)"Traffic got bad."</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li>\(\displaystyle s\to p\)</li>
+<li>\(\displaystyle p\to t\)</li>
+<li>\(\displaystyle t\)</li>
+</ul>
+<p data-braille="continuation">So one hypothetically start with Reasoning by Transitivity:</p>
 <div class="displaymath">
-\begin{align*}
-A\amp = P+Prn\\
-1000\amp = 750+(750)r(5)\\
-250\amp = 3750r\\
-r\amp = \frac{250}{3750}\approx 0.066\ldots
-\end{align*}
+\begin{equation*}
+\begin{array}{lcl} 
+s\to p\amp \ \ \ \amp \\ 
+p\to t
+\\ \hline 
+s\to t\amp  \amp \text{ Reasnoning by Transitivity }  \end{array}
+\end{equation*}
 </div>
-<p data-braille="continuation">So about 6.67\% annual simple interest: <iframe src="https://www.desmos.com/calculator/turr6ag5tb" id="interactive-57" width="600" height="600"></iframe></p>
-<span class="incontext"><a href="Sec_SimpleInterest.html#p-563">in-context</a></span>
+<p data-braille="continuation">Next we are given \(t\text{.}\)  But we cannot from \(t\) conclude \(s\text{.}\)  This would be the Fallacy of the Converse.  There's all sorts of reasons traffic might be bad, it may have nothing to do with snows or snow plows.</p>
+<span class="incontext"><a href="Sec_Arguments.html#p-563">in-context</a></span>
 </body>
 </html>

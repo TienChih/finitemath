@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:59-06:00    *-->
+<!--*    on 2020-08-01T16:12:44-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,28 +12,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>We note that:</p>
+<p>We first have:</p>
 <div class="displaymath">
 \begin{align*}
-D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]\\
-\amp = t\frac{d}{dt}[e^{-0.25t}]+\frac{d}{dt}[t]e^{-0.25t}\\
-\amp = te^{-0.25t}\frac{d}{dt}[-0.25t]+1\cdot e^{-0.25t}\\
-\amp = te^{-0.25t}\cdot(-0.25t)+e^{-0.25t}\\
-\amp = (1-0.25t)e^{-0.25t}\text{.}
+f'(x)\amp = \frac{d}{dx}[e^xx^2]\\
+\amp =_{PR} \frac{d}{dx}[e^x]x^2+e^x\frac{d}{dx}[x^2]\\
+\amp = e^xx^2+e^x2x\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">So with that:</p>
-<ol class="decimal">
-<li>Notce \(D'(2)=(1-0.25(2))e^{-0.25(2)}\approx 0.303 \) or increasing by 0.303 mL/minute.</li>
-<li>We note that the quantity decreases when \(D'(t)=(1-0.25t)e^{-0.25t}\lt 0\) so:<div class="displaymath">
+<p>Next, we compute:</p>
+<div class="displaymath">
 \begin{align*}
-(1-0.25t)e^{-0.25t}\amp \lt 0\\
-(1-0.25t)\amp \lt 0\\
-1\amp \lt 0.25t\\
-t\amp &gt; 4\text{.}
+h'(x)\amp = \frac{d}{dx}[2^{\frac{x}{x+1}}]\\
+\amp =_{CR} 2^{\frac{x}{x+1}}\ln(2)\frac{d}{dx}[\frac{x}{x+1}]\\
+\amp =_{QR} 2^{\frac{x}{x+1}}\ln(2)\frac{(x+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x+1]}{(x+1)^2}\\
+\amp = \frac{2^{\frac{x}{x+1}}\ln(2)}{(x+1)^2}
 \end{align*}
-</div>So after 4 minutes</li>
-</ol>
-<p data-braille="continuation">We can see this: <iframe src="https://www.desmos.com/calculator/uow1nliujd" id="interactive-163" width="600" height="600"></iframe></p>
+</div>
 </div></body>
 </html>

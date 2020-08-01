@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:00-06:00    *-->
+<!--*    on 2020-08-01T16:11:57-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -106,7 +106,15 @@ MathJax.Hub.Config({
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
 <li class="link">
 <a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
 <li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
@@ -201,11 +209,11 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="DerivativeLogs"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.7</span> <span class="title">Derivative of Logarithms</span>
 </h2>
-<section class="introduction" id="introduction-34"><p id="p-991">We recall that log functions are inverses of exponential functions.  We first conceptualized them in <a href="Sec_Logarithms.html" class="internal" title="Section 6.6: Logarithms">Section 6.6</a> as reflections of exponentials across the \(y=x\) line.  It is sensible then that the derivatives of logs should be based on those of exponentials.</p>
-<p id="p-992">In fact, we can see it below.  Each point on the \(y=e^x\) line corresponds to a point on the \(y=\ln(x)\) line, and the slopes are reciprocals of each other: <iframe src="https://www.desmos.com/calculator/5fxsak3xaa" id="interactive-164" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-34"><p id="p-1006">We recall that log functions are inverses of exponential functions.  We first conceptualized them in <a href="Sec_Logarithms.html" class="internal" title="Section 6.6: Logarithms">Section 6.6</a> as reflections of exponentials across the \(y=x\) line.  It is sensible then that the derivatives of logs should be based on those of exponentials.</p>
+<p id="p-1007">In fact, we can see it below.  Each point on the \(y=e^x\) line corresponds to a point on the \(y=\ln(x)\) line, and the slopes are reciprocals of each other: <iframe src="https://www.desmos.com/calculator/5fxsak3xaa" id="interactive-164" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.7.1</span> <span class="title">Computing Logarithmic Derivatives</span>
 </h3>
-<p id="p-993">We can use the chain rule to find the derivative of log functions as well. Let's first compute \(\frac{d}{dx}[\ln(x)]\text{:}\)</p>
+<p id="p-1008">We can use the chain rule to find the derivative of log functions as well. Let's first compute \(\frac{d}{dx}[\ln(x)]\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 x\amp = e^{\ln(x)}\\
@@ -216,7 +224,7 @@ x\amp = e^{\ln(x)}\\
 \end{align*}
 </div>
 <p data-braille="continuation">Visually: <iframe src="https://www.desmos.com/calculator/9vsyzdkzro" id="interactive-165" width="600" height="600"></iframe></p>
-<p id="p-994">For general \(\log_a(x)\text{:}\)</p>
+<p id="p-1009">For general \(\log_a(x)\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 x\amp = a^{\log_a(x)}\\
@@ -226,15 +234,15 @@ x\amp = a^{\log_a(x)}\\
 \frac{d}{dx}[\log_a(x)]\amp = \frac{1}{x\ln(a)}\text{.}
 \end{align*}
 </div>
-<p id="p-995">Verified graphically here as well: <iframe src="https://www.desmos.com/calculator/znr3xikwcc" id="interactive-166" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-76"><h3 class="heading hide-type">
+<p id="p-1010">Verified graphically here as well: <iframe src="https://www.desmos.com/calculator/znr3xikwcc" id="interactive-166" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-76"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.7.2</span> <span class="title">Exercises</span>
 </h3>
 <article class="example example-like" id="example-77"><a data-knowl="" class="id-ref original" data-refid="hk-example-77"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.7.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-77"><article class="example example-like"><p id="p-996">Let \(g(x)=\ln(x^2+1)\text{.}\)  Find \(g'(x)\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-77"><article class="example example-like"><p id="p-1011">Let \(g(x)=\ln(x^2+1)\text{.}\)  Find \(g'(x)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-103" id="solution-103"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-103"><div class="solution solution-like">
-<p id="p-997">Notice:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-105" id="solution-105"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-105"><div class="solution solution-like">
+<p id="p-1012">Notice:</p>
 <div class="displaymath">
 \begin{align*}
 g'(x)\amp = \frac{d}{dx}[\ln(x^2+1)]\\
@@ -247,7 +255,7 @@ g'(x)\amp = \frac{d}{dx}[\ln(x^2+1)]\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-71"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-71"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.7.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-71"><article class="exercise exercise-like"><p id="p-998">Suppose the demand function for q units of a certain item is</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-71"><article class="exercise exercise-like"><p id="p-1013">Suppose the demand function for q units of a certain item is</p>
 <div class="displaymath">
 \begin{equation*}
 p=D(q)=150+\frac{40}{\ln(q)}, q&gt;1,
@@ -255,14 +263,14 @@ p=D(q)=150+\frac{40}{\ln(q)}, q&gt;1,
 </div>
 <p data-braille="continuation">where \(p\) is in dollars.</p>
 <ul class="disc">
-<li id="li-460">Find the marginal revenue.</li>
-<li id="li-461">Approximate the revenue from one more unit when 6 units are sold.</li>
+<li id="li-463">Find the marginal revenue.</li>
+<li id="li-464">Approximate the revenue from one more unit when 6 units are sold.</li>
 </ul>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-104" id="solution-104"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-104"><div class="solution solution-like">
-<p id="p-999">Notice:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-106" id="solution-106"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-106"><div class="solution solution-like">
+<p id="p-1014">Notice:</p>
 <ul class="disc">
-<li id="li-462">We note that revenue is \(R(q)=qD(q)=150q+\frac{40q}{\ln(q)}\text{.}\)  We then differentiate \(R(q)\text{:}\)<div class="displaymath">
+<li id="li-465">We note that revenue is \(R(q)=qD(q)=150q+\frac{40q}{\ln(q)}\text{.}\)  We then differentiate \(R(q)\text{:}\)<div class="displaymath">
 \begin{align*}
 D'(q)\amp = \frac{d}{dq}[150q+\frac{40q}{\ln(q)}]\\
 \amp = 150 +\frac{d}{dq}[\frac{40q}{\ln(q)}]\\
@@ -272,7 +280,7 @@ D'(q)\amp = \frac{d}{dq}[150q+\frac{40q}{\ln(q)}]\\
 \end{align*}
 </div>
 </li>
-<li id="li-463">This would be \(R'(6)= 150 +\frac{40\ln(6)-40}{(\ln(6))^2}\approx  159.87\) or \(\$159.87\) dollars per unit sold.</li>
+<li id="li-466">This would be \(R'(6)= 150 +\frac{40\ln(6)-40}{(\ln(6))^2}\approx  159.87\) or \(\$159.87\) dollars per unit sold.</li>
 </ul>
 <p data-braille="continuation">Visually: <iframe src="https://www.desmos.com/calculator/04r4ndvvxr" id="interactive-168" width="600" height="600"></iframe></p>
 </div></div>

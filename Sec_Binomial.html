@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:09-06:00    *-->
+<!--*    on 2020-08-01T16:12:05-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -106,7 +106,15 @@ MathJax.Hub.Config({
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
 <li class="link">
 <a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
 <li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
@@ -201,18 +209,18 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Binomial"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.5</span> <span class="title">Binomial Distrbutions</span>
 </h2>
-<section class="introduction" id="introduction-46"><p id="p-1226">We discuss a specific type of probability distribution.  If you had repeated random independent trials, how can we compute the distribution of succecess?</p></section><section class="subsection" id="subsection-98"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-46"><p id="p-1241">We discuss a specific type of probability distribution.  If you had repeated random independent trials, how can we compute the distribution of succecess?</p></section><section class="subsection" id="subsection-98"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.5.1</span> <span class="title">A Motivating Example</span>
 </h3>
-<p id="p-1227">Suppose that a student has to take 4 exams in an English class, and that the probability that she receives an A on each exam is 30%.  Suppose also that the grades of each exam are independent of each other.  What is the probability that she receives an A on the first two exams and not the others?</p>
-<p id="p-1228">Well, since the probability of getting an A on any exam is a 30%, and the Exam scores are independent of each other, she has a (.3)(.3) chance of getting A's on the first two.  Then she doesn't get an A on the second two, which has a 0.7 chance each of happening, so the chance of this event ocurring is:</p>
+<p id="p-1242">Suppose that a student has to take 4 exams in an English class, and that the probability that she receives an A on each exam is 30%.  Suppose also that the grades of each exam are independent of each other.  What is the probability that she receives an A on the first two exams and not the others?</p>
+<p id="p-1243">Well, since the probability of getting an A on any exam is a 30%, and the Exam scores are independent of each other, she has a (.3)(.3) chance of getting A's on the first two.  Then she doesn't get an A on the second two, which has a 0.7 chance each of happening, so the chance of this event ocurring is:</p>
 <div class="displaymath">
 \begin{equation*}
 (0.3)(0.3)(0.7)(0.7)=(0.3)^2(0.7)^2=0.0441.
 \end{equation*}
 </div>
-<p id="p-1229"><em class="emphasis">What is the probability the same student receives an A on exactly two exams?</em></p>
-<p id="p-1230">The first thing we should ask ourselves is, how is this different from the previous problem?  In the previous problem, we required that the first 2 exams had to receive A's.  In this problem, ANY 2 exams can be an A, the first two, the last two, the second and third, whichever way we want.  In fact the total number of ways she could get two A's is:</p>
+<p id="p-1244"><em class="emphasis">What is the probability the same student receives an A on exactly two exams?</em></p>
+<p id="p-1245">The first thing we should ask ourselves is, how is this different from the previous problem?  In the previous problem, we required that the first 2 exams had to receive A's.  In this problem, ANY 2 exams can be an A, the first two, the last two, the second and third, whichever way we want.  In fact the total number of ways she could get two A's is:</p>
 <div class="displaymath">
 \begin{equation*}
 AANN, ANAN, ANNA, NAAN, NANA, NNAA
@@ -224,7 +232,7 @@ AANN, ANAN, ANNA, NAAN, NANA, NNAA
 C(4,2)=\frac{4!}{2!2!}=\frac{24}{4}=6.
 \end{equation*}
 </div>
-<p id="p-1231">Then, what is the probability that each of these A/Not A arrangements occur?  Well, for \(ANAN\) it would be \((0.3)(0.7)(0.3)(0.7)=(0.3)^2(0.7)^2\text{,}\) for \(NAAN\) it would be \((0.3)(0.7)(0.7)(0.3)=(0.3)^2(0.7)^2\text{.}\)  In fact, each of these grade arrangements have 2 A'S and 2 not A's, and so their probability of occurring would be \((0.3)^2(0.7)^2\text{.}\)  Thus the probability of getting an A on two exams (any two) is:</p>
+<p id="p-1246">Then, what is the probability that each of these A/Not A arrangements occur?  Well, for \(ANAN\) it would be \((0.3)(0.7)(0.3)(0.7)=(0.3)^2(0.7)^2\text{,}\) for \(NAAN\) it would be \((0.3)(0.7)(0.7)(0.3)=(0.3)^2(0.7)^2\text{.}\)  In fact, each of these grade arrangements have 2 A'S and 2 not A's, and so their probability of occurring would be \((0.3)^2(0.7)^2\text{.}\)  Thus the probability of getting an A on two exams (any two) is:</p>
 <div class="displaymath">
 \begin{equation*}
 C(4,2)\cdot (0.3)^2(0.7)^2=6\cdot 0.0441=0.2646
@@ -233,12 +241,12 @@ C(4,2)\cdot (0.3)^2(0.7)^2=6\cdot 0.0441=0.2646
 <p data-braille="continuation">Which is cool and all,  but at the end of the day, we want a <em class="emphasis">general</em> method of computing probabilities of this sort.</p></section><section class="subsection" id="subsection-99"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.5.2</span> <span class="title">General Binomial Probability</span>
 </h3>
-<p id="p-1232"><em class="emphasis">“Suppose that a student has to take \(n\) exams, and that the probability that she receives an A on each exam is \(p\text{.}\)  Suppose also that the grades of each exam are independent of each other.  What is the probability that she receives exactly \(k\) A's?”</em></p>
-<p id="p-1233">So we now arrive at the interesting version of this problem, but it's fundamentally not different from the above version.  So let's see:</p>
+<p id="p-1247"><em class="emphasis">“Suppose that a student has to take \(n\) exams, and that the probability that she receives an A on each exam is \(p\text{.}\)  Suppose also that the grades of each exam are independent of each other.  What is the probability that she receives exactly \(k\) A's?”</em></p>
+<p id="p-1248">So we now arrive at the interesting version of this problem, but it's fundamentally not different from the above version.  So let's see:</p>
 <ul class="disc">
-<li id="li-685">There are \(C(n,k)\) ways one could select \(k\) out of the \(n\) exams to receive an A.</li>
-<li id="li-686">Given any of those, the chance she gets A's on those \(k\) exams is \(p\) per exam, so to get A's on all of them has prob \(p^k\text{.}\)</li>
-<li id="li-687">Then for the remaining \(n-k\) exams, each has a \(1-p\) chance of not getting an A.  So the chance that those exams don't receive an A is \((1-p)^{n-k}\text{.}\)</li>
+<li id="li-688">There are \(C(n,k)\) ways one could select \(k\) out of the \(n\) exams to receive an A.</li>
+<li id="li-689">Given any of those, the chance she gets A's on those \(k\) exams is \(p\) per exam, so to get A's on all of them has prob \(p^k\text{.}\)</li>
+<li id="li-690">Then for the remaining \(n-k\) exams, each has a \(1-p\) chance of not getting an A.  So the chance that those exams don't receive an A is \((1-p)^{n-k}\text{.}\)</li>
 </ul>
 <p data-braille="continuation">Putting these together, the probability that she receives those $k$ A's is:</p>
 <div class="displaymath">
@@ -250,25 +258,25 @@ C(n,k) p^k (1-p)^{n-k}.
 <article class="definition definition-like" id="DefinitionBinomial"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.5.1</span><span class="period">.</span>
 </h6>
-<p id="p-1234">Given \(n\) <em class="emphasis">independent</em> trials, each of which has \(p\) probability of success, let \(X\) denote the number of successes attained.  We call \(X\) a <dfn class="terminology">binomial random variable</dfn>.  The probability that \(k\) successes are attained is:</p>
+<p id="p-1249">Given \(n\) <em class="emphasis">independent</em> trials, each of which has \(p\) probability of success, let \(X\) denote the number of successes attained.  We call \(X\) a <dfn class="terminology">binomial random variable</dfn>.  The probability that \(k\) successes are attained is:</p>
 <div class="displaymath">
 \begin{equation*}
 P(X=k)=C(n,k) p^k (1-p)^{n-k}.
 \end{equation*}
-</div></article><p id="p-1235">We can see this below: <iframe src="https://www.desmos.com/calculator/prwuifxwld" id="interactive-190" width="600" height="600"></iframe> So we now can see the entire distribution.  The student above has a \(0.2646\) chance of getting two A's, a \(0.0756\) chance of gettine three A's, a \(0.4116\) chance of one A etcetera.</p>
+</div></article><p id="p-1250">We can see this below: <iframe src="https://www.desmos.com/calculator/prwuifxwld" id="interactive-190" width="600" height="600"></iframe> So we now can see the entire distribution.  The student above has a \(0.2646\) chance of getting two A's, a \(0.0756\) chance of gettine three A's, a \(0.4116\) chance of one A etcetera.</p>
 <article class="example example-like" id="ExampleSoccer"><a data-knowl="" class="id-ref original" data-refid="hk-ExampleSoccer"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleSoccer"><article class="example example-like"><p id="p-1236">Suppose a soccer player has a 70% chance of making a penalty shot.  She shoots 5 times.  Assume the results of the shots are independent.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleSoccer"><article class="example example-like"><p id="p-1251">Suppose a soccer player has a 70% chance of making a penalty shot.  She shoots 5 times.  Assume the results of the shots are independent.</p>
 <ol class="decimal">
-<li id="li-688">What is the probability she makes 3 shots?</li>
-<li id="li-689">What is the probability she makes at least 4 shots?</li>
+<li id="li-691">What is the probability she makes 3 shots?</li>
+<li id="li-692">What is the probability she makes at least 4 shots?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-155" id="solution-155"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-155"><div class="solution solution-like">
-<p id="p-1237">We note \(n=5, p=0.7\text{,}\) let \(X\) denote the number of succesful shots.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-157" id="solution-157"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-157"><div class="solution solution-like">
+<p id="p-1252">We note \(n=5, p=0.7\text{,}\) let \(X\) denote the number of succesful shots.</p>
 <ol class="decimal">
-<li id="li-690">This is \(P(X=3)=C(5,3)(0.7)^3(0.3)^2=0.3087\)</li>
-<li id="li-691">At least 4 means 4 or 5.  So this is<div class="displaymath">
+<li id="li-693">This is \(P(X=3)=C(5,3)(0.7)^3(0.3)^2=0.3087\)</li>
+<li id="li-694">At least 4 means 4 or 5.  So this is<div class="displaymath">
 \begin{equation*}
 P(X=4)+P(X=5)=C(5,4)(0.7)^4(0.3)^1+C(5,5)(0.7)^5(0.3)^0=0.3602+0.1681=0.5283.
 \end{equation*}
@@ -280,17 +288,17 @@ P(X=4)+P(X=5)=C(5,4)(0.7)^4(0.3)^1+C(5,5)(0.7)^5(0.3)^0=0.3602+0.1681=0.5283.
 </div></article></div>
 <article class="example example-like" id="ExampleMachine"><a data-knowl="" class="id-ref original" data-refid="hk-ExampleMachine"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleMachine"><article class="example example-like"><p id="p-1238">A factory has 10 machines, each of which has a 10% chance of malfunctioning in a day.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleMachine"><article class="example example-like"><p id="p-1253">A factory has 10 machines, each of which has a 10% chance of malfunctioning in a day.</p>
 <ol class="decimal">
-<li id="li-692">What is the probability exactly 2 malfunction?</li>
-<li id="li-693">What is the probability at least one machine malfunctions?</li>
+<li id="li-695">What is the probability exactly 2 malfunction?</li>
+<li id="li-696">What is the probability at least one machine malfunctions?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-156" id="solution-156"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-156"><div class="solution solution-like">
-<p id="p-1239">We note \(n=10, p=0.1\text{,}\) let \(X\) denote the number of malfunctioning machines.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-158" id="solution-158"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-158"><div class="solution solution-like">
+<p id="p-1254">We note \(n=10, p=0.1\text{,}\) let \(X\) denote the number of malfunctioning machines.</p>
 <ol class="decimal">
-<li id="li-694">This is \(P(X=2)=C(10,2)(0.1)^2(0.9)^8=0.1937\)</li>
-<li id="li-695">At least 1 means 1 though 10.  So one could sum up \(P(X=1)+P(X=2)+\cdots P(X=10)\text{.}\)  But this is also every possibility but \(P(X=0)\text{.}\)  So we could do<div class="displaymath">
+<li id="li-697">This is \(P(X=2)=C(10,2)(0.1)^2(0.9)^8=0.1937\)</li>
+<li id="li-698">At least 1 means 1 though 10.  So one could sum up \(P(X=1)+P(X=2)+\cdots P(X=10)\text{.}\)  But this is also every possibility but \(P(X=0)\text{.}\)  So we could do<div class="displaymath">
 \begin{equation*}
 1-P(X=0)=1-C(10,0)(0.1)^0(0.9)^{10}=1-0.3487=0.6513.
 \end{equation*}
@@ -302,90 +310,90 @@ P(X=4)+P(X=5)=C(5,4)(0.7)^4(0.3)^1+C(5,5)(0.7)^5(0.3)^0=0.3602+0.1681=0.5283.
 </div></article></div></section><section class="subsection" id="subsection-100"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.5.3</span> <span class="title">Expectation, Variance and Standard Deviation for Binomial Probabilities</span>
 </h3>
-<p id="p-1240">Given a binomial distribution, we could certainly compute expectation and variance the same way we did in <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a>.  But, since the whole distribution is totally determined by \(n, p\text{,}\) shouldn't the expectation and variance be determined by these as well?</p>
-<p id="p-1241">For our above English test taking student, if she has a 30% chance of getting an A, wouldn't we <em class="emphasis">expect</em> that 30% of her tests turn out to be A's?  If someone had a 90% free-throw percentage and they shot 20 times, wouldn't we <em class="emphasis">expect</em> \(0.9(20)=18\) shots to make it?  There's a similar way of viewing variance which is beyond the scope of this text, but we can still see that both are totally determined by \(n\) and \(p\text{.}\)</p>
+<p id="p-1255">Given a binomial distribution, we could certainly compute expectation and variance the same way we did in <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a>.  But, since the whole distribution is totally determined by \(n, p\text{,}\) shouldn't the expectation and variance be determined by these as well?</p>
+<p id="p-1256">For our above English test taking student, if she has a 30% chance of getting an A, wouldn't we <em class="emphasis">expect</em> that 30% of her tests turn out to be A's?  If someone had a 90% free-throw percentage and they shot 20 times, wouldn't we <em class="emphasis">expect</em> \(0.9(20)=18\) shots to make it?  There's a similar way of viewing variance which is beyond the scope of this text, but we can still see that both are totally determined by \(n\) and \(p\text{.}\)</p>
 <article class="remark remark-like" id="remark-26"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.5.4</span><span class="period">.</span>
 </h6>
-<p id="p-1242">Given a <em class="emphasis">binomial random variable</em> with \(n\) trials and probability of success \(p\) per trial, we have:</p>
+<p id="p-1257">Given a <em class="emphasis">binomial random variable</em> with \(n\) trials and probability of success \(p\) per trial, we have:</p>
 <ul class="disc">
-<li id="li-696">\(E(X)=np.\text{.}\)  The number of trials, and the proportion who succeed.</li>
-<li id="li-697">\(\displaystyle Var(X)=np(1-p)\)</li>
-<li id="li-698">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{np(1-p)}\)</li>
+<li id="li-699">\(E(X)=np.\text{.}\)  The number of trials, and the proportion who succeed.</li>
+<li id="li-700">\(\displaystyle Var(X)=np(1-p)\)</li>
+<li id="li-701">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{np(1-p)}\)</li>
 </ul>
-<p data-braille="continuation">We reiterate these are for <em class="emphasis">BINOMIAL PROBABILITIES ONLY</em>.</p></article><p id="p-1243">So for \(n=4, p=0.3\) we would have:</p>
+<p data-braille="continuation">We reiterate these are for <em class="emphasis">BINOMIAL PROBABILITIES ONLY</em>.</p></article><p id="p-1258">So for \(n=4, p=0.3\) we would have:</p>
 <ul class="disc">
-<li id="li-699">\(E(X)=np=(4)(0.3)=1.2.\text{.}\)</li>
-<li id="li-700">\(\displaystyle Var(X)=4(0.3)(0.7)=0.84\)</li>
-<li id="li-701">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{0.84}\approx 0.9165\)</li>
+<li id="li-702">\(E(X)=np=(4)(0.3)=1.2.\text{.}\)</li>
+<li id="li-703">\(\displaystyle Var(X)=4(0.3)(0.7)=0.84\)</li>
+<li id="li-704">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{0.84}\approx 0.9165\)</li>
 </ul>
 <p data-braille="continuation">Which we may verify: <iframe src="https://www.desmos.com/calculator/prwuifxwld" id="interactive-193" width="600" height="600"></iframe> We can also compute these values the old fashioned way: <iframe src="https://www.desmos.com/calculator/spnfdlq15u" id="interactive-194" width="600" height="600"></iframe></p>
 <article class="example example-like" id="example-113"><a data-knowl="" class="id-ref original" data-refid="hk-example-113"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-113"><article class="example example-like"><p id="p-1244">Consider <a class="xref" data-knowl="./knowl/ExampleSoccer.html" title="Example 9.5.2">Example 9.5.2</a>.  What is the expected value, variance, and standard deviation for the number of shots made?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-113"><article class="example example-like"><p id="p-1259">Consider <a class="xref" data-knowl="./knowl/ExampleSoccer.html" title="Example 9.5.2">Example 9.5.2</a>.  What is the expected value, variance, and standard deviation for the number of shots made?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-157" id="solution-157"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-157"><div class="solution solution-like">
-<p id="p-1245">Recall that \(n=5, p=0.7.\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-159" id="solution-159"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-159"><div class="solution solution-like">
+<p id="p-1260">Recall that \(n=5, p=0.7.\)</p>
 <ul class="disc">
-<li id="li-702">\(E(X)=np=5(0.7)=3.5\) shots.</li>
-<li id="li-703">\(Var(X)=np(1-p)=5(0.7)(0.3)=1.05\text{.}\)</li>
-<li id="li-704">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{1.05}\approx 1.0247.\)</li>
+<li id="li-705">\(E(X)=np=5(0.7)=3.5\) shots.</li>
+<li id="li-706">\(Var(X)=np(1-p)=5(0.7)(0.3)=1.05\text{.}\)</li>
+<li id="li-707">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{1.05}\approx 1.0247.\)</li>
 </ul>
 <p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/94ibomyrpv" id="interactive-195" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-114"><a data-knowl="" class="id-ref original" data-refid="hk-example-114"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-114"><article class="example example-like"><p id="p-1246">Consider <a class="xref" data-knowl="./knowl/ExampleMachine.html" title="Example 9.5.3">Example 9.5.3</a>.  What is the expected value, variance, and standard deviation for the number of malfunctioning machines?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-114"><article class="example example-like"><p id="p-1261">Consider <a class="xref" data-knowl="./knowl/ExampleMachine.html" title="Example 9.5.3">Example 9.5.3</a>.  What is the expected value, variance, and standard deviation for the number of malfunctioning machines?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-158" id="solution-158"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-158"><div class="solution solution-like">
-<p id="p-1247">Recall that \(n=10, p=0.1\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-160" id="solution-160"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-160"><div class="solution solution-like">
+<p id="p-1262">Recall that \(n=10, p=0.1\)</p>
 <ul class="disc">
-<li id="li-705">\(E(X)=np=10(0.1)=1\) machine.</li>
-<li id="li-706">\(Var(X)=np(1-p)=10(0.1)(0.9)=0.9\text{.}\)</li>
-<li id="li-707">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{0.9}\approx 0.94868.\)</li>
+<li id="li-708">\(E(X)=np=10(0.1)=1\) machine.</li>
+<li id="li-709">\(Var(X)=np(1-p)=10(0.1)(0.9)=0.9\text{.}\)</li>
+<li id="li-710">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{0.9}\approx 0.94868.\)</li>
 </ul>
 <p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/cuvd0de47s" id="interactive-196" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-96"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-96"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.5.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-96"><article class="exercise exercise-like"><p id="p-1248">Suppose an insurance company issues 8 policies, each of which have a 25% chance of paying out.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-96"><article class="exercise exercise-like"><p id="p-1263">Suppose an insurance company issues 8 policies, each of which have a 25% chance of paying out.</p>
 <ol class="decimal">
-<li id="li-708">What is the probability that 3 policies pay out?</li>
-<li id="li-709">What is the probability that at least one policy pays out?</li>
-<li id="li-710">What is the expected number of  policies that will pay out?</li>
+<li id="li-711">What is the probability that 3 policies pay out?</li>
+<li id="li-712">What is the probability that at least one policy pays out?</li>
+<li id="li-713">What is the expected number of  policies that will pay out?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-159" id="solution-159"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-159"><div class="solution solution-like">
-<p id="p-1249">Recall that \(n=8, p=0.25.\)  Let \(X\) denote the number of policies that pay out.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-161" id="solution-161"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-161"><div class="solution solution-like">
+<p id="p-1264">Recall that \(n=8, p=0.25.\)  Let \(X\) denote the number of policies that pay out.</p>
 <ol class="decimal">
-<li id="li-711">This is \(P(X=3)=C(8,3)(0.25)^3(0.75)^5=0.2076\text{.}\)</li>
-<li id="li-712">This is the sum of one through eight policies paying out, but its also just removing the case where no policies paid out.  So<div class="displaymath">
+<li id="li-714">This is \(P(X=3)=C(8,3)(0.25)^3(0.75)^5=0.2076\text{.}\)</li>
+<li id="li-715">This is the sum of one through eight policies paying out, but its also just removing the case where no policies paid out.  So<div class="displaymath">
 \begin{equation*}
 1-P(X=0)=1-C(8,0)(0.25)^0(0.75)^8\approx 1-0.1001=0.8999.
 \end{equation*}
 </div>
 </li>
-<li id="li-713">This is \(E(X)=np=8(0.25)=2\) policies.</li>
+<li id="li-716">This is \(E(X)=np=8(0.25)=2\) policies.</li>
 </ol>
 <p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/mwwjtq3qab" id="interactive-197" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-97"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-97"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.5.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-97"><article class="exercise exercise-like"><p id="p-1250">Suppose a team leader proposes a meeting time to a team of 12.  Each member has a 30% chance of having a conflict.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-97"><article class="exercise exercise-like"><p id="p-1265">Suppose a team leader proposes a meeting time to a team of 12.  Each member has a 30% chance of having a conflict.</p>
 <ol class="decimal">
-<li id="li-714">What is the probability that 6 members have a conflict?</li>
-<li id="li-715">What is the probability that more than three members have a conflict?</li>
-<li id="li-716">What is the expected number of team members who will have a conflict?</li>
+<li id="li-717">What is the probability that 6 members have a conflict?</li>
+<li id="li-718">What is the probability that more than three members have a conflict?</li>
+<li id="li-719">What is the expected number of team members who will have a conflict?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-160" id="solution-160"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-160"><div class="solution solution-like">
-<p id="p-1251">Recall that \(n=12, p=0.3.\)  Let \(X\) denote the number of team members have a conflict.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-162" id="solution-162"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-162"><div class="solution solution-like">
+<p id="p-1266">Recall that \(n=12, p=0.3.\)  Let \(X\) denote the number of team members have a conflict.</p>
 <ol class="decimal">
-<li id="li-717">This is \(P(X=3)=C(12,6)(0.3)^6(0.7)^6\approx0.0792\text{.}\)</li>
-<li id="li-718">This is the sum of three through twelves members having a conflict, but its also just removing cases zero through three having a conflict.  So<div class="displaymath">
+<li id="li-720">This is \(P(X=3)=C(12,6)(0.3)^6(0.7)^6\approx0.0792\text{.}\)</li>
+<li id="li-721">This is the sum of three through twelves members having a conflict, but its also just removing cases zero through three having a conflict.  So<div class="displaymath">
 \begin{align*}
 \amp1-P(X=0)-P(X=1)-P(X=2)-P(X=3)\\
 \amp=1-C(12,0)(0.3)^0(0.7)^{12}-C(12,1)(0.3)^1(0.7)^{11}-C(12,2)(0.3)^2(0.7)^{10}-C(12,3)(0.3)^3(0.7)^{9}\\
@@ -393,7 +401,7 @@ P(X=4)+P(X=5)=C(5,4)(0.7)^4(0.3)^1+C(5,5)(0.7)^5(0.3)^0=0.3602+0.1681=0.5283.
 \end{align*}
 </div>
 </li>
-<li id="li-719">This is \(E(X)=np=12(0.3)=3.6\) team members.</li>
+<li id="li-722">This is \(E(X)=np=12(0.3)=3.6\) team members.</li>
 </ol>
 <p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/drz7bqszhm" id="interactive-198" width="600" height="600"></iframe></p>
 </div></div>

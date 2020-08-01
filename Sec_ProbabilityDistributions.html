@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:08-06:00    *-->
+<!--*    on 2020-08-01T16:12:04-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -122,7 +122,15 @@ MathJax.Hub.Config({
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
 <li class="link">
 <a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
 <li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
@@ -217,15 +225,15 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_ProbabilityDistributions"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.4</span> <span class="title">Probability Distrbutions</span>
 </h2>
-<section class="introduction" id="introduction-45"><p id="p-1188">Up to this point, we have mostly focused on the probability of specific events. In this section, we take a step back and look at the experiment itself.  Certainly, if I have a jar with 5 red and 7 blue balls and draw 3 without replacement, there is a chance that I get 2 red balls.  But now we want to ask, what number of red balls are more or less likely?  On average, how many red balls would I get?  How varied are the results?</p></section><section class="subsection" id="subsection-96"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-45"><p id="p-1203">Up to this point, we have mostly focused on the probability of specific events. In this section, we take a step back and look at the experiment itself.  Certainly, if I have a jar with 5 red and 7 blue balls and draw 3 without replacement, there is a chance that I get 2 red balls.  But now we want to ask, what number of red balls are more or less likely?  On average, how many red balls would I get?  How varied are the results?</p></section><section class="subsection" id="subsection-96"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.4.1</span> <span class="title">Random Variables</span>
 </h3>
 <article class="definition definition-like" id="DefinitionRandomVariable"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.4.1</span><span class="period">.</span>
 </h6>
-<p id="p-1189">A <dfn class="terminology">random variable</dfn> is a function that assigns a real number to each element of the sample space.</p></article><article class="example example-like" id="example-106"><a data-knowl="" class="id-ref original" data-refid="hk-example-106"><h6 class="heading">
+<p id="p-1204">A <dfn class="terminology">random variable</dfn> is a function that assigns a real number to each element of the sample space.</p></article><article class="example example-like" id="example-106"><a data-knowl="" class="id-ref original" data-refid="hk-example-106"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-106"><article class="example example-like"><p id="p-1190">Consider the experiment rolling two dice.  We can see that the sample space for this experiment is:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-106"><article class="example example-like"><p id="p-1205">Consider the experiment rolling two dice.  We can see that the sample space for this experiment is:</p>
 <div class="displaymath">
 \begin{equation*}
 (1,1),(1,2),(1,3),(1,4),(1,5),(1,6)
@@ -256,7 +264,7 @@ MathJax.Hub.Config({
 (6,1),(6,2),(6,3),(6,4),(6,5),(6,6)
 \end{equation*}
 </div>
-<p id="p-1191">So if we consider the random variable \(X\) to be “sum of die outcomes”, we would have the assignment:</p>
+<p id="p-1206">So if we consider the random variable \(X\) to be “sum of die outcomes”, we would have the assignment:</p>
 <div class="displaymath">
 \begin{equation*}
 2,3,4,5,6,7
@@ -287,7 +295,7 @@ MathJax.Hub.Config({
 7,8,9,10,11,12
 \end{equation*}
 </div>
-<p id="p-1192">On the other hand, if the random variable \(Y\) to be “second die outcome”, we would have the assignment:</p>
+<p id="p-1207">On the other hand, if the random variable \(Y\) to be “second die outcome”, we would have the assignment:</p>
 <div class="displaymath">
 \begin{equation*}
 1,2,3,4,5,6
@@ -318,7 +326,7 @@ MathJax.Hub.Config({
 1,2,3,4,5,6
 \end{equation*}
 </div>
-<p id="p-1193">There are many more possibilities of course, but one last one, if \(Z\) denoted “larger of die rolls” we would have:</p>
+<p id="p-1208">There are many more possibilities of course, but one last one, if \(Z\) denoted “larger of die rolls” we would have:</p>
 <div class="displaymath">
 \begin{equation*}
 1,2,3,4,5,6
@@ -349,8 +357,8 @@ MathJax.Hub.Config({
 6,6,6,6,6,6
 \end{equation*}
 </div></article></div>
-<p id="p-1194">A <dfn class="terminology">probability distribution</dfn> is, roughly speaking, a complete description of a random variable and the likelihood of each output.  In the case of random variables with a finite number of possible outputs a <dfn class="terminology">probability distribution table</dfn> is a convenient way of presenting this information.</p>
-<p id="p-1195">So let \(X\) denote “the outcome of a die roll”.  We have that \(X\) could take on the values \(1,\ldots, 6\) and for each of these values, say \(1\text{,}\) the probability \(X=1\) is \(P(X=1)=\frac{1}{6}\text{.}\)  This gives us:</p>
+<p id="p-1209">A <dfn class="terminology">probability distribution</dfn> is, roughly speaking, a complete description of a random variable and the likelihood of each output.  In the case of random variables with a finite number of possible outputs a <dfn class="terminology">probability distribution table</dfn> is a convenient way of presenting this information.</p>
+<p id="p-1210">So let \(X\) denote “the outcome of a die roll”.  We have that \(X\) could take on the values \(1,\ldots, 6\) and for each of these values, say \(1\text{,}\) the probability \(X=1\) is \(P(X=1)=\frac{1}{6}\text{.}\)  This gives us:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|cccccc|}
@@ -362,20 +370,20 @@ P(X=x) \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6} \amp 
 \end{array}
 \end{equation*}
 </div>
-<p id="p-1196">What does this mean concretely?  It means that if one were to roll a dice \(n\) times, we would expect about a sixth of the outcomes to correspond to each of the numbers 1 through 6.  See the interaction below, hit the refresh on the top left. <iframe src="https://www.desmos.com/calculator/ewkox50rsz" id="interactive-182" width="600" height="600"></iframe></p>
+<p id="p-1211">What does this mean concretely?  It means that if one were to roll a dice \(n\) times, we would expect about a sixth of the outcomes to correspond to each of the numbers 1 through 6.  See the interaction below, hit the refresh on the top left. <iframe src="https://www.desmos.com/calculator/ewkox50rsz" id="interactive-182" width="600" height="600"></iframe></p>
 <article class="remark remark-like" id="remark-25"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.4.3</span><span class="period">.</span>
 </h6>
-<p id="p-1197">To check if something is a valid probability distribution, for any possible outcome \(x\) of \(X\) we must have:</p>
+<p id="p-1212">To check if something is a valid probability distribution, for any possible outcome \(x\) of \(X\) we must have:</p>
 <ul class="disc">
-<li id="li-677">\(0\leq P(X=x)\leq1\text{.}\)  This ensures all outcomes are valid probabilities.</li>
-<li id="li-678">\(\sum P(X=x)=1\text{.}\)  The sum of the probabilities of all outcomes should be 100% of the outcomes</li>
+<li id="li-680">\(0\leq P(X=x)\leq1\text{.}\)  This ensures all outcomes are valid probabilities.</li>
+<li id="li-681">\(\sum P(X=x)=1\text{.}\)  The sum of the probabilities of all outcomes should be 100% of the outcomes</li>
 </ul></article><article class="example example-like" id="ExampleTicket"><a data-knowl="" class="id-ref original" data-refid="hk-ExampleTicket"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleTicket"><article class="example example-like"><p id="p-1198">Suppose you buy a ticket for a game of chance.  You have a \(1/10\) chance of winning the grand prize \(\$20\) and a \(3/10\) chance of winning the runner up prize \(\$5\text{.}\) Find a probability distribution for \(X\) your winnings.  What is the probability you win something?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleTicket"><article class="example example-like"><p id="p-1213">Suppose you buy a ticket for a game of chance.  You have a \(1/10\) chance of winning the grand prize \(\$20\) and a \(3/10\) chance of winning the runner up prize \(\$5\text{.}\) Find a probability distribution for \(X\) your winnings.  What is the probability you win something?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-149" id="solution-149"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-149"><div class="solution solution-like">
-<p id="p-1199">The chance you win nothing would be \(1-\frac{1}{10}-\frac{3}{10}=\frac{6}{10}\text{.}\)  So the probability distribution would be:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-151" id="solution-151"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-151"><div class="solution solution-like">
+<p id="p-1214">The chance you win nothing would be \(1-\frac{1}{10}-\frac{3}{10}=\frac{6}{10}\text{.}\)  So the probability distribution would be:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|ccc|}
@@ -392,10 +400,10 @@ P(X=x) \amp \frac{6}{10} \amp \frac{3}{10} \amp \frac{1}{10} \\
 </div></article></div>
 <article class="example example-like" id="ExampleApple"><a data-knowl="" class="id-ref original" data-refid="hk-ExampleApple"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleApple"><article class="example example-like"><p id="p-1200">Snow white has a basket of 10 apples, 3 are poisened.  She is going to pick 4 apples at random to eat for some reason.  let \(X\) denote the number of poisened apples she eats.  Find a probability distribution for \(X\text{.}\)  What's the probability she eats at least 2 poisened apples?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleApple"><article class="example example-like"><p id="p-1215">Snow white has a basket of 10 apples, 3 are poisened.  She is going to pick 4 apples at random to eat for some reason.  let \(X\) denote the number of poisened apples she eats.  Find a probability distribution for \(X\text{.}\)  What's the probability she eats at least 2 poisened apples?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-150" id="solution-150"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-150"><div class="solution solution-like">
-<p id="p-1201">There are 3 poisened apples and 7 non-poisened apples.  Each selection ensures she is picking some number of poisened and the rest non poisened.  She can't pick more than 3 poisened apples since that's all there is.  So the probability distribution would be:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-152" id="solution-152"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-152"><div class="solution solution-like">
+<p id="p-1216">There are 3 poisened apples and 7 non-poisened apples.  Each selection ensures she is picking some number of poisened and the rest non poisened.  She can't pick more than 3 poisened apples since that's all there is.  So the probability distribution would be:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|cccc|}
@@ -424,19 +432,19 @@ P(X=x) \amp \frac{35}{210}\approx 0.1667\amp \frac{105}{210}=0.5 \amp \frac{63}{
 </div></article></div></section><section class="subsection" id="subsection-97"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.4.2</span> <span class="title">Expectation, Variance and Standard Deviation</span>
 </h3>
-<p id="p-1202">Revsiting the dice example above, whats the mean of our 100 die rolls?  As I repeat this, does it change much? <iframe src="https://www.desmos.com/calculator/gwx0h7ruep" id="interactive-183" width="600" height="600"></iframe></p>
-<p id="p-1203">We can see that repeatng the experiment more or less gives us an average outcome of about mid 3-something, we should also see that the “spread” of the outcomes (the standard deviation and variance) also doesn't change much either.  If we look at <a class="xref" data-knowl="./knowl/ExampleTicket.html" title="Example 9.4.4">Example 9.4.4</a>, we can see the same happens here. <iframe src="https://www.desmos.com/calculator/u0pvqppiic" id="interactive-184" width="600" height="600"></iframe></p>
+<p id="p-1217">Revsiting the dice example above, whats the mean of our 100 die rolls?  As I repeat this, does it change much? <iframe src="https://www.desmos.com/calculator/gwx0h7ruep" id="interactive-183" width="600" height="600"></iframe></p>
+<p id="p-1218">We can see that repeatng the experiment more or less gives us an average outcome of about mid 3-something, we should also see that the “spread” of the outcomes (the standard deviation and variance) also doesn't change much either.  If we look at <a class="xref" data-knowl="./knowl/ExampleTicket.html" title="Example 9.4.4">Example 9.4.4</a>, we can see the same happens here. <iframe src="https://www.desmos.com/calculator/u0pvqppiic" id="interactive-184" width="600" height="600"></iframe></p>
 <article class="definition definition-like" id="DefinitionExpectation"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.4.6</span><span class="period">.</span>
 </h6>
-<p id="p-1204">Given a finite random variable  \(X\text{,}\) it's <dfn class="terminology">expected value</dfn> is the predicted average outcome of experiments, and is computed:</p>
+<p id="p-1219">Given a finite random variable  \(X\text{,}\) it's <dfn class="terminology">expected value</dfn> is the predicted average outcome of experiments, and is computed:</p>
 <div class="displaymath">
 \begin{equation*}
 E(X)=\sum P(X=x)\cdot x.
 \end{equation*}
 </div>
-<p id="p-1205">We think of this as the outcomes of \(X\text{,}\) weighted by their likelihood, so the more likely outcomes contribute more than the less likely ones.</p>
-<p id="p-1206">Note that the “Expected Value” may not be a value we actually expect, that is, may not be one of the outcomes, just an average outcome.</p></article><p id="p-1207">So in our die rolling case, the expected average outcome would be computed:</p>
+<p id="p-1220">We think of this as the outcomes of \(X\text{,}\) weighted by their likelihood, so the more likely outcomes contribute more than the less likely ones.</p>
+<p id="p-1221">Note that the “Expected Value” may not be a value we actually expect, that is, may not be one of the outcomes, just an average outcome.</p></article><p id="p-1222">So in our die rolling case, the expected average outcome would be computed:</p>
 <div class="displaymath">
 \begin{equation*}
 E(X)=\frac{1}{6}\cdot 1+\frac{1}{6}\cdot 2+\frac{1}{6}\cdot 3+\frac{1}{6}\cdot 4+\frac{1}{6}\cdot 5+\frac{1}{6}\cdot 6=\frac{21}{6}=3.5.
@@ -445,14 +453,14 @@ E(X)=\frac{1}{6}\cdot 1+\frac{1}{6}\cdot 2+\frac{1}{6}\cdot 3+\frac{1}{6}\cdot 4
 <article class="definition definition-like" id="DefinitionVarSTD"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.4.7</span><span class="period">.</span>
 </h6>
-<p id="p-1208">Given a finite random variable  \(X\text{,}\) it's <dfn class="terminology">variance</dfn> is a measure of the “spread” or variation of the outcomes, and is computed:</p>
+<p id="p-1223">Given a finite random variable  \(X\text{,}\) it's <dfn class="terminology">variance</dfn> is a measure of the “spread” or variation of the outcomes, and is computed:</p>
 <div class="displaymath">
 \begin{equation*}
 Var(X)=E(X^2)-E(X).
 \end{equation*}
 </div>
-<p id="p-1209">The <dfn class="terminology">standard deviation</dfn> is the square root of the variance, denoted \(\sigma_X\text{.}\)</p>
-<p id="p-1210">The difference between standard deviation and variance, and the exact things they measure, are somehwat beyond the scope of this text.  The best way to think of the variance computation, is as a way of measuring expected distance of outcomes from the mean.</p></article><p id="p-1211">So in our die rolling case, we already have \(E(X)=3.5\text{,}\) we then compute:</p>
+<p id="p-1224">The <dfn class="terminology">standard deviation</dfn> is the square root of the variance, denoted \(\sigma_X\text{.}\)</p>
+<p id="p-1225">The difference between standard deviation and variance, and the exact things they measure, are somehwat beyond the scope of this text.  The best way to think of the variance computation, is as a way of measuring expected distance of outcomes from the mean.</p></article><p id="p-1226">So in our die rolling case, we already have \(E(X)=3.5\text{,}\) we then compute:</p>
 <div class="displaymath">
 \begin{equation*}
 E(X^2)=\frac{1}{6}\cdot 1^2+\frac{1}{6}\cdot 2^2+\frac{1}{6}\cdot 3^2+\frac{1}{6}\cdot 4^2+\frac{1}{6}\cdot 5^2+\frac{1}{6}\cdot 6^2=\frac{91}{6}.
@@ -470,8 +478,8 @@ Var(X)=\frac{91}{6}-(3.5)^2=\frac{35}{12}\approx 2.91667.
 \sigma_X=\sqrt{\frac{35}{12}}\approx 1.7078.
 \end{equation*}
 </div>
-<p id="p-1212">As usual, menial computation is for machines: <iframe src="https://www.desmos.com/calculator/00ih4xhxdz" id="interactive-185" width="600" height="600"></iframe></p>
-<p id="p-1213">We can use sagecells and R to simulate these outcomes.  We let \(n\) denote the number of trials, \(X\) the outcomes, and \(p\) their probabilities.  The histogram of outcomes, mean, variance and standard deviations are displayed below:</p>
+<p id="p-1227">As usual, menial computation is for machines: <iframe src="https://www.desmos.com/calculator/00ih4xhxdz" id="interactive-185" width="600" height="600"></iframe></p>
+<p id="p-1228">We can use sagecells and R to simulate these outcomes.  We let \(n\) denote the number of trials, \(X\) the outcomes, and \(p\) their probabilities.  The histogram of outcomes, mean, variance and standard deviations are displayed below:</p>
 <div class="sagecell-r" id="sage-7"><script type="text/x-sage">n<-1500
 X<-c(1,2,3,4,5,6)
 prob<-c(1/6,1/6,1/6,1/6,1/6,1/6)
@@ -485,10 +493,10 @@ print(sd(Results))
 </script></div>
 <article class="example example-like" id="example-109"><a data-knowl="" class="id-ref original" data-refid="hk-example-109"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-109"><article class="example example-like"><p id="p-1214">Recall <a class="xref" data-knowl="./knowl/ExampleTicket.html" title="Example 9.4.4">Example 9.4.4</a>.  How much should the ticket cost so the game breaks even on average?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-109"><article class="example example-like"><p id="p-1229">Recall <a class="xref" data-knowl="./knowl/ExampleTicket.html" title="Example 9.4.4">Example 9.4.4</a>.  How much should the ticket cost so the game breaks even on average?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-151" id="solution-151"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-151"><div class="solution solution-like">
-<p id="p-1215">We first need to know the expected winnings, if we recall the probability dstrbution:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-153" id="solution-153"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-153"><div class="solution solution-like">
+<p id="p-1230">We first need to know the expected winnings, if we recall the probability dstrbution:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|ccc|}
@@ -500,15 +508,15 @@ P(X=x) \amp \frac{6}{10} \amp \frac{3}{10} \amp \frac{1}{10} \\
 \end{array}
 \end{equation*}
 </div>
-<p id="p-1216">We have \(E(X)=0\cdot(0.6)+5\cdot(0.3)+20\cdot(0.1)=3.5\text{.}\)  So the game returns \(\$3.50\) on average, so charging \(\$3.50\) would make it break even. <iframe src="https://www.desmos.com/calculator/9affco9har" id="interactive-186" width="600" height="600"></iframe></p>
+<p id="p-1231">We have \(E(X)=0\cdot(0.6)+5\cdot(0.3)+20\cdot(0.1)=3.5\text{.}\)  So the game returns \(\$3.50\) on average, so charging \(\$3.50\) would make it break even. <iframe src="https://www.desmos.com/calculator/9affco9har" id="interactive-186" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-110"><a data-knowl="" class="id-ref original" data-refid="hk-example-110"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-110"><article class="example example-like"><p id="p-1217">Recall <a class="xref" data-knowl="./knowl/ExampleApple.html" title="Example 9.4.5">Example 9.4.5</a>.  What is the expected value and variance of poisened apples.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-110"><article class="example example-like"><p id="p-1232">Recall <a class="xref" data-knowl="./knowl/ExampleApple.html" title="Example 9.4.5">Example 9.4.5</a>.  What is the expected value and variance of poisened apples.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-152" id="solution-152"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-152"><div class="solution solution-like">
-<p id="p-1218">Recall the probability distribution of poisened apples.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-154" id="solution-154"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-154"><div class="solution solution-like">
+<p id="p-1233">Recall the probability distribution of poisened apples.</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|cccc|}
@@ -526,7 +534,7 @@ P(X=x) \amp \frac{35}{210}\approx 0.1667\amp \frac{105}{210}=0.5 \amp \frac{63}{
 E(X)=0\cdot\frac{35}{210}+1\cdot\frac{=105}{210}+2\cdot\frac{63}{210}+3\cdot\frac{7}{210}=1.2.
 \end{equation*}
 </div>
-<p id="p-1219">Then</p>
+<p id="p-1234">Then</p>
 <div class="displaymath">
 \begin{equation*}
 E(X^2)=0^2\cdot\frac{35}{210}+1^2\cdot\frac{=105}{210}+2^2\cdot\frac{63}{210}+3^3\cdot\frac{7}{210}=2.
@@ -543,17 +551,17 @@ Var(X)=E(X^2)-E(X)^2=2-1.2^2=0.56.
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-94"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-94"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.10</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-94"><article class="exercise exercise-like"><p id="p-1220">Out of every 20 products on an assembly line, 5 are checked for defects.  Suppose in this group of 20, 3 are defective.  Let \(X\) denote the number of defective products.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-94"><article class="exercise exercise-like"><p id="p-1235">Out of every 20 products on an assembly line, 5 are checked for defects.  Suppose in this group of 20, 3 are defective.  Let \(X\) denote the number of defective products.</p>
 <ol class="decimal">
-<li id="li-679">Find a probability distribution for \(X\text{.}\)</li>
-<li id="li-680">Find the expected number of defective products found.</li>
-<li id="li-681">Find \(\sigma_X\text{.}\)</li>
+<li id="li-682">Find a probability distribution for \(X\text{.}\)</li>
+<li id="li-683">Find the expected number of defective products found.</li>
+<li id="li-684">Find \(\sigma_X\text{.}\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-153" id="solution-153"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-153"><div class="solution solution-like">
-<p id="p-1221">So there are 3 defective and 17 non-defective products.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-155" id="solution-155"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-155"><div class="solution solution-like">
+<p id="p-1236">So there are 3 defective and 17 non-defective products.</p>
 <ol class="decimal">
-<li id="li-682">We note that each selection comes from either defective or non-defective products.  So:<div class="displaymath">
+<li id="li-685">We note that each selection comes from either defective or non-defective products.  So:<div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|cccc|}
 \hline
@@ -575,13 +583,13 @@ P(X=x) \amp \frac{6188}{15504}\amp \frac{7140}{15504} \amp \frac{2040}{15504} \a
 \end{equation*}
 </div>
 </li>
-<li id="li-683">This would be computed:<div class="displaymath">
+<li id="li-686">This would be computed:<div class="displaymath">
 \begin{equation*}
 E(X)=0\cdot\frac{6188}{15504}+1\cdot\frac{7140}{15504}+2\cdot\frac{2040}{15504}+3\cdot\frac{136}{15504}=0.75.
 \end{equation*}
 </div>
 </li>
-<li id="li-684">We first note:<div class="displaymath">
+<li id="li-687">We first note:<div class="displaymath">
 \begin{equation*}
 E(X^2)=0^2\cdot\frac{6188}{15504}+1^2\cdot\frac{7140}{15504}+2^2\cdot\frac{2040}{15504}+3^2\cdot\frac{136}{15504}=\frac{81}{76}\approx 1.0658.
 \end{equation*}
@@ -601,10 +609,10 @@ Var(X)=E(X^2)-E(X)^2=\frac{81}{76}-0.75^2=\frac{153}{304}\approx0.5033.
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-95"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-95"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.11</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-95"><article class="exercise exercise-like"><p id="p-1222">An insurance policy on an electrical device pays a benefit of \(\$3000\) if the device fails during the first year. The amount of the benefit decreases by \(\$1000\) each successive year until it reaches \(\$0\)m&gt;. If the device has not failed by the beginning of any given year, the probability of failure during that year is 0.3. What is the expected benefit under this policy?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-95"><article class="exercise exercise-like"><p id="p-1237">An insurance policy on an electrical device pays a benefit of \(\$3000\) if the device fails during the first year. The amount of the benefit decreases by \(\$1000\) each successive year until it reaches \(\$0\)m&gt;. If the device has not failed by the beginning of any given year, the probability of failure during that year is 0.3. What is the expected benefit under this policy?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-154" id="solution-154"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-154"><div class="solution solution-like">
-<p id="p-1223">We note that the device has a \(0.3\) chance to fail in the first year, \((0.7)(0.3)\) chance to fail the second since it had to survive the first, \((0.7)^2(0.3)\) to fail the third year, after which the policy ends.  So if \(X\) is the payout, then it has distribution</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-156" id="solution-156"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-156"><div class="solution solution-like">
+<p id="p-1238">We note that the device has a \(0.3\) chance to fail in the first year, \((0.7)(0.3)\) chance to fail the second since it had to survive the first, \((0.7)^2(0.3)\) to fail the third year, after which the policy ends.  So if \(X\) is the payout, then it has distribution</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|cccc|}
@@ -616,7 +624,7 @@ P(X=x) \amp (0.3) \amp (0.7)(0.3) \amp (0.7)^2(0.3) \amp 1-(0.3)-(0.7)(0.3)-(0.7
 \end{array}
 \end{equation*}
 </div>
-<p id="p-1224">Which can be rewritten</p>
+<p id="p-1239">Which can be rewritten</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|cccc|}
@@ -628,7 +636,7 @@ P(X=x) \amp 0.3 \amp 0.21 \amp 0.147 \amp 0.343\\
 \end{array}
 \end{equation*}
 </div>
-<p id="p-1225">Which has expected value</p>
+<p id="p-1240">Which has expected value</p>
 <div class="displaymath">
 \begin{equation*}
 E(x)=3000\cdot0.3+2000\cdot0.21+1000\cdot0.147+0\cdot0.343=1467.

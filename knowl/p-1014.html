@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:00-06:00    *-->
+<!--*    on 2020-08-01T16:12:45-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,19 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider the sets</p>
-<div class="displaymath">
-\begin{equation*}
-A=\{1,2,3,4,5\}, B=\{1,3,5\}, C=\{1,4\}.
-\end{equation*}
-</div>
+<p>Notice:</p>
 <ul class="disc">
-<li>\(B\subseteq A\) since each element of \(B\) is an element of \(A\text{.}\)</li>
-<li>\(C\subseteq A\) since each element of \(C\) is an element of \(A\text{.}\)</li>
-<li>\(B\not\subseteq C\) since \(3,5\in B\) but \(3,5\not\in C\text{.}\)</li>
-<li>\(C\not\subseteq B\) since \(4\in C\) but \(4\not\in B\text{.}\)</li>
-<li>\(\emptyset \subseteq A, B,  C, \emptyset\text{.}\)</li>
+<li>We note that revenue is \(R(q)=qD(q)=150q+\frac{40q}{\ln(q)}\text{.}\)  We then differentiate \(R(q)\text{:}\)<div class="displaymath">
+\begin{align*}
+D'(q)\amp = \frac{d}{dq}[150q+\frac{40q}{\ln(q)}]\\
+\amp = 150 +\frac{d}{dq}[\frac{40q}{\ln(q)}]\\
+\amp =_{QR} 150 +\frac{\frac{d}{dq}[40q]\ln(q)-40q\frac{d}{dq}[\ln(q)]}{(\ln(q))^2}\\
+\amp = 150 +\frac{40\ln(q)-40q\frac{1}{q}}{(\ln(q))^2}\\
+\amp = 150 +\frac{40\ln(q)-40}{(\ln(q))^2}\text{.}
+\end{align*}
+</div>
+</li>
+<li>This would be \(R'(6)= 150 +\frac{40\ln(6)-40}{(\ln(6))^2}\approx  159.87\) or \(\$159.87\) dollars per unit sold.</li>
 </ul>
-<span class="incontext"><a href="Sec_IntroSets.html#p-1014">in-context</a></span>
+<p data-braille="continuation">Visually: <iframe src="https://www.desmos.com/calculator/04r4ndvvxr" id="interactive-168" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="DerivativeLogs.html#p-1014">in-context</a></span>
 </body>
 </html>

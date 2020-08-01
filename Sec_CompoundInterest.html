@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:46:48-06:00    *-->
+<!--*    on 2020-08-01T16:11:48-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -106,7 +106,15 @@ MathJax.Hub.Config({
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
 <li class="link">
 <a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
 <li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
@@ -201,31 +209,31 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_CompoundInterest"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Compound Interest</span>
 </h2>
-<section class="introduction" id="introduction-20"><p id="p-568">Almost no meaningful financial transaction in the world is computed by simple interest. The most common type of interest is compound interest which charges interest not just on your principle loan, but also on previously accrued interest as well.</p></section><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-20"><p id="p-583">Almost no meaningful financial transaction in the world is computed by simple interest. The most common type of interest is compound interest which charges interest not just on your principle loan, but also on previously accrued interest as well.</p></section><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.2.1</span> <span class="title">A first look at compound interest</span>
 </h3>
-<p id="p-569">So lets say you took out $100 in a loan that charged 5% monthly interest compounded monthly. That means each month, you would owe 5% more than what you owed the month before.</p>
+<p id="p-584">So lets say you took out $100 in a loan that charged 5% monthly interest compounded monthly. That means each month, you would owe 5% more than what you owed the month before.</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|c|} \hline \text{ Month }  \amp  \text{ Debt } \\ \hline 0 \amp  100\\ 1\amp  100+(.05)(100)=100+5=105\\ 2\amp  105+(.05)(105)=105+5.25=110.25\\ 3 \amp  110.25+(.05)(110.25)=110.25+5.5125=115.405\\ \vdots \amp  \vdots\\ \hline \end{array}
 \end{equation*}
 </div>
-<p id="p-570">So not only is the debt increasing, but the amount that the debt increases per month, also increases. Is there an easy way to see how much we'd owe in say 10 months without computing every month in between?</p>
-<p id="p-571">Well, If I owe \(X\) dollars in any given month, then the next month I'll owe \(X+0.05X=(1.05)X\) dollars. In another month I'll owe \(1.05X+(.05)(1.05)X=(1.05)(1.05)X=X(1.05)^2\) dollars. If we apply this logic to our situation, we can see:</p>
+<p id="p-585">So not only is the debt increasing, but the amount that the debt increases per month, also increases. Is there an easy way to see how much we'd owe in say 10 months without computing every month in between?</p>
+<p id="p-586">Well, If I owe \(X\) dollars in any given month, then the next month I'll owe \(X+0.05X=(1.05)X\) dollars. In another month I'll owe \(1.05X+(.05)(1.05)X=(1.05)(1.05)X=X(1.05)^2\) dollars. If we apply this logic to our situation, we can see:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|c|} \hline \text{ Month }  \amp  \text{ Debt } \\ \hline 0 \amp  100\\ 1\amp  100+(.05)(100)=(1.05)100\\ 2\amp  (1.05)100+(.05)((1.05)100)=(1.05)(1.05)100=(1.05)^2 100\\ 3 \amp  (1.05)^2100+(.05)((1.05)^2100)=(1.05)(1.05)^2 100=(1.05)^3 100\\ \vdots \amp  \vdots\\ n \amp  (1.05)^n100\\ \hline \end{array}
 \end{equation*}
 </div>
-<p id="p-572">So in 10 months, we'd owe \(100\cdot (1.05)^{10}\approx \$162.89\text{.}\) In general, this forms an <dfn class="terminology">exponential function</dfn>: <iframe src="https://www.desmos.com/calculator/r51afj5zwr" id="interactive-60" width="600" height="600"></iframe></p>
-<p id="p-573">In general, if the interest rate per time unit is \(i\text{,}\) then after \(n\) time units:</p>
+<p id="p-587">So in 10 months, we'd owe \(100\cdot (1.05)^{10}\approx \$162.89\text{.}\) In general, this forms an <dfn class="terminology">exponential function</dfn>: <iframe src="https://www.desmos.com/calculator/r51afj5zwr" id="interactive-60" width="600" height="600"></iframe></p>
+<p id="p-588">In general, if the interest rate per time unit is \(i\text{,}\) then after \(n\) time units:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|c|} \hline \text{ Time Unit }  \amp  \text{ Debt } \\ \hline 0 \amp  P\\ 1\amp  P+iP=(1+i)P\\ 2\amp  (1+i)P+i(1+i)P=(1+i)^2P\\ 3 \amp  (1+i)^2P+i(1+i)^2P=(1+i)^3P\\ \vdots \amp  \vdots\\ n \amp  (1+i)^nP\\ \hline \end{array}
 \end{equation*}
 </div>
-<p id="p-574"><iframe src="https://www.desmos.com/calculator/kqz7bwj8ip" id="interactive-61" width="600" height="600"></iframe></p>
-<p id="p-575">So we have the general equation</p>
+<p id="p-589"><iframe src="https://www.desmos.com/calculator/kqz7bwj8ip" id="interactive-61" width="600" height="600"></iframe></p>
+<p id="p-590">So we have the general equation</p>
 <div class="displaymath">
 \begin{align*}
 A\amp =P(1+i)^n,\\
@@ -233,13 +241,13 @@ I\amp =P(1+i)^n-P.
 \end{align*}
 </div>
 <p data-braille="continuation">Where \(A\) is the accumulated value, \(P\) is the value of the principle, \(i\) is the interest rate, \(n\) is the number of time units, and \(I\) is the total value of the interest.</p>
-<p id="p-576">But looking at \(A =P(1+i)^n\text{,}\) if one  knew any 3 of these values, in principle one should be able to find the 4th.</p>
+<p id="p-591">But looking at \(A =P(1+i)^n\text{,}\) if one  knew any 3 of these values, in principle one should be able to find the 4th.</p>
 <article class="example example-like" id="example-53"><a data-knowl="" class="id-ref original" data-refid="hk-example-53"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-53"><article class="example example-like"><p id="p-577">Suppose that I make an investment $500 at 8% annual interest. How much will this investment be worth in 10 years?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-53"><article class="example example-like"><p id="p-592">Suppose that I make an investment $500 at 8% annual interest. How much will this investment be worth in 10 years?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-41" id="solution-41"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-41"><div class="solution solution-like">
-<p id="p-578">So we note that:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-43" id="solution-43"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-43"><div class="solution solution-like">
+<p id="p-593">So we note that:</p>
 <div class="displaymath">
 \begin{align*}
 P\amp = 500\\
@@ -247,21 +255,21 @@ i\amp = 0.08\\
 n\amp = 10
 \end{align*}
 </div>
-<p id="p-579">So we are solving:</p>
+<p id="p-594">So we are solving:</p>
 <div class="displaymath">
 \begin{equation*}
 A=500(1+.08)^{10}\approx 10794.62.
 \end{equation*}
 </div>
-<p id="p-580"><iframe src="https://www.desmos.com/calculator/dmodfltuzf" id="interactive-62" width="600" height="600"></iframe></p>
+<p id="p-595"><iframe src="https://www.desmos.com/calculator/dmodfltuzf" id="interactive-62" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-54"><a data-knowl="" class="id-ref original" data-refid="hk-example-54"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-54"><article class="example example-like"><p id="p-581">Suppose that I take out a loan at 4% a year, and after 5 years, I owe \(\$7,000\text{.}\) How much was the initial loan?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-54"><article class="example example-like"><p id="p-596">Suppose that I take out a loan at 4% a year, and after 5 years, I owe \(\$7,000\text{.}\) How much was the initial loan?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-42" id="solution-42"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-42"><div class="solution solution-like">
-<p id="p-582">So we note that:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-44" id="solution-44"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-44"><div class="solution solution-like">
+<p id="p-597">So we note that:</p>
 <div class="displaymath">
 \begin{align*}
 A\amp = 7000\\
@@ -269,7 +277,7 @@ i\amp = 0.04\\
 n\amp = 5
 \end{align*}
 </div>
-<p id="p-583">So we are solving:</p>
+<p id="p-598">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 7000\amp =P(1+.04)^{5}\\
@@ -277,15 +285,15 @@ P\amp =\frac{7000}{(1.04)^5}\approx 5753.49.
 \end{align*}
 </div>
 <p data-braille="continuation">So the initial value of the loan is of \(\$5753.49\text{.}\)</p>
-<p id="p-584"><iframe src="https://www.desmos.com/calculator/7ueajflwk6" id="interactive-63" width="600" height="600"></iframe></p>
+<p id="p-599"><iframe src="https://www.desmos.com/calculator/7ueajflwk6" id="interactive-63" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-55"><a data-knowl="" class="id-ref original" data-refid="hk-example-55"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-55"><article class="example example-like"><p id="p-585">Suppose that I purchase a property for \(\$200,000\) and in 30 years it is worth \(\$350,000\text{.}\)  What is the annual interest rate of the value of this property?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-55"><article class="example example-like"><p id="p-600">Suppose that I purchase a property for \(\$200,000\) and in 30 years it is worth \(\$350,000\text{.}\)  What is the annual interest rate of the value of this property?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-43" id="solution-43"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-43"><div class="solution solution-like">
-<p id="p-586">So we note that:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-45" id="solution-45"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-45"><div class="solution solution-like">
+<p id="p-601">So we note that:</p>
 <div class="displaymath">
 \begin{align*}
 A\amp = 350000\\
@@ -293,7 +301,7 @@ P\amp = 200000\\
 n\amp = 30
 \end{align*}
 </div>
-<p id="p-587">So we are solving:</p>
+<p id="p-602">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 350000\amp =200000(1+i)^{30}\\
@@ -304,15 +312,15 @@ i\amp \approx 0.018829
 \end{align*}
 </div>
 <p data-braille="continuation">So the interest is about \(1.8829\%\text{.}\)</p>
-<p id="p-588"><iframe src="https://www.desmos.com/calculator/tnllurbsie" id="interactive-64" width="600" height="600"></iframe></p>
+<p id="p-603"><iframe src="https://www.desmos.com/calculator/tnllurbsie" id="interactive-64" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-56"><a data-knowl="" class="id-ref original" data-refid="hk-example-56"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-56"><article class="example example-like"><p id="p-589">Suppose that I invested \(\$50,000\) at 7% annual interest.  How long would it take for this investment to be worth \(\$100,000\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-56"><article class="example example-like"><p id="p-604">Suppose that I invested \(\$50,000\) at 7% annual interest.  How long would it take for this investment to be worth \(\$100,000\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-44" id="solution-44"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-44"><div class="solution solution-like">
-<p id="p-590">So we note that:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-46" id="solution-46"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-46"><div class="solution solution-like">
+<p id="p-605">So we note that:</p>
 <div class="displaymath">
 \begin{align*}
 A\amp = 100000\\
@@ -320,7 +328,7 @@ P\amp = 50000\\
 i\amp = 0.07
 \end{align*}
 </div>
-<p id="p-591">If one is familiar with the properties of logs and natural logs:</p>
+<p id="p-606">If one is familiar with the properties of logs and natural logs:</p>
 <div class="displaymath">
 \begin{align*}
 100000\amp =50000(1.07)^{n}\\
@@ -330,13 +338,13 @@ i\amp = 0.07
 n\amp=\frac{\ln(2)}{\ln(1.07)} \approx 10.24477
 \end{align*}
 </div>
-<p data-braille="continuation">So about \(10.24477\) years.</p> Otherwise, since we know \(P, i\)  we can simply plot the graph and see when it reaches 50000: <iframe src="https://www.desmos.com/calculator/lsapccwwfe" id="interactive-65" width="600" height="600"></iframe> So about 10.245 years. <p id="p-592"><iframe src="https://www.desmos.com/calculator/sve97pxkpq" id="interactive-66" width="600" height="600"></iframe></p>
+<p data-braille="continuation">So about \(10.24477\) years.</p> Otherwise, since we know \(P, i\)  we can simply plot the graph and see when it reaches 50000: <iframe src="https://www.desmos.com/calculator/lsapccwwfe" id="interactive-65" width="600" height="600"></iframe> So about 10.245 years. <p id="p-607"><iframe src="https://www.desmos.com/calculator/sve97pxkpq" id="interactive-66" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div></section><section class="subsection" id="subsection-42"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.2.2</span> <span class="title">AN ISSUE OF EXTREME ANNOYANCE</span>
 </h3>
-<p id="p-593">In the above examples, we work with interest rates described in terms of the time units in which they are discussed. However, financial companies have devised a concept that obfuscates this principle via an artificial notion of “compounding periods”.</p>
-<p id="p-594">Suppose you have a debt of $100 that accrues 10% annual interest. With no other given information, we would say that the amount you owe in \(10\) years would be</p>
+<p id="p-608">In the above examples, we work with interest rates described in terms of the time units in which they are discussed. However, financial companies have devised a concept that obfuscates this principle via an artificial notion of “compounding periods”.</p>
+<p id="p-609">Suppose you have a debt of $100 that accrues 10% annual interest. With no other given information, we would say that the amount you owe in \(10\) years would be</p>
 <div class="displaymath">
 \begin{equation*}
 A=100(1.1)^{10}\approx \$259.37
@@ -348,18 +356,18 @@ A=100(1.1)^{10}\approx \$259.37
 A=100(1.025)^{40}\approx 268.51
 \end{equation*}
 </div>
-<p id="p-595">Similarly, if the compounding is done <em class="emphasis">monthly</em>, then this is 12 times a year, and each month you'd be charged at a rate of \(\frac{10\%}{12}\text{.}\) So in 10 years or 120 months, you would owe:</p>
+<p id="p-610">Similarly, if the compounding is done <em class="emphasis">monthly</em>, then this is 12 times a year, and each month you'd be charged at a rate of \(\frac{10\%}{12}\text{.}\) So in 10 years or 120 months, you would owe:</p>
 <div class="displaymath">
 \begin{equation*}
 A=100\left(1+\frac{0.1}{12}\right)^{120}\approx 270.70
 \end{equation*}
 </div>
-<p id="p-596">My belief is this accomplishes 2 things:</p>
+<p id="p-611">My belief is this accomplishes 2 things:</p>
 <ol class="decimal">
-<li id="li-240"><p id="p-597">By making the issue more complicated, it makes it more difficult for consumers to figure out how much they are actually going to be charged in interest.</p></li>
-<li id="li-241"><p id="p-598">By increasing compounding periods, you can effectively charge more interest, see how much the debt's grow in the above scenarios?</p></li>
+<li id="li-243"><p id="p-612">By making the issue more complicated, it makes it more difficult for consumers to figure out how much they are actually going to be charged in interest.</p></li>
+<li id="li-244"><p id="p-613">By increasing compounding periods, you can effectively charge more interest, see how much the debt's grow in the above scenarios?</p></li>
 </ol>
-<p id="p-599">In general if you are charged an annual interest rate of \(r\) compounded \(m\) times a year for \(t\) years. You are really getting charged</p>
+<p id="p-614">In general if you are charged an annual interest rate of \(r\) compounded \(m\) times a year for \(t\) years. You are really getting charged</p>
 <div class="displaymath">
 \begin{equation*}
 i=\frac{r}{m}
@@ -371,7 +379,7 @@ i=\frac{r}{m}
 n=mt\text{.}
 \end{equation*}
 </div>
-<p id="p-600">How much yearly interest is there really? It's how much interest you end up accruing in a year: Let \(r_E\) be the effective annual interest:</p>
+<p id="p-615">How much yearly interest is there really? It's how much interest you end up accruing in a year: Let \(r_E\) be the effective annual interest:</p>
 <div class="displaymath">
 \begin{align*}
 P(1+r_E)\amp = P(1+r/m)^{m}\\
@@ -379,7 +387,7 @@ P(1+r_E)\amp = P(1+r/m)^{m}\\
 r_E\amp = (1+r/m)^{m}-1
 \end{align*}
 </div>
-<p id="p-601">So 10% interest compounded quarterly is effectively:</p>
+<p id="p-616">So 10% interest compounded quarterly is effectively:</p>
 <div class="displaymath">
 \begin{equation*}
 r_E=(1+0.1/4)^4-1\approx0.1038
@@ -392,13 +400,13 @@ r_E=(1+0.1/12)^{12}-1\approx 0.1047
 \end{equation*}
 </div>
 <p data-braille="continuation">or 10.47% annual interest.</p>
-<p id="p-602">This artifical interest rate is often referred to as <dfn class="terminology">APR</dfn> or <em class="emphasis">Annual Percentage Rate</em>.</p>
+<p id="p-617">This artifical interest rate is often referred to as <dfn class="terminology">APR</dfn> or <em class="emphasis">Annual Percentage Rate</em>.</p>
 <article class="exercise exercise-like" id="exercise-26"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-26"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-26"><article class="exercise exercise-like"><p id="p-603">Suppose that I take out a loan for $500 at 12% annual interest charged biannually. How much will I owe in 10 years?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-26"><article class="exercise exercise-like"><p id="p-618">Suppose that I take out a loan for $500 at 12% annual interest charged biannually. How much will I owe in 10 years?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-45" id="solution-45"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-45"><div class="solution solution-like">
-<p id="p-604">So we note that:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like">
+<p id="p-619">So we note that:</p>
 <div class="displaymath">
 \begin{align*}
 P\amp = 500\ \text{ the initial loan }\\
@@ -406,21 +414,21 @@ i\amp = 0.12/2=0.06 \ \text{ the interest rate per half-year }\\
 n\amp = 10\cdot 2=20 \ \text{ the number of half-years }
 \end{align*}
 </div>
-<p id="p-605">So we are solving:</p>
+<p id="p-620">So we are solving:</p>
 <div class="displaymath">
 \begin{equation*}
 A=500(1+.06)^{20}\approx 1603.57\text{.}
 \end{equation*}
 </div>
-<p id="p-606"><iframe src="https://www.desmos.com/calculator/hcfddozrqd" id="interactive-67" width="600" height="600"></iframe></p>
+<p id="p-621"><iframe src="https://www.desmos.com/calculator/hcfddozrqd" id="interactive-67" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-27"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-27"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-27"><article class="exercise exercise-like"><p id="p-607">Suppose that I want to invest some money at 8% annual interest compounded annually and after 20 years I want $2000. How much should I invest?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-27"><article class="exercise exercise-like"><p id="p-622">Suppose that I want to invest some money at 8% annual interest compounded annually and after 20 years I want $2000. How much should I invest?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-46" id="solution-46"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-46"><div class="solution solution-like">
-<p id="p-608">So we note that:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-48"><div class="solution solution-like">
+<p id="p-623">So we note that:</p>
 <div class="displaymath">
 \begin{align*}
 A\amp = 2000, \ \text{ the future value }\\
@@ -429,22 +437,22 @@ n\amp = 20, \ \text{ number of years }
 \end{align*}
 </div>
 <p data-braille="continuation">(Since interest is compounded annually, 0.08 is the actual annual interest rate.)</p>
-<p id="p-609">So we are solving:</p>
+<p id="p-624">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 2000\amp =\amp P(1.08)^{20}\\
 P\amp =\amp \frac{2000}{1.08^{20}}\approx429.10
 \end{align*}
 </div>
-<p id="p-610"><iframe src="https://www.desmos.com/calculator/egm3vuqa11" id="interactive-68" width="600" height="600"></iframe></p>
+<p id="p-625"><iframe src="https://www.desmos.com/calculator/egm3vuqa11" id="interactive-68" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-28"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-28"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-28"><article class="exercise exercise-like"><p id="p-611">Suppose that I want to invest $500 and in 10 years I want this to grow to $2000. What sort of interest would make that possible?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-28"><article class="exercise exercise-like"><p id="p-626">Suppose that I want to invest $500 and in 10 years I want this to grow to $2000. What sort of interest would make that possible?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like">
-<p id="p-612">So we have:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-49" id="solution-49"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-49"><div class="solution solution-like">
+<p id="p-627">So we have:</p>
 <div class="displaymath">
 \begin{align*}
 P\amp = 500\\
@@ -452,7 +460,7 @@ A\amp = 2000\\
 n\amp = 10
 \end{align*}
 </div>
-<p id="p-613">So we are solving:</p>
+<p id="p-628">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 2000\amp = 500(1+i)^{10}\\
@@ -462,15 +470,15 @@ i\amp = 4^{1/10}-1\approx0.1487
 \end{align*}
 </div>
 <p data-braille="continuation">or 14.87% annual interest.</p>
-<p id="p-614"><iframe src="https://www.desmos.com/calculator/cenkwb1j5r" id="interactive-69" width="600" height="600"></iframe></p>
+<p id="p-629"><iframe src="https://www.desmos.com/calculator/cenkwb1j5r" id="interactive-69" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-29"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-29"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-29"><article class="exercise exercise-like"><p id="p-615">Suppose that I borrow $1000 at 24% annual interest compounded monthly. How long until I owe $20,000?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-29"><article class="exercise exercise-like"><p id="p-630">Suppose that I borrow $1000 at 24% annual interest compounded monthly. How long until I owe $20,000?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-48"><div class="solution solution-like">
-<p id="p-616">So we have:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-50" id="solution-50"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-50"><div class="solution solution-like">
+<p id="p-631">So we have:</p>
 <div class="displaymath">
 \begin{align*}
 P\amp = 1000\\
@@ -478,7 +486,7 @@ A\amp = 20000\\
 i\amp = 0.24.12=0.02
 \end{align*}
 </div>
-<p id="p-617">So we are solving:</p>
+<p id="p-632">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 20000\amp = 1000(1.02)^n\\
@@ -487,8 +495,8 @@ i\amp = 0.24.12=0.02
 n\amp = \ln(20)/\ln(1.02)\approx151.28
 \end{align*}
 </div>
-<p id="p-618">So in about 151-152 <em class="emphasis">months</em>, I will owe 20,000 dollars.</p>
-<p id="p-619"><iframe src="https://www.desmos.com/calculator/i4omuhugqh" id="interactive-70" width="600" height="600"></iframe></p>
+<p id="p-633">So in about 151-152 <em class="emphasis">months</em>, I will owe 20,000 dollars.</p>
+<p id="p-634"><iframe src="https://www.desmos.com/calculator/i4omuhugqh" id="interactive-70" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div></section></section></div></main>
 </div>

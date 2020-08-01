@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:29-06:00    *-->
+<!--*    on 2020-08-01T16:12:21-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,40 +11,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p>Consider the following truth tables:\(\ \\ \)</p>
-<div class="displaymath">
+<body><div class="solution solution-like"><ol class="decimal">
+<li>Since Max must both eat chicken nuggets and not potty, we have \(a\wedge \sim b\text{.}\)</li>
+<li>A truth table could be constructed as follows:\(\ \\ \)<div class="displaymath">
 \begin{equation*}
-\begin{array}{c|c|c|c|c} 
-p\amp q\amp  r \amp   q\vee r \amp p\wedge (q\vee r)\\ 
+\begin{array}{c|c|c|c} 
+a\amp b\amp  \sim b \amp a\wedge \sim b\\ 
 \hline 
-T \amp  T\amp T \amp T\amp T\\
-T \amp  T\amp F \amp T\amp T\\
-T \amp  F\amp T \amp T\amp T\\
-T \amp  F\amp F \amp F\amp F\\
-F \amp  T\amp T \amp T\amp F\\
-F \amp  T\amp F \amp T\amp F\\
-F \amp  F\amp T \amp T\amp F\\
-F \amp  F\amp F \amp F\amp F\\
+T \amp  T\amp F \amp F\\
+T \amp  F\amp T \amp T\\
+F \amp  T\amp F \amp F\\
+F \amp  F\amp T \amp F\\
 \end{array}
 \end{equation*}
-</div>
+</div>Which is only true if \(a\) is true (he eats nuggets) and \(b\) is false (he does not potty).</li>
+<li>"Either Max didn't eat chicken nuggets or he went to the potty.".</li>
+<li>
 <div class="displaymath">
 \begin{equation*}
-\begin{array}{c|c|c|c|c|c} 
-p\amp q\amp  r \amp   p\wedge q \amp p\wedge r \amp (p\wedge q)\vee (p\wedge r)\\ 
+\begin{array}{c|c|c|c} 
+a\amp b\amp  \sim a \amp \sim a\vee b\\ 
 \hline 
-T \amp  T\amp T \amp T\amp T\amp T\\
-T \amp  T\amp F \amp T\amp F\amp T\\
-T \amp  F\amp T \amp F\amp T\amp T\\
-T \amp  F\amp F \amp F\amp F\amp F\\
-F \amp  T\amp T \amp F\amp F\amp F\\
-F \amp  T\amp F \amp F\amp F\amp F\\
-F \amp  F\amp T \amp F\amp F\amp F\\
-F \amp  F\amp F \amp F\amp F\amp F\\
+T \amp  T\amp F \amp T\\
+T \amp  F\amp F \amp F\\
+F \amp  T\amp T \amp T\\
+F \amp  F\amp T \amp T\\
 \end{array}
 \end{equation*}
-</div>
-<p data-braille="continuation">So we can verify that they are in fact equivalent, they are true so long as \(p\) is true, and either \(q\) or \(r\text{.}\)</p>
-</div></body>
+</div>\(\ \\ \) Which is true in any situation except when he eats nuggets and doesn't go to the potty.</li>
+</ol></div></body>
 </html>

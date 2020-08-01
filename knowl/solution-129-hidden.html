@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:10-06:00    *-->
+<!--*    on 2020-08-01T16:12:53-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,11 +12,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>Since each coin flip has two outcomes, there are \(2\cdot 2\cdot 2=2^3=8\) possible outcomes.</p>
+<p>Let \(I\) denote “infected” and \(T\) denote “tested positive”.  We are given \(P(T|I)=0.9, P(T|I^c)=0.08, P(T)=0.3.\)  We are asked to find \(P(I|T)\text{.}\)  We first find \(P(I)\text{:}\)</p>
 <div class="displaymath">
-\begin{equation*}
-HHH, HHT, HTH, THH, TTH, THT, TTH, TTT.
-\end{equation*}
+\begin{align*}
+P(T)\amp =P(T|I)P(I)+P(T|I^c)(1-P(I))\\
+P(I) \amp =\frac{P(T)-P(T|I^c)}{P(T|I)-P(T|I^c)}\\
+\amp =\frac{0.3-0.08}{0.9-0.08}=\frac{0.22}{0.82}=\frac{11}{41}\approx 0.26829 
+\end{align*}
 </div>
+<p data-braille="continuation">Which we can see: <iframe src="https://www.desmos.com/calculator/qlwn25vdod" id="interactive-179" width="600" height="600"></iframe> Moreover, we now know \(P(I)=\frac{11}{41}, P(T)=0.3, P(T\cap I)=P(T|I)P(I)=(0.9)\frac{11}{41}=\frac{99}{410}\)  So we can fill out the following venn diagram: <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-86.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.4.10<span class="period">.</span></span><span class="space"> </span>\(I, T\) and their probabilities</figcaption></figure> So \(P(I|T)=\frac{P(I\cap T)}{P(T)}=\frac{99/410}{0.3}=\frac{33}{41}\approx 0.80488\text{.}\)</p>
 </div></body>
 </html>

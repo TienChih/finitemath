@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:18-06:00    *-->
+<!--*    on 2020-08-01T16:13:00-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>For Company B, if we list the data in thousands per year:</p>
+<p>We can fix both these issues by squaring all the terms:</p>
 <div class="displaymath">
 \begin{equation*}
-49,51,53,55,57,59,61,63,65,67,69,71
+(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2=10
 \end{equation*}
 </div>
-<p data-braille="continuation">we have \(\sigma_B\approx 6.9041\text{:}\) <iframe src="https://www.desmos.com/calculator/nxwzkbqaqf" id="interactive-208" width="600" height="600"></iframe></p>
+<p data-braille="continuation">This seems like a good way to measure the spreadoutness of the data.  But hold on, what if the data set was:</p>
+<div class="displaymath">
+\begin{equation*}
+1,2,3,4,5,1,2,3,4,5
+\end{equation*}
+</div>
+<p data-braille="continuation">If we apply the same scheme, we would get:</p>
+<div class="displaymath">
+\begin{equation*}
+(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2+(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2=20
+\end{equation*}
+</div>
+<p data-braille="continuation">But, I think we can all agree the second data set isn't any more spread out than the first one.  It's the same distribution repeated.  How can we fix this?</p>
 <span class="incontext"><a href="Sec_Variation.html#p-1287">in-context</a></span>
 </body>
 </html>

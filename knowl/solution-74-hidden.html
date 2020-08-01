@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:46-06:00    *-->
+<!--*    on 2020-08-01T16:12:34-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,29 +12,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>Consider the following:</p>
+<p>We let \(R(t)\) be the number of rabbits in \(t\) weeks.</p>
 <ol class="decimal">
-<li>Starting with:<div class="displaymath">
+<li>We first notice that<div class="displaymath">
 \begin{align*}
-e^{x+2}\amp = 100\\
-\ln(e^{x+2})\amp = \ln(100)\\
-x+2\amp = \ln(100)\\
-x\amp = \ln(100)-2\approx  2.60517
+100=R(5)\amp = ba^5\\
+125=R(10)\amp = ba^{10}
 \end{align*}
-</div>
-</li>
-<li>Recall that \(\log\) is \(\log_{10}\text{.}\)<div class="displaymath">
+</div>From here we may deduce:<div class="displaymath">
 \begin{align*}
-\log(x)+\log(x+3)\amp = 1\\
-\log(x(x+3))\amp = 1\\
-10^{\log(x(x+3))}\amp = 10^1\\
-x(x+3)\amp = 10\\
-x^2+3x-10\amp = 0\\
-(x+5)(x-2)\amp = 0\\
-x\amp = -5, 2
+1.25\frac{125}{100}\amp = \frac{ba^10}{ba^5}=a^5\\
+100=ba^5\amp = b(1.25)\\
+b\amp =80
 \end{align*}
-</div>
+</div>Thus there were 80 rabbits initially.</li>
+<li>Knowing that \(a^5=1.25\)  we have that \(a=(1.25)^{1/5}\approx 1.04563955\text{.}\)  Thus \(R(t)=80\cdot((1.25)^{1/5})^t\text{.}\) <iframe src="https://www.desmos.com/calculator/6t0he6wapz" id="interactive-124" width="600" height="600"></iframe>
 </li>
+<li>We have \(R(30)=80\cdot((1.25)^{1/5})^{30}\approx 305\) <iframe src="https://www.desmos.com/calculator/8aymvvbx01" id="interactive-125" width="600" height="600"></iframe> About 305 rabbits.</li>
 </ol>
 </div></body>
 </html>

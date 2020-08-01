@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:46-06:00    *-->
+<!--*    on 2020-08-01T16:12:34-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,27 +14,26 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.6.2.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.5.5.1</span><span class="period">.</span>
 </h6>
-<p>Consider the following:</p>
+<p>We let \(M(t)\) be the amount of Madeupinium in \(t\) minutes.</p>
 <ol class="decimal">
-<li><p>In week 0, we have \(R(0)=50-30e^0=20\) or \(\$20\) thousand dollars.</p></li>
-<li>
-<p>We solve:</p>
-<div class="displaymath">
+<li>We first notice that \(300=M(25)=b\cdot a^{25}\text{.}\)  We also note that whatever \(b\) is, we have that \(M(0)=b\cdot a^0=b\) and \(\frac{b}{2}=M(25)=ba^{25}\text{.}\)  Thus:<div class="displaymath">
 \begin{align*}
-R(t)=50-30e^{-0.1t}\amp = 40\\
-R(t)10\amp =30e^{-0.1t}\\
-e^{-0.1t}\amp = \frac{1}{3}\\
-\ln(e^{-0.1t})\amp = \ln(\frac{1}{2})\\
--0.1t\amp = \ln(\frac{1}{3})\\
-t\amp = -10\ln(\frac{1}{3})\approx 10.9861
+\frac{1}{2}\amp = a^{25}\\
+a\amp = \left(\frac{1}{2}\right)^{1/25}\approx 0.972655
 \end{align*}
-</div>
-<p data-braille="continuation"><iframe src="https://www.desmos.com/calculator/sjdorxtzos" id="interactive-130" width="600" height="600"></iframe> So at almost the 7th week.</p>
+</div>From here we may deduce:<div class="displaymath">
+\begin{align*}
+300=ba^{60}\amp = b(\left(\left(\frac{1}{2}\right)^{1/25}\right)^{60}\\
+b\amp =300\cdot \left(\frac{1}{2}\right)^{-\frac{60}{25}}\approx 1583.409
+\end{align*}
+</div>Thus there were about 15803.409 grams initially.</li>
+<li>Knowing that \(a=\left(\frac{1}{2}\right)^{1/25}\)  we have that  \(M(t)=300\cdot\left(\frac{1}{2}\right)^{-\frac{60}{25}}\left(\frac{1}{2}^{\frac{1}{25}}\right)^{t}\text{.}\) <iframe src="https://www.desmos.com/calculator/8eaou0dgdw" id="interactive-126" width="600" height="600"></iframe>
 </li>
+<li>We have \(%(75)=80300\cdot\left(\frac{1}{2}\right)^{-\frac{60}{25}}\left(\frac{1}{2}^{\frac{1}{25}}\right)^{75}\approx 197.926\) <iframe src="https://www.desmos.com/calculator/zqbcolgj8c" id="interactive-127" width="600" height="600"></iframe> About 197.926 grams.</li>
 </ol>
 </div>
-<span class="incontext"><a href="Sec_Logarithms.html#solution-75">in-context</a></span>
+<span class="incontext"><a href="Sec_Exponentials.html#solution-75">in-context</a></span>
 </body>
 </html>

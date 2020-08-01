@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:59-06:00    *-->
+<!--*    on 2020-08-01T16:12:44-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,29 +13,23 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We note that:</p>
-<div class="displaymath">
+<p>Consider:</p>
+<ol class="decimal">
+<li>We compute \(N'(t)\text{:}\)<div class="displaymath">
 \begin{align*}
-D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]\\
-\amp = t\frac{d}{dt}[e^{-0.25t}]+\frac{d}{dt}[t]e^{-0.25t}\\
-\amp = te^{-0.25t}\frac{d}{dt}[-0.25t]+1\cdot e^{-0.25t}\\
-\amp = te^{-0.25t}\cdot(-0.25t)+e^{-0.25t}\\
-\amp = (1-0.25t)e^{-0.25t}\text{.}
+N'(t)\amp = \frac{d}{dt}[3t(t-8)^2+30]\\
+\amp = \frac{d}{dt}[3t(t-8)^2]+\frac{d}{dt}[30]\\
+\amp = \frac{d}{dt}[3t](t-8)^2+3t\frac{d}{dt}[(t-8)^2]+0\\
+\amp = 3(t-8)^2+3t\frac{d}{dt}[t^2-16t+64]\\
+\amp = 3(t^2-16t+64)+3t(2t-16))\\
+\amp = 3t^2-48t+192+6t^2-48t\\
+\amp = 9t^2-96t+192\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">So with that:</p>
-<ol class="decimal">
-<li>Notce \(D'(2)=(1-0.25(2))e^{-0.25(2)}\approx 0.303 \) or increasing by 0.303 mL/minute.</li>
-<li>We note that the quantity decreases when \(D'(t)=(1-0.25t)e^{-0.25t}\lt 0\) so:<div class="displaymath">
-\begin{align*}
-(1-0.25t)e^{-0.25t}\amp \lt 0\\
-(1-0.25t)\amp \lt 0\\
-1\amp \lt 0.25t\\
-t\amp &gt; 4\text{.}
-\end{align*}
-</div>So after 4 minutes</li>
+</li>
+<li>Notice that \(N(10)=9(10^2)-96(10)+192=132\) or 132 million bacteria per hour.</li>
 </ol>
-<p data-braille="continuation">We can see this: <iframe src="https://www.desmos.com/calculator/uow1nliujd" id="interactive-163" width="600" height="600"></iframe></p>
-<span class="incontext"><a href="DerivativeExp.html#p-990">in-context</a></span>
+<p data-braille="continuation">We can see this: <iframe src="https://www.desmos.com/calculator/fxuhxkxksv" id="interactive-157" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="Sec_AdvancedDerivative.html#p-990">in-context</a></span>
 </body>
 </html>

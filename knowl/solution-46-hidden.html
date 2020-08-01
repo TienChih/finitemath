@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:35-06:00    *-->
+<!--*    on 2020-08-01T16:12:27-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -15,19 +15,21 @@
 <p>So we note that:</p>
 <div class="displaymath">
 \begin{align*}
-A\amp = 2000, \ \text{ the future value }\\
-i\amp = 0.08, \ \text{ the actual interest rate }\\
-n\amp = 20, \ \text{ number of years }
+A\amp = 100000\\
+P\amp = 50000\\
+i\amp = 0.07
 \end{align*}
 </div>
-<p data-braille="continuation">(Since interest is compounded annually, 0.08 is the actual annual interest rate.)</p>
-<p>So we are solving:</p>
+<p>If one is familiar with the properties of logs and natural logs:</p>
 <div class="displaymath">
 \begin{align*}
-2000\amp =\amp P(1.08)^{20}\\
-P\amp =\amp \frac{2000}{1.08^{20}}\approx429.10
+100000\amp =50000(1.07)^{n}\\
+2\amp =(1.07)^{n}\\
+\ln(2)\amp= \ln(1.07^n)\\
+\ln(2)\amp= n\ln(1.07)\\
+n\amp=\frac{\ln(2)}{\ln(1.07)} \approx 10.24477
 \end{align*}
 </div>
-<p><iframe src="https://www.desmos.com/calculator/egm3vuqa11" id="interactive-68" width="600" height="600"></iframe></p>
+<p data-braille="continuation">So about \(10.24477\) years.</p> Otherwise, since we know \(P, i\)  we can simply plot the graph and see when it reaches 50000: <iframe src="https://www.desmos.com/calculator/lsapccwwfe" id="interactive-65" width="600" height="600"></iframe> So about 10.245 years. <p><iframe src="https://www.desmos.com/calculator/sve97pxkpq" id="interactive-66" width="600" height="600"></iframe></p>
 </div></body>
 </html>

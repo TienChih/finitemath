@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:01-06:00    *-->
+<!--*    on 2020-08-01T16:12:45-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,13 +12,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>If we let \(A\) denote student athletes and \(B\) denote biology majors, we have:</p>
-<div class="displaymath">
-\begin{equation*}
-|A|=12, |B|=8, |A\cap B|=5,
-\end{equation*}
+<p>Notice:</p>
+<ul class="disc">
+<li>We note that revenue is \(R(q)=qD(q)=150q+\frac{40q}{\ln(q)}\text{.}\)  We then differentiate \(R(q)\text{:}\)<div class="displaymath">
+\begin{align*}
+D'(q)\amp = \frac{d}{dq}[150q+\frac{40q}{\ln(q)}]\\
+\amp = 150 +\frac{d}{dq}[\frac{40q}{\ln(q)}]\\
+\amp =_{QR} 150 +\frac{\frac{d}{dq}[40q]\ln(q)-40q\frac{d}{dq}[\ln(q)]}{(\ln(q))^2}\\
+\amp = 150 +\frac{40\ln(q)-40q\frac{1}{q}}{(\ln(q))^2}\\
+\amp = 150 +\frac{40\ln(q)-40}{(\ln(q))^2}\text{.}
+\end{align*}
 </div>
-<p data-braille="continuation">thus \(|A\cup B|=|A|+|B|-|A\cap B|=12+8-5=15.\) <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-63.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.7<span class="period">.</span></span><span class="space"> </span>Each set \(A, B\) and their respective sizes.</figcaption></figure></p>
+</li>
+<li>This would be \(R'(6)= 150 +\frac{40\ln(6)-40}{(\ln(6))^2}\approx  159.87\) or \(\$159.87\) dollars per unit sold.</li>
+</ul>
+<p data-braille="continuation">Visually: <iframe src="https://www.desmos.com/calculator/04r4ndvvxr" id="interactive-168" width="600" height="600"></iframe></p>
 </div></body>
 </html>

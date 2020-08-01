@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:13-06:00    *-->
+<!--*    on 2020-08-01T16:12:56-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,16 +12,11 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>Let \(R\) denote “digits don't repeat” and \(E\) denote “digits are all even.”:</p>
+<p>Recall that there are \(10\cdot10\cdot10\cdot10=10^4=1000\) possible passcodes.  Thus \(|S|=10000\text{.}\)</p>
 <ol class="decimal">
-<li>Recall <a class="xref" data-knowl="./knowl/ExampleDigits.html" title="Example 9.3.2">Example 9.3.2</a>, we say \(P(R)=\frac{P(10,4)}{10^4}, P(E)=\frac{5^4}{10^4}, P(R\cap E)=\frac{P(5,4)}{10^4}\text{.}\)  Thus<div class="displaymath">
-\begin{equation*}
-P(R\cup E)= P(R)+P(E)-P(R\cap E)=\frac{P(10,4)+5^4-P(5,4)}{10^4}=\frac{5040+625-120}{10^4}=\frac{5545}{10000}=0.5545.
-\end{equation*}
-</div>
-</li>
-<li>Note that \(P(R|E)=\frac{P(5,4)/10^4}{5^4/10^4}=\frac{P(5,4)}{5^4}=\frac{120}{625}=0.192\) .</li>
-<li>Since \(P(R|E)=0.192\neq0.504=P(R)\) so these are not independent.</li>
+<li>There are \(P(10,4)=10\cdot9\cdot8\cdot7=5040\) passcodes that don't repeat digits.  Thus the probability that a passcode doesn't repeat digits is \(\frac{P(10,4)}{10^4}=\frac{5040}{10000}=0.504\) .</li>
+<li>There are \(5^4=625\) passcodes that only use even digits.  Thus the probability that a passcode uses only even digits is \(\frac{5^4}{10^4}=\frac{625}{10000}=0.0625\) .</li>
+<li>There are \(P(5,4)=5\cdot4\cdot3\cdot2=120\) passcodes that don't repeat digits and only use even digits.  Thus the probability that a passcode doesn't repeat digits and only uses even digits is \(\frac{P(5,4)}{10^4}=\frac{120}{10000}=0.012\) .</li>
 </ol>
 </div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:28-06:00    *-->
+<!--*    on 2020-08-01T16:12:20-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,33 +11,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><ol class="decimal">
-<li>Since Max must both eat chicken nuggets and not potty, we have \(a\wedge \sim b\text{.}\)</li>
-<li>A truth table could be constructed as follows:\(\ \\ \)<div class="displaymath">
-\begin{equation*}
-\begin{array}{c|c|c|c} 
-a\amp b\amp  \sim b \amp a\wedge \sim b\\ 
-\hline 
-T \amp  T\amp F \amp F\\
-T \amp  F\amp T \amp T\\
-F \amp  T\amp F \amp F\\
-F \amp  F\amp T \amp F\\
-\end{array}
-\end{equation*}
-</div>Which is only true if \(a\) is true (he eats nuggets) and \(b\) is false (he does not potty).</li>
-<li>"Either Max didn't eat chicken nuggets or he went to the potty.".</li>
-<li>
+<body><div class="solution solution-like">
+<p>Let \(x\) be the number of coach tickets and \(y\) the number first class tickets. The airline is  maximizing the profit \(P(x,y)=225x+200y\text{.}\) The inequalities we are subject to are:</p>
+<div class="displaymath">
+\begin{align*}
+x\amp \geq 40,\ \ \text{minimum coach tickets}\\
+y \amp \geq 25,\ \ \text{mineral first class tickets}\\
+x+y\amp \leq 150,\ \ \text{maximum capacity}\\
+x\amp \geq 0,\ \ \text{ no negative tickets }\\
+y\amp \geq 0,\ \ \text{ no negative tickets }
+\end{align*}
+</div>
+<p>So sketching the inequalities, we obtain the following feasible region with corners: <iframe src="https://www.desmos.com/calculator/fk0zffzgot" id="interactive-51" width="600" height="600"></iframe> The profit at each corner is as follows:</p>
 <div class="displaymath">
 \begin{equation*}
-\begin{array}{c|c|c|c} 
-a\amp b\amp  \sim a \amp \sim a\vee b\\ 
-\hline 
-T \amp  T\amp F \amp T\\
-T \amp  F\amp F \amp F\\
-F \amp  T\amp T \amp T\\
-F \amp  F\amp T \amp T\\
-\end{array}
+\begin{array}{c|c|c} x \amp  y \amp  C(x,y)\\ \hline 40 \amp  25 \amp  225(40)+200(25)=14000\\ 40 \amp  110 \amp  225(40)+200(110)=31000\\ 125 \amp  025 \amp  225(125)+200(25)=33125\end{array}
 \end{equation*}
-</div>\(\ \\ \) Which is true in any situation except when he eats nuggets and doesn't go to the potty.</li>
-</ol></div></body>
+</div>
+<p>So the profit is maximized when you sell 125 coach tickstes and 25 first class.</p>
+</div></body>
 </html>

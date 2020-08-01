@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:40-06:00    *-->
+<!--*    on 2020-08-01T16:12:30-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>In this case, we can see this relation is <em class="emphasis">not</em> a function.  Let's call it \(L\) for lunch.  We see that many of our subjects had more than one item for lunch.  So If we asked about \(L(\text{Andrew})\text{,}\) it's not clear if this should be Hamburger or Fries, or a Soda.  Recall that the definition of a function assigns <em class="emphasis">one</em> output per input.</p>
-<span class="incontext"><a href="Sec_Functions.html#p-691">in-context</a></span>
+<p>So we are solving:</p>
+<div class="displaymath">
+\begin{align*}
+4000\amp = 100\frac{1-(1.02)^{-n}}{.02}\\
+40 \amp = \frac{1-(1.02)^{-n}}{.02}\\
+0.8 \amp = 1-(1.02)^{-n}\\
+(1.02)^{-n} \amp = 0.2\\
+-n\ln((1.02)) \amp = \ln(0.2)\\
+n\amp = \frac{\ln(0.2)}{-\ln(1.02)}\approx 81.274
+\end{align*}
+</div>
+<p data-braille="continuation">Or, by plotting \(y=\frac{1-(1.02)^{-x}}{.02}\) and \(y=40\text{,}\) we can see what the value of \(n\) should be: <iframe src="https://www.desmos.com/calculator/0guujzgatk" id="interactive-81" width="600" height="600"></iframe> \(n\approx 81.274\text{.}\)</p>
+<span class="incontext"><a href="Sec_RegularPayments.html#p-691">in-context</a></span>
 </body>
 </html>

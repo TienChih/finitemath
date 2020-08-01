@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:13-06:00    *-->
+<!--*    on 2020-08-01T16:12:56-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,34 +14,18 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.3.5.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.3.3.1</span><span class="period">.</span>
 </h6>
-<p>There are \(C(20,3)=1140\) ways to pick 3 people out of 20.</p>
+<p>Consider:</p>
 <ol class="decimal">
-<li>There are \(C(5,3)=10\) ways to pick only sick people, so the probability this happens is<div class="displaymath">
+<li>If \(D\) is the event “at least one diamond”, then \(D^c\) means “no diamonds”.  \(P(D^c)=\frac{C(39,5)}{C(52,5)}=\frac{575757}{2598960}\approx 0.2215336\text{,}\) since there are 29 non diamonds to pick 5 from.  So \(P(D)=1-P(D^c)=1-\frac{C(39,5)}{C(52,5)}\approx 0.7784664.\)</li>
+<li>Let \(B\) denote “all black cards”, and \(N\) denote “all non-face cards”.  Note \(P(B)=\frac{C(26,5)}{C(52,5)}\text{,}\) \(P(N)=\frac{C(36,5)}{C(52,5)}\text{,}\) and \(P(B\cap N)=\frac{C(18,5)}{C(52,5)}\text{.}\)  Thus<div class="displaymath">
 \begin{equation*}
-\frac{C(5,3)}{C(20,3)}=\frac{10}{1140}\approx 0.0088.
+P(B\cup N)=P(B)+P(N)-P(B\cap N)=\frac{C(26,5)+C(36,5)-C(18,5)}{C(52,5)}=\frac{65780+376992-8568}{2598960}\approx 0.167068.
 \end{equation*}
 </div>
 </li>
-<li>There are \(C(15,3)=455\) ways to pick only healthy people, so the probability this happens is<div class="displaymath">
-\begin{equation*}
-\frac{C(15,3)}{C(20,3)}=\frac{455}{1140}\approx 0.3991.
-\end{equation*}
-</div>
-</li>
-<li>There are \(C(5,2)\cdot C(15,1)=10\cdot 15=150\) ways to pick two sick and one healthy person, so the probability this happens is<div class="displaymath">
-\begin{equation*}
-\frac{C(5,2)\cdot C(15,1)}{C(20,3)}=\frac{10\cdot 15}{1140}\approx  0.1316.
-\end{equation*}
-</div>
-</li>
-<li>The probability that at least one person tested sick is \(1-\frac{C(15,3)}{C(20,3)}\text{.}\)  Thus assuming this happens, the probability everyone tests sick is<div class="displaymath">
-\begin{equation*}
-\frac{C(5,3)/C(20,3)}{1-C(15,3)/C(20,3)}\approx \frac{0.0088}{0.6009}\approx 0.0146.
-\end{equation*}
-</div>
-</li>
+<li>This is \(P(N|B)=\frac{P(N\cap B)}{P(B)}=\frac{C(18,5)/C(52,5)}{C(26,5)/C(52,5)}=\frac{C(18,5)}{C(26,5)}=\frac{8568}{65780}\approx 0.130252.\)</li>
 </ol>
 </div>
 <span class="incontext"><a href="Sec_AppstoProb.html#solution-146">in-context</a></span>

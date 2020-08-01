@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:55-06:00    *-->
+<!--*    on 2020-08-01T16:12:40-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,35 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We may have noticed a pattern with derivatives. But to illustrate it explicitly:</p>
-<ul class="disc">
-<li><p>The derivative of \(f(x)=x^0\text{,}\) it's the derivative of the constant function \(f(x)=1\text{,}\) and since its a horizontal line, it never has any slope and \(f'(x)=0\text{.}\)</p></li>
-<li><p>The derivative of \(f(x)=x^1\text{,}\) it's the derivative of the line \(f(x)=x\) which always has slope 1, so \(f'(x)=1\text{.}\)</p></li>
-<li>
-<p>The derivative of \(f(x)=x^2\) is:</p>
+<p>By <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> we have:</p>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[x^2]\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
-\amp = \limit{h}{0} \frac{(x+h)^2-x^2}{h}\\
-\amp = \limit{h}{0} \frac{x^2+2xh+h^2-x^2}{h}\\
-\amp = \limit{h}{0} \frac{(2x+h)h}{h}\\
-\amp = \limit{h}{0} 2x+h=2x\text{.}
+\alpha'(2)\amp = \limit{h}{0}\frac{\alpha(2+h)-\alpha(2)}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2}{2+h+1}-\frac{2}{2+1}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2}{h+3}-\frac{2}{3}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2\cdot 3}{(h+3)3}-\frac{2(h+3)}{3(h+3)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{6-2(h+3)}{(h+3)3}}{h} \\
+\amp = \limit{h}{0} \frac{\frac{6-2(h+3)}{(h+3)3}}{h} \\
+\amp = \limit{h}{0} \frac{\frac{-2h}{(h+3)3}}{h} \\
+\amp = \limit{h}{0} \frac{-2}{(h+3)3} \\
+\amp =  \frac{-2}{(0+3)3}=-\frac{2}{9} \text{.}
 \end{align*}
 </div>
-</li>
-<li>
-<p>The derivative of \(f(x)=x^3\) is:</p>
-<div class="displaymath">
-\begin{align*}
-\frac{d}{dx}[x^3]\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
-\amp = \limit{h}{0} \frac{(x+h)^3-x^3}{h}\\
-\amp = \limit{h}{0} \frac{x^3+3x^2h+3xh^2+h^3-x^3}{h}\\
-\amp = \limit{h}{0} \frac{(3x^2+3xh+h^2)h}{h}\\
-\amp = \limit{h}{0} 3x^2+3xh+h^2=3x^2\text{.}
-\end{align*}
-</div>
-</li>
-</ul>
-<span class="incontext"><a href="Sec_RulesofDerivative.html#p-931">in-context</a></span>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/qf4yzkw00n" id="interactive-141" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="Sec_DefofDerivative.html#p-931">in-context</a></span>
 </body>
 </html>

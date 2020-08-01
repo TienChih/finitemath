@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:16-06:00    *-->
+<!--*    on 2020-08-01T16:12:58-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>A factory has 10 machines, each of which has a 10% chance of malfunctioning in a day.</p>
-<ol class="decimal">
-<li>What is the probability exactly 2 malfunction?</li>
-<li>What is the probability at least one machine malfunctions?</li>
-</ol>
-<span class="incontext"><a href="Sec_Binomial.html#p-1238">in-context</a></span>
+<p>We note that the device has a \(0.3\) chance to fail in the first year, \((0.7)(0.3)\) chance to fail the second since it had to survive the first, \((0.7)^2(0.3)\) to fail the third year, after which the policy ends.  So if \(X\) is the payout, then it has distribution</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{|c|cccc|}
+\hline
+x \amp 3000 \amp 2000 \amp 1000 \amp 0 \\
+\hline
+P(X=x) \amp (0.3) \amp (0.7)(0.3) \amp (0.7)^2(0.3) \amp 1-(0.3)-(0.7)(0.3)-(0.7)^2(0.3)\\
+\hline
+\end{array}
+\end{equation*}
+</div>
+<span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1238">in-context</a></span>
 </body>
 </html>

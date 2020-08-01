@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:13-06:00    *-->
+<!--*    on 2020-08-01T16:12:55-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,18 +14,13 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.3.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.3.1.1</span><span class="period">.</span>
 </h6>
-<p>Consider:</p>
+<p>Recall that there are \(C(52,5)\) ways to select 5 cards of 52.  Thus \(|S|=C(52,5)=2598960\text{.}\)</p>
 <ol class="decimal">
-<li>If \(D\) is the event “at least one diamond”, then \(D^c\) means “no diamonds”.  \(P(D^c)=\frac{C(39,5)}{C(52,5)}=\frac{575757}{2598960}\approx 0.2215336\text{,}\) since there are 29 non diamonds to pick 5 from.  So \(P(D)=1-P(D^c)=1-\frac{C(39,5)}{C(52,5)}\approx 0.7784664.\)</li>
-<li>Let \(B\) denote “all black cards”, and \(N\) denote “all non-face cards”.  Note \(P(B)=\frac{C(26,5)}{C(52,5)}\text{,}\) \(P(N)=\frac{C(36,5)}{C(52,5)}\text{,}\) and \(P(B\cap N)=\frac{C(18,5)}{C(52,5)}\text{.}\)  Thus<div class="displaymath">
-\begin{equation*}
-P(B\cup N)=P(B)+P(N)-P(B\cap N)=\frac{C(26,5)+C(36,5)-C(18,5)}{C(52,5)}=\frac{65780+376992-8568}{2598960}\approx 0.167068.
-\end{equation*}
-</div>
-</li>
-<li>This is \(P(N|B)=\frac{P(N\cap B)}{P(B)}=\frac{C(18,5)/C(52,5)}{C(26,5)/C(52,5)}=\frac{C(18,5)}{C(26,5)}=\frac{8568}{65780}\approx 0.130252.\)</li>
+<li>There are 13 spades so the number of ways to select 5 spades is \(C(13,5)=1287\text{.}\)  Thus the probability of selecting 5 cards and getting all spades is \(\frac{C(13,5)}{C(52,5)}=\frac{1287}{2598960}\approx 0.00495\text{.}\)</li>
+<li>The number of ways to select all cards from the same suit is still \(C(13,5)\) but since there are 4 suits, the probability of selecting 5 cards and they are all the same suit is \(\frac{4\cdot C(13,5)}{C(52,5)}=\frac{4\cdot 1287}{2598960}\approx 0.0198107\text{.}\)</li>
+<li>We select 2 out of 13 hearts and 3 out of 39 non-hearts, and there are \(C(13,2)\cdot C(39,3)=78\cdot 9139=712842\) ways to do this.  Thus the probability you pick 5 cards and exactly 2 are hearts is \(\frac{C(13,2)\cdot C(39,3)}{C(52,5)}=\frac{712842}{259860}\approx  0.27428\)</li>
 </ol>
 </div>
 <span class="incontext"><a href="Sec_AppstoProb.html#solution-144">in-context</a></span>

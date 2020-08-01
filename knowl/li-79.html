@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:26-06:00    *-->
+<!--*    on 2020-08-01T16:12:18-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -15,12 +15,29 @@
 <article class="li"><h6 class="heading">
 <span class="type">Item</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span>
 </h6>
-<p>\(AC\text{.}\)</p>
+<p>If 100 people go through Anderson, how many go through Birmingham or Central? We can revisit our linear system from (a):</p>
 <div class="displaymath">
 \begin{align*}
-AC=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \begin{pmatrix}10\\20\\15 \end{pmatrix} \amp =\amp \begin{pmatrix}1\cdot10+2\cdot20+3\cdot15 \\ 4\cdot10+5\cdot20+6\cdot15 \end{pmatrix}\\
-\amp =\amp \begin{pmatrix}95 \\ 230 \end{pmatrix}
+a-c\amp = 75\\
+100-c\amp = 75\\
+c\amp = 25\\
+b+c\amp = 225\\
+b+25\amp = 225\\
+b\amp = 200\text{,}
 \end{align*}
-</div></article><span class="incontext"><a href="Sec_MatrixArithmetic.html#li-79">in-context</a></span>
+</div>
+<p data-braille="continuation">so 200 across Birmingham and 25 across Central. We can also add the linear equation \(a=100\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 1 \amp  1 \amp  0\amp  300\\ 1 \amp  0 \amp  -1 \amp  75\\ 0 \amp  1 \amp  1 \amp  225\\ 1 \amp  0 \amp  0 \amp  100 \end{array} \right)
+\end{equation*}
+</div>
+<p data-braille="continuation">with reduced row echelon form:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 1 \amp  0 \amp  0 \amp  100\\ 0 \amp  1 \amp  0 \amp  200\\ 0 \amp  0 \amp  1\amp  25\\ 0 \amp  0 \amp  0\amp  0 \end{array} \right)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">So 100 across Anderson, 200 across Birmingham and 25 across Central.</p></article><span class="incontext"><a href="Sec_SystemasMatrix.html#li-79">in-context</a></span>
 </body>
 </html>

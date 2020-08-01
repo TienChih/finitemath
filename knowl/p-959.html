@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:57-06:00    *-->
+<!--*    on 2020-08-01T16:12:42-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,11 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We <em class="emphasis">do</em> have a rule for the derivative of products. The <dfn class="terminology">product rule</dfn> and it states \(\frac{d}{dx}[f(x)g(x)]=f'(x)g(x)+f(x)g'(x)\text{.}\) To see why:</p>
-<div class="displaymath">
-\begin{align*}
-\frac{d}{dx}[f(x)g(x)]\amp = \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h},\ \text{ at this stage, I'm going to pull a clever trick and add by 0: }\\
-\amp = \limit{h}{0}\frac{f(x+h)g(x+h)\color{blue}{-f(x)g(x+h)+f(x)g(x+h)}-f(x)g(x)}{h}\\
-\amp = \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x+h)}{h}+\limit{h}{0}\frac{f(x)g(x+h)-f(x)g(x)}{h}\\
-\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}g(x+h)+\limit{h}{0}f(x)\frac{g(x+h)-g(x)}{h}\\
-\amp = f'(x)g(x)+f(x)g'(x)\text{.}
-\end{align*}
-</div>
-<span class="incontext"><a href="Sec_AdvancedDerivative.html#p-959">in-context</a></span>
+<p>By rewriting functions into their power rule form:</p>
+<ul class="disc">
+<li>\(\frac{d}{dx}[\frac{1}{x^n}]=\frac{d}{dx}[x^{-n}]=-nx^{-n+1}=\frac{-n}{x^{-n+1}}\text{.}\)</li>
+<li>\(\frac{d}{dx}[\sqrt[n]{x}]=\frac{d}{dx}[x^{1/n}]=-\frac{1}{n}x^{\frac{1-n}{n}}=\frac{1}{\sqrt[n]{x^{n-1}}}\text{.}\)</li>
+</ul>
+<span class="incontext"><a href="Sec_RulesofDerivative.html#p-959">in-context</a></span>
 </body>
 </html>

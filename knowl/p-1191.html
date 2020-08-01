@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:14-06:00    *-->
+<!--*    on 2020-08-01T16:12:56-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,37 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So if we consider the random variable \(X\) to be “sum of die outcomes”, we would have the assignment:</p>
-<div class="displaymath">
-\begin{equation*}
-2,3,4,5,6,7
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-3,4,5,6,7,8
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-4,5,6,7,8,9
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-5,6,7,8,9,10
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-6,7,8,9,10,11
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-7,8,9,10,11,12
-\end{equation*}
-</div>
-<span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1191">in-context</a></span>
+<p>Recall that there are \(10\cdot10\cdot10\cdot10=10^4=1000\) possible passcodes.  Thus \(|S|=10000\text{.}\)</p>
+<ol class="decimal">
+<li>There are \(P(10,4)=10\cdot9\cdot8\cdot7=5040\) passcodes that don't repeat digits.  Thus the probability that a passcode doesn't repeat digits is \(\frac{P(10,4)}{10^4}=\frac{5040}{10000}=0.504\) .</li>
+<li>There are \(5^4=625\) passcodes that only use even digits.  Thus the probability that a passcode uses only even digits is \(\frac{5^4}{10^4}=\frac{625}{10000}=0.0625\) .</li>
+<li>There are \(P(5,4)=5\cdot4\cdot3\cdot2=120\) passcodes that don't repeat digits and only use even digits.  Thus the probability that a passcode doesn't repeat digits and only uses even digits is \(\frac{P(5,4)}{10^4}=\frac{120}{10000}=0.012\) .</li>
+</ol>
+<span class="incontext"><a href="Sec_AppstoProb.html#p-1191">in-context</a></span>
 </body>
 </html>

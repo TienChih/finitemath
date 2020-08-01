@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:16-06:00    *-->
+<!--*    on 2020-08-01T16:12:58-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Recall that \(n=5, p=0.7.\)</p>
-<ul class="disc">
-<li>\(E(X)=np=5(0.7)=3.5\) shots.</li>
-<li>\(Var(X)=np(1-p)=5(0.7)(0.3)=1.05\text{.}\)</li>
-<li>\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{1.05}\approx 1.0247.\)</li>
-</ul>
-<p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/94ibomyrpv" id="interactive-195" width="600" height="600"></iframe></p>
+<p>The first thing we should ask ourselves is, how is this different from the previous problem?  In the previous problem, we required that the first 2 exams had to receive A's.  In this problem, ANY 2 exams can be an A, the first two, the last two, the second and third, whichever way we want.  In fact the total number of ways she could get two A's is:</p>
+<div class="displaymath">
+\begin{equation*}
+AANN, ANAN, ANNA, NAAN, NANA, NNAA
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(N\) stands for “not an A”.  How are we sure this is all the possible ways?  Well, we are basically asking to pick 2 out of 4  exams to be A's, and the number of ways to pick 2 out of 4 things is:</p>
+<div class="displaymath">
+\begin{equation*}
+C(4,2)=\frac{4!}{2!2!}=\frac{24}{4}=6.
+\end{equation*}
+</div>
 <span class="incontext"><a href="Sec_Binomial.html#p-1245">in-context</a></span>
 </body>
 </html>

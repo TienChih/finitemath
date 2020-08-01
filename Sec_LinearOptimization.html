@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:46:40-06:00    *-->
+<!--*    on 2020-08-01T16:11:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -106,7 +106,15 @@ MathJax.Hub.Config({
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
 <li class="link">
 <a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
 <li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
@@ -201,7 +209,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_LinearOptimization"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Linear Optimization</span>
 </h2>
-<section class="introduction" id="introduction-11"><p id="p-346">We now have the background to delve into solving Linear Optimization problems.  We will describe a method using the Geometry of linear inequalities to find our optimal solutions.</p></section><p id="p-347">Suppose we were trying to maximize the function \(f(x,y)=x+y \) subject to the following constraints:</p>
+<section class="introduction" id="introduction-11"><p id="p-361">We now have the background to delve into solving Linear Optimization problems.  We will describe a method using the Geometry of linear inequalities to find our optimal solutions.</p></section><p id="p-362">Suppose we were trying to maximize the function \(f(x,y)=x+y \) subject to the following constraints:</p>
 <div class="displaymath">
 \begin{align*}
 3x+2y\amp \leq 8\\
@@ -211,10 +219,10 @@ y\amp \geq 0
 \end{align*}
 </div>
 <p data-braille="continuation">We can see from the Desmos graph below the region of points that satisfy the above system.  This is called the <dfn class="terminology">feasible region</dfn>, or the collection of points which could be a solution. We can also drag \((a,b)\) around to see what the value of \(f(x,y)\) would be for any point. <iframe src="https://www.desmos.com/calculator/up2wcq351r" id="interactive-40" width="600" height="600"></iframe></p>
-<p id="p-348">As you can see, this is a fairly cumbersome way to identify the optimal solutions.  There are infinitely many points in this region after all!  We should try to use the Algebra and Geometry at our disposal to come up with a more systematic method.</p>
-<p id="p-349">So to start, let's just ask ourselves, what do all the solutions where \(f(x,y)=1\) look like?  By setting \(x+y=1\text{,}\) we obtain \(y=-x+1\) or a line: <iframe src="https://www.desmos.com/calculator/vwfyi4gknp" id="interactive-41" width="600" height="600"></iframe> Go ahead and drag \((a,b)\) around the line and see that every point on the line gives you \(f(x,y)=1\text{.}\)  Some of those points are in our region, fantastic!  Can we find points where \(f(x,y)\) is more than 1?  How about \(f(x,y)=5\text{?}\) <iframe src="https://www.desmos.com/calculator/xi7emiptnv" id="interactive-42" width="600" height="600"></iframe> Notice that every point on this line also gives \(f(x,y)=5\text{,}\) <em class="emphasis">but</em>, none of these points lie in our region.  That's too bad, how big can \(f(x,y)\) get while still having viable solutions?</p>
-<p id="p-350">Observing the animation below, the valid outputs if \(f(x,y)\) range from \(0\) through \(4\text{.}\)  The only point in the region corresponding to \(f(x,y)=4\) is \((x,y)=(0,4)\text{.}\) <iframe src="https://www.desmos.com/calculator/zpvl34jc9p" id="interactive-43" width="600" height="600"></iframe> Thus \(f(x,y)=x+y\) is maximized when \(x=0, y=4\)  We can verify that \(f(0,4)=0+4=4\text{.}\)</p>
-<p id="p-351">Let's consider a different problem, let's <em class="emphasis">minimize</em> \(g(x,y)=-x+y\) subject to:</p>
+<p id="p-363">As you can see, this is a fairly cumbersome way to identify the optimal solutions.  There are infinitely many points in this region after all!  We should try to use the Algebra and Geometry at our disposal to come up with a more systematic method.</p>
+<p id="p-364">So to start, let's just ask ourselves, what do all the solutions where \(f(x,y)=1\) look like?  By setting \(x+y=1\text{,}\) we obtain \(y=-x+1\) or a line: <iframe src="https://www.desmos.com/calculator/vwfyi4gknp" id="interactive-41" width="600" height="600"></iframe> Go ahead and drag \((a,b)\) around the line and see that every point on the line gives you \(f(x,y)=1\text{.}\)  Some of those points are in our region, fantastic!  Can we find points where \(f(x,y)\) is more than 1?  How about \(f(x,y)=5\text{?}\) <iframe src="https://www.desmos.com/calculator/xi7emiptnv" id="interactive-42" width="600" height="600"></iframe> Notice that every point on this line also gives \(f(x,y)=5\text{,}\) <em class="emphasis">but</em>, none of these points lie in our region.  That's too bad, how big can \(f(x,y)\) get while still having viable solutions?</p>
+<p id="p-365">Observing the animation below, the valid outputs if \(f(x,y)\) range from \(0\) through \(4\text{.}\)  The only point in the region corresponding to \(f(x,y)=4\) is \((x,y)=(0,4)\text{.}\) <iframe src="https://www.desmos.com/calculator/zpvl34jc9p" id="interactive-43" width="600" height="600"></iframe> Thus \(f(x,y)=x+y\) is maximized when \(x=0, y=4\)  We can verify that \(f(0,4)=0+4=4\text{.}\)</p>
+<p id="p-366">Let's consider a different problem, let's <em class="emphasis">minimize</em> \(g(x,y)=-x+y\) subject to:</p>
 <div class="displaymath">
 \begin{align*}
 x+2y\amp \leq 8\\
@@ -223,11 +231,11 @@ x\amp \geq 0\\
 y\amp \geq 0
 \end{align*}
 </div>
-<p id="p-352">Following the same line of thinking as before, this leads us to: <iframe src="https://www.desmos.com/calculator/rjnajia8fh" id="interactive-44" width="600" height="600"></iframe> As we can see, \(g(x,y)\) is minimized when \(g(x,y)=-2\text{.}\)  This includes the points \((0,2), (4,2)\) and every point in between.  We can verify \(g(0,2)0-2=-2\) and \(g(4,2)=2-4=-2\text{.}\)</p>
+<p id="p-367">Following the same line of thinking as before, this leads us to: <iframe src="https://www.desmos.com/calculator/rjnajia8fh" id="interactive-44" width="600" height="600"></iframe> As we can see, \(g(x,y)\) is minimized when \(g(x,y)=-2\text{.}\)  This includes the points \((0,2), (4,2)\) and every point in between.  We can verify \(g(0,2)0-2=-2\) and \(g(4,2)=2-4=-2\text{.}\)</p>
 <article class="theorem theorem-like" id="Theorem_CornerPoints"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-353">Given a function of the form \(f(x,y)=px+qy\text{,}\) and constraints of the form:</p>
+<p id="p-368">Given a function of the form \(f(x,y)=px+qy\text{,}\) and constraints of the form:</p>
 <div class="displaymath">
 \begin{align*}
 a_1x+b_1y\amp \leq c_1\\
@@ -240,7 +248,7 @@ y\amp \geq 0
 </div>
 <p data-braille="continuation">Then the maximum (minimum) feasible solutions of \(f(x,y)\text{,}\) if they exist, will include <dfn class="terminology">corner points</dfn> of the region.</p></article><article class="example example-like" id="example-corner"><a data-knowl="" class="id-ref original" data-refid="hk-example-corner"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Corner Point Method.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-corner"><article class="example example-like"><p id="p-354">Let us find both the <em class="emphasis">maximum</em> and  <em class="emphasis">minimum</em> solutions of \(g(x,y)=3x+2y\) subject to:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-corner"><article class="example example-like"><p id="p-369">Let us find both the <em class="emphasis">maximum</em> and  <em class="emphasis">minimum</em> solutions of \(g(x,y)=3x+2y\) subject to:</p>
 <div class="displaymath">
 \begin{align*}
 x+y\amp \leq 8\\
@@ -252,10 +260,10 @@ y\amp \geq 0
 <p data-braille="continuation">Using Desmos to sketch the feasible region, we obtain: <iframe src="https://www.desmos.com/calculator/azokhazd8q" id="interactive-45" width="600" height="600"></iframe> We can observe the corners of this polygon occur at \((0,0), (0,8), (2,6), (5,0)\text{.}\)  We could evaluate \(f(x,y)\) at each of these points, but Desmos can be utilized here as well. <iframe src="https://www.desmos.com/calculator/bznmdwgvdg" id="interactive-46" width="600" height="600"></iframe> Thus \(f(x,y)\) achieves a maximum at \((2,6)\) with maximum value \(f(2,6)=3\cdot2+2\cdot6=18\) and is minimized at \((0,0)\) with minimum value \(f(0,0)=3\cdot0+2\cdot0=0\text{.}\) <iframe src="https://www.desmos.com/calculator/dis5mpr35t" id="interactive-47" width="600" height="600"></iframe></p></article></div>
 <article class="exercise exercise-like" id="exercise-4"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-4"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-355">Suppose that a agriculture student is raising goats and pigs for a project. The goal is to raise some animals and then sell them for profit. She can raise a total of at most 16 animals. It costs $25 per goat and $75 per pig, and she has a budget of $900. Finally, she doesn't particularly like goats, so she won't raise more than 10 of them. If the profit per goat is $12 and profit per pig is $40, how many of each should she raise to maximize profits?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-370">Suppose that a agriculture student is raising goats and pigs for a project. The goal is to raise some animals and then sell them for profit. She can raise a total of at most 16 animals. It costs $25 per goat and $75 per pig, and she has a budget of $900. Finally, she doesn't particularly like goats, so she won't raise more than 10 of them. If the profit per goat is $12 and profit per pig is $40, how many of each should she raise to maximize profits?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
-<p id="p-356">We should note, if \(x\) is the number of goats and \(y\) the number of pigs, then she is maximizing \(P(x,y)=12x+40y\text{.}\) The inequalities she is dealing with are:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-371">We should note, if \(x\) is the number of goats and \(y\) the number of pigs, then she is maximizing \(P(x,y)=12x+40y\text{.}\) The inequalities she is dealing with are:</p>
 <div class="displaymath">
 \begin{align*}
 x+y\amp \leq 16,\ \ \text{ at most 16 animals }\\
@@ -265,21 +273,21 @@ x\amp \geq 0,\ \ \text{ no negative goats }\\
 y\amp \geq 0,\ \ \text{ no negative pigs }
 \end{align*}
 </div>
-<p id="p-357">So sketching the inequalities, we obtain the following feasible region with corners: <iframe src="https://www.desmos.com/calculator/sfktagl0kr" id="interactive-48" width="600" height="600"></iframe> The profit at each corner is as follows:</p>
+<p id="p-372">So sketching the inequalities, we obtain the following feasible region with corners: <iframe src="https://www.desmos.com/calculator/sfktagl0kr" id="interactive-48" width="600" height="600"></iframe> The profit at each corner is as follows:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c} x \amp  y \amp  P(x,y)\\ \hline 0 \amp  0 \amp  12(0)+40(0)=0\\ 10 \amp  0 \amp  12(10)+40(0)=120\\ 10 \amp  6 \amp  12(10)+40(6)=360\\ 6 \amp  10 \amp  12(6)+40(10)=472\\ 0 \amp  12 \amp  12(0)+40(12)=480 \end{array}
 \end{equation*}
 </div>
-<p id="p-358">So the profit is maximized when you raise 12 pigs and no goats. To get a better sense of how we found these corners, we can include the lines that bound the region in our graph (use the inequalities, but replace \(\leq, \geq\) with \(=\text{.}\)) <iframe src="https://www.desmos.com/calculator/nnorbgjbkz" id="interactive-49" width="600" height="600"></iframe></p>
+<p id="p-373">So the profit is maximized when you raise 12 pigs and no goats. To get a better sense of how we found these corners, we can include the lines that bound the region in our graph (use the inequalities, but replace \(\leq, \geq\) with \(=\text{.}\)) <iframe src="https://www.desmos.com/calculator/nnorbgjbkz" id="interactive-49" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-5"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-5"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-359">A farmer plans to mix two types of food to make a mix of low cost feed for the animals in his farm. A bag of food \(A\) costs $10 and contains 40 units of proteins, 20 units of minerals and 10 units of vitamins. A bag of food \(B\) costs $12 and contains 30 units of proteins, 20 units of minerals and 30 units of vitamins. How many bags of food \(A\) and \(B\) should the consumed by the animals each day in order to meet the minimum daily requirements of 150 units of proteins, 90 units of minerals and 60 units of vitamins at a minimum cost?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-374">A farmer plans to mix two types of food to make a mix of low cost feed for the animals in his farm. A bag of food \(A\) costs $10 and contains 40 units of proteins, 20 units of minerals and 10 units of vitamins. A bag of food \(B\) costs $12 and contains 30 units of proteins, 20 units of minerals and 30 units of vitamins. How many bags of food \(A\) and \(B\) should the consumed by the animals each day in order to meet the minimum daily requirements of 150 units of proteins, 90 units of minerals and 60 units of vitamins at a minimum cost?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
-<p id="p-360">We should note, if \(x\) is the number of bags of food \(A\) and \(y\) the number of bags of food \(B\text{.}\) He is minimizing the cost \(C(x,y)=10x+12y\text{.}\) The inequalities we are subject to are:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<p id="p-375">We should note, if \(x\) is the number of bags of food \(A\) and \(y\) the number of bags of food \(B\text{.}\) He is minimizing the cost \(C(x,y)=10x+12y\text{.}\) The inequalities we are subject to are:</p>
 <div class="displaymath">
 \begin{align*}
 40x+30y\amp \geq 150,\ \ \text{protein requirement}\\
@@ -289,21 +297,21 @@ x\amp \geq 0,\ \ \text{ no negative bags }\\
 y\amp \geq 0,\ \ \text{ no negative bags }
 \end{align*}
 </div>
-<p id="p-361">So sketching the inequalities, we obtain the following feasible region with corners: <iframe src="https://www.desmos.com/calculator/w2px81mxm9" id="interactive-50" width="600" height="600"></iframe> The profit at each corner is as follows:</p>
+<p id="p-376">So sketching the inequalities, we obtain the following feasible region with corners: <iframe src="https://www.desmos.com/calculator/w2px81mxm9" id="interactive-50" width="600" height="600"></iframe> The profit at each corner is as follows:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c} x \amp  y \amp  C(x,y)\\ \hline 0 \amp  5 \amp  10(0)+12(5)=60\\ 1.5 \amp  3 \amp  10(1.5)+12(3)=51\\ 3.75 \amp  0.75 \amp  10(3.75)+12(0.75)=46.5\\ 6 \amp  0 \amp  10(6)+12(0)=60\end{array}
 \end{equation*}
 </div>
-<p id="p-362">So the cost is minimized when you purchase 3.75 bags of \(A\) and 0.75 bags of \(B\text{.}\)</p>
+<p id="p-377">So the cost is minimized when you purchase 3.75 bags of \(A\) and 0.75 bags of \(B\text{.}\)</p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-6"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-6"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-363">An airline offers coach and first-class tickets. For the airline to be profitable, it must sell a minimum of 25 first-class tickets and a minimum of 40 coach tickets. The company makes a profit of $225 for each coach ticket and $200 for each first-class ticket. At most, the plane has a capacity of 150 travelers. How many of each ticket should be sold in order to maximize profits?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-378">An airline offers coach and first-class tickets. For the airline to be profitable, it must sell a minimum of 25 first-class tickets and a minimum of 40 coach tickets. The company makes a profit of $225 for each coach ticket and $200 for each first-class ticket. At most, the plane has a capacity of 150 travelers. How many of each ticket should be sold in order to maximize profits?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
-<p id="p-364">Let \(x\) be the number of coach tickets and \(y\) the number first class tickets. The airline is  maximizing the profit \(P(x,y)=225x+200y\text{.}\) The inequalities we are subject to are:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-379">Let \(x\) be the number of coach tickets and \(y\) the number first class tickets. The airline is  maximizing the profit \(P(x,y)=225x+200y\text{.}\) The inequalities we are subject to are:</p>
 <div class="displaymath">
 \begin{align*}
 x\amp \geq 40,\ \ \text{minimum coach tickets}\\
@@ -313,21 +321,21 @@ x\amp \geq 0,\ \ \text{ no negative tickets }\\
 y\amp \geq 0,\ \ \text{ no negative tickets }
 \end{align*}
 </div>
-<p id="p-365">So sketching the inequalities, we obtain the following feasible region with corners: <iframe src="https://www.desmos.com/calculator/fk0zffzgot" id="interactive-51" width="600" height="600"></iframe> The profit at each corner is as follows:</p>
+<p id="p-380">So sketching the inequalities, we obtain the following feasible region with corners: <iframe src="https://www.desmos.com/calculator/fk0zffzgot" id="interactive-51" width="600" height="600"></iframe> The profit at each corner is as follows:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c} x \amp  y \amp  C(x,y)\\ \hline 40 \amp  25 \amp  225(40)+200(25)=14000\\ 40 \amp  110 \amp  225(40)+200(110)=31000\\ 125 \amp  025 \amp  225(125)+200(25)=33125\end{array}
 \end{equation*}
 </div>
-<p id="p-366">So the profit is maximized when you sell 125 coach tickstes and 25 first class.</p>
+<p id="p-381">So the profit is maximized when you sell 125 coach tickstes and 25 first class.</p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-7"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-7"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-7"><article class="exercise exercise-like"><p id="p-367">Bountiful Boats has to produce at least 5000 cabin cruisers and 12,000 pontoons each year; they can produce at most 30,000 jet skis in a year. The company has two factories:  one in Michigan, and one in Wisconsin; each factory is open for a maximum of 240 days per year. The Michigan factory makes 20 cabin cruisers, 40 pontoons, and 60 jet skis per day. The Wisconsin factory makes 10 cruisers, 30 pontoons, and 50 jet skis per day. The cost to run the Michigan factory per day is $960,000; the cost to run the Wisconsin factory per day is $750,000. How many days of the year should each factory run in order to meet the boat production, yet do so at a minimum cost?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-7"><article class="exercise exercise-like"><p id="p-382">Bountiful Boats has to produce at least 5000 cabin cruisers and 12,000 pontoons each year; they can produce at most 30,000 jet skis in a year. The company has two factories:  one in Michigan, and one in Wisconsin; each factory is open for a maximum of 240 days per year. The Michigan factory makes 20 cabin cruisers, 40 pontoons, and 60 jet skis per day. The Wisconsin factory makes 10 cruisers, 30 pontoons, and 50 jet skis per day. The cost to run the Michigan factory per day is $960,000; the cost to run the Wisconsin factory per day is $750,000. How many days of the year should each factory run in order to meet the boat production, yet do so at a minimum cost?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
-<p id="p-368">Let \(x\) be the number of days the Michigan factory is run and \(y\) the number of days the Wisconsin Factory is run. The goal is minimizing the cost \(C(x,y)=960000x+75000y\text{.}\) The inequalities we are subject to are:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<p id="p-383">Let \(x\) be the number of days the Michigan factory is run and \(y\) the number of days the Wisconsin Factory is run. The goal is minimizing the cost \(C(x,y)=960000x+75000y\text{.}\) The inequalities we are subject to are:</p>
 <div class="displaymath">
 \begin{align*}
 20x+10y\amp \geq 5000,\ \ \text{Cruisers needed}\\
@@ -339,13 +347,13 @@ x\amp \leq 240,\ \ \text{ cap on days }\\
 y\amp \leq 240,\ \ \text{ cap on days }
 \end{align*}
 </div>
-<p id="p-369">So sketching the inequalities, we obtain the following feasible region with corners: <iframe src="https://www.desmos.com/calculator/cjvil8macz" id="interactive-52" width="600" height="600"></iframe> The profit at each corner is as follows:</p>
+<p id="p-384">So sketching the inequalities, we obtain the following feasible region with corners: <iframe src="https://www.desmos.com/calculator/cjvil8macz" id="interactive-52" width="600" height="600"></iframe> The profit at each corner is as follows:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c} x \amp  y \amp  C(x,y)\\ \hline 130 \amp  240 \amp  960000(130)+75000(240)=142800000\\ 150 \amp  200 \amp  960000(150)+75000(200)=159000000\\ 240 \amp  80 \amp  960000(240)+75000(80)=236400000\\ 240 \amp  240 \amp  960000(240)+75000(240)=248400000\end{array}
 \end{equation*}
 </div>
-<p id="p-370">So the cost is minimized when you run the Michigan factory for 130 days and the Wisconsin Factory for 240 days.</p>
+<p id="p-385">So the cost is minimized when you run the Michigan factory for 130 days and the Wisconsin Factory for 240 days.</p>
 </div></div>
 </div></article></div></section></div></main>
 </div>

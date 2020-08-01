@@ -69,13 +69,13 @@
       The most important thing to remember is:
     </p>
     <p>
-      ``Given a bunch of points <m>(x_1, y_1), \ldots, (x_n, y_n)</m>,
+      <q>Given a bunch of points <m>(x_1, y_1), \ldots, (x_n, y_n)</m>,
       and a linear equation <m>\ell(x)=mx+b</m> the <term>error</term>
       of each point is <m>e_i=\ell(x_i)-y_i</m>,
       that is the difference between the actual <m>y</m> values,
       and what <m>\ell</m> predicts should bee the <m>y</m> values.
       We are trying to find <m>m,
-      b</m> so that the sum of the errors squared <m>\sum e_i^2</m> is minimized."
+      b</m> so that the sum of the errors squared <m>\sum e_i^2</m> is minimized.</q>
     </p>
     <p>
       Why minimize <m>\sum e_i^2</m>?
@@ -417,6 +417,8 @@
             </li>
           </ol>
         </p>
+        </statement>
+        <solution>
         <p>
           Entering this data in desmos: 
           <interactive desmos="em6xkq7udn"  />
@@ -441,7 +443,7 @@
             </li>
           </ol>
         </p>
-      </statement>
+      </solution>
     </example>
     <example xml:id="Example_CorrQuizTest">
       <statement>
@@ -453,9 +455,8 @@
           <me>
             \begin{array}{c|c} \text{ Quiz Average }  \amp  \text{ Test Average } \\ x\amp y\\ \hline 87.5\amp 100\\ 76.13\amp 94\\ 75.83\amp 93.5\\ 53.53\amp 83.5\\ 76.13\amp 83\\ 71.13\amp 78.85\\ 56.13\amp 76.5\\ 73.57\amp 70\\ 66.13\amp 69.5\\ 66.13\amp 63 \end{array}
           </me>
-        </p>
-      </statement>
-    <ol>
+
+          <ol>
       <li>
         <p>
           Find the linear relationship between Quiz grades and Test grades.
@@ -472,7 +473,12 @@
         </p>
       </li>
     </ol>
-    <p>
+        </p>
+      </statement>
+    
+    
+      <solution>
+        <p>
       So, once again: 
       <interactive desmos="atipunytb1"  />
       
@@ -498,6 +504,7 @@
         </li>
       </ol>
     </p>
+  </solution>
 </example>
 
   </subsection>

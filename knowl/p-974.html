@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:58-06:00    *-->
+<!--*    on 2020-08-01T16:12:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Assume that the total number (in millions) of bacteria present in a culture at a certain time \(t\) (in hours) is given by</p>
+<p>We <em class="emphasis">do</em> have a rule for the derivative of products. The <dfn class="terminology">product rule</dfn> and it states \(\frac{d}{dx}[f(x)g(x)]=f'(x)g(x)+f(x)g'(x)\text{.}\) To see why:</p>
 <div class="displaymath">
-\begin{equation*}
-N(t)=3t(t-8)^2+30.
-\end{equation*}
+\begin{align*}
+\frac{d}{dx}[f(x)g(x)]\amp = \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h},\ \text{ at this stage, I'm going to pull a clever trick and add by 0: }\\
+\amp = \limit{h}{0}\frac{f(x+h)g(x+h)\color{blue}{-f(x)g(x+h)+f(x)g(x+h)}-f(x)g(x)}{h}\\
+\amp = \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x+h)}{h}+\limit{h}{0}\frac{f(x)g(x+h)-f(x)g(x)}{h}\\
+\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}g(x+h)+\limit{h}{0}f(x)\frac{g(x+h)-g(x)}{h}\\
+\amp = f'(x)g(x)+f(x)g'(x)\text{.}
+\end{align*}
 </div>
-<ol class="decimal">
-<li>Find \(N'(t)\text{.}\)</li>
-<li>How fast is the population of bacteria growing in 10 hours?</li>
-</ol>
 <span class="incontext"><a href="Sec_AdvancedDerivative.html#p-974">in-context</a></span>
 </body>
 </html>

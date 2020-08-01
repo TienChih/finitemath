@@ -61,8 +61,80 @@
       <titlepage>
         <author>
           <personname>Tien Chih</personname>
+          <email>tien.chih.math@gmail.com</email>
         </author>
       </titlepage>
+
+      <colophon>
+
+      <credit>
+            <role>Cover Design</role>
+            <entity>Germancreative</entity>
+        </credit>
+
+        
+
+      </colophon>  
+
+      <biography xml:id="author-bio-TC">
+        <p>Dr. Tien Chih Grew up in Hilo, Hawaii where he graduated from Hilo High School. After briefly attending the Illinois Institute of Technology for a few years, he took a break and worked various odd jobs in Chicago for a few more years. Afterwards, he returned to Hilo and graduated with a Mathematics degree from the University of Hawaii at Hilo. He then attended the University of Montana for graduate school where he earned his Doctorate in Mathematics. He held the position of Assistant Professor at Newberry College in South Carolina for three years before returning to Montana and joining the faculty of MSUB in 2017!</p>
+
+        <p>
+          He is interested in applications of Category Theory to Graph Theory, mentoring undergraduate research, developing more engaging teaching of Mathematics,  implementing technology in teaching and OERs.
+        </p>
+
+        <p>
+          He enjoys cooking for this wife and two sons.
+        </p>
+    </biography>
+
+    <dedication>
+      <p>This text is dedicated to every student and instructor of Mathematics who believe that modern times call for modern forms of instruction.</p>
+
+    </dedication>  
+
+
+    <acknowledgement xml:id="acknowledgement">
+
+        <p>The author would like to thank #PreTeXtGang for their patience and help during this writing process.  The author would especially like to thank:
+          <ul>
+            <li><p>Robert Beezer, University of Puget Sound</p></li>
+            <li><p>Steven Clontz, University of South Alabama</p></li>
+            <li><p>David Farmer, American Institute of Mathematics</p></li>
+        </ul>
+        for their encouragement and technical support.
+      </p>
+
+        <p>This project was funded by the TRAILS OER grant through the Montana University System.  Thanks to them and to Director Christina Trunnell for their support.</p>
+
+        <p>The author acknowledges every student who had to choose between paying bills and purchasing textbooks, who had their engagement with their learning disrupted because they had to wait to purchase access to course materials, who had to drop out of courses because they could not afford the content.  The author also acknowledges every instructor who had to work around these obstacles, and who made special arrangements with their students, who wink-nudged themselves into legal grey-areas because they put their student's learning first.
+        </p>
+
+        <p>
+          The author wishes to give a big anti-shoutout to predatory publishers, and their shameful, parasitic business practices.  The author eagerly anticipates the day the OER community puts all of you  out of business.
+        </p>  
+
+        <p>
+          Consequently, the author is grateful to the companies who have embraced the 21st century, and whose products have made learning for students more accessible and more equitable.
+        </p>  
+
+    </acknowledgement>
+
+    <preface>
+      <p>
+        This is a <q>book</q> for a Finite Mathematics, Business Mathematics or similar course.  It is a work in progress, and any feedback is appreciated.  The content listed is beyond is what is likely possible to cover in one semester.  However, these subjects are all covered by some Finite Math courses somewhere.
+      </p>  
+
+      <p>
+        Finite Mathematics in general is an odd course.  The purpose of such courses is to give a broad background of useful and relevant mathematics within a single course.  This book does not assume any prerequisite in any collegiate level mathematics.  Since such courses tend to move through many subjects in a short amount of time, it is a challenege to see how best to present ideas and content in a concise manner.  This led to the choice to embrace technology to simplify much of the drudgery and tedium of computation.  Thus Sage, R and Desmos interactives are liberally used to automate certain computational details, leaving students and instructors free to focus on ideas and concepts.
+      </p>  
+
+      <p>
+        The purpose of these interactives go beyond simplifying the course.  Mathematics is best learned, not through passive absorption, but active engagement.  Thus, the author encourages the reader to modify, play with and <em>interact</em> with the interactives.  The readers and encouraged to modify the interactives to suit other problems encountered in the text, or to save the interactives themselves so they can be <q>messed with</q> by the reader at their leisure.  This is the best way to use this text.
+      </p>  
+
+    </preface>  
+
     </frontmatter>
         <xi:include href="./Chap_LinearFunctions.ptx"/>
     <xi:include href="./Chap_Matrices.ptx"/> 

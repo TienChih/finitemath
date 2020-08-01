@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:11-06:00    *-->
+<!--*    on 2020-08-01T16:12:54-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider the following about combinations.</p>
-<ul class="disc">
-<li>\(C(n,n)=1\text{.}\)  There is only one way to pick \(n\) of \(n\) objects.  Pick them all.</li>
-<li>\(C(n,r)=C(n,n-r)\text{.}\)  Picking \(r\) objects is the same as selecting \(n-r\) objects to <em class="emphasis">not</em> pick.</li>
-<li>\(C(n,0)=1\text{.}\)  Combine the above facts.  Alternatively, the only selection of no objects is the empty selection.</li>
-</ul>
-<span class="incontext"><a href="Sec_Combinations.html#p-1159">in-context</a></span>
+<p>How many ways are there to take</p>
+<div class="displaymath">
+\begin{equation*}
+A, B, B, B
+\end{equation*}
+</div>
+<p data-braille="continuation">and arrange them?  If the B's were different, there would be \(4!=24\) ways to do so:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{cccc}
+AB_1B_2B_3 \amp B_1AB_2B_3 \amp B_1B_2AB_3 \amp B_1B_2B_3A\\
+AB_1B_3B_2 \amp B_1AB_3B_2 \amp B_1B_3AB_2 \amp B_1B_3B_2A\\
+AB_2B_1B_3 \amp B_2AB_1B_3 \amp B_2B_1AB_3 \amp B_2B_1B_3A\\
+AB_2B_3B_1 \amp B_2AB_3B_1 \amp B_2B_3AB_1 \amp B_2B_3B_1A\\
+AB_3B_1B_2 \amp B_3AB_1B_2 \amp B_3B_1AB_2 \amp B_3B_1B_2A\\
+AB_3B_2B_1 \amp B_3AB_2B_1 \amp B_3B_2AB_1 \amp B_3B_2B_1A
+\end{array}
+\end{equation*}
+</div>
+<span class="incontext"><a href="Sec_Permutation.html#p-1159">in-context</a></span>
 </body>
 </html>

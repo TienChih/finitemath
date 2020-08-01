@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:47:28-06:00    *-->
+<!--*    on 2020-08-01T16:12:21-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,45 +14,28 @@
 <body>
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.2.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.6.1</span><span class="period">.</span>
 </h6>
-<ol class="decimal">
-<li>We can either be even or divisible by 5 but it must not be square, so we have \((q\vee r)\wedge \sim p\text{.}\)</li>
-<li>A truth table could be constructed as follows:\(\ \\ \)<div class="displaymath">
-\begin{equation*}
-\begin{array}{c|c|c|c|c|c} 
-p\amp q\amp  r \amp \sim p \amp q\vee r \amp (q\vee r)\wedge \sim p\\ 
-\hline 
-T \amp  T\amp T \amp F\amp T\amp F\\
-T \amp  T\amp F \amp F\amp T\amp F\\
-T \amp  F\amp T \amp F\amp T\amp F\\
-T \amp  F\amp F \amp F\amp F\amp F\\
-F \amp  T\amp T \amp T\amp T\amp T\\
-F \amp  T\amp F \amp T\amp T\amp T\\
-F \amp  F\amp T \amp T\amp T\amp T\\
-F \amp  F\amp F \amp T\amp F\amp F\\
-\end{array}
-\end{equation*}
-</div>Which is only true if so long as \(x\) is not square, but it is either a multiple of 2 or 5 or both.</li>
-<li>"\(x\) is a square, which is even or divisible by 5".</li>
-<li>\(\ \\ \)<div class="displaymath">
-\begin{equation*}
-\begin{array}{c|c|c|c|c|c} 
-p\amp q\amp  r  \amp q\vee r \amp p\wedge (q\vee r)\\ 
-\hline 
-T \amp  T\amp T \amp T\amp T\\
-T \amp  T\amp F \amp T\amp T\\
-T \amp  F\amp T \amp T\amp T\\
-T \amp  F\amp F \amp F\amp F\\
-F \amp  T\amp T \amp T\amp F\\
-F \amp  T\amp F \amp T\amp F\\
-F \amp  F\amp T \amp T\amp F\\
-F \amp  F\amp F \amp F\amp F\\
-\end{array}
-\end{equation*}
-</div>This is true so long as \(x\) is a square, and is either a multiple of 2 or 5.</li>
-</ol>
+<p>Let \(x\) be the number of days the Michigan factory is run and \(y\) the number of days the Wisconsin Factory is run. The goal is minimizing the cost \(C(x,y)=960000x+75000y\text{.}\) The inequalities we are subject to are:</p>
+<div class="displaymath">
+\begin{align*}
+20x+10y\amp \geq 5000,\ \ \text{Cruisers needed}\\
+40x+30y\amp \geq 12000,\ \ \text{Pontoons Needed}\\
+60x+50y\amp \leq 30000,\ \ \text{Maximum Jet Skis}\\
+x\amp \geq 0,\ \ \text{ no negative days }\\
+y\amp \geq 0,\ \ \text{ no negative days }\\
+x\amp \leq 240,\ \ \text{ cap on days }\\
+y\amp \leq 240,\ \ \text{ cap on days }
+\end{align*}
 </div>
-<span class="incontext"><a href="Sec_Statements.html#solution-16">in-context</a></span>
+<p>So sketching the inequalities, we obtain the following feasible region with corners: <iframe src="https://www.desmos.com/calculator/cjvil8macz" id="interactive-52" width="600" height="600"></iframe> The profit at each corner is as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c} x \amp  y \amp  C(x,y)\\ \hline 130 \amp  240 \amp  960000(130)+75000(240)=142800000\\ 150 \amp  200 \amp  960000(150)+75000(200)=159000000\\ 240 \amp  80 \amp  960000(240)+75000(80)=236400000\\ 240 \amp  240 \amp  960000(240)+75000(240)=248400000\end{array}
+\end{equation*}
+</div>
+<p>So the cost is minimized when you run the Michigan factory for 130 days and the Wisconsin Factory for 240 days.</p>
+</div>
+<span class="incontext"><a href="Sec_LinearOptimization.html#solution-16">in-context</a></span>
 </body>
 </html>

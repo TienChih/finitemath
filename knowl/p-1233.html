@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T09:48:15-06:00    *-->
+<!--*    on 2020-08-01T16:12:58-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,19 +13,24 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So we now arrive at the interesting version of this problem, but it's fundamentally not different from the above version.  So let's see:</p>
-<ul class="disc">
-<li>There are \(C(n,k)\) ways one could select \(k\) out of the \(n\) exams to receive an A.</li>
-<li>Given any of those, the chance she gets A's on those \(k\) exams is \(p\) per exam, so to get A's on all of them has prob \(p^k\text{.}\)</li>
-<li>Then for the remaining \(n-k\) exams, each has a \(1-p\) chance of not getting an A.  So the chance that those exams don't receive an A is \((1-p)^{n-k}\text{.}\)</li>
-</ul>
-<p data-braille="continuation">Putting these together, the probability that she receives those $k$ A's is:</p>
+<p>Recall the probability distribution of poisened apples.</p>
 <div class="displaymath">
 \begin{equation*}
-C(n,k) p^k (1-p)^{n-k}.
+\begin{array}{|c|cccc|}
+\hline
+x \amp 0 \amp 1 \amp 2 \amp 3 \\
+\hline
+P(X=x) \amp \frac{35}{210}\approx 0.1667\amp \frac{105}{210}=0.5 \amp \frac{63}{210}=0.3 \amp \frac{7}{210}\approx 0.0333\\
+\hline
+\end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">Of course, this all extends beyond exam grades and A's.</p>
-<span class="incontext"><a href="Sec_Binomial.html#p-1233">in-context</a></span>
+<p data-braille="continuation">So the expected value of poisened apples would be</p>
+<div class="displaymath">
+\begin{equation*}
+E(X)=0\cdot\frac{35}{210}+1\cdot\frac{=105}{210}+2\cdot\frac{63}{210}+3\cdot\frac{7}{210}=1.2.
+\end{equation*}
+</div>
+<span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1233">in-context</a></span>
 </body>
 </html>
