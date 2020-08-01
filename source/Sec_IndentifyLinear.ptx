@@ -114,7 +114,7 @@
     <p>
       So given a linear function is defined by the slope <m>m</m> and intercept <m>b</m>.
       By the discussion above,
-      if we are given a slope <m>\textcolor{red}{m}</m> and a pair of points <m>\textcolor{blue}{(x_0,y_0)}</m>,
+      if we are given a slope <m>\color{red}{m}</m> and a pair of points <m>\color{blue}{(x_0,y_0)}</m>,
       we should be able to uniquely identify <m>b</m>.
     </p>
     <example xml:id="Example_PandS">
@@ -123,11 +123,11 @@
           Find the linear function with slope 3 passing through <m>(2,5)</m>.
         </p>
         <p>
-          Note that we are given <m>\textcolor{red}{m=3}</m> and <m>\textcolor{blue}{(x_0,y_0)=(2,5)}</m>.
+          Note that we are given <m>\color{red}{m=3}</m> and <m>\color{blue}{(x_0,y_0)=(2,5)}</m>.
           The general form for a line is <m>y=mx+b</m>, thus:
           <md>
             <mrow>y\amp = mx+b</mrow>
-            <mrow>\textcolor{blue}{5}\amp = \textcolor{red}{3}\cdot\textcolor{blue}{2}+b</mrow>
+            <mrow>\color{blue}{5}\amp = \color{red}{3}\cdot\color{blue}{2}+b</mrow>
             <mrow>5\amp = 6+b</mrow>
             <mrow>b\amp = 5-6=-1</mrow>
           </md>.
@@ -196,11 +196,11 @@
         </p>
         <p>
           Using the point-slope form,
-          knowing that <m>\textcolor{blue}{(2,5)}</m> lies on the line,
-          and that <m>\textcolor{red}{m}</m>:
+          knowing that <m>\color{blue}{(2,5)}</m> lies on the line,
+          and that <m>\color{red}{m}</m>:
           <md>
             <mrow>y-y_0\amp = m(x-x_0)</mrow>
-            <mrow>y-\textcolor{blue}{5}\amp = \textcolor{red}{3}(x-\textcolor{blue}{2})</mrow>
+            <mrow>y-\color{blue}{5}\amp = \color{red}{3}(x-\color{blue}{2})</mrow>
             <mrow>y\amp = 3x-6+5</mrow>
             <mrow>y\amp = 3x-1</mrow>
           </md>.
@@ -254,27 +254,27 @@
           What line passes between <m>(2,3)</m> and <m>(4,1)</m>?
         </p>
         <p>
-          So we note then that <m>\textcolor{red}{m=\frac{1-3}{4-2}=-1}</m>
-          (also <m>\textcolor{red}{m=\frac{3-1}{2-4}=-1}</m>).
+          So we note then that <m>\color{red}{m=\frac{1-3}{4-2}=-1}</m>
+          (also <m>\color{red}{m=\frac{3-1}{2-4}=-1}</m>).
           Once the slope is identified,
           we can use any point, and any method to find the line.
           Once we pick a point, We have a problem that follows the form of <xref ref="Example_PandS">Examples</xref>,
           <xref ref="Example_PandSagain"></xref>.
         </p>
         <p>
-          We won't go through all the possibilities but if we considered the point <m>\textcolor{blue}{(2,3)}</m>:
+          We won't go through all the possibilities but if we considered the point <m>\color{blue}{(2,3)}</m>:
           <md>
             <mrow>y\amp = mx+b</mrow>
-            <mrow>\textcolor{blue}{3}\amp = \textcolor{red}{-1}\cdot \textcolor{blue}{2}+b</mrow>
+            <mrow>\color{blue}{3}\amp = \color{red}{-1}\cdot \color{blue}{2}+b</mrow>
             <mrow>b\amp = 3+2=5</mrow>
             <mrow>y\amp = -x+5</mrow>
           </md>.
         </p>
         <p>
-          Or if we picked <m>\textcolor{blue}{(1,4)}</m>:
+          Or if we picked <m>\color{blue}{(1,4)}</m>:
           <md>
             <mrow>y-y_0\amp = m(x-x_0)</mrow>
-            <mrow>y-\textcolor{blue}{1}\amp = \textcolor{red}{-1}\cdot(x-\textcolor{blue}{4})</mrow>
+            <mrow>y-\color{blue}{1}\amp = \color{red}{-1}\cdot(x-\color{blue}{4})</mrow>
             <mrow>y\amp = -x+4+1</mrow>
             <mrow>y\amp = -x+5</mrow>
           </md>.
@@ -332,10 +332,10 @@
         <ol>
           <li>
             <p>
-              When <m>\textcolor{ForestGreen}{y=0}</m>, we have:
+              When <m>\color{ForestGreen}{y=0}</m>, we have:
               <md>
                 <mrow>y\amp =\amp 2x-3</mrow>
-                <mrow>\textcolor{ForestGreen}{0}\amp =\amp 2x-3</mrow>
+                <mrow>\color{ForestGreen}{0}\amp =\amp 2x-3</mrow>
                 <mrow>3\amp =\amp 2x</mrow>
                 <mrow>x\amp =\amp 1.5</mrow>
               </md>.
@@ -343,10 +343,10 @@
           </li>
           <li>
             <p>
-              If <m>\textcolor{orange}{x=3}</m>:
+              If <m>\color{orange}{x=3}</m>:
               <md>
                 <mrow>y\amp = 2x-3</mrow>
-                <mrow>y\amp = 2(\textcolor{orange}{3})-3</mrow>
+                <mrow>y\amp = 2(\color{orange}{3})-3</mrow>
                 <mrow>y\amp = 6-3=3</mrow>
               </md>.
               We can identify both points graphically as well:   <interactive desmos="gukgr4sjfm"  />
