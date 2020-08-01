@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-31T05:43:33-06:00    *-->
+<!--*    on 2020-07-31T21:28:23-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,29 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Suppose that out of coffee drinkers, 80% of those who use cream also add sugar, and 30% of those who don't use cream add sugar.  Suppose that 70% of coffee drinkers use cream.</p>
-<ol class="decimal">
-<li>What proportion of coffee drinkers use sugar?</li>
-<li>Given a random coffee drinker who uses sugar, what is the probability they use cream?</li>
-<li>How many coffee drinkers drink their coffee black?  (no cream or sugar)</li>
-</ol>
+<p>So if 40% of the vehicles are built in plant A, then \(P(Y)=0.4\text{,}\) and we should be able to determine how many vehicles pass inspection.  We first note that the percent of vehicles who are from plant A and pass inspection is</p>
+<div class="displaymath">
+\begin{equation*}
+P(X\cap Y)=P(X|Y)P(Y)=(0.85)(0.4)=0.34.
+\end{equation*}
+</div>
+<p data-braille="continuation">Next, to see the percent of vehicles who are from plant B and pass inspection is</p>
+<div class="displaymath">
+\begin{equation*}
+P(X\cap Y^c)=P(X|Y^c)P(Y^c)=P(X|Y^c)(1-P(Y))=(0.7)(0.6)=0.42.
+\end{equation*}
+</div>
+<p data-braille="continuation">So the total percent of cars who pass inspection is:</p>
+<div class="displaymath">
+\begin{align*}
+P(X)\amp =P(X\cap Y)+P(X\cap Y^c)\\
+\amp =P(X|Y)P(Y)+P(X|Y^c)P(Y^c)\\
+\amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
+\amp =(0.85)(0.4)+(0.7)(0.6)\\
+\amp =0.34+0.42=0.76
+\end{align*}
+</div>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/ndd9pzxcqp" id="interactive-174" width="600" height="600"></iframe></p>
 <span class="incontext"><a href="Sec_Bayes.html#p-1110">in-context</a></span>
 </body>
 </html>

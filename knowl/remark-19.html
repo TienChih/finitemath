@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-20T19:15:28-06:00    *-->
+<!--*    on 2020-07-31T21:28:23-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,23 @@
 </head>
 <body>
 <article class="remark remark-like"><h6 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplication Principle.</span>
-</h6> If we have to make \(n\) choices, each with \(m_1, m_2, m_3,\ldots,m_n\) choices each, then the number of ways we can pick one of each choice is<div class="displaymath">
-\begin{equation*}
-m_1\cdot m_2\cdots m_n.
-\end{equation*}
-</div></article><span class="incontext"><a href="Sec_Permutation.html#remark-19">in-context</a></span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.4.2</span><span class="period">.</span>
+</h6>
+<p>Reworking <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a>, we obtain:</p>
+<div class="displaymath">
+\begin{align*}
+P(X)\amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
+P(X)\amp =P(X|Y)P(Y)+P(X|Y^c)-P(X|Y^c)P(Y)\\
+P(X)-P(X|Y^c)\amp =(P(X|Y)-P(X|Y^c))P(Y)\\
+P(Y)\amp =\frac{P(X)-P(X|Y^c)}{P(X|Y)-P(X|Y^c)}.
+\end{align*}
+</div>
+<p data-braille="continuation">And:</p>
+<div class="displaymath">
+\begin{align*}
+P(Y|X)\amp =\frac{P(Y\cap X)}{P(X)}\\
+\amp =\frac{P(X|Y)P(X)}{P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))}.
+\end{align*}
+</div></article><span class="incontext"><a href="Sec_Bayes.html#remark-19">in-context</a></span>
 </body>
 </html>

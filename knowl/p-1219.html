@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-31T05:43:39-06:00    *-->
+<!--*    on 2020-07-31T21:28:27-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,18 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We note that the device has a \(0.3\) chance to fail in the first year, \((0.7)(0.3)\) chance to fail the second since it had to survive the first, \((0.7)^2(0.3)\) to fail the third year, after which the policy ends.  So if \(X\) is the payout, then it has distribution</p>
+<p>Then</p>
 <div class="displaymath">
 \begin{equation*}
-\begin{array}{|c|cccc|}
-\hline
-x \amp 3000 \amp 2000 \amp 1000 \amp 0 \\
-\hline
-P(X=x) \amp (0.3) \amp (0.7)(0.3) \amp (0.7)^2(0.3) \amp 1-(0.3)-(0.7)(0.3)-(0.7)^2(0.3)\\
-\hline
-\end{array}
+E(X^2)=0^2\cdot\frac{35}{210}+1^2\cdot\frac{=105}{210}+2^2\cdot\frac{63}{210}+3^3\cdot\frac{7}{210}=2.
 \end{equation*}
 </div>
+<p data-braille="continuation">So</p>
+<div class="displaymath">
+\begin{equation*}
+Var(X)=E(X^2)-E(X)^2=2-1.2^2=0.56.
+\end{equation*}
+</div>
+<p data-braille="continuation">Which may also be computed: <iframe src="https://www.desmos.com/calculator/ff9t1rdmef" id="interactive-187" width="600" height="600"></iframe></p>
 <span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1219">in-context</a></span>
 </body>
 </html>

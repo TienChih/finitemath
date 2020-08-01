@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-31T05:43:36-06:00    *-->
+<!--*    on 2020-07-31T21:28:25-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>In this section, we apply together what's learned from <a href="Chap_SetProb.html" class="internal" title="Chapter 8: Introduction to Sets and Probabilty">Chapter 8</a> and <a href="Sec_Permutation.html" class="internal" title="Section 9.1: Multiplication Principle and Permutations">Section 9.1</a>, <a href="Sec_Combinations.html" class="internal" title="Section 9.2: Combinations and Binomial Coefficients">Section 9.2</a> to compute probabilities.</p>
-<span class="incontext"><a href="Sec_AppstoProb.html#p-1168">in-context</a></span>
+<p>We note that there are 11 non-poisened apples.</p>
+<ol class="decimal">
+<li>Ths is picking 4 of 15 objects so \(C(15,4)=1365\text{.}\)</li>
+<li>Ths is picking 4 of 11 objects so \(C(11,4)=330\text{.}\)</li>
+<li>Ths is picking 4 of 5 objects so \(C(5,4)=5\text{.}\)</li>
+<li>Ths is picking 2 of 5 objects to be posiened, 2 of 11 objects for not poisened, and combining these selections, so  \(C(5,2)\cdot C(11,2)=10\cdot55 =550.\text{.}\)</li>
+<li>This is either no apples poisened, which has 330 possibilies as seen above, or 1 apple poisened, counted \(C(5,1)\cdot C(11,3)=5\cdot 165=825\text{.}\)  Thus we have \(330+825=1155\) ways to have no or one poisened apple.</li>
+</ol>
+<span class="incontext"><a href="Sec_Combinations.html#p-1168">in-context</a></span>
 </body>
 </html>

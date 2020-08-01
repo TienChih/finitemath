@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-31T05:43:40-06:00    *-->
+<!--*    on 2020-07-31T21:28:28-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,17 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We note \(n=5, p=0.7\text{,}\) let \(X\) denote the number of succesful shots.</p>
-<ol class="decimal">
-<li>This is \(P(X=3)=C(5,3)(0.7)^3(0.3)^2=0.3087\)</li>
-<li>At least 4 means 4 or 5.  So this is<div class="displaymath">
+<p>So we now arrive at the interesting version of this problem, but it's fundamentally not different from the above version.  So let's see:</p>
+<ul class="disc">
+<li>There are \(C(n,k)\) ways one could select \(k\) out of the \(n\) exams to receive an A.</li>
+<li>Given any of those, the chance she gets A's on those \(k\) exams is \(p\) per exam, so to get A's on all of them has prob \(p^k\text{.}\)</li>
+<li>Then for the remaining \(n-k\) exams, each has a \(1-p\) chance of not getting an A.  So the chance that those exams don't receive an A is \((1-p)^{n-k}\text{.}\)</li>
+</ul>
+<p data-braille="continuation">Putting these together, the probability that she receives those $k$ A's is:</p>
+<div class="displaymath">
 \begin{equation*}
-P(X=4)+P(X=5)=C(5,4)(0.7)^4(0.3)^1+C(5,5)(0.7)^5(0.3)^0=0.3602+0.1681=0.5283.
+C(n,k) p^k (1-p)^{n-k}.
 \end{equation*}
 </div>
-</li>
-</ol>
-<p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/94ibomyrpv" id="interactive-191" width="600" height="600"></iframe></p>
+<p data-braille="continuation">Of course, this all extends beyond exam grades and A's.</p>
 <span class="incontext"><a href="Sec_Binomial.html#p-1233">in-context</a></span>
 </body>
 </html>

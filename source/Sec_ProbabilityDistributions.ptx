@@ -74,6 +74,9 @@ A <term>probability distribution</term> is, roughly speaking, a complete descrip
   <interactive desmos="ewkox50rsz"/>
 </p>  
 
+
+
+
 <remark>
   <statement>
     <p>
@@ -195,6 +198,26 @@ There is a <m>\frac{63}{210}+\frac{7}{210}=\frac{1}{3}</m> chance she eats at le
 As usual, menial computation is for machines:
 <interactive desmos="00ih4xhxdz"/>
 </p>  
+
+
+<p>  We can use sagecells and R to simulate these outcomes.  We let <m>n</m> denote the number of trials, <m>X</m> the outcomes, and <m>p</m> their probabilities.  The histogram of outcomes, mean, variance and standard deviations are displayed below:
+</p>
+<sage language="r">
+        <input>
+n&lt;-1500
+X&lt;-c(1,2,3,4,5,6)
+prob&lt;-c(1/6,1/6,1/6,1/6,1/6,1/6)
+Results&lt;-sample(X,n,replace=TRUE, prob)
+
+hist(Results)
+
+print(mean(Results))
+print(var(Results))
+print(sd(Results))
+        </input>
+        <output>
+        </output>
+      </sage>
 
 
 

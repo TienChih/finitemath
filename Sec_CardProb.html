@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-31T05:42:33-06:00    *-->
+<!--*    on 2020-07-31T21:27:38-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -41,7 +41,23 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script>$(function () {
+    // Make *any* div with class 'sagecell-r' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-r',
+                           linked: true,
+                           languages: ['r'],
+                           evalButtonText: 'Evaluate (R)'});
+});
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -310,9 +326,29 @@ P(A)=\frac{|A|}{|S|}.
 \end{equation*}
 </div>
 </li>
-</ul></article><article class="example example-like" id="example-87"><a data-knowl="" class="id-ref original" data-refid="hk-example-87"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.11</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-87"><article class="example example-like"><p id="p-1046">Consider the outcomes of rolling a single six-sided dice.  Let \(X\) denote the event “The outcome is even” and \(Y\) denote “The outcome is at least a 4”.  Find the follo0wing:</p>
+</ul></article><article class="remark remark-like" id="remark-15"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.2.11</span><span class="period">.</span>
+</h6>
+<p id="p-1046">But what does it mean for an event \(A\) to have probability \(P(A)\text{?}\)  It means that if I repeat the experiment over and over, the proportion of them where \(A\) is true should be \(P(A)\text{.}\)</p>
+<p id="p-1047">So if I roll a die over and over, the proportion of them that give me a 6 over time should be \(\frac{1}{6}\text{.}\)  So if we roll a dice 10000 times, we would expect one sixth of them to come up heads:</p>
+<div class="sagecell-r" id="sage-5"><script type="text/x-sage">          n=10000
+
+sixes=0
+Sixvec<-vector(length = 0)
+
+for (i in 1:n){
+  roll=sample(1:6,1,replace=TRUE)
+  if (roll==1){
+    sixes=sixes+1
+  }
+Sixvec<-c(Sixvec, sixes/i)  
+}
+
+plot(Sixvec, type="l", ylim=c(0,1))
+abline(h=1/6, col="red", lty=2)
+</script></div></article><article class="example example-like" id="example-87"><a data-knowl="" class="id-ref original" data-refid="hk-example-87"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.12</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-87"><article class="example example-like"><p id="p-1048">Consider the outcomes of rolling a single six-sided dice.  Let \(X\) denote the event “The outcome is even” and \(Y\) denote “The outcome is at least a 4”.  Find the follo0wing:</p>
 <ul class="disc">
 <li id="li-508">\(X\text{.}\)</li>
 <li id="li-509">\(Y\text{.}\)</li>
@@ -321,7 +357,7 @@ P(A)=\frac{|A|}{|S|}.
 <li id="li-512">\(X\cap Y^c\text{.}\)</li>
 <li id="li-513">\(X^c\cup Y\text{.}\)</li>
 </ul>
-<p id="p-1048">Then find:</p>
+<p id="p-1050">Then find:</p>
 <ul class="disc">
 <li id="li-520">\(P(X)\text{.}\)</li>
 <li id="li-521">\(P(Y)\text{.}\)</li>
@@ -332,7 +368,7 @@ P(A)=\frac{|A|}{|S|}.
 </ul>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-108" id="solution-108"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-108"><div class="solution solution-like">
-<p id="p-1047">Notice:</p>
+<p id="p-1049">Notice:</p>
 <ul class="disc">
 <li id="li-514">\(X=\{2,4,6\}\text{.}\)</li>
 <li id="li-515">\(Y=\{4,5,6\)\text{.}\)</li>
@@ -342,10 +378,10 @@ P(A)=\frac{|A|}{|S|}.
 <li id="li-519">\(X^c\cup Y=\{1,3,4,5,6\}\text{.}\)</li>
 </ul>
 <p data-braille="continuation">Observe the venn diagram: <figure class="figure figure-like" id="figure-21"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-65.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.12<span class="period">.</span></span><span class="space"> </span>Each event \(X, Y\) and their respective elements.</figcaption></figure></p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.13<span class="period">.</span></span><span class="space"> </span>Each event \(X, Y\) and their respective elements.</figcaption></figure></p>
 </div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-109" id="solution-109"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-109"><div class="solution solution-like">
-<p id="p-1049">From above:</p>
+<p id="p-1051">From above:</p>
 <ul class="disc">
 <li id="li-526">\(P(X)=\frac{3}{6}\text{.}\)</li>
 <li id="li-527">\(P(Y)=\frac{3}{6}\text{.}\)</li>
@@ -355,25 +391,37 @@ P(A)=\frac{|A|}{|S|}.
 <li id="li-531">\(P(X^c\cup Y)=\frac{5}{6}\text{.}\)</li>
 </ul>
 <p data-braille="continuation">We can modify our above venn diagram to list probabilities: <figure class="figure figure-like" id="figure-22"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-66.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.13<span class="period">.</span></span><span class="space"> </span>Each event \(X, Y\) and their respective probabilities.</figcaption></figure></p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.14<span class="period">.</span></span><span class="space"> </span>Each event \(X, Y\) and their respective probabilities.</figcaption></figure></p>
 </div></div>
 </div></article></div>
-<article class="remark remark-like" id="remark-15"><h6 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.2.14</span><span class="period">.</span>
+<article class="remark remark-like" id="remark-16"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.2.15</span><span class="period">.</span>
 </h6>
-<p id="p-1050">We note the following about probability:</p>
+<p id="p-1052">We note the following about probability:</p>
 <ul class="disc">
 <li id="li-532">\(P(A^c)=\frac{|S|-|A|}{\mathcal{U}}=\frac{|S|}{|S|}-\frac{|A|}{|S|}=1-P(A)\text{.}\)</li>
 <li id="li-533">\(P(\emptyset)=\frac{0}{|S|}=0\text{.}\)</li>
 <li id="li-534">\(P(A)=P(A\cap B)+P(A\cap B^c)\text{,}\) since the outcomes which constitute \(A\) all either belong to \(B\) or they don't.</li>
 <li id="li-535">\(P(A\cup B)=\frac{|A\cup B|}{|S|}=\frac{|A|+ |B|-|A\cap B|}{|S|}=P(A)+P(B)-P(A\cap B)\text{.}\)</li>
 </ul></article><article class="definition definition-like" id="definition-23"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.15</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.16</span><span class="period">.</span>
 </h6>
-<p id="p-1051">Two sets \(A, B\) are <dfn class="terminology">mutually exclusive</dfn> or <dfn class="terminology">disjoint</dfn> if \(P(A\cap B)=0\text{.}\)  In other words, \(A\) and \(B\) cannot occur at the same time.</p></article><p id="p-1052">We can see in the interactive below, that if we roll a dice 1000 times, then the probabilty of \(A\) the outcome being even will be about \(P(A)=\frac{1}{2}\text{,}\) the probabilty of \(B\) the outcome being greater than or equal to 4 will be about \(P(B)=\frac{1}{2}\text{,}\) for \(A\cap B\text{,}\) both occuring, is about \(P(A\cap B)=\frac{1}{3}\) and for \(A\cup B\) either occuring, is about \(P(A\cup B)=\frac{1}{2}+\frac{1}{2}-\frac{1}{3}=\frac{2}{3}.\) <iframe src="https://www.desmos.com/calculator/9b6d2rs6sd" id="interactive-171" width="600" height="600"></iframe> Hit the shuffle on the top left to “re-roll” the dice.</p>
+<p id="p-1053">Two sets \(A, B\) are <dfn class="terminology">mutually exclusive</dfn> or <dfn class="terminology">disjoint</dfn> if \(P(A\cap B)=0\text{.}\)  In other words, \(A\) and \(B\) cannot occur at the same time.</p></article><p id="p-1054">We can see in the interactive below, that if we roll a dice 1000 times, then the probabilty of \(A\) the outcome being even will be about \(P(A)=\frac{1}{2}\text{,}\) the probabilty of \(B\) the outcome being greater than or equal to 4 will be about \(P(B)=\frac{1}{2}\text{,}\) for \(A\cap B\text{,}\) both occuring, is about \(P(A\cap B)=\frac{1}{3}\) and for \(A\cup B\) either occuring, is about \(P(A\cup B)=\frac{1}{2}+\frac{1}{2}-\frac{1}{3}=\frac{2}{3}.\) <iframe src="https://www.desmos.com/calculator/9b6d2rs6sd" id="interactive-171" width="600" height="600"></iframe> Hit the shuffle on the top left to “re-roll” the dice.</p>
+<p id="p-1055">We can also do this with sage.  We roll a dice \(n=1500\) times:</p>
+<div class="sagecell-r" id="sage-6"><script type="text/x-sage">n<-1500
+X<-c(1,2,3,4,5,6)
+prob<-c(1/6,1/6,1/6,1/6,1/6,1/6)
+Results<-sample(X,n,replace=TRUE, prob)
+
+hist(Results)
+
+print(mean(Results))
+print(var(Results))
+print(sd(Results))
+</script></div>
 <article class="exercise exercise-like" id="ExerciseWeather"><a data-knowl="" class="id-ref original" data-refid="hk-ExerciseWeather"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.16</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseWeather"><article class="exercise exercise-like"><p id="p-1053">Suppose that today, there is a 20% chance it rains, a 10% chance that I will be in a bad mood, and an 8% chance that it rains <em class="emphasis">and</em> I'm in a bad mood.</p>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.17</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseWeather"><article class="exercise exercise-like"><p id="p-1056">Suppose that today, there is a 20% chance it rains, a 10% chance that I will be in a bad mood, and an 8% chance that it rains <em class="emphasis">and</em> I'm in a bad mood.</p>
 <ol class="decimal">
 <li id="li-536">What is the probability it rains <em class="emphasis">or</em> I'm in a bad mood?</li>
 <li id="li-537">What is the probability it rains <em class="emphasis">and</em> I'm in a good mood?</li>
@@ -381,24 +429,24 @@ P(A)=\frac{|A|}{|S|}.
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-110" id="solution-110"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-110"><div class="solution solution-like">
-<p id="p-1054">If we let \(R\) denote “It rains” and \(B\) denote “I am in a bad mood” then we are given \(P(R)=0.2, P(B)=0.1, P(R\cap B)=0.08\) and may fill out the following venn diagram: <figure class="figure figure-like" id="figure-23"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-67.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.17<span class="period">.</span></span><span class="space"> </span>Each event \(R, B\) and their respective probabilities.</figcaption></figure></p>
+<p id="p-1057">If we let \(R\) denote “It rains” and \(B\) denote “I am in a bad mood” then we are given \(P(R)=0.2, P(B)=0.1, P(R\cap B)=0.08\) and may fill out the following venn diagram: <figure class="figure figure-like" id="figure-23"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-67.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.18<span class="period">.</span></span><span class="space"> </span>Each event \(R, B\) and their respective probabilities.</figcaption></figure></p>
 <ol class="decimal">
 <li id="li-539">This is \(P(R\cup B)\text{,}\) which we could compute \(P(R\cup B)=0.12+0.2+0.8=0.22\) or \(P(R\cup B)=P(R)+P(B)-P(R\cap B)=0.2+0.1-0.08=0.22\text{.}\) <figure class="figure figure-like" id="figure-24"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-68.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.18<span class="period">.</span></span><span class="space"> </span>\(R\cup B\)</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.19<span class="period">.</span></span><span class="space"> </span>\(R\cup B\)</figcaption></figure>
 </li>
 <li id="li-540">This is \(P(R\cap B^c)\text{,}\) which we can see is \(P(R\cap B^c)=0.12\text{.}\) <figure class="figure figure-like" id="figure-25"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-69.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.19<span class="period">.</span></span><span class="space"> </span>\(R\cap B^c\)</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.20<span class="period">.</span></span><span class="space"> </span>\(R\cap B^c\)</figcaption></figure>
 </li>
 <li id="li-541">This is \(P(R^c\cup B)\text{,}\) which we can see is \(P(R^c\cup B)=0.78+0.02+0.08=0.88\text{.}\) <figure class="figure figure-like" id="figure-26"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-70.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.20<span class="period">.</span></span><span class="space"> </span>\(R^c\cup B\)</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.21<span class="period">.</span></span><span class="space"> </span>\(R^c\cup B\)</figcaption></figure>
 </li>
 </ol>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="ExerciseClass"><a data-knowl="" class="id-ref original" data-refid="hk-ExerciseClass"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.21</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseClass"><article class="exercise exercise-like"><p id="p-1055">Suppose that in a Mathematics department, 20% of the students have done undergraduate research, 25% have gone to conferences.  We also have that 30% have done either one or the other.</p>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.22</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseClass"><article class="exercise exercise-like"><p id="p-1058">Suppose that in a Mathematics department, 20% of the students have done undergraduate research, 25% have gone to conferences.  We also have that 30% have done either one or the other.</p>
 <ol class="decimal">
 <li id="li-542">What is the proportion of students who have done both undergraduate research and gone to conferences?</li>
 <li id="li-543">What is the proportion of students who have gone to conferences but without having done undergraduate research?</li>
@@ -406,7 +454,7 @@ P(A)=\frac{|A|}{|S|}.
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-111" id="solution-111"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-111"><div class="solution solution-like">
-<p id="p-1056">If we let \(R\) denote “has done undergraduate research” and \(C\) denote “has gone to a conference” then we are given \(P(R)=0.2, P(C)=0.25, P(R\cup C)=0.3\text{:}\)</p>
+<p id="p-1059">If we let \(R\) denote “has done undergraduate research” and \(C\) denote “has gone to a conference” then we are given \(P(R)=0.2, P(C)=0.25, P(R\cup C)=0.3\text{:}\)</p>
 <ol class="decimal">
 <li id="li-545">This is \(P(R\cap C)\text{:}\)<div class="displaymath">
 \begin{align*}
@@ -415,20 +463,20 @@ P(R\cup C)\amp = P(R)+P(C)-P(R\cap C) \\
 P(R\cap C)\amp=0.15 
 \end{align*}
 </div>From here we may fill out the following diagram <figure class="figure figure-like" id="figure-27"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-71.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.22<span class="period">.</span></span><span class="space"> </span>\(R, C\) and their probabilities</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.23<span class="period">.</span></span><span class="space"> </span>\(R, C\) and their probabilities</figcaption></figure>
 </li>
 <li id="li-546">This is \(P(R\cap C^c)\text{,}\) which we can see is \(P(R\cap C^c)=0.05\text{.}\) <figure class="figure figure-like" id="figure-28"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-72.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.23<span class="period">.</span></span><span class="space"> </span>\(R\cap C^c\)</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.24<span class="period">.</span></span><span class="space"> </span>\(R\cap C^c\)</figcaption></figure>
 </li>
 <li id="li-547">This is \(P(R^c\cap C^c)\text{,}\) which we can see is \(P(R^c\cap C^c)=0.7\text{.}\) <figure class="figure figure-like" id="figure-29"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-73.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.24<span class="period">.</span></span><span class="space"> </span>\(R^c\cap C^c\)</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.25<span class="period">.</span></span><span class="space"> </span>\(R^c\cap C^c\)</figcaption></figure>
 </li>
 </ol>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-75"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-75"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.25</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-75"><article class="exercise exercise-like"><p id="p-1057">Roll two six-sided dice.  Let \(A\) denote “first die outcome is a 6”, \(B\) denotes “the sum of the outcomes is at least 10” and \(C\) denote “second die outcome is a 3”. Find the following:</p>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.26</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-75"><article class="exercise exercise-like"><p id="p-1060">Roll two six-sided dice.  Let \(A\) denote “first die outcome is a 6”, \(B\) denotes “the sum of the outcomes is at least 10” and \(C\) denote “second die outcome is a 3”. Find the following:</p>
 <ol class="decimal">
 <li id="li-548">\(P(A)\text{.}\)</li>
 <li id="li-549">\(P(B)\text{.}\)</li>
@@ -439,7 +487,7 @@ P(R\cap C)\amp=0.15
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-112" id="solution-112"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-112"><div class="solution solution-like">
-<p id="p-1058">We first note that \(|S|=36\) possible pair of die rolls:</p>
+<p id="p-1061">We first note that \(|S|=36\) possible pair of die rolls:</p>
 <div class="displaymath">
 \begin{equation*}
 (1,1),(1,2),(1,3),(1,4),(1,5),(1,6)

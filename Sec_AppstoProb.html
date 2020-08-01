@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-31T05:42:37-06:00    *-->
+<!--*    on 2020-07-31T21:27:41-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -201,13 +201,13 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_AppstoProb"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">Applications to Probability</span>
 </h2>
-<section class="introduction" id="introduction-44"><p id="p-1168">In this section, we apply together what's learned from <a href="Chap_SetProb.html" class="internal" title="Chapter 8: Introduction to Sets and Probabilty">Chapter 8</a> and <a href="Sec_Permutation.html" class="internal" title="Section 9.1: Multiplication Principle and Permutations">Section 9.1</a>, <a href="Sec_Combinations.html" class="internal" title="Section 9.2: Combinations and Binomial Coefficients">Section 9.2</a> to compute probabilities.</p></section><section class="subsection" id="subsection-94"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-44"><p id="p-1171">In this section, we apply together what's learned from <a href="Chap_SetProb.html" class="internal" title="Chapter 8: Introduction to Sets and Probabilty">Chapter 8</a> and <a href="Sec_Permutation.html" class="internal" title="Section 9.1: Multiplication Principle and Permutations">Section 9.1</a>, <a href="Sec_Combinations.html" class="internal" title="Section 9.2: Combinations and Binomial Coefficients">Section 9.2</a> to compute probabilities.</p></section><section class="subsection" id="subsection-94"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.3.1</span> <span class="title">Turning Counting into Probability</span>
 </h3>
-<p id="p-1169">Recall  <a class="xref" data-knowl="./knowl/DefinitionProb.html" title="Definition 8.2.10">Definition 8.2.10</a>.   We are now equipped to find the cardinality of both \(A\)and \(S\text{.}\)</p>
+<p id="p-1172">Recall  <a class="xref" data-knowl="./knowl/DefinitionProb.html" title="Definition 8.2.10">Definition 8.2.10</a>.   We are now equipped to find the cardinality of both \(A\)and \(S\text{.}\)</p>
 <article class="example example-like" id="example-102"><a data-knowl="" class="id-ref original" data-refid="hk-example-102"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-102"><article class="example example-like"><p id="p-1170">Consider a 52 card deck, and draw 5 cards without replacement.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-102"><article class="example example-like"><p id="p-1173">Consider a 52 card deck, and draw 5 cards without replacement.</p>
 <ol class="decimal">
 <li id="li-641">What is the probability that all 5 cards are spades?</li>
 <li id="li-642">What is probability that all 5 cards are the same suit?</li>
@@ -215,7 +215,7 @@ MathJax.Hub.Config({
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-142" id="solution-142"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-142"><div class="solution solution-like">
-<p id="p-1171">Recall that there are \(C(52,5)\) ways to select 5 cards of 52.  Thus \(|S|=C(52,5)=2598960\text{.}\)</p>
+<p id="p-1174">Recall that there are \(C(52,5)\) ways to select 5 cards of 52.  Thus \(|S|=C(52,5)=2598960\text{.}\)</p>
 <ol class="decimal">
 <li id="li-644">There are 13 spades so the number of ways to select 5 spades is \(C(13,5)=1287\text{.}\)  Thus the probability of selecting 5 cards and getting all spades is \(\frac{C(13,5)}{C(52,5)}=\frac{1287}{2598960}\approx 0.00495\text{.}\)</li>
 <li id="li-645">The number of ways to select all cards from the same suit is still \(C(13,5)\) but since there are 4 suits, the probability of selecting 5 cards and they are all the same suit is \(\frac{4\cdot C(13,5)}{C(52,5)}=\frac{4\cdot 1287}{2598960}\approx 0.0198107\text{.}\)</li>
@@ -225,7 +225,7 @@ MathJax.Hub.Config({
 </div></article></div>
 <article class="example example-like" id="ExampleDigits"><a data-knowl="" class="id-ref original" data-refid="hk-ExampleDigits"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleDigits"><article class="example example-like"><p id="p-1172">Consider a 4 digit passcode consisting of digits 0 through 9.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleDigits"><article class="example example-like"><p id="p-1175">Consider a 4 digit passcode consisting of digits 0 through 9.</p>
 <ol class="decimal">
 <li id="li-647">What is the probability that a random passcode doesn't repeat digits?</li>
 <li id="li-648">What is probability that a random passcode only uses even digits?</li>
@@ -233,7 +233,7 @@ MathJax.Hub.Config({
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-143" id="solution-143"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-143"><div class="solution solution-like">
-<p id="p-1173">Recall that there are \(10\cdot10\cdot10\cdot10=10^4=1000\) possible passcodes.  Thus \(|S|=10000\text{.}\)</p>
+<p id="p-1176">Recall that there are \(10\cdot10\cdot10\cdot10=10^4=1000\) possible passcodes.  Thus \(|S|=10000\text{.}\)</p>
 <ol class="decimal">
 <li id="li-650">There are \(P(10,4)=10\cdot9\cdot8\cdot7=5040\) passcodes that don't repeat digits.  Thus the probability that a passcode doesn't repeat digits is \(\frac{P(10,4)}{10^4}=\frac{5040}{10000}=0.504\) .</li>
 <li id="li-651">There are \(5^4=625\) passcodes that only use even digits.  Thus the probability that a passcode uses only even digits is \(\frac{5^4}{10^4}=\frac{625}{10000}=0.0625\) .</li>
@@ -243,10 +243,10 @@ MathJax.Hub.Config({
 </div></article></div></section><section class="subsection" id="subsection-95"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.3.2</span> <span class="title">Operations on Events and Counting</span>
 </h3>
-<p id="p-1174">We can also apply all the probability techniques from <a href="Chap_SetProb.html" class="internal" title="Chapter 8: Introduction to Sets and Probabilty">Chapter 8</a> to these situations.</p>
+<p id="p-1177">We can also apply all the probability techniques from <a href="Chap_SetProb.html" class="internal" title="Chapter 8: Introduction to Sets and Probabilty">Chapter 8</a> to these situations.</p>
 <article class="example example-like" id="example-104"><a data-knowl="" class="id-ref original" data-refid="hk-example-104"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-104"><article class="example example-like"><p id="p-1175">Consider a 52 card deck, and draw 5 cards without replacement.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-104"><article class="example example-like"><p id="p-1178">Consider a 52 card deck, and draw 5 cards without replacement.</p>
 <ol class="decimal">
 <li id="li-653">What is the probability that is at least one diamond?</li>
 <li id="li-654">What the cards are all back or all non-face cards (2-9)?</li>
@@ -254,7 +254,7 @@ MathJax.Hub.Config({
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-144" id="solution-144"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-144"><div class="solution solution-like">
-<p id="p-1176">Consider:</p>
+<p id="p-1179">Consider:</p>
 <ol class="decimal">
 <li id="li-656">If \(D\) is the event “at least one diamond”, then \(D^c\) means “no diamonds”.  \(P(D^c)=\frac{C(39,5)}{C(52,5)}=\frac{575757}{2598960}\approx 0.2215336\text{,}\) since there are 29 non diamonds to pick 5 from.  So \(P(D)=1-P(D^c)=1-\frac{C(39,5)}{C(52,5)}\approx 0.7784664.\)</li>
 <li id="li-657">Let \(B\) denote “all black cards”, and \(N\) denote “all non-face cards”.  Note \(P(B)=\frac{C(26,5)}{C(52,5)}\text{,}\) \(P(N)=\frac{C(36,5)}{C(52,5)}\text{,}\) and \(P(B\cap N)=\frac{C(18,5)}{C(52,5)}\text{.}\)  Thus<div class="displaymath">
@@ -269,7 +269,7 @@ P(B\cup N)=P(B)+P(N)-P(B\cap N)=\frac{C(26,5)+C(36,5)-C(18,5)}{C(52,5)}=\frac{65
 </div></article></div>
 <article class="example example-like" id="example-105"><a data-knowl="" class="id-ref original" data-refid="hk-example-105"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-105"><article class="example example-like"><p id="p-1177">Consider a 4 digit passcode consisting of digits 0 through 9.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-105"><article class="example example-like"><p id="p-1180">Consider a 4 digit passcode consisting of digits 0 through 9.</p>
 <ol class="decimal">
 <li id="li-659">What is the probability that a random passcode doesn't repeat digits or the digits are all even?</li>
 <li id="li-660">If the digits are all even, what's the probability that they don't repeat?</li>
@@ -277,7 +277,7 @@ P(B\cup N)=P(B)+P(N)-P(B\cap N)=\frac{C(26,5)+C(36,5)-C(18,5)}{C(52,5)}=\frac{65
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-145" id="solution-145"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-145"><div class="solution solution-like">
-<p id="p-1178">Let \(R\) denote “digits don't repeat” and \(E\) denote “digits are all even.”:</p>
+<p id="p-1181">Let \(R\) denote “digits don't repeat” and \(E\) denote “digits are all even.”:</p>
 <ol class="decimal">
 <li id="li-662">Recall <a class="xref" data-knowl="./knowl/ExampleDigits.html" title="Example 9.3.2">Example 9.3.2</a>, we say \(P(R)=\frac{P(10,4)}{10^4}, P(E)=\frac{5^4}{10^4}, P(R\cap E)=\frac{P(5,4)}{10^4}\text{.}\)  Thus<div class="displaymath">
 \begin{equation*}
@@ -292,7 +292,7 @@ P(R\cup E)= P(R)+P(E)-P(R\cap E)=\frac{P(10,4)+5^4-P(5,4)}{10^4}=\frac{5040+625-
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-91"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-91"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-91"><article class="exercise exercise-like"><p id="p-1179">Suppose you had a bus of 20 people, and 5 are sick, suppose  3 were picked  to test at random.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-91"><article class="exercise exercise-like"><p id="p-1182">Suppose you had a bus of 20 people, and 5 are sick, suppose  3 were picked  to test at random.</p>
 <ol class="decimal">
 <li id="li-665">What is the probability that everyone who was tested were all sick?</li>
 <li id="li-666">What is the probability that none are sick?</li>
@@ -301,7 +301,7 @@ P(R\cup E)= P(R)+P(E)-P(R\cap E)=\frac{P(10,4)+5^4-P(5,4)}{10^4}=\frac{5040+625-
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-146" id="solution-146"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-146"><div class="solution solution-like">
-<p id="p-1180">There are \(C(20,3)=1140\) ways to pick 3 people out of 20.</p>
+<p id="p-1183">There are \(C(20,3)=1140\) ways to pick 3 people out of 20.</p>
 <ol class="decimal">
 <li id="li-669">There are \(C(5,3)=10\) ways to pick only sick people, so the probability this happens is<div class="displaymath">
 \begin{equation*}
@@ -332,10 +332,10 @@ P(R\cup E)= P(R)+P(E)-P(R\cap E)=\frac{P(10,4)+5^4-P(5,4)}{10^4}=\frac{5040+625-
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-92"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-92"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-92"><article class="exercise exercise-like"><p id="p-1181">An elevator has 5 passengers and stops at 8 floors. It is equally likely that a person will get off at any one of the 8 floors. Find the probability that at least 2 passengers leave at the same floor.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-92"><article class="exercise exercise-like"><p id="p-1184">An elevator has 5 passengers and stops at 8 floors. It is equally likely that a person will get off at any one of the 8 floors. Find the probability that at least 2 passengers leave at the same floor.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-147" id="solution-147"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-147"><div class="solution solution-like">
-<p id="p-1182">There are \(8^5\) ways the passangers could get off the elevator.  The probability that everyone gets off at <em class="emphasis">different</em> floors is \(\frac{P(8,5)}{8^5}=\frac{6720}{32768}\approx0.2051\text{.}\)  So the probability that this doesn't happen, that is, at least two get off at the same floor, is:</p>
+<p id="p-1185">There are \(8^5\) ways the passangers could get off the elevator.  The probability that everyone gets off at <em class="emphasis">different</em> floors is \(\frac{P(8,5)}{8^5}=\frac{6720}{32768}\approx0.2051\text{.}\)  So the probability that this doesn't happen, that is, at least two get off at the same floor, is:</p>
 <div class="displaymath">
 \begin{equation*}
 1-\frac{P(8,5)}{8^5}=1-\frac{6720}{32768}\approx0.7949.
@@ -345,14 +345,14 @@ P(R\cup E)= P(R)+P(E)-P(R\cap E)=\frac{P(10,4)+5^4-P(5,4)}{10^4}=\frac{5040+625-
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-93"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-93"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-93"><article class="exercise exercise-like"><p id="p-1183">There are two jars, jar one has 5 white marbles and 6 black marbles. Jar 2 has 8 white marbles and 7 black marbles.  Suppose you pick a jar at random and pick two marbles at random from said jar.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-93"><article class="exercise exercise-like"><p id="p-1186">There are two jars, jar one has 5 white marbles and 6 black marbles. Jar 2 has 8 white marbles and 7 black marbles.  Suppose you pick a jar at random and pick two marbles at random from said jar.</p>
 <ol class="decimal">
 <li id="li-673">What is the probability both marbles are white?</li>
 <li id="li-674">If both marbles are white, what is the probability Jar 2 was chosen?</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-148" id="solution-148"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-148"><div class="solution solution-like">
-<p id="p-1184">Let \(W\) denote “both marbles are white”, \(J_1\) denote “Jar one was chosen”.  Note that \(P(J_1)=0.5\text{.}\)</p>
+<p id="p-1187">Let \(W\) denote “both marbles are white”, \(J_1\) denote “Jar one was chosen”.  Note that \(P(J_1)=0.5\text{.}\)</p>
 <ol class="decimal">
 <li id="li-675">So by Bayes Theorem:<div class="displaymath">
 \begin{align*}

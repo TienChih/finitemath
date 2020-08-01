@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-31T05:43:29-06:00    *-->
+<!--*    on 2020-07-31T21:28:19-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -10,17 +10,45 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script>$(function () {
+    // Make *any* div with class 'sagecell-r' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-r',
+                           linked: true,
+                           languages: ['r'],
+                           evalButtonText: 'Evaluate (R)'});
+});
+</script>
 </head>
 <body>
 <article class="remark remark-like"><h6 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.2.14</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.2.11</span><span class="period">.</span>
 </h6>
-<p>We note the following about probability:</p>
-<ul class="disc">
-<li>\(P(A^c)=\frac{|S|-|A|}{\mathcal{U}}=\frac{|S|}{|S|}-\frac{|A|}{|S|}=1-P(A)\text{.}\)</li>
-<li>\(P(\emptyset)=\frac{0}{|S|}=0\text{.}\)</li>
-<li>\(P(A)=P(A\cap B)+P(A\cap B^c)\text{,}\) since the outcomes which constitute \(A\) all either belong to \(B\) or they don't.</li>
-<li>\(P(A\cup B)=\frac{|A\cup B|}{|S|}=\frac{|A|+ |B|-|A\cap B|}{|S|}=P(A)+P(B)-P(A\cap B)\text{.}\)</li>
-</ul></article><span class="incontext"><a href="Sec_CardProb.html#remark-15">in-context</a></span>
+<p>But what does it mean for an event \(A\) to have probability \(P(A)\text{?}\)  It means that if I repeat the experiment over and over, the proportion of them where \(A\) is true should be \(P(A)\text{.}\)</p>
+<p>So if I roll a die over and over, the proportion of them that give me a 6 over time should be \(\frac{1}{6}\text{.}\)  So if we roll a dice 10000 times, we would expect one sixth of them to come up heads:</p>
+<div class="sagecell-r" id="sage-5"><script type="text/x-sage">          n=10000
+
+sixes=0
+Sixvec<-vector(length = 0)
+
+for (i in 1:n){
+  roll=sample(1:6,1,replace=TRUE)
+  if (roll==1){
+    sixes=sixes+1
+  }
+Sixvec<-c(Sixvec, sixes/i)  
+}
+
+plot(Sixvec, type="l", ylim=c(0,1))
+abline(h=1/6, col="red", lty=2)
+</script></div></article><span class="incontext"><a href="Sec_CardProb.html#remark-15">in-context</a></span>
 </body>
 </html>

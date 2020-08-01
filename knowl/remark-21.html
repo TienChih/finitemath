@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-31T05:43:35-06:00    *-->
+<!--*    on 2020-07-31T21:28:24-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,19 @@
 </head>
 <body>
 <article class="remark remark-like"><h6 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.1.10</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.1.6</span><span class="period">.</span>
 </h6>
-<p>The number of ways to arrange \(n\) objects, where \(r\) of them are repeated \(m_1, \ldots, m_r\) each is</p>
+<p>We note that \(n!\) denotes \(n!=\overbrace{n\cdot (n-1)\cdots 1}^{n}\) where we let \(0!=1\text{.}\)</p>
+<p>Notice that</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{n!}{m_1!\cdots m_r!}
+P(n,n)=\overbrace{n\cdot (n-1)\cdots 1}^{n}=n!.
+\end{equation*}
+</div>
+<p>Also notice that more generally</p>
+<div class="displaymath">
+\begin{equation*}
+P(n,r)=\overbrace{n\cdot (n-1)\cdots (n-r+1)}^{r}=\frac{n\cdot (n-1)\cdots (n-r+1)\cdot \color{blue}{(n-r)\cdots 1}}{\color{blue}{(n-r)\cdots 1}}=\frac{n!}{(n-r)!}.
 \end{equation*}
 </div></article><span class="incontext"><a href="Sec_Permutation.html#remark-21">in-context</a></span>
 </body>

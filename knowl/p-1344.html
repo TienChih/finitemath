@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-31T05:43:46-06:00    *-->
+<!--*    on 2020-07-31T21:28:33-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,19 +13,31 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We can see this in action with die rolls above, but let's say that you have a game of chance.  Tickets cost \(\$2\text{.}\)  You have a 3 in 10 chance of winning \(\$5\) and a 1 in 10 chance of winning \(\$10\text{.}\)  The <em class="emphasis">net</em> winnings have the following distribution:</p>
+<p>Recall that the probability distribution of a die roll is:</p>
 <div class="displaymath">
 \begin{equation*}
-\begin{array}{|c|ccc|}
+\begin{array}{|c|cccccc|}
 \hline
-x \amp -2 \amp 3 \amp 8 \\
+x \amp 1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6 \\
 \hline
-P(X=x) \amp \frac{6}{10} \amp \frac{3}{10} \amp \frac{1}{10}\\
+P(X=x) \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6}\\
 \hline
 \end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">So one could ask, what is the average net winnings if you buy \(n\) tickets?  The outcomes would be distributed as follows: <iframe src="https://www.desmos.com/calculator/lrk2echwyr" id="interactive-246" width="600" height="600"></iframe></p>
+<p data-braille="continuation">What if I rolled two die and took their average?  One can check that the distribution would be:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{|c|ccccccccccc|}
+\hline
+x \amp 1 \amp 1.5 \amp 2 \amp 2.5 \amp 3 \amp 3.5 \amp 4 \amp 4.5 \amp 5 \amp 5.5 \amp 6 \\
+\hline
+P(X=x) \amp \frac{1}{12} \amp \frac{2}{12} \amp \frac{3}{12} \amp \frac{4}{12} \amp \frac{5}{12} \amp \frac{6}{12} \amp \frac{5}{12} \amp \frac{4}{12} \amp \frac{3}{12} \amp \frac{2}{12} \amp \frac{1}{12}\\
+\hline
+\end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">We notice some things.  First, the distribution is no longer uniform, the central values are more likely than the extreme values.  Realted to that, there is consequently less variation in results, as central values become more likely.</p>
 <span class="incontext"><a href="Sec_CLT.html#p-1344">in-context</a></span>
 </body>
 </html>

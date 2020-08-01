@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-31T05:43:39-06:00    *-->
+<!--*    on 2020-07-31T21:28:27-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,22 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We first need to know the expected winnings, if we recall the probability dstrbution:</p>
+<p>So in our die rolling case, we already have \(E(X)=3.5\text{,}\) we then compute:</p>
 <div class="displaymath">
 \begin{equation*}
-\begin{array}{|c|ccc|}
-\hline
-x \amp 0 \amp 5 \amp 20 \\
-\hline
-P(X=x) \amp \frac{6}{10} \amp \frac{3}{10} \amp \frac{1}{10} \\
-\hline
-\end{array}
+E(X^2)=\frac{1}{6}\cdot 1^2+\frac{1}{6}\cdot 2^2+\frac{1}{6}\cdot 3^2+\frac{1}{6}\cdot 4^2+\frac{1}{6}\cdot 5^2+\frac{1}{6}\cdot 6^2=\frac{91}{6}.
+\end{equation*}
+</div>
+<p data-braille="continuation">So we  have the variance of \(X\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+Var(X)=\frac{91}{6}-(3.5)^2=\frac{35}{12}\approx 2.91667.
+\end{equation*}
+</div>
+<p data-braille="continuation">Finally the standard deviation of \(X\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma_X=\sqrt{\frac{35}{12}}\approx 1.7078.
 \end{equation*}
 </div>
 <span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1211">in-context</a></span>

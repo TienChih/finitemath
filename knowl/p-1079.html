@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-31T05:43:31-06:00    *-->
+<!--*    on 2020-07-31T21:28:21-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,28 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Some people ordered some food at a restaurant, and over the course of  dinner, it becomes clear that some of the patrons are getting sick.  Consider this table representing how many people ordered what, and how many got sick:</p>
+<p>Let \(W\) denote “withdraw cash” and \(B\) denote “Check Balance”.  We are then given \(P(W)=0.92, P(B)=0.32, P(W\cup B)=0.96\text{.}\)  Notice then that:</p>
 <div class="displaymath">
-\begin{equation*}
-\begin{array}{|c|c|c|c|}
-\hline
-\amp \text{Chicken} \amp \text{Fish} \amp \text{Steak} \\
-\hline
-\text{Got Sick} \amp 5 \amp 4 \amp 3\\
-\hline
-\text{Did Not Get Sick} \amp 20 \amp 6 \amp 12\\
-\hline
-\end{array}
-\end{equation*}
+\begin{align*}
+P(W\cup B)\amp=P(W)+P(B)-P(W\cap B)\\
+0.96\amp=0.92+0.32-P(W\cap B)\\
+P(W\cap B)\amp=0.28
+\end{align*}
 </div>
-<ol class="decimal">
-<li>What is the probability that a random diner got sick?</li>
-<li>What is the probability that a diner got sick if we knew they ate fish?</li>
-<li>What is the probability that a random diner had fish or steak?</li>
-<li>What is the probability that a random diner either had fish or got sick?</li>
-<li>What is the probability that a diner ate steak, given that they got sick?</li>
-<li>What food made you most likely to get sick?</li>
-</ol>
+<p data-braille="continuation">Which let's us fill in the following diagram: <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-80.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.14<span class="period">.</span></span><span class="space"> </span>\(R, C\) and their probabilities</figcaption></figure> We are tasked with finding \(P(W|B)\text{.}\)  Note that \(P(W|B)=\frac{P(W\cap B)}{P(B)}=\frac{0.28}{0.32}=0.875\) or 87.5%.</p>
 <span class="incontext"><a href="Sec_Conditional.html#p-1079">in-context</a></span>
 </body>
 </html>
