@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:57-06:00    *-->
+<!--*    on 2020-08-02T16:48:54-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Up to this point, we have mostly focused on the probability of specific events. In this section, we take a step back and look at the experiment itself.  Certainly, if I have a jar with 5 red and 7 blue balls and draw 3 without replacement, there is a chance that I get 2 red balls.  But now we want to ask, what number of red balls are more or less likely?  On average, how many red balls would I get?  How varied are the results?</p>
-<span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1203">in-context</a></span>
+<p>Recall that there are \(10\cdot10\cdot10\cdot10=10^4=1000\) possible passcodes.  Thus \(|S|=10000\text{.}\)</p>
+<ol class="decimal">
+<li>There are \(P(10,4)=10\cdot9\cdot8\cdot7=5040\) passcodes that don't repeat digits.  Thus the probability that a passcode doesn't repeat digits is \(\frac{P(10,4)}{10^4}=\frac{5040}{10000}=0.504\) .</li>
+<li>There are \(5^4=625\) passcodes that only use even digits.  Thus the probability that a passcode uses only even digits is \(\frac{5^4}{10^4}=\frac{625}{10000}=0.0625\) .</li>
+<li>There are \(P(5,4)=5\cdot4\cdot3\cdot2=120\) passcodes that don't repeat digits and only use even digits.  Thus the probability that a passcode doesn't repeat digits and only uses even digits is \(\frac{P(5,4)}{10^4}=\frac{120}{10000}=0.012\) .</li>
+</ol>
+<span class="incontext"><a href="Sec_AppstoProb.html#p-1203">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:41-06:00    *-->
+<!--*    on 2020-08-02T16:48:41-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,13 +14,16 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[x^3]\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
-\amp = \limit{h}{0} \frac{(x+h)^3-x^3}{h}\\
-\amp = \limit{h}{0} \frac{x^3+3x^2h+3xh^2+h^3-x^3}{h}\\
-\amp = \limit{h}{0} \frac{(3x^2+3xh+h^2)h}{h}\\
-\amp = \limit{h}{0} 3x^2+3xh+h^2=3x^2
+A'(t)\amp = \limit{h}{0}\frac{A(t+h)-A(t)}{h}\\
+\amp = \limit{h}{0} \frac{1000\pi\sqrt{t+h}-1000\pi\sqrt{t}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{\sqrt{t+h}-\sqrt{t}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{(\sqrt{t+h}-\sqrt{t})(\sqrt{t+h}+\sqrt{t})}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{t+h-t}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{h}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{1}{(\sqrt{t+h}+\sqrt{t})}\\
+\amp =  1000\pi\frac{1}{(\sqrt{t+0}+\sqrt{t})}=\frac{1000\pi}{2\sqrt{t}}=\frac{500\pi}{\sqrt{t}}
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_RulesofDerivative.html#mjx-eqn-mrow-601">in-context</a></span>
+<span class="incontext"><a href="Sec_DefofDerivative.html#mjx-eqn-mrow-601">in-context</a></span>
 </body>
 </html>

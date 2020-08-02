@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:24-06:00    *-->
+<!--*    on 2020-08-02T16:48:23-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>"If it rains then I will get wet. If I get wet, I will get sick." \(\to\) “Therefore, if it rains, then I will get sick.”</p>
-<span class="incontext"><a href="Sec_Arguments.html#p-524">in-context</a></span>
+<p>The statement is "\(\exists x, I(x)\to N(x)\)".  It's negation would be:</p>
+<div class="displaymath">
+\begin{align*}
+\sim(\exists x, I(x)\to N(x))\amp = \forall x, \sim (I(x)\to N(x))\\
+\amp = \forall x, \sim (\sim I(x)\vee N(x))\\
+\amp = \forall x, I(x)\wedge \sim N(x).
+\end{align*}
+</div>
+<p data-braille="continuation">This translates to "For every function, we evaluate at zero and the output is not negative".  (This isn't true, but it's the negation of the original statement).</p>
+<span class="incontext"><a href="Quantifiers.html#p-524">in-context</a></span>
 </body>
 </html>

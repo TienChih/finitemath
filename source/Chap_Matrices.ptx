@@ -17,5 +17,6 @@
   <xi:include  href="Sec_SystemsofEquations.ptx"/>
   <xi:include  href="Sec_SystemasMatrix.ptx"/>
   <xi:include  href="Sec_MatrixArithmetic.ptx"/>
+  <xi:include  href="Sec_MatrixInverse.ptx"/>
  <!-- <xi:include  href="Sec_MatrixSage.ptx"/>-->
 </chapter>

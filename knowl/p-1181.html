@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:55-06:00    *-->
+<!--*    on 2020-08-02T16:48:53-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,28 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider:</p>
-<ol class="decimal">
-<li>In this situation, we are simply picking 4 out of 20 so \(C(20,4)=4845\)</li>
-<li>Note that since we are picking <em class="emphasis">both</em> 2 Mathematicians and 2 Historians, not one or the other, that the Multiplication Principle, not the Addition Principle applies, so \(C(8,2)\cdot C(12,2)=28\cdot 66=1848\text{.}\)  We can think of this as 28 ways of picking Mathematicians, 66 ways of picking historians, and 1848 ways of putting the Math and History pairs together.</li>
-</ol>
+<p>We previously listed these results, but let's do so again, in a different manner this time.</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ABC \amp ABD \amp ABE \amp ACD \amp ACE \amp ADE \amp BCD \amp BCE \amp BDE \amp CDE\\
+ACB \amp ADB \amp AEB \amp ADC \amp AEC \amp AED \amp BDC \amp BEC \amp BED \amp CED\\
+BAC \amp BAD \amp BAE \amp CAD \amp CAE \amp DAE \amp CBD \amp CBE \amp DBE \amp DCE\\
+BCA \amp BDA \amp BEA \amp CDA \amp CEA \amp DEA \amp CDB \amp CEB \amp DEB \amp DEC\\
+CAB \amp DAB \amp EAB \amp DAC \amp EAC \amp EAD \amp DBC \amp EBC \amp EBD \amp ECD\\
+CBA \amp DBA \amp EBA \amp DCA \amp ECA \amp EDA \amp DCB \amp ECB \amp EDB \amp EDC\\
+\hline
+\end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">Grouping the arrangements this way, we can see there are really only 10 selections without order:</p>
+<div class="displaymath">
+\begin{equation*}
+ABC, ABD, ABE, ACE, ADE, BCD, BCE, BDE, CDE.
+\end{equation*}
+</div>
+<p data-braille="continuation">We can get these ten by taking the \(P(5,3)=60\) arrangements, and arranging them into columns of \(3!=6\text{,}\) giving us \(\frac{P(5,3)}{3!}=\frac{60}{6}=10\) columns.  The \(3!\) denotes the number of ways we can arrange any choice of 3 letters.  This may be generalized:</p>
 <span class="incontext"><a href="Sec_Combinations.html#p-1181">in-context</a></span>
 </body>
 </html>

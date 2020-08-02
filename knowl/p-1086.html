@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:49-06:00    *-->
+<!--*    on 2020-08-02T16:48:47-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,24 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So recall: <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-76.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.6<span class="period">.</span></span><span class="space"> </span>Each set \(A, B\) and their respective sizes.</figcaption></figure></p>
+<p>If we let \(R\) denote “has done undergraduate research” and \(C\) denote “has gone to a conference” then we are given \(P(R)=0.2, P(C)=0.25, P(R\cup C)=0.3\text{:}\)</p>
 <ol class="decimal">
-<li>This is \(P(B|A)=\frac{P(A\cap B)}{P(A)}=\frac{5/25}{12/25}=\frac{5}{12}.\)</li>
-<li>This is \(P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{5/25}{8/25}=\frac{5}{8}.\)</li>
-<li>This is \(P(B|A^c)=\frac{P(A^c\cap B)}{P(A^c)}=\frac{3/25}{13/25}=\frac{3}{13}.\)</li>
+<li>This is \(P(R\cap C)\text{:}\)<div class="displaymath">
+\begin{align*}
+P(R\cup C)\amp = P(R)+P(C)-P(R\cap C) \\
+0.3\amp = 0.2+0.25-P(R\cap C) \\
+P(R\cap C)\amp=0.15 
+\end{align*}
+</div>From here we may fill out the following diagram <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-71.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.23<span class="period">.</span></span><span class="space"> </span>\(R, C\) and their probabilities</figcaption></figure>
+</li>
+<li>This is \(P(R\cap C^c)\text{,}\) which we can see is \(P(R\cap C^c)=0.05\text{.}\) <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-72.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.24<span class="period">.</span></span><span class="space"> </span>\(R\cap C^c\)</figcaption></figure>
+</li>
+<li>This is \(P(R^c\cap C^c)\text{,}\) which we can see is \(P(R^c\cap C^c)=0.7\text{.}\) <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-73.svg" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.25<span class="period">.</span></span><span class="space"> </span>\(R^c\cap C^c\)</figcaption></figure>
+</li>
 </ol>
-<span class="incontext"><a href="Sec_Conditional.html#p-1086">in-context</a></span>
+<span class="incontext"><a href="Sec_CardProb.html#p-1086">in-context</a></span>
 </body>
 </html>

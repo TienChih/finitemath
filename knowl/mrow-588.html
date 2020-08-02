@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:41-06:00    *-->
+<!--*    on 2020-08-02T16:48:40-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,12 +14,17 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[a(f)x)+bg(x)]\amp = \limit{h}{0}\frac{af(x+h)+bg(x+h)-(af(x)-bg(x))}{h}\\
-\amp = \limit{h}{0}\frac{af(x+h)-af(x)}{h}+\limit{h}{0}\frac{bg(x+h)-bg(x)}{h}\\
-\amp = a\limit{h}{0}\frac{f(x+h)-f(x)}{h}+b\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
-\amp = af'(x)+bg'(x)
+\alpha'(x)\amp = \limit{h}{0}\frac{\alpha(x+h)-\alpha(x)}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2}{x+h+1}-\frac{2}{x+1}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2(x+1)}{(x+h+1)(x)}-\frac{2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2(x+1)}{(x+h+1)(x)}-\frac{2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2(x+1)-2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2x+2-2x-2h-2}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{-2h}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{-2}{(x+h+1)(x+1)}\\
+\amp = \frac{-2}{(x+0+1)(x+1)}=-\frac{2}{(x+1)^2}
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_RulesofDerivative.html#mjx-eqn-mrow-588">in-context</a></span>
+<span class="incontext"><a href="Sec_DefofDerivative.html#mjx-eqn-mrow-588">in-context</a></span>
 </body>
 </html>

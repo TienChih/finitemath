@@ -1,0 +1,283 @@
+<section xml:id="Sec_StableSolutions">
+  <title>Stable Solutions and Equilibrium</title>
+  <introduction>
+  <p>
+    In this section, we discuss stable stable solutions to Markov systems.  If I repeat a Markov process over and over, does it trend torwards some some of state where it won't change?  Or does it go back and forth between multiple states in a cycle?  Is there an initial starting state so that each iteration of the Markov process gives you back the exact same state?  We examine these questions.
+  </p>
+</introduction>
+
+<subsection>
+  <title>Stable Solutions</title>
+  <p>
+    Suppose you had two cities, <m>X, Y</m>.  Each year 60% of city <m>X</m>'s population moved to <m>Y</m> and 20% of <m>Y</m>'s population moves to <m>X</m>.  If the cities had 300000 people in total, how could we distribute these people so each year the cities populations remained the same?
+  </p>
+
+  <p>
+    What we are solving is essentionally <m>\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}=\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}</m>  So recall <xref ref="DefinitionIdentity"/>:
+
+    <md>
+      <mrow>\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \amp =\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} </mrow>
+      <mrow>\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \amp = \begin{pmatrix} 1 \amp 0 \\ 0 \amp 1\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} </mrow>
+      <mrow>\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} - \begin{pmatrix} 1 \amp 0 \\ 0 \amp 1\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \amp=\begin{pmatrix} 0\\0  \end{pmatrix}</mrow>
+      <mrow>\begin{pmatrix} -0.4 \amp 0.2 \\ 0.4 \amp -0.2\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \amp=\begin{pmatrix} 0\\0  \end{pmatrix}</mrow>
+      <mrow>\begin{pmatrix} -0.4X_0 +0.2Y_0 \\ 0.4X_0  -0.2Y_0\end{pmatrix} \amp=\begin{pmatrix} 0\\0  \end{pmatrix}</mrow>
+    </md>
+
+    We solve this system:
+
+    <sage>
+        <input>
+          A=matrix(QQ, [[-0.4,0.2, 0],[0.4,-0.2, 0]])
+          print(A.rref())
+        </input>
+        <output>
+        </output>
+      </sage>
+      And we obtain:
+      <md>
+        <mrow> X_0-\frac{1}{2}Y_0\amp=0</mrow>
+        <mrow> 2X_0 \amp =Y_0.</mrow>
+      </md>
+      
+      So <m>Y</m>'s population  would be double <m>X</m>'s.  Since there are 300000 people, this would occur when <m>X_0=100000, Y_0=200000</m>:
+
+      <sage>
+        <input>
+          M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+          X=matrix(QQ, [[100000],[200000]])
+          print(M*X)
+        </input>
+        <output>
+        </output>
+      </sage>
+Notice that the next year, since the populations remain the same, reapplying <m>M</m> continues to preserve the populations, nothing changes.  Nor the year after and so on.
+  </p>  
+
+  <remark>
+    <p>
+      In general, <term>stable solutions</term> to Markov chains are vectors <m>\mathbf{x}</m>  such that <m>M\mathbf{x}=\mathbf{x}</m>.  These can be found by solving: <me>(M-I_n)\mathbf{x}=\mathbf{0}.</me>
+
+    </p>
+  </remark>    
+
+  <exercise>
+    <statement>
+      <p>
+        Suppose you have a bizzare compound stored a chamber with different areas with different temperatures and pressures.  Thus it is always changing between the 3 states of matter.  After each hour, 20% of any solid becomes liquid and 20%  of the solid becomes gas.  10% of liquids become solid and 30% becomes gas.  15% of gas becomes solid and 40% becomes liquid.  What are initial amounts of solid liquid and gas so the amount of each never changes?
+      </p>
+    </statement>
+    <solution>
+    <p>
+    If solid, liquid, gas are states 1,2 and 3, then we have transition matrix:
+
+    <me>M=\begin{pmatrix}0.6 \amp 0.1 \amp 0.15 \\ 0.2 \amp 0.6 \amp 0.4 \\ 0.2 \amp 0.3 \amp 0.45 \end{pmatrix} .</me>
+
+    Thus to find a stable solution, we solve:
+
+     <me>\begin{pmatrix}-0.4 \amp 0.1 \amp 0.15 \\ 0.2 \amp -0.4 \amp 0.4 \\ 0.2 \amp 0.3 \amp -0.55 \end{pmatrix}\begin{pmatrix} S \\L \\ G\end{pmatrix}=\begin{pmatrix}0\\0\\0 \end{pmatrix} .</me>  
+   </p>
+   <p>
+     Doing so, we obtain:
+
+     <md>
+      <mrow>S\amp=\frac{5}{7}G</mrow>
+      <mrow>L\amp=\frac{19}{14}G</mrow>
+     </md>
+     Which then, given any amount of gas, we could find how mnuch solid and liquid there were.
+   </p>
+   
+   <p>
+     So if say we have 1000 kg of the compound, we could solve the system:
+      <md>
+      <mrow>S\amp=\frac{5}{7}G</mrow>
+      <mrow>L\amp=\frac{19}{14}G</mrow>
+      <mrow>S+L+G\amp=1000</mrow>
+     </md>
+     and obtain roughly 232.56kg of solid, 441.86kg of liquid and 325.58kg of gas.</p>
+
+
+      <p>
+     Then say we have 500 g of the compound, we could solve the system:
+      <md>
+      <mrow>S\amp=\frac{5}{7}G</mrow>
+      <mrow>L\amp=\frac{19}{14}G</mrow>
+      <mrow>S+L+G\amp=500</mrow>
+     </md>
+     and obtain roughly 116.28g of solid, 220.93g of liquid and 162.79g of gas.</p>
+
+
+
+
+  
+</solution>
+</exercise>
+
+</subsection>
+
+
+<subsection>
+  <title>Equilibrium</title>
+  <p>
+  Let's say in the cities example above, you initially had 250000 people in city <m>X</m> and 50000 in <m>Y</m>.  What would happen over time?
+</p>
+<p>
+In a year:
+<sage>
+        <input>
+          M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+          X=matrix(QQ, [[250000],[50000]])
+          print(M*X)
+        </input>
+        <output>
+        </output>
+      </sage>
+      We would have 160000 in <m>X</m> and 140000 in <m>Y</m>.  In 10 years:
+
+      <sage>
+        <input>
+          M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+          X=matrix(QQ, [[250000],[50000]])
+          print(M^10*X*1.0)
+        </input>
+        <output>
+        </output>
+      </sage>
+
+      About 100016 in <m>X</m> and 199984 in <m>Y</m>.  We can utilize sage to see how the values change over many iterations:
+
+      <sage>
+        <input>
+          M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+          X=matrix(QQ, [[250000],[50000]])
+          for i in range(100):
+            print(M^i*X*1.0)
+            print(' ')
+        </input>
+        <output>
+        </output>
+      </sage>
+Here, we let it run for 100 iterations, and we see that the state converges to the 100000 in <m>X</m>, 200000 in <m>Y</m>.  We call this an <term>equilibrium state</term>.
+</p>
+
+<definition>
+  <p>
+  Given a transition matrix <m>M</m> an equilibirum solution is a solution <m>\mathbf{e}</m> so that as <m>i</m> increases <me>M^i\mathbf{x}\to \mathbf{e}.</me>
+</p>
+</definition>  
+
+<remark>
+  <p>
+    Equilibrium solutions are stable solutions.
+  </p>
+</remark>    
+
+
+
+<p>
+  What if <m>Y</m> had 300000 people and <m>X</m> was a ghost town with no one in it?  We see that after 100 iterations:
+
+   <sage>
+        <input>
+          M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+          X=matrix(QQ, [[0],[300000]])
+          for i in range(100):
+            print(M^i*X*1.0)
+            print(' ')
+        </input>
+        <output>
+        </output>
+      </sage>
+      We achieve the same state, which incidentally was the stable solution we found earlier!
+
+  </p>
+
+  <p>
+    Will this always happen?  Consider the transition matrix <me>M=\begin{pmatrix} 0\amp 1 \ 1 \amp 0\end{pmatrix}</me>.  It has stable solution when <me>\begin{pmatrix} -1\amp 1 \ 1 \amp 0-1\end{pmatrix}\begin{pmatrix} x \\ y\end{pmatrix}=\begin{pmatrix}0\\0\end{pmatrix}</me> which occurs when <m>x=y</m>.  So if our initial state is <m>x=5, y=5</m>, in 100 iterations:
+
+     <sage>
+        <input>
+          M=matrix(QQ, [[0,1],[1,0]])
+          X=matrix(QQ, [[5],[5]])
+          for i in range(100):
+            print(M^i*X*1.0)
+            print(' ')
+        </input>
+        <output>
+        </output>
+      </sage>
+      We see that we have stability.  But what about if our initial state were <m>x=10, y=0</m>?
+
+      <sage>
+        <input>
+          M=matrix(QQ, [[0,1],[1,0]])
+          X=matrix(QQ, [[10],[0]])
+          for i in range(100):
+            print(M^i*X*1.0)
+            print(' ')
+        </input>
+        <output>
+        </output>
+      </sage>
+      We see that we oscilate between states <m>\begin{pmatrix} 10\\0\end{pmatrix}</m> and <m>\begin{pmatrix} 0\\10\end{pmatrix}</m>.  We <em>do not</em> achieve equilibrium.
+</p>
+
+<p>
+So when can we achieve equilibrium?
+</p>
+
+<definition>
+  <p>
+    A transition matrix is <term>regular</term> if each entry is positive (not zero).
+  </p>  
+</definition>  
+
+<theorem xml:id="TheoremF">
+  <p>
+    If a transition matrix is regular, then it will achieve equilibrium.
+  </p>  
+</theorem>  
+
+<p>
+Note that non-regular matrices may also achieve equilibrium.  The above claim merely says, every regular matrix is gaurunteed to do so.
+</p>
+
+<exercise>
+  <statement>
+    <p>
+      Tech companies Axiom, Belafonte and Cybertech hire and rehire from the same talent pool.  Each month, 20% of Axiom's workers leave for Belafonte and 15% leave for Cybertech.  10% of Belafonte's go to Axiom and 25% go to Cybertech, and 30% of Cybertech's workers leave for Axiom, 10% for Belafonte.  Over time, what proportion of the workforce will each company employ?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Note we have transition matrix <me>M=\begin{pmatrix} 0.65 \amp 0.1 \amp 0.3 \\ 0.2 \amp 0.65 \amp 0.1 \\ 0.15 \amp 0.25 \amp 0.6 \end{pmatrix}.</me>
+
+      Since this is regular, we may just solve for a stable solution:
+      <me>\begin{pmatrix} -0.35 \amp 0.1 \amp 0.3 \\ 0.2 \amp -0.35 \amp 0.1 \\ 0.15 \amp 0.25 \amp -0.4 \end{pmatrix}\begin{pmatrix} a\\b\\c\end{pmatrix}=\begin{pmatrix}0\\0\\0\end{pmatrix}.</me>
+  </p>
+
+  <p>
+    Doing so gives us:
+    <md>
+      <mrow> a\amp =\frac{46}{41}c</mrow>
+      <mrow> b\amp =\frac{38}{41}c</mrow>
+    </md>
+    
+    So if we solve:  
+
+    <md>
+      <mrow> a\amp =\frac{46}{41}c</mrow>
+      <mrow> b\amp =\frac{38}{41}c</mrow>
+      <mrow>a+b+c\amp=1</mrow>
+    </md>
+
+    We get <m>a=\frac{46}{125}, b=\frac{38}{125}, c=\frac{41}{125}</m> each a fraction of the total workforce.
+
+
+   </p> 
+ </solution>     
+
+</exercise>      
+
+
+</subsection>
+</section>

@@ -1,0 +1,404 @@
+<section xml:id="Sec_Absorb">
+  <title>Absorption States</title>
+  <introduction>
+  <p>
+    What is you had a state in your Markov process, where once you reached that state you would never leave?  What if there were multiple such states?  Given any starting state, what is the probability you end up in one of these states?
+  </p>
+</introduction>
+
+<subsection>
+  <title>Gamblers Ruin</title>
+  <p>
+    Adaeze sits a poker table, she's a savy player so in each game she has a 60% chance of winng <m>\$100</m> and a 40% chance of losing <m>\$100</m>.  Being a savy player, she also realizes that eventually she will lose everything unless, she walks away at some point.  Let's say she makes the choice to cash out when she has <m>\$500</m>.  If she hits <m>\$0</m> she has to bow out by default.  She's going to keep playing until one of these outcomes is reached.  What's the probability she walks out happy?  Sad?
+  </p>
+
+   <p>
+    You can imagine, this depends a lot on how much money she has when she comes in.  If she comes to the table with <m>\$400</m>, she only needs to win once more than whatever losses she has.  She also has a lot of cushion before going broke.  If she comes in with <m>\$100</m>, she has to win a net of 4 games, and theres far less room for error on her part.
+   </p>
+   
+   <p>
+   We can model this with a transition matrix, with states <m>\$0, \$100, \ldots, \$500</m>.  <me>M=\begin{pmatrix} 
+   1 \amp 0.4 \amp 0 \amp 0 \amp 0 \amp 0\\ 
+   0 \amp 0 \amp 0.4 \amp 0 \amp 0 \amp 0\\
+   0 \amp 0.6 \amp 0 \amp 0.4 \amp 0 \amp 0\\ 
+   0 \amp 0 \amp 0.6 \amp 0 \amp 0.4 \amp 0\\
+   0 \amp 0 \amp 0 \amp 0.6 \amp 0 \amp 0\\
+   0 \amp 0 \amp 0 \amp 0 \amp 0.6 \amp 1\\
+   \end{pmatrix}</me>
+
+   So in state <m>\$0, \$500</m>, we have an entry of 1 in those diagonals, because once she enters this state she never leaves, she doesn't go back if she hits her goal, and she can't if she goes broke.  In each other state, we have a 40% chance of moving to a lower state, and a 60% chance of moving to a higher state.  We call the <m>\$0, \$500</m> states <term>absorbing states</term> because they absorb any incoming state.
+
+   </p>    
+
+   <p>
+    If we want to see what would happen in subsequent games, depending on starting position, we can do this via:
+<sage>
+        <input>
+          M=matrix(QQ, [[1,0.4,0,0,0,0],[0,0,0.4,0,0,0], [0,0.6,0,0.4,0,0], [0,0,0.6,0,0.4,0], [0,0,0,0.6,0,0], [0,0,0,0,0.6,1]])
+          for i in range(100):
+            print(M^i*1.0)
+            print(' ')
+        </input>
+        <output>
+        </output>
+      </sage>
+      Admittedly, this gets to be a bit hard to read, but what you can see is that over time, the values of the middle 4 rows go to zero.  What this translates to, is that as Adaeze continues to play, she chance that she doesnt end the game at some point goes down over time.  If we jump straight to 1000 games:
+      <sage>
+        <input>
+          M=matrix(QQ, [[1,0.4,0,0,0,0],[0,0,0.4,0,0,0], [0,0.6,0,0.4,0,0], [0,0,0.6,0,0.4,0], [0,0,0,0.6,0,0], [0,0,0,0,0.6,1]])
+          print(M^1000*1.0)
+        </input>
+        <output>
+        </output>
+      </sage>
+      We can see that if she starts with no money, she has no money (of course), if she start with <m>\$100</m>, she has about a 61.6% chance of going broke, and a 38.4% chance of winning.  At <m>\$200</m> this improves to a 36% chance of losing and a 64% chance of winning.  If she comes in with <m>\$300</m>, she has a 19% chance of going broke and a 81% chance of winning.  At <m>\$400</m>, she has a 7.6% chance of going broke, 92.4% chance of winning.  If she comes in with <m>\$500</m>, then she's already made her goal.
+
+   </p> 
+
+ </subsection>
+ <subsection>
+  <title>The Fundamental Matrix and an actual solution.</title>
+  <p>
+    Here, we will discuss a method for solving for the probability of reach the absorbing states, as well as finding the average number of steps it takes to reach these states.
+  </p>  
+
+  <p>
+    The steps are:
+    <ol>
+      <li>Write the transition matrix so that the absoprbing states are the first states: <me>\begin{pmatrix} I_n \amp A \\ 0 \amp B\end{pmatrix}.</me>
+      The top left is just the absorbing states, all of whom have 100% chance of sending their values to themselves, hence <m>I_n</m>.  A is the matrix of non absorbing states sending their values to the absorbing states.  The bottom left is an all 0 matrix, as the absorbing states do not send their value to any of the non absorbing states, and the bottom right <m>B</m> are the non absorbing states sending values to each other.
+    </li>    
+    <li>Compute the <term>Fundamental Matrix</term> <me>F=(I_m-B)^{-1}</me> where <m>m</m> corresponds to the dimensions of <m>B</m>.  Note that <m>F_{ij}</m> denotes the average number of times state <m>i</m> is visited when you start at state <m>j</m>.  The sum of each column tells you how many iterations on average before you reach an absorption state if you start in state <m>j</m>.</li>
+    <li>The matrix <m>AF</m> records the probabilities that you reach absorbing state <m>i</m> if you start at state <m>j</m>.</li>
+    </ol>  
+  </p>  
+
+  <p>
+    Let's work this out with Adaeze:
+    <ol>
+      <li> Letting <m>\$0, \$500</m> be the first two states, we have a new transition matrix:
+
+      <me>M=\begin{pmatrix} 
+   1 \amp 0 \amp 0.4 \amp 0 \amp 0 \amp 0 \\ 
+   0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0.6 \\
+   0 \amp 0 \amp 0 \amp 0.4 \amp 0 \amp 0 \\
+   0 \amp 0 \amp 0.6 \amp 0 \amp 0.4 \amp 0 \\ 
+   0 \amp 0 \amp 0 \amp 0.6 \amp 0 \amp 0.4 \\
+   0 \amp 0 \amp 0  \amp 0 \amp 0.6 \amp 0 \\
+   \end{pmatrix}</me>
+   We also have matrices:
+   <me>A=\begin{pmatrix} 
+     0.4 \amp 0 \amp 0 \amp 0 \\ 
+   0 \amp 0 \amp 0 \amp 0.6 
+   \end{pmatrix}</me>
+   <me>B=\begin{pmatrix} 
+   0 \amp 0.4 \amp 0 \amp 0 \\
+   0.6 \amp 0 \amp 0.4 \amp 0 \\ 
+   0 \amp 0.6 \amp 0 \amp 0.4 \\
+   0  \amp 0 \amp 0.6 \amp 0 \\
+   \end{pmatrix}</me>
+
+    </li>  
+
+  <li>We compute <m>F</m>:
+  <sage>
+        <input>
+          B=matrix(QQ, [[0,0.4,0,0], [0.6,0,0.4,0], [0,0.6,0,0.4],[0,0,0.6,0]])
+          I=matrix.identity(4)
+          F=(I-B)^(-1)
+          print(F)
+        </input>
+        <output>
+        </output>
+      </sage>
+
+      Giving us <me>F=
+      \begin{pmatrix}
+      \frac{325}{211} \amp \frac{190}{211} \amp \frac{100}{211} \amp \frac{40}{211} \\
+      \frac{285}{211} \amp \frac{475}{211} \amp \frac{250}{211} \amp \frac{100}{211} \\
+      \frac{225}{211} \amp \frac{375}{211} \amp \frac{475}{211} \amp \frac{190}{211} \\
+      \frac{135}{211} \amp \frac{225}{211} \amp \frac{285}{211} \amp \frac{325}{211} \\
+      \end{pmatrix}
+       </me>
+      
+
+
+  </li>  
+
+  <li>
+    Finally, we compute <m>AF</m>:
+
+    <sage>
+        <input>
+          A=matrix(QQ, [[0.4,0,0,0], [0,0,0,0.6]])
+          B=matrix(QQ, [[0,0.4,0,0], [0.6,0,0.4,0], [0,0.6,0,0.4],[0,0,0.6,0]])
+          I=matrix.identity(4)
+          F=(I-B)^(-1)
+          print(A*F)
+          print(' ')
+          print(A*F*1.0)
+        </input>
+        <output>
+        </output>
+      </sage>
+
+      <me>AF=
+      \begin{pmatrix}
+      \frac{130}{211} \amp \frac{76}{211} \amp \frac{40}{211} \amp \frac{16}{211} \\
+      \frac{81}{211} \amp \frac{135}{211} \amp \frac{171}{211} \amp \frac{195}{211} \\
+      \end{pmatrix}
+       </me>
+       If you start with <m>\$100</m> theres a <m>\frac{130}{211}\approx 0.616</m> chance you go broke and a <m>\frac{81}{211}\approx 0.384</m> chance you make <m>\$500</m> etc., essentially the same values we found above, but precisely.
+  </li>  
+    
+    </ol>  
+  </p>  
+<exercise>
+  <statement>
+    <p>
+      Suppose employees of a company go through a probationary period when hired.  They are evaluated regularly and rated unacceptable, in progress, good, and excellent.  Unacceptable employees are let go, and excellent employees are offered full time contracts, either way they are no longer probationary.
+    </p>
+    <p>
+      In progress employees have a 20% chance of moving to unacceptable, 20% chance of moving to good, and a 10% chance of moving to excellent in each round of review.  Good employees have a 10% chance to move to unacceptable, 20% chance of moving to in progress, and a 30% chance of moving to excellent.
+    </p>
+    <p>
+      <ol>
+        <li>
+          Find the solution matrix.</li>
+        <li>
+          If an employee came in as in progress, what is the probability they get a full time contract?</li>  
+        <li> If an employee comes in as good, how long on average is their probationary period?  </li>
+        </ol>
+
+    </p>  
+       
+
+    </statement>  
+
+    <solution>
+      <p>
+        We first write out the transition matrix, with the states being unacceptable, excellent, in progress and good:
+
+        <me>M=
+      \begin{pmatrix}
+      1 \amp 0 \amp 0.2 \amp 0.1\\
+      0 \amp 1 \amp 0.1 \amp 0.3\\
+      0 \amp 0 \amp 0.5 \amp 0.2\\
+      0 \amp 0 \amp 0.2 \amp 0.4\\
+      \end{pmatrix}
+       </me>
+
+       Thus, we have matrices:
+
+       <me>A=
+      \begin{pmatrix}
+       0.2 \amp 0.1\\
+       0.1 \amp 0.3\\
+      \end{pmatrix}
+       </me>
+       and 
+       <me>B=
+      \begin{pmatrix}
+      0.5 \amp 0.2\\
+      0.2 \amp 0.4\\
+      \end{pmatrix}
+       </me>
+
+       Thus we have <me>F=\left(\begin{pmatrix}
+      1 \amp 0\\
+      0 \amp 1\\
+      \end{pmatrix}-\begin{pmatrix}
+      0.5 \amp 0.2\\
+      0.2 \amp 0.4\\
+      \end{pmatrix}\right)^{-1}=\begin{pmatrix}
+      \frac{30}{13} \amp \frac{10}{13}\\
+      \frac{10}{13} \amp \frac{25}{13}\\
+      \end{pmatrix}
+    </me>
+
+    So the solutions matrix is:
+
+    <me>AF=
+      \begin{pmatrix}
+       0.2 \amp 0.1\\
+       0.1 \amp 0.3\\
+      \end{pmatrix}
+      \begin{pmatrix}
+      \frac{30}{13} \amp \frac{10}{13}\\
+      \frac{10}{13} \amp \frac{25}{13}\\
+      \end{pmatrix}
+      =
+      \begin{pmatrix}
+      \frac{7}{13} \amp \frac{9}{26}\\
+      \frac{6}{13} \amp \frac{17}{26}\\
+      \end{pmatrix}
+    </me>
+
+      </p>  
+
+    </solution>  
+
+    <solution>
+      <p>
+        If an employee came in as in progress, their chance of reaching excellent is <m>\frac{6}{13}</m>, the bottom left entry of the solutions matrix:
+        <me>
+        \begin{pmatrix}
+      \frac{7}{13} \amp \frac{9}{26}\\
+      \frac{6}{13} \amp \frac{17}{26}\\
+      \end{pmatrix}.
+      </me>
+    </p>  
+    </solution>  
+
+    <solution>
+      <p>
+        If an employee came in as good, their average probationary length would be the sum of the last column of <m>F</m>:
+
+        <me>
+        \begin{pmatrix}
+      \frac{30}{13} \amp \frac{10}{13}\\
+      \frac{10}{13} \amp \frac{25}{13}\\
+      \end{pmatrix}
+    </me>
+    So: <m>\frac{10}{13}+\frac{25}{13}=\frac{35}{13}\approx 2.7</m> cycles.
+  </p>
+</solution>
+
+
+
+
+
+
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+    If you flip a fair coin, how long on average would it take you to get 3 heads in a row?
+  </p>
+  </statement>
+  <solution>
+    <p>
+      Lets say we have 3 states, 3, 0, 1 and 2 heads in a row.  We'll let 3 be the absorbing state since you're done after that.  With each coin flip, you either get a heads, increasing the number of heads in a row, or a tails, sending you back to 0 heads in a row.
+    </p>
+    <p>
+      We thus get transition matrix:
+
+      <me>M=
+      \begin{pmatrix}
+      1 \amp 0 \amp 0 \amp 0.5\\
+      0 \amp 0.5 \amp 0.5 \amp 0.5\\
+      0 \amp 0.5\amp 0 \amp 0\\
+      0 \amp 0 \amp 0.5 \amp 0\\
+      \end{pmatrix}.
+       </me>
+       With
+
+       <me>A=
+      \begin{pmatrix}
+      0 \amp 0 \amp 0.5\\
+      \end{pmatrix}
+       </me>
+
+       and
+
+       <me>B=
+      \begin{pmatrix}
+      0.5 \amp 0.5 \amp 0.5\\
+       0.5\amp 0 \amp 0\\
+       0 \amp 0.5 \amp 0\\
+      \end{pmatrix}.
+       </me>
+
+    </p>  
+
+  <p>
+  
+    From here, we have that <me>F=(I_3-B)^{-1}=\begin{pmatrix}
+      8 \amp 6 \amp 4\\
+       4\amp 4 \amp 2\\
+       2 \amp 2 \amp 2\\
+      \end{pmatrix}.</me>
+      So assuming you start with no heads, then you will on average have to flip <m>8+4+2=14</m> times before reaching the absorbing state.
+  </p>  
+
+</solution>
+  
+  </exercise>  
+
+
+  <exercise>
+    <statement>
+      <p>
+        Farida opens a restaurant, the food is good, but the restaurant business is notoriously tough.  She needs a positive critic review in local press to generate the local buzz she needs to survive.  Each month, there is a 30% chance a critic reviews the restaurant.  There's a 10% chance that otherwise she breaks even that month. If that fails, she dips into her savings.  She can do so 5 times before the business is bankrupt.
+      </p>  
+      <p>
+        What is the probability she gets the review before she goes bankrupt?
+      </p>
+     </statement>
+        <solution>
+          <p>
+          There are 8 states: positive review, banktruptcy, and 0,1,2,3,4 and 5 dips into the savings left.  The first two are absorbing states, she gets the review and business booms or she goes bust.  Using the order above, we get transition matrix:
+          <me>
+          M=\begin{pmatrix}
+          1 \amp 0 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3\\
+          0 \amp 1 \amp 0.6 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0\\
+          0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0 \amp 0 \amp 0\\
+          0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0 \amp 0\\
+          0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0\\
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0\\
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6\\
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1\\
+          \end{pmatrix}.
+        </me>
+
+        This gives us:
+
+        <me>
+          A=\begin{pmatrix}
+           0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3\\
+           0.6 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0\\
+          \end{pmatrix},
+        </me>
+
+        <me>
+          B=\begin{pmatrix}
+           0.1 \amp 0.6 \amp 0 \amp 0 \amp 0 \amp 0\\
+           0 \amp 0.1 \amp 0.6 \amp 0 \amp 0 \amp 0\\
+           0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0\\
+           0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0\\
+           0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6\\
+           0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1\\
+          \end{pmatrix}
+        </me>
+
+      </p>
+
+        <p>
+          Thus we have <me>F=(I_6-B)^{-1}=
+          \begin{pmatrix}
+           \frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81} \amp  \frac{80}{243} \amp  \frac{160}{729} \amp  \frac{320}{2187}\\
+           0\amp \frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81} \amp  \frac{80}{243} \amp  \frac{160}{729} \\
+           0\amp 0\amp \frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81} \amp  \frac{80}{243} \\
+           0\amp 0\amp 0\amp \frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81}  \\
+           0\amp 0\amp 0\amp 0\amp \frac{10}{9} \amp  \frac{20}{27}  \\
+           0\amp 0\amp 0\amp 0\amp 0\amp \frac{10}{9}  \\
+          \end{pmatrix}
+        </me>
+        with solutions matrix:
+
+        <me>AF=
+        \begin{pmatrix}
+        \frac{1}{3}\amp \frac{5}{9}\amp \frac{19}{27}\amp \frac{65}{81}\amp \frac{211}{243}\amp\frac{665}{729}\\
+        \frac{2}{3}\amp \frac{4}{9}\amp \frac{8}{27}\amp \frac{16}{81}\amp \frac{32}{243}\amp\frac{64}{729}\\
+        \end{pmatrix}
+      </me>
+        So if she came in with 5 dips into the savings, she would have a <m>\frac{665}{729}\approx 91.22\%</m> chance of surviving until a positive review!
+        </p>  
+        </solution>  
+    </exercise>    
+
+
+</subsection>
+</section>

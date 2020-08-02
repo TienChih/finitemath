@@ -1,0 +1,24 @@
+<section xml:id="Sec_DetGames">
+  <title>Deterministic Games</title>
+  <introduction>
+  <p>
+    Suppose two players play a game where they know the payoffs of all the possible moves.  Can each player determine their optimal strategy?  Knowing what the other player's optimal choices are, how might that effect the other players choices?
+  </p>
+</introduction>
+
+<subsection>
+  <title>Coin Game</title>
+  <p>
+    Raheem and Catalina play a game where they, at the same time, each show a quater or a dime.  If the sum is over 30 cents, Raheem wins, otherwise Catalina wins.  What is each of their optimal strategies?
+  </p>
+
+  <p>
+    Let's consider this payout matrix, positive entries will represent Raheem gains (and Catalina loss) and negative the reverse.  We will let Raheem be the row player and Catalina be the column player, so first row is what happens when Rhaeem plays a dime, second row a quarter, first column is when Catalina plays a dime, second column a quater:<me>
+    M=\begin{pmatrix} -20 \amp 35 \\ 35 \amp 50 \end{pmatrix}</me>
+
+  </p>  
+  
+
+
+</subsection>
+</section>

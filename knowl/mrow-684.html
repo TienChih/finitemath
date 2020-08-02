@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:44-06:00    *-->
+<!--*    on 2020-08-02T16:48:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,11 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-R'(t)\amp = \frac{d}{dt}[10-8e^{-0.02t}]\\
-\amp = 0-8e^{-0.02t}\frac{d}{dt}[-0.02t]\\
-\amp = -8e^{-0.02t}(-0.02)\\
-\amp = 0.16e^{-0.02t}
+\frac{d}{dx}[a^x]\amp = \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
+\amp = \frac{d}{dx}[e^{\ln(a)x}]\\
+\amp = e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }\\
+\amp = e^{\ln(a)x}\ln(a)\cdot1\\
+\amp = a^x\ln(a)
 \end{align*}
 </div>
 <span class="incontext"><a href="DerivativeExp.html#mjx-eqn-mrow-684">in-context</a></span>

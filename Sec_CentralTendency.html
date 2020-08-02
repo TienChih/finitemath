@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:05-06:00    *-->
+<!--*    on 2020-08-02T16:48:00-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -129,6 +129,7 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
 </ul>
 </li>
 <li class="link">
@@ -202,6 +203,13 @@ MathJax.Hub.Config({
 <li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -209,15 +217,15 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_CentralTendency"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">10.1</span> <span class="title">Frequency Distribution and Measures of Central Tendency</span>
 </h2>
-<section class="introduction" id="introduction-48"><p id="p-1268">In <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a> we looked at random variables.  In that context, we knew exactly what the probability distribution was, or we could directly compute it.  In practice, most of the random variables we care about don't come with a well-defined formula for ther distribution.  The birth weights of babies, the profitability of a company month by month, the size and yield of crops etc.  These have to be inferred by collecting a <dfn class="terminology">random sample</dfn> of data and using it to estimate features of the random variable itself.</p></section><section class="subsection" id="subsection-101"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-49"><p id="p-1280">In <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a> we looked at random variables.  In that context, we knew exactly what the probability distribution was, or we could directly compute it.  In practice, most of the random variables we care about don't come with a well-defined formula for ther distribution.  The birth weights of babies, the profitability of a company month by month, the size and yield of crops etc.  These have to be inferred by collecting a <dfn class="terminology">random sample</dfn> of data and using it to estimate features of the random variable itself.</p></section><section class="subsection" id="subsection-105"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.1.1</span> <span class="title">Warning</span>
 </h3>
-<p id="p-1269">Random samples generally speaking are difficult to obtain.  If you wanted to say poll your local congressional district about upcoming candidates, how one conducts the poll can have a huge impact on who actually responds to it.  A phone survey who calls landlines will be biased for people who have landlines and don't use mobile phones primarily, for example.  An internet poll could be biased on where the poll appears and who frequents such sites, as well as biased torwards those who are more likely to be online than others.</p>
-<p id="p-1270">We should also note that even if one can opbtain a truly random sample, sheer chance itself can bias the results.  If we look at our die rolling example from <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a>: <iframe src="https://www.desmos.com/calculator/ngpuywqgug" id="interactive-199" width="600" height="600"></iframe> If I let the sample size just be 10, as I resample the distribution, I get very varied results in the shape of my outcomes, as well as the expectated values.  If I didn't apriori know what the outcome of die rolls would look like, or I didn't know the results came from die rolls, I could well  be convinced that this distribution had a much different shape than it actually does!  Generally speaking the larger the sample, the less likely we are to be fooled in this way.</p></section><section class="subsection" id="subsection-102"><h3 class="heading hide-type">
+<p id="p-1281">Random samples generally speaking are difficult to obtain.  If you wanted to say poll your local congressional district about upcoming candidates, how one conducts the poll can have a huge impact on who actually responds to it.  A phone survey who calls landlines will be biased for people who have landlines and don't use mobile phones primarily, for example.  An internet poll could be biased on where the poll appears and who frequents such sites, as well as biased torwards those who are more likely to be online than others.</p>
+<p id="p-1282">We should also note that even if one can opbtain a truly random sample, sheer chance itself can bias the results.  If we look at our die rolling example from <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a>: <iframe src="https://www.desmos.com/calculator/ngpuywqgug" id="interactive-199" width="600" height="600"></iframe> If I let the sample size just be 10, as I resample the distribution, I get very varied results in the shape of my outcomes, as well as the expectated values.  If I didn't apriori know what the outcome of die rolls would look like, or I didn't know the results came from die rolls, I could well  be convinced that this distribution had a much different shape than it actually does!  Generally speaking the larger the sample, the less likely we are to be fooled in this way.</p></section><section class="subsection" id="subsection-106"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.1.2</span> <span class="title">Frequency Distributon</span>
 </h3>
-<p id="p-1271">A <dfn class="terminology">frequency distribution</dfn> is a measurement of outcomes in your random sample and how often those outcomes appear.  This is analagous to the <em class="emphasis">probabilty distribution</em> discussed in <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a>, with the more commonly occuring outcomes in the sample corresponding to more likely outcomes in the underlying random variable.</p>
-<p id="p-1272">So if we had a random sample</p>
+<p id="p-1283">A <dfn class="terminology">frequency distribution</dfn> is a measurement of outcomes in your random sample and how often those outcomes appear.  This is analagous to the <em class="emphasis">probabilty distribution</em> discussed in <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a>, with the more commonly occuring outcomes in the sample corresponding to more likely outcomes in the underlying random variable.</p>
+<p id="p-1284">So if we had a random sample</p>
 <div class="displaymath">
 \begin{equation*}
 1,2,3,4,7,2,3,4,3,2,3,5,6,5,3,4,3,2.
@@ -241,31 +249,31 @@ x \amp \text{Frequency}\\
 \end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">Or we can display it with a <dfn class="terminology">histogram</dfn>, a bar graph with heights corresponding to frequency: <iframe src="https://www.desmos.com/calculator/pixksnyh6p" id="interactive-200" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-103"><h3 class="heading hide-type">
+<p data-braille="continuation">Or we can display it with a <dfn class="terminology">histogram</dfn>, a bar graph with heights corresponding to frequency: <iframe src="https://www.desmos.com/calculator/pixksnyh6p" id="interactive-200" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-107"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.1.3</span> <span class="title">Notions of “Average”</span>
 </h3>
 <article class="definition definition-like" id="DefinitionMean"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.1.1</span><span class="period">.</span>
 </h6>
-<p id="p-1273">Given a random sample of size \(n\text{,}\) the <dfn class="terminology">sample mean</dfn> denoted \(\bar{x}\) is computed</p>
+<p id="p-1285">Given a random sample of size \(n\text{,}\) the <dfn class="terminology">sample mean</dfn> denoted \(\bar{x}\) is computed</p>
 <div class="displaymath">
 \begin{equation*}
 \bar{x}:=\frac{x_1+\cdots x_n}{n}.
 \end{equation*}
-</div></article><p id="p-1274"><a class="xref" data-knowl="./knowl/DefinitionMean.html" title="Definition 10.1.1">Definition 10.1.1</a> is the traditional “average”.  The higher values are counterbalanced by the lower values, and it yeilds the value “in between”.  In our above example, our sample mean would be</p>
+</div></article><p id="p-1286"><a class="xref" data-knowl="./knowl/DefinitionMean.html" title="Definition 10.1.1">Definition 10.1.1</a> is the traditional “average”.  The higher values are counterbalanced by the lower values, and it yeilds the value “in between”.  In our above example, our sample mean would be</p>
 <div class="displaymath">
 \begin{equation*}
 \bar{x}=\frac{1+2+2+2+2+3+3+3+3+3+3+4+4+4+5+5+6+6}{18}\approx 3.4444.
 \end{equation*}
 </div>
 <p data-braille="continuation">Of course, this is computed directly by Desmos as well.</p>
-<article class="remark remark-like" id="remark-27"><h6 class="heading">
+<article class="remark remark-like" id="remark-29"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.1.2</span><span class="period">.</span>
 </h6>
-<p id="p-1275">Note that the sample mean here is our attempt to predict the <dfn class="terminology">expected value</dfn> of a random variable as seen in <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a>, using a sample.  The larger the sample, the more closely our sample mean will resemble the expectation, but as we saw in die rolling above, there will most likely still be some error.</p></article><article class="definition definition-like" id="DefinitionMedian"><h6 class="heading">
+<p id="p-1287">Note that the sample mean here is our attempt to predict the <dfn class="terminology">expected value</dfn> of a random variable as seen in <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a>, using a sample.  The larger the sample, the more closely our sample mean will resemble the expectation, but as we saw in die rolling above, there will most likely still be some error.</p></article><article class="definition definition-like" id="DefinitionMedian"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.1.3</span><span class="period">.</span>
 </h6>
-<p id="p-1276">Given a random sample of size \(n\text{,}\) the <dfn class="terminology">median</dfn> is the “middlemost” value if \(n\) is odd, and the mean of the two middlemost values if \(n\) is even.</p></article><p id="p-1277">This is the value closest to the center of our random sample.  In our case, we rewrite the values in order:</p>
+<p id="p-1288">Given a random sample of size \(n\text{,}\) the <dfn class="terminology">median</dfn> is the “middlemost” value if \(n\) is odd, and the mean of the two middlemost values if \(n\) is even.</p></article><p id="p-1289">This is the value closest to the center of our random sample.  In our case, we rewrite the values in order:</p>
 <div class="displaymath">
 \begin{equation*}
 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 5, 5, 6, 6
@@ -275,10 +283,10 @@ x \amp \text{Frequency}\\
 <article class="definition definition-like" id="DefinitionMode"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.1.4</span><span class="period">.</span>
 </h6>
-<p id="p-1278">Given a random sample the <dfn class="terminology">mode(s)</dfn> are the most commonly occung value(s).</p></article><p id="p-1279">This is the most “likely” value.  In our example, it is 3 with 6 occurences.</p>
+<p id="p-1290">Given a random sample the <dfn class="terminology">mode(s)</dfn> are the most commonly occung value(s).</p></article><p id="p-1291">This is the most “likely” value.  In our example, it is 3 with 6 occurences.</p>
 <article class="exercise exercise-like" id="exercise-98"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-98"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.1.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-98"><article class="exercise exercise-like"><p id="p-1280">Consider the following table of high and low temperatures in a location over the course of a year.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-98"><article class="exercise exercise-like"><p id="p-1292">Consider the following table of high and low temperatures in a location over the course of a year.</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|c|c|}
@@ -304,7 +312,7 @@ x \amp \text{Frequency}\\
 <p data-braille="continuation">Find the mean and median temperatures for the highs and lows.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-163" id="solution-163"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-163"><div class="solution solution-like">
-<p id="p-1281">For the highs, we have, in order</p>
+<p id="p-1293">For the highs, we have, in order</p>
 <div class="displaymath">
 \begin{equation*}
 38, 38, 40, 43, 45, 50, 51, 59, 69, 77, 82, 85.
@@ -317,7 +325,7 @@ x \amp \text{Frequency}\\
 \end{equation*}
 </div>
 <p data-braille="continuation">The median is the mean of the 6th and 7th entries \(\frac{50+51}{2}=50.5\text{.}\) <iframe src="https://www.desmos.com/calculator/ktbeduabsz" id="interactive-201" width="600" height="600"></iframe></p>
-<p id="p-1282">For the lows, we have, in order</p>
+<p id="p-1294">For the lows, we have, in order</p>
 <div class="displaymath">
 \begin{equation*}
 16, 17, 18, 22, 26, 27, 31, 32, 37, 38, 42, 45.

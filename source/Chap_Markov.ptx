@@ -1,0 +1,16 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Chap_Markov">
+  <title>Markov Chains</title>
+  <introduction>
+    <statement>
+  <p>
+    Fill in later.
+
+  </p>
+</statement>
+</introduction>
+  <xi:include  href="Sec_IntrotoMarkov.ptx"/>
+  <xi:include  href="Sec_StableSolutions.ptx"/>
+  <xi:include  href="Sec_Absorb.ptx"/>
+  
+  
+</chapter>

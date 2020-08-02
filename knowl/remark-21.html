@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:53-06:00    *-->
+<!--*    on 2020-08-02T16:48:50-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,20 +13,23 @@
 </head>
 <body>
 <article class="remark remark-like"><h6 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.1.6</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.4.2</span><span class="period">.</span>
 </h6>
-<p>We note that \(n!\) denotes \(n!=\overbrace{n\cdot (n-1)\cdots 1}^{n}\) where we let \(0!=1\text{.}\)</p>
-<p>Notice that</p>
+<p>Reworking <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a>, we obtain:</p>
 <div class="displaymath">
-\begin{equation*}
-P(n,n)=\overbrace{n\cdot (n-1)\cdots 1}^{n}=n!.
-\end{equation*}
+\begin{align*}
+P(X)\amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
+P(X)\amp =P(X|Y)P(Y)+P(X|Y^c)-P(X|Y^c)P(Y)\\
+P(X)-P(X|Y^c)\amp =(P(X|Y)-P(X|Y^c))P(Y)\\
+P(Y)\amp =\frac{P(X)-P(X|Y^c)}{P(X|Y)-P(X|Y^c)}.
+\end{align*}
 </div>
-<p>Also notice that more generally</p>
+<p data-braille="continuation">And:</p>
 <div class="displaymath">
-\begin{equation*}
-P(n,r)=\overbrace{n\cdot (n-1)\cdots (n-r+1)}^{r}=\frac{n\cdot (n-1)\cdots (n-r+1)\cdot \color{blue}{(n-r)\cdots 1}}{\color{blue}{(n-r)\cdots 1}}=\frac{n!}{(n-r)!}.
-\end{equation*}
-</div></article><span class="incontext"><a href="Sec_Permutation.html#remark-21">in-context</a></span>
+\begin{align*}
+P(Y|X)\amp =\frac{P(Y\cap X)}{P(X)}\\
+\amp =\frac{P(X|Y)P(X)}{P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))}.
+\end{align*}
+</div></article><span class="incontext"><a href="Sec_Bayes.html#remark-21">in-context</a></span>
 </body>
 </html>

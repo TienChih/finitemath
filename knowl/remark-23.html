@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:54-06:00    *-->
+<!--*    on 2020-08-02T16:48:52-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,20 @@
 </head>
 <body>
 <article class="remark remark-like"><h6 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.2.3</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.1.6</span><span class="period">.</span>
 </h6>
-<p>Consider the following about combinations.</p>
-<ul class="disc">
-<li>\(C(n,n)=1\text{.}\)  There is only one way to pick \(n\) of \(n\) objects.  Pick them all.</li>
-<li>\(C(n,r)=C(n,n-r)\text{.}\)  Picking \(r\) objects is the same as selecting \(n-r\) objects to <em class="emphasis">not</em> pick.</li>
-<li>\(C(n,0)=1\text{.}\)  Combine the above facts.  Alternatively, the only selection of no objects is the empty selection.</li>
-</ul></article><span class="incontext"><a href="Sec_Combinations.html#remark-23">in-context</a></span>
+<p>We note that \(n!\) denotes \(n!=\overbrace{n\cdot (n-1)\cdots 1}^{n}\) where we let \(0!=1\text{.}\)</p>
+<p>Notice that</p>
+<div class="displaymath">
+\begin{equation*}
+P(n,n)=\overbrace{n\cdot (n-1)\cdots 1}^{n}=n!.
+\end{equation*}
+</div>
+<p>Also notice that more generally</p>
+<div class="displaymath">
+\begin{equation*}
+P(n,r)=\overbrace{n\cdot (n-1)\cdots (n-r+1)}^{r}=\frac{n\cdot (n-1)\cdots (n-r+1)\cdot \color{blue}{(n-r)\cdots 1}}{\color{blue}{(n-r)\cdots 1}}=\frac{n!}{(n-r)!}.
+\end{equation*}
+</div></article><span class="incontext"><a href="Sec_Permutation.html#remark-23">in-context</a></span>
 </body>
 </html>

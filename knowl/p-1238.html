@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:58-06:00    *-->
+<!--*    on 2020-08-02T16:48:56-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,22 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We note that the device has a \(0.3\) chance to fail in the first year, \((0.7)(0.3)\) chance to fail the second since it had to survive the first, \((0.7)^2(0.3)\) to fail the third year, after which the policy ends.  So if \(X\) is the payout, then it has distribution</p>
+<p>So in our die rolling case, we already have \(E(X)=3.5\text{,}\) we then compute:</p>
 <div class="displaymath">
 \begin{equation*}
-\begin{array}{|c|cccc|}
-\hline
-x \amp 3000 \amp 2000 \amp 1000 \amp 0 \\
-\hline
-P(X=x) \amp (0.3) \amp (0.7)(0.3) \amp (0.7)^2(0.3) \amp 1-(0.3)-(0.7)(0.3)-(0.7)^2(0.3)\\
-\hline
-\end{array}
+E(X^2)=\frac{1}{6}\cdot 1^2+\frac{1}{6}\cdot 2^2+\frac{1}{6}\cdot 3^2+\frac{1}{6}\cdot 4^2+\frac{1}{6}\cdot 5^2+\frac{1}{6}\cdot 6^2=\frac{91}{6}.
+\end{equation*}
+</div>
+<p data-braille="continuation">So we  have the variance of \(X\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+Var(X)=\frac{91}{6}-(3.5)^2=\frac{35}{12}\approx 2.91667.
+\end{equation*}
+</div>
+<p data-braille="continuation">Finally the standard deviation of \(X\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma_X=\sqrt{\frac{35}{12}}\approx 1.7078.
 \end{equation*}
 </div>
 <span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1238">in-context</a></span>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:43-06:00    *-->
+<!--*    on 2020-08-02T16:48:42-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,11 +14,14 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-f'(x)\amp = \frac{d}{dx}[\sqrt{x^2+1}]\\
-\amp = \frac{d}{dx}[g(h(x))]\\
-\amp = g'(h(x))h'(x)\\
-\amp = \frac{1}{2}(x^2+1)^{-1/2}(2x)\\
-\amp = \frac{x}{\sqrt{x^2+1}}
+Q(x)\amp = \frac{f(x)}{g(x)}\\
+Q(x)g(x)\amp = f(x),\ \text{ now we can differentiate both sides }\\
+\frac{d}{dx}[Q(x)g(x)]\amp = f'(x),\ \text{ then by the product rule: }\\
+Q'(x)g(x)+Q(x)g'(x)\amp = f'(x)\\
+Q'(x)g(x)\amp = f'(x)-Q(x)g'(x),\ \text{then recall that  \(Q(x)=\frac{f(x)}{g(x)}\)}\\
+Q'(x)g(x)\amp = f'(x)-\frac{f(x)g'(x)}{g(x)}\\
+Q'(x)g(x)\amp = \frac{f'(x)g(x)-f(x)g'(x)}{g(x)}\\
+Q'(x)\amp = \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}
 \end{align*}
 </div>
 <span class="incontext"><a href="Sec_AdvancedDerivative.html#mjx-eqn-mrow-647">in-context</a></span>

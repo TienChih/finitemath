@@ -136,7 +136,7 @@
     </preface>  
 
     </frontmatter>
-        <xi:include href="./Chap_LinearFunctions.ptx"/>
+    <xi:include href="./Chap_LinearFunctions.ptx"/>
     <xi:include href="./Chap_Matrices.ptx"/> 
     <xi:include href="./Chap_LinearProgramming.ptx"/> 
     <xi:include href="./Chap_Logic.ptx"/> 
@@ -146,6 +146,7 @@
     <xi:include href="./Chap_SetProb.ptx"/> 
     <xi:include href="./Chap_CountingProb.ptx"/> 
     <xi:include href="./Chap_Stats.ptx"/> 
+    <xi:include href="./Chap_Markov.ptx"/> 
     <backmatter>
       <xi:include href="./bibliography.ptx"/>
     </backmatter>

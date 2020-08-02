@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:58-06:00    *-->
+<!--*    on 2020-08-02T16:48:56-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,31 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We can use sagecells and R to simulate these outcomes.  We let \(n\) denote the number of trials, \(X\) the outcomes, and \(p\) their probabilities.  The histogram of outcomes, mean, variance and standard deviations are displayed below:</p>
+<p>There are 3 poisened apples and 7 non-poisened apples.  Each selection ensures she is picking some number of poisened and the rest non poisened.  She can't pick more than 3 poisened apples since that's all there is.  So the probability distribution would be:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{|c|cccc|}
+\hline
+x \amp 0 \amp 1 \amp 2 \amp 3 \\
+\hline
+P(X=x) \amp \frac{C(3,0)C(7,4)}{C(10,4)} \amp \frac{C(3,1)C(7,3)}{C(10,4)} \amp \frac{C(3,2)C(7,2)}{C(10,4)} \amp \frac{C(3,3)C(7,1)}{C(10,4)}\\
+\hline
+\end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">Or:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{|c|cccc|}
+\hline
+x \amp 0 \amp 1 \amp 2 \amp 3 \\
+\hline
+P(X=x) \amp \frac{35}{210}\approx 0.1667\amp \frac{105}{210}=0.5 \amp \frac{63}{210}=0.3 \amp \frac{7}{210}\approx 0.0333\\
+\hline
+\end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">There is a \(\frac{63}{210}+\frac{7}{210}=\frac{1}{3}\) chance she eats at least 2 poisened apples.</p>
 <span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1228">in-context</a></span>
 </body>
 </html>

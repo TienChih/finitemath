@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-08-02T16:49:07-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The steps are:</p>
+<ol class="decimal">
+<li>Write the transition matrix so that the absoprbing states are the first states:<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} I_n \amp A \\ 0 \amp B\end{pmatrix}.
+\end{equation*}
+</div>The top left is just the absorbing states, all of whom have 100% chance of sending their values to themselves, hence \(I_n\text{.}\)  A is the matrix of non absorbing states sending their values to the absorbing states.  The bottom left is an all 0 matrix, as the absorbing states do not send their value to any of the non absorbing states, and the bottom right \(B\) are the non absorbing states sending values to each other.</li>
+<li>Compute the <dfn class="terminology">Fundamental Matrix</dfn><div class="displaymath">
+\begin{equation*}
+F=(I_m-B)^{-1}
+\end{equation*}
+</div>where \(m\) corresponds to the dimensions of \(B\text{.}\)  Note that \(F_{ij}\) denotes the average number of times state \(i\) is visited when you start at state \(j\text{.}\)  The sum of each column tells you how many iterations on average before you reach an absorption state if you start in state \(j\text{.}\)</li>
+<li>The matrix \(AF\) records the probabilities that you reach absorbing state \(i\) if you start at state \(j\text{.}\)</li>
+</ol>
+<span class="incontext"><a href="Sec_Absorb.html#p-1450">in-context</a></span>
+</body>
+</html>

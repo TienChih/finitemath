@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:41-06:00    *-->
+<!--*    on 2020-08-02T16:48:40-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,20 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>How do we know that? Well:</p>
+<p>By <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> we have:</p>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx}[a(f)x)+bg(x)]\amp = \limit{h}{0}\frac{af(x+h)+bg(x+h)-(af(x)-bg(x))}{h}\\
-\amp = \limit{h}{0}\frac{af(x+h)-af(x)}{h}+\limit{h}{0}\frac{bg(x+h)-bg(x)}{h}\\
-\amp = a\limit{h}{0}\frac{f(x+h)-f(x)}{h}+b\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
-\amp = af'(x)+bg'(x)\text{.}
+A'(10)\amp = \limit{h}{0}\frac{A(2+h)-A(2)}{h}\\
+\amp = \limit{h}{0} \frac{1000\pi\sqrt{10+h}-1000\pi\sqrt{10}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{\sqrt{10+h}-\sqrt{10}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{(\sqrt{10+h}-\sqrt{10})(\sqrt{10+h}+\sqrt{10})}{h(\sqrt{10+h}+\sqrt{10})}\\
+\amp = \limit{h}{0} 1000\pi\frac{10+h-10}{h(\sqrt{10+h}+\sqrt{10})}\\
+\amp = \limit{h}{0} 1000\pi\frac{h}{h(\sqrt{10+h}+\sqrt{10})}\\
+\amp = \limit{h}{0} 1000\pi\frac{1}{(\sqrt{10+h}+\sqrt{10})}\\
+\amp =  1000\pi\frac{1}{(\sqrt{10+0}+\sqrt{10})}=\frac{1000\pi}{2\sqrt{10}}\approx 496.729\text{.}
 \end{align*}
 </div>
-<span class="incontext"><a href="Sec_RulesofDerivative.html#p-945">in-context</a></span>
+<p data-braille="continuation">About 496.729 square ft per hour.  We can see this below: <iframe src="https://www.desmos.com/calculator/oju8fxmmy4" id="interactive-142" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="Sec_DefofDerivative.html#p-945">in-context</a></span>
 </body>
 </html>

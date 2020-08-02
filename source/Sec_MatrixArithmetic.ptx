@@ -243,6 +243,34 @@
         </p>
       </statement>
     </example>
+
+    While matrix multiplication may differ wildly from real number multiplication, we do have a notion of <q>multiplying by 1</q>.
+
+    <definition xml:id="DefinitionIdentity">
+      <p>
+        For any positive integer <m>n</m>, let <m>I_n</m> denote the <m>n\times n</m> matrix with 1's in the diagonal and 0 elsewhere.  This is called a <term>Identity Matrix</term>.
+      </p>
+   </definition>
+   
+   <p>
+    So for example <me>I_2=\begin{pmatrix}1 \amp 0 \\ 0 \amp 1 \end{pmatrix}.</me>  So notice:
+    <md>
+      <mrow> \begin{pmatrix}1 \amp 0 \\ 0 \amp 1 \end{pmatrix}\begin{pmatrix}a \amp b \\ c \amp d \end{pmatrix}\amp = \begin{pmatrix}1\cdot a+0\cdot c \amp 1\cdot b+0\cdot d \\ 0\cdot a +1\cdot c \amp 0\cdot b +1\cdot d \end{pmatrix}</mrow>
+      <mrow>\amp = \begin{pmatrix}a \amp b \\ c \amp d \end{pmatrix}</mrow>
+      <mrow> \begin{pmatrix}a \amp b \\ c \amp d \end{pmatrix}\begin{pmatrix}1 \amp 0 \\ 0 \amp 1 \end{pmatrix}\amp = \begin{pmatrix}a\cdot 1+b\cdot 0 \amp a\cdot 0+b\cdot 1 \\ c\cdot 1+ d\cdot 0 \amp c\cdot 0 +d\cdot 1 \end{pmatrix}</mrow>
+      <mrow>\amp = \begin{pmatrix}a \amp b \\ c \amp d \end{pmatrix}</mrow>
+    </md>
+    More generally:
+   </p>  
+
+   <remark>
+    <p>
+      Given a matrix <m>M</m>, we have <me>MI_n=M=I_nM</me> whenever these products are defined.</p>
+   </remark>   
+
+
+
+
   </subsection>
   <subsection>
     <title>Sums of Matrices</title>

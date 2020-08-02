@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:11:51-06:00    *-->
+<!--*    on 2020-08-02T16:47:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -129,6 +129,7 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
 </ul>
 </li>
 <li class="link">
@@ -202,6 +203,13 @@ MathJax.Hub.Config({
 <li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -209,28 +217,28 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Quadratics"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Quadratic Functions</span>
 </h2>
-<section class="subsection" id="subsection-49"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-53"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.2.1</span> <span class="title">Form of Quadratic functions</span>
 </h3>
-<article class="definition definition-like" id="definition-6"><h6 class="heading">
+<article class="definition definition-like" id="definition-8"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-740">A function \(q(x)\) is a <dfn class="terminology">quadratic function</dfn> if it may be written as:</p>
+<p id="p-752">A function \(q(x)\) is a <dfn class="terminology">quadratic function</dfn> if it may be written as:</p>
 <div class="displaymath">
 \begin{equation*}
 q(x)=ax^2+bx+c\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(a\neq0\text{.}\)</p></article><p id="p-741">The classic example is the standard parabola, \(y=x^2\) or a quadratic with \(a=1.\) \(b,c=0\text{.}\) <iframe src="https://www.desmos.com/calculator/aktz8g8cbh" id="interactive-99" width="600" height="600"></iframe> We should be familiar with some of the properties of this shape, it's symmetric on both sides and it goes to positive infinity in both directions (as \(x^2\) cannot be negative).</p>
-<p id="p-742">It would be nice if we could show that all quadratics had the same essential shape. To do this, we must first show that all quadratics also have the form</p>
+<p data-braille="continuation">where \(a\neq0\text{.}\)</p></article><p id="p-753">The classic example is the standard parabola, \(y=x^2\) or a quadratic with \(a=1.\) \(b,c=0\text{.}\) <iframe src="https://www.desmos.com/calculator/aktz8g8cbh" id="interactive-99" width="600" height="600"></iframe> We should be familiar with some of the properties of this shape, it's symmetric on both sides and it goes to positive infinity in both directions (as \(x^2\) cannot be negative).</p>
+<p id="p-754">It would be nice if we could show that all quadratics had the same essential shape. To do this, we must first show that all quadratics also have the form</p>
 <div class="displaymath">
 \begin{equation*}
 q(x)=a(x-h)^2+k\text{.}
 \end{equation*}
 </div>
-<p id="p-743">To see this:</p>
+<p id="p-755">To see this:</p>
 <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/completesquare.gif" style="width: 100%; height: auto;" alt="Animation of completing the square."></div>
-<div class="displaymath" id="p-744">
+<div class="displaymath" id="p-756">
 \begin{align*}
 q(x)\amp = ax^2+bx+c\\
 \amp = a\left(x^2+\frac{b}{a}x\right)+c\\
@@ -238,8 +246,8 @@ q(x)\amp = ax^2+bx+c\\
 \amp = a\left(x+\frac{b}{2a}\right)^2+c-\frac{b^2}{4a}
 \end{align*}
 </div>
-<p id="p-745">So by letting \(h=-\frac{b}{2a}\) and \(k=c-\frac{b^2}{4a}\text{,}\) we have our form.</p>
-<p id="p-746">An interesting byproduct of this is that if we were to solve \(ax^2+bx+c=0\text{,}\) we would get:</p>
+<p id="p-757">So by letting \(h=-\frac{b}{2a}\) and \(k=c-\frac{b^2}{4a}\text{,}\) we have our form.</p>
+<p id="p-758">An interesting byproduct of this is that if we were to solve \(ax^2+bx+c=0\text{,}\) we would get:</p>
 <div class="displaymath">
 \begin{align*}
 ax^2+bx+c\amp = 0\\
@@ -251,31 +259,31 @@ x+\frac{b}{2a}\amp=\frac{\pm\sqrt{b^2-4ac}}{2a}\\
 x\amp =\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 \end{align*}
 </div>
-<p id="p-747">Which is the <dfn class="terminology">quadratic formula</dfn>.</p></section><section class="subsection" id="subsection-50"><h3 class="heading hide-type">
+<p id="p-759">Which is the <dfn class="terminology">quadratic formula</dfn>.</p></section><section class="subsection" id="subsection-54"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.2.2</span> <span class="title">Parabolas</span>
 </h3>
-<p id="p-748">Now that we have this form \(a(x-h)^2+k\text{,}\) consider how \(a,h\text{,}\) and \(k\) affect the shape of the graph: <iframe src="https://www.desmos.com/calculator/21eduimmih" id="interactive-100" width="600" height="600"></iframe></p>
-<p id="p-749">Sliding \(k\) shifts the parabola up and down. We can think of this as adding to or detracting from the value of \(x^2\text{.}\) Sliding \(h\) shifts the graph left and right. We can think of this as slowing down or speeding up \(x^2\) by \(h\) units. \(a\) stretches or squashes \(x^2\text{,}\) or if \(a\) is negative, also reflects this across the \(x\) axis. But all of these transformations preserve the fundamental shape of a parabola, so all quadratic functions have this shape.</p>
-<p id="p-750">Note that since \(ax^2+bx+c= a(x-h)^2+k\) is a shift of the standard parabola by \(h\) and \(k\text{,}\) we have that the <dfn class="terminology">vertex</dfn> of \(y=ax^2+bx+c\) the maximum or minimum value, is the point \((h,k)=(-\frac{b}{2a}, c-\frac{b^2}{4a})\text{.}\) <iframe src="https://www.desmos.com/calculator/dkk6wlkmzz" id="interactive-101" width="600" height="600"></iframe></p>
-<p id="p-751">A less computationally intense way of finding the vertex is to see where the roots of the quadratic are, that is, where the parabola has \(x\)-intercepts.  Due to the symmetry of a parabola, the vertex must occur halfway in between.</p>
-<p id="p-752">If we consider the parabola \(y=x(20-x)\)  the roots occur at \(x=0, 10\) , the the \(x\) value of the vertex is halfway between these points at \(x=10\text{,}\) and the \(y\) value is \((10,(20-10)=100\text{.}\) <iframe src="https://www.desmos.com/calculator/efnmxzpiuk" id="interactive-102" width="600" height="600"></iframe> One could rewrite \(y=-x^2+20x+0\) and find the vertex that way as well.</p>
+<p id="p-760">Now that we have this form \(a(x-h)^2+k\text{,}\) consider how \(a,h\text{,}\) and \(k\) affect the shape of the graph: <iframe src="https://www.desmos.com/calculator/21eduimmih" id="interactive-100" width="600" height="600"></iframe></p>
+<p id="p-761">Sliding \(k\) shifts the parabola up and down. We can think of this as adding to or detracting from the value of \(x^2\text{.}\) Sliding \(h\) shifts the graph left and right. We can think of this as slowing down or speeding up \(x^2\) by \(h\) units. \(a\) stretches or squashes \(x^2\text{,}\) or if \(a\) is negative, also reflects this across the \(x\) axis. But all of these transformations preserve the fundamental shape of a parabola, so all quadratic functions have this shape.</p>
+<p id="p-762">Note that since \(ax^2+bx+c= a(x-h)^2+k\) is a shift of the standard parabola by \(h\) and \(k\text{,}\) we have that the <dfn class="terminology">vertex</dfn> of \(y=ax^2+bx+c\) the maximum or minimum value, is the point \((h,k)=(-\frac{b}{2a}, c-\frac{b^2}{4a})\text{.}\) <iframe src="https://www.desmos.com/calculator/dkk6wlkmzz" id="interactive-101" width="600" height="600"></iframe></p>
+<p id="p-763">A less computationally intense way of finding the vertex is to see where the roots of the quadratic are, that is, where the parabola has \(x\)-intercepts.  Due to the symmetry of a parabola, the vertex must occur halfway in between.</p>
+<p id="p-764">If we consider the parabola \(y=x(20-x)\)  the roots occur at \(x=0, 10\) , the the \(x\) value of the vertex is halfway between these points at \(x=10\text{,}\) and the \(y\) value is \((10,(20-10)=100\text{.}\) <iframe src="https://www.desmos.com/calculator/efnmxzpiuk" id="interactive-102" width="600" height="600"></iframe> One could rewrite \(y=-x^2+20x+0\) and find the vertex that way as well.</p>
 <article class="example example-like" id="example-61"><a data-knowl="" class="id-ref original" data-refid="hk-example-61"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-61"><article class="example example-like"><p id="p-753">Suppose that in an apartment complex of 80 units, if the rent is \(\$800 \) a month, all the units will be filled.  For every \(\$25\) we increase the rent there will be an additional vacancy.  What rent maximizes the monthly revenue?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-61"><article class="example example-like"><p id="p-765">Suppose that in an apartment complex of 80 units, if the rent is \(\$800 \) a month, all the units will be filled.  For every \(\$25\) we increase the rent there will be an additional vacancy.  What rent maximizes the monthly revenue?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like">
-<p id="p-754">We note that the monthly revenue generated by the apartment complex is \(O\cdot T\) where \(O\) is the occupancy and \(T\) is the rent (the rent per unit, times the number of units rented).</p>
-<p id="p-755">We note that if \(x\) is the amount in dollars <em class="emphasis">above</em>  \(\$800\) that you charge, then \(O=80-\frac{x}{25}\text{,}\) that is, occupancy starts at 80 and decreases one per \(\$25\text{.}\)  On the other hand, the rent \(T=800+x\text{.}\)  So \(R(x)=(80-\frac{x}{25})(800+x)=-\frac{1}{25}x^2+48x+64000\text{.}\)</p>
-<p id="p-756">So our vertex occurs at \(h=-\frac{48}{2\cdot \frac{-1}{25}}=600\) and \(k=64000-\frac{48^2}{4\cdot \frac{-1}{25}}=78400\text{.}\)</p>
-<p id="p-757">Since this \(h=600\) is how much the rent is increased, the revenue is maximized when the rent is \(800+600=\$1400\) a month, with an occupancy of \(80-\frac{600}{25}=56\) units, for a total revenue of \(\$78400\text{.}\) <iframe src="https://www.desmos.com/calculator/xfcnkitqsa" id="interactive-103" width="600" height="600"></iframe></p>
+<p id="p-766">We note that the monthly revenue generated by the apartment complex is \(O\cdot T\) where \(O\) is the occupancy and \(T\) is the rent (the rent per unit, times the number of units rented).</p>
+<p id="p-767">We note that if \(x\) is the amount in dollars <em class="emphasis">above</em>  \(\$800\) that you charge, then \(O=80-\frac{x}{25}\text{,}\) that is, occupancy starts at 80 and decreases one per \(\$25\text{.}\)  On the other hand, the rent \(T=800+x\text{.}\)  So \(R(x)=(80-\frac{x}{25})(800+x)=-\frac{1}{25}x^2+48x+64000\text{.}\)</p>
+<p id="p-768">So our vertex occurs at \(h=-\frac{48}{2\cdot \frac{-1}{25}}=600\) and \(k=64000-\frac{48^2}{4\cdot \frac{-1}{25}}=78400\text{.}\)</p>
+<p id="p-769">Since this \(h=600\) is how much the rent is increased, the revenue is maximized when the rent is \(800+600=\$1400\) a month, with an occupancy of \(80-\frac{600}{25}=56\) units, for a total revenue of \(\$78400\text{.}\) <iframe src="https://www.desmos.com/calculator/xfcnkitqsa" id="interactive-103" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-47"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-47"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-47"><article class="exercise exercise-like"><p id="p-758">Suppose that you were given 200 ft of fencing to fence in a rectangular area.  What is the largest are you could fence in and what would it's dimensions be?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-47"><article class="exercise exercise-like"><p id="p-770">Suppose that you were given 200 ft of fencing to fence in a rectangular area.  What is the largest are you could fence in and what would it's dimensions be?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-70"><div class="solution solution-like">
-<p id="p-759">We note that a rectangle has length sides and two width sides.  If \(\ell \) is the length of the length sides and \(w\) the width side, we obtain:</p>
+<p id="p-771">We note that a rectangle has length sides and two width sides.  If \(\ell \) is the length of the length sides and \(w\) the width side, we obtain:</p>
 <div class="displaymath">
 \begin{equation*}
 2\ell+2w=200
@@ -294,10 +302,10 @@ A\amp = -w^2+100w.
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-48"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-48"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.2.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-48"><article class="exercise exercise-like"><p id="p-760">A company sells widgets for \(\$50\) each.  Unfortunately, no one wants to buy them.  The discover that for each dollar they lower the price, 5 more people are willing to buy a widget.  The marginal cost of producing a widget is \(\$10\) with fixed cost \(\$300\text{.}\)  How should the widget be priced to maximize profit?  What is this profit, and how many widgets would be sold?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-48"><article class="exercise exercise-like"><p id="p-772">A company sells widgets for \(\$50\) each.  Unfortunately, no one wants to buy them.  The discover that for each dollar they lower the price, 5 more people are willing to buy a widget.  The marginal cost of producing a widget is \(\$10\) with fixed cost \(\$300\text{.}\)  How should the widget be priced to maximize profit?  What is this profit, and how many widgets would be sold?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-71" id="solution-71"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-71"><div class="solution solution-like">
-<p id="p-761">Let's let\(x\) denote the value by which we decrease the price of a widget from \(\$50\text{.}\)  We'll note that the quantity sold is \(q=5x\text{.}\)  From this we deduce:</p>
+<p id="p-773">Let's let\(x\) denote the value by which we decrease the price of a widget from \(\$50\text{.}\)  We'll note that the quantity sold is \(q=5x\text{.}\)  From this we deduce:</p>
 <ul class="disc">
 <li id="li-306">The revenue is the price of a widget, times the number sold.  So \(R(x)=(50-x)q=(50-x)5x\text{.}\)</li>
 <li id="li-307">The cost is the fixed cost of \(\$300\text{,}\) plus the marginal cost \(\$10\) times the number sold.  So \(RCx)=300+10q=300+10(5x)=300+50x\text{.}\)</li>

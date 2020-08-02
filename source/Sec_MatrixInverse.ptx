@@ -1,0 +1,178 @@
+<section xml:id="Sec_MatrixInverse">
+  <title>Matrix Inverses</title>
+  <introduction>
+    <p>
+      In <xref ref="DefinitionIdentity"/>, we saw the introduction of an <term>identity matrix</term>.  This matrix plays the role of multiplying by 1.  So, given another matrix <m>A</m>, is there a matrix <m>B</m> so that <m>AB=I_n</m>?
+    </p>
+  </introduction>
+  <subsection>
+    <title>Direct Inversion</title>
+    <p>
+      We begin with a motivating example:  Consider matrices <me>A=\begin{pmatrix} 4 \amp 1 \\ 3 \amp 1\end{pmatrix}, B=\begin{pmatrix} 1 \amp -1 \\ -3 \amp 4\end{pmatrix}.</me>
+      When we take their products, we notice:
+
+      <sage>
+        <input>
+          A=matrix(QQ, [[4,1],[3,1]])
+          B=matrix(QQ, [[1,-1],[-3,4]])
+          print(A*B)
+          print(' ')
+          print(B*A)
+        </input>
+        <output>
+        </output>
+      </sage>
+      Thus <m>AB=I_2=BA</m>.  Thus <m>A</m> and <m>B</m> are <term>inverses</term> of each other.
+    </p>
+
+    <definition>
+      <p>
+        Given an <m>n\times n</m> matrix <m>A</m>, it's <term>inverse</term> is an <m>n\times n</m> matrix denoted <m>A^{-1}</m> such that <me>AA^{-1}=I_n=A^{-1}A.</me>
+      </p>
+     </definition>
+  <p>
+     So lets say we wanted to find the inverse of  <me>M= \begin{pmatrix} 3 \amp 1 \\ 5 \amp 2\end{pmatrix}</me>
+     we want a matrix <m>M^{-1}=\begin{pmatrix} a \amp b \\ c \amp d\end{pmatrix}</m> such that <me>\begin{pmatrix} 4 \amp 1 \\ 3 \amp 1\end{pmatrix}\begin{pmatrix} a \amp b \\ c \amp d\end{pmatrix}=\begin{pmatrix} 1 \amp 0 \\ 0 \amp 1\end{pmatrix}.</me>
+
+     Thus <m>a,b,c,d</m> must satisfy:
+     <md>
+      <mrow>3a+c\amp=1</mrow>
+      <mrow>3b+d\amp=0</mrow>
+      <mrow>5a+2c\amp=0</mrow>
+      <mrow>5b+2d\amp=1</mrow>
+     </md>
+     
+     So solving this system:
+
+     <sage>
+        <input>
+          A=matrix(QQ, [[3,0,1,0,1],[0,3,0,1,0],[5,0,2,0,0],[0,5,0,2,1]])
+          print(A.rref())
+        </input>
+        <output>
+        </output>
+      </sage>
+      Gives us <m>a=2, b=-1, c=-5, d=3</m>.  Thus <me>M^{-1}=\begin{pmatrix} 2 \amp -1 \\ -5 \amp 3\end{pmatrix}.</me>
+      <sage>
+        <input>
+          A=matrix(QQ, [[3,1],[5,2]])
+          B=matrix(QQ, [[2,-1],[-5,3]])
+          print(A*B)
+          print(' ')
+          print(B*A)
+        </input>
+        <output>
+        </output>
+      </sage>
+   </p> 
+</subsection>
+
+
+<subsection>
+  <title>Non-Invertible Matrices</title>
+  <p>
+    Suppose we had <me>M=\begin{pmatrix} 1 \amp 1 \\ -1 \amp -1\end{pmatrix}.</me>  If we tried to find it's inverse as we have above, we would have:
+
+    <me>\begin{pmatrix} 1 \amp 1 \\ -1 \amp -1\end{pmatrix}\begin{pmatrix} a \amp b \\ c \amp d\end{pmatrix}=\begin{pmatrix} 1 \amp 0 \\ 0 \amp 1\end{pmatrix}.</me> and the system
+
+    <md>
+      <mrow>a-c\amp=1</mrow>
+      <mrow>b-d\amp=0</mrow>
+      <mrow>a-c\amp=0</mrow>
+      <mrow>b-d\amp=1</mrow>
+     </md>
+     But wait!  How can <m>a-c=1</m> and <m>a-c=0</m>?  This is a non-solvable system.  We can see it here as well:
+
+     <sage>
+        <input>
+          A=matrix(QQ, [[1,0,-1,0,1],[0,1,0,-1,0],[1,0,-1,0,0],[0,1,0,-1,1]])
+          print(A.rref())
+        </input>
+        <output>
+        </output>
+      </sage>
+      We see that we have a row <m>0a+0b+0c+0d=1</m>, which has no solution.
+</p>
+<remark>
+  Not every matrix is invertible, such matrices are called <term>singular</term> matrices.
+</remark>  
+</subsection>
+
+<subsection>
+  <title>We're using Sage anyway</title>
+  <p>
+  Solving for the inverse of a matrix, or determining if a matrix is invertible boils down to solving a liear system, which we are doing by Sage anyhow.  We may use Sage to also dorectly invert matrices.  If I wanted to find the inverse of <me>M= \begin{pmatrix} 3 \amp 1 \\ 5 \amp 2\end{pmatrix}</me> I could do so via:
+
+  <sage>
+        <input>
+          A=matrix(QQ, [[3,1],[5,2]])
+          B=A^(-1)
+          print(B)
+        </input>
+        <output>
+        </output>
+      </sage>
+
+</p>
+
+<p>
+  I can also check if something is not invertible:
+
+<sage>
+        <input>
+          A=matrix(QQ, [[1,1],[-1,-1]])
+          B=A^(-1)
+          print(B)
+        </input>
+        <output>
+        </output>
+      </sage>
+      You should get a mess of error messages, the last of which is <q>input matrix must be nonsingular</q>.  Since <m>\begin{pmatrix} 1 \amp 1 \\ -1 \amp -1\end{pmatrix}</m> <em>is</em> singular, it cannot be inverted.
+</p>  
+
+</subsection>
+
+<subsection>
+  <title>Solving Systems of Equations (again)</title>
+  <p>
+    Let's say we wanted to solve:
+
+    <md>
+      <mrow>0.3x+0.8y+0.5z\amp =10</mrow>
+      <mrow>1.5x+0.2y+0.7z\amp =15</mrow>
+      <mrow>.5x-0.5y+0.2z\amp =20</mrow>
+    </md>
+    
+    We can do this with reduced row echelon form, but note that we can rephrase this system as a single matrix equation:
+
+    <me>\begin{pmatrix} 0.3 \amp 0.8 \amp 0.5 \\  1.5 \amp 0.2 \amp 0.7\\ 0.5 \amp -0.5 \amp 0.2 \end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix}=\begin{pmatrix}10\\15\\20\end{pmatrix}.</me>
+
+    Thus, if our left hand matrix is invertible, we have:
+
+    <me> \begin{pmatrix}x\\y\\z\end{pmatrix}=\begin{pmatrix} 0.3 \amp 0.8 \amp 0.5 \\  1.5 \amp 0.2 \amp 0.7\\ 0.5 \amp -0.5 \amp 0.2 \end{pmatrix}^{-1}\begin{pmatrix}10\\15\\20\end{pmatrix}.</me>
+
+    Thus, we must invert this matrix:
+
+    <sage>
+        <input>
+          A=matrix(QQ, [[0.3,0.8, 0.5],[1.5,0.2, 0.7],[0.5,-0.5,0.2]])
+          X=matrix(QQ, [[10],[15],[20]])
+          B=A^(-1)
+          print(B)
+          print(' ')
+          print(B*X)
+        </input>
+        <output>
+        </output>
+      </sage>
+
+  </p>
+
+  <p>
+    Thus:
+
+    <me> \begin{pmatrix}x\\y\\z\end{pmatrix}=\begin{pmatrix} 0.3 \amp 0.8 \amp 0.5 \\  1.5 \amp 0.2 \amp 0.7\\ 0.5 \amp -0.5 \amp 0.2 \end{pmatrix}^{-1}\begin{pmatrix}10\\15\\20\end{pmatrix}=\begin{pmatrix} -\frac{195}{134} \amp \frac{205}{134} \amp -\frac{115}{67} \\  -\frac{25}{134} \amp \frac{95}{134} \amp -\frac{135}{67}\\ \frac{425}{134} \amp -\frac{275}{134} \amp \frac{285}{67} \end{pmatrix}\begin{pmatrix}10\\15\\20\end{pmatrix}=\begin{pmatrix}-\frac{3475}{134}\\-\frac{4225}{134}\\\frac{11525}{134}\end{pmatrix}.</me>
+  </p>  
+ </subsection> 
+
+</section>

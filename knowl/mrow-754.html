@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:53-06:00    *-->
+<!--*    on 2020-08-02T16:48:50-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,9 +14,11 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-P(Z)\amp =P(Z|S)P(S)+P(Z|S^c)(1-P(S))\\
-P(S)\amp =\frac{P(Z)-P(Z|S^c)}{P(Z|S)-P(Z|S^c)}\\
-\amp =\frac{0.5-0.85}{0.1-0.85}=\frac{7}{15}\approx 0.4666666667.
+P(X)\amp =P(X\cap Y)+P(X\cap Y^c)\\
+\amp =P(X|Y)P(Y)+P(X|Y^c)P(Y^c)\\
+\amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
+\amp =(0.85)(0.4)+(0.7)(0.6)\\
+\amp =0.34+0.42=0.76
 \end{align*}
 </div>
 <span class="incontext"><a href="Sec_Bayes.html#mjx-eqn-mrow-754">in-context</a></span>

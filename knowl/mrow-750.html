@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:52-06:00    *-->
+<!--*    on 2020-08-02T16:48:50-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,8 +14,11 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-P(Y|X)\amp =\frac{P(Y\cap X)}{P(X)}\\
-\amp =\frac{P(X|Y)P(X)}{P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))}.
+P(X)\amp =P(X\cap Y)+P(X\cap Y^c)\\
+\amp =P(X|Y)P(Y)+P(X|Y^c)P(Y^c)\\
+\amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
+\amp =(0.85)(0.4)+(0.7)(0.6)\\
+\amp =0.34+0.42=0.76
 \end{align*}
 </div>
 <span class="incontext"><a href="Sec_Bayes.html#mjx-eqn-mrow-750">in-context</a></span>

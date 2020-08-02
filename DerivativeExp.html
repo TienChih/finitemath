@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:11:56-06:00    *-->
+<!--*    on 2020-08-02T16:47:50-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -129,6 +129,7 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
 </ul>
 </li>
 <li class="link">
@@ -202,6 +203,13 @@ MathJax.Hub.Config({
 <li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -209,16 +217,16 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="DerivativeExp"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.6</span> <span class="title">Derivative of Exponentials</span>
 </h2>
-<section class="introduction" id="introduction-33"><p id="p-994">When we graph an exponential function, say an increasing one \(f(x)=a^x, a&gt;1\text{,}\) we imagine a function that curves up towards infinity as \(x\) increases and converges  to 0  as \(x\) decreases. <iframe src="https://www.desmos.com/calculator/51zxitu9xc" id="interactive-159" width="600" height="600"></iframe> What then should it's derivatives look like? Well it seems like the slopes are initially shallow, and then as we go forward the slopes start to increase, and they get progressively and progressively larger. In other words <em class="emphasis">the derivative is also an exponential function!</em> <iframe src="https://www.desmos.com/calculator/etbmc1ttzo" id="interactive-160" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-74"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-34"><p id="p-1006">When we graph an exponential function, say an increasing one \(f(x)=a^x, a&gt;1\text{,}\) we imagine a function that curves up towards infinity as \(x\) increases and converges  to 0  as \(x\) decreases. <iframe src="https://www.desmos.com/calculator/51zxitu9xc" id="interactive-159" width="600" height="600"></iframe> What then should it's derivatives look like? Well it seems like the slopes are initially shallow, and then as we go forward the slopes start to increase, and they get progressively and progressively larger. In other words <em class="emphasis">the derivative is also an exponential function!</em> <iframe src="https://www.desmos.com/calculator/etbmc1ttzo" id="interactive-160" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-78"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.6.1</span> <span class="title">Computing the derivative of Exponentials</span>
 </h3>
-<p id="p-995">Which one? Let's first start with a special case, what is the derivative of \(f(x)=e^x\text{?}\) \(e\) is a special number, it has the peculiar property that:</p>
+<p id="p-1007">Which one? Let's first start with a special case, what is the derivative of \(f(x)=e^x\text{?}\) \(e\) is a special number, it has the peculiar property that:</p>
 <div class="displaymath">
 \begin{equation*}
 \limit{h}{0}\frac{e^h-1}{h}=1\text{.}
 \end{equation*}
 </div>
-<p id="p-996">The proof of this is a fairly sophisticated fact and is not trivial, but we may still visualize the limit itself: <iframe src="https://www.desmos.com/calculator/iscxmzoqip" id="interactive-161" width="600" height="600"></iframe> Using this fact, we can deduce:</p>
+<p id="p-1008">The proof of this is a fairly sophisticated fact and is not trivial, but we may still visualize the limit itself: <iframe src="https://www.desmos.com/calculator/iscxmzoqip" id="interactive-161" width="600" height="600"></iframe> Using this fact, we can deduce:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[e^x]\amp = \limit{h}{0}\frac{e^{x+h}-e^x}{h}\\
@@ -227,8 +235,8 @@ MathJax.Hub.Config({
 \amp = e^x\cdot1=e^x\text{.}
 \end{align*}
 </div>
-<p id="p-997">So this explains one of the reaons why \(e\) is such a significant number in mathematics, it is the unique number so that the exponential \(e^x\) is it's own derivative.</p>
-<p id="p-998">So, to compute the actual derivative of \(a^x\text{:}\)</p>
+<p id="p-1009">So this explains one of the reaons why \(e\) is such a significant number in mathematics, it is the unique number so that the exponential \(e^x\) is it's own derivative.</p>
+<p id="p-1010">So, to compute the actual derivative of \(a^x\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[a^x]\amp = \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
@@ -240,10 +248,10 @@ MathJax.Hub.Config({
 </div>
 <article class="example example-like" id="example-76"><a data-knowl="" class="id-ref original" data-refid="hk-example-76"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.6.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-76"><article class="example example-like"><p id="p-999">Let's try the derivative of \(f(x)=e^{x}x^2\) and \(h(x)=2^{\frac{x}{x+1}}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-76"><article class="example example-like"><p id="p-1011">Let's try the derivative of \(f(x)=e^{x}x^2\) and \(h(x)=2^{\frac{x}{x+1}}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-102" id="solution-102"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-102"><div class="solution solution-like">
-<p id="p-1000">We first have:</p>
+<p id="p-1012">We first have:</p>
 <div class="displaymath">
 \begin{align*}
 f'(x)\amp = \frac{d}{dx}[e^xx^2]\\
@@ -251,7 +259,7 @@ f'(x)\amp = \frac{d}{dx}[e^xx^2]\\
 \amp = e^xx^2+e^x2x\text{.}
 \end{align*}
 </div>
-<p id="p-1001">Next, we compute:</p>
+<p id="p-1013">Next, we compute:</p>
 <div class="displaymath">
 \begin{align*}
 h'(x)\amp = \frac{d}{dx}[2^{\frac{x}{x+1}}]\\
@@ -264,10 +272,10 @@ h'(x)\amp = \frac{d}{dx}[2^{\frac{x}{x+1}}]\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-69"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-69"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.6.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-69"><article class="exercise exercise-like"><p id="p-1002">The daily revenue of a local convient store, \(t\) days after opening is \(R(t)=10-8e^{-0.02t}\) in thousands of dollars.  How is the daily revenue increasing or decreasing after 30 days?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-69"><article class="exercise exercise-like"><p id="p-1014">The daily revenue of a local convient store, \(t\) days after opening is \(R(t)=10-8e^{-0.02t}\) in thousands of dollars.  How is the daily revenue increasing or decreasing after 30 days?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-103" id="solution-103"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-103"><div class="solution solution-like">
-<p id="p-1003">We note that:</p>
+<p id="p-1015">We note that:</p>
 <div class="displaymath">
 \begin{align*}
 R'(t)\amp = \frac{d}{dt}[10-8e^{-0.02t}]\\
@@ -281,7 +289,7 @@ R'(t)\amp = \frac{d}{dt}[10-8e^{-0.02t}]\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-70"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-70"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.6.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-70"><article class="exercise exercise-like"><p id="p-1004">The quantity of a drug injected in a patient is</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-70"><article class="exercise exercise-like"><p id="p-1016">The quantity of a drug injected in a patient is</p>
 <div class="displaymath">
 \begin{equation*}
 D(t)=te^{-0.25t}
@@ -294,7 +302,7 @@ D(t)=te^{-0.25t}
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-104" id="solution-104"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-104"><div class="solution solution-like">
-<p id="p-1005">We note that:</p>
+<p id="p-1017">We note that:</p>
 <div class="displaymath">
 \begin{align*}
 D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]\\

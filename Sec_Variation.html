@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:06-06:00    *-->
+<!--*    on 2020-08-02T16:48:01-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -129,6 +129,7 @@ MathJax.Hub.Config({
 <li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
 <li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
 <li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
 </ul>
 </li>
 <li class="link">
@@ -202,6 +203,13 @@ MathJax.Hub.Config({
 <li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -209,19 +217,19 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Variation"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">10.2</span> <span class="title">Measures of Variation</span>
 </h2>
-<section class="introduction" id="introduction-49"><p id="p-1283">In <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a> when we studied random variables, we looked both the average outcome (\(E(X)\)) and the <dfn class="terminology">variance</dfn> and <dfn class="terminology">standard deviation</dfn> of the random variables.  In <a href="Sec_CentralTendency.html" class="internal" title="Section 10.1: Frequency Distribution and Measures of Central Tendency">Section 10.1</a>, we saw the use of the sample mean to predict expectation.  Here, we will give a description of variance and standard deviation.</p></section><section class="subsection" id="subsection-104"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-50"><p id="p-1295">In <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a> when we studied random variables, we looked both the average outcome (\(E(X)\)) and the <dfn class="terminology">variance</dfn> and <dfn class="terminology">standard deviation</dfn> of the random variables.  In <a href="Sec_CentralTendency.html" class="internal" title="Section 10.1: Frequency Distribution and Measures of Central Tendency">Section 10.1</a>, we saw the use of the sample mean to predict expectation.  Here, we will give a description of variance and standard deviation.</p></section><section class="subsection" id="subsection-108"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.2.1</span> <span class="title">How would one meaure Variation?</span>
 </h3>
-<p id="p-1284">The more “spread out” a data set is, the farther away the data points are from the mean, either many of them consistently away from the mean, or a few that are really far away.  In a sense, when we measure the “spread” of a data set, we are measuring the distances from each data point to the mean, and the greater those are, the greater the spread.</p>
-<p id="p-1285">So, given a data set \(1,2,3,4,5\text{,}\) we should all see the mean is 3.  We could try to measure the spread of this data set by taking the differences between the mean and the data points and summing them up:</p>
+<p id="p-1296">The more “spread out” a data set is, the farther away the data points are from the mean, either many of them consistently away from the mean, or a few that are really far away.  In a sense, when we measure the “spread” of a data set, we are measuring the distances from each data point to the mean, and the greater those are, the greater the spread.</p>
+<p id="p-1297">So, given a data set \(1,2,3,4,5\text{,}\) we should all see the mean is 3.  We could try to measure the spread of this data set by taking the differences between the mean and the data points and summing them up:</p>
 <div class="displaymath">
 \begin{equation*}
 (1-3)+(2-3)+(3-3)+(4-3)+(5-3)
 \end{equation*}
 </div>
 <p data-braille="continuation">However, when we look at this, we see that the sum of these values is 0.  So this, as it stands, is not a great measure of the spread.</p>
-<p id="p-1286">Part of the problem is what the data points contribute to the sum.  The data point 1 contributes the total \((1-3)=-2\) to the sum.  First, that something should make a negative contribution makes no sense in this context.  Secondly 1 is the same distance from 3 as 5, and so 1 and 5 should contribute the same value to the sum.</p>
-<p id="p-1287">We can fix both these issues by squaring all the terms:</p>
+<p id="p-1298">Part of the problem is what the data points contribute to the sum.  The data point 1 contributes the total \((1-3)=-2\) to the sum.  First, that something should make a negative contribution makes no sense in this context.  Secondly 1 is the same distance from 3 as 5, and so 1 and 5 should contribute the same value to the sum.</p>
+<p id="p-1299">We can fix both these issues by squaring all the terms:</p>
 <div class="displaymath">
 \begin{equation*}
 (1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2=10
@@ -240,7 +248,7 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <p data-braille="continuation">But, I think we can all agree the second data set isn't any more spread out than the first one.  It's the same distribution repeated.  How can we fix this?</p>
-<p id="p-1288">Since the problem is we can scale the size of this sum by increasing the size of the data set, we can reverse that process by dividing by the size of the data set.</p>
+<p id="p-1300">Since the problem is we can scale the size of this sum by increasing the size of the data set, we can reverse that process by dividing by the size of the data set.</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2}{5}=\frac{10}{5}=2
@@ -251,14 +259,14 @@ MathJax.Hub.Config({
 \frac{(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2+(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2}{10}=\frac{20}{10}=2
 \end{equation*}
 </div>
-<p data-braille="continuation">and now these data sets are equally “spread out”.</p></section><section class="subsection" id="subsection-105"><h3 class="heading hide-type">
+<p data-braille="continuation">and now these data sets are equally “spread out”.</p></section><section class="subsection" id="subsection-109"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.2.2</span> <span class="title">Variance and Standard Deviation</span>
 </h3>
-<p id="p-1289">Following the argument above:</p>
-<article class="definition definition-like" id="definition-35"><h6 class="heading">
+<p id="p-1301">Following the argument above:</p>
+<article class="definition definition-like" id="definition-37"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-1290">We define the <dfn class="terminology">population variance</dfn> as</p>
+<p id="p-1302">We define the <dfn class="terminology">population variance</dfn> as</p>
 <div class="displaymath">
 \begin{equation*}
 Var(X):=\frac{\sum (x_i-\bar{x})^2}{n}
@@ -269,13 +277,13 @@ Var(X):=\frac{\sum (x_i-\bar{x})^2}{n}
 \begin{equation*}
 \sigma_X:=\sqrt{Var(X)}=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n}}.
 \end{equation*}
-</div></article><p id="p-1291">So what was computed above was the population variance of \(1,2,3,4,5\text{,}\) and  \(1,2,3,4,5,1,2,3,4,5\text{,}\) both of whom have population variance 2.</p>
-<p id="p-1292">Note that if \(n=2\text{,}\) then \(\sigma_X=\sqrt{\frac{(x_1-\bar{x})^2+(x_2-\bar{x})^2}{2}}\text{,}\) which greatly resembles the distance formula.  This is essentially how we want to view standard deviation, as a “distance” of a data set from the mean.</p>
-<p id="p-1293">The above definitions describe the standard deviation and variance if the data set in question represents the entire population being discussed.  As noted though, this is not generally feasible.  When one only has a sample of the random variable or population in question, these values do <em class="emphasis">not</em> predict the population variance of standard deviation of the population/random variable.  In order to predict the true variance and standard deviation, we introduce the following:</p>
-<article class="definition definition-like" id="definition-36"><h6 class="heading">
+</div></article><p id="p-1303">So what was computed above was the population variance of \(1,2,3,4,5\text{,}\) and  \(1,2,3,4,5,1,2,3,4,5\text{,}\) both of whom have population variance 2.</p>
+<p id="p-1304">Note that if \(n=2\text{,}\) then \(\sigma_X=\sqrt{\frac{(x_1-\bar{x})^2+(x_2-\bar{x})^2}{2}}\text{,}\) which greatly resembles the distance formula.  This is essentially how we want to view standard deviation, as a “distance” of a data set from the mean.</p>
+<p id="p-1305">The above definitions describe the standard deviation and variance if the data set in question represents the entire population being discussed.  As noted though, this is not generally feasible.  When one only has a sample of the random variable or population in question, these values do <em class="emphasis">not</em> predict the population variance of standard deviation of the population/random variable.  In order to predict the true variance and standard deviation, we introduce the following:</p>
+<article class="definition definition-like" id="definition-38"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.2.2</span><span class="period">.</span>
 </h6>
-<p id="p-1294">We define the <dfn class="terminology">sample variance</dfn> as</p>
+<p id="p-1306">We define the <dfn class="terminology">sample variance</dfn> as</p>
 <div class="displaymath">
 \begin{equation*}
 s^2:=\frac{\sum (x_i-\bar{x})^2}{n-2}
@@ -286,8 +294,8 @@ s^2:=\frac{\sum (x_i-\bar{x})^2}{n-2}
 \begin{equation*}
 s:=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}.
 \end{equation*}
-</div></article><p id="p-1295">This computation more accurately predicts the population variance and standard deviation.</p>
-<p id="p-1296">So if we had a data set:</p>
+</div></article><p id="p-1307">This computation more accurately predicts the population variance and standard deviation.</p>
+<p id="p-1308">So if we had a data set:</p>
 <div class="displaymath">
 \begin{equation*}
 1,2,3,4,7,2,3,4,3,2,3,5,6,5,3,4,3,2
@@ -296,7 +304,7 @@ s:=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}.
 <p data-braille="continuation">it's standard deviation would be \(\sigma\approx 1.49897\) if this data represented the entirely population in question: <iframe src="https://www.desmos.com/calculator/r14jlmic5u" id="interactive-203" width="600" height="600"></iframe> If this were a random sample of a broader population, then the standard deviation would be \(s\approx1.52424\text{:}\) <iframe src="https://www.desmos.com/calculator/rlgrhuadh4" id="interactive-204" width="600" height="600"></iframe> I am not going to write out computing these by hand.  I don't recommend you compute these by hand.  I cannot imagine a greater waste of time.</p>
 <article class="exercise exercise-like" id="exercise-99"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-99"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-99"><article class="exercise exercise-like"><p id="p-1297">Consider the following table of high and low temperatures in a location over the course of a year.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-99"><article class="exercise exercise-like"><p id="p-1309">Consider the following table of high and low temperatures in a location over the course of a year.</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|c|c|}
@@ -322,7 +330,7 @@ s:=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}.
 <p data-braille="continuation">Find the population and sample standard deviation and variance for temperatures for both the highs and lows.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-164" id="solution-164"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-164"><div class="solution solution-like">
-<p id="p-1298">For the highs, we have, in order</p>
+<p id="p-1310">For the highs, we have, in order</p>
 <div class="displaymath">
 \begin{equation*}
 38, 38, 40, 43, 45, 50, 51, 59, 69, 77, 82, 85.
@@ -336,7 +344,7 @@ s:=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}.
 <li id="li-726">\(\displaystyle s\approx 17.5523.\)</li>
 </ul>
 <p data-braille="continuation">All computed here: <iframe src="https://www.desmos.com/calculator/w5fiojjmd7" id="interactive-205" width="600" height="600"></iframe></p>
-<p id="p-1299">For the lows, we have, in order</p>
+<p id="p-1311">For the lows, we have, in order</p>
 <div class="displaymath">
 \begin{equation*}
 16, 17, 18, 22, 26, 27, 31, 32, 37, 38, 42, 45.
@@ -354,7 +362,7 @@ s:=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}.
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-100"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-100"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.2.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-100"><article class="exercise exercise-like"><p id="p-1300">Consider two companies, Company A and Company B, who pay their employees the following salaries:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-100"><article class="exercise exercise-like"><p id="p-1312">Consider two companies, Company A and Company B, who pay their employees the following salaries:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|c|}
@@ -380,21 +388,21 @@ s:=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}.
 <p data-braille="continuation">Based on the standard deviation of each distribution, which company has a wider variation in salary?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-165" id="solution-165"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-165"><div class="solution solution-like">
-<p id="p-1301">For Company A, if we list the data in thousands per year:</p>
+<p id="p-1313">For Company A, if we list the data in thousands per year:</p>
 <div class="displaymath">
 \begin{equation*}
 48,50,58,58,59.1,59.3,61,61.1,61.6,62,63,71
 \end{equation*}
 </div>
 <p data-braille="continuation">we have \(\sigma_A\approx 5.6779\text{:}\) <iframe src="https://www.desmos.com/calculator/3f6gwu3dtn" id="interactive-207" width="600" height="600"></iframe></p>
-<p id="p-1302">For Company B, if we list the data in thousands per year:</p>
+<p id="p-1314">For Company B, if we list the data in thousands per year:</p>
 <div class="displaymath">
 \begin{equation*}
 49,51,53,55,57,59,61,63,65,67,69,71
 \end{equation*}
 </div>
 <p data-braille="continuation">we have \(\sigma_B\approx 6.9041\text{:}\) <iframe src="https://www.desmos.com/calculator/nxwzkbqaqf" id="interactive-208" width="600" height="600"></iframe></p>
-<p id="p-1303">So Company B has a wider variation of salaries.</p>
+<p id="p-1315">So Company B has a wider variation of salaries.</p>
 </div></div>
 </div></article></div></section></section></div></main>
 </div>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:41-06:00    *-->
+<!--*    on 2020-08-02T16:48:40-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,20 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We have:</p>
+<p>More formally, this value would be \(\limit{h}{0} \frac{f(0+h)-f(0)}{h}\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
-A'(t)\amp = \limit{h}{0}\frac{A(t+h)-A(t)}{h}\\
-\amp = \limit{h}{0} \frac{1000\pi\sqrt{t+h}-1000\pi\sqrt{t}}{h}\\
-\amp = \limit{h}{0} 1000\pi\frac{\sqrt{t+h}-\sqrt{t}}{h}\\
-\amp = \limit{h}{0} 1000\pi\frac{(\sqrt{t+h}-\sqrt{t})(\sqrt{t+h}+\sqrt{t})}{h(\sqrt{t+h}+\sqrt{t})}\\
-\amp = \limit{h}{0} 1000\pi\frac{t+h-t}{h(\sqrt{t+h}+\sqrt{t})}\\
-\amp = \limit{h}{0} 1000\pi\frac{h}{h(\sqrt{t+h}+\sqrt{t})}\\
-\amp = \limit{h}{0} 1000\pi\frac{1}{(\sqrt{t+h}+\sqrt{t})}\\
-\amp =  1000\pi\frac{1}{(\sqrt{t+0}+\sqrt{t})}=\frac{1000\pi}{2\sqrt{t}}=\frac{500\pi}{\sqrt{t}}\text{.}
+\limit{h}{0}\frac{f(0+h)-f(0)}{h}\amp=\limit{h}{0}\frac{-5h^2+20h}{h}\\
+\amp=\limit{h}{0}\frac{(-5h+20)h}{h}\\
+\amp=\limit{h}{0}-5h+20=20.
 \end{align*}
 </div>
-<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/sbg2pzjqty" id="interactive-145" width="600" height="600"></iframe></p>
+<p data-braille="continuation">So 20 m/s is in fact the instantaneous rate of change of the rocket at time \(x=0\text{.}\)</p>
 <span class="incontext"><a href="Sec_DefofDerivative.html#p-940">in-context</a></span>
 </body>
 </html>

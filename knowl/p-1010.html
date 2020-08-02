@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:45-06:00    *-->
+<!--*    on 2020-08-02T16:48:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Verified graphically here as well: <iframe src="https://www.desmos.com/calculator/znr3xikwcc" id="interactive-166" width="600" height="600"></iframe></p>
-<span class="incontext"><a href="DerivativeLogs.html#p-1010">in-context</a></span>
+<p>So, to compute the actual derivative of \(a^x\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\frac{d}{dx}[a^x]\amp = \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
+\amp = \frac{d}{dx}[e^{\ln(a)x}]\\
+\amp = e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }\\
+\amp = e^{\ln(a)x}\ln(a)\cdot1\\
+\amp = a^x\ln(a)\text{.}
+\end{align*}
+</div>
+<span class="incontext"><a href="DerivativeExp.html#p-1010">in-context</a></span>
 </body>
 </html>

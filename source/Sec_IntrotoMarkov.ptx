@@ -1,0 +1,294 @@
+<section xml:id="Sec_IntrotoMarkov">
+  <title>Introduction to Markov Chains</title>
+  <introduction>
+  <p>
+    Let's say someone votes for one of two political parties <m>A</m> and <m>B</m>.  Each election cycle, this person may vote for either of these parties.  But the probability that they vote for some party depends on how they voted last time, after all people are more likely to vote for the same party they did last time, but there's always some chance that they'll switch.  If they vote for party <m>A</m> this cycle, what's the probability that they do the cycle after next?  The one after that?  We answer these questions.
+  </p>
+</introduction>
+
+<subsection>
+  <title>An Illustrative Example</title>
+  <p>
+    Suppose you had two cities, <m>X, Y</m>.  Each year 60% of city <m>X</m>'s population moved to <m>Y</m> and 20% of <m>Y</m>'s population moves to <m>X</m>.  If both cities have 1000 people, how many will each have by next year?
+  </p>
+
+  <p>
+  We note that in a year, city <m>X</m> will keep 60% of it's current population <m>X_0=1000</m> and attain 20% of <m>Y's</m> population, so after one year: <me>X_1=0.6\cdot X_0+0.2\cdot Y_0=0.6\cdot 1000+0.2\cdot 1000=600+200=800.</me>
+  Similarly, <m>Y</m> attains 40% of <m>X's</m> population and retains 80% of it's own, so after one year:  <me>Y_1=0.4\cdot X_0+0.8\cdot Y_0=0.4\cdot 1000+0.8\cdot 1000=400+800=1200.</me>
+</p>
+
+<p> Recall <xref ref="Chap_Matrices"/> and notice that we can rewrite the equations above as follows: <me>\begin{pmatrix} X_1 \\ Y_1 \end{pmatrix}= \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}.</me>
+</p>
+<p>
+  Thus <me>\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} 1000 \\ 1000 \end{pmatrix}=\begin{pmatrix} 800 \\ 1200 \end{pmatrix}.</me>
+  <sage>
+        <input>
+          M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+          X=matrix(QQ, [[1000],[1000]])
+          print(M*X)
+        </input>
+        <output>
+        </output>
+      </sage>
+ </p> 
+
+ <p>
+  If this pattern keeps up, what happens in another year?  We can simply reapply the matrix <m>M</m>:
+
+  <me>\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} 800 \\ 1200 \end{pmatrix}=\begin{pmatrix} 720 \\ 1280 \end{pmatrix}.</me>
+
+  However, we also note that:
+  <md>
+    <mrow> \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} 800 \\ 1200 \end{pmatrix} \amp=\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\left(\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} 1000 \\ 1000 \end{pmatrix}\right)</mrow>
+    <mrow>\amp=\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}^2\begin{pmatrix} 1000 \\ 1000 \end{pmatrix}</mrow>
+    <mrow>\amp=\begin{pmatrix} 0.44 \amp 0.28 \\ 0.56 \amp 0.72\end{pmatrix}\begin{pmatrix} 1000 \\ 1000 \end{pmatrix}</mrow>
+    <mrow>\amp=\begin{pmatrix} 720 \\ 1280 \end{pmatrix}</mrow>
+   </md> 
+
+   <sage>
+        <input>
+          M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+          X=matrix(QQ, [[1000],[1000]])
+          print(M^2)
+          print((M^2)*X)
+        </input>
+        <output>
+        </output>
+      </sage>
+ </p> 
+
+ <p>
+    We should observe that if we have starting populations <m>\begin{pmatrix} X_0 \\ Y_0\end{pmatrix}</m> then in <m>n</m> years the respective populations will be: <me>\begin{pmatrix} X_n \\ Y_n \end{pmatrix}= \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}^n\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}.</me>  The best way to think of this is that applyng the matrix <m>M= \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}</m> shifts some of the value from <m>X</m> to <m>Y</m> and vice versa.  Each we do this, we are simply reapplying <m>M</m>.
+
+ </p> 
+
+ <p>
+  We call <m>M=\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}</m> a <term>transition matrix</term>.
+</p>
+  <example>
+    <statement>
+      <p>
+        Following the example above:
+        <ol>
+          <li> If the initial populations of towns <m>X</m> and <m>Y</m> are 100000 and 80000 respectively, what will the populations be after 4 years?</li>
+          <li> If the initial populations of towns <m>X</m> and <m>Y</m> are <m>X_0</m> and <m>Y_0</m> respectively, what will the populations be after 6 years?</li>
+        </ol>  
+
+      </p>  
+
+    </statement>  
+
+   <solution>
+      <p>
+      We have:
+      <md>
+    <mrow> \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}^4\begin{pmatrix} 100000 \\ 80000 \end{pmatrix} \amp=\begin{pmatrix} 0.3504 \amp 0.3248 \\ 0.6496 \amp 0.6752\end{pmatrix}\begin{pmatrix} 100000 \\ 80000 \end{pmatrix}</mrow>
+    <mrow> \amp=\begin{pmatrix} 61024 \\ 118976 \end{pmatrix}</mrow>
+   </md> 
+   So city <m>X</m> will have 61024 people and city <m>Y</m> will have 118976 people.
+ </p>
+    </solution>  
+
+    <solution>
+      <p>
+      We have:
+      <md>
+    <mrow> \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}^6\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \amp=\begin{pmatrix} 0.336064 \amp 0.331968 \\ 0.663936 \amp 0.668032\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}</mrow>
+    <mrow> \amp=\begin{pmatrix} 0.336064X_0+ 0.331968Y_0 \\ 0.663936X_0 + 0.668032Y_0 \end{pmatrix}</mrow>
+   </md> 
+    So city <m>X</m> will have <m>0.336064X_0+ 0.331968Y_0</m> people and city <m>Y</m> will have <m>0.663936X_0 + 0.668032Y_0</m> people.
+ </p>
+    </solution>  
+
+   </example> 
+
+</subsection>
+
+
+<subsection>
+  <title>Transitioning to Probability</title>
+<p>
+  So let's suppose a voter who votes for party <m>A</m> has a 10% chance of switching to <m>B</m>, and a voter who votes for <m>B</m> has a 15% chance of switching to <m>A</m>.  If a voter has a 50% chance of voting for either part now, what is the probability they will vote for part <m>A</m> or <m>B</m> in a cycle?  In 5 cycles?
+</p>
+
+<p>So, similar to the above, we calculate the probability of each party affiliation.  Let <m>A_0, B_0</m> denote the events that the voter votes for <m>A, B</m> resepctively initially and <m>A_1, B_1</m> the events they vote for for the appropriate party in one cycle.  Then recall from <xref ref="TheoremBayes"/>: <me> P(A_1)=P(A_1|A_0)P(A_0)+P(A_1|B_0)P(B_0)=(0.9)(0.5)+(0.15)(0.5)=0.525.</me>
+Similarly:
+<me> P(B_1)=P(B_1|A_0)P(A_0)+P(B_1|B_0)P(B_0)=(0.1)(0.5)+(0.85)(0.5)=0.475.</me>
+</p>
+
+<p>
+  Once again, we could describe this as:
+ <me> \begin{pmatrix} 0.9 \amp 0.15 \\ 0.1 \amp 0.85\end{pmatrix}\begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix} =\begin{pmatrix} 0.525 \\ 0.475 \end{pmatrix}</me>
+
+ <sage>
+        <input>
+          M=matrix(QQ, [[0.9,0.15],[0.1,0.85]])
+          X=matrix(QQ, [[0.5],[0.5]])
+          print(M*1.0)
+          print((M)*X*1.0)
+        </input>
+        <output>
+        </output>
+      </sage>
+</p>  
+
+<p>
+So like in the town example, here <m>M= \begin{pmatrix} 0.9 \amp 0.15 \\ 0.1 \amp 0.85\end{pmatrix}</m> shifts the probabilities from <m>A</m> to <m>B</m> and vice versa.  So, in 5 cycles, we would have:
+
+<me>\begin{pmatrix} 0.9 \amp 0.15 \\ 0.1 \amp 0.85\end{pmatrix}^{5}\begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix}\approx \begin{pmatrix} 0.6949 \amp 0.4576 \\ 0.3051 \amp 0.5424\end{pmatrix}\begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix}\approx \begin{pmatrix} 0.5763 \\ 0.4237 \end{pmatrix}.</me>
+
+<sage>
+        <input>
+          M=matrix(QQ, [[0.9,0.15],[0.1,0.85]])
+          X=matrix(QQ, [[0.5],[0.5]])
+          print(M^5*1.0)
+          print((M^5)*X*1.0)
+        </input>
+        <output>
+        </output>
+      </sage>
+So about a 57.63% chance of voting for <m>A</m> and a 42.37% chance of voting for <m>B</m>.
+</p>  
+
+<example>
+  <statement>
+    <p>
+      Abed either takes the bus or walks to work every day.  If he walks to work, there's a 50% chance he'll walk the next day or he'll take the bus.  If he takes the bus, he remembers how much he hates the bus and theres a 20% chance he'll still take the bus and an 80% chance he'll walk.
+      <ol>
+        <li>Let taking the bus be the first variable, and walking be the second, find a transition matrix for Abed's mode of transport.</li>
+        <li>If he takes the bus on Monday, what's the probability he  takes the bus on Friday?</li>
+      </ol>
+    </p>
+    </statement>
+    <solution>
+      <p>
+    We have <me>M=\begin{pmatrix} 0.2 \amp 0.5 \\ 0.8 \amp 0.5 \end{pmatrix}.</me>  The first row is Bus<m>\to</m>Bus, Walk<m>\to</m>Bus.  The second is Bus<m>\to</m>Walk and Walk<m>\to</m>Walk.
+  </p>
+</solution>
+ <solution>
+      <p>
+    We have that there is a 100% chance Abed walks on Monday, so the respective probability of his modes of transport 4 days later are:
+    <me>\begin{pmatrix}B_4 \\ W_4 \end{pmatrix}=\begin{pmatrix} 0.2 \amp 0.5 \\ 0.8 \amp 0.5\end{pmatrix}^{4}\begin{pmatrix} 1 \\ 0 \end{pmatrix}= \begin{pmatrix} 0.3896 \amp 0.3815 \\ 0.6104 \amp 0.6185\end{pmatrix}\begin{pmatrix} 1 \\ 0 \end{pmatrix}= \begin{pmatrix} 0.3896 \\ 0.6104 \end{pmatrix}.</me>
+
+    So there is a 38.96% chance he will take the bus ( and a 61.04% chance he will walk).
+  </p>
+</solution>
+</example>
+
+
+
+</subsection>
+
+
+<subsection>
+  <title>More on Transition Matrices</title>
+  <p>In general, a transition matrix <m>M</m> measures transitions from state to state.  In a finite state system, say with <m>n</m> states, this would be a <m>n\times n</m> system.  We saw above several 2 state systems.
+</p>
+
+<remark>
+  <p>
+    Given a <m>n\times n</m> transition matrix, the following holds.
+    <ul>
+      <li><m>M_{ij}</m> denotes the probability of proportion of value transitioning from the <m>j</m>th state to the <m>i</m>th state.  In other words, rows are incoming states, columns are outgoing states.</li>
+      <li>  Since these are probabilities or proportions, <m>0\leq M_{ij}\leq 1</m>, they cannot fall below 0% or rise above 100%.</li>
+      <li> The sum of each column is 1, after all, 100% of state <m>j</m> has to go somewhere.</li>
+      <li> The sum of each row <em> does not have to be 1</em>.  Row <m>i</m> can recieve as much or as little value as the Markov process dictates.</li>
+      <li> The power of a transition matrix is also a transition matrix</li>.  It simply records the transitions after however many iterations of the Markov process.
+  </ul>
+</p>
+</remark>
+
+<p>
+  Suppose Nadia likes to go out for tacos, sushi or burgers for lunch.  If she has tacos, there is a 20% chance she will have sushi next for lunch and a 40% chance she will go for burgers.  If she has sushi, theres a 50% chance she will have tacos the next day, and a 10% chance she will get burgers.  If she has burgers, then theres a 20% chance she gets tacos the next day, and a 60% chance she get's sushi.  If we let tacos be state 1, sushi state 2, and burgers state 3, this gives us the transition matrix
+
+  <me>M=\begin{pmatrix}0.4 \amp 0.5 \amp 0.2 \\ 0.2 \amp 0.4 \amp 0.6 \\ 0.4 \amp 0.1 \amp 0.2 \end{pmatrix} .</me>
+
+  We note that in 3 days we would have transition matrix:
+
+  <me>M^3=\begin{pmatrix}0.388 \amp 0.380 \amp 0.404 \\ 0.384 \amp 0.368 \amp 0.352 \\ 0.228 \amp 0.252 \amp 0.244 \end{pmatrix} .</me>
+
+  <sage>
+        <input>
+          M=matrix(QQ, [[0.4,0.5,0.2],[0.2,0.4,0.6],[0.4,0.1,0.2]])
+          print(M^3*1.0)
+        </input>
+        <output>
+        </output>
+      </sage>
+      So this would mean if Nadia had tacos initially, there's a 38.8% chance she'll be eating tacos in 3 days and a 22.8% chance she'll have a burger instead.  If she has sushi for lunch initially, theres a 38% chance she'll be having tacos in 3 days.  If she initally had a burger, there's a 35.2% chance she'll be having sushi in 3 days etc.
+
+
+</p>
+
+<exercise>
+  <statement>
+    <p>
+  Suppose that when Zara plays Rock, Paper Scissors, she tries her best to mix it up.  If she throws a Rock, then there's a 0.3  chance she throws Paper next and 0.3 chance she throws Scissors.  If she throws Paper, there's a 80% chance she throws Scissors next, and a 20% chance she throws Rock next.  If she throws Scissors, theres a 30% chance she throws Rock and a 70% chance she throws Paper next.
+
+  <ol>
+    <li> If Rock is state 1, Paper 2, Scissors 3, then find a transition matrix for this Markov process.</li>
+    <li>  If she threw paper first, what is the probability she throws paper 4 games afterwards?</li>
+  </ol>
+  </p>
+  </statement>
+
+  <solution>
+    <p>
+      We have:
+      <me>M=\begin{pmatrix}0.4 \amp 0.2 \amp 0.3 \\ 0.3 \amp 0 \amp 0.7 \\ 0.3 \amp 0.8 \amp 0 \end{pmatrix} .</me>
+
+    </p>
+  </solution>  
+
+  <solution>
+    <p>
+      We have:
+      <me>M^4=\begin{pmatrix}0.2953 \amp 0.3132 \amp 0.2784 \\ 0.3393 \amp 0.4954 \amp 0.2001 \\ 0.3654 \amp 0.1914 \amp 0.5215 \end{pmatrix} .</me>
+      So if Zara threw paper initially, 4 games later, there's a 49.54% chance she throws paper again.
+    </p>
+  </solution>  
+
+
+
+</exercise>  
+
+
+<exercise>
+  <statement>
+    <p>
+  Customers of a store purchase clothes from brands <m>U</m> and <m>V</m>.  Those who buy clothes from <m>U</m> and a 30% chance of switching to <m>V</m> in their next purchase.  Customers who bought <m>V</m> have a 40% chance of swithing to <m>U</m>
+
+  <ol>
+    <li> If brand <m>U</m> is state 1  and brand <m>V</m> is state 2, then find a transition matrix for this Markov process.</li>
+    <li>  If initially half the customers bought each brand, how are purchases distributed after 10 purchases?</li>
+  </ol>
+  </p>
+  </statement>
+
+  <solution>
+    <p>
+      We have:
+      <me>M=\begin{pmatrix}0.7 \amp 0.4\\ 0.3 \amp 0.6 \end{pmatrix} .</me>
+
+    </p>
+  </solution>  
+
+  <solution>
+    <p>
+      We have:
+      <me>\begin{pmatrix}0.7 \amp 0.4\\ 0.3 \amp 0.6 \end{pmatrix}^{10}\begin{pmatrix}0.5\\ 0.5 \end{pmatrix}\approx \begin{pmatrix}0.5714 \amp 0.5714\\ 0.4286 \amp 0.4286 \end{pmatrix}\begin{pmatrix}0.5\\ 0.5 \end{pmatrix}\approx \begin{pmatrix}0.5714 \\ 0.4286  \end{pmatrix} .</me>
+      So 57.14% buying brand <m>U</m> and 42.86% buying brand <m>V</m>.
+    </p>
+  </solution>  
+
+
+
+</exercise>  
+
+
+
+
+
+
+</subsection>
+</section>

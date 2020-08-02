@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:43-06:00    *-->
+<!--*    on 2020-08-02T16:48:42-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,21 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The <dfn class="terminology">chain rule</dfn> states</p>
-<div class="displaymath">
-\begin{equation*}
-\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x).
-\end{equation*}
-</div>
-<p data-braille="continuation">To see why:</p>
-<div class="displaymath">
-\begin{align*}
-\frac{d}{dx}[f(g(x))]\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
-\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h}\color{blue}{\frac{g(x+h)-g(x)}{g(x+h)-g(x)}}\\
-\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}\\
-\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\text{.}
-\end{align*}
-</div>
-<span class="incontext"><a href="Sec_AdvancedDerivative.html#p-983">in-context</a></span>
+<p>We  note that \(G'(x)=\frac{d}{dx}[-0.2x^2 +450]=-0.4x \text{.}\)</p>
+<ol class="decimal">
+<li>\(\displaystyle G(10)=-0.2(10)^2 +450=430.\)</li>
+<li>\(\displaystyle G(25)=-0.2(25)^2 +450=325.\)</li>
+<li>\(\displaystyle G'(10)=-0.4(10)=-4.\)</li>
+<li>\(\displaystyle G'(25)=-0.4(25) =-10.\)</li>
+</ol>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/2u2ktccdm7" id="interactive-152" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="Sec_RulesofDerivative.html#p-983">in-context</a></span>
 </body>
 </html>

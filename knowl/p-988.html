@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:43-06:00    *-->
+<!--*    on 2020-08-02T16:48:42-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,24 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>If you sell \(x\) widgets, the total profit is \(P(x)=\$ \frac{200x-1000}{20x+30}.\)  So the average profit per widget is</p>
-<div class="displaymath">
-\begin{equation*}
-A(x)=\frac{P(x)}{x}= \frac{200x-1000}{20x+30}\cdot\frac{1}{x}=\frac{200x-1000}{20x^2+30x}.
-\end{equation*}
-</div>
-<p data-braille="continuation">Then, the marginal average cost is computed via the derivative:</p>
+<p>Utilizing <a class="xref" data-knowl="./knowl/ProductRule.html" title="Remark 7.5.1">Remark 7.5.1</a>:</p>
 <div class="displaymath">
 \begin{align*}
-A'(x)\amp = \frac{d}{dx}[\frac{200x-1000}{20x^2+30x}]\\
-\amp = \frac{\frac{d}{dx}[200x-1000](20x^2+30x)-(200x-1000)\frac{d}{dx}[20x^2-30x]}{(20x^2+30x)^2}\\
-\amp = \frac{200(20x^2+30x)-(200x-1000)(40x-30)}{(20x^2+30x)^2}\\
-\amp = \frac{4000x^2+6000x-(8000x^2-34000x-30000)}{(20x^2+30x)^2}\\
-\amp = \frac{4000x^2+6000x-8000x^2+34000x+30000}{(20x^2+30x)^2}\\
-\amp = \frac{-4000x^2+40000x+30000}{(20x^2+30x)^2}\text{.}
+f'(x)\amp = \frac{d}{dx}[x^3](x+1)+x^3\frac{d}{dx}[x+1]\\
+\amp = 3x^2(x+1)+x^3(1)\\
+\amp = 3x^3+3x^2+x^3\\
+\amp = 4x^3+3x^2\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">We can see this: <iframe src="https://www.desmos.com/calculator/fzzio7tkr5" id="interactive-156" width="600" height="600"></iframe></p>
 <span class="incontext"><a href="Sec_AdvancedDerivative.html#p-988">in-context</a></span>
 </body>
 </html>

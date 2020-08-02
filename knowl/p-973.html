@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:43-06:00    *-->
+<!--*    on 2020-08-02T16:48:41-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Well on the left hand side \(\frac{d}{dx}[x\cdot x]=\frac{d}{dx}[x^2]=2x\text{.}\) On the right, \(\frac{d}{dx}[x]\frac{d}{dx}[x]=1\cdot1=1\text{,}\) so these are clearly not the same.  It's safe to say that in general</p>
+<p>By <a class="xref" data-knowl="./knowl/RemarkPower.html" title="Remark 7.4.3">Remark 7.4.3</a> and <a class="xref" data-knowl="./knowl/RemarkLinear.html" title="Remark 7.4.1">Remark 7.4.1</a> we have:</p>
 <div class="displaymath">
-\begin{equation*}
-\frac{d}{dx}[f(x)g(x)]\neq f'(x)g'(x).
-\end{equation*}
+\begin{align*}
+f'(x)\amp = \frac{d}{dx}[x^4-2x^2+7x-3]\\
+\amp = \frac{d}{dx}[x^4-2x^2+7x^1-3x^0]\\
+\amp = 4x^3-2(2x^1)+7(1x^0)-3(0x^{-1})\\
+\amp = 4x^3-4x+7\text{.}
+\end{align*}
 </div>
-<span class="incontext"><a href="Sec_AdvancedDerivative.html#p-973">in-context</a></span>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/f7rllemfvp" id="interactive-148" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="Sec_RulesofDerivative.html#p-973">in-context</a></span>
 </body>
 </html>

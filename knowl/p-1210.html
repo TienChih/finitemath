@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:57-06:00    *-->
+<!--*    on 2020-08-02T16:48:55-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,18 +13,33 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So let \(X\) denote “the outcome of a die roll”.  We have that \(X\) could take on the values \(1,\ldots, 6\) and for each of these values, say \(1\text{,}\) the probability \(X=1\) is \(P(X=1)=\frac{1}{6}\text{.}\)  This gives us:</p>
-<div class="displaymath">
+<p>There are \(C(20,3)=1140\) ways to pick 3 people out of 20.</p>
+<ol class="decimal">
+<li>There are \(C(5,3)=10\) ways to pick only sick people, so the probability this happens is<div class="displaymath">
 \begin{equation*}
-\begin{array}{|c|cccccc|}
-\hline
-x \amp 1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6 \\
-\hline
-P(X=x) \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6}\\
-\hline
-\end{array}
+\frac{C(5,3)}{C(20,3)}=\frac{10}{1140}\approx 0.0088.
 \end{equation*}
 </div>
-<span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1210">in-context</a></span>
+</li>
+<li>There are \(C(15,3)=455\) ways to pick only healthy people, so the probability this happens is<div class="displaymath">
+\begin{equation*}
+\frac{C(15,3)}{C(20,3)}=\frac{455}{1140}\approx 0.3991.
+\end{equation*}
+</div>
+</li>
+<li>There are \(C(5,2)\cdot C(15,1)=10\cdot 15=150\) ways to pick two sick and one healthy person, so the probability this happens is<div class="displaymath">
+\begin{equation*}
+\frac{C(5,2)\cdot C(15,1)}{C(20,3)}=\frac{10\cdot 15}{1140}\approx  0.1316.
+\end{equation*}
+</div>
+</li>
+<li>The probability that at least one person tested sick is \(1-\frac{C(15,3)}{C(20,3)}\text{.}\)  Thus assuming this happens, the probability everyone tests sick is<div class="displaymath">
+\begin{equation*}
+\frac{C(5,3)/C(20,3)}{1-C(15,3)/C(20,3)}\approx \frac{0.0088}{0.6009}\approx 0.0146.
+\end{equation*}
+</div>
+</li>
+</ol>
+<span class="incontext"><a href="Sec_AppstoProb.html#p-1210">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:45-06:00    *-->
+<!--*    on 2020-08-02T16:48:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,11 +14,11 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]\\
-\amp = t\frac{d}{dt}[e^{-0.25t}]+\frac{d}{dt}[t]e^{-0.25t}\\
-\amp = te^{-0.25t}\frac{d}{dt}[-0.25t]+1\cdot e^{-0.25t}\\
-\amp = te^{-0.25t}\cdot(-0.25t)+e^{-0.25t}\\
-\amp = (1-0.25t)e^{-0.25t}
+\frac{d}{dx}[a^x]\amp = \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
+\amp = \frac{d}{dx}[e^{\ln(a)x}]\\
+\amp = e^{\ln(a)x}\frac{d}{dx}[\ln(a)x],\ \text{ by chain rule }\\
+\amp = e^{\ln(a)x}\ln(a)\cdot1\\
+\amp = a^x\ln(a)
 \end{align*}
 </div>
 <span class="incontext"><a href="DerivativeExp.html#mjx-eqn-mrow-688">in-context</a></span>

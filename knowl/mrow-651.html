@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-01T16:12:43-06:00    *-->
+<!--*    on 2020-08-02T16:48:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,12 +14,10 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-A'(x)\amp = \frac{d}{dx}[\frac{200x-1000}{20x^2+30x}]\\
-\amp = \frac{\frac{d}{dx}[200x-1000](20x^2+30x)-(200x-1000)\frac{d}{dx}[20x^2-30x]}{(20x^2+30x)^2}\\
-\amp = \frac{200(20x^2+30x)-(200x-1000)(40x-30)}{(20x^2+30x)^2}\\
-\amp = \frac{4000x^2+6000x-(8000x^2-34000x-30000)}{(20x^2+30x)^2}\\
-\amp = \frac{4000x^2+6000x-8000x^2+34000x+30000}{(20x^2+30x)^2}\\
-\amp = \frac{-4000x^2+40000x+30000}{(20x^2+30x)^2}
+\frac{d}{dx}[f(g(x))]\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
+\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h}\color{blue}{\frac{g(x+h)-g(x)}{g(x+h)-g(x)}}\\
+\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}\\
+\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}
 \end{align*}
 </div>
 <span class="incontext"><a href="Sec_AdvancedDerivative.html#mjx-eqn-mrow-651">in-context</a></span>
