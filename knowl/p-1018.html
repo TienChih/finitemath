@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:48:44-06:00    *-->
+<!--*    on 2020-08-20T18:54:28-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,29 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We recall that log functions are inverses of exponential functions.  We first conceptualized them in <a href="Sec_Logarithms.html" class="internal" title="Section 6.6: Logarithms">Section 6.6</a> as reflections of exponentials across the \(y=x\) line.  It is sensible then that the derivatives of logs should be based on those of exponentials.</p>
-<span class="incontext"><a href="DerivativeLogs.html#p-1018">in-context</a></span>
+<p>We note that:</p>
+<div class="displaymath">
+\begin{align*}
+D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]\\
+\amp = t\frac{d}{dt}[e^{-0.25t}]+\frac{d}{dt}[t]e^{-0.25t}\\
+\amp = te^{-0.25t}\frac{d}{dt}[-0.25t]+1\cdot e^{-0.25t}\\
+\amp = te^{-0.25t}\cdot(-0.25t)+e^{-0.25t}\\
+\amp = (1-0.25t)e^{-0.25t}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">So with that:</p>
+<ol class="decimal">
+<li>Notce \(D'(2)=(1-0.25(2))e^{-0.25(2)}\approx 0.303 \) or increasing by 0.303 mL/minute.</li>
+<li>We note that the quantity decreases when \(D'(t)=(1-0.25t)e^{-0.25t}\lt 0\) so:<div class="displaymath">
+\begin{align*}
+(1-0.25t)e^{-0.25t}\amp \lt 0\\
+(1-0.25t)\amp \lt 0\\
+1\amp \lt 0.25t\\
+t\amp &gt; 4\text{.}
+\end{align*}
+</div>So after 4 minutes</li>
+</ol>
+<p data-braille="continuation">We can see this: <iframe src="https://www.desmos.com/calculator/uow1nliujd" id="interactive-163" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="DerivativeExp.html#p-1018">in-context</a></span>
 </body>
 </html>

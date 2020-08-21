@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:47:57-06:00    *-->
+<!--*    on 2020-08-20T18:53:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -217,11 +217,11 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Combinations"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.2</span> <span class="title">Combinations and Binomial Coefficients</span>
 </h2>
-<section class="introduction" id="introduction-44"><p id="p-1179">In this section, we count the number of ways to make selections <em class="emphasis">without</em> order.</p></section><section class="subsection" id="subsection-96"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-44"><p id="p-1180">In this section, we count the number of ways to make selections <em class="emphasis">without</em> order.</p></section><section class="subsection" id="subsection-96"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.2.1</span> <span class="title">Combinations</span>
 </h3>
-<p id="p-1180">Recall that in <a href="Sec_Permutation.html" class="internal" title="Section 9.1: Multiplication Principle and Permutations">Section 9.1</a> we counted the number of ways to take the letters \(A, B, C, D, E \) pick 3 and arrange them.  This was \(P(5,3)=60\text{.}\)  We now ask ourselves, how many ways are there to pick 3 of these 5 letters?  That is, what if we ignored the arrangement aspect of \(P(5,3)\text{?}\)</p>
-<p id="p-1181">We previously listed these results, but let's do so again, in a different manner this time.</p>
+<p id="p-1181">Recall that in <a href="Sec_Permutation.html" class="internal" title="Section 9.1: Multiplication Principle and Permutations">Section 9.1</a> we counted the number of ways to take the letters \(A, B, C, D, E \) pick 3 and arrange them.  This was \(P(5,3)=60\text{.}\)  We now ask ourselves, how many ways are there to pick 3 of these 5 letters?  That is, what if we ignored the arrangement aspect of \(P(5,3)\text{?}\)</p>
+<p id="p-1182">We previously listed these results, but let's do so again, in a different manner this time.</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|c|c|c|c|c|c|c|c|c|}
@@ -246,7 +246,7 @@ ABC, ABD, ABE, ACE, ADE, BCD, BCE, BDE, CDE.
 <article class="definition definition-like" id="definition-29"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Combination.</span>
 </h6>
-<p id="p-1182">Given \(n\) objects, the number of ways to select \(r\) of them <em class="emphasis">without order</em>, also called a <dfn class="terminology">combination</dfn> is:</p>
+<p id="p-1183">Given \(n\) objects, the number of ways to select \(r\) of them <em class="emphasis">without order</em>, also called a <dfn class="terminology">combination</dfn> is:</p>
 <div class="displaymath">
 \begin{equation*}
 C(n,r)=\frac{P(n,r)}{r!}=\frac{n!}{r!(n-r)!}.
@@ -254,28 +254,28 @@ C(n,r)=\frac{P(n,r)}{r!}=\frac{n!}{r!(n-r)!}.
 </div>
 <p data-braille="continuation">This is also commonly denoted \({n\choose r}\text{,}\) which we will avoid to prevent confusion with fractions.</p></article><article class="example example-like" id="example-99"><a data-knowl="" class="id-ref original" data-refid="hk-example-99"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-99"><article class="example example-like"><p id="p-1183">If you had 10 books, how many ways could you select 4 of them to lend a friend?  What about 6 books?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-99"><article class="example example-like"><p id="p-1184">If you had 10 books, how many ways could you select 4 of them to lend a friend?  What about 6 books?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-138" id="solution-138"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-138"><div class="solution solution-like"><p id="p-1184">To select four books out of ten, this would be \(C(10,4)=\frac{10!}{4!(10-4)!}=\frac{10}{4!6!}=210\text{.}\)  To select six books out of ten, this would be \(C(10,6)=\frac{10!}{6!(10-6)!}=\frac{10}{6!4!}=210\text{.}\)   We can see it here: <iframe src="https://www.desmos.com/calculator/w8bax0xk9j" id="interactive-181" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-138" id="solution-138"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-138"><div class="solution solution-like"><p id="p-1185">To select four books out of ten, this would be \(C(10,4)=\frac{10!}{4!(10-4)!}=\frac{10}{4!6!}=210\text{.}\)  To select six books out of ten, this would be \(C(10,6)=\frac{10!}{6!(10-6)!}=\frac{10}{6!4!}=210\text{.}\)   We can see it here: <iframe src="https://www.desmos.com/calculator/w8bax0xk9j" id="interactive-181" width="600" height="600"></iframe></p></div></div>
 </div></article></div>
-<p id="p-1185">Notice that the number of ways to pick 4 books out of 10 is the same as picking 6.  This may seem strange, but picking 4 books to lend, is the same as picking 6 books to keep.  This leads us to the following:</p>
+<p id="p-1186">Notice that the number of ways to pick 4 books out of 10 is the same as picking 6.  This may seem strange, but picking 4 books to lend, is the same as picking 6 books to keep.  This leads us to the following:</p>
 <article class="remark remark-like" id="remark-25"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.2.3</span><span class="period">.</span>
 </h6>
-<p id="p-1186">Consider the following about combinations.</p>
+<p id="p-1187">Consider the following about combinations.</p>
 <ul class="disc">
 <li id="li-617">\(C(n,n)=1\text{.}\)  There is only one way to pick \(n\) of \(n\) objects.  Pick them all.</li>
 <li id="li-618">\(C(n,r)=C(n,n-r)\text{.}\)  Picking \(r\) objects is the same as selecting \(n-r\) objects to <em class="emphasis">not</em> pick.</li>
 <li id="li-619">\(C(n,0)=1\text{.}\)  Combine the above facts.  Alternatively, the only selection of no objects is the empty selection.</li>
 </ul></article><article class="exercise exercise-like" id="exercise-88"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-88"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.2.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-88"><article class="exercise exercise-like"><p id="p-1187">In how many ways can a hand of 6 red cards be chosen from an ordinary deck?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-88"><article class="exercise exercise-like"><p id="p-1188">In how many ways can a hand of 6 red cards be chosen from an ordinary deck?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-139" id="solution-139"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-139"><div class="solution solution-like"><p id="p-1188">This is \(C(26,5)=65780\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-139" id="solution-139"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-139"><div class="solution solution-like"><p id="p-1189">There are 26 red cards, 6 of which are red, so this is \(C(26,5)=65780\text{.}\)</p></div></div>
 </div></article></div></section><section class="subsection" id="subsection-97"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.2.2</span> <span class="title">Further Counting</span>
 </h3>
-<p id="p-1189">Sometimes our counting situations can get fairly complex.  In addition to <a class="xref" data-knowl="./knowl/RemarkMultiplication.html" title="Remark 9.1.1: Multiplication Principle">Remark 9.1.1</a> we have:</p>
+<p id="p-1190">Sometimes our counting situations can get fairly complex.  In addition to <a class="xref" data-knowl="./knowl/RemarkMultiplication.html" title="Remark 9.1.1: Multiplication Principle">Remark 9.1.1</a> we have:</p>
 <article class="remark remark-like" id="RemarkAddition"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Addition Principle.</span>
 </h6> If we have to choose from one item from \(S_1, \ldots S_r\) sets, each with \(m_1, \ldots m_s\) choices, and there are no overlaps, then the number of ways to do this is<div class="displaymath">
@@ -284,10 +284,10 @@ m_1+\cdots m_s.
 \end{equation*}
 </div></article><article class="example example-like" id="example-100"><a data-knowl="" class="id-ref original" data-refid="hk-example-100"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-100"><article class="example example-like"><p id="p-1190">Suppose you wanted to pick a committee of  3, 4 or 5 out of 20 people.  How many ways can you do this?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-100"><article class="example example-like"><p id="p-1191">Suppose you wanted to pick a committee of  3, 4 or 5 out of 20 people.  How many ways can you do this?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-140" id="solution-140"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-140"><div class="solution solution-like">
-<p id="p-1191">There are \(C(20,3)\) ways to pick a commttee of 3, \(C(20,4)\) ways to pick a commttee of 4 and \(C(20,5)\) ways to pick a commttee of 5.  So the total number of ways to pick commttees is</p>
+<p id="p-1192">There are \(C(20,3)\) ways to pick a commttee of 3, \(C(20,4)\) ways to pick a commttee of 4 and \(C(20,5)\) ways to pick a commttee of 5.  So the total number of ways to pick commttees is</p>
 <div class="displaymath">
 \begin{equation*}
 C(20,3)+C(20,4)+C(20,5)=1140+4845+15504=21489.
@@ -298,14 +298,14 @@ C(20,3)+C(20,4)+C(20,5)=1140+4845+15504=21489.
 </div></article></div>
 <article class="example example-like" id="example-101"><a data-knowl="" class="id-ref original" data-refid="hk-example-101"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-101"><article class="example example-like"><p id="p-1192">Suppose you wanted to pick a committee of  4 professors, 8 Mathematicians and 12 Historians.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-101"><article class="example example-like"><p id="p-1193">Suppose you wanted to pick a committee of  4 professors, 8 Mathematicians and 12 Historians.</p>
 <ol class="decimal">
 <li id="li-620">How many ways could you do this?</li>
 <li id="li-621">How many ways can you do this if two are Mathematicians, and two are Historians?</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-141" id="solution-141"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-141"><div class="solution solution-like">
-<p id="p-1193">Consider:</p>
+<p id="p-1194">Consider:</p>
 <ol class="decimal">
 <li id="li-622">In this situation, we are simply picking 4 out of 20 so \(C(20,4)=4845\)</li>
 <li id="li-623">Note that since we are picking <em class="emphasis">both</em> 2 Mathematicians and 2 Historians, not one or the other, that the Multiplication Principle, not the Addition Principle applies, so \(C(8,2)\cdot C(12,2)=28\cdot 66=1848\text{.}\)  We can think of this as 28 ways of picking Mathematicians, 66 ways of picking historians, and 1848 ways of putting the Math and History pairs together.</li>
@@ -314,7 +314,7 @@ C(20,3)+C(20,4)+C(20,5)=1140+4845+15504=21489.
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-89"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-89"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.2.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-89"><article class="exercise exercise-like"><p id="p-1194">Suppose there were 15 apples, 5 of which are poisened. How many ways are there to pick 4 apples so that:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-89"><article class="exercise exercise-like"><p id="p-1195">Suppose there were 15 apples, 5 of which are poisened. How many ways are there to pick 4 apples so that:</p>
 <ol class="decimal">
 <li id="li-624">Without restrictions?</li>
 <li id="li-625">None of the apples are poisened?</li>
@@ -324,7 +324,7 @@ C(20,3)+C(20,4)+C(20,5)=1140+4845+15504=21489.
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-142" id="solution-142"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-142"><div class="solution solution-like">
-<p id="p-1195">We note that there are 11 non-poisened apples.</p>
+<p id="p-1196">We note that there are 11 non-poisened apples.</p>
 <ol class="decimal">
 <li id="li-629">Ths is picking 4 of 15 objects so \(C(15,4)=1365\text{.}\)</li>
 <li id="li-630">Ths is picking 4 of 11 objects so \(C(11,4)=330\text{.}\)</li>
@@ -336,7 +336,7 @@ C(20,3)+C(20,4)+C(20,5)=1140+4845+15504=21489.
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-90"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-90"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.2.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-90"><article class="exercise exercise-like"><p id="p-1196">A caterer offers 10 entrees, 4 of which are vegetarian.  How many ways can you pick 3 entrees:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-90"><article class="exercise exercise-like"><p id="p-1197">A caterer offers 10 entrees, 4 of which are vegetarian.  How many ways can you pick 3 entrees:</p>
 <ol class="decimal">
 <li id="li-634">Without restrictions?</li>
 <li id="li-635">None of the dishes are vegetarian?</li>
@@ -346,7 +346,7 @@ C(20,3)+C(20,4)+C(20,5)=1140+4845+15504=21489.
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-143" id="solution-143"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-143"><div class="solution solution-like">
-<p id="p-1197">We note that there are 6 non-vegetarian dishes.</p>
+<p id="p-1198">We note that there are 6 non-vegetarian dishes.</p>
 <ol class="decimal">
 <li id="li-639">Ths is picking 3 of 10 objects so \(C(10,3)=120\text{.}\)</li>
 <li id="li-640">Ths is picking 3 of 6 objects so \(C(6,3)=20\text{.}\)</li>

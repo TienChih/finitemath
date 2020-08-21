@@ -150,7 +150,7 @@ There are situations where every element which satisfies a condition also satisf
 <subsection>
   <title>Set Operations</title>
 
-  Generally speaking, while dealing with sets, there is an understood <term>universal set</term> in which we are working.  In a probability setting, this usually denotes the set of all possible outcomes of an experiment.  For now, we'll just call this set <m>\mcathcal{U}</m>.
+  Generally speaking, while dealing with sets, there is an understood <term>universal set</term> in which we are working.  In a probability setting, this usually denotes the set of all possible outcomes of an experiment.  For now, we'll just call this set <m>\mathcal{U}</m>.
 
 
 <definition xml:id="DefinitionComplement">

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:49:07-06:00    *-->
+<!--*    on 2020-08-20T18:54:51-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -10,25 +10,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Evaluate (Sage)'});
-});
-</script>
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>If we want to see what would happen in subsequent games, depending on starting position, we can do this via: <div class="sagecell-sage" id="sage-28"><script type="text/x-sage">M=matrix(QQ, [[1,0.4,0,0,0,0],[0,0,0.4,0,0,0], [0,0.6,0,0.4,0,0], [0,0,0.6,0,0.4,0], [0,0,0,0.6,0,0], [0,0,0,0,0.6,1]])
-for i in range(100):
-  print(M^i*1.0)
-  print(' ')
-</script></div> Admittedly, this gets to be a bit hard to read, but what you can see is that over time, the values of the middle 4 rows go to zero.  What this translates to, is that as Adaeze continues to play, she chance that she doesnt end the game at some point goes down over time.  If we jump straight to 1000 games: <div class="sagecell-sage" id="sage-29"><script type="text/x-sage">M=matrix(QQ, [[1,0.4,0,0,0,0],[0,0,0.4,0,0,0], [0,0.6,0,0.4,0,0], [0,0,0.6,0,0.4,0], [0,0,0,0.6,0,0], [0,0,0,0,0.6,1]])
-print(M^1000*1.0)
-</script></div> We can see that if she starts with no money, she has no money (of course), if she start with \(\$100\text{,}\) she has about a 61.6% chance of going broke, and a 38.4% chance of winning.  At \(\$200\) this improves to a 36% chance of losing and a 64% chance of winning.  If she comes in with \(\$300\text{,}\) she has a 19% chance of going broke and a 81% chance of winning.  At \(\$400\text{,}\) she has a 7.6% chance of going broke, 92.4% chance of winning.  If she comes in with \(\$500\text{,}\) then she's already made her goal.</p>
+<p>We can model this with a transition matrix, with states \(\$0, \$100, \ldots, \$500\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+M=\begin{pmatrix} 
+1 \amp 0.4 \amp 0 \amp 0 \amp 0 \amp 0\\ 
+0 \amp 0 \amp 0.4 \amp 0 \amp 0 \amp 0\\
+0 \amp 0.6 \amp 0 \amp 0.4 \amp 0 \amp 0\\ 
+0 \amp 0 \amp 0.6 \amp 0 \amp 0.4 \amp 0\\
+0 \amp 0 \amp 0 \amp 0.6 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0.6 \amp 1\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">So in state \(\$0, \$500\text{,}\) we have an entry of 1 in those diagonals, because once she enters this state she never leaves, she doesn't go back if she hits her goal, and she can't if she goes broke.  In each other state, we have a 40% chance of moving to a lower state, and a 60% chance of moving to a higher state.  We call the \(\$0, \$500\) states <dfn class="terminology">absorbing states</dfn> because they absorb any incoming state.</p>
 <span class="incontext"><a href="Sec_Absorb.html#p-1448">in-context</a></span>
 </body>
 </html>

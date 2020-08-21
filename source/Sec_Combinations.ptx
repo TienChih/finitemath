@@ -90,7 +90,7 @@ ordinary deck?
   </statement>    
   <solution>
     <p>
-      This is <m>C(26,5)=65780</m>.
+      There are 26 red cards, 6 of which are red, so this is <m>C(26,5)=65780</m>.
     </p>
   </solution>   
  </exercise>

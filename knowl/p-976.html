@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:48:41-06:00    *-->
+<!--*    on 2020-08-20T18:54:26-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,20 +13,17 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>An analyst has found that a company’s costs and revenues in dollars for one product are given by</p>
+<p>By <a class="xref" data-knowl="./knowl/RemarkPower.html" title="Remark 7.4.3">Remark 7.4.3</a> and <a class="xref" data-knowl="./knowl/RemarkLinear.html" title="Remark 7.4.1">Remark 7.4.1</a> we have:</p>
 <div class="displaymath">
-\begin{equation*}
-C(x)=2x, R(x)=6x-\frac{x^2}{100}
-\end{equation*}
+\begin{align*}
+g'(x)\amp = \frac{d}{dx}[\sqrt{4x}+\frac{3}{x}-\frac{2}{x^2}]\\
+\amp = \frac{d}{dx}[2x^{1/2}+3x^{-1}-2x^{-2}]\\
+\amp = 2(1/2)x^{-1/2}+3(-1x^{-2})-2(2x^{-3})\\
+\amp = x^{-1/2}-3x^{-2}+4x^{-3}\\
+\amp = \frac{1}{\sqrt{x}}-\frac{3}{x^2}+\frac{4}{x^3}\text{.}
+\end{align*}
 </div>
-<p data-braille="continuation">respectively, where \(x\) is the number of items produced.</p>
-<ol class="decimal">
-<li>Find the marginal cost function (\(R'(x)\) ).</li>
-<li>Find the marginal revenue function (\(C'(x)\) ).</li>
-<li>Using the fact that profit is the difference between revenue and costs, find the marginal profit function.</li>
-<li>What value of \(x\) makes marginal profit equal 0?</li>
-<li>Find the profit when the marginal profit is 0.</li>
-</ol>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/fi1nqzbrpf" id="interactive-149" width="600" height="600"></iframe></p>
 <span class="incontext"><a href="Sec_RulesofDerivative.html#p-976">in-context</a></span>
 </body>
 </html>

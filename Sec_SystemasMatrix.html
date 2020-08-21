@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:47:31-06:00    *-->
+<!--*    on 2020-08-20T18:53:17-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -225,8 +225,8 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_SystemasMatrix"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Representing a System of Linear Equations as a Matrix</span>
 </h2>
-<section class="introduction" id="introduction-7"><p id="p-243">Given a system of equations, we can try to encode that information in a matrix:</p>
-<p id="p-244">So for example the system of equations:</p>
+<section class="introduction" id="introduction-7"><p id="p-244">Given a system of equations, we can try to encode that information in a matrix:</p>
+<p id="p-245">So for example the system of equations:</p>
 <div class="displaymath">
 \begin{align*}
 2x+3y+z\amp = 3\\
@@ -234,20 +234,20 @@ MathJax.Hub.Config({
 x-y+2z\amp = 3
 \end{align*}
 </div>
-<p id="p-245">Would have matrix representation:</p>
+<p id="p-246">Would have matrix representation:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr|r} 2 \amp  3 \amp  1\amp  3\\ -2 \amp  4 \amp  2 \amp  0\\ 1 \amp  -1 \amp  2 \amp  3 \end{array} \right)\text{.}
 \end{equation*}
 </div>
-<p id="p-246">A <dfn class="terminology">matrix</dfn> is a rectangular array of numbers, each number is an <dfn class="terminology">entry</dfn> of the matrix. In the above example, the vertical line is a visual reminder to separate the constant terms from the variables. A matrix displayed this way is an <dfn class="terminology">augmented matrix</dfn>.</p>
-<p id="p-247">By letting each column of a matrix represent a different variable or constant and arranging the linear equations into rows, one can write any linear system of equations as an augmented matrix. Conversely, if you have a matrix:</p>
+<p id="p-247">A <dfn class="terminology">matrix</dfn> is a rectangular array of numbers, each number is an <dfn class="terminology">entry</dfn> of the matrix. In the above example, the vertical line is a visual reminder to separate the constant terms from the variables. A matrix displayed this way is an <dfn class="terminology">augmented matrix</dfn>.</p>
+<p id="p-248">By letting each column of a matrix represent a different variable or constant and arranging the linear equations into rows, one can write any linear system of equations as an augmented matrix. Conversely, if you have a matrix:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rr|r} 1 \amp  2 \amp  4\\ 3 \amp  3  \amp  9 \end{array} \right)
 \end{equation*}
 </div>
-<p id="p-248">This represent the system of equations:</p>
+<p id="p-249">This represent the system of equations:</p>
 <div class="displaymath">
 \begin{align*}
 x+2y\amp = 4\\
@@ -256,20 +256,20 @@ x+2y\amp = 4\\
 </div></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">Solving Systems of Linear Equations</span>
 </h3>
-<p id="p-249">So let's consider the above system/matrix:</p>
+<p id="p-250">So let's consider the above system/matrix:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rr|r} 1 \amp  2 \amp  4\\ 3 \amp  3  \amp  9 \end{array} \right)
 \end{equation*}
 </div>
-<p id="p-250">We are allowed to manipulate this matrix in a number of ways. Remembering that each row represents a linear equation:</p>
+<p id="p-251">We are allowed to manipulate this matrix in a number of ways. Remembering that each row represents a linear equation:</p>
 <ol class="decimal">
-<li id="li-70"><p id="p-251"><dfn class="terminology">You can multiply any row by a non-zero multiple</dfn>. We can do this because say, the solutions to \(x+2y=4\) are the same as the solutions to \(-x-2y=-4\) or \(2x+4y=8\text{,}\) so we're not adding in new solutions or removing existing solutions.</p></li>
-<li id="li-71"><p id="p-252"><dfn class="terminology">You can add to any row, the multiple of any row.</dfn> Adding a linear equality to another linear equality preserves the solutions to both equations.</p></li>
-<li id="li-72"><p id="p-253"><dfn class="terminology">You can rearrange the rows.</dfn> The solutions to a system of equations does not depend on the order in which they appear.</p></li>
+<li id="li-70"><p id="p-252"><dfn class="terminology">You can multiply any row by a non-zero multiple</dfn>. We can do this because say, the solutions to \(x+2y=4\) are the same as the solutions to \(-x-2y=-4\) or \(2x+4y=8\text{,}\) so we're not adding in new solutions or removing existing solutions.</p></li>
+<li id="li-71"><p id="p-253"><dfn class="terminology">You can add to any row, the multiple of any row.</dfn> Adding a linear equality to another linear equality preserves the solutions to both equations.</p></li>
+<li id="li-72"><p id="p-254"><dfn class="terminology">You can rearrange the rows.</dfn> The solutions to a system of equations does not depend on the order in which they appear.</p></li>
 </ol>
-<p id="p-254">So our goal here is to change this system into one where it's much easier to see what the solution is. The best way to do this, is to not have all these x's and y's, I want 2 equations: \(x=?, y=??\text{.}\)</p>
-<p id="p-255">So:</p>
+<p id="p-255">So our goal here is to change this system into one where it's much easier to see what the solution is. The best way to do this, is to not have all these x's and y's, I want 2 equations: \(x=?, y=??\text{.}\)</p>
+<p id="p-256">So:</p>
 <div class="displaymath">
 \begin{align*}
 \left( \begin{array}{rr|r} 1 \amp  2 \amp  4\\ 3 \amp  3  \amp  9 \end{array} \right)\amp \amp\\
@@ -279,30 +279,30 @@ x+2y\amp = 4\\
 (-2)R_2+R_1\mapsto R_1 \left( \begin{array}{rr|r} 1 \amp  0 \amp  2\\ 0 \amp  1  \amp  1 \end{array} \right)\amp \amp
 \end{align*}
 </div>
-<p id="p-256">What system of equations of this? It is:</p>
+<p id="p-257">What system of equations of this? It is:</p>
 <div class="displaymath">
 \begin{align*}
 x+0y\amp = 2\\
 0x+y\amp = 1
 \end{align*}
 </div>
-<p id="p-257">Which must mean: \(x=2, y=1\text{,}\) alright! By the way, one can test your answers to see if they are correct!</p>
+<p id="p-258">Which must mean: \(x=2, y=1\text{,}\) alright! By the way, one can test your answers to see if they are correct!</p>
 <div class="displaymath">
 \begin{equation*}
 1(2)+2(1)=4, 3(1)+3(2)=9
 \end{equation*}
 </div>
 <p data-braille="continuation">so it checks out.</p>
-<p id="p-258">A matrix with 1's across the diagonal, and 0's above and below these 1's (as above) is called <dfn class="terminology">reduced row-echelon form</dfn>. A process to obtain a reduced row echelon form matrix is called the <dfn class="terminology">Gauss-Jordan Method</dfn>. The methodology is:</p>
+<p id="p-259">A matrix with 1's across the diagonal, and 0's above and below these 1's (as above) is called <dfn class="terminology">reduced row-echelon form</dfn>. A process to obtain a reduced row echelon form matrix is called the <dfn class="terminology">Gauss-Jordan Method</dfn>. The methodology is:</p>
 <ol class="decimal">
-<li id="li-73"><p id="p-259">Starting with the first row, multiply by a number so it's leading (leftmost) value is 1.</p></li>
-<li id="li-74"><p id="p-260">Multiply and add copies of this row to all rows below so that every entry below this leading 1 is a 0.</p></li>
-<li id="li-75"><p id="p-261">Repeat steps (1) and (2) for subsequent rows until the last row.</p></li>
-<li id="li-76"><p id="p-262">Starting with the bottom row working up, repeat steps (1)-(3) except working upwards and making entries <dfn class="terminology">above</dfn> the leading 1's 0.</p></li>
+<li id="li-73"><p id="p-260">Starting with the first row, multiply by a number so it's leading (leftmost) value is 1.</p></li>
+<li id="li-74"><p id="p-261">Multiply and add copies of this row to all rows below so that every entry below this leading 1 is a 0.</p></li>
+<li id="li-75"><p id="p-262">Repeat steps (1) and (2) for subsequent rows until the last row.</p></li>
+<li id="li-76"><p id="p-263">Starting with the bottom row working up, repeat steps (1)-(3) except working upwards and making entries <dfn class="terminology">above</dfn> the leading 1's 0.</p></li>
 </ol>
 <article class="example example-like" id="Example_GaussJordan"><a data-knowl="" class="id-ref original" data-refid="hk-Example_GaussJordan"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_GaussJordan"><article class="example example-like"><p id="p-263">Solve the linear system:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_GaussJordan"><article class="example example-like"><p id="p-264">Solve the linear system:</p>
 <div class="displaymath">
 \begin{align*}
 3x+2y+z\amp = 1\\
@@ -310,13 +310,13 @@ x+y-z\amp = 3\\
 2x-y+2z\amp = -2
 \end{align*}
 </div>
-<p id="p-264">This corresponds to augmented matrix:</p>
+<p id="p-265">This corresponds to augmented matrix:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr|r} 3 \amp  2 \amp  1 \amp  1\\ 1 \amp  1  \amp  -1 \amp  3\\ 2 \amp  -1 \amp  2 \amp  -2 \end{array} \right)
 \end{equation*}
 </div>
-<p id="p-265">So applying Gauss-Jordan:</p>
+<p id="p-266">So applying Gauss-Jordan:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{1}{3}R_1\to R_1 \left( \begin{array}{rrr|r} 3 \amp  2 \amp  1 \amp  1\\ 1 \amp  1  \amp  -1 \amp  3\\ 2 \amp  -1 \amp  2 \amp  -2 \end{array} \right)\amp \amp\\
@@ -328,7 +328,7 @@ x+y-z\amp = 3\\
 \frac{21}{64}R_3\to R_3\left( \begin{array}{rrr|r} 1 \amp  \frac{2}{3} \amp  \frac{1}{3} \amp  \frac{1}{3}\\ 0 \amp  1  \amp  4 \amp  -8\\ 0 \amp  0 \amp  1 \amp  -2 \end{array} \right)\amp \amp
 \end{align*}
 </div>
-<p id="p-266">Then we work from bottom back up:</p>
+<p id="p-267">Then we work from bottom back up:</p>
 <div class="displaymath">
 \begin{align*}
 -4R_3 + R_2\to R_2\left( \begin{array}{rrr|r} 1 \amp  \frac{2}{3} \amp  \frac{1}{3} \amp  \frac{1}{3}\\ 0 \amp  1  \amp  0 \amp  0\\ 0 \amp  0 \amp  1 \amp  -2 \end{array} \right)\amp \amp\\
@@ -336,7 +336,7 @@ x+y-z\amp = 3\\
 -\frac{2}{3}R_2 + R_1\to R_1\left( \begin{array}{rrr|r} 1 \amp  0 \amp  0 \amp  1\\ 0 \amp  1  \amp  0 \amp  0\\ 0 \amp  0 \amp  1 \amp  -2 \end{array} \right)\amp \amp
 \end{align*}
 </div>
-<p id="p-267">Which corresponds to the linear system:</p>
+<p id="p-268">Which corresponds to the linear system:</p>
 <div class="displaymath">
 \begin{align*}
 1x+0y+0z\amp = 1\\
@@ -344,7 +344,7 @@ x+y-z\amp = 3\\
 0x+0y+z\amp = -2
 \end{align*}
 </div>
-<p id="p-268">Which has solution \(x=1, y=0, z=2\text{.}\) To verify this works, we can check:</p>
+<p id="p-269">Which has solution \(x=1, y=0, z=2\text{.}\) To verify this works, we can check:</p>
 <div class="displaymath">
 \begin{align*}
 3(1)+2(0)+(-2)\amp = 1\\
@@ -355,24 +355,24 @@ x+y-z\amp = 3\\
 <p data-braille="continuation">and we have solved our linear system.</p></article></div></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.2</span> <span class="title">Reduced Row Echelon Form using Technology.</span>
 </h3>
-<p id="p-269">Suppose we wanted to solve the system associated with the augmented matrix:</p>
+<p id="p-270">Suppose we wanted to solve the system associated with the augmented matrix:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr|r} 2 \amp  3 \amp  1\amp  3\\ -2 \amp  4 \amp  2 \amp  0\\ 1 \amp  -1 \amp  2 \amp  3 \end{array} \right)\text{.}
 \end{equation*}
 </div>
-<p id="p-270">We could solve this the same way we did <a class="xref" data-knowl="./knowl/Example_GaussJordan.html" title="Example 2.2.1">Example 2.2.1</a>, but your first thought here is probably "I don't want to do this." Yeah, me neither. One thing to note is that this process of finding a reduced row echelon form of a matrix is fairly mechanical. Thus, it is only natural that we should  do this with a machine.</p>
-<p id="p-271"><div class="sagecell-sage" id="sage-1"><script type="text/x-sage">A=matrix(QQ, [[2,3,1,3],[-2,4,2,0],[1,-1,2,3]])
+<p id="p-271">We could solve this the same way we did <a class="xref" data-knowl="./knowl/Example_GaussJordan.html" title="Example 2.2.1">Example 2.2.1</a>, but your first thought here is probably "I don't want to do this." Yeah, me neither. One thing to note is that this process of finding a reduced row echelon form of a matrix is fairly mechanical. Thus, it is only natural that we should  do this with a machine.</p>
+<p id="p-272"><div class="sagecell-sage" id="sage-1"><script type="text/x-sage">A=matrix(QQ, [[2,3,1,3],[-2,4,2,0],[1,-1,2,3]])
 print(A)
 print(A.rref())
 </script></div></p>
-<p id="p-272">The first line defines the matrix \(A\) with the rows identical to the rows we defined in our above matrix. Then the code returns a printout of that matrix, and it's reduced row echelon form:</p>
+<p id="p-273">The first line defines the matrix \(A\) with the rows identical to the rows we defined in our above matrix. Then the code returns a printout of that matrix, and it's reduced row echelon form:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr|r} 1 \amp  0 \amp  0\amp  1\\ 0 \amp  1 \amp  0 \amp  0\\ 0 \amp  0 \amp  1 \amp  1 \end{array} \right)
 \end{equation*}
 </div>
-<p id="p-273">So \(x=1, y=0, z=1\text{.}\) Is this right? Well,</p>
+<p id="p-274">So \(x=1, y=0, z=1\text{.}\) Is this right? Well,</p>
 <div class="displaymath">
 \begin{align*}
 2(1)+3(0)+1\amp = 3\\
@@ -380,14 +380,14 @@ print(A.rref())
 1-0+2(1)\amp = 3
 \end{align*}
 </div>
-<p id="p-274">Works for me.</p>
-<p id="p-275">By the way, if you enter the matrix from <a class="xref" data-knowl="./knowl/Example_GaussJordan.html" title="Example 2.2.1">Example 2.2.1</a>, and replace the first line with:</p>
+<p id="p-275">Works for me.</p>
+<p id="p-276">By the way, if you enter the matrix from <a class="xref" data-knowl="./knowl/Example_GaussJordan.html" title="Example 2.2.1">Example 2.2.1</a>, and replace the first line with:</p>
 <pre class="code-block tex2jax_ignore">A=matrix(QQ, [[3,2,1,1],[1,1,1,3],[2,-1,2,-2]])
 </pre>
-<p id="p-276">You should have the reduced row echelon matrix we achieved earlier.</p></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
+<p id="p-277">You should have the reduced row echelon matrix we achieved earlier.</p></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.3</span> <span class="title">Infinitely many solutions</span>
 </h3>
-<p id="p-277">Consider the system:</p>
+<p id="p-278">Consider the system:</p>
 <div class="displaymath">
 \begin{align*}
 x+2y+z\amp = 3\\
@@ -395,16 +395,16 @@ x+2y+z\amp = 3\\
 0x+3y+z\amp = 3
 \end{align*}
 </div>
-<p id="p-278">Then by using rref using as \(A\text{:}\)</p>
+<p id="p-279">Then by using rref using as \(A\text{:}\)</p>
 <pre class="code-block tex2jax_ignore">A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,3]])
 </pre>
-<p id="p-279">We would obtain:</p>
+<p id="p-280">We would obtain:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr|r} 1 \amp  0 \amp  1/3\amp  1\\ 0 \amp  1 \amp  1/3 \amp  1\\ 0 \amp  0 \amp  0 \amp  0 \end{array} \right)
 \end{equation*}
 </div>
-<p id="p-280">Which gives us the system:</p>
+<p id="p-281">Which gives us the system:</p>
 <div class="displaymath">
 \begin{align*}
 x+0y+(1/3)z\amp = 1\\
@@ -412,24 +412,24 @@ x+0y+(1/3)z\amp = 1\\
 0x+0y+0z\amp = 0
 \end{align*}
 </div>
-<p id="p-281">Well, the last line is useless, it basically says that \(0=0\text{,}\) which is true but useless. Let's break down the remaining equations:</p>
+<p id="p-282">Well, the last line is useless, it basically says that \(0=0\text{,}\) which is true but useless. Let's break down the remaining equations:</p>
 <div class="displaymath">
 \begin{align*}
 x+(1/3)z\amp = 1\\
 y+(1/3)z\amp = 1
 \end{align*}
 </div>
-<p id="p-282">Which can be thought of as:</p>
+<p id="p-283">Which can be thought of as:</p>
 <div class="displaymath">
 \begin{align*}
 x\amp = 1-(1/3)z\\
 y\amp = 1-(1/3)z
 \end{align*}
 </div>
-<p id="p-283">So basically what this is saying, no matter what \(z\) is, you can fin \(x\) and \(y\text{.}\) So if \(z=0\text{,}\) then \(x,y=1\text{.}\) But if \(z=6\text{,}\) then \(x,y=-1\text{.}\) Well, what is \(z\text{?}\) Apparently it can be whatever we want, both of the above triplets provide perfectly legitimate solutions to the original system. What you see described is a line of solutions. The 3 equations describe 3 planes in 3 dimensional (\(x,y,z)\) space and they intersect at this line which can be describes as the solution to this equation.</p></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
+<p id="p-284">So basically what this is saying, no matter what \(z\) is, you can fin \(x\) and \(y\text{.}\) So if \(z=0\text{,}\) then \(x,y=1\text{.}\) But if \(z=6\text{,}\) then \(x,y=-1\text{.}\) Well, what is \(z\text{?}\) Apparently it can be whatever we want, both of the above triplets provide perfectly legitimate solutions to the original system. What you see described is a line of solutions. The 3 equations describe 3 planes in 3 dimensional (\(x,y,z)\) space and they intersect at this line which can be describes as the solution to this equation.</p></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.4</span> <span class="title">No Solutions</span>
 </h3>
-<p id="p-284">Consider a similar system:</p>
+<p id="p-285">Consider a similar system:</p>
 <div class="displaymath">
 \begin{align*}
 x+2y+z\amp = 3\\
@@ -437,16 +437,16 @@ x+2y+z\amp = 3\\
 0x+3y+z\amp = 0
 \end{align*}
 </div>
-<p id="p-285">Then by using rref using as \(A\text{:}\)</p>
+<p id="p-286">Then by using rref using as \(A\text{:}\)</p>
 <pre class="code-block tex2jax_ignore">A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
 </pre>
-<p id="p-286">We would obtain:</p>
+<p id="p-287">We would obtain:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr|r} 1 \amp  0 \amp  1/3\amp  1\\ 0 \amp  1 \amp  1/3 \amp  1\\ 0 \amp  0 \amp  0 \amp  0 \end{array} \right)
 \end{equation*}
 </div>
-<p id="p-287">Which gives us the system:</p>
+<p id="p-288">Which gives us the system:</p>
 <div class="displaymath">
 \begin{align*}
 x+0y+(1/3)z\amp =\amp 1\\
@@ -454,39 +454,39 @@ x+0y+(1/3)z\amp =\amp 1\\
 0x+0y+0z\amp =\amp 1
 \end{align*}
 </div>
-<p id="p-288">Well, what does this last line mean? It says that \(0=1\text{.}\) When will this happen? Well basically never, no choice of \(x,y,z\) will ever make this true, our 3 planes do not intersect at a point or line or at all, so there is no solution.</p></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
+<p id="p-289">Well, what does this last line mean? It says that \(0=1\text{.}\) When will this happen? Well basically never, no choice of \(x,y,z\) will ever make this true, our 3 planes do not intersect at a point or line or at all, so there is no solution.</p></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.5</span> <span class="title">Applications</span>
 </h3>
 <article class="example example-like" id="example-26"><a data-knowl="" class="id-ref original" data-refid="hk-example-26"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-26"><article class="example example-like"><p id="p-289">A new airline has recently purchased a fleet of Airbus A330-300s, Boeing 767-300ERs, and Boeing Dreamliner 787-9s to meet an estimated demand for 9,300 seats. The A330-300s seat 330 passengers and cost $250 million each, the 767-300ERs seat 270 passengers and cost $200 million each, while the 787-9s seat 240 passengers and cost $250 million each. The total cost of the fleet, which had twice as many 787-9s as 767s, was $8,100 million. How many of each type of aircraft did the company purchase?</p>
-<p id="p-290">It helps perhaps if we organize some of this information in a table.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-26"><article class="example example-like"><p id="p-290">A new airline has recently purchased a fleet of Airbus A330-300s, Boeing 767-300ERs, and Boeing Dreamliner 787-9s to meet an estimated demand for 9,300 seats. The A330-300s seat 330 passengers and cost $250 million each, the 767-300ERs seat 270 passengers and cost $200 million each, while the 787-9s seat 240 passengers and cost $250 million each. The total cost of the fleet, which had twice as many 787-9s as 767s, was $8,100 million. How many of each type of aircraft did the company purchase?</p>
+<p id="p-291">It helps perhaps if we organize some of this information in a table.</p>
 <div class="displaymath">
 \begin{equation*}
 
 \end{equation*}
 </div>
-<p id="p-291">By letting \(x\) denote the numbere of A330-300's, \(y\) denote the number of 767-300ERs and \(z\) denote the number of 787-9s, we obtain the following linear equalities:</p>
-<p id="p-292">First, the total capacity is 9,300 seats:</p>
+<p id="p-292">By letting \(x\) denote the numbere of A330-300's, \(y\) denote the number of 767-300ERs and \(z\) denote the number of 787-9s, we obtain the following linear equalities:</p>
+<p id="p-293">First, the total capacity is 9,300 seats:</p>
 <div class="displaymath">
 \begin{equation*}
 330x+270y+240z=9300\text{.}
 \end{equation*}
 </div>
-<p id="p-293">Next, the total cost is $8,100 million:</p>
+<p id="p-294">Next, the total cost is $8,100 million:</p>
 <div class="displaymath">
 \begin{equation*}
 250x+200y+250z=8100\text{.}
 \end{equation*}
 </div>
-<p id="p-294">Finally, there are twice as many 787-9s as 767-300ERs:</p>
+<p id="p-295">Finally, there are twice as many 787-9s as 767-300ERs:</p>
 <div class="displaymath">
 \begin{align*}
 z\amp = 2y\\
 -2y+z\amp = 0\text{.}
 \end{align*}
 </div>
-<p id="p-295">Giving us a system:</p>
+<p id="p-296">Giving us a system:</p>
 <div class="displaymath">
 \begin{align*}
 330x+270y+240z\amp = 9300\\
@@ -500,7 +500,7 @@ z\amp = 2y\\
 \left( \begin{array}{rrr|r} 330 \amp  270 \amp  240\amp  9300\\ 250 \amp  200 \amp  250 \amp  8100\\ 0 \amp  -2 \amp  1 \amp  0 \end{array} \right)\text{.}
 \end{equation*}
 </div>
-<p id="p-296">Using any method we'd like, we find row reduced echelon form:</p>
+<p id="p-297">Using any method we'd like, we find row reduced echelon form:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr|r} 1 \amp  0 \amp  0\amp  10\\ 0 \amp  1 \amp  0 \amp  8\\ 0 \amp  0 \amp  1 \amp  16 \end{array} \right)
@@ -508,7 +508,7 @@ z\amp = 2y\\
 </div>
 <p data-braille="continuation">which corresponds to \(x=10,
 y=8, z=16\) or 10 A330-300s, 8 767300ERs and 16 787-9s.</p>
-<p id="p-297">To verify that this is a legitimate solution, check:</p>
+<p id="p-298">To verify that this is a legitimate solution, check:</p>
 <div class="displaymath">
 \begin{align*}
 330(10)+270(8)+240(16)\amp = 9300\\
@@ -518,14 +518,14 @@ y=8, z=16\) or 10 A330-300s, 8 767300ERs and 16 787-9s.</p>
 </div></article></div>
 <article class="example example-like" id="Example_Vitamin"><a data-knowl="" class="id-ref original" data-refid="hk-Example_Vitamin"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_Vitamin"><article class="example example-like"><p id="p-298">Margo needs 200mg of vitamin A, 100mg of vitamin D, and 140mg of vitamin E per week. She has three supplements: the first contains 20% vitamin A, 20% vitamin D and 20\vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E. How much of each supplement should she eat each week?</p>
-<p id="p-299">Let \(x,y,z\) denote the quantities of supplements 1,2 and 3 she takes each week. She needs 200mg of vitamin A, which gives us:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_Vitamin"><article class="example example-like"><p id="p-299">Margo needs 200mg of vitamin A, 100mg of vitamin D, and 140mg of vitamin E per week. She has three supplements: the first contains 20% vitamin A, 20% vitamin D and 20\vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E. How much of each supplement should she eat each week?</p>
+<p id="p-300">Let \(x,y,z\) denote the quantities of supplements 1,2 and 3 she takes each week. She needs 200mg of vitamin A, which gives us:</p>
 <div class="displaymath">
 \begin{equation*}
 0.2x+0.1y+0.5z=200\text{.}
 \end{equation*}
 </div>
-<p id="p-300">Similarly, for 100mg of vitamin D:</p>
+<p id="p-301">Similarly, for 100mg of vitamin D:</p>
 <div class="displaymath">
 \begin{equation*}
 0.2x+0.3y+0.1z=100
@@ -537,7 +537,7 @@ y=8, z=16\) or 10 A330-300s, 8 767300ERs and 16 787-9s.</p>
 0.2x+0.2y+0.4z=140\text{.}
 \end{equation*}
 </div>
-<p id="p-301">This gives us the system:</p>
+<p id="p-302">This gives us the system:</p>
 <div class="displaymath">
 \begin{align*}
 0.2x+0.1y+0.5z\amp = 200\\
@@ -551,7 +551,7 @@ y=8, z=16\) or 10 A330-300s, 8 767300ERs and 16 787-9s.</p>
 \left( \begin{array}{rrr|r} 0.2 \amp  0.1 \amp  0.5\amp  200\\ 0.2 \amp  0.3 \amp  0.1 \amp  100\\ 0.2 \amp  0.4 \amp  0.2 \amp  140 \end{array} \right)\text{.}
 \end{equation*}
 </div>
-<p id="p-302">This has reduced row echelon form:</p>
+<p id="p-303">This has reduced row echelon form:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr|r} 1 \amp  0 \amp  0\amp  200\\ 0 \amp  1 \amp  0 \amp  100\\ 0 \amp  0 \amp  1 \amp  300 \end{array} \right)
@@ -561,12 +561,12 @@ y=8, z=16\) or 10 A330-300s, 8 767300ERs and 16 787-9s.</p>
 z=300\) or 200 mg of supplement 1, 100mg of supplement 2 and 300mg of supplement 3.</p></article></div>
 <article class="example example-like" id="example-28"><a data-knowl="" class="id-ref original" data-refid="hk-example-28"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-28"><article class="example example-like"><p id="p-303">Suppose an event with 300 people ends, and the attendees walk from the venue to two restaurants, Xavier's and Yoneda's. They walk along streets Anderson, Birmingham and Central, which are all one way. When the night ends, there are 75 people and Xavier's and 225 at Yoneda's.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-28"><article class="example example-like"><p id="p-304">Suppose an event with 300 people ends, and the attendees walk from the venue to two restaurants, Xavier's and Yoneda's. They walk along streets Anderson, Birmingham and Central, which are all one way. When the night ends, there are 75 people and Xavier's and 225 at Yoneda's.</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-42.svg" style="width: 100%; height: auto;" alt=""></div>
-<p id="p-304">Let \(a,b,c\) denote the number of people walking along Anderson, Birmingham and Central.</p>
+<p id="p-305">Let \(a,b,c\) denote the number of people walking along Anderson, Birmingham and Central.</p>
 <ol class="decimal">
 <li id="li-77">
-<p id="p-305">Find an expression for the amount of people walking along each street. We first set up our systems of equations. We first note that all 300 people have to walk either along either Anderson or Birmingham, so</p>
+<p id="p-306">Find an expression for the amount of people walking along each street. We first set up our systems of equations. We first note that all 300 people have to walk either along either Anderson or Birmingham, so</p>
 <div class="displaymath">
 \begin{equation*}
 a+b=300\text{.}
@@ -614,7 +614,7 @@ b+c\amp = 225\text{,}
 <p data-braille="continuation">Which is two of the original equations. So, depending on what \(c\) is, this will determine how many people traverse Anderson and Birmingham.</p>
 </li>
 <li id="li-78">
-<p id="p-306">If 50 people crossed central, how many people crossed Anderson and Birmingham? So letting \(c=50\text{,}\) we would have:</p>
+<p id="p-307">If 50 people crossed central, how many people crossed Anderson and Birmingham? So letting \(c=50\text{,}\) we would have:</p>
 <div class="displaymath">
 \begin{align*}
 a-c\amp = 75\\
@@ -640,7 +640,7 @@ b\amp = 175\text{,}
 <p data-braille="continuation">That is \(a=125, b=125, c=50\) which is our solution above.</p>
 </li>
 <li id="li-79">
-<p id="p-307">If 100 people go through Anderson, how many go through Birmingham or Central? We can revisit our linear system from (a):</p>
+<p id="p-308">If 100 people go through Anderson, how many go through Birmingham or Central? We can revisit our linear system from (a):</p>
 <div class="displaymath">
 \begin{align*}
 a-c\amp = 75\\

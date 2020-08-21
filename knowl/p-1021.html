@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:48:44-06:00    *-->
+<!--*    on 2020-08-20T18:54:28-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,17 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>For general \(\log_a(x)\text{:}\)</p>
+<p>We can use the chain rule to find the derivative of log functions as well. Let's first compute \(\frac{d}{dx}[\ln(x)]\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
-x\amp = a^{\log_a(x)}\\
-\frac{d}{dx}[x]\amp = \frac{d}{dx}[a^{\log_a(x)}]\\
-1\amp = a^{\log_a(x)}\ln(a)\frac{d}{dx}[\log_a(x)]\\
-1\amp = x\ln(a)\frac{d}{dx}[\log_a(x)]\\
-\frac{d}{dx}[\log_a(x)]\amp = \frac{1}{x\ln(a)}\text{.}
+x\amp = e^{\ln(x)}\\
+\frac{d}{dx}[x]\amp = \frac{d}{dx}[e^{\ln(x)}]\\
+1\amp = e^{\ln(x)}\frac{d}{dx}[\ln(x)]\\
+1\amp = x\frac{d}{dx}[\ln(x)]\\
+\frac{d}{dx}[\ln(x)]\amp = \frac{1}{x}\text{.}
 \end{align*}
 </div>
+<p data-braille="continuation">Visually: <iframe src="https://www.desmos.com/calculator/9vsyzdkzro" id="interactive-165" width="600" height="600"></iframe></p>
 <span class="incontext"><a href="DerivativeLogs.html#p-1021">in-context</a></span>
 </body>
 </html>

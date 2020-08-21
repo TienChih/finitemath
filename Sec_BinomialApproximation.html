@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:48:03-06:00    *-->
+<!--*    on 2020-08-20T18:53:48-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -217,60 +217,60 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_BinomialApproximation"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">10.4</span> <span class="title">Normal Approximation of the Binomial</span>
 </h2>
-<section class="introduction" id="introduction-52"><p id="p-1355">One of the reasons the normal curve is central to the study of statistics ie because, under the right circumstances, it may be used to approximate the behavior of other probability distributions.  Here, we show how it can be used to approximate binomial distributions under the right circumstances.</p></section><section class="subsection" id="subsection-112"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-52"><p id="p-1356">One of the reasons the normal curve is central to the study of statistics ie because, under the right circumstances, it may be used to approximate the behavior of other probability distributions.  Here, we show how it can be used to approximate binomial distributions under the right circumstances.</p></section><section class="subsection" id="subsection-112"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.4.1</span> <span class="title">A Motivating Example</span>
 </h3>
-<p id="p-1356">Suppose you flipped 100 coins, what is the probability 55 or more of them come up heads? Technically, we know how to solve this:</p>
+<p id="p-1357">Suppose you flipped 100 coins, what is the probability 55 or more of them come up heads? Technically, we know how to solve this:</p>
 <div class="displaymath">
 \begin{equation*}
 P(X=55)+P(X=56)+\cdots +P(X=100)
 \end{equation*}
 </div>
 <p data-braille="continuation">where \(X\) is the number of heads.  Understandably, one may be relunctant to compute all of these by hand.</p>
-<p id="p-1357">On the other hand, we know that for a binomial variable with \(n=100, p=0.5\) it has a mean or expected value of \(\mu=np=(100)(0.5)=50\) and standard deviation \(\sigma=\sqrt{np(1-p)}=\sqrt{100(0.5)(0.5)}=5\text{.}\)  If we plot the normal curve with \(\mu=50, \sigma=5\) alongside the binomial distribution with \(n=100, p=0.5\text{,}\) we see that they match up remarkably closely! <iframe src="https://www.desmos.com/calculator/khdzyyuxtn" id="interactive-237" width="600" height="600"></iframe> So  much so that  if we use the normal curve to approximate this value, we don't end up too far off: <iframe src="https://www.desmos.com/calculator/vzmsc6x5or" id="interactive-238" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-113"><h3 class="heading hide-type">
+<p id="p-1358">On the other hand, we know that for a binomial variable with \(n=100, p=0.5\) it has a mean or expected value of \(\mu=np=(100)(0.5)=50\) and standard deviation \(\sigma=\sqrt{np(1-p)}=\sqrt{100(0.5)(0.5)}=5\text{.}\)  If we plot the normal curve with \(\mu=50, \sigma=5\) alongside the binomial distribution with \(n=100, p=0.5\text{,}\) we see that they match up remarkably closely! <iframe src="https://www.desmos.com/calculator/khdzyyuxtn" id="interactive-237" width="600" height="600"></iframe> So  much so that  if we use the normal curve to approximate this value, we don't end up too far off: <iframe src="https://www.desmos.com/calculator/vzmsc6x5or" id="interactive-238" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-113"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.4.2</span> <span class="title">The Approximation</span>
 </h3>
-<p id="p-1358">Looking at the graphs above, adjust \(n, p\) using the sliders, you should see that as we change these values, the normal distribution continues to match up with the binomial fairly well.  This gives us the following:</p>
+<p id="p-1359">Looking at the graphs above, adjust \(n, p\) using the sliders, you should see that as we change these values, the normal distribution continues to match up with the binomial fairly well.  This gives us the following:</p>
 <article class="remark remark-like" id="remark-32"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.4.1</span><span class="period">.</span>
 </h6>
-<p id="p-1359">Given a binomial random variable \(X\) with parameters \(n\) trials, each with probability of success \(p\text{,}\) then we may approximate \(X\) with \(X'\text{,}\) a normal variable with mean \(\mu=np\) and standard deviation \(\sigma=\sqrt{np(1-p)}\text{,}\) so long as:</p>
+<p id="p-1360">Given a binomial random variable \(X\) with parameters \(n\) trials, each with probability of success \(p\text{,}\) then we may approximate \(X\) with \(X'\text{,}\) a normal variable with mean \(\mu=np\) and standard deviation \(\sigma=\sqrt{np(1-p)}\text{,}\) so long as:</p>
 <ul class="disc">
 <li id="li-754">\(np\geq 10\text{.}\)</li>
 <li id="li-755">\(n(1-p)\geq 10\text{.}\)</li>
 </ul>
-<p id="p-1360">The greater \(n\) is, the better the approximation will be.</p></article><article class="example example-like" id="example-116"><a data-knowl="" class="id-ref original" data-refid="hk-example-116"><h6 class="heading">
+<p id="p-1361">The greater \(n\) is, the better the approximation will be.</p></article><article class="example example-like" id="example-116"><a data-knowl="" class="id-ref original" data-refid="hk-example-116"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.4.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-116"><article class="example example-like"><p id="p-1361">Suppose that a University sends oun 2000 acceptance letters, each student who recieves a letter has a 60% chance to attend.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-116"><article class="example example-like"><p id="p-1362">Suppose that a University sends oun 2000 acceptance letters, each student who recieves a letter has a 60% chance to attend.</p>
 <ol class="decimal">
 <li id="li-756">What is the probability less than 1150 students attend?</li>
 <li id="li-757">Find an interval centered at the mean, so that 95% of cases, the attendence level falls within this interval.</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-182" id="solution-182"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-182"><div class="solution solution-like"><p id="p-1362">Note \(n=2000, p=0.6\text{,}\) we have \(\mu=1200, \sigma=\sqrt{480}\approx 21.9089.\)  Thus \(P(X\lt 1150)\approx P(X'\lt 1150)\approx 0.01124\text{.}\) <iframe src="https://www.desmos.com/calculator/xhw44mk05b" id="interactive-239" width="600" height="600"></iframe></p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-183" id="solution-183"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-183"><div class="solution solution-like"><p id="p-1363">Note \(n=2000, p=0.6\text{,}\) we have \(\mu=1200, \sigma=\sqrt{480}\approx 21.9089.\)  Thus theres a 95% chance between 1157 and 1243 students accept. <iframe src="https://www.desmos.com/calculator/iesovykxkx" id="interactive-240" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-182" id="solution-182"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-182"><div class="solution solution-like"><p id="p-1363">Note \(n=2000, p=0.6\text{,}\) we have \(\mu=1200, \sigma=\sqrt{480}\approx 21.9089.\)  Thus \(P(X\lt 1150)\approx P(X'\lt 1150)\approx 0.01124\text{.}\) <iframe src="https://www.desmos.com/calculator/xhw44mk05b" id="interactive-239" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-183" id="solution-183"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-183"><div class="solution solution-like"><p id="p-1364">Note \(n=2000, p=0.6\text{,}\) we have \(\mu=1200, \sigma=\sqrt{480}\approx 21.9089.\)  Thus theres a 95% chance between 1157 and 1243 students accept. <iframe src="https://www.desmos.com/calculator/iesovykxkx" id="interactive-240" width="600" height="600"></iframe></p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-105"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-105"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.4.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-105"><article class="exercise exercise-like"><p id="p-1364">Consider a group of 100 drivers, each with a 45% chance of speeding.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-105"><article class="exercise exercise-like"><p id="p-1365">Consider a group of 100 drivers, each with a 45% chance of speeding.</p>
 <ol class="decimal">
 <li id="li-758">What is the probability more than 50 of them are speeding?</li>
 <li id="li-759">Find a number \(k\) so that there is a 20% chance \(k\) or more drivers are speeding.</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-184" id="solution-184"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-184"><div class="solution solution-like"><p id="p-1365">Note \(n=100, p=0.45\text{,}\) we have \(\mu=45, \sigma=\sqrt{24.75}\approx 4.9749.\)  Thus \(P(X&gt;50)\approx P(X'&gt; 50)\approx 0.1574\text{.}\) <iframe src="https://www.desmos.com/calculator/vguaabi8ta" id="interactive-241" width="600" height="600"></iframe></p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-185" id="solution-185"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-185"><div class="solution solution-like"><p id="p-1366">Note \(n=100, p=0.45\text{,}\) we have \(\mu=45, \sigma=\sqrt{24.75}\approx 4.9749.\)  Thus theres a 10% chance more than 51 drivers speed. <iframe src="https://www.desmos.com/calculator/0wjqpvxxxo" id="interactive-242" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-184" id="solution-184"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-184"><div class="solution solution-like"><p id="p-1366">Note \(n=100, p=0.45\text{,}\) we have \(\mu=45, \sigma=\sqrt{24.75}\approx 4.9749.\)  Thus \(P(X&gt;50)\approx P(X'&gt; 50)\approx 0.1574\text{.}\) <iframe src="https://www.desmos.com/calculator/vguaabi8ta" id="interactive-241" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-185" id="solution-185"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-185"><div class="solution solution-like"><p id="p-1367">Note \(n=100, p=0.45\text{,}\) we have \(\mu=45, \sigma=\sqrt{24.75}\approx 4.9749.\)  Thus theres a 10% chance more than 51 drivers speed. <iframe src="https://www.desmos.com/calculator/0wjqpvxxxo" id="interactive-242" width="600" height="600"></iframe></p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-106"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-106"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.4.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-106"><article class="exercise exercise-like"><p id="p-1367">A company sends a survey to 200 customers, each has a 53% of liking their product.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-106"><article class="exercise exercise-like"><p id="p-1368">A company sends a survey to 200 customers, each has a 53% of liking their product.</p>
 <ol class="decimal">
 <li id="li-760">What is the probability less than 100 customers like the product?</li>
 <li id="li-761">What is the probability more than than 120 customers like the product?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-186" id="solution-186"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-186"><div class="solution solution-like"><p id="p-1368">Note \(n=200, p=0.53\text{,}\) we have \(\mu=106, \sigma=\sqrt{49.82}\approx 7.0583.\)  Thus \(P(X\lt 100)\approx P(X'\lt 100)\approx 0.1976\text{.}\) <iframe src="https://www.desmos.com/calculator/kvhw32a0a5" id="interactive-243" width="600" height="600"></iframe></p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-187" id="solution-187"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-187"><div class="solution solution-like"><p id="p-1369">Note \(n=200, p=0.53\text{,}\) we have \(\mu=106, \sigma=\sqrt{49.82}\approx 7.0583.\)  Thus \(P(X&gt; 120)\approx P(X'&gt; 120)\approx 0.0237\text{.}\) <iframe src="https://www.desmos.com/calculator/xbxtgdbpcu" id="interactive-244" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-186" id="solution-186"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-186"><div class="solution solution-like"><p id="p-1369">Note \(n=200, p=0.53\text{,}\) we have \(\mu=106, \sigma=\sqrt{49.82}\approx 7.0583.\)  Thus \(P(X\lt 100)\approx P(X'\lt 100)\approx 0.1976\text{.}\) <iframe src="https://www.desmos.com/calculator/kvhw32a0a5" id="interactive-243" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-187" id="solution-187"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-187"><div class="solution solution-like"><p id="p-1370">Note \(n=200, p=0.53\text{,}\) we have \(\mu=106, \sigma=\sqrt{49.82}\approx 7.0583.\)  Thus \(P(X&gt; 120)\approx P(X'&gt; 120)\approx 0.0237\text{.}\) <iframe src="https://www.desmos.com/calculator/xbxtgdbpcu" id="interactive-244" width="600" height="600"></iframe></p></div></div>
 </div></article></div></section></section></div></main>
 </div>
 </body>

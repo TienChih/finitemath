@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:48:15-06:00    *-->
+<!--*    on 2020-08-20T18:54:00-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -10,15 +10,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The first line defines the matrix \(A\) with the rows identical to the rows we defined in our above matrix. Then the code returns a printout of that matrix, and it's reduced row echelon form:</p>
-<div class="displaymath">
-\begin{equation*}
-\left( \begin{array}{rrr|r} 1 \amp  0 \amp  0\amp  1\\ 0 \amp  1 \amp  0 \amp  0\\ 0 \amp  0 \amp  1 \amp  1 \end{array} \right)
-\end{equation*}
-</div>
+<p><div class="sagecell-sage" id="sage-1"><script type="text/x-sage">A=matrix(QQ, [[2,3,1,3],[-2,4,2,0],[1,-1,2,3]])
+print(A)
+print(A.rref())
+</script></div></p>
 <span class="incontext"><a href="Sec_SystemasMatrix.html#p-272">in-context</a></span>
 </body>
 </html>

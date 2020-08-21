@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:48:20-06:00    *-->
+<!--*    on 2020-08-20T18:54:05-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -10,10 +10,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Naturally, in mathematics, we care about equivalence of things. For example, one might say that given any \(x\text{,}\) \(2(x+3)=2x+6\text{.}\) Another example of equivalent statements would be “I own a red dog” and “I own a dog and it is red.” Suffice to say, the same information can be transmitted in a lot of distinct ways, and we should have some mechanism for detecting that.</p>
-<span class="incontext"><a href="Sec_EquivalentStatements.html#p-440">in-context</a></span>
+<p>We haven't covered all these operations yet. But if we wanted to say “\(p\) or (not \(q\) and \(r\))” That could be recorded as \(p|(~q &amp; r)\) So we could generate the truth table here: <div class="sagecell-sage" id="sage-10"><script type="text/x-sage">f = propcalc.formula("p|(~q & r)")
+f.truthtable()
+</script></div> It generates the table in a different order than what we have but the same rows still correspond to the same values.</p>
+<span class="incontext"><a href="Sec_Statements.html#p-440">in-context</a></span>
 </body>
 </html>

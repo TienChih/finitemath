@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:48:40-06:00    *-->
+<!--*    on 2020-08-20T18:54:24-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The area of an oil spill \(t\) hours after a pipe burst is  \(A(t)=1000\pi\sqrt{t}\) square feet.  Find \(A'(t)\text{.}\)</p>
+<p>We have:</p>
+<div class="displaymath">
+\begin{align*}
+\alpha'(x)\amp = \limit{h}{0}\frac{\alpha(x+h)-\alpha(x)}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2}{x+h+1}-\frac{2}{x+1}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2(x+1)}{(x+h+1)(x)}-\frac{2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2(x+1)}{(x+h+1)(x)}-\frac{2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2(x+1)-2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2x+2-2x-2h-2}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{-2h}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{-2}{(x+h+1)(x+1)}\\
+\amp = \frac{-2}{(x+0+1)(x+1)}=-\frac{2}{(x+1)^2}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/2umbzq73fn" id="interactive-144" width="600" height="600"></iframe></p>
 <span class="incontext"><a href="Sec_DefofDerivative.html#p-951">in-context</a></span>
 </body>
 </html>

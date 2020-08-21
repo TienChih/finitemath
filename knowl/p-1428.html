@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:49:07-06:00    *-->
+<!--*    on 2020-08-20T18:54:50-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Doing so, we obtain:</p>
+<p>If solid, liquid, gas are states 1,2 and 3, then we have transition matrix:</p>
 <div class="displaymath">
-\begin{align*}
-S\amp=\frac{5}{7}G\\
-L\amp=\frac{19}{14}G
-\end{align*}
+\begin{equation*}
+M=\begin{pmatrix}0.6 \amp 0.1 \amp 0.15 \\ 0.2 \amp 0.6 \amp 0.4 \\ 0.2 \amp 0.3 \amp 0.45 \end{pmatrix} .
+\end{equation*}
 </div>
-<p data-braille="continuation">Which then, given any amount of gas, we could find how mnuch solid and liquid there were.</p>
+<p data-braille="continuation">Thus to find a stable solution, we solve:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}-0.4 \amp 0.1 \amp 0.15 \\ 0.2 \amp -0.4 \amp 0.4 \\ 0.2 \amp 0.3 \amp -0.55 \end{pmatrix}\begin{pmatrix} S \\L \\ G\end{pmatrix}=\begin{pmatrix}0\\0\\0 \end{pmatrix} .
+\end{equation*}
+</div>
 <span class="incontext"><a href="Sec_StableSolutions.html#p-1428">in-context</a></span>
 </body>
 </html>

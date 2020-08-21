@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:47:44-06:00    *-->
+<!--*    on 2020-08-20T18:53:30-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -220,7 +220,7 @@ MathJax.Hub.Config({
 <section class="introduction" id="introduction-25"><article class="definition definition-like" id="definition-9"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-774">A <dfn class="terminology">polynomial</dfn> \(p(x)\) is a function that can be written in the form</p>
+<p id="p-775">A <dfn class="terminology">polynomial</dfn> \(p(x)\) is a function that can be written in the form</p>
 <div class="displaymath">
 \begin{equation*}
 p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x^1+a_0(x^0)\text{,}
@@ -228,11 +228,11 @@ p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x^1+a_0(x^0)\text{,}
 </div>
 <p data-braille="continuation">where \(n\geq 0\) is a whole number, and \(a_n\neq 0\) <dfn class="terminology">unless</dfn> \(p(x)=0\text{.}\)</p>
 <ul class="disc">
-<li id="li-309"><p id="p-775">The \(a_i\) are the <em class="emphasis">coefficients</em> of \(p(x)\text{.}\)</p></li>
-<li id="li-310"><p id="p-776">\(a_n\) is the <em class="emphasis">leading coefficient</em> of \(p(x)\text{.}\)</p></li>
-<li id="li-311"><p id="p-777">\(n\) is the <em class="emphasis">degree</em> of \(p(x)\text{.}\)</p></li>
-<li id="li-312"><p id="p-778">\(a_nx^n\) is the <em class="emphasis">leading term</em> of \(p(x)\text{.}\)</p></li>
-</ul></article><p id="p-779">We've already seen some examples of these.</p>
+<li id="li-309"><p id="p-776">The \(a_i\) are the <em class="emphasis">coefficients</em> of \(p(x)\text{.}\)</p></li>
+<li id="li-310"><p id="p-777">\(a_n\) is the <em class="emphasis">leading coefficient</em> of \(p(x)\text{.}\)</p></li>
+<li id="li-311"><p id="p-778">\(n\) is the <em class="emphasis">degree</em> of \(p(x)\text{.}\)</p></li>
+<li id="li-312"><p id="p-779">\(a_nx^n\) is the <em class="emphasis">leading term</em> of \(p(x)\text{.}\)</p></li>
+</ul></article><p id="p-780">We've already seen some examples of these.</p>
 <ul class="disc">
 <li id="li-313">A constant linear function \(y=c\) is a polynomial of degree 0, since \(y=cx^0\text{.}\)</li>
 <li id="li-314">A constant linear function of the form \(y=mx+b\) with non-zero slope is a polynomial of degree 1, since \(y=mx^1+bx^0\text{.}\)</li>
@@ -240,60 +240,60 @@ p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x^1+a_0(x^0)\text{,}
 </ul></section><section class="subsection" id="subsection-55"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.1</span> <span class="title">Long Term Behavior</span>
 </h3>
-<p id="p-780">When we consider a polynomial \(p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x^1+a_0\text{,}\) we notice that no matter how big the coefficients \(a_{n-1}\) through \(a_0\) are, they will all eventually be made insignificant by \(x^n\) for some sufficiently large values of \(x\text{.}\) Thus we have the following fact:</p>
+<p id="p-781">When we consider a polynomial \(p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x^1+a_0\text{,}\) we notice that no matter how big the coefficients \(a_{n-1}\) through \(a_0\) are, they will all eventually be made insignificant by \(x^n\) for some sufficiently large values of \(x\text{.}\) Thus we have the following fact:</p>
 <article class="remark remark-like" id="remark-3"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-781">The long term behavior of \(p(x)\) is determined <dfn class="terminology">completely</dfn> by it's leading term \(a_nx^n\text{.}\)</p></article><p id="p-782">To see this, consider the plots of \(y=x^3\) and \(y=1000x^2\text{.}\) <iframe src="https://www.desmos.com/calculator/a6xxwxtigr" id="interactive-107" width="600" height="600"></iframe> One thousand is a huge coefficient for sure!  But will that matter so much when \(x\) is in the thousands, the millions, the trillions?  Eventually \(x\cdot x^2\) will be much greater than \(1000\cdot x^2\) when \(x\) is big enough.  So if we plotted \(y=x^3-1000x^2\) next to \(y=x^3\) <iframe src="https://www.desmos.com/calculator/1kud4u5ius" id="interactive-108" width="600" height="600"></iframe> We see that they have the same general shape.</p>
-<p id="p-783">So we have 2 things to consider, whether or not \(a_n\) is positive or negative, or whether or not \(n\) is even or odd.</p>
-<p id="p-784">If \(a_n&gt;0\text{,}\) then there are 2 possibilities:</p>
+<p id="p-782">The long term behavior of \(p(x)\) is determined <dfn class="terminology">completely</dfn> by it's leading term \(a_nx^n\text{.}\)</p></article><p id="p-783">To see this, consider the plots of \(y=x^3\) and \(y=1000x^2\text{.}\) <iframe src="https://www.desmos.com/calculator/a6xxwxtigr" id="interactive-107" width="600" height="600"></iframe> One thousand is a huge coefficient for sure!  But will that matter so much when \(x\) is in the thousands, the millions, the trillions?  Eventually \(x\cdot x^2\) will be much greater than \(1000\cdot x^2\) when \(x\) is big enough.  So if we plotted \(y=x^3-1000x^2\) next to \(y=x^3\) <iframe src="https://www.desmos.com/calculator/1kud4u5ius" id="interactive-108" width="600" height="600"></iframe> We see that they have the same general shape.</p>
+<p id="p-784">So we have 2 things to consider, whether or not \(a_n\) is positive or negative, or whether or not \(n\) is even or odd.</p>
+<p id="p-785">If \(a_n&gt;0\text{,}\) then there are 2 possibilities:</p>
 <ul class="disc">
-<li id="li-316"><p id="p-785">If \(n\) is even, (like \(x^2, x^4, x^6)\text{,}\) then \(a_nx^n\) cannot be negative, so \(p(x)\) will tend to positive infinity as \(x\) goes to either positive or negative infinity.</p></li>
-<li id="li-317"><p id="p-786">If \(n\) is odd, (like \(x, x^3, x^5)\text{,}\) then \(a_nx^n\) is positive as long as \(x\) is positive, so \(p(x)\) will tend to positive infinity as \(x\) goes to either positive infinity, and \(a_nx^n\) will go to negative infinity as x goes to negative infinity.</p></li>
+<li id="li-316"><p id="p-786">If \(n\) is even, (like \(x^2, x^4, x^6)\text{,}\) then \(a_nx^n\) cannot be negative, so \(p(x)\) will tend to positive infinity as \(x\) goes to either positive or negative infinity.</p></li>
+<li id="li-317"><p id="p-787">If \(n\) is odd, (like \(x, x^3, x^5)\text{,}\) then \(a_nx^n\) is positive as long as \(x\) is positive, so \(p(x)\) will tend to positive infinity as \(x\) goes to either positive infinity, and \(a_nx^n\) will go to negative infinity as x goes to negative infinity.</p></li>
 </ul>
-<p id="p-787">Then, if \(a_n\lt 0\text{,}\) everything is flipped upside down. We can summarize as follows:</p>
+<p id="p-788">Then, if \(a_n\lt 0\text{,}\) everything is flipped upside down. We can summarize as follows:</p>
 <ul class="disc">
 <li id="li-318">If \(a_n&gt;0, n\) is even, \(p(x)\to \infty \) as \(x\to \pm \infty\text{.}\)</li>
 <li id="li-319">If \(a_n\lt 0, n\) is even, \(p(x)\to -\infty \) as \(x\to \pm \infty\text{.}\)</li>
 <li id="li-320">If \(a_n&gt;0, n\) is odd, \(p(x)\to \infty \) as \(x\to \infty\text{,}\) and \(p(x)\to -\infty \) as \(x\to -\infty\text{.}\)</li>
 <li id="li-321">If \(a_n\lt 0, n\) is odd, \(p(x)\to -\infty \) as \(x\to \infty\text{,}\) and \(p(x)\to \infty \) as \(x\to -\infty\text{.}\)</li>
 </ul>
-<p id="p-788"><iframe src="https://www.desmos.com/calculator/umxealnqdk" id="interactive-109" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
+<p id="p-789"><iframe src="https://www.desmos.com/calculator/umxealnqdk" id="interactive-109" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.2</span> <span class="title">Short Term Behavior</span>
 </h3>
-<p id="p-789">The first thing one can always do when analyzing the short term behavior of \(p(x)\) is find the \(y\)-intercept. The \(y\) intercept is just the point on the curve of the function when \(x=0\text{,}\) so this is \(p(0)=a_0\text{.}\)</p>
-<p id="p-790">By the <dfn class="terminology">Fundamental Theorem of Algebra</dfn>, we can write \(p(x)=a_nx^n+\cdots +a_0\) as:</p>
+<p id="p-790">The first thing one can always do when analyzing the short term behavior of \(p(x)\) is find the \(y\)-intercept. The \(y\) intercept is just the point on the curve of the function when \(x=0\text{,}\) so this is \(p(0)=a_0\text{.}\)</p>
+<p id="p-791">By the <dfn class="terminology">Fundamental Theorem of Algebra</dfn>, we can write \(p(x)=a_nx^n+\cdots +a_0\) as:</p>
 <div class="displaymath">
 \begin{equation*}
 p(x)=a_n(x-r_1)^{m_1}(x-r_2)^{m_2}\cdots (x-r_k)^{m_k}\cdot q_1(x)q_2(x)\cdots q_\ell(x)
 \end{equation*}
 </div>
 <p data-braille="continuation">where the \(q_i(x)\) are irreducible quadratics. We call \(r_1, \ldots, r_k\) the <em class="emphasis">roots</em> of \(r(x)\text{,}\) where root \(r_i\) has <em class="emphasis">multiplicty</em> \(m_i\text{.}\) What this means is if we plug \(r_i\) into \(p(x)\text{,}\) we end up with 0, since that linear factor ends up being 0.</p>
-<p id="p-791">The behavior of \(p(x)\) around these roots is determined by the multiplicity of that root. We know that \(p(x)\) will be 0 at those roots, so the question is whether or not the polynomial crosses the \(x\) axis at a given roots, or bounces off the axis:</p>
+<p id="p-792">The behavior of \(p(x)\) around these roots is determined by the multiplicity of that root. We know that \(p(x)\) will be 0 at those roots, so the question is whether or not the polynomial crosses the \(x\) axis at a given roots, or bounces off the axis:</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-49.svg" style="width: 100%; height: auto;" alt=""></div>
-<p id="p-792">We notice that \(p(x)\) only changes sign when it's factors \((x-r_i)^{m_i}\) changes sign. But \((x-r_i)^{m_i}\) only changes sign if \(m_i\) is odd. So we have the following fact:</p>
+<p id="p-793">We notice that \(p(x)\) only changes sign when it's factors \((x-r_i)^{m_i}\) changes sign. But \((x-r_i)^{m_i}\) only changes sign if \(m_i\) is odd. So we have the following fact:</p>
 <article class="remark remark-like" id="remark-4"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-793">The polynomial \(p(x)\) “crosses” the \(x\)-axis at \(r_i\) if \(m_i\) is odd and “bounces” if \(m_i\) is even.</p></article><article class="example example-like" id="example-62"><a data-knowl="" class="id-ref original" data-refid="hk-example-62"><h6 class="heading">
+<p id="p-794">The polynomial \(p(x)\) “crosses” the \(x\)-axis at \(r_i\) if \(m_i\) is odd and “bounces” if \(m_i\) is even.</p></article><article class="example example-like" id="example-62"><a data-knowl="" class="id-ref original" data-refid="hk-example-62"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-62"><article class="example example-like"><p id="p-794">Let</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-62"><article class="example example-like"><p id="p-795">Let</p>
 <div class="displaymath">
 \begin{equation*}
 p(x)=x^3-3x^2=x^2(x-3)\text{.}
 \end{equation*}
 </div>
-<p id="p-795"><iframe src="https://www.desmos.com/calculator/iy0chaljdq" id="interactive-110" width="600" height="600"></iframe> Since it is a odd degree polynomial with positive leading coefficient, it goes up to \(\infty\) as \(x\) goes to \(\infty\) and down to \(-\infty\) as \(x\) goes to \(-\infty\text{.}\) We also see that \(p(x)=0\) whenever \(x=0\) or \(x=3\text{.}\) The multiplicity of 0 is 2, and the multiplicity of 3 is 1, which are even and odd respectively, so \(p(x)\) “bounces” at \(x=0\) and crosses at \(x=1\text{.}\)</p>
+<p id="p-796"><iframe src="https://www.desmos.com/calculator/iy0chaljdq" id="interactive-110" width="600" height="600"></iframe> Since it is a odd degree polynomial with positive leading coefficient, it goes up to \(\infty\) as \(x\) goes to \(\infty\) and down to \(-\infty\) as \(x\) goes to \(-\infty\text{.}\) We also see that \(p(x)=0\) whenever \(x=0\) or \(x=3\text{.}\) The multiplicity of 0 is 2, and the multiplicity of 3 is 1, which are even and odd respectively, so \(p(x)\) “bounces” at \(x=0\) and crosses at \(x=1\text{.}\)</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-50.svg" style="width: 100%; height: auto;" alt=""></div></article></div>
 <article class="example example-like" id="example-63"><a data-knowl="" class="id-ref original" data-refid="hk-example-63"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-63"><article class="example example-like"><p id="p-796">Let</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-63"><article class="example example-like"><p id="p-797">Let</p>
 <div class="displaymath">
 \begin{equation*}
 p(x)=x^4-2x^2+1=(x-1)^2(x+1)^2\text{.}
 \end{equation*}
 </div>
-<p id="p-797"><iframe src="https://www.desmos.com/calculator/wmr67oopgj" id="interactive-111" width="600" height="600"></iframe>  Since it is a even degree polynomial with positive leading coefficient, it goes up to \(\infty\) as \(x\) goes to both positive and negative \(\infty\text{.}\) We also see that \(p(x)=0\) whenever \(x=-1\) or \(x=1\text{.}\) The multiplicity of both of these roots is 2, so \(p(x)\) “bounces” at both \(x=1\) and \(x=-1\text{.}\)</p>
+<p id="p-798"><iframe src="https://www.desmos.com/calculator/wmr67oopgj" id="interactive-111" width="600" height="600"></iframe>  Since it is a even degree polynomial with positive leading coefficient, it goes up to \(\infty\) as \(x\) goes to both positive and negative \(\infty\text{.}\) We also see that \(p(x)=0\) whenever \(x=-1\) or \(x=1\text{.}\) The multiplicity of both of these roots is 2, so \(p(x)\) “bounces” at both \(x=1\) and \(x=-1\text{.}\)</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-51.svg" style="width: 100%; height: auto;" alt=""></div></article></div></section></section></div></main>
 </div>
 </body>

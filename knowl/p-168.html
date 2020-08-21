@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:48:13-06:00    *-->
+<!--*    on 2020-08-20T18:53:57-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>This value measures the correction between the \(x\) and \(y\) values, with \(r\) ranging from \(-1\) to \(1\text{.}\) The way we should interpret the \(r\) values is as follows:</p>
-<ol class="decimal">
-<li><p>Positive \(r\) means positive correlation, meaning as \(x\) goes up, \(y\) tends to go up. Negative \(r\) means the opposite, as \(x\) goes up, \(y\) tends to go down. Correlation of 0 means \(x\)'s change does not predict whether or not \(y\) goes up or down.</p></li>
-<li><p>The closer \(r\) is to 0, the weaker the correlation, meaning the ability to predict \(y\) from \(x\) is weak, the closer to \(-1\) or \(1\text{,}\) the better our ability to predict \(y\) from \(x\text{.}\)</p></li>
-</ol>
+<p>The above constructions are necessary to produce the best fit line. In order to measure how good of a fit this line is, we introduce the <dfn class="terminology">correlation coefficient</dfn>, usually denoted \(r\text{.}\) This value is computed as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+r=\frac{n(\sum x_iy_i)-(\sum x_i)(\sum y_i)}{\sqrt{(n\sum x_i^2) - (\sum x_i)^2}\cdot \sqrt{n(\sum y_i^2)-(\sum y_i)^2}}\text{.}
+\end{equation*}
+</div>
 <span class="incontext"><a href="Sec_LinearRegression.html#p-168">in-context</a></span>
 </body>
 </html>

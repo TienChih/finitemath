@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:48:57-06:00    *-->
+<!--*    on 2020-08-20T18:54:41-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,52 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So there are 3 defective and 17 non-defective products.</p>
+<p>Out of every 20 products on an assembly line, 5 are checked for defects.  Suppose in this group of 20, 3 are defective.  Let \(X\) denote the number of defective products.</p>
 <ol class="decimal">
-<li>We note that each selection comes from either defective or non-defective products.  So:<div class="displaymath">
-\begin{equation*}
-\begin{array}{|c|cccc|}
-\hline
-x \amp 0 \amp 1 \amp 2 \amp 3 \\
-\hline
-P(X=x) \amp \frac{C(3,0)C(17,5)}{C(20,5)}\amp \frac{C(3,1)C(17,4)}{C(20,5)} \amp \frac{C(3,2)C(17,3)}{C(20,5)} \amp \frac{C(3,3)C(17,2)}{C(20,5)}\\
-\hline
-\end{array}
-\end{equation*}
-</div>This may be rewritten<div class="displaymath">
-\begin{equation*}
-\begin{array}{|c|cccc|}
-\hline
-x \amp 0 \amp 1 \amp 2 \amp 3 \\
-\hline
-P(X=x) \amp \frac{6188}{15504}\amp \frac{7140}{15504} \amp \frac{2040}{15504} \amp \frac{136}{15504}\\
-\hline
-\end{array}
-\end{equation*}
-</div>
-</li>
-<li>This would be computed:<div class="displaymath">
-\begin{equation*}
-E(X)=0\cdot\frac{6188}{15504}+1\cdot\frac{7140}{15504}+2\cdot\frac{2040}{15504}+3\cdot\frac{136}{15504}=0.75.
-\end{equation*}
-</div>
-</li>
-<li>We first note:<div class="displaymath">
-\begin{equation*}
-E(X^2)=0^2\cdot\frac{6188}{15504}+1^2\cdot\frac{7140}{15504}+2^2\cdot\frac{2040}{15504}+3^2\cdot\frac{136}{15504}=\frac{81}{76}\approx 1.0658.
-\end{equation*}
-</div>This leads:<div class="displaymath">
-\begin{equation*}
-Var(X)=E(X^2)-E(X)^2=\frac{81}{76}-0.75^2=\frac{153}{304}\approx0.5033.
-\end{equation*}
-</div>Finally:<div class="displaymath">
-\begin{equation*}
-\sigma_X=\sqrt{Var(X)}=\sqrt{\frac{153}{304}}\approx 0.7094.
-\end{equation*}
-</div>
-</li>
+<li>Find a probability distribution for \(X\text{.}\)</li>
+<li>Find the expected number of defective products found.</li>
+<li>Find \(\sigma_X\text{.}\)</li>
 </ol>
-<p data-braille="continuation">Which again: <iframe src="https://www.desmos.com/calculator/tucljlarm6" id="interactive-188" width="600" height="600"></iframe></p>
 <span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1248">in-context</a></span>
 </body>
 </html>

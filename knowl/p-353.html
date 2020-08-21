@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:48:18-06:00    *-->
+<!--*    on 2020-08-20T18:54:03-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -22,10 +22,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>I can also check if something is not invertible: <div class="sagecell-sage" id="sage-8"><script type="text/x-sage">A=matrix(QQ, [[1,1],[-1,-1]])
+<p>Solving for the inverse of a matrix, or determining if a matrix is invertible boils down to solving a liear system, which we are doing by Sage anyhow.  We may use Sage to also dorectly invert matrices.  If I wanted to find the inverse of</p>
+<div class="displaymath">
+\begin{equation*}
+M= \begin{pmatrix} 3 \amp 1 \\ 5 \amp 2\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">I could do so via: <div class="sagecell-sage" id="sage-7"><script type="text/x-sage">A=matrix(QQ, [[3,1],[5,2]])
 B=A^(-1)
 print(B)
-</script></div> You should get a mess of error messages, the last of which is “input matrix must be nonsingular”.  Since \(\begin{pmatrix} 1 \amp 1 \\ -1 \amp -1\end{pmatrix}\) <em class="emphasis">is</em> singular, it cannot be inverted.</p>
+</script></div></p>
 <span class="incontext"><a href="Sec_MatrixInverse.html#p-353">in-context</a></span>
 </body>
 </html>

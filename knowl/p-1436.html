@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:49:07-06:00    *-->
+<!--*    on 2020-08-20T18:54:50-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -22,29 +22,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Will this always happen?  Consider the transition matrix</p>
-<div class="displaymath">
-\begin{equation*}
-M=\begin{pmatrix} 0\amp 1 \ 1 \amp 0\end{pmatrix}\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">It has stable solution when</p>
-<div class="displaymath">
-\begin{equation*}
-\begin{pmatrix} -1\amp 1 \ 1 \amp 0-1\end{pmatrix}\begin{pmatrix} x \\ y\end{pmatrix}=\begin{pmatrix}0\\0\end{pmatrix}
-\end{equation*}
-</div>
-<p data-braille="continuation">which occurs when \(x=y\text{.}\)  So if our initial state is \(x=5, y=5\text{,}\) in 100 iterations: <div class="sagecell-sage" id="sage-26"><script type="text/x-sage">M=matrix(QQ, [[0,1],[1,0]])
-X=matrix(QQ, [[5],[5]])
+<p>What if \(Y\) had 300000 people and \(X\) was a ghost town with no one in it?  We see that after 100 iterations: <div class="sagecell-sage" id="sage-25"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+X=matrix(QQ, [[0],[300000]])
 for i in range(100):
   print(M^i*X*1.0)
   print(' ')
-</script></div> We see that we have stability.  But what about if our initial state were \(x=10, y=0\text{?}\) <div class="sagecell-sage" id="sage-27"><script type="text/x-sage">M=matrix(QQ, [[0,1],[1,0]])
-X=matrix(QQ, [[10],[0]])
-for i in range(100):
-  print(M^i*X*1.0)
-  print(' ')
-</script></div> We see that we oscilate between states \(\begin{pmatrix} 10\\0\end{pmatrix}\) and \(\begin{pmatrix} 0\\10\end{pmatrix}\text{.}\)  We <em class="emphasis">do not</em> achieve equilibrium.</p>
+</script></div> We achieve the same state, which incidentally was the stable solution we found earlier!</p>
 <span class="incontext"><a href="Sec_StableSolutions.html#p-1436">in-context</a></span>
 </body>
 </html>

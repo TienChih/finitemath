@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:48:34-06:00    *-->
+<!--*    on 2020-08-20T18:54:18-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,23 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Suppose the half-life of Madeupinium in 25 minutes.  Suppose that a professor acquires a sample of Madeupinium, and after an hour, there is 300g left.</p>
+<p>We let \(R(t)\) be the number of rabbits in \(t\) weeks.</p>
 <ol class="decimal">
-<li>How much Madeupinium was there initially?</li>
-<li>Find a function \(M(t)\) that expresses how many grams are there in \(t\) minutes.</li>
-<li>How much Madeupinium will there be in 75 minutes?</li>
+<li>We first notice that<div class="displaymath">
+\begin{align*}
+100=R(5)\amp = ba^5\\
+125=R(10)\amp = ba^{10}
+\end{align*}
+</div>From here we may deduce:<div class="displaymath">
+\begin{align*}
+1.25\frac{125}{100}\amp = \frac{ba^10}{ba^5}=a^5\\
+100=ba^5\amp = b(1.25)\\
+b\amp =80
+\end{align*}
+</div>Thus there were 80 rabbits initially.</li>
+<li>Knowing that \(a^5=1.25\)  we have that \(a=(1.25)^{1/5}\approx 1.04563955\text{.}\)  Thus \(R(t)=80\cdot((1.25)^{1/5})^t\text{.}\) <iframe src="https://www.desmos.com/calculator/6t0he6wapz" id="interactive-124" width="600" height="600"></iframe>
+</li>
+<li>We have \(R(30)=80\cdot((1.25)^{1/5})^{30}\approx 305\) <iframe src="https://www.desmos.com/calculator/8aymvvbx01" id="interactive-125" width="600" height="600"></iframe> About 305 rabbits.</li>
 </ol>
 <span class="incontext"><a href="Sec_Exponentials.html#p-828">in-context</a></span>
 </body>

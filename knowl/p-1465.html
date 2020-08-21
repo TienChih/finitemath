@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:49:08-06:00    *-->
+<!--*    on 2020-08-20T18:54:52-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,31 +13,42 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Thus we have</p>
+<p>There are 8 states: positive review, banktruptcy, and 0,1,2,3,4 and 5 dips into the savings left.  The first two are absorbing states, she gets the review and business booms or she goes bust.  Using the order above, we get transition matrix:</p>
 <div class="displaymath">
 \begin{equation*}
-F=(I_6-B)^{-1}=
-\begin{pmatrix}
-\frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81} \amp  \frac{80}{243} \amp  \frac{160}{729} \amp  \frac{320}{2187}\\
-0\amp \frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81} \amp  \frac{80}{243} \amp  \frac{160}{729} \\
-0\amp 0\amp \frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81} \amp  \frac{80}{243} \\
-0\amp 0\amp 0\amp \frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81}  \\
-0\amp 0\amp 0\amp 0\amp \frac{10}{9} \amp  \frac{20}{27}  \\
-0\amp 0\amp 0\amp 0\amp 0\amp \frac{10}{9}  \\
+M=\begin{pmatrix}
+1 \amp 0 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3\\
+0 \amp 1 \amp 0.6 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6\\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1\\
+\end{pmatrix}.
+\end{equation*}
+</div>
+<p data-braille="continuation">This gives us:</p>
+<div class="displaymath">
+\begin{equation*}
+A=\begin{pmatrix}
+0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3\\
+0.6 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0\\
+\end{pmatrix},
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+B=\begin{pmatrix}
+0.1 \amp 0.6 \amp 0 \amp 0 \amp 0 \amp 0\\
+0 \amp 0.1 \amp 0.6 \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6\\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1\\
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">with solutions matrix:</p>
-<div class="displaymath">
-\begin{equation*}
-AF=
-\begin{pmatrix}
-\frac{1}{3}\amp \frac{5}{9}\amp \frac{19}{27}\amp \frac{65}{81}\amp \frac{211}{243}\amp\frac{665}{729}\\
-\frac{2}{3}\amp \frac{4}{9}\amp \frac{8}{27}\amp \frac{16}{81}\amp \frac{32}{243}\amp\frac{64}{729}\\
-\end{pmatrix}
-\end{equation*}
-</div>
-<p data-braille="continuation">So if she came in with 5 dips into the savings, she would have a \(\frac{665}{729}\approx 91.22\%\) chance of surviving until a positive review!</p>
 <span class="incontext"><a href="Sec_Absorb.html#p-1465">in-context</a></span>
 </body>
 </html>

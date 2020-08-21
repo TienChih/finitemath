@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-02T16:47:55-06:00    *-->
+<!--*    on 2020-08-20T18:53:41-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -217,21 +217,21 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="Sec_Bayes"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.4</span> <span class="title">Bayes Theorem</span>
 </h2>
-<section class="introduction" id="introduction-41"><p id="p-1133">In <a href="Sec_Conditional.html" class="internal" title="Section 8.3: Condtional Probability">Section 8.3</a> we saw that some events can change the likelihood of other events.  If we consider something like smoking and lung cancer, it's well understood that whether or not one smokes differentiates the probability that one contracts lung cancer.  Thus, we should be able to predict lung cancer rates from smoking rates, and vice versa.  We will make that formal here.</p></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-41"><p id="p-1134">In <a href="Sec_Conditional.html" class="internal" title="Section 8.3: Condtional Probability">Section 8.3</a> we saw that some events can change the likelihood of other events.  If we consider something like smoking and lung cancer, it's well understood that whether or not one smokes differentiates the probability that one contracts lung cancer.  Thus, we should be able to predict lung cancer rates from smoking rates, and vice versa.  We will make that formal here.</p></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.4.1</span> <span class="title">A Motivating Example</span>
 </h3>
-<p id="p-1134">Recall <a class="xref" data-knowl="./knowl/ExercisePlants.html" title="Checkpoint 8.3.15">Checkpoint 8.3.15</a>, if we rename our events, let \(Y\) denote “built in plant A” and \(X\) denotes “passes inspection”, then we have \(P(X|Y)=0.85, P(X|Y^c)=0.7\) measure the 85% chance for vehicles built in plant A to pass inspection, and the 70% built in B to pass inspection.  Then, how many vehicles pass inspection depends entirely on how many vehicles are manufactured in A as opposed to B. <iframe src="https://www.desmos.com/calculator/a4gs4jrer2" id="interactive-173" width="600" height="600"></iframe> If 100% of the vehicles were built in plant A, then naturally 85% of cars would pass inspection.  If they were all built in B, then only 70% would pass inspection.  For any mix of plants A and B, the number who pass inspection should be something in between.</p></section><section class="subsection" id="subsection-92"><h3 class="heading hide-type">
+<p id="p-1135">Recall <a class="xref" data-knowl="./knowl/ExercisePlants.html" title="Checkpoint 8.3.15">Checkpoint 8.3.15</a>, if we rename our events, let \(Y\) denote “built in plant A” and \(X\) denotes “passes inspection”, then we have \(P(X|Y)=0.85, P(X|Y^c)=0.7\) measure the 85% chance for vehicles built in plant A to pass inspection, and the 70% built in B to pass inspection.  Then, how many vehicles pass inspection depends entirely on how many vehicles are manufactured in A as opposed to B. <iframe src="https://www.desmos.com/calculator/a4gs4jrer2" id="interactive-173" width="600" height="600"></iframe> If 100% of the vehicles were built in plant A, then naturally 85% of cars would pass inspection.  If they were all built in B, then only 70% would pass inspection.  For any mix of plants A and B, the number who pass inspection should be something in between.</p></section><section class="subsection" id="subsection-92"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.4.2</span> <span class="title">Bayes's Theorem</span>
 </h3>
 <article class="theorem theorem-like" id="TheoremBayes"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Bayes's Theorem.</span>
 </h6>
-<p id="p-1135">Given events \(X, Y\text{:}\)</p>
+<p id="p-1136">Given events \(X, Y\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 P(X) =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y)).
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-1136">Recall that:</p>
+</div></article><article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-1137">Recall that:</p>
 <div class="displaymath">
 \begin{align*}
 P(X)\amp =P(X\cap Y)+P(X\cap Y^c)\\
@@ -239,7 +239,7 @@ P(X)\amp =P(X\cap Y)+P(X\cap Y^c)\\
 \amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))
 \end{align*}
 </div></article></div>
-<p id="p-1137">So if 40% of the vehicles are built in plant A, then \(P(Y)=0.4\text{,}\) and we should be able to determine how many vehicles pass inspection.  We first note that the percent of vehicles who are from plant A and pass inspection is</p>
+<p id="p-1138">So if 40% of the vehicles are built in plant A, then \(P(Y)=0.4\text{,}\) and we should be able to determine how many vehicles pass inspection.  We first note that the percent of vehicles who are from plant A and pass inspection is</p>
 <div class="displaymath">
 \begin{equation*}
 P(X\cap Y)=P(X|Y)P(Y)=(0.85)(0.4)=0.34.
@@ -262,7 +262,7 @@ P(X)\amp =P(X\cap Y)+P(X\cap Y^c)\\
 \end{align*}
 </div>
 <p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/ndd9pzxcqp" id="interactive-174" width="600" height="600"></iframe></p>
-<p id="p-1138">The relation in <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a> should also work the other way, if we saw that 80% of the vehicles pass inspection, what proportion of them were built in Plant A?  We are given \(P(X)=0.8\) and asked to find \(P(Y)\text{.}\)  So:</p>
+<p id="p-1139">The relation in <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a> should also work the other way, if we saw that 80% of the vehicles pass inspection, what proportion of them were built in Plant A?  We are given \(P(X)=0.8\) and asked to find \(P(Y)\text{.}\)  So:</p>
 <div class="displaymath">
 \begin{align*}
 P(X)\amp=P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
@@ -276,7 +276,7 @@ P(Y) \amp =\frac{.1}{.15}=\frac{2}{3}\approx 0.666666667.
 <article class="remark remark-like" id="remark-21"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.4.2</span><span class="period">.</span>
 </h6>
-<p id="p-1139">Reworking <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a>, we obtain:</p>
+<p id="p-1140">Reworking <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a>, we obtain:</p>
 <div class="displaymath">
 \begin{align*}
 P(X)\amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
@@ -293,7 +293,7 @@ P(Y|X)\amp =\frac{P(Y\cap X)}{P(X)}\\
 \end{align*}
 </div></article><article class="example example-like" id="example-94"><a data-knowl="" class="id-ref original" data-refid="hk-example-94"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.4.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-94"><article class="example example-like"><p id="p-1140">Suppose that out of coffee drinkers, 80% of those who use cream also add sugar, and 30% of those who don't use cream add sugar.  Suppose that 70% of coffee drinkers use cream.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-94"><article class="example example-like"><p id="p-1141">Suppose that out of coffee drinkers, 80% of those who use cream also add sugar, and 30% of those who don't use cream add sugar.  Suppose that 70% of coffee drinkers use cream.</p>
 <ol class="decimal">
 <li id="li-603">What proportion of coffee drinkers use sugar?</li>
 <li id="li-604">Given a random coffee drinker who uses sugar, what is the probability they use cream?</li>
@@ -301,7 +301,7 @@ P(Y|X)\amp =\frac{P(Y\cap X)}{P(X)}\\
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-126" id="solution-126"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-126"><div class="solution solution-like">
-<p id="p-1141">Let \(C\) denote “uses cream” and \(S\) denote “uses sugar”.  We are given \(P(S|C)=0.8, P(S|C^c)=0.3, P(C)=0.7.\)</p>
+<p id="p-1142">Let \(C\) denote “uses cream” and \(S\) denote “uses sugar”.  We are given \(P(S|C)=0.8, P(S|C^c)=0.3, P(C)=0.7.\)</p>
 <ol class="decimal">
 <li id="li-606">This is \(P(S)\text{.}\)  So:<div class="displaymath">
 \begin{align*}
@@ -318,14 +318,14 @@ P(S)\amp =(0.8)(0.7)+(0.3)(1-0.7)=0.65
 </div></article></div>
 <article class="example example-like" id="example-95"><a data-knowl="" class="id-ref original" data-refid="hk-example-95"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.4.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-95"><article class="example example-like"><p id="p-1142">Suppose that during the zombie apocalypse, an anti-zombification serum is developed.  People who take the serum have a 10% chance of becoming zombies, but those who don't have an 85% chance of becoming zombies. Suppose half of a city is zombified.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-95"><article class="example example-like"><p id="p-1143">Suppose that during the zombie apocalypse, an anti-zombification serum is developed.  People who take the serum have a 10% chance of becoming zombies, but those who don't have an 85% chance of becoming zombies. Suppose half of a city is zombified.</p>
 <ol class="decimal">
 <li id="li-609">What proportion of the city took the serum?</li>
 <li id="li-610">If you weren't zombified, what is the probability you took the serum?</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-127" id="solution-127"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-127"><div class="solution solution-like">
-<p id="p-1143">Let \(S\) denote “took serum” and \(Z\) denote “zombified”.  We are given \(P(Z|S)=0.1, P(Z|S^c)=0.85, P(Z)=0.5.\)</p>
+<p id="p-1144">Let \(S\) denote “took serum” and \(Z\) denote “zombified”.  We are given \(P(Z|S)=0.1, P(Z|S^c)=0.85, P(Z)=0.5.\)</p>
 <ol class="decimal">
 <li id="li-611">This is \(P(S)\text{.}\)  So:<div class="displaymath">
 \begin{align*}
@@ -342,10 +342,10 @@ P(S)\amp =\frac{P(Z)-P(Z|S^c)}{P(Z|S)-P(Z|S^c)}\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-81"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-81"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-81"><article class="exercise exercise-like"><p id="p-1144">For those graduating from State University, those who go to grad school the year afterwards have a 60% chance of also working a job at the same time.  Those who don't go to grad school the year afterwards have a 90% chance of working.  If 15% of the graduates went to grad school the year afterwards, what proprtion were either working or going to grad school.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-81"><article class="exercise exercise-like"><p id="p-1145">For those graduating from State University, those who go to grad school the year afterwards have a 60% chance of also working a job at the same time.  Those who don't go to grad school the year afterwards have a 90% chance of working.  If 15% of the graduates went to grad school the year afterwards, what proprtion were either working or going to grad school.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-128" id="solution-128"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-128"><div class="solution solution-like">
-<p id="p-1145">Let \(G\) denote “grad school” and \(W\) denote “working”.  We are given \(P(W|G)=0.6, P(W|G^c)=0.9, P(G)=0.15.\)  We are asked to find \(P(G \cup W)\text{.}\)  We first find \(P(W)\text{:}\)</p>
+<p id="p-1146">Let \(G\) denote “grad school” and \(W\) denote “working”.  We are given \(P(W|G)=0.6, P(W|G^c)=0.9, P(G)=0.15.\)  We are asked to find \(P(G \cup W)\text{.}\)  We first find \(P(W)\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 P(W)\amp =P(W|G)P(G)+P(W|G^c)(1-P(G))\\
@@ -358,10 +358,10 @@ P(W)\amp =P(W|G)P(G)+P(W|G^c)(1-P(G))\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-82"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-82"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-82"><article class="exercise exercise-like"><p id="p-1146">Suppose that a test for a virus has a 90% chance of returning a positive result if a person is infected with the virus, but a 8% chance of returning a positive result if not infected.  Suppose that people are randomly tested and 30% of the tests are coming back positive.  If Andre went out, took the test and it came back positive, what is the probability he has been infected?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-82"><article class="exercise exercise-like"><p id="p-1147">Suppose that a test for a virus has a 90% chance of returning a positive result if a person is infected with the virus, but a 8% chance of returning a positive result if not infected.  Suppose that people are randomly tested and 30% of the tests are coming back positive.  If Andre went out, took the test and it came back positive, what is the probability he has been infected?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-129" id="solution-129"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-129"><div class="solution solution-like">
-<p id="p-1147">Let \(I\) denote “infected” and \(T\) denote “tested positive”.  We are given \(P(T|I)=0.9, P(T|I^c)=0.08, P(T)=0.3.\)  We are asked to find \(P(I|T)\text{.}\)  We first find \(P(I)\text{:}\)</p>
+<p id="p-1148">Let \(I\) denote “infected” and \(T\) denote “tested positive”.  We are given \(P(T|I)=0.9, P(T|I^c)=0.08, P(T)=0.3.\)  We are asked to find \(P(I|T)\text{.}\)  We first find \(P(I)\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 P(T)\amp =P(T|I)P(I)+P(T|I^c)(1-P(I))\\
