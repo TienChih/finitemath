@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:43:30-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Applications of Linear Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_IndentifyLinear.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_LinearFunctions.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_LinearRegression.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_IndentifyLinear.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_LinearFunctions.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_LinearRegression.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear" class="active">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_ApplicationsLinear"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Applications of Linear Functions</span>
+</h2>
+<p id="p-112">Up until this point, we've been treating linear functions as somewhat disembodied Mathematical entities. In this section, we'll give a few examples to show how they appear and are applied in practice.</p>
+<article class="example example-like" id="Example_LinearTemp"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-Example_LinearTemp"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_LinearTemp"><article class="example example-like"><p id="p-113">The freezing point of water is \(0^\circ\) Celsius and \(32^\circ\) Fahrenheit. The boiling point of water is \(100^\circ\) Celsius and \(212^\circ\) Fahrenheit.</p>
+<ol class="decimal">
+<li id="li-19"><p id="p-114">Find a linear function \(T(F)=C\) that converts Fahrenheit into Celsius.</p></li>
+<li id="li-20"><p id="p-115">When it's 10 degrees Fahrenheit, what is the temperature in Celsius?</p></li>
+<li id="li-21"><p id="p-116">When it's 30 degrees Celsius, what is the temperature in Fahrenheit?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-117">We are given that \(T(32)=0\) and \(T(212)=100\text{.}\) This gives us points \((32,0)\) and \((212,100)\text{,}\) so this bears some similarity to <a class="xref" data-knowl="./knowl/Example_PandP.html" title="Example 1.3.4">Example 1.3.4</a>.</p>
+<ol class="decimal">
+<li id="li-22">
+<p id="p-118">We first identify the slope of the function:</p>
+<div class="displaymath">
+\begin{equation*}
+m=\frac{\Delta C}{\Delta F}=\frac{100-0}{212-32}=\frac{100}{180}=\color{red}{\frac{5}{9}}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Then choosing either point, say \(\color{blue}{(32,0)}\text{,}\) and point slope form, we have:</p>
+<div class="displaymath">
+\begin{align*}
+C-C_0\amp = m(F-F_0)\\
+C-\color{blue}{0}\amp = \color{red}{\frac{5}{9}}(F-\color{blue}{32})\\
+C\amp = \frac{5}{9}F-\frac{160}{9}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Thus \(T(F)=\frac{5}{9}F-\frac{160}{9}\) <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-19.svg" role="img" style="width: 100%; height: auto;" alt=""></div></p>
+</li>
+<li id="li-23">
+<p id="p-119">When it's 10 degrees, we have that \(\color{teal}{F=10}\) and so:</p>
+<div class="displaymath">
+\begin{align*}
+C\amp = \frac{5}{9}F-\frac{160}{9}\\
+C\amp = \frac{5}{9}\cdot\color{teal}{10}-\frac{160}{9}\\
+C\amp = \frac{50}{9}-\frac{160}{9}\\
+C\amp = -\frac{110}{9}\approx-12.2222\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">So 10 degrees Fahrenheit is \(-\frac{110}{9}\approx-12.2222\) degrees Celsius. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-20.svg" role="img" style="width: 100%; height: auto;" alt=""></div></p>
+</li>
+<li id="li-24">
+<p id="p-120">When it's 30 degrees Celsius i.e. \(\color{orange}{C=30}\) we have:</p>
+<div class="displaymath">
+\begin{align*}
+C\amp = \frac{5}{9}F-\frac{160}{9}\\
+\color{orange}{30}\amp = \frac{5}{9}F-\frac{160}{9}\\
+30+\frac{160}{9}\amp = \frac{5}{9}F\\
+\frac{430}{9}\amp = \frac{5}{9}F\\
+F\amp = \frac{430}{5}=86\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">So when it's 30 degrees Celsius, it is 86 degrees Fahrenheit. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-21.svg" role="img" style="width: 100%; height: auto;" alt=""></div></p>
+</li>
+</ol>
+<p id="p-121">Desmos representation here: <iframe src="https://www.desmos.com/calculator/tyoznzrk53" id="interactive-14" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="Example_Proft"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-Example_Proft"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_Proft"><article class="example example-like"><p id="p-122">Suppose you were selling widgets for $5 a unit, they have a marginal cost of $3 per unit, and a fixed cost of production of $20.</p>
+<ol class="decimal">
+<li id="li-25"><p id="p-123">Find the Cost, Revenue and Profit functions of producing \(x\) widgets (\(C(x), R(x), P(x)\)) in dollars.</p></li>
+<li id="li-26"><p id="p-124">For each widget sold, how much does your profit increase?</p></li>
+<li id="li-27"><p id="p-125">What is the cost of producing 30 widgets?</p></li>
+<li id="li-28"><p id="p-126">What is the break even point? (Zero profit).</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><ol class="decimal">
+<li id="li-29">
+<p id="p-127">We break these down one at a time.</p>
+<ol class="lower-alpha">
+<li id="li-30"><p id="p-128">The marginal cost or cost per widget is $3, and the cost for producing no widgets is the fixed cost of $20. Thus \(C(x)=3x+20\text{.}\)</p></li>
+<li id="li-31"><p id="p-129">You get $5 per widget sold, and clearly do not get any money for selling nothing, so \(R(x)=5x+0=5x\text{.}\)</p></li>
+<li id="li-32"><p id="p-130">Profit is Revenue (money generated) minus Costs (money spent). Thus \(P(x)=R(x)-C(x)=5x-(3x+20)=2x-20\text{.}\)</p></li>
+</ol>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-22.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-131"><iframe src="https://www.desmos.com/calculator/d6l9b3kqho" id="interactive-15" width="600" height="600"></iframe></p>
+</li>
+<li id="li-33"><p id="p-132">Since \(P(x)=2x-20\text{,}\) the change per unit of \(x\) or profit per widget is the slope, or $2/widget.</p></li>
+<li id="li-34">
+<p id="p-133">When you produce \(\color{teal}{x=30}\) widgets, the cost will be:</p>
+<div class="displaymath">
+\begin{align*}
+C(x)\amp = 3x+20\\
+C(x)\amp = 3\cdot\color{teal}{30}+20\\
+C(x)\amp = 90+20\\
+C(x)\amp = 110\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">The cost of producing 30 widgets is $110. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-23.svg" role="img" style="width: 100%; height: auto;" alt=""></div> <iframe src="https://www.desmos.com/calculator/cmoor2agyv" id="interactive-16" width="600" height="600"></iframe></p>
+</li>
+<li id="li-35">
+<p id="p-134">The break even occurs when the profit is zero, \(\color{orange}{P(x)=0}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+P(x)\amp = 2x-20\\
+\color{orange}{0}\amp = 2x-20\\
+2x\amp = 20\\
+x\amp = 10\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">The break even point occurs when \(x=10\) widgets are sold. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-24.svg" role="img" style="width: 100%; height: auto;" alt=""></div> <iframe src="https://www.desmos.com/calculator/bdtdeqzqqa" id="interactive-17" width="600" height="600"></iframe></p>
+</li>
+</ol></div></div>
+</div></article></div>
+<article class="example example-like" id="example-15"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-15"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-15"><article class="example example-like"><p id="p-135"><dfn class="terminology">Question: </dfn> Dr. Johnson is traveling to visit her mother for a holiday. She drives at a constant speed of 75 mph. After 3 hours, she passes a landmark that she knows is 200 miles from her mom's house.</p>
+<ol class="decimal">
+<li id="li-36"><p id="p-136">Find a function \(D(t)\) that gives Dr. Johnson's distance to her mother house, in miles, after \(t\) hours.</p></li>
+<li id="li-37"><p id="p-137">How far away was she when she started driving?</p></li>
+<li id="li-38"><p id="p-138">How many hours did it take from start to finish to complete this drive?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><ol id="p-139" class="decimal">
+<li id="li-39">
+<p id="p-140">Since she is driving towards her mom's house, the distance from her to the house decreases at a rate of 75 miles per hour. Thus \(\color{red}{m=-75}\text{.}\) At \(t=3\) hours, her distance was 200 miles away. Thus \(\color{blue}{(3,200)}\) falls on the line representing this function. Recall the techniques from <a class="xref" data-knowl="./knowl/Example_PandS.html" title="Example 1.3.2">Examples 1.3.2</a>, <a class="xref" data-knowl="./knowl/Example_PandSagain.html" title="Example 1.3.3">Example 1.3.3</a>.</p>
+<div class="displaymath">
+\begin{align*}
+D(t)\amp = -75t+b\\
+\color{blue}{200}\amp = \color{red}{-75}\cdot\color{blue}{3}+b\\
+200\amp = -225+b\\
+b\amp = 200+225=425\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Thus \(D(t)=-75t+425\text{.}\) <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-25.svg" role="img" style="width: 100%; height: auto;" alt=""></div> <iframe src="https://www.desmos.com/calculator/uoul2cdsjs" id="interactive-18" width="600" height="600"></iframe></p>
+</li>
+<li id="li-40"><p id="p-141">At the start of the journey, \(\color{teal}{t=0}\text{,}\) and so she was \(D(\color{teal}{0})=-75\cdot\color{teal}{0}+425=425\) miles from her mother's house. <iframe src="https://www.desmos.com/calculator/xuzh7xcgwk" id="interactive-19" width="600" height="600"></iframe></p></li>
+<li id="li-41">
+<p id="p-142">When she arrives, her distance from her mothers house is \(\color{orange}{D(t)=0}\) miles and so:</p>
+<div class="displaymath">
+\begin{align*}
+D(t)\amp = -75t+425\\
+\color{orange}{0}\amp = -75t+425\\
+75t\amp = 425\\
+t\amp = \frac{425}{75}\approx 5.6667\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">So the trip takes \(t=\frac{425}{75}\approx 5.6667\) hours or 5 hours and 40 minutes. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-26.svg" role="img" style="width: 100%; height: auto;" alt=""></div> <iframe src="https://www.desmos.com/calculator/dilrensiar" id="interactive-20" width="600" height="600"></iframe></p>
+</li>
+</ol></div></div>
+</div></article></div>
+<article class="example example-like" id="Example_"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-Example_"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_"><article class="example example-like"><p id="p-143"><dfn class="terminology">Question: </dfn> Consider the following graphs of functions \(q=S(p), D(p)\text{,}\) where \(p\) is the price of a product, and \(q\) is the quantity demanded.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-27.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<ol class="decimal">
+<li id="li-42"><p id="p-144">Find the equations for the supply and demand curves \(q=S(p),
+q=D(p)\text{,}\) where \(p\) is the price in dollars and \(q\) is the quantity, either demanded or supplied.</p></li>
+<li id="li-43"><p id="p-145">If $350 is charged for this product, What is the surplus or deficit of products produced?</p></li>
+<li id="li-44"><p id="p-146">Where is the equilibrium point (where supply and demand are the same)?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><ol class="decimal">
+<li id="li-45">
+<p id="p-147">It helps if we can identify some points on these lines. We will work on them one at a time.</p>
+<ol class="lower-alpha">
+<li id="li-46">
+<p id="p-148">Graphically, we can see that \(S(0)=0\text{,}\) thus \((0,0)\) is on the supply line. This also tells us the \(q\)-intercept, \(b=0\text{.}\) We can also see that when \(p=400, S(400)=1200\text{,}\) thus \((400,1200)\) is also on this line. Thus:</p>
+<div class="displaymath">
+\begin{equation*}
+m=\frac{1200-0}{400-0}=3\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">So \(S(p)=3p\text{.}\)</p>
+</li>
+<li id="li-47">
+<p id="p-149">Graphically, we can see that \(D(0)=5200\text{,}\) thus \((0,5200)\) is on the demand line. This also tells us the \(q\)-intercept, \(b=5200\text{.}\) We can also see that when \(p=400, D(400)=3200\text{,}\) thus \((400,3200)\) is also on this line. Thus:</p>
+<div class="displaymath">
+\begin{equation*}
+m=\frac{3200-5200}{400-0}=\frac{-2000}{400}=-5\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">So \(D(p)=-5p+5200\text{.}\)</p>
+</li>
+</ol>
+</li>
+<li id="li-48"><p id="p-150">When \(p=350\text{,}\) we will have \(S(350)=3*350=1050\) products supplied, but \(D(350)=-5*250+5200=3450\) demanded. Thus there is a deficit of \(3450-1050=2400\) products demanded that are not supplied, since demand exceeds supply. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-28.svg" role="img" style="width: 100%; height: auto;" alt=""></div> <iframe src="https://www.desmos.com/calculator/dee7rqh07j" id="interactive-21" width="600" height="600"></iframe></p></li>
+<li id="li-49">
+<p id="p-151">The equilibrium point is the point where the quantity supplied and demanded are the same. Algebraically, this means \(D(p)=S(p)\text{,}\) and so:</p>
+<div class="displaymath">
+\begin{align*}
+-5p+5200\amp = 3p\\
+5200\amp = 8p\\
+p\amp = \frac{5200}{8}=650\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">So the equilibrium happens when \(p=650\) that is $650 per unit. Then, we note that \(S(650)=3*650=1950\) and \(D(p)=-5*650+5200=1950\text{,}\) so the equilibrium point is \((650, 1950)\) or \(\dollar650\) per unit, and 1950 units sold. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-29.svg" role="img" style="width: 100%; height: auto;" alt=""></div> <iframe src="https://www.desmos.com/calculator/aywru3gvxu" id="interactive-22" width="600" height="600"></iframe></p>
+</li>
+</ol></div></div>
+</div></article></div>
+<p id="p-152">These examples barely scratch the surface on how linear functions may be applied, but hopefully they gave you some sense on what sort of things they can be used to model, what sort of questions one can answer with them, and how to address them when the time comes.</p></section></div></main>
+</div>
+</body>
+</html>

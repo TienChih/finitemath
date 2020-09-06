@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:44:01-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Normal Approximation of the Binomial</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_Normal.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Stats.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_CLT.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_Normal.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Stats.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_CLT.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation" class="active">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_BinomialApproximation"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">10.4</span> <span class="title">Normal Approximation of the Binomial</span>
+</h2>
+<section class="introduction" id="introduction-52"><p id="p-1356">One of the reasons the normal curve is central to the study of statistics ie because, under the right circumstances, it may be used to approximate the behavior of other probability distributions.  Here, we show how it can be used to approximate binomial distributions under the right circumstances.</p></section><section class="subsection" id="subsection-112"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.4.1</span> <span class="title">A Motivating Example</span>
+</h3>
+<p id="p-1357">Suppose you flipped 100 coins, what is the probability 55 or more of them come up heads? Technically, we know how to solve this:</p>
+<div class="displaymath">
+\begin{equation*}
+P(X=55)+P(X=56)+\cdots +P(X=100)
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(X\) is the number of heads.  Understandably, one may be relunctant to compute all of these by hand.</p>
+<p id="p-1358">On the other hand, we know that for a binomial variable with \(n=100, p=0.5\) it has a mean or expected value of \(\mu=np=(100)(0.5)=50\) and standard deviation \(\sigma=\sqrt{np(1-p)}=\sqrt{100(0.5)(0.5)}=5\text{.}\)  If we plot the normal curve with \(\mu=50, \sigma=5\) alongside the binomial distribution with \(n=100, p=0.5\text{,}\) we see that they match up remarkably closely! <iframe src="https://www.desmos.com/calculator/khdzyyuxtn" id="interactive-237" width="600" height="600"></iframe> So  much so that  if we use the normal curve to approximate this value, we don't end up too far off: <iframe src="https://www.desmos.com/calculator/vzmsc6x5or" id="interactive-238" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-113"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.4.2</span> <span class="title">The Approximation</span>
+</h3>
+<p id="p-1359">Looking at the graphs above, adjust \(n, p\) using the sliders, you should see that as we change these values, the normal distribution continues to match up with the binomial fairly well.  This gives us the following:</p>
+<article class="remark remark-like" id="remark-32"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.4.1</span><span class="period">.</span>
+</h6>
+<p id="p-1360">Given a binomial random variable \(X\) with parameters \(n\) trials, each with probability of success \(p\text{,}\) then we may approximate \(X\) with \(X'\text{,}\) a normal variable with mean \(\mu=np\) and standard deviation \(\sigma=\sqrt{np(1-p)}\text{,}\) so long as:</p>
+<ul class="disc">
+<li id="li-754">\(np\geq 10\text{.}\)</li>
+<li id="li-755">\(n(1-p)\geq 10\text{.}\)</li>
+</ul>
+<p id="p-1361">The greater \(n\) is, the better the approximation will be.</p></article><article class="example example-like" id="example-116"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-116"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.4.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-116"><article class="example example-like"><p id="p-1362">Suppose that a University sends oun 2000 acceptance letters, each student who recieves a letter has a 60% chance to attend.</p>
+<ol class="decimal">
+<li id="li-756">What is the probability less than 1150 students attend?</li>
+<li id="li-757">Find an interval centered at the mean, so that 95% of cases, the attendence level falls within this interval.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-182" id="solution-182"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-182"><div class="solution solution-like"><p id="p-1363">Note \(n=2000, p=0.6\text{,}\) we have \(\mu=1200, \sigma=\sqrt{480}\approx 21.9089.\)  Thus \(P(X\lt 1150)\approx P(X'\lt 1150)\approx 0.01124\text{.}\) <iframe src="https://www.desmos.com/calculator/xhw44mk05b" id="interactive-239" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-183" id="solution-183"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-183"><div class="solution solution-like"><p id="p-1364">Note \(n=2000, p=0.6\text{,}\) we have \(\mu=1200, \sigma=\sqrt{480}\approx 21.9089.\)  Thus theres a 95% chance between 1157 and 1243 students accept. <iframe src="https://www.desmos.com/calculator/iesovykxkx" id="interactive-240" width="600" height="600"></iframe></p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-105"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-105"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.4.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-105"><article class="exercise exercise-like"><p id="p-1365">Consider a group of 100 drivers, each with a 45% chance of speeding.</p>
+<ol class="decimal">
+<li id="li-758">What is the probability more than 50 of them are speeding?</li>
+<li id="li-759">Find a number \(k\) so that there is a 20% chance \(k\) or more drivers are speeding.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-184" id="solution-184"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-184"><div class="solution solution-like"><p id="p-1366">Note \(n=100, p=0.45\text{,}\) we have \(\mu=45, \sigma=\sqrt{24.75}\approx 4.9749.\)  Thus \(P(X&gt;50)\approx P(X'&gt; 50)\approx 0.1574\text{.}\) <iframe src="https://www.desmos.com/calculator/vguaabi8ta" id="interactive-241" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-185" id="solution-185"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-185"><div class="solution solution-like"><p id="p-1367">Note \(n=100, p=0.45\text{,}\) we have \(\mu=45, \sigma=\sqrt{24.75}\approx 4.9749.\)  Thus theres a 10% chance more than 51 drivers speed. <iframe src="https://www.desmos.com/calculator/0wjqpvxxxo" id="interactive-242" width="600" height="600"></iframe></p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-106"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-106"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.4.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-106"><article class="exercise exercise-like"><p id="p-1368">A company sends a survey to 200 customers, each has a 53% of liking their product.</p>
+<ol class="decimal">
+<li id="li-760">What is the probability less than 100 customers like the product?</li>
+<li id="li-761">What is the probability more than than 120 customers like the product?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-186" id="solution-186"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-186"><div class="solution solution-like"><p id="p-1369">Note \(n=200, p=0.53\text{,}\) we have \(\mu=106, \sigma=\sqrt{49.82}\approx 7.0583.\)  Thus \(P(X\lt 100)\approx P(X'\lt 100)\approx 0.1976\text{.}\) <iframe src="https://www.desmos.com/calculator/kvhw32a0a5" id="interactive-243" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-187" id="solution-187"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-187"><div class="solution solution-like"><p id="p-1370">Note \(n=200, p=0.53\text{,}\) we have \(\mu=106, \sigma=\sqrt{49.82}\approx 7.0583.\)  Thus \(P(X&gt; 120)\approx P(X'&gt; 120)\approx 0.0237\text{.}\) <iframe src="https://www.desmos.com/calculator/xbxtgdbpcu" id="interactive-244" width="600" height="600"></iframe></p></div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>

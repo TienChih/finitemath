@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:43:57-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Binomial Distrbutions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_ProbabilityDistributions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_CountingProb.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Chap_Stats.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_ProbabilityDistributions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_CountingProb.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Chap_Stats.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial" class="active">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_Binomial"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">9.5</span> <span class="title">Binomial Distrbutions</span>
+</h2>
+<section class="introduction" id="introduction-47"><p id="p-1254">We discuss a specific type of probability distribution.  If you had repeated random independent trials, how can we compute the distribution of succecess?</p></section><section class="subsection" id="subsection-102"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.5.1</span> <span class="title">A Motivating Example</span>
+</h3>
+<p id="p-1255">Suppose that a student has to take 4 exams in an English class, and that the probability that she receives an A on each exam is 30%.  Suppose also that the grades of each exam are independent of each other.  What is the probability that she receives an A on the first two exams and not the others?</p>
+<p id="p-1256">Well, since the probability of getting an A on any exam is a 30%, and the Exam scores are independent of each other, she has a (.3)(.3) chance of getting A's on the first two.  Then she doesn't get an A on the second two, which has a 0.7 chance each of happening, so the chance of this event ocurring is:</p>
+<div class="displaymath">
+\begin{equation*}
+(0.3)(0.3)(0.7)(0.7)=(0.3)^2(0.7)^2=0.0441.
+\end{equation*}
+</div>
+<p id="p-1257"><em class="emphasis">What is the probability the same student receives an A on exactly two exams?</em></p>
+<p id="p-1258">The first thing we should ask ourselves is, how is this different from the previous problem?  In the previous problem, we required that the first 2 exams had to receive A's.  In this problem, ANY 2 exams can be an A, the first two, the last two, the second and third, whichever way we want.  In fact the total number of ways she could get two A's is:</p>
+<div class="displaymath">
+\begin{equation*}
+AANN, ANAN, ANNA, NAAN, NANA, NNAA
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(N\) stands for “not an A”.  How are we sure this is all the possible ways?  Well, we are basically asking to pick 2 out of 4  exams to be A's, and the number of ways to pick 2 out of 4 things is:</p>
+<div class="displaymath">
+\begin{equation*}
+C(4,2)=\frac{4!}{2!2!}=\frac{24}{4}=6.
+\end{equation*}
+</div>
+<p id="p-1259">Then, what is the probability that each of these A/Not A arrangements occur?  Well, for \(ANAN\) it would be \((0.3)(0.7)(0.3)(0.7)=(0.3)^2(0.7)^2\text{,}\) for \(NAAN\) it would be \((0.3)(0.7)(0.7)(0.3)=(0.3)^2(0.7)^2\text{.}\)  In fact, each of these grade arrangements have 2 A'S and 2 not A's, and so their probability of occurring would be \((0.3)^2(0.7)^2\text{.}\)  Thus the probability of getting an A on two exams (any two) is:</p>
+<div class="displaymath">
+\begin{equation*}
+C(4,2)\cdot (0.3)^2(0.7)^2=6\cdot 0.0441=0.2646
+\end{equation*}
+</div>
+<p data-braille="continuation">Which is cool and all,  but at the end of the day, we want a <em class="emphasis">general</em> method of computing probabilities of this sort.</p></section><section class="subsection" id="subsection-103"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.5.2</span> <span class="title">General Binomial Probability</span>
+</h3>
+<p id="p-1260"><em class="emphasis">“Suppose that a student has to take \(n\) exams, and that the probability that she receives an A on each exam is \(p\text{.}\)  Suppose also that the grades of each exam are independent of each other.  What is the probability that she receives exactly \(k\) A's?”</em></p>
+<p id="p-1261">So we now arrive at the interesting version of this problem, but it's fundamentally not different from the above version.  So let's see:</p>
+<ul class="disc">
+<li id="li-688">There are \(C(n,k)\) ways one could select \(k\) out of the \(n\) exams to receive an A.</li>
+<li id="li-689">Given any of those, the chance she gets A's on those \(k\) exams is \(p\) per exam, so to get A's on all of them has prob \(p^k\text{.}\)</li>
+<li id="li-690">Then for the remaining \(n-k\) exams, each has a \(1-p\) chance of not getting an A.  So the chance that those exams don't receive an A is \((1-p)^{n-k}\text{.}\)</li>
+</ul>
+<p data-braille="continuation">Putting these together, the probability that she receives those $k$ A's is:</p>
+<div class="displaymath">
+\begin{equation*}
+C(n,k) p^k (1-p)^{n-k}.
+\end{equation*}
+</div>
+<p data-braille="continuation">Of course, this all extends beyond exam grades and A's.</p>
+<article class="definition definition-like" id="DefinitionBinomial"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.5.1</span><span class="period">.</span>
+</h6>
+<p id="p-1262">Given \(n\) <em class="emphasis">independent</em> trials, each of which has \(p\) probability of success, let \(X\) denote the number of successes attained.  We call \(X\) a <dfn class="terminology">binomial random variable</dfn>.  The probability that \(k\) successes are attained is:</p>
+<div class="displaymath">
+\begin{equation*}
+P(X=k)=C(n,k) p^k (1-p)^{n-k}.
+\end{equation*}
+</div></article><p id="p-1263">We can see this below: <iframe src="https://www.desmos.com/calculator/prwuifxwld" id="interactive-190" width="600" height="600"></iframe> So we now can see the entire distribution.  The student above has a \(0.2646\) chance of getting two A's, a \(0.0756\) chance of gettine three A's, a \(0.4116\) chance of one A etcetera.</p>
+<article class="example example-like" id="ExampleSoccer"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ExampleSoccer"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleSoccer"><article class="example example-like"><p id="p-1264">Suppose a soccer player has a 70% chance of making a penalty shot.  She shoots 5 times.  Assume the results of the shots are independent.</p>
+<ol class="decimal">
+<li id="li-691">What is the probability she makes 3 shots?</li>
+<li id="li-692">What is the probability she makes at least 4 shots?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-157" id="solution-157"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-157"><div class="solution solution-like">
+<p id="p-1265">We note \(n=5, p=0.7\text{,}\) let \(X\) denote the number of succesful shots.</p>
+<ol class="decimal">
+<li id="li-693">This is \(P(X=3)=C(5,3)(0.7)^3(0.3)^2=0.3087\)</li>
+<li id="li-694">At least 4 means 4 or 5.  So this is<div class="displaymath">
+\begin{equation*}
+P(X=4)+P(X=5)=C(5,4)(0.7)^4(0.3)^1+C(5,5)(0.7)^5(0.3)^0=0.3602+0.1681=0.5283.
+\end{equation*}
+</div>
+</li>
+</ol>
+<p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/94ibomyrpv" id="interactive-191" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="ExampleMachine"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ExampleMachine"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleMachine"><article class="example example-like"><p id="p-1266">A factory has 10 machines, each of which has a 10% chance of malfunctioning in a day.</p>
+<ol class="decimal">
+<li id="li-695">What is the probability exactly 2 malfunction?</li>
+<li id="li-696">What is the probability at least one machine malfunctions?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-158" id="solution-158"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-158"><div class="solution solution-like">
+<p id="p-1267">We note \(n=10, p=0.1\text{,}\) let \(X\) denote the number of malfunctioning machines.</p>
+<ol class="decimal">
+<li id="li-697">This is \(P(X=2)=C(10,2)(0.1)^2(0.9)^8=0.1937\)</li>
+<li id="li-698">At least 1 means 1 though 10.  So one could sum up \(P(X=1)+P(X=2)+\cdots P(X=10)\text{.}\)  But this is also every possibility but \(P(X=0)\text{.}\)  So we could do<div class="displaymath">
+\begin{equation*}
+1-P(X=0)=1-C(10,0)(0.1)^0(0.9)^{10}=1-0.3487=0.6513.
+\end{equation*}
+</div>
+</li>
+</ol>
+<p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/cuvd0de47s" id="interactive-192" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-104"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.5.3</span> <span class="title">Expectation, Variance and Standard Deviation for Binomial Probabilities</span>
+</h3>
+<p id="p-1268">Given a binomial distribution, we could certainly compute expectation and variance the same way we did in <a href="Sec_ProbabilityDistributions.html" class="internal" title="Section 9.4: Probability Distrbutions">Section 9.4</a>.  But, since the whole distribution is totally determined by \(n, p\text{,}\) shouldn't the expectation and variance be determined by these as well?</p>
+<p id="p-1269">For our above English test taking student, if she has a 30% chance of getting an A, wouldn't we <em class="emphasis">expect</em> that 30% of her tests turn out to be A's?  If someone had a 90% free-throw percentage and they shot 20 times, wouldn't we <em class="emphasis">expect</em> \(0.9(20)=18\) shots to make it?  There's a similar way of viewing variance which is beyond the scope of this text, but we can still see that both are totally determined by \(n\) and \(p\text{.}\)</p>
+<article class="remark remark-like" id="remark-28"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.5.4</span><span class="period">.</span>
+</h6>
+<p id="p-1270">Given a <em class="emphasis">binomial random variable</em> with \(n\) trials and probability of success \(p\) per trial, we have:</p>
+<ul class="disc">
+<li id="li-699">\(E(X)=np.\text{.}\)  The number of trials, and the proportion who succeed.</li>
+<li id="li-700">\(\displaystyle Var(X)=np(1-p)\)</li>
+<li id="li-701">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{np(1-p)}\)</li>
+</ul>
+<p data-braille="continuation">We reiterate these are for <em class="emphasis">BINOMIAL PROBABILITIES ONLY</em>.</p></article><p id="p-1271">So for \(n=4, p=0.3\) we would have:</p>
+<ul class="disc">
+<li id="li-702">\(E(X)=np=(4)(0.3)=1.2.\text{.}\)</li>
+<li id="li-703">\(\displaystyle Var(X)=4(0.3)(0.7)=0.84\)</li>
+<li id="li-704">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{0.84}\approx 0.9165\)</li>
+</ul>
+<p data-braille="continuation">Which we may verify: <iframe src="https://www.desmos.com/calculator/prwuifxwld" id="interactive-193" width="600" height="600"></iframe> We can also compute these values the old fashioned way: <iframe src="https://www.desmos.com/calculator/spnfdlq15u" id="interactive-194" width="600" height="600"></iframe></p>
+<article class="example example-like" id="example-113"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-113"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-113"><article class="example example-like"><p id="p-1272">Consider <a class="xref" data-knowl="./knowl/ExampleSoccer.html" title="Example 9.5.2">Example 9.5.2</a>.  What is the expected value, variance, and standard deviation for the number of shots made?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-159" id="solution-159"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-159"><div class="solution solution-like">
+<p id="p-1273">Recall that \(n=5, p=0.7.\)</p>
+<ul class="disc">
+<li id="li-705">\(E(X)=np=5(0.7)=3.5\) shots.</li>
+<li id="li-706">\(Var(X)=np(1-p)=5(0.7)(0.3)=1.05\text{.}\)</li>
+<li id="li-707">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{1.05}\approx 1.0247.\)</li>
+</ul>
+<p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/94ibomyrpv" id="interactive-195" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-114"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-114"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-114"><article class="example example-like"><p id="p-1274">Consider <a class="xref" data-knowl="./knowl/ExampleMachine.html" title="Example 9.5.3">Example 9.5.3</a>.  What is the expected value, variance, and standard deviation for the number of malfunctioning machines?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-160" id="solution-160"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-160"><div class="solution solution-like">
+<p id="p-1275">Recall that \(n=10, p=0.1\)</p>
+<ul class="disc">
+<li id="li-708">\(E(X)=np=10(0.1)=1\) machine.</li>
+<li id="li-709">\(Var(X)=np(1-p)=10(0.1)(0.9)=0.9\text{.}\)</li>
+<li id="li-710">\(\displaystyle \sigma_X=\sqrt{Var(X)}=\sqrt{0.9}\approx 0.94868.\)</li>
+</ul>
+<p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/cuvd0de47s" id="interactive-196" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-96"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-96"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.5.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-96"><article class="exercise exercise-like"><p id="p-1276">Suppose an insurance company issues 8 policies, each of which have a 25% chance of paying out.</p>
+<ol class="decimal">
+<li id="li-711">What is the probability that 3 policies pay out?</li>
+<li id="li-712">What is the probability that at least one policy pays out?</li>
+<li id="li-713">What is the expected number of  policies that will pay out?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-161" id="solution-161"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-161"><div class="solution solution-like">
+<p id="p-1277">Recall that \(n=8, p=0.25.\)  Let \(X\) denote the number of policies that pay out.</p>
+<ol class="decimal">
+<li id="li-714">This is \(P(X=3)=C(8,3)(0.25)^3(0.75)^5=0.2076\text{.}\)</li>
+<li id="li-715">This is the sum of one through eight policies paying out, but its also just removing the case where no policies paid out.  So<div class="displaymath">
+\begin{equation*}
+1-P(X=0)=1-C(8,0)(0.25)^0(0.75)^8\approx 1-0.1001=0.8999.
+\end{equation*}
+</div>
+</li>
+<li id="li-716">This is \(E(X)=np=8(0.25)=2\) policies.</li>
+</ol>
+<p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/mwwjtq3qab" id="interactive-197" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-97"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-97"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.5.8</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-97"><article class="exercise exercise-like"><p id="p-1278">Suppose a team leader proposes a meeting time to a team of 12.  Each member has a 30% chance of having a conflict.</p>
+<ol class="decimal">
+<li id="li-717">What is the probability that 6 members have a conflict?</li>
+<li id="li-718">What is the probability that more than three members have a conflict?</li>
+<li id="li-719">What is the expected number of team members who will have a conflict?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-162" id="solution-162"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-162"><div class="solution solution-like">
+<p id="p-1279">Recall that \(n=12, p=0.3.\)  Let \(X\) denote the number of team members have a conflict.</p>
+<ol class="decimal">
+<li id="li-720">This is \(P(X=3)=C(12,6)(0.3)^6(0.7)^6\approx0.0792\text{.}\)</li>
+<li id="li-721">This is the sum of three through twelves members having a conflict, but its also just removing cases zero through three having a conflict.  So<div class="displaymath">
+\begin{align*}
+\amp1-P(X=0)-P(X=1)-P(X=2)-P(X=3)\\
+\amp=1-C(12,0)(0.3)^0(0.7)^{12}-C(12,1)(0.3)^1(0.7)^{11}-C(12,2)(0.3)^2(0.7)^{10}-C(12,3)(0.3)^3(0.7)^{9}\\
+\amp \approx 1-0.4925=0.5075.
+\end{align*}
+</div>
+</li>
+<li id="li-722">This is \(E(X)=np=12(0.3)=3.6\) team members.</li>
+</ol>
+<p data-braille="continuation">These may all be seen: <iframe src="https://www.desmos.com/calculator/drz7bqszhm" id="interactive-198" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>

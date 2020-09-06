@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:43:34-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Products and Sums of Matrices</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_SystemasMatrix.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Matrices.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_MatrixInverse.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_SystemasMatrix.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Matrices.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_MatrixInverse.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic" class="active">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_MatrixArithmetic"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Products and Sums of Matrices</span>
+</h2>
+<section class="introduction" id="introduction-8"><p id="p-309">In the previous sections, we saw how the entries of matrix may be used to record relationships between two collections of variables. For example in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a>, the entries in the \(3\times 3\) portion of the matrix represents the proportion of vitamins contained by a collection of supplements, with each entry representing a vitamin-supplement pair. It is natural then, to wonder if we could combine relationships between variables or compose them. The operations behind these ideas are the sums and products of matrices.</p></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Products of Matrices</span>
+</h3>
+<p id="p-310">We begin with a motivating example:</p>
+<article class="example example-like" id="Example_VitProd"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-Example_VitProd"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_VitProd"><article class="example example-like"><p id="p-311">Recall that in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a> Margo has three supplements: the first contains 20% vitamin A, 20% vitamin D and 20% vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E.</p>
+<p id="p-312">On Monday she eats 100 mg of supplement 1, 100 mg of supplement 2 and 150 mg of supplement 3. On Wednesday she eats 150 mg of supplement 1, 50 mg of supplement 2 and 100 mg of supplement 3. Putting aside that this is an ill advised way to take supplements, how much of each vitamin did she get on each day?</p>
+<p id="p-313">We first let</p>
+<div class="displaymath">
+\begin{equation*}
+A= \left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)
+\end{equation*}
+</div>
+<p data-braille="continuation">represent the relation between vitamins and supplements, where each row corresponds to vitamins, and each column corresponds to supplements. So the entry in the second row, second column corresponds to the proportion of supplement 2 which is vitamin D, 30%.</p>
+<p id="p-314">A useful way to conceptualize this matrix is as an arrow or transformation, whose inputs are mg of various supplements, and whose outputs are mg of various vitamins.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-43.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-315">Next, we record the relationship between days of the week and supplements:</p>
+<div class="displaymath">
+\begin{equation*}
+B= \left( \begin{array}{rrr} 100 \amp  150\\ 100 \amp  50\\ 150 \amp  100 \end{array} \right)
+\end{equation*}
+</div>
+<p id="p-316">Where now the rows are quantities of supplements and columns are days of the week. So the 100 in the third row second column represents the 100mg taken on Wednesday of Supplement 3. This to may be conceptualized as an arrow or transformation whose inputs are days of the week, and whose outputs are quantities of supplements.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-44.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-317">Our goal now is to establish a relationship between days of the week and quantity of vitamins.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-45.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-318">So, how much Vitamin A does Margo get on Monday? She took 100 mg of Supplement 1, of which 20% is Vitamin A, 100 mg of Supplement 2, of which 10% is Vitamin A, and 150 mg of Supplement 1, of which 50% is Vitamin A:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr} \color{red}{0.2} \amp  0.1 \amp  0.5\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} \color{blue}{100} \amp  150\\ \color{blue}{100} \amp  50\\ \color{blue}{150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} \color{red}{0.2}\cdot\color{blue}{100}+\color{red}{0.1}\cdot\color{blue}{100}+\color{red}{0.5}\cdot\color{blue}{150} \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)=\left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)\text{.}
+\end{equation*}
+</div>
+<p id="p-319">So on Monday, Margo got 105 mg of vitamin A. What about the amount of vitamin D she received on Wednesday? She took 150 mg of Supplement 1, of which 20% is Vitamin D, 50 mg of Supplement 2, of which 30% is Vitamin D, and 100 mg of Supplement 1, of which 10% is Vitamin A:</p>
+<div class="displaymath">
+\begin{align*}
+\left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ \color{red}{0.2} \amp  \color{red}{0.3} \amp  \color{red}{0.1}\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} 100 \amp  \color{blue}{150}\\ 100 \amp  \color{blue}{50}\\ 150 \amp  \color{blue}{100} \end{array} \right)\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  \color{red}{0.2}\cdot\color{blue}{150}+\color{red}{0.3}\cdot\color{blue}{50}+\color{red}{0.1}\cdot\color{blue}{100} \\ ? \amp  ? \end{array} \right)\\
+\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  55 \\ ? \amp  ? \end{array} \right)\text{.}
+\end{align*}
+</div>
+<p id="p-320">So Margo got 55 mg of Vitamin D on Wednesday. Following this line of thinking, we obtain matrix:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr} {0.2} \amp  {0.1} \amp  {0.5}\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} {100} \amp  150\\ {100} \amp  50\\ {150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} 105 \amp  85 \\ 65 \amp  55 \\ 90 \amp  70 \end{array} \right)\text{.}
+\end{equation*}
+</div>
+<p id="p-321">This matrix records how much of each vitamin Margo had per day, where vitamins are rows and days are columns. So on Monday, she got 90 mg of Vitamin E, and on Wednesday, she got 85 mg of Vitamin A.</p></article></div>
+<p id="p-322">So with this illustrative example in mind, we can define matrix multiplication.</p>
+<article class="definition definition-like" id="Defn_MatrixProd"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-323">For any matrix \(M\text{,}\) let \((M)_{ij}=m_{ij}\) denote the entry in the \(i\)th row and \(j\)th column. Then, given a \(m\times n\) matrix \(A\) and a \(n\times k\) matrix \(B\text{,}\) we define \(AB\) the product of \(A\) and \(B\) to be a \(m\times k\) matrix where:</p>
+<div class="displaymath">
+\begin{equation*}
+(AB)_{ij}=\begin{pmatrix}\color{red}{a_{i1}} \amp  \color{red}{a_{i2}} \amp  \cdots \amp  \color{red}{a_{in}} \end{pmatrix} \begin{pmatrix}\color{blue}{b_{1j}} \\ \color{blue}{b_{2j}} \\ \vdots \\ \color{blue}{b_{nj}} \end{pmatrix} =\begin{pmatrix}\color{red}{a_{i1}}\color{blue}{b_{1j}}+\color{red}{a_{i2}}\color{blue}{b_{2j}}+\cdots+\color{red}{a_{in}}\color{blue}{b_{nj}} \end{pmatrix}
+\end{equation*}
+</div></article><p id="p-324"><dfn class="terminology">Note that the number of columns of \(A\) and the number of rows of \(B\) must be the same.</dfn> Recall <a class="xref" data-knowl="./knowl/Example_VitProd.html" title="Example 2.3.1">Example 2.3.1</a>, the outputs of \(B\) corresponded to the rows, and the inputs of \(A\) corresponded to it's columns, so these had to match up. This number is also the \(n\) is <a class="xref" data-knowl="./knowl/Defn_MatrixProd.html" title="Definition 2.3.2">Definition 2.3.2</a>.</p>
+<article class="example example-like" id="Example_MoreMatrixProducts"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-Example_MoreMatrixProducts"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_MoreMatrixProducts"><article class="example example-like"><p id="p-325">Let</p>
+<div class="displaymath">
+\begin{equation*}
+A=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} , B=\begin{pmatrix}0.2 \amp  0.4 \\ 0.5 \amp  0.6 \\ 0.1 \amp  0.8 \end{pmatrix} , C=\begin{pmatrix}10 \\ 20 \\ 15 \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p id="p-326">Find:</p>
+<ol class="decimal">
+<li id="li-80">
+<p id="p-327">\(AB\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+AB=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \begin{pmatrix}0.2 \amp  0.4 \\ 0.5 \amp  0.6 \\ 0.1 \amp  0.8 \end{pmatrix} \amp =\amp \begin{pmatrix}1\cdot0.2+2\cdot0.5+3\cdot0.1 \amp  1\cdot0.4+2\cdot0.6+3\cdot0.8\\ 4\cdot0.2+5\cdot0.5+6\cdot0.1 \amp  4\cdot0.4+5\cdot0.6+6\cdot0.8 \end{pmatrix}\\
+\amp =\amp \begin{pmatrix}1.5 \amp  4 \\ 3.9  \amp   9.4 \end{pmatrix}
+\end{align*}
+</div>
+</li>
+<li id="li-81">
+<p id="p-328">\(BA\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+BA=\begin{pmatrix}0.2 \amp  0.4 \\ 0.5 \amp  0.6 \\ 0.1 \amp  0.8 \end{pmatrix} \begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \amp =\amp \begin{pmatrix}0.2\cdot1+ 0.4\cdot 4 \amp  0.2\cdot2+ 0.4\cdot 5 \amp  0.2\cdot3+ 0.4\cdot6\\ 0.5\cdot1+ 0.6\cdot 4 \amp  0.5\cdot2+ 0.6\cdot 5 \amp  0.5\cdot3+ 0.6\cdot6\\ 0.1\cdot1+ 0.8\cdot 4 \amp  0.1\cdot2+ 0.8\cdot 5 \amp  0.1\cdot3+ 0.8\cdot6 \end{pmatrix}\\
+\amp =\amp \begin{pmatrix}1.8 \amp  2.4 \amp  3 \\ 2.9  \amp   4 \amp  5.1 \\ 3.3 \amp  4.2 \amp  5.1 \end{pmatrix}
+\end{align*}
+</div>
+</li>
+<li id="li-82">
+<p id="p-329">\(AC\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+AC=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \begin{pmatrix}10\\20\\15 \end{pmatrix} \amp =\amp \begin{pmatrix}1\cdot10+2\cdot20+3\cdot15 \\ 4\cdot10+5\cdot20+6\cdot15 \end{pmatrix}\\
+\amp =\amp \begin{pmatrix}95 \\ 230 \end{pmatrix}
+\end{align*}
+</div>
+</li>
+<li id="li-83">
+<p id="p-330">\(CA\text{.}\) Notice that if we try to take the product \(CA\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+CA=\begin{pmatrix}10\\20\\15 \end{pmatrix} \begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \amp =\amp \begin{pmatrix}10\cdot1+?\cdot4 \amp  10\cdot2+?\cdot5 \amp  10\cdot3+?\cdot6 \\ 20\cdot1+?\cdot4 \amp  20\cdot2+?\cdot5 \amp  20\cdot3+?\cdot6\\15\cdot1+?\cdot4 \amp  15\cdot2+?\cdot5 \amp  15\cdot3+?\cdot6 \end{pmatrix}
+\end{align*}
+</div>
+<p data-braille="continuation">Since the number of columns of the first matrix do not match with the number of rows of the second matrix, the product is not defined.</p>
+</li>
+<li id="li-84"><p id="p-331">\(BC\text{.}\) Since \(B\) has 2 columns and \(C\) has 3 rows, these values do not match and this product is not defined.</p></li>
+<li id="li-85"><p id="p-332">\(CB\text{.}\) Since \(C\) has 1 column and \(B\) has 2 rows, these values do not match and this product is not defined.</p></li>
+</ol></article></div>
+<p id="p-333">Something we should observe here is that, unlike products of real numbers, products of matrices are <dfn class="terminology">NOT</dfn> commutative. In <a class="xref" data-knowl="./knowl/Example_MoreMatrixProducts.html" title="Example 2.3.3">Example 2.3.3</a>, \(AB\neq BA\text{,}\) and \(AC\) was defined whereas \(CA\) was not.</p>
+<p id="p-334">Another way matrix products deviate from real number products is that the product of matrices whose entries aren't 0 can result in a matrix whose entries are all 0.</p>
+<article class="example example-like" id="example-31"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-31"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-31"><article class="example example-like"><p id="p-335">Let</p>
+<div class="displaymath">
+\begin{equation*}
+A=\begin{pmatrix}1\amp 2\\2\amp 4 \end{pmatrix} , B=\begin{pmatrix}2\amp 6\\-1\amp -3 \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p id="p-336">Notice that:</p>
+<div class="displaymath">
+\begin{align*}
+AB=\begin{pmatrix}1\amp 2\\2\amp 4 \end{pmatrix} \begin{pmatrix}2\amp 6\\-1\amp -3 \end{pmatrix} \amp =\amp \begin{pmatrix}1\cdot 2+2\cdot(-1) \amp  1\cdot 6+2\cdot(-3)\\ 2\cdot 2+4\cdot(-1)\amp 2\cdot 6 +4\cdot(-3) \end{pmatrix}\\
+\amp =\amp \begin{pmatrix}0 \amp  0 \\ 0 \amp  0 \end{pmatrix} \text{.}
+\end{align*}
+</div>
+<p id="p-337">Although neither \(A\) nor \(B\) have 0 entries, their product is an all 0 matrix. Also notice that this does not mean \(BA\) is an all 0 matrix.</p>
+<div class="displaymath">
+\begin{align*}
+BA=\begin{pmatrix}2\amp 6\\-1\amp -3 \end{pmatrix} \begin{pmatrix}1\amp 2\\2\amp 4 \end{pmatrix} \amp =\amp \begin{pmatrix}2\cdot 1+6\cdot2 \amp  2\cdot 2+6\cdot4\\ (-1)\cdot 1+(-3)\cdot2\amp (-1)\cdot 2 +(-3)\cdot4 \end{pmatrix}\\
+\amp =\amp \begin{pmatrix}14 \amp  28 \\ -7 \amp  -14 \end{pmatrix} \text{.}
+\end{align*}
+</div></article></div> While matrix multiplication may differ wildly from real number multiplication, we do have a notion of “multiplying by 1”. <article class="definition definition-like" id="DefinitionIdentity"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
+</h6>
+<p id="p-338">For any positive integer \(n\text{,}\) let \(I_n\) denote the \(n\times n\) matrix with 1's in the diagonal and 0 elsewhere.  This is called a <dfn class="terminology">Identity Matrix</dfn>.</p></article><p id="p-339">So for example</p>
+<div class="displaymath">
+\begin{equation*}
+I_2=\begin{pmatrix}1 \amp 0 \\ 0 \amp 1 \end{pmatrix}.
+\end{equation*}
+</div>
+<p data-braille="continuation">So notice:</p>
+<div class="displaymath">
+\begin{align*}
+\begin{pmatrix}1 \amp 0 \\ 0 \amp 1 \end{pmatrix}\begin{pmatrix}a \amp b \\ c \amp d \end{pmatrix}\amp = \begin{pmatrix}1\cdot a+0\cdot c \amp 1\cdot b+0\cdot d \\ 0\cdot a +1\cdot c \amp 0\cdot b +1\cdot d \end{pmatrix}\\
+\amp = \begin{pmatrix}a \amp b \\ c \amp d \end{pmatrix}\\
+\begin{pmatrix}a \amp b \\ c \amp d \end{pmatrix}\begin{pmatrix}1 \amp 0 \\ 0 \amp 1 \end{pmatrix}\amp = \begin{pmatrix}a\cdot 1+b\cdot 0 \amp a\cdot 0+b\cdot 1 \\ c\cdot 1+ d\cdot 0 \amp c\cdot 0 +d\cdot 1 \end{pmatrix}\\
+\amp = \begin{pmatrix}a \amp b \\ c \amp d \end{pmatrix}
+\end{align*}
+</div>
+<p data-braille="continuation">More generally:</p>
+<article class="remark remark-like" id="remark-1"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
+</h6>
+<p id="p-340">Given a matrix \(M\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+MI_n=M=I_nM
+\end{equation*}
+</div>
+<p data-braille="continuation">whenever these products are defined.</p></article></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Sums of Matrices</span>
+</h3>
+<p id="p-341">Matrix sums are much more straight forward than their products. Two Matrices need to have the same dimensions in order to be summed, and the sum is just the sum of the entries, so:</p>
+<article class="definition definition-like" id="Defn_MatrixSum"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
+</h6>
+<p id="p-342">Given two \(m\times n\) matrices \(A\) and \(B\text{,}\) we define \(A+B\) the sum of \(A\) and \(B\) to be a \(m\times n\) matrix where:</p>
+<div class="displaymath">
+\begin{equation*}
+(AB)_{ij}= (A_{ij}+B_{ij})
+\end{equation*}
+</div></article><article class="example example-like" id="example-32"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-32"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-32"><article class="example example-like"><p id="p-343">Company \(B\) gets in on this action and will give 2 dollars to each charity for each student who attends. NOW given \(F\) female and \(M\) male students, how much money will go to Elderly and the Homeless?</p>
+<div class="displaymath">
+\begin{align*}
+\begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \left( \begin{pmatrix}2 \amp  1 \\ 1 \amp  2 \\ 2 \amp  2 \end{pmatrix}  + \begin{pmatrix}2 \amp  2 \\ 2 \amp  2 \\ 2 \amp  2 \end{pmatrix}    \right)\begin{pmatrix}F\\M \end{pmatrix} \amp = \begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \begin{pmatrix}4 \amp  3 \\ 3 \amp  4 \\ 4 \amp  4 \end{pmatrix}  \begin{pmatrix}F\\M \end{pmatrix}\\
+\amp = \begin{pmatrix}4.7 \amp  4.4 \\ 7.3 \amp   6.6 \end{pmatrix} \begin{pmatrix}F\\M \end{pmatrix}\\
+\amp = \begin{pmatrix}4.7F+4.4M\\ 7.3F+6.6M \end{pmatrix}
+\end{align*}
+</div>
+<p id="p-344">So $\((4.7 F+4.4M)\) for Elderly and $\((7.3 F+6.6M)\) for Homeless.</p></article></div></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.3</span> <span class="title">Computation using Sage</span>
+</h3>
+<p id="p-345">As usual, this seems like it should be much easier using technology. Let's suppose \(A=\begin{pmatrix}1 \amp  2 \\ 3 \amp  4 \end{pmatrix} , B=\begin{pmatrix}5 \amp  6 \\ 7 \amp  8 \end{pmatrix}\text{.}\)  We can use Sage to find \(A+B\text{:}\)</p>
+<p id="p-346"><div class="sagecell-sage" id="sage-2"><script type="text/x-sage">A=matrix(QQ, [[1,2],[3,4]])
+B=matrix(QQ, [[5,6],[7,8]])
+print(A+B)
+</script></div></p>
+<p id="p-347">Use:<pre class="code-block tex2jax_ignore">print(A*B)
+</pre>To find \(AB\)  and<pre class="code-block tex2jax_ignore">print(B*A)
+</pre>to find \(BA\text{.}\)</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><div class="displaymath">
+\begin{align*}
+A+B\amp = \begin{pmatrix}6 \amp  8 \\ 10 \amp  12 \end{pmatrix}\\
+AB\amp = \begin{pmatrix}19 \amp  22 \\ 43 \amp  50 \end{pmatrix}\\
+BA\amp = \begin{pmatrix}23 \amp  34 \\ 31 \amp  46 \end{pmatrix}
+\end{align*}
+</div></div></div></section></section></div></main>
+</div>
+</body>
+</html>

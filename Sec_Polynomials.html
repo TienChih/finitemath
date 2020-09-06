@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:43:43-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Polynomials</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_Quadratics.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_NonLinear.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_RationalFunctions.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_Quadratics.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_NonLinear.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_RationalFunctions.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials" class="active">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_Polynomials"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">Polynomials</span>
+</h2>
+<section class="introduction" id="introduction-25"><article class="definition definition-like" id="definition-9"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-775">A <dfn class="terminology">polynomial</dfn> \(p(x)\) is a function that can be written in the form</p>
+<div class="displaymath">
+\begin{equation*}
+p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x^1+a_0(x^0)\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(n\geq 0\) is a whole number, and \(a_n\neq 0\) <dfn class="terminology">unless</dfn> \(p(x)=0\text{.}\)</p>
+<ul class="disc">
+<li id="li-309"><p id="p-776">The \(a_i\) are the <em class="emphasis">coefficients</em> of \(p(x)\text{.}\)</p></li>
+<li id="li-310"><p id="p-777">\(a_n\) is the <em class="emphasis">leading coefficient</em> of \(p(x)\text{.}\)</p></li>
+<li id="li-311"><p id="p-778">\(n\) is the <em class="emphasis">degree</em> of \(p(x)\text{.}\)</p></li>
+<li id="li-312"><p id="p-779">\(a_nx^n\) is the <em class="emphasis">leading term</em> of \(p(x)\text{.}\)</p></li>
+</ul></article><p id="p-780">We've already seen some examples of these.</p>
+<ul class="disc">
+<li id="li-313">A constant linear function \(y=c\) is a polynomial of degree 0, since \(y=cx^0\text{.}\)</li>
+<li id="li-314">A constant linear function of the form \(y=mx+b\) with non-zero slope is a polynomial of degree 1, since \(y=mx^1+bx^0\text{.}\)</li>
+<li id="li-315">A constant quadratic function \(y=ax^2+bx+c\) is a polynomial of degree 2, since \(y=ax^2+bx^1+cx^0\text{.}\)</li>
+</ul></section><section class="subsection" id="subsection-55"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.3.1</span> <span class="title">Long Term Behavior</span>
+</h3>
+<p id="p-781">When we consider a polynomial \(p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x^1+a_0\text{,}\) we notice that no matter how big the coefficients \(a_{n-1}\) through \(a_0\) are, they will all eventually be made insignificant by \(x^n\) for some sufficiently large values of \(x\text{.}\) Thus we have the following fact:</p>
+<article class="remark remark-like" id="remark-3"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-782">The long term behavior of \(p(x)\) is determined <dfn class="terminology">completely</dfn> by it's leading term \(a_nx^n\text{.}\)</p></article><p id="p-783">To see this, consider the plots of \(y=x^3\) and \(y=1000x^2\text{.}\) <iframe src="https://www.desmos.com/calculator/a6xxwxtigr" id="interactive-107" width="600" height="600"></iframe> One thousand is a huge coefficient for sure!  But will that matter so much when \(x\) is in the thousands, the millions, the trillions?  Eventually \(x\cdot x^2\) will be much greater than \(1000\cdot x^2\) when \(x\) is big enough.  So if we plotted \(y=x^3-1000x^2\) next to \(y=x^3\) <iframe src="https://www.desmos.com/calculator/1kud4u5ius" id="interactive-108" width="600" height="600"></iframe> We see that they have the same general shape.</p>
+<p id="p-784">So we have 2 things to consider, whether or not \(a_n\) is positive or negative, or whether or not \(n\) is even or odd.</p>
+<p id="p-785">If \(a_n&gt;0\text{,}\) then there are 2 possibilities:</p>
+<ul class="disc">
+<li id="li-316"><p id="p-786">If \(n\) is even, (like \(x^2, x^4, x^6)\text{,}\) then \(a_nx^n\) cannot be negative, so \(p(x)\) will tend to positive infinity as \(x\) goes to either positive or negative infinity.</p></li>
+<li id="li-317"><p id="p-787">If \(n\) is odd, (like \(x, x^3, x^5)\text{,}\) then \(a_nx^n\) is positive as long as \(x\) is positive, so \(p(x)\) will tend to positive infinity as \(x\) goes to either positive infinity, and \(a_nx^n\) will go to negative infinity as x goes to negative infinity.</p></li>
+</ul>
+<p id="p-788">Then, if \(a_n\lt 0\text{,}\) everything is flipped upside down. We can summarize as follows:</p>
+<ul class="disc">
+<li id="li-318">If \(a_n&gt;0, n\) is even, \(p(x)\to \infty \) as \(x\to \pm \infty\text{.}\)</li>
+<li id="li-319">If \(a_n\lt 0, n\) is even, \(p(x)\to -\infty \) as \(x\to \pm \infty\text{.}\)</li>
+<li id="li-320">If \(a_n&gt;0, n\) is odd, \(p(x)\to \infty \) as \(x\to \infty\text{,}\) and \(p(x)\to -\infty \) as \(x\to -\infty\text{.}\)</li>
+<li id="li-321">If \(a_n\lt 0, n\) is odd, \(p(x)\to -\infty \) as \(x\to \infty\text{,}\) and \(p(x)\to \infty \) as \(x\to -\infty\text{.}\)</li>
+</ul>
+<p id="p-789"><iframe src="https://www.desmos.com/calculator/umxealnqdk" id="interactive-109" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.3.2</span> <span class="title">Short Term Behavior</span>
+</h3>
+<p id="p-790">The first thing one can always do when analyzing the short term behavior of \(p(x)\) is find the \(y\)-intercept. The \(y\) intercept is just the point on the curve of the function when \(x=0\text{,}\) so this is \(p(0)=a_0\text{.}\)</p>
+<p id="p-791">By the <dfn class="terminology">Fundamental Theorem of Algebra</dfn>, we can write \(p(x)=a_nx^n+\cdots +a_0\) as:</p>
+<div class="displaymath">
+\begin{equation*}
+p(x)=a_n(x-r_1)^{m_1}(x-r_2)^{m_2}\cdots (x-r_k)^{m_k}\cdot q_1(x)q_2(x)\cdots q_\ell(x)
+\end{equation*}
+</div>
+<p data-braille="continuation">where the \(q_i(x)\) are irreducible quadratics. We call \(r_1, \ldots, r_k\) the <em class="emphasis">roots</em> of \(r(x)\text{,}\) where root \(r_i\) has <em class="emphasis">multiplicty</em> \(m_i\text{.}\) What this means is if we plug \(r_i\) into \(p(x)\text{,}\) we end up with 0, since that linear factor ends up being 0.</p>
+<p id="p-792">The behavior of \(p(x)\) around these roots is determined by the multiplicity of that root. We know that \(p(x)\) will be 0 at those roots, so the question is whether or not the polynomial crosses the \(x\) axis at a given roots, or bounces off the axis:</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-49.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-793">We notice that \(p(x)\) only changes sign when it's factors \((x-r_i)^{m_i}\) changes sign. But \((x-r_i)^{m_i}\) only changes sign if \(m_i\) is odd. So we have the following fact:</p>
+<article class="remark remark-like" id="remark-4"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.3.3</span><span class="period">.</span>
+</h6>
+<p id="p-794">The polynomial \(p(x)\) “crosses” the \(x\)-axis at \(r_i\) if \(m_i\) is odd and “bounces” if \(m_i\) is even.</p></article><article class="example example-like" id="example-62"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-62"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-62"><article class="example example-like"><p id="p-795">Let</p>
+<div class="displaymath">
+\begin{equation*}
+p(x)=x^3-3x^2=x^2(x-3)\text{.}
+\end{equation*}
+</div>
+<p id="p-796"><iframe src="https://www.desmos.com/calculator/iy0chaljdq" id="interactive-110" width="600" height="600"></iframe> Since it is a odd degree polynomial with positive leading coefficient, it goes up to \(\infty\) as \(x\) goes to \(\infty\) and down to \(-\infty\) as \(x\) goes to \(-\infty\text{.}\) We also see that \(p(x)=0\) whenever \(x=0\) or \(x=3\text{.}\) The multiplicity of 0 is 2, and the multiplicity of 3 is 1, which are even and odd respectively, so \(p(x)\) “bounces” at \(x=0\) and crosses at \(x=1\text{.}\)</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-50.svg" role="img" style="width: 100%; height: auto;" alt=""></div></article></div>
+<article class="example example-like" id="example-63"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-63"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-63"><article class="example example-like"><p id="p-797">Let</p>
+<div class="displaymath">
+\begin{equation*}
+p(x)=x^4-2x^2+1=(x-1)^2(x+1)^2\text{.}
+\end{equation*}
+</div>
+<p id="p-798"><iframe src="https://www.desmos.com/calculator/wmr67oopgj" id="interactive-111" width="600" height="600"></iframe>  Since it is a even degree polynomial with positive leading coefficient, it goes up to \(\infty\) as \(x\) goes to both positive and negative \(\infty\text{.}\) We also see that \(p(x)=0\) whenever \(x=-1\) or \(x=1\text{.}\) The multiplicity of both of these roots is 2, so \(p(x)\) “bounces” at both \(x=1\) and \(x=-1\text{.}\)</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-51.svg" role="img" style="width: 100%; height: auto;" alt=""></div></article></div></section></section></div></main>
+</div>
+</body>
+</html>

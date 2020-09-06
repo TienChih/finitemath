@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:43:51-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cardinality and Probability</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script>$(function () {
+    // Make *any* div with class 'sagecell-r' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-r',
+                           linked: true,
+                           languages: ['r'],
+                           evalButtonText: 'Evaluate (R)'});
+});
+</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_IntroSets.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_SetProb.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_Conditional.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_IntroSets.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_SetProb.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_Conditional.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb" class="active">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_CardProb"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.2</span> <span class="title">Cardinality and Probability</span>
+</h2>
+<section class="introduction" id="introduction-39"><p id="p-1056">In this section, we enumerate the size or cardinality of sets, and show how this connects to probability.</p></section><section class="subsection" id="subsection-87"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.2.1</span> <span class="title">Cardinality</span>
+</h3>
+<p id="p-1057">We define the terms and notation we use to measure set size.</p>
+<article class="definition definition-like" id="DefinitionCardinality"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-1058">Given a  set \(A\text{,}\) the <dfn class="terminology">cardinality</dfn> of \(A\) denoted \(|A|\) is the number of elements in \(A\text{.}\)</p></article><article class="example example-like" id="example-85"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-85"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-85"><article class="example example-like"><p id="p-1059">Consider the sets</p>
+<div class="displaymath">
+\begin{equation*}
+A=\{1,2,3,4,5\}, B=\{1,3,5\}, C=\{1,4,1\}.
+\end{equation*}
+</div>
+<ul class="disc">
+<li id="li-504">\(|A|=5\text{,}\) \(A\) has 5 elements.</li>
+<li id="li-505">\(|B|=3\text{,}\) \(B\) has 3 elements.</li>
+<li id="li-506">\(|C|=2\text{,}\) \(C\) has <em class="emphasis">2</em> elements, 1 and 4.</li>
+</ul></article></div>
+<p id="p-1060"><article class="remark remark-like" id="remark-15"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-1061">We note the following about cardinality:</p>
+<ul class="disc">
+<li id="li-507">\(|A^c|=|\mathcal{U}|-|A|\text{,}\) since \(A^c\) consists of all elements of \(\mathcal{U}\) not in \(A\text{.}\)</li>
+<li id="li-508">\(|\emptyset|=0\) since  the empty set contains no elements.</li>
+</ul></article> <p id="p-1062">Let us consider \(|A\cup B|.\)  To see this, let's consider <a class="xref" data-knowl="./knowl/ExampleSet.html" title="Example 8.1.12">Example 8.1.12</a> and let</p><div class="displaymath">
+\begin{equation*}
+\mathcal{U}=\{Ailca, Bryan, Corrine, Damien, Esmeralda, Francis\}.
+\end{equation*}
+</div><p data-braille="continuation">Then let \(A=\{Bryan, Esmeralda\}, B=\{Bryan, Francis\}\text{.}\)</p> <p id="p-1063">We note that \(|A|=2, |B|=2\text{.}\)  But if we just took \(2+2\text{,}\) we note that Bryan is counted in both sets, but the cardinality of \(\{Bryan, Esmeralda, Bryan, Francis\}=3\text{,}\) since there are only 3 elements in \(A\cup B\text{.}\)  We note then that we double counted the element(s) in both sets, that is \(A\cap B\text{.}\)</p> <figure class="figure figure-like" id="figure-18"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-62.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.4<span class="period">.</span></span><span class="space"> </span>Each set \(A, B\) and their respective sizes.</figcaption></figure> We can see that there is one element in \(A\) that's not in \(B\text{,}\) one element in \(B\) that's not in \(A\text{,}\) one element in both \(A\) and \(B\text{,}\) and three elements neither in \(A\) nor \(B\text{.}\)</p>
+<article class="remark remark-like" id="remark-16"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.2.5</span><span class="period">.</span>
+</h6>
+<p id="p-1064">Given sets \(A, B\text{,}\) we have that:</p>
+<div class="displaymath">
+\begin{equation*}
+|A\cup B|=|A|+|B|-|A\cap B|.
+\end{equation*}
+</div>
+<p data-braille="continuation">This is the  size of \(A\) plus the size of \(B\text{,}\) then the overlap removed.</p></article><p id="p-1065">We can see this here with the following Desmos graph.  Initially, \(P(A)=0.6, P(B)=0.4, P(A\cap B)=0.3, P(A\cup B)=0.6+0.4-0.3=0.7\text{.}\)  Adjust the probablities, and slide the regions to change the overlap to see how that effects the values! <iframe src="https://www.desmos.com/calculator/apw3mu8qiy" id="interactive-170" width="600" height="600"></iframe></p>
+<article class="example example-like" id="ExampleClass"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ExampleClass"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleClass"><article class="example example-like"><p id="p-1066">Suppose a class of 25 had 12 student athletes, 8 biology majors, and 5 students who were both student athletes and biology majors.  How many students are either student athletes of biology majors.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-108" id="solution-108"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-108"><div class="solution solution-like">
+<p id="p-1067">If we let \(A\) denote student athletes and \(B\) denote biology majors, we have:</p>
+<div class="displaymath">
+\begin{equation*}
+|A|=12, |B|=8, |A\cap B|=5,
+\end{equation*}
+</div>
+<p data-braille="continuation">thus \(|A\cup B|=|A|+|B|-|A\cap B|=12+8-5=15.\) <figure class="figure figure-like" id="figure-19"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-63.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.7<span class="period">.</span></span><span class="space"> </span>Each set \(A, B\) and their respective sizes.</figcaption></figure></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="ExerciseFood"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ExerciseFood"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.8</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseFood"><article class="exercise exercise-like"><p id="p-1068">A food truck sells only burgers and hotdogs.  We have that 20 people ordered something, 18 people ordered burgers, 6 ordered hotdogs, how many people ordered both?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-109" id="solution-109"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-109"><div class="solution solution-like">
+<p id="p-1069">If we let \(B\) denote people who ordered burgers and \(H\) denote people who ordered hotdogs, we have:</p>
+<div class="displaymath">
+\begin{equation*}
+|B|=18, |H|=6, |B\cup H|=20,
+\end{equation*}
+</div>
+<p data-braille="continuation">thus</p>
+<div class="displaymath">
+\begin{align*}
+|B\cup H|\amp=|B|+|H|-|B\cap H|\\
+20\amp=18+6-|B\cap H|\\
+|B\cap H|\amp=4.
+\end{align*}
+</div>
+<p data-braille="continuation">So four people ordered both. <figure class="figure figure-like" id="figure-20"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-64.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.9<span class="period">.</span></span><span class="space"> </span>Each set \(B, H\) and their respective sizes.</figcaption></figure></p>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-88"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.2.2</span> <span class="title">Probability</span>
+</h3>
+<p id="p-1070">In probability, an <dfn class="terminology">experiment</dfn> is an  occurrence with a measurable result. Each instance of an experiment is  a <dfn class="terminology">trial</dfn>. The possible results of each trial are called <dfn class="terminology">outcomes</dfn>. The set of all possible outcomes for an experiment is the <dfn class="terminology">sample space</dfn> for that experiment.</p>
+<p id="p-1071">So the sample space of flipping a coin would be</p>
+<div class="displaymath">
+\begin{equation*}
+S=\{T, H\}.
+\end{equation*}
+</div>
+<p data-braille="continuation">Whereas the sample space of rolling a single six-sided dice would be</p>
+<div class="displaymath">
+\begin{equation*}
+S=\{1,2,3,4,5,6\}.
+\end{equation*}
+</div>
+<p id="p-1072">In the context of an experiment, we understand the sample space to be the universal set.</p>
+<article class="definition definition-like" id="DefinitionProb"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.10</span><span class="period">.</span>
+</h6>
+<p id="p-1073">Given an experiment with sample space \(S\text{:}\)</p>
+<ul class="disc">
+<li id="li-509">An <dfn class="terminology">event</dfn> \(A\) is a subset of \(S\text{.}\)</li>
+<li id="li-510">If each outcome in the sample space is equally likely, then the <dfn class="terminology">probability</dfn> of \(A\text{,}\) denoted \(P(A)\) is<div class="displaymath">
+\begin{equation*}
+P(A)=\frac{|A|}{|S|}.
+\end{equation*}
+</div>
+</li>
+</ul></article><article class="remark remark-like" id="remark-17"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.2.11</span><span class="period">.</span>
+</h6>
+<p id="p-1074">But what does it mean for an event \(A\) to have probability \(P(A)\text{?}\)  It means that if I repeat the experiment over and over, the proportion of them where \(A\) is true should be \(P(A)\text{.}\)</p>
+<p id="p-1075">So if I roll a die over and over, the proportion of them that give me a 6 over time should be \(\frac{1}{6}\text{.}\)  So if we roll a dice 10000 times, we would expect one sixth of them to come up heads:</p>
+<div class="sagecell-r" id="sage-12"><script type="text/x-sage">          n=10000
+
+sixes=0
+Sixvec<-vector(length = 0)
+
+for (i in 1:n){
+  roll=sample(1:6,1,replace=TRUE)
+  if (roll==1){
+    sixes=sixes+1
+  }
+Sixvec<-c(Sixvec, sixes/i)  
+}
+
+plot(Sixvec, type="l", ylim=c(0,1))
+abline(h=1/6, col="red", lty=2)
+</script></div></article><article class="example example-like" id="example-87"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-87"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.12</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-87"><article class="example example-like"><p id="p-1076">Consider the outcomes of rolling a single six-sided dice.  Let \(X\) denote the event “The outcome is even” and \(Y\) denote “The outcome is at least a 4”.  Find the follo0wing:</p>
+<ul class="disc">
+<li id="li-511">\(X\text{.}\)</li>
+<li id="li-512">\(Y\text{.}\)</li>
+<li id="li-513">\(X\cup Y\text{.}\)</li>
+<li id="li-514">\(X\cap Y\text{.}\)</li>
+<li id="li-515">\(X\cap Y^c\text{.}\)</li>
+<li id="li-516">\(X^c\cup Y\text{.}\)</li>
+</ul>
+<p id="p-1078">Then find:</p>
+<ul class="disc">
+<li id="li-523">\(P(X)\text{.}\)</li>
+<li id="li-524">\(P(Y)\text{.}\)</li>
+<li id="li-525">\(P(X\cup Y)\text{.}\)</li>
+<li id="li-526">\(P(X\cap Y)\text{.}\)</li>
+<li id="li-527">\(P(X\cap Y^c)\text{.}\)</li>
+<li id="li-528">\(P(X^c\cup Y)\text{.}\)</li>
+</ul>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-110" id="solution-110"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-110"><div class="solution solution-like">
+<p id="p-1077">Notice:</p>
+<ul class="disc">
+<li id="li-517">\(X=\{2,4,6\}\text{.}\)</li>
+<li id="li-518">\(Y=\{4,5,6\)\text{.}\)</li>
+<li id="li-519">\(X\cup Y=\{2,4,5,6\}\text{.}\)</li>
+<li id="li-520">\(X\cap Y=\{4,6\}\text{.}\)</li>
+<li id="li-521">\(X\cap Y^c=\{2\}\text{.}\)</li>
+<li id="li-522">\(X^c\cup Y=\{1,3,4,5,6\}\text{.}\)</li>
+</ul>
+<p data-braille="continuation">Observe the venn diagram: <figure class="figure figure-like" id="figure-21"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-65.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.13<span class="period">.</span></span><span class="space"> </span>Each event \(X, Y\) and their respective elements.</figcaption></figure></p>
+</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-111" id="solution-111"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-111"><div class="solution solution-like">
+<p id="p-1079">From above:</p>
+<ul class="disc">
+<li id="li-529">\(P(X)=\frac{3}{6}\text{.}\)</li>
+<li id="li-530">\(P(Y)=\frac{3}{6}\text{.}\)</li>
+<li id="li-531">\(P(X\cup Y)=\frac{4}{6}\text{.}\)</li>
+<li id="li-532">\(P(X\cap Y)=\frac{2}{6}\text{.}\)</li>
+<li id="li-533">\(P(X\cap Y^c)=\frac{1}{6}\text{.}\)</li>
+<li id="li-534">\(P(X^c\cup Y)=\frac{5}{6}\text{.}\)</li>
+</ul>
+<p data-braille="continuation">We can modify our above venn diagram to list probabilities: <figure class="figure figure-like" id="figure-22"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-66.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.14<span class="period">.</span></span><span class="space"> </span>Each event \(X, Y\) and their respective probabilities.</figcaption></figure></p>
+</div></div>
+</div></article></div>
+<article class="remark remark-like" id="remark-18"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.2.15</span><span class="period">.</span>
+</h6>
+<p id="p-1080">We note the following about probability:</p>
+<ul class="disc">
+<li id="li-535">\(P(A^c)=\frac{|S|-|A|}{\mathcal{U}}=\frac{|S|}{|S|}-\frac{|A|}{|S|}=1-P(A)\text{.}\)</li>
+<li id="li-536">\(P(\emptyset)=\frac{0}{|S|}=0\text{.}\)</li>
+<li id="li-537">\(P(A)=P(A\cap B)+P(A\cap B^c)\text{,}\) since the outcomes which constitute \(A\) all either belong to \(B\) or they don't.</li>
+<li id="li-538">\(P(A\cup B)=\frac{|A\cup B|}{|S|}=\frac{|A|+ |B|-|A\cap B|}{|S|}=P(A)+P(B)-P(A\cap B)\text{.}\)</li>
+</ul></article><article class="definition definition-like" id="definition-25"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.16</span><span class="period">.</span>
+</h6>
+<p id="p-1081">Two sets \(A, B\) are <dfn class="terminology">mutually exclusive</dfn> or <dfn class="terminology">disjoint</dfn> if \(P(A\cap B)=0\text{.}\)  In other words, \(A\) and \(B\) cannot occur at the same time.</p></article><p id="p-1082">We can see in the interactive below, that if we roll a dice 1000 times, then the probabilty of \(A\) the outcome being even will be about \(P(A)=\frac{1}{2}\text{,}\) the probabilty of \(B\) the outcome being greater than or equal to 4 will be about \(P(B)=\frac{1}{2}\text{,}\) for \(A\cap B\text{,}\) both occuring, is about \(P(A\cap B)=\frac{1}{3}\) and for \(A\cup B\) either occuring, is about \(P(A\cup B)=\frac{1}{2}+\frac{1}{2}-\frac{1}{3}=\frac{2}{3}.\) <iframe src="https://www.desmos.com/calculator/9b6d2rs6sd" id="interactive-171" width="600" height="600"></iframe> Hit the shuffle on the top left to “re-roll” the dice.</p>
+<p id="p-1083">We can also do this with sage.  We roll a dice \(n=1500\) times:</p>
+<div class="sagecell-r" id="sage-13"><script type="text/x-sage">n<-1500
+X<-c(1,2,3,4,5,6)
+prob<-c(1/6,1/6,1/6,1/6,1/6,1/6)
+Results<-sample(X,n,replace=TRUE, prob)
+
+hist(Results)
+
+print(mean(Results))
+print(var(Results))
+print(sd(Results))
+</script></div>
+<article class="exercise exercise-like" id="ExerciseWeather"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ExerciseWeather"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.17</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseWeather"><article class="exercise exercise-like"><p id="p-1084">Suppose that today, there is a 20% chance it rains, a 10% chance that I will be in a bad mood, and an 8% chance that it rains <em class="emphasis">and</em> I'm in a bad mood.</p>
+<ol class="decimal">
+<li id="li-539">What is the probability it rains <em class="emphasis">or</em> I'm in a bad mood?</li>
+<li id="li-540">What is the probability it rains <em class="emphasis">and</em> I'm in a good mood?</li>
+<li id="li-541">What is the probability it doesn't rain <em class="emphasis">or</em> I'm in a bad mood?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-112" id="solution-112"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-112"><div class="solution solution-like">
+<p id="p-1085">If we let \(R\) denote “It rains” and \(B\) denote “I am in a bad mood” then we are given \(P(R)=0.2, P(B)=0.1, P(R\cap B)=0.08\) and may fill out the following venn diagram: <figure class="figure figure-like" id="figure-23"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-67.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.18<span class="period">.</span></span><span class="space"> </span>Each event \(R, B\) and their respective probabilities.</figcaption></figure></p>
+<ol class="decimal">
+<li id="li-542">This is \(P(R\cup B)\text{,}\) which we could compute \(P(R\cup B)=0.12+0.2+0.8=0.22\) or \(P(R\cup B)=P(R)+P(B)-P(R\cap B)=0.2+0.1-0.08=0.22\text{.}\) <figure class="figure figure-like" id="figure-24"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-68.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.19<span class="period">.</span></span><span class="space"> </span>\(R\cup B\)</figcaption></figure>
+</li>
+<li id="li-543">This is \(P(R\cap B^c)\text{,}\) which we can see is \(P(R\cap B^c)=0.12\text{.}\) <figure class="figure figure-like" id="figure-25"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-69.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.20<span class="period">.</span></span><span class="space"> </span>\(R\cap B^c\)</figcaption></figure>
+</li>
+<li id="li-544">This is \(P(R^c\cup B)\text{,}\) which we can see is \(P(R^c\cup B)=0.78+0.02+0.08=0.88\text{.}\) <figure class="figure figure-like" id="figure-26"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-70.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.21<span class="period">.</span></span><span class="space"> </span>\(R^c\cup B\)</figcaption></figure>
+</li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="ExerciseClass"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ExerciseClass"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.22</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseClass"><article class="exercise exercise-like"><p id="p-1086">Suppose that in a Mathematics department, 20% of the students have done undergraduate research, 25% have gone to conferences.  We also have that 30% have done either one or the other.</p>
+<ol class="decimal">
+<li id="li-545">What is the proportion of students who have done both undergraduate research and gone to conferences?</li>
+<li id="li-546">What is the proportion of students who have gone to conferences but without having done undergraduate research?</li>
+<li id="li-547">What is the proportion of students have neither done undergraduate research nor gone to a conference?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-113" id="solution-113"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-113"><div class="solution solution-like">
+<p id="p-1087">If we let \(R\) denote “has done undergraduate research” and \(C\) denote “has gone to a conference” then we are given \(P(R)=0.2, P(C)=0.25, P(R\cup C)=0.3\text{:}\)</p>
+<ol class="decimal">
+<li id="li-548">This is \(P(R\cap C)\text{:}\)<div class="displaymath">
+\begin{align*}
+P(R\cup C)\amp = P(R)+P(C)-P(R\cap C) \\
+0.3\amp = 0.2+0.25-P(R\cap C) \\
+P(R\cap C)\amp=0.15 
+\end{align*}
+</div>From here we may fill out the following diagram <figure class="figure figure-like" id="figure-27"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-71.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.23<span class="period">.</span></span><span class="space"> </span>\(R, C\) and their probabilities</figcaption></figure>
+</li>
+<li id="li-549">This is \(P(R\cap C^c)\text{,}\) which we can see is \(P(R\cap C^c)=0.05\text{.}\) <figure class="figure figure-like" id="figure-28"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-72.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.24<span class="period">.</span></span><span class="space"> </span>\(R\cap C^c\)</figcaption></figure>
+</li>
+<li id="li-550">This is \(P(R^c\cap C^c)\text{,}\) which we can see is \(P(R^c\cap C^c)=0.7\text{.}\) <figure class="figure figure-like" id="figure-29"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-73.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.25<span class="period">.</span></span><span class="space"> </span>\(R^c\cap C^c\)</figcaption></figure>
+</li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-75"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-75"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.26</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-75"><article class="exercise exercise-like"><p id="p-1088">Roll two six-sided dice.  Let \(A\) denote “first die outcome is a 6”, \(B\) denotes “the sum of the outcomes is at least 10” and \(C\) denote “second die outcome is a 3”. Find the following:</p>
+<ol class="decimal">
+<li id="li-551">\(P(A)\text{.}\)</li>
+<li id="li-552">\(P(B)\text{.}\)</li>
+<li id="li-553">\(P(C)\text{.}\)</li>
+<li id="li-554">\(P(A\cap B)\text{.}\)</li>
+<li id="li-555">\(P(A\cup B)\text{.}\)</li>
+<li id="li-556">\(P(B\cap C)\text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-114" id="solution-114"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-114"><div class="solution solution-like">
+<p id="p-1089">We first note that \(|S|=36\) possible pair of die rolls:</p>
+<div class="displaymath">
+\begin{equation*}
+(1,1),(1,2),(1,3),(1,4),(1,5),(1,6)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(2,1),(2,2),(2,3),(2,4),(2,5),(2,6)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(3,1),(3,2),(3,3),(3,4),(3,5),(3,6)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(4,1),(4,2),(4,3),(4,4),(4,5),(4,6)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(5,1),(5,2),(5,3),(5,4),(5,5),(5,6)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(6,1),(6,2),(6,3),(6,4),(6,5),(6,6)
+\end{equation*}
+</div>
+<ol class="decimal">
+<li id="li-557">Note that \(A= \{(6,1),(6,2),(6,3),(6,4),(6,5),(6,6)\}\) so \(P(A)=\frac{6}{36}.\text{.}\)</li>
+<li id="li-558">Note that \(B= \{(4,6),(5,5),(5,6),(6,4),(6,5),(6,6)\}\) so \(P(B)=\frac{6}{36}\text{.}\)</li>
+<li id="li-559">Note that \(C= \{(1,3),(2,3),(3,3),(4,3),(5,3),(6,3)\}\) so \(P(C)=\frac{6}{36}\text{.}\)</li>
+<li id="li-560">Note that \(A\cap B= \{(6,4),(6,5),(6,6)\}\) so \(P(A\cap B)=\frac{3}{36}\text{.}\)</li>
+<li id="li-561">\(P(A\cup B)=P(A)+P(B)-P(A\cap B)=\frac{6}{36}+\frac{6}{36}-\frac{3}{36}=\frac{9}{36}\text{.}\)  Also \(A\cup B=\{(4,6),(5,5),(5,6), (6,1),(6,2),(6,3),(6,4),(6,5),(6,6)\}\) so \(P(A\cup B)=\frac{9}{36}\text{.}\)</li>
+<li id="li-562">Note \(B\cap C=\emptyset\) so \(P(B\cap C)=0\text{.}\)  On other words \(B, C\) are disjoint.</li>
+</ol>
+</div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>

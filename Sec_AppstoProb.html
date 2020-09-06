@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:43:55-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Applications to Probability</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_Combinations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_CountingProb.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_ProbabilityDistributions.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_Combinations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_CountingProb.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_ProbabilityDistributions.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb" class="active">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_AppstoProb"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">Applications to Probability</span>
+</h2>
+<section class="introduction" id="introduction-45"><p id="p-1199">In this section, we apply together what's learned from <a href="Chap_SetProb.html" class="internal" title="Chapter 8: Introduction to Sets and Probabilty">Chapter 8</a> and <a href="Sec_Permutation.html" class="internal" title="Section 9.1: Multiplication Principle and Permutations">Section 9.1</a>, <a href="Sec_Combinations.html" class="internal" title="Section 9.2: Combinations and Binomial Coefficients">Section 9.2</a> to compute probabilities.</p></section><section class="subsection" id="subsection-98"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.3.1</span> <span class="title">Turning Counting into Probability</span>
+</h3>
+<p id="p-1200">Recall  <a class="xref" data-knowl="./knowl/DefinitionProb.html" title="Definition 8.2.10">Definition 8.2.10</a>.   We are now equipped to find the cardinality of both \(A\)and \(S\text{.}\)</p>
+<article class="example example-like" id="example-102"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-102"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-102"><article class="example example-like"><p id="p-1201">Consider a 52 card deck, and draw 5 cards without replacement.</p>
+<ol class="decimal">
+<li id="li-644">What is the probability that all 5 cards are spades?</li>
+<li id="li-645">What is probability that all 5 cards are the same suit?</li>
+<li id="li-646">What is the probability that are exactly two heart?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-144" id="solution-144"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-144"><div class="solution solution-like">
+<p id="p-1202">Recall that there are \(C(52,5)\) ways to select 5 cards of 52.  Thus \(|S|=C(52,5)=2598960\text{.}\)</p>
+<ol class="decimal">
+<li id="li-647">There are 13 spades so the number of ways to select 5 spades is \(C(13,5)=1287\text{.}\)  Thus the probability of selecting 5 cards and getting all spades is \(\frac{C(13,5)}{C(52,5)}=\frac{1287}{2598960}\approx 0.00495\text{.}\)</li>
+<li id="li-648">The number of ways to select all cards from the same suit is still \(C(13,5)\) but since there are 4 suits, the probability of selecting 5 cards and they are all the same suit is \(\frac{4\cdot C(13,5)}{C(52,5)}=\frac{4\cdot 1287}{2598960}\approx 0.0198107\text{.}\)</li>
+<li id="li-649">We select 2 out of 13 hearts and 3 out of 39 non-hearts, and there are \(C(13,2)\cdot C(39,3)=78\cdot 9139=712842\) ways to do this.  Thus the probability you pick 5 cards and exactly 2 are hearts is \(\frac{C(13,2)\cdot C(39,3)}{C(52,5)}=\frac{712842}{259860}\approx  0.27428\)</li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="ExampleDigits"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ExampleDigits"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleDigits"><article class="example example-like"><p id="p-1203">Consider a 4 digit passcode consisting of digits 0 through 9.</p>
+<ol class="decimal">
+<li id="li-650">What is the probability that a random passcode doesn't repeat digits?</li>
+<li id="li-651">What is probability that a random passcode only uses even digits?</li>
+<li id="li-652">What is the probability only uses even digits without repitition?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-145" id="solution-145"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-145"><div class="solution solution-like">
+<p id="p-1204">Recall that there are \(10\cdot10\cdot10\cdot10=10^4=1000\) possible passcodes.  Thus \(|S|=10000\text{.}\)</p>
+<ol class="decimal">
+<li id="li-653">There are \(P(10,4)=10\cdot9\cdot8\cdot7=5040\) passcodes that don't repeat digits.  Thus the probability that a passcode doesn't repeat digits is \(\frac{P(10,4)}{10^4}=\frac{5040}{10000}=0.504\) .</li>
+<li id="li-654">There are \(5^4=625\) passcodes that only use even digits.  Thus the probability that a passcode uses only even digits is \(\frac{5^4}{10^4}=\frac{625}{10000}=0.0625\) .</li>
+<li id="li-655">There are \(P(5,4)=5\cdot4\cdot3\cdot2=120\) passcodes that don't repeat digits and only use even digits.  Thus the probability that a passcode doesn't repeat digits and only uses even digits is \(\frac{P(5,4)}{10^4}=\frac{120}{10000}=0.012\) .</li>
+</ol>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-99"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.3.2</span> <span class="title">Operations on Events and Counting</span>
+</h3>
+<p id="p-1205">We can also apply all the probability techniques from <a href="Chap_SetProb.html" class="internal" title="Chapter 8: Introduction to Sets and Probabilty">Chapter 8</a> to these situations.</p>
+<article class="example example-like" id="example-104"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-104"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-104"><article class="example example-like"><p id="p-1206">Consider a 52 card deck, and draw 5 cards without replacement.</p>
+<ol class="decimal">
+<li id="li-656">What is the probability that is at least one diamond?</li>
+<li id="li-657">What the cards are all back or all non-face cards (2-9)?</li>
+<li id="li-658">If the cards are all black, what is the probability they are all non-face cards?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-146" id="solution-146"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-146"><div class="solution solution-like">
+<p id="p-1207">Consider:</p>
+<ol class="decimal">
+<li id="li-659">If \(D\) is the event “at least one diamond”, then \(D^c\) means “no diamonds”.  \(P(D^c)=\frac{C(39,5)}{C(52,5)}=\frac{575757}{2598960}\approx 0.2215336\text{,}\) since there are 29 non diamonds to pick 5 from.  So \(P(D)=1-P(D^c)=1-\frac{C(39,5)}{C(52,5)}\approx 0.7784664.\)</li>
+<li id="li-660">Let \(B\) denote “all black cards”, and \(N\) denote “all non-face cards”.  Note \(P(B)=\frac{C(26,5)}{C(52,5)}\text{,}\) \(P(N)=\frac{C(36,5)}{C(52,5)}\text{,}\) and \(P(B\cap N)=\frac{C(18,5)}{C(52,5)}\text{.}\)  Thus<div class="displaymath">
+\begin{equation*}
+P(B\cup N)=P(B)+P(N)-P(B\cap N)=\frac{C(26,5)+C(36,5)-C(18,5)}{C(52,5)}=\frac{65780+376992-8568}{2598960}\approx 0.167068.
+\end{equation*}
+</div>
+</li>
+<li id="li-661">This is \(P(N|B)=\frac{P(N\cap B)}{P(B)}=\frac{C(18,5)/C(52,5)}{C(26,5)/C(52,5)}=\frac{C(18,5)}{C(26,5)}=\frac{8568}{65780}\approx 0.130252.\)</li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-105"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-105"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-105"><article class="example example-like"><p id="p-1208">Consider a 4 digit passcode consisting of digits 0 through 9.</p>
+<ol class="decimal">
+<li id="li-662">What is the probability that a random passcode doesn't repeat digits or the digits are all even?</li>
+<li id="li-663">If the digits are all even, what's the probability that they don't repeat?</li>
+<li id="li-664">Are digits repeating and digits being even independent?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-147" id="solution-147"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-147"><div class="solution solution-like">
+<p id="p-1209">Let \(R\) denote “digits don't repeat” and \(E\) denote “digits are all even.”:</p>
+<ol class="decimal">
+<li id="li-665">Recall <a class="xref" data-knowl="./knowl/ExampleDigits.html" title="Example 9.3.2">Example 9.3.2</a>, we say \(P(R)=\frac{P(10,4)}{10^4}, P(E)=\frac{5^4}{10^4}, P(R\cap E)=\frac{P(5,4)}{10^4}\text{.}\)  Thus<div class="displaymath">
+\begin{equation*}
+P(R\cup E)= P(R)+P(E)-P(R\cap E)=\frac{P(10,4)+5^4-P(5,4)}{10^4}=\frac{5040+625-120}{10^4}=\frac{5545}{10000}=0.5545.
+\end{equation*}
+</div>
+</li>
+<li id="li-666">Note that \(P(R|E)=\frac{P(5,4)/10^4}{5^4/10^4}=\frac{P(5,4)}{5^4}=\frac{120}{625}=0.192\) .</li>
+<li id="li-667">Since \(P(R|E)=0.192\neq0.504=P(R)\) so these are not independent.</li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-91"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-91"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-91"><article class="exercise exercise-like"><p id="p-1210">Suppose you had a bus of 20 people, and 5 are sick, suppose  3 were picked  to test at random.</p>
+<ol class="decimal">
+<li id="li-668">What is the probability that everyone who was tested were all sick?</li>
+<li id="li-669">What is the probability that none are sick?</li>
+<li id="li-670">What is the probability that 2 of the tested individuals were sick?</li>
+<li id="li-671">If at least one person tested sick, what is the probability that were all sick?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-148" id="solution-148"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-148"><div class="solution solution-like">
+<p id="p-1211">There are \(C(20,3)=1140\) ways to pick 3 people out of 20.</p>
+<ol class="decimal">
+<li id="li-672">There are \(C(5,3)=10\) ways to pick only sick people, so the probability this happens is<div class="displaymath">
+\begin{equation*}
+\frac{C(5,3)}{C(20,3)}=\frac{10}{1140}\approx 0.0088.
+\end{equation*}
+</div>
+</li>
+<li id="li-673">There are \(C(15,3)=455\) ways to pick only healthy people, so the probability this happens is<div class="displaymath">
+\begin{equation*}
+\frac{C(15,3)}{C(20,3)}=\frac{455}{1140}\approx 0.3991.
+\end{equation*}
+</div>
+</li>
+<li id="li-674">There are \(C(5,2)\cdot C(15,1)=10\cdot 15=150\) ways to pick two sick and one healthy person, so the probability this happens is<div class="displaymath">
+\begin{equation*}
+\frac{C(5,2)\cdot C(15,1)}{C(20,3)}=\frac{10\cdot 15}{1140}\approx  0.1316.
+\end{equation*}
+</div>
+</li>
+<li id="li-675">The probability that at least one person tested sick is \(1-\frac{C(15,3)}{C(20,3)}\text{.}\)  Thus assuming this happens, the probability everyone tests sick is<div class="displaymath">
+\begin{equation*}
+\frac{C(5,3)/C(20,3)}{1-C(15,3)/C(20,3)}\approx \frac{0.0088}{0.6009}\approx 0.0146.
+\end{equation*}
+</div>
+</li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-92"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-92"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-92"><article class="exercise exercise-like"><p id="p-1212">An elevator has 5 passengers and stops at 8 floors. It is equally likely that a person will get off at any one of the 8 floors. Find the probability that at least 2 passengers leave at the same floor.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-149" id="solution-149"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-149"><div class="solution solution-like">
+<p id="p-1213">There are \(8^5\) ways the passangers could get off the elevator.  The probability that everyone gets off at <em class="emphasis">different</em> floors is \(\frac{P(8,5)}{8^5}=\frac{6720}{32768}\approx0.2051\text{.}\)  So the probability that this doesn't happen, that is, at least two get off at the same floor, is:</p>
+<div class="displaymath">
+\begin{equation*}
+1-\frac{P(8,5)}{8^5}=1-\frac{6720}{32768}\approx0.7949.
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-93"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-93"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-93"><article class="exercise exercise-like"><p id="p-1214">There are two jars, jar one has 5 white marbles and 6 black marbles. Jar 2 has 8 white marbles and 7 black marbles.  Suppose you pick a jar at random and pick two marbles at random from said jar.</p>
+<ol class="decimal">
+<li id="li-676">What is the probability both marbles are white?</li>
+<li id="li-677">If both marbles are white, what is the probability Jar 2 was chosen?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-150" id="solution-150"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-150"><div class="solution solution-like">
+<p id="p-1215">Let \(W\) denote “both marbles are white”, \(J_1\) denote “Jar one was chosen”.  Note that \(P(J_1)=0.5\text{.}\)</p>
+<ol class="decimal">
+<li id="li-678">So by Bayes Theorem:<div class="displaymath">
+\begin{align*}
+P(W)\amp =P(W|J_1)P(J_1)+P(W|J_1^c)(1-P(J_1))\\
+P(W)\amp =\frac{C(5,2)}{C(11,2)}(0.5)+\frac{C(8,2)}{C(15,2)}(0.5)\\
+P(W)\amp =\frac{10}{55}(0.5)+\frac{28}{105}(0.5)\\
+P(W)\amp =\frac{36}{165}\approx 0.224242
+\end{align*}
+</div>
+</li>
+<li id="li-679">Note, we assume \(W\text{,}\) so this is \(P(J_2|W)\text{.}\) This is then computed:<div class="displaymath">
+\begin{equation*}
+P(J_2^c|W)=\frac{P(J_2\cap W)}{P(W)}=\frac{P(W|J_1^c)(1-P(J_1))}{P(W)}=\frac{\frac{28}{105}(0.5)}{\frac{36}{165}}=\frac{11}{18}\approx 0.6111111.
+\end{equation*}
+</div>After all, white marbles are more likely in Jar 2, so an all white selection is more likely to come from Jar 2.</li>
+</ol>
+</div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>

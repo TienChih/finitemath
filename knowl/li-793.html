@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:45:08-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="li"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span>
+</h6>Finally, we compute \(AF\text{:}\) <div class="sagecell-sage" id="sage-31"><script type="text/x-sage">A=matrix(QQ, [[0.4,0,0,0], [0,0,0,0.6]])
+B=matrix(QQ, [[0,0.4,0,0], [0.6,0,0.4,0], [0,0.6,0,0.4],[0,0,0.6,0]])
+I=matrix.identity(4)
+F=(I-B)^(-1)
+print(A*F)
+print(' ')
+print(A*F*1.0)
+</script></div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+AF=
+\begin{pmatrix}
+\frac{130}{211} \amp \frac{76}{211} \amp \frac{40}{211} \amp \frac{16}{211} \\
+\frac{81}{211} \amp \frac{135}{211} \amp \frac{171}{211} \amp \frac{195}{211} \\
+\end{pmatrix}
+\end{equation*}
+</div>If you start with \(\$100\) theres a \(\frac{130}{211}\approx 0.616\) chance you go broke and a \(\frac{81}{211}\approx 0.384\) chance you make \(\$500\) etc., essentially the same values we found above, but precisely.</article><span class="incontext"><a href="Sec_Absorb.html#li-793">in-context</a></span>
+</body>
+</html>
