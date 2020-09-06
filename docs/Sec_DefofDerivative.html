@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T15:51:37Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Derivative Function</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_AvgRoC.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_RulesofDerivative.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_AvgRoC.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_RulesofDerivative.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative" class="active">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_DefofDerivative"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">The Derivative Function</span>
+</h2>
+<section class="introduction" id="introduction-32"><p id="p-939">In <a href="Sec_AvgRoC.html" class="internal" title="Section 7.2: Average rates of change">Section 7.2</a>, we discuss average rates of change over intervals.  But typically, when rates of change are discussed, it's not described in terms of periods of time but at the very moment.  What is the speed right now?  Not what is the average speed?  How fast is the temperature rising?  How quickly is the Dow falling?  These are all described as <em class="emphasis">instantaneous</em> rates of change.  In other words, rates of change as the interval over which they are defined tends to zero.</p></section><section class="subsection" id="subsection-69"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.1</span> <span class="title">From Average to Instant</span>
+</h3>
+<p id="p-940">Recall that in <a class="xref" data-knowl="./knowl/ExampleRoC.html" title="Example 7.2.2">Example 7.2.2</a>, we found the average rate of change in the height, \(f(x)=-5x^2+20x\text{,}\) of a rocket \(x\) seconds after launch , over the intervals \([0,2], [0,1], [0,0.5]\text{.}\)  But what prompted this discussion was what the speed was at the moment of launch.  We can't actually evaluate the average rate of change over \([0,0]\text{,}\) but what we can do is find the average rate of change over \([0, h]\) and see what happens as \(h\to 0\text{.}\) <iframe src="https://www.desmos.com/calculator/ufwyh8xrwp" id="interactive-140" width="600" height="600"></iframe> As you can observe, it appears as if this slope approaches 20 m/s.</p>
+<p id="p-941">More formally, this value would be \(\limit{h}{0} \frac{f(0+h)-f(0)}{h}\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\limit{h}{0}\frac{f(0+h)-f(0)}{h}\amp=\limit{h}{0}\frac{-5h^2+20h}{h}\\
+\amp=\limit{h}{0}\frac{(-5h+20)h}{h}\\
+\amp=\limit{h}{0}-5h+20=20.
+\end{align*}
+</div>
+<p data-braille="continuation">So 20 m/s is in fact the instantaneous rate of change of the rocket at time \(x=0\text{.}\)</p>
+<article class="definition definition-like" id="DefinitionDerivative"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-942">The instantaneous rate of change of \(f(x)\) at \(a\) denoted <dfn class="terminology">\(f'(a)\)</dfn> or the <dfn class="terminology">derivative</dfn> of \(f(x)\) at \(a\) is:</p>
+<div class="displaymath">
+\begin{equation*}
+f'(a):=\limit{h}{0}\frac{f(a+h)-f(a)}{h}.
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exercise-59"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-59"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-59"><article class="exercise exercise-like"><p id="p-943">Let \(\alpha(x)=\frac{2}{x+1}\text{.}\)  Find \(\alpha'(2)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-87" id="solution-87"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-87"><div class="solution solution-like">
+<p id="p-944">By <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> we have:</p>
+<div class="displaymath">
+\begin{align*}
+\alpha'(2)\amp = \limit{h}{0}\frac{\alpha(2+h)-\alpha(2)}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2}{2+h+1}-\frac{2}{2+1}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2}{h+3}-\frac{2}{3}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2\cdot 3}{(h+3)3}-\frac{2(h+3)}{3(h+3)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{6-2(h+3)}{(h+3)3}}{h} \\
+\amp = \limit{h}{0} \frac{\frac{6-2(h+3)}{(h+3)3}}{h} \\
+\amp = \limit{h}{0} \frac{\frac{-2h}{(h+3)3}}{h} \\
+\amp = \limit{h}{0} \frac{-2}{(h+3)3} \\
+\amp =  \frac{-2}{(0+3)3}=-\frac{2}{9} \text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/qf4yzkw00n" id="interactive-141" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-60"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-60"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-60"><article class="exercise exercise-like"><p id="p-945">The area of an oil spill \(t\) hours after a pipe burst is  \(A(t)=1000\pi\sqrt{t}\) square feet.  How fast is the spill spreading in 10 hours?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-88" id="solution-88"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-88"><div class="solution solution-like">
+<p id="p-946">By <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> we have:</p>
+<div class="displaymath">
+\begin{align*}
+A'(10)\amp = \limit{h}{0}\frac{A(2+h)-A(2)}{h}\\
+\amp = \limit{h}{0} \frac{1000\pi\sqrt{10+h}-1000\pi\sqrt{10}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{\sqrt{10+h}-\sqrt{10}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{(\sqrt{10+h}-\sqrt{10})(\sqrt{10+h}+\sqrt{10})}{h(\sqrt{10+h}+\sqrt{10})}\\
+\amp = \limit{h}{0} 1000\pi\frac{10+h-10}{h(\sqrt{10+h}+\sqrt{10})}\\
+\amp = \limit{h}{0} 1000\pi\frac{h}{h(\sqrt{10+h}+\sqrt{10})}\\
+\amp = \limit{h}{0} 1000\pi\frac{1}{(\sqrt{10+h}+\sqrt{10})}\\
+\amp =  1000\pi\frac{1}{(\sqrt{10+0}+\sqrt{10})}=\frac{1000\pi}{2\sqrt{10}}\approx 496.729\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">About 496.729 square ft per hour.  We can see this below: <iframe src="https://www.desmos.com/calculator/oju8fxmmy4" id="interactive-142" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-70"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.2</span> <span class="title">Dervative as a function in it's own right</span>
+</h3>
+<p id="p-947">We note that in our rocket situation, there is nothing particularly special about time \(x=0\text{.}\)  In principle, the derivative described in <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> could be applied to any value of \(x\text{.}\)  Also, the rocket has a velocity at any time, and we should be able to compute it.  If we apply <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> to a general \(f(x)\text{,}\) we obtain:</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x)=\limit{h}{0}\frac{f(x+h)-f(x)}{h}\text{.}
+\end{equation*}
+</div>
+<p id="p-948">So how does this play out given our rocket? Well:</p>
+<div class="displaymath">
+\begin{align*}
+f'(x)\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
+\amp = \limit{h}{0} \frac{-5(x+h)^2+20(x+h)-(-5x^2+20x)}{h}\\
+\amp = \limit{h}{0}\frac{-5x^2-10xh-5h^2+20x+20h+5x^2-20x}{h}\\
+\amp = \limit{h}{0}\frac{-10xh-5h^2+20h}{h}\\
+\amp = \limit{h}{0}\frac{(-10x-5h+20)h}{h}\\
+\amp = \limit{h}{0} -10x-5h+20\\
+\amp = -10x+20\text{.}
+\end{align*}
+</div>
+<p id="p-949">So this means that in \(0\) seconds, the change in the height was \(f'(0)=-10(0)+20=20\) meters/second as we suspected! But now we can compute all the other instantaneous rates of change as well.</p>
+<ul class="disc">
+<li id="li-416">So at \(x=1\) second, it'll be \(f'(1)=-10(1)+20=10\) meters per second.</li>
+<li id="li-417">In 2 seconds we are at the top with \(f'(2)=0\) meters per second.</li>
+<li id="li-418">At 3 seconds, \(f'(3)=-10\) meters/second to reflect the negative change in height at this point.</li>
+<li id="li-419">Finally in 4 seconds, the rocket hits the ground at \(f'(4)=-20\) meters per second.</li>
+</ul>
+<p data-braille="continuation">One can explore this below in the Desmos graph.  Notice how \(y=f'(x), f=-10x+20\) produce the same line: <iframe src="https://www.desmos.com/calculator/wo9lscifnb" id="interactive-143" width="600" height="600"></iframe></p>
+<article class="exercise exercise-like" id="exercise-61"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-61"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-61"><article class="exercise exercise-like"><p id="p-950">Let \(\alpha(x)=\frac{2}{x+1}\text{.}\)  Find \(\alpha'(x)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-89" id="solution-89"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-89"><div class="solution solution-like">
+<p id="p-951">We have:</p>
+<div class="displaymath">
+\begin{align*}
+\alpha'(x)\amp = \limit{h}{0}\frac{\alpha(x+h)-\alpha(x)}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2}{x+h+1}-\frac{2}{x+1}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2(x+1)}{(x+h+1)(x)}-\frac{2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2(x+1)}{(x+h+1)(x)}-\frac{2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2(x+1)-2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{2x+2-2x-2h-2}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{\frac{-2h}{(x+h+1)(x+1)}}{h}\\
+\amp = \limit{h}{0} \frac{-2}{(x+h+1)(x+1)}\\
+\amp = \frac{-2}{(x+0+1)(x+1)}=-\frac{2}{(x+1)^2}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/2umbzq73fn" id="interactive-144" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-62"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-62"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-62"><article class="exercise exercise-like"><p id="p-952">The area of an oil spill \(t\) hours after a pipe burst is  \(A(t)=1000\pi\sqrt{t}\) square feet.  Find \(A'(t)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-90" id="solution-90"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-90"><div class="solution solution-like">
+<p id="p-953">We have:</p>
+<div class="displaymath">
+\begin{align*}
+A'(t)\amp = \limit{h}{0}\frac{A(t+h)-A(t)}{h}\\
+\amp = \limit{h}{0} \frac{1000\pi\sqrt{t+h}-1000\pi\sqrt{t}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{\sqrt{t+h}-\sqrt{t}}{h}\\
+\amp = \limit{h}{0} 1000\pi\frac{(\sqrt{t+h}-\sqrt{t})(\sqrt{t+h}+\sqrt{t})}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{t+h-t}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{h}{h(\sqrt{t+h}+\sqrt{t})}\\
+\amp = \limit{h}{0} 1000\pi\frac{1}{(\sqrt{t+h}+\sqrt{t})}\\
+\amp =  1000\pi\frac{1}{(\sqrt{t+0}+\sqrt{t})}=\frac{1000\pi}{2\sqrt{t}}=\frac{500\pi}{\sqrt{t}}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/sbg2pzjqty" id="interactive-145" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-71"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.3</span> <span class="title">Graphical Interpretation of the Derivative</span>
+</h3>
+<article class="remark remark-like" id="remark-5"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span>
+</h6>
+<p id="p-954">Since the derivative corresponds to an instantaneous rate of change, given a function \(f(x)\) we have:</p>
+<ul class="disc">
+<li id="li-420">\(f'(a)&gt;0\) when \(f(x)\) is increasing at \(x=a\text{.}\)</li>
+<li id="li-421">\(f'(a)\lt 0\) when \(f(x)\) is decreasing at \(x=a\text{.}\)</li>
+<li id="li-422">\(f'(a)=0\) when \(f(x)\) is neither increasing nor decreasing at \(x=a\text{.}\)</li>
+</ul></article><p id="p-955">So consider the curve depicted below: <iframe src="https://www.desmos.com/calculator/yj6q2uuqmj" id="interactive-146" width="600" height="600"></iframe> Observing this graph, we have that the function is decreasing (\(f'(x)\lt 0\)) from 1 to 4, or the interval \((1,4)\text{.}\)  The derivatve is positive when \(f(x)\) is increasing, that is \((-\infty,1)\cup(4,\infty)\text{.}\)  At \(x=1, 4\text{,}\) we have that \(f'(1)=0, f'(4)=0\text{.}\) <iframe src="https://www.desmos.com/calculator/kk5yzeeu0u" id="interactive-147" width="600" height="600"></iframe></p></section></section></div></main>
+</div>
+</body>
+</html>
