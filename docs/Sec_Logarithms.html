@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T15:51:35Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logarithms</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_Exponentials.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_NonLinear.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Chap_Calculus.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_Exponentials.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_NonLinear.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Chap_Calculus.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms" class="active">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_Logarithms"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.6</span> <span class="title">Logarithms</span>
+</h2>
+<section class="introduction" id="introduction-28"><p id="p-831">So looking at any exponential function, but specifically for increasing ones, we notice that they are 1-1, meaning two different inputs give you 2 different outputs. Thus, \(f(x)=a^x\) is an invertible function. You can see in these graphs that reflecting the exponential over the \(y=x\) line giving us  another function: <iframe src="https://www.desmos.com/calculator/cerccrco9k" id="interactive-128" width="600" height="600"></iframe> We call this function \(\log_a(x)\text{.}\)</p></section><section class="subsection" id="subsection-63"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.6.1</span> <span class="title">Properties of Logarithms</span>
+</h3>
+<p id="p-832">As the inverse of an exponential function, it has some properties:</p>
+<ul class="disc">
+<li id="li-337"><p id="p-833"><dfn class="terminology">It's domain is only positive numbers</dfn>. Why? Because the only possible outputs of exponential outputs are positive numbers. Taking the inverse reverses the roles of the domain and range, and so the domain of \(\log_a\) is the positives.</p></li>
+<li id="li-338"><p id="p-834"><dfn class="terminology">As \(\mathbf{x}\) goes to 0, \(\mathbf{\log_a(x)}\) goes to \(\mathbf{-\infty}\text{.}\)</dfn> This is the result of the reflection. Normally \(a^x\) (for \(a&gt;1\)) goes to 0 as \(x\to -\infty\text{,}\) so when reflected, that line is now asymptotic to the \(y\)-axis. Also \(\log_a\) returns the power necessary to achieve the value \(x\text{.}\) If \(x\) is a small number like 0.0001, what power would I have to raise \(a\) to to get \(0.0001\text{?}\) It can't be 0, \(a^0=1\text{,}\) so it has to be <dfn class="terminology">less</dfn> than 0, and the smaller \(x\) is, the lower this power must go.</p></li>
+<li id="li-339"><p id="p-835">As \(\mathbf{x\to\infty, \log_a(x)\to \infty}\text{,}\) again this is the result of the reflection, but we can also think of this as the powers \(a\) needs to be raised to in order to achieve \(x\text{,}\) as this increases, those powers must increase as well.</p></li>
+<li id="li-340">
+<p id="p-836">\(\log_a(xy)=\log_a(x)+\log_a(y)\text{.}\) Too see this consider:</p>
+<div class="displaymath">
+\begin{align*}
+xy\amp = a^{\log_a{xy}}\\
+xy\amp = x\cdot y\\
+\amp = a^{\log_a(x)}\cdot a^{\log_a(y)}\\
+\amp = a^{\log_a(x)+\log_a(y)}
+\end{align*}
+</div>
+</li>
+<li id="li-341">
+<p id="p-837">\(\log_a(x^y)=y\log_a(x)\text{.}\) To see this, consider:</p>
+<div class="displaymath">
+\begin{align*}
+x^y\amp = a^{\log_a(x^y)}.\\
+x^y\amp = (a^{\log_a(x)})^y\\
+\amp = a^{y\log_a(x)}
+\end{align*}
+</div>
+</li>
+</ul>
+<p id="p-838">Typically most textbooks include a whole bunch of other arithmetic rules, but they can all be distilled from the 2 above so they're all totally pointless.</p></section><section class="subsection" id="subsection-64"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.6.2</span> <span class="title">Utility of logs</span>
+</h3>
+<p id="p-839">Since each logarithm is an inverse of an exponential function, and exponential equation has an equivalent logathrithmic equation.</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{|c|c|}
+\hline 
+\text{Exponential Equation} \amp  \text{Logarithmic Equation}\\
+\hline 
+2^3=8\amp \log_2(8)=3\\
+10^2=100\amp \log_{10}(100)=2\\
+(0.9)^2=0.81\amp \log_{0.9}(0.81)=2\\
+9^{1/2}=3\amp \log_3(9)=\frac{1}{2}\\
+2^{-2}\frac{1}{4}\amp \log_2(\frac{1}{4})=-2\\
+3^x=4\amp \log_3(4)=x\\
+a^b=c\amp \log_a(c)=b\\
+\hline
+\end{array}
+\end{equation*}
+</div>
+<p id="p-840">Special cases of logs are log base 10 which is usually just denoted \(\log\) and log based \(e\text{,}\) which is denoted \(\ln\text{.}\) Astronomers and other scientists like \(\log\) since taking \(\log\) base 10 gives you approximate magnitude of stuff. As a mathematician, I prefer \(\ln\) since \(e\) has pretty special mathematical properties, plus it's shorter, which makes it better.</p>
+<p id="p-841">The main use of logs algebraically is to de-exponentiate expressions. So if one is trying to solve \(10=2^x\text{,}\) we could do this via:</p>
+<div class="displaymath">
+\begin{align*}
+10\amp = 2^x\\
+\ln(10)\amp = \ln(2^x)\\
+\ln(10)\amp = x\ln(2)\\
+x\amp = \frac{\ln(10)}{\ln(2)}\approx 3.3219\text{.}
+\end{align*}
+</div>
+<p id="p-842">One can also solve problems like this visually: <iframe src="https://www.desmos.com/calculator/t0pojr0gel" id="interactive-129" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-65"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.6.3</span> <span class="title">Computations</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-51"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-51"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.6.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-51"><article class="exercise exercise-like"><p id="p-843">Solve for \(x\text{:}\)</p>
+<ol class="decimal">
+<li id="li-342">\(e^{x+2}=100\text{.}\)</li>
+<li id="li-343">\(\displaystyle \log(x)+\log(x+3)=1\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-76"><div class="solution solution-like">
+<p id="p-844">Consider the following:</p>
+<ol class="decimal">
+<li id="li-344">Starting with:<div class="displaymath">
+\begin{align*}
+e^{x+2}\amp = 100\\
+\ln(e^{x+2})\amp = \ln(100)\\
+x+2\amp = \ln(100)\\
+x\amp = \ln(100)-2\approx  2.60517
+\end{align*}
+</div>
+</li>
+<li id="li-345">Recall that \(\log\) is \(\log_{10}\text{.}\)<div class="displaymath">
+\begin{align*}
+\log(x)+\log(x+3)\amp = 1\\
+\log(x(x+3))\amp = 1\\
+10^{\log(x(x+3))}\amp = 10^1\\
+x(x+3)\amp = 10\\
+x^2+3x-10\amp = 0\\
+(x+5)(x-2)\amp = 0\\
+x\amp = -5, 2
+\end{align*}
+</div>
+</li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-52"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-52"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.6.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-52"><article class="exercise exercise-like"><p id="p-845">Suppose a resturaunt's weekly revenue in thousands of dollars is \(R(t)=50-30e^{-0.1t}\) in \(t\) weeks after opening.</p>
+<ol class="decimal">
+<li id="li-346">How much revenue did it make in it's initial week?</li>
+<li id="li-347">When will the resturaunt generate \(\$40\) thousand a week?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-77" id="solution-77"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-77"><div class="solution solution-like">
+<p id="p-846">Consider the following:</p>
+<ol class="decimal">
+<li id="li-348"><p id="p-847">In week 0, we have \(R(0)=50-30e^0=20\) or \(\$20\) thousand dollars.</p></li>
+<li id="li-349">
+<p id="p-848">We solve:</p>
+<div class="displaymath">
+\begin{align*}
+R(t)=50-30e^{-0.1t}\amp = 40\\
+R(t)10\amp =30e^{-0.1t}\\
+e^{-0.1t}\amp = \frac{1}{3}\\
+\ln(e^{-0.1t})\amp = \ln(\frac{1}{2})\\
+-0.1t\amp = \ln(\frac{1}{3})\\
+t\amp = -10\ln(\frac{1}{3})\approx 10.9861
+\end{align*}
+</div>
+<p data-braille="continuation"><iframe src="https://www.desmos.com/calculator/sjdorxtzos" id="interactive-130" width="600" height="600"></iframe> So at almost the 7th week.</p>
+</li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-53"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-53"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.6.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-53"><article class="exercise exercise-like"><p id="p-849">Consider a radioactive compound Imaginarium which has halflife of 100 minutes.  Let \(I(t)\) be the amount of Imaginarium left in grams after \(t\) minutes if you started with 1000g.</p>
+<ol class="decimal">
+<li id="li-350">Find \(I(t)\text{.}\)</li>
+<li id="li-351">When will you have 10g left?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-78" id="solution-78"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-78"><div class="solution solution-like">
+<p id="p-850">Consider the following:</p>
+<ol class="decimal">
+<li id="li-352">
+<p id="p-851">We note that since the halflife is 100 minutes:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{1}{2}\amp = a^5\\
+a\amp = (\frac{1}{2})^{1/5}\approx0.87055
+\end{align*}
+</div>
+<p data-braille="continuation">So \(I(t)=1000\cdot ((\frac{1}{2})^{1/5})^t=1000\cdot(\frac{1}{2})^{t/5}\text{.}\)</p>
+</li>
+<li id="li-353">
+<p id="p-852">We solve:</p>
+<div class="displaymath">
+\begin{align*}
+10=I(t)\amp = 1000\cdot\left(\frac{1}{2}\right)^{t/5}\\
+\frac{1}{100}\amp = \left(\frac{1}{2}\right)^{t/5}\\
+\ln\left(\frac{1}{100}\right)\amp = \ln\left(\left(\frac{1}{2}\right)^{t/5}\right)\\
+\ln\left(\frac{1}{100}\right)\amp = \frac{t}{5}\cdot\ln\left(\frac{1}{2}\right)\\
+t\amp = \frac{5\ln\left(\frac{1}{100}\right)}{\ln\left(\frac{1}{2}\right)}\approx 33.21928
+\end{align*}
+</div>
+<p data-braille="continuation"><iframe src="https://www.desmos.com/calculator/lugcttrycr" id="interactive-131" width="600" height="600"></iframe> So in just over 33 minutes.</p>
+</li>
+</ol>
+</div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>
