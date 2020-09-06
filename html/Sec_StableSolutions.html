@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:35:30-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Stable Solutions and Equilibrium</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_IntrotoMarkov.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Markov.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_Absorb.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_IntrotoMarkov.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Markov.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_Absorb.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions" class="active">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_StableSolutions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">11.2</span> <span class="title">Stable Solutions and Equilibrium</span>
+</h2>
+<section class="introduction" id="introduction-56"><p id="p-1423">In this section, we discuss stable stable solutions to Markov systems.  If I repeat a Markov process over and over, does it trend torwards some some of state where it won't change?  Or does it go back and forth between multiple states in a cycle?  Is there an initial starting state so that each iteration of the Markov process gives you back the exact same state?  We examine these questions.</p></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">11.2.1</span> <span class="title">Stable Solutions</span>
+</h3>
+<p id="p-1424">Suppose you had two cities, \(X, Y\text{.}\)  Each year 60% of city \(X\)'s population moved to \(Y\) and 20% of \(Y\)'s population moves to \(X\text{.}\)  If the cities had 300000 people in total, how could we distribute these people so each year the cities populations remained the same?</p>
+<p id="p-1425">What we are solving is essentionally \(\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}=\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}\)  So recall <a class="xref" data-knowl="./knowl/DefinitionIdentity.html" title="Definition 2.3.5">Definition 2.3.5</a>:</p>
+<div class="displaymath">
+\begin{align*}
+\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \amp =\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \\
+\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \amp = \begin{pmatrix} 1 \amp 0 \\ 0 \amp 1\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \\
+\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} - \begin{pmatrix} 1 \amp 0 \\ 0 \amp 1\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \amp=\begin{pmatrix} 0\\0  \end{pmatrix}\\
+\begin{pmatrix} -0.4 \amp 0.2 \\ 0.4 \amp -0.2\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \amp=\begin{pmatrix} 0\\0  \end{pmatrix}\\
+\begin{pmatrix} -0.4X_0 +0.2Y_0 \\ 0.4X_0  -0.2Y_0\end{pmatrix} \amp=\begin{pmatrix} 0\\0  \end{pmatrix}
+\end{align*}
+</div>
+<p data-braille="continuation">We solve this system: <div class="sagecell-sage" id="sage-20"><script type="text/x-sage">A=matrix(QQ, [[-0.4,0.2, 0],[0.4,-0.2, 0]])
+print(A.rref())
+</script></div> And we obtain:</p>
+<div class="displaymath">
+\begin{align*}
+X_0-\frac{1}{2}Y_0\amp=0\\
+2X_0 \amp =Y_0.
+\end{align*}
+</div>
+<p data-braille="continuation">So \(Y\)'s population  would be double \(X\)'s.  Since there are 300000 people, this would occur when \(X_0=100000, Y_0=200000\text{:}\) <div class="sagecell-sage" id="sage-21"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+X=matrix(QQ, [[100000],[200000]])
+print(M*X)
+</script></div> Notice that the next year, since the populations remain the same, reapplying \(M\) continues to preserve the populations, nothing changes.  Nor the year after and so on.</p>
+<article class="remark remark-like" id="remark-35"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">11.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-1426">In general, <dfn class="terminology">stable solutions</dfn> to Markov chains are vectors \(\mathbf{x}\)  such that \(M\mathbf{x}=\mathbf{x}\text{.}\)  These can be found by solving:</p>
+<div class="displaymath">
+\begin{equation*}
+(M-I_n)\mathbf{x}=\mathbf{0}.
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exercise-112"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-112"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.2.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-112"><article class="exercise exercise-like"><p id="p-1427">Suppose you have a bizzare compound stored a chamber with different areas with different temperatures and pressures.  Thus it is always changing between the 3 states of matter.  After each hour, 20% of any solid becomes liquid and 20%  of the solid becomes gas.  10% of liquids become solid and 30% becomes gas.  15% of gas becomes solid and 40% becomes liquid.  What are initial amounts of solid liquid and gas so the amount of each never changes?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-205" id="solution-205"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-205"><div class="solution solution-like">
+<p id="p-1428">If solid, liquid, gas are states 1,2 and 3, then we have transition matrix:</p>
+<div class="displaymath">
+\begin{equation*}
+M=\begin{pmatrix}0.6 \amp 0.1 \amp 0.15 \\ 0.2 \amp 0.6 \amp 0.4 \\ 0.2 \amp 0.3 \amp 0.45 \end{pmatrix} .
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus to find a stable solution, we solve:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}-0.4 \amp 0.1 \amp 0.15 \\ 0.2 \amp -0.4 \amp 0.4 \\ 0.2 \amp 0.3 \amp -0.55 \end{pmatrix}\begin{pmatrix} S \\L \\ G\end{pmatrix}=\begin{pmatrix}0\\0\\0 \end{pmatrix} .
+\end{equation*}
+</div>
+<p id="p-1429">Doing so, we obtain:</p>
+<div class="displaymath">
+\begin{align*}
+S\amp=\frac{5}{7}G\\
+L\amp=\frac{19}{14}G
+\end{align*}
+</div>
+<p data-braille="continuation">Which then, given any amount of gas, we could find how mnuch solid and liquid there were.</p>
+<p id="p-1430">So if say we have 1000 kg of the compound, we could solve the system:</p>
+<div class="displaymath">
+\begin{align*}
+S\amp=\frac{5}{7}G\\
+L\amp=\frac{19}{14}G\\
+S+L+G\amp=1000
+\end{align*}
+</div>
+<p data-braille="continuation">and obtain roughly 232.56kg of solid, 441.86kg of liquid and 325.58kg of gas.</p>
+<p id="p-1431">Then say we have 500 g of the compound, we could solve the system:</p>
+<div class="displaymath">
+\begin{align*}
+S\amp=\frac{5}{7}G\\
+L\amp=\frac{19}{14}G\\
+S+L+G\amp=500
+\end{align*}
+</div>
+<p data-braille="continuation">and obtain roughly 116.28g of solid, 220.93g of liquid and 162.79g of gas.</p>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-121"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">11.2.2</span> <span class="title">Equilibrium</span>
+</h3>
+<p id="p-1432">Let's say in the cities example above, you initially had 250000 people in city \(X\) and 50000 in \(Y\text{.}\)  What would happen over time?</p>
+<p id="p-1433">In a year: <div class="sagecell-sage" id="sage-22"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+X=matrix(QQ, [[250000],[50000]])
+print(M*X)
+</script></div> We would have 160000 in \(X\) and 140000 in \(Y\text{.}\)  In 10 years: <div class="sagecell-sage" id="sage-23"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+X=matrix(QQ, [[250000],[50000]])
+print(M^10*X*1.0)
+</script></div> About 100016 in \(X\) and 199984 in \(Y\text{.}\)  We can utilize sage to see how the values change over many iterations: <div class="sagecell-sage" id="sage-24"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+X=matrix(QQ, [[250000],[50000]])
+for i in range(100):
+  print(M^i*X*1.0)
+  print(' ')
+</script></div> Here, we let it run for 100 iterations, and we see that the state converges to the 100000 in \(X\text{,}\) 200000 in \(Y\text{.}\)  We call this an <dfn class="terminology">equilibrium state</dfn>.</p>
+<article class="definition definition-like" id="definition-41"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">11.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-1434">Given a transition matrix \(M\) an equilibirum solution is a solution \(\mathbf{e}\) so that as \(i\) increases</p>
+<div class="displaymath">
+\begin{equation*}
+M^i\mathbf{x}\to \mathbf{e}.
+\end{equation*}
+</div></article><article class="remark remark-like" id="remark-36"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">11.2.4</span><span class="period">.</span>
+</h6>
+<p id="p-1435">Equilibrium solutions are stable solutions.</p></article><p id="p-1436">What if \(Y\) had 300000 people and \(X\) was a ghost town with no one in it?  We see that after 100 iterations: <div class="sagecell-sage" id="sage-25"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+X=matrix(QQ, [[0],[300000]])
+for i in range(100):
+  print(M^i*X*1.0)
+  print(' ')
+</script></div> We achieve the same state, which incidentally was the stable solution we found earlier!</p>
+<p id="p-1437">Will this always happen?  Consider the transition matrix</p>
+<div class="displaymath">
+\begin{equation*}
+M=\begin{pmatrix} 0\amp 1 \ 1 \amp 0\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">It has stable solution when</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} -1\amp 1 \ 1 \amp 0-1\end{pmatrix}\begin{pmatrix} x \\ y\end{pmatrix}=\begin{pmatrix}0\\0\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">which occurs when \(x=y\text{.}\)  So if our initial state is \(x=5, y=5\text{,}\) in 100 iterations: <div class="sagecell-sage" id="sage-26"><script type="text/x-sage">M=matrix(QQ, [[0,1],[1,0]])
+X=matrix(QQ, [[5],[5]])
+for i in range(100):
+  print(M^i*X*1.0)
+  print(' ')
+</script></div> We see that we have stability.  But what about if our initial state were \(x=10, y=0\text{?}\) <div class="sagecell-sage" id="sage-27"><script type="text/x-sage">M=matrix(QQ, [[0,1],[1,0]])
+X=matrix(QQ, [[10],[0]])
+for i in range(100):
+  print(M^i*X*1.0)
+  print(' ')
+</script></div> We see that we oscilate between states \(\begin{pmatrix} 10\\0\end{pmatrix}\) and \(\begin{pmatrix} 0\\10\end{pmatrix}\text{.}\)  We <em class="emphasis">do not</em> achieve equilibrium.</p>
+<p id="p-1438">So when can we achieve equilibrium?</p>
+<article class="definition definition-like" id="definition-42"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">11.2.5</span><span class="period">.</span>
+</h6>
+<p id="p-1439">A transition matrix is <dfn class="terminology">regular</dfn> if each entry is positive (not zero).</p></article><article class="theorem theorem-like" id="TheoremF"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.2.6</span><span class="period">.</span>
+</h6>
+<p id="p-1440">If a transition matrix is regular, then it will achieve equilibrium.</p></article><p id="p-1441">Note that non-regular matrices may also achieve equilibrium.  The above claim merely says, every regular matrix is gaurunteed to do so.</p>
+<article class="exercise exercise-like" id="exercise-113"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-113"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.2.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-113"><article class="exercise exercise-like"><p id="p-1442">Tech companies Axiom, Belafonte and Cybertech hire and rehire from the same talent pool.  Each month, 20% of Axiom's workers leave for Belafonte and 15% leave for Cybertech.  10% of Belafonte's go to Axiom and 25% go to Cybertech, and 30% of Cybertech's workers leave for Axiom, 10% for Belafonte.  Over time, what proportion of the workforce will each company employ?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-206" id="solution-206"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-206"><div class="solution solution-like">
+<p id="p-1443">Note we have transition matrix</p>
+<div class="displaymath">
+\begin{equation*}
+M=\begin{pmatrix} 0.65 \amp 0.1 \amp 0.3 \\ 0.2 \amp 0.65 \amp 0.1 \\ 0.15 \amp 0.25 \amp 0.6 \end{pmatrix}.
+\end{equation*}
+</div>
+<p data-braille="continuation">Since this is regular, we may just solve for a stable solution:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} -0.35 \amp 0.1 \amp 0.3 \\ 0.2 \amp -0.35 \amp 0.1 \\ 0.15 \amp 0.25 \amp -0.4 \end{pmatrix}\begin{pmatrix} a\\b\\c\end{pmatrix}=\begin{pmatrix}0\\0\\0\end{pmatrix}.
+\end{equation*}
+</div>
+<p id="p-1444">Doing so gives us:</p>
+<div class="displaymath">
+\begin{align*}
+a\amp =\frac{46}{41}c\\
+b\amp =\frac{38}{41}c
+\end{align*}
+</div>
+<p data-braille="continuation">So if we solve:</p>
+<div class="displaymath">
+\begin{align*}
+a\amp =\frac{46}{41}c\\
+b\amp =\frac{38}{41}c\\
+a+b+c\amp=1
+\end{align*}
+</div>
+<p data-braille="continuation">We get \(a=\frac{46}{125}, b=\frac{38}{125}, c=\frac{41}{125}\) each a fraction of the total workforce.</p>
+</div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>

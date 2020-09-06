@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:35:16-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Average rates of change</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_LimitsContinuity.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_DefofDerivative.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_LimitsContinuity.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Calculus.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_DefofDerivative.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC" class="active">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_AvgRoC"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Average rates of change</span>
+</h2>
+<section class="introduction" id="introduction-31"><p id="p-929">Linear functions have a coinstant rate of change, the slope.  But as we have seen, other functions can increase, or decrease, at varying rates. Can we, looking at an interval of time, determine the <em class="emphasis">average</em> rate of change of a function?</p></section><section class="subsection" id="subsection-68"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.2.1</span> <span class="title">Average Rate of Change as a Slope</span>
+</h3>
+<p id="p-930">Consider a rocket that is launched into the air and has height \(f(x)=-5x^2+20x\) meters in \(x\) seconds. <iframe src="https://www.desmos.com/calculator/ju4uz0bnhg" id="interactive-137" width="600" height="600"></iframe> How fast is the rocket traveling when it's launched (\(x=0\) seconds)?</p>
+<p id="p-931">Turns out, it's not so easy to think about what this is. We don't typically consider speeds in terms of instantaneous action. Our methods of measuring speed reflects this, units of speed or velocity take the form of  meters <dfn class="terminology">per second</dfn>, miles <dfn class="terminology">per hour</dfn>, in other words speed is some change in distance <dfn class="terminology">per time unit</dfn> and that unit of time is not typically zero.</p>
+<p id="p-932">So what now? Lets start by asking an easier question, what is the average speed of the rocket over the first 3 seconds?</p>
+<p id="p-933">It's best in a scenario like this to <em class="emphasis">not</em> overthink the underlying problem. At 0 seconds, the rocket is \(f(0)=-5(0)^2+20(0)=0\) meters off the ground. After 3 seconds it is now \(f(3)=-5(3^2)+20(3)=15\) meters off the ground. So if the rocket  rose by 15 meters in 3 seconds? You're average speed must be <em class="emphasis">5 meters per second</em>. <iframe src="https://www.desmos.com/calculator/sw2w61jkcb" id="interactive-138" width="600" height="600"></iframe></p>
+<article class="definition definition-like" id="definition-15"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-934">The <dfn class="terminology">average rate of change</dfn> of a function \(f(x)\) over the interval \([a,b]\) is:</p>
+<div class="displaymath">
+\begin{equation*}
+m=\frac{f(b)-f(a)}{b-a}
+\end{equation*}
+</div>
+<p data-braille="continuation">This is just the slope of the line connecting \((a,f(a))\) and \((b,f(b))\text{.}\)</p></article><article class="example example-like" id="ExampleRoC"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ExampleRoC"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleRoC"><article class="example example-like"><p id="p-935">In our rocket example above, where the height is \(f(x)=-5x^2+20x\) meters in \(x\) seconds, find the rate of change of the rocket over the following periods of time:</p>
+<ul class="disc">
+<li id="li-398">The interval \([0,2]\text{.}\)</li>
+<li id="li-399">The interval \([0,1]\text{.}\)</li>
+<li id="li-400">The interval \([0,0.5]\text{.}\)</li>
+<li id="li-401">The interval \([1,2]\text{.}\)</li>
+<li id="li-402">The interval \([1,1.25]\text{.}\)</li>
+<li id="li-403">The interval \([1,1+h]\text{.}\)</li>
+<li id="li-404">The interval \([a,a+h]\text{.}\)</li>
+</ul>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-85" id="solution-85"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-85"><div class="solution solution-like">
+<p id="p-936">We can use either the Desmos calculator above, or algebra:</p>
+<ul class="disc">
+<li id="li-405">The average rate of change of \(f(x)\) over the interval \([0,2]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(2)-f(0)}{2-0}\amp = \frac{-5(2^2)+20(2)-(-5(0^2)+20(0))}{2}\\
+\amp = \frac{20-0}{2}\\
+\amp = 10.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 0 and 2 seconds is 10 m/s.</li>
+<li id="li-406">The average rate of change of \(f(x)\) over the interval \([0,1]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(1)-f(0)}{2-0}\amp = \frac{-5(1^2)+20(1)-(-5(0^2)+20(0))}{1}\\
+\amp = \frac{15-0}{1}\\
+\amp = 15.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 0 and 1 seconds is 15 m/s.</li>
+<li id="li-407">The average rate of change of \(f(x)\) over the interval \([0,0.5]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(0.5)-f(0)}{0.5-0}\amp = \frac{-5(0.5^2)+20(0.5)-(-5(0^2)+20(0))}{0.5}\\
+\amp = \frac{8.75-0}{0.5}\\
+\amp = 17.5.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 0 and 0.5 seconds is 17.5 m/s.</li>
+<li id="li-408">The average rate of change of \(f(x)\) over the interval \([0,2]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(2)-f(1)}{2-1}\amp = \frac{-5(2^2)+20(2)-(-5(1^2)+20(1))}{1}\\
+\amp = \frac{20-15}{1}\\
+\amp = 5.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 1 and 2 seconds is 5 m/s.</li>
+<li id="li-409">The average rate of change of \(f(x)\) over the interval \([1,1.25]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(1.25)-f(1)}{1.25-1}\amp = \frac{-5(1.25^2)+20(1.25)-(-5(1^2)+20(1))}{0.25}\\
+\amp = \frac{17.1875-15}{0.25}\\
+\amp = 8.75.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 1 and 1.25 seconds is 8.75 m/s.</li>
+<li id="li-410">The average rate of change of \(f(x)\) over the interval \([1,1+h]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(1+h)-f(1)}{1+h-1}\amp = \frac{-5((1+h)^2)+20(1+h)-(-5(1^2)+20(1))}{h}\\
+\amp = \frac{-5(h^2+2h+1)+20(1+h)-15}{h}\\
+\amp = \frac{-5h^2-10h-5+20+20h-15}{h}\\
+\amp = \frac{-5h^2+10h}{h}=\frac{(-5h+10)h}{h}\\
+\amp = -5h+10.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between 1 and \(1+h\) seconds is \(-5h+10\) m/s.</li>
+<li id="li-411">The average rate of change of \(f(x)\) over the interval \([a,a+h]\) is<div class="displaymath">
+\begin{align*}
+\frac{f(a+h)-f(a)}{a+h-a}\amp = \frac{-5((a+h)^2)+20(a+h)-(-5(a^2)+20(a))}{h}\\
+\amp = \frac{-5(a^2+2ah+h^2)+20(a+h)-(-5a^2+20a)}{h}\\
+\amp = \frac{-5a^2-10ah-5h^2+20a+20h+5a^2-20a}{h}\\
+\amp = \frac{-10ah-5h^2+20h}{h}=\frac{(-10a-5h+20)h}{h}\\
+\amp = -10a-5h+20.
+\end{align*}
+</div>So the average rate of change in the height of the rocket between \(a\) and \(a+h\) seconds is \(-10a-5h+20\) m/s.</li>
+</ul>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-58"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-58"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-58"><article class="exercise exercise-like"><p id="p-937">Consider a restaurant, whose weekly revenut, \(t\) weeks after opening is \(R(t)=60-40e^{-0.05t}\) thousand dollars.  Find the average rates of change in weekly revenue over the following periods of time:</p>
+<ul class="disc">
+<li id="li-412">The interval \([1,3]\text{.}\)</li>
+<li id="li-413">The interval \([2,2.5]\text{.}\)</li>
+</ul>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-86" id="solution-86"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-86"><div class="solution solution-like">
+<p id="p-938">We can use either the Desmos calculator above, or algebra:</p>
+<ul class="disc">
+<li id="li-414">The average rate of change of \(R(t)\) over the interval \([1,3]\) is<div class="displaymath">
+\begin{align*}
+\frac{R(3)-R(1)}{3-1}\amp = \frac{60-40e^{-0.05(3)}-(60-40e^{-0.05(1)})}{2}\\
+\amp = \frac{-40e^{-0.05(3)}+40e^{-0.05(1)}}{2}\\
+\amp\approx 1.81042896.
+\end{align*}
+</div>So the average rate of change in the weekly revenue between 1 and 3 weeks is about \(\$1810.43\text{.}\)</li>
+<li id="li-415">The average rate of change of \(R(t)\) over the interval \([2,2.5]\) is<div class="displaymath">
+\begin{align*}
+\frac{R(2.5)-R(2)}{2.5-2}\amp = \frac{60-40e^{-0.05(2.5)}-(60-40e^{-0.05(2)})}{0.5}\\
+\amp = \frac{-40e^{-0.05(2.5)}+40e^{-0.05(2)}}{0.5}\\
+\amp\approx 1.78724123611.
+\end{align*}
+</div>So the average rate of change in the weekly revenue between 2 and 2.5 weeks is about \(\$1787.24\text{.}\)</li>
+</ul>
+<p data-braille="continuation">We can see these average rates of change below: <iframe src="https://www.desmos.com/calculator/awdkdmsoau" id="interactive-139" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>

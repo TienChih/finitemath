@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:35:30-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Absorption States</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_StableSolutions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Markov.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_StableSolutions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Markov.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb" class="active">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_Absorb"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">11.3</span> <span class="title">Absorption States</span>
+</h2>
+<section class="introduction" id="introduction-57"><p id="p-1445">What is you had a state in your Markov process, where once you reached that state you would never leave?  What if there were multiple such states?  Given any starting state, what is the probability you end up in one of these states?</p></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">11.3.1</span> <span class="title">Gamblers Ruin</span>
+</h3>
+<p id="p-1446">Adaeze sits a poker table, she's a savy player so in each game she has a 60% chance of winng \(\$100\) and a 40% chance of losing \(\$100\text{.}\)  Being a savy player, she also realizes that eventually she will lose everything unless, she walks away at some point.  Let's say she makes the choice to cash out when she has \(\$500\text{.}\)  If she hits \(\$0\) she has to bow out by default.  She's going to keep playing until one of these outcomes is reached.  What's the probability she walks out happy?  Sad?</p>
+<p id="p-1447">You can imagine, this depends a lot on how much money she has when she comes in.  If she comes to the table with \(\$400\text{,}\) she only needs to win once more than whatever losses she has.  She also has a lot of cushion before going broke.  If she comes in with \(\$100\text{,}\) she has to win a net of 4 games, and theres far less room for error on her part.</p>
+<p id="p-1448">We can model this with a transition matrix, with states \(\$0, \$100, \ldots, \$500\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+M=\begin{pmatrix} 
+1 \amp 0.4 \amp 0 \amp 0 \amp 0 \amp 0\\ 
+0 \amp 0 \amp 0.4 \amp 0 \amp 0 \amp 0\\
+0 \amp 0.6 \amp 0 \amp 0.4 \amp 0 \amp 0\\ 
+0 \amp 0 \amp 0.6 \amp 0 \amp 0.4 \amp 0\\
+0 \amp 0 \amp 0 \amp 0.6 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0.6 \amp 1\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">So in state \(\$0, \$500\text{,}\) we have an entry of 1 in those diagonals, because once she enters this state she never leaves, she doesn't go back if she hits her goal, and she can't if she goes broke.  In each other state, we have a 40% chance of moving to a lower state, and a 60% chance of moving to a higher state.  We call the \(\$0, \$500\) states <dfn class="terminology">absorbing states</dfn> because they absorb any incoming state.</p>
+<p id="p-1449">If we want to see what would happen in subsequent games, depending on starting position, we can do this via: <div class="sagecell-sage" id="sage-28"><script type="text/x-sage">M=matrix(QQ, [[1,0.4,0,0,0,0],[0,0,0.4,0,0,0], [0,0.6,0,0.4,0,0], [0,0,0.6,0,0.4,0], [0,0,0,0.6,0,0], [0,0,0,0,0.6,1]])
+for i in range(100):
+  print(M^i*1.0)
+  print(' ')
+</script></div> Admittedly, this gets to be a bit hard to read, but what you can see is that over time, the values of the middle 4 rows go to zero.  What this translates to, is that as Adaeze continues to play, she chance that she doesnt end the game at some point goes down over time.  If we jump straight to 1000 games: <div class="sagecell-sage" id="sage-29"><script type="text/x-sage">M=matrix(QQ, [[1,0.4,0,0,0,0],[0,0,0.4,0,0,0], [0,0.6,0,0.4,0,0], [0,0,0.6,0,0.4,0], [0,0,0,0.6,0,0], [0,0,0,0,0.6,1]])
+print(M^1000*1.0)
+</script></div> We can see that if she starts with no money, she has no money (of course), if she start with \(\$100\text{,}\) she has about a 61.6% chance of going broke, and a 38.4% chance of winning.  At \(\$200\) this improves to a 36% chance of losing and a 64% chance of winning.  If she comes in with \(\$300\text{,}\) she has a 19% chance of going broke and a 81% chance of winning.  At \(\$400\text{,}\) she has a 7.6% chance of going broke, 92.4% chance of winning.  If she comes in with \(\$500\text{,}\) then she's already made her goal.</p></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">11.3.2</span> <span class="title">The Fundamental Matrix and an actual solution.</span>
+</h3>
+<p id="p-1450">Here, we will discuss a method for solving for the probability of reach the absorbing states, as well as finding the average number of steps it takes to reach these states.</p>
+<p id="p-1451">The steps are:</p>
+<ol class="decimal">
+<li id="li-788">Write the transition matrix so that the absoprbing states are the first states:<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} I_n \amp A \\ 0 \amp B\end{pmatrix}.
+\end{equation*}
+</div>The top left is just the absorbing states, all of whom have 100% chance of sending their values to themselves, hence \(I_n\text{.}\)  A is the matrix of non absorbing states sending their values to the absorbing states.  The bottom left is an all 0 matrix, as the absorbing states do not send their value to any of the non absorbing states, and the bottom right \(B\) are the non absorbing states sending values to each other.</li>
+<li id="li-789">Compute the <dfn class="terminology">Fundamental Matrix</dfn><div class="displaymath">
+\begin{equation*}
+F=(I_m-B)^{-1}
+\end{equation*}
+</div>where \(m\) corresponds to the dimensions of \(B\text{.}\)  Note that \(F_{ij}\) denotes the average number of times state \(i\) is visited when you start at state \(j\text{.}\)  The sum of each column tells you how many iterations on average before you reach an absorption state if you start in state \(j\text{.}\)</li>
+<li id="li-790">The matrix \(AF\) records the probabilities that you reach absorbing state \(i\) if you start at state \(j\text{.}\)</li>
+</ol>
+<p id="p-1452">Let's work this out with Adaeze:</p>
+<ol class="decimal">
+<li id="li-791">Letting \(\$0, \$500\) be the first two states, we have a new transition matrix:<div class="displaymath">
+\begin{equation*}
+M=\begin{pmatrix} 
+1 \amp 0 \amp 0.4 \amp 0 \amp 0 \amp 0 \\ 
+0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0.6 \\
+0 \amp 0 \amp 0 \amp 0.4 \amp 0 \amp 0 \\
+0 \amp 0 \amp 0.6 \amp 0 \amp 0.4 \amp 0 \\ 
+0 \amp 0 \amp 0 \amp 0.6 \amp 0 \amp 0.4 \\
+0 \amp 0 \amp 0  \amp 0 \amp 0.6 \amp 0 \\
+\end{pmatrix}
+\end{equation*}
+</div>We also have matrices:<div class="displaymath">
+\begin{equation*}
+A=\begin{pmatrix} 
+0.4 \amp 0 \amp 0 \amp 0 \\ 
+0 \amp 0 \amp 0 \amp 0.6 
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+B=\begin{pmatrix} 
+0 \amp 0.4 \amp 0 \amp 0 \\
+0.6 \amp 0 \amp 0.4 \amp 0 \\ 
+0 \amp 0.6 \amp 0 \amp 0.4 \\
+0  \amp 0 \amp 0.6 \amp 0 \\
+\end{pmatrix}
+\end{equation*}
+</div>
+</li>
+<li id="li-792">We compute \(F\text{:}\) <div class="sagecell-sage" id="sage-30"><script type="text/x-sage">B=matrix(QQ, [[0,0.4,0,0], [0.6,0,0.4,0], [0,0.6,0,0.4],[0,0,0.6,0]])
+I=matrix.identity(4)
+F=(I-B)^(-1)
+print(F)
+</script></div> Giving us<div class="displaymath">
+\begin{equation*}
+F=
+\begin{pmatrix}
+\frac{325}{211} \amp \frac{190}{211} \amp \frac{100}{211} \amp \frac{40}{211} \\
+\frac{285}{211} \amp \frac{475}{211} \amp \frac{250}{211} \amp \frac{100}{211} \\
+\frac{225}{211} \amp \frac{375}{211} \amp \frac{475}{211} \amp \frac{190}{211} \\
+\frac{135}{211} \amp \frac{225}{211} \amp \frac{285}{211} \amp \frac{325}{211} \\
+\end{pmatrix}
+\end{equation*}
+</div>
+</li>
+<li id="li-793">Finally, we compute \(AF\text{:}\) <div class="sagecell-sage" id="sage-31"><script type="text/x-sage">A=matrix(QQ, [[0.4,0,0,0], [0,0,0,0.6]])
+B=matrix(QQ, [[0,0.4,0,0], [0.6,0,0.4,0], [0,0.6,0,0.4],[0,0,0.6,0]])
+I=matrix.identity(4)
+F=(I-B)^(-1)
+print(A*F)
+print(' ')
+print(A*F*1.0)
+</script></div>
+<div class="displaymath">
+\begin{equation*}
+AF=
+\begin{pmatrix}
+\frac{130}{211} \amp \frac{76}{211} \amp \frac{40}{211} \amp \frac{16}{211} \\
+\frac{81}{211} \amp \frac{135}{211} \amp \frac{171}{211} \amp \frac{195}{211} \\
+\end{pmatrix}
+\end{equation*}
+</div>If you start with \(\$100\) theres a \(\frac{130}{211}\approx 0.616\) chance you go broke and a \(\frac{81}{211}\approx 0.384\) chance you make \(\$500\) etc., essentially the same values we found above, but precisely.</li>
+</ol>
+<article class="exercise exercise-like" id="exercise-114"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-114"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.3.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-114"><article class="exercise exercise-like"><p id="p-1453">Suppose employees of a company go through a probationary period when hired.  They are evaluated regularly and rated unacceptable, in progress, good, and excellent.  Unacceptable employees are let go, and excellent employees are offered full time contracts, either way they are no longer probationary.</p>
+<p id="p-1454">In progress employees have a 20% chance of moving to unacceptable, 20% chance of moving to good, and a 10% chance of moving to excellent in each round of review.  Good employees have a 10% chance to move to unacceptable, 20% chance of moving to in progress, and a 30% chance of moving to excellent.</p>
+<ol id="p-1455" class="decimal">
+<li id="li-794">Find the solution matrix.</li>
+<li id="li-795">If an employee came in as in progress, what is the probability they get a full time contract?</li>
+<li id="li-796">If an employee comes in as good, how long on average is their probationary period?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-207" id="solution-207"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-207"><div class="solution solution-like">
+<p id="p-1456">We first write out the transition matrix, with the states being unacceptable, excellent, in progress and good:</p>
+<div class="displaymath">
+\begin{equation*}
+M=
+\begin{pmatrix}
+1 \amp 0 \amp 0.2 \amp 0.1\\
+0 \amp 1 \amp 0.1 \amp 0.3\\
+0 \amp 0 \amp 0.5 \amp 0.2\\
+0 \amp 0 \amp 0.2 \amp 0.4\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus, we have matrices:</p>
+<div class="displaymath">
+\begin{equation*}
+A=
+\begin{pmatrix}
+0.2 \amp 0.1\\
+0.1 \amp 0.3\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+B=
+\begin{pmatrix}
+0.5 \amp 0.2\\
+0.2 \amp 0.4\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus we have</p>
+<div class="displaymath">
+\begin{equation*}
+F=\left(\begin{pmatrix}
+1 \amp 0\\
+0 \amp 1\\
+\end{pmatrix}-\begin{pmatrix}
+0.5 \amp 0.2\\
+0.2 \amp 0.4\\
+\end{pmatrix}\right)^{-1}=\begin{pmatrix}
+\frac{30}{13} \amp \frac{10}{13}\\
+\frac{10}{13} \amp \frac{25}{13}\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">So the solutions matrix is:</p>
+<div class="displaymath">
+\begin{equation*}
+AF=
+\begin{pmatrix}
+0.2 \amp 0.1\\
+0.1 \amp 0.3\\
+\end{pmatrix}
+\begin{pmatrix}
+\frac{30}{13} \amp \frac{10}{13}\\
+\frac{10}{13} \amp \frac{25}{13}\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\frac{7}{13} \amp \frac{9}{26}\\
+\frac{6}{13} \amp \frac{17}{26}\\
+\end{pmatrix}
+\end{equation*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-208" id="solution-208"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-208"><div class="solution solution-like">
+<p id="p-1457">If an employee came in as in progress, their chance of reaching excellent is \(\frac{6}{13}\text{,}\) the bottom left entry of the solutions matrix:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}
+\frac{7}{13} \amp \frac{9}{26}\\
+\frac{6}{13} \amp \frac{17}{26}\\
+\end{pmatrix}.
+\end{equation*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-209" id="solution-209"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-209"><div class="solution solution-like">
+<p id="p-1458">If an employee came in as good, their average probationary length would be the sum of the last column of \(F\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}
+\frac{30}{13} \amp \frac{10}{13}\\
+\frac{10}{13} \amp \frac{25}{13}\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">So: \(\frac{10}{13}+\frac{25}{13}=\frac{35}{13}\approx 2.7\) cycles.</p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-115"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-115"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.3.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-115"><article class="exercise exercise-like"><p id="p-1459">If you flip a fair coin, how long on average would it take you to get 3 heads in a row?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-210" id="solution-210"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-210"><div class="solution solution-like">
+<p id="p-1460">Lets say we have 3 states, 3, 0, 1 and 2 heads in a row.  We'll let 3 be the absorbing state since you're done after that.  With each coin flip, you either get a heads, increasing the number of heads in a row, or a tails, sending you back to 0 heads in a row.</p>
+<p id="p-1461">We thus get transition matrix:</p>
+<div class="displaymath">
+\begin{equation*}
+M=
+\begin{pmatrix}
+1 \amp 0 \amp 0 \amp 0.5\\
+0 \amp 0.5 \amp 0.5 \amp 0.5\\
+0 \amp 0.5\amp 0 \amp 0\\
+0 \amp 0 \amp 0.5 \amp 0\\
+\end{pmatrix}.
+\end{equation*}
+</div>
+<p data-braille="continuation">With</p>
+<div class="displaymath">
+\begin{equation*}
+A=
+\begin{pmatrix}
+0 \amp 0 \amp 0.5\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+B=
+\begin{pmatrix}
+0.5 \amp 0.5 \amp 0.5\\
+0.5\amp 0 \amp 0\\
+0 \amp 0.5 \amp 0\\
+\end{pmatrix}.
+\end{equation*}
+</div>
+<p id="p-1462">From here, we have that</p>
+<div class="displaymath">
+\begin{equation*}
+F=(I_3-B)^{-1}=\begin{pmatrix}
+8 \amp 6 \amp 4\\
+4\amp 4 \amp 2\\
+2 \amp 2 \amp 2\\
+\end{pmatrix}.
+\end{equation*}
+</div>
+<p data-braille="continuation">So assuming you start with no heads, then you will on average have to flip \(8+4+2=14\) times before reaching the absorbing state.</p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-116"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-116"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.3.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-116"><article class="exercise exercise-like"><p id="p-1463">Farida opens a restaurant, the food is good, but the restaurant business is notoriously tough.  She needs a positive critic review in local press to generate the local buzz she needs to survive.  Each month, there is a 30% chance a critic reviews the restaurant.  There's a 10% chance that otherwise she breaks even that month. If that fails, she dips into her savings.  She can do so 5 times before the business is bankrupt.</p>
+<p id="p-1464">What is the probability she gets the review before she goes bankrupt?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-211" id="solution-211"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-211"><div class="solution solution-like">
+<p id="p-1465">There are 8 states: positive review, banktruptcy, and 0,1,2,3,4 and 5 dips into the savings left.  The first two are absorbing states, she gets the review and business booms or she goes bust.  Using the order above, we get transition matrix:</p>
+<div class="displaymath">
+\begin{equation*}
+M=\begin{pmatrix}
+1 \amp 0 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3\\
+0 \amp 1 \amp 0.6 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6\\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1\\
+\end{pmatrix}.
+\end{equation*}
+</div>
+<p data-braille="continuation">This gives us:</p>
+<div class="displaymath">
+\begin{equation*}
+A=\begin{pmatrix}
+0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3 \amp 0.3\\
+0.6 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0\\
+\end{pmatrix},
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+B=\begin{pmatrix}
+0.1 \amp 0.6 \amp 0 \amp 0 \amp 0 \amp 0\\
+0 \amp 0.1 \amp 0.6 \amp 0 \amp 0 \amp 0\\
+0 \amp 0 \amp 0.1 \amp 0.6 \amp 0 \amp 0\\
+0 \amp 0 \amp 0 \amp 0.1 \amp 0.6 \amp 0\\
+0 \amp 0 \amp 0 \amp 0 \amp 0.1 \amp 0.6\\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0.1\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<p id="p-1466">Thus we have</p>
+<div class="displaymath">
+\begin{equation*}
+F=(I_6-B)^{-1}=
+\begin{pmatrix}
+\frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81} \amp  \frac{80}{243} \amp  \frac{160}{729} \amp  \frac{320}{2187}\\
+0\amp \frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81} \amp  \frac{80}{243} \amp  \frac{160}{729} \\
+0\amp 0\amp \frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81} \amp  \frac{80}{243} \\
+0\amp 0\amp 0\amp \frac{10}{9} \amp  \frac{20}{27} \amp  \frac{40}{81}  \\
+0\amp 0\amp 0\amp 0\amp \frac{10}{9} \amp  \frac{20}{27}  \\
+0\amp 0\amp 0\amp 0\amp 0\amp \frac{10}{9}  \\
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">with solutions matrix:</p>
+<div class="displaymath">
+\begin{equation*}
+AF=
+\begin{pmatrix}
+\frac{1}{3}\amp \frac{5}{9}\amp \frac{19}{27}\amp \frac{65}{81}\amp \frac{211}{243}\amp\frac{665}{729}\\
+\frac{2}{3}\amp \frac{4}{9}\amp \frac{8}{27}\amp \frac{16}{81}\amp \frac{32}{243}\amp\frac{64}{729}\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">So if she came in with 5 dips into the savings, she would have a \(\frac{665}{729}\approx 91.22\%\) chance of surviving until a positive review!</p>
+</div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>

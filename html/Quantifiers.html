@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:35:07-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Quantifiers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_ConditionalStatements.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_Arguments.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_ConditionalStatements.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_Arguments.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers" class="active">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Quantifiers"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.4</span> <span class="title">Quantifiers</span>
+</h2>
+<section class="introduction" id="introduction-16"><p id="p-502">In this section we introduce quantifiers.  Sometimes, we want to make statements about something always happening (Everyone who gets hurt should...).  Sometimes we want to make a statement about something that will happen but not all the time (Out of all cattle on a ranch, there will be some that...).  Sometimes we will want to combine these (For every student in the school, there will be a professor that...).  Here, we will discuss how to state such things formally.</p></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.4.1</span> <span class="title">For All</span>
+</h3>
+<p id="p-503">Consider the statement "Every student at State U likes ice cream." How could we say that formally? Suppose \(x\) is a State U student and \(I(x)\) is the statement “\(x\) likes ice cream.”.  Just saying \(I(x)\) is fine for each individual student \(x\text{,}\)  but our goal is to say something about <em class="emphasis">all</em> State U students. So we introduce the quantifiers <dfn class="terminology">\(\forall\)</dfn>.</p>
+<p id="p-504">The \(\forall\) is pronounced “for all” or “for every”, and it indicates that the  statement that follows is true for all values of \(x\text{.}\) So \(\forall x, I(x)\) would denote “For every State U student \(x\text{,}\) \(x\) likes Ice Cream.”. In order for a \(\forall\) statement to be true, it has to be true for <em class="emphasis">every</em> possible value of \(x\text{.}\)</p>
+<p id="p-505">More generally, if \(S(x)\) is a statement about \(x\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\forall x, S(x) 
+\end{equation*}
+</div>
+<p data-braille="continuation">means that \(S(x)\) is true for every choice of \(x\text{.}\)</p>
+<article class="example example-like" id="example-38"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-38"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-38"><article class="example example-like"><p id="p-506">For each of the following sentences, write the formal accompanying statement.</p>
+<ol class="decimal">
+<li id="li-132">"Every child watches YouTube."  Let \(x\) be a child, \(Y(x)\) denote "\(x\) watches Youtube".</li>
+<li id="li-133">"Each problem has a solution."  Let \(x\) be a problem, \(S(x)\) denote "\(x\) has a solution".</li>
+<li id="li-134">"All square numbers are non-prime."  Let \(x\) be a square number, \(P(x)\) denote "\(x\) is a prime".</li>
+<li id="li-135">"For any integer, if it is prime, then it is either two or odd."  Let \(x\) be an integer, \(P(x)\) denote "\(x\) is a prime", \(T(x)\) denote "\(x=2\)", and \(O(x)\) denote "\(x\) is odd".</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like">
+<p id="p-507">Consider these statements:</p>
+<ol class="decimal">
+<li id="li-136">\(\forall x, Y(x)\text{.}\)</li>
+<li id="li-137">\(\forall x, S(x)\text{.}\)</li>
+<li id="li-138">\(\forall x, \sim P(x)\text{.}\)</li>
+<li id="li-139">\(\forall x,  P(x) \to (T(x)\vee O(x))\text{.}\)</li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-39"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-39"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-39"><article class="example example-like"><p id="p-508">For each of the following statements, write out the sentence accompanying it.</p>
+<ol class="decimal">
+<li id="li-140">\(\forall x, M(x)\text{,}\)  where \(x\) is an accordianist, \(M(x)\) denotes "\(x\) has a trained monkey".</li>
+<li id="li-141">\(\forall x, \sim L(x)\text{.}\)  Let \(x\) be a joke, \(L(x)\) denotes "the audience laughed at \(x\)".</li>
+<li id="li-142">\(\forall x, F(x)\to E(x)\)  Let \(x\) be an integer, \(F(x)\) denotes "\(x\) is a mutliple of four", and \(E(x)\) denote "\(x\) is even".</li>
+<li id="li-143">\(\forall x, S(x)\wedge I(x)\)   Let \(x\) be a linear function, \(S(x)\) denotes "\(x\) has a slope", \(I(x)\) denotes "\(x\) has a \(y\)-intercept".</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like">
+<p id="p-509">Consider these sentences:</p>
+<ol class="decimal">
+<li id="li-144">"Each accordianist has a trained monkey."</li>
+<li id="li-145">"No one laughed at any of the jokes."</li>
+<li id="li-146">"For each integer, if it's a multiple of four, then it's even."</li>
+<li id="li-147">"Each linear function has a slope and \(y\)-intercept."</li>
+</ol>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.4.2</span> <span class="title">Exists</span>
+</h3>
+<p id="p-510">The <dfn class="terminology">\(\exists\)</dfn> pronounced “there exists” or “there is” indicates the following statement is true for some values of \(x\text{.}\) It could be true for 1 of them, or a bunch of them, or for all of them. The only thing we know for sure is that there is <em class="emphasis">at least</em> one value of \(x\) for which it is true. So \(\exists x, I(x)\) would mean “There is a State U student who likes ice cream.” or “At least one State U student likes ice cream.”  In order for a \(\exists\) statement to be true, it has to be true for at least one, possibly more, choice(s) of \(x\text{.}\)</p>
+<p id="p-511">More generally, if \(S(x)\) is a statement about \(x\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\exists x, S(x) 
+\end{equation*}
+</div>
+<p data-braille="continuation">means that \(S(x)\) is true for at least one choice of \(x\text{.}\)</p>
+<article class="example example-like" id="example-40"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-40"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-40"><article class="example example-like"><p id="p-512">For each of the following sentences, write the formal accompanying statement.</p>
+<ol class="decimal">
+<li id="li-148">"There is a type of candy which is my favourite."  Let \(x\) be a type of candy, \(F(x)\) denote "\(x\) is my favourite".</li>
+<li id="li-149">"There is a movie that I don't like."  Let \(x\) be a movie, \(L(x)\) denote "I like \(x\)".</li>
+<li id="li-150">"There is at least one function that is both even and odd."  Let \(x\) be a function, \(E(x)\) denote "\(x\) is even", \(O(x)\) denote "\(x\) is odd".</li>
+<li id="li-151">"There is at least one integer both a square number and  not even."  Let \(x\) be an integer, \(E(x)\) denote "\(x\) is even", and \(S(x)\) denote "\(x\) is square".</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like">
+<p id="p-513">Consider these statements:</p>
+<ol class="decimal">
+<li id="li-152">\(\exists x, F(x)\text{.}\)</li>
+<li id="li-153">\(\exists x, \sim L(x)\text{.}\)</li>
+<li id="li-154">\(\exists x, E(x)\wedge O(x)\text{.}\) For each \(x\text{,}\) \(x\) is not prime.</li>
+<li id="li-155">\(\forall x,  S(x) \wedge \sim E(x)\text{.}\)</li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-41"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-41"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-41"><article class="example example-like"><p id="p-514">For each of the following statements, write out the sentence accompanying it.</p>
+<ol class="decimal">
+<li id="li-156">\(\exists x, P(x)\text{,}\)  where \(x\) is a student, \(P(x)\) denotes "\(x\) has to present to the class".</li>
+<li id="li-157">\(\exists x, \sim R(x)\text{.}\)  Let \(x\) be a city bus, \(Y(x)\) denotes "\(x\) runs late today".</li>
+<li id="li-158">\(\exists x, P(x)\wedge E(x)\)  Let \(x\) be a integer, \(P(x)\) denotes "\(x\) is prime", and \(E(x)\) denotes "\(x\) is even".</li>
+<li id="li-159">\(\exists x, E(x)\to Z(x)\)   Let \(x\) be a function, \(Z(x)\) denotes "\(x\) has a output zero", \(E(x)\) denotes "\(x\) has an even integer input".</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-28" id="solution-28"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like">
+<p id="p-515">Consider these sentences:</p>
+<ol class="decimal">
+<li id="li-160">"There is at least one student who will present to the class today."</li>
+<li id="li-161">"There is at least one city bus who won't run late today."</li>
+<li id="li-162">"There is at least one integer who is prime and even."</li>
+<li id="li-163">"There is at least one function who, whenever it has an even input, it outputs zero."</li>
+</ol>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.4.3</span> <span class="title">Negating Quantifiers</span>
+</h3>
+<p id="p-516">Let's consider \(\forall x,  I(x)\) or “Every State U student likes ice Cream.” If this were <em class="emphasis">not</em> true, what would that mean? It would mean that there is some student at State U who does not like ice cream. In other words: \(\exists x, \sim I(x)\text{.}\)</p>
+<p id="p-517">What would the negation of \(\exists x, I(x)\) be? The statement is saying “There is a student who likes Ice Cream.” What would it mean for this not to be true? It would mean that every single student doesn't like Ice Cream, i.e. \(\forall x,  \sim I(x)\text{.}\) So our negation rules are:</p>
+<div class="displaymath">
+\begin{align*}
+\sim(\forall x, p(x))\amp = \exists x,  \sim p(x)\\
+\sim(\exists x, p(x))\amp = \forall x, \sim p(x)
+\end{align*}
+</div>
+<article class="example example-like" id="example-42"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-42"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-42"><article class="example example-like"><p id="p-518">Negate \(\forall x, p(x)\to q(x)\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like">
+<p id="p-519">Consider these equivalences:</p>
+<div class="displaymath">
+\begin{align*}
+\sim(\forall x, p(x)\to q(x))\amp = \exists x, \sim(p(x)\to q(x))\\
+\amp = \exists x, \sim(\sim p(x)\vee q(x))\\
+\amp = \exists x, p(x)\wedge \sim q(x).
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-43"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-43"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-43"><article class="example example-like"><p id="p-520">Negate \(\exists x, a(x)\vee b(x)\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-30" id="solution-30"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like">
+<p id="p-521">Consider these equivalences:</p>
+<div class="displaymath">
+\begin{align*}
+\sim(\exists x, a(x)\vee b(x))\amp = \forall x, \sim(a(x)\vee b(x))\\
+\amp = \forall x, \sim a(x)\wedge \sim b(x).
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-44"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-44"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-44"><article class="example example-like"><p id="p-522">Translate the sentence "Every real number is either positive or negative" into a logical statement, negate it, and then translate the negation back to a sentence.  Let  \(x\) be a real number, \(P(x)\) be "\(x\) is positive", and \(N(x)\) be "\(x\) is negative".</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like">
+<p id="p-523">The statement is "\(\forall x, P(x)\vee N(x)\)".  It's negation would be:</p>
+<div class="displaymath">
+\begin{align*}
+\sim(\forall x, P(x)\vee N(x))\amp = \exists x, \sim (P(x)\vee N(x))\\
+\amp = \exists x, \sim P(x)\wedge \sim N(x).
+\end{align*}
+</div>
+<p data-braille="continuation">This translates to "There is at least one number which is both not even and not odd".</p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-45"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-45"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.8</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-45"><article class="example example-like"><p id="p-524">Translate the sentence "There is a function who if one evaluates it at zero, the output is negative" into a logical statement, negate it, and then translate the negation back to a sentence.  Let  \(x\) be a function, \(I(x)\) be "\(x\) is evaluated at 0", and \(N(x)\) be "\(x\) has a negative output".</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-32" id="solution-32"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like">
+<p id="p-525">The statement is "\(\exists x, I(x)\to N(x)\)".  It's negation would be:</p>
+<div class="displaymath">
+\begin{align*}
+\sim(\exists x, I(x)\to N(x))\amp = \forall x, \sim (I(x)\to N(x))\\
+\amp = \forall x, \sim (\sim I(x)\vee N(x))\\
+\amp = \forall x, I(x)\wedge \sim N(x).
+\end{align*}
+</div>
+<p data-braille="continuation">This translates to "For every function, we evaluate at zero and the output is not negative".  (This isn't true, but it's the negation of the original statement).</p>
+</div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>

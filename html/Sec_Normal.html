@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:35:27-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Normal Distributions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\Q}{\terminology{Question:\ }}
+\newcommand{\Sol}{\terminology{Solution:\ }}
+\newcommand{\Fisg}{\emph{Fisg}}
+\newcommand{\Iisg}{\emph{Iisg}}
+\newcommand{\Pisg}{\emph{Pisg}}
+\newcommand{\Tisg}{\emph{Tisg}}
+\newcommand{\Dom}{\emph{Dom}}
+\newcommand{\Img}{\emph{Im}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\bcup}{\displaystyle\bigcup}
+\newcommand{\bcap}{\displaystyle\bigcap}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\C}[1]{\mathbb{C}^{#1}}
+\newcommand{\Z}[1]{\mathbb{Z}^{#1}}
+\newcommand{\K}[1]{\mathbb{K}^{#1}}
+\newcommand{\limit}[2]{\displaystyle{ \lim_{#1 \to #2}}}
+\newcommand{\TCB}[1]{\textcolor{blue}{#1}}
+\newcommand{\TCR}[1]{\textcolor{red}{#1}}
+\newcommand{\TCO}[1]{\textcolor{orange}{#1}}
+\newcommand{\TCG}[1]{\textcolor{ForestGreen}{#1}}
+\DeclareMathOperator{\Endo}{Endo}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\pleat}{\mathcal{P}\ell}
+\def\PX{\mathfrak{W}G}
+\def\Gph{\mathsf{Gph}}
+\def\HoGph{\mathsf{HoGph}}
+\def\into{\hookrightarrow}
+\def\con{\underline{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Finite Mathematics: A Tour</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec_Variation.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Chap_Stats.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec_BinomialApproximation.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec_Variation.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Chap_Stats.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec_BinomialApproximation.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="author-bio-TC.html" data-scroll="author-bio-TC">Author Biography</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearFunctions.html" data-scroll="Chap_LinearFunctions"><span class="codenumber">1</span> <span class="title">Linear Functions</span></a><ul>
+<li><a href="Sec_IntrotoLinear.html" data-scroll="Sec_IntrotoLinear">What is a Linear Function?</a></li>
+<li><a href="Sec_GraphsofLinearFunctions.html" data-scroll="Sec_GraphsofLinearFunctions">Standard form and graphs of Linear Functions.</a></li>
+<li><a href="Sec_IndentifyLinear.html" data-scroll="Sec_IndentifyLinear">Identifying a Linear Function from information.</a></li>
+<li><a href="Sec_ApplicationsLinear.html" data-scroll="Sec_ApplicationsLinear">Applications of Linear Functions</a></li>
+<li><a href="Sec_LinearRegression.html" data-scroll="Sec_LinearRegression">Linear Regression</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Matrices.html" data-scroll="Chap_Matrices"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations and Matrices</span></a><ul>
+<li><a href="Sec_SystemsofEquations.html" data-scroll="Sec_SystemsofEquations">Systems of Linear  Equations</a></li>
+<li><a href="Sec_SystemasMatrix.html" data-scroll="Sec_SystemasMatrix">Representing a System of Linear Equations as a Matrix</a></li>
+<li><a href="Sec_MatrixArithmetic.html" data-scroll="Sec_MatrixArithmetic">Products and Sums of Matrices</a></li>
+<li><a href="Sec_MatrixInverse.html" data-scroll="Sec_MatrixInverse">Matrix Inverses</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_LinearProgramming.html" data-scroll="Chap_LinearProgramming"><span class="codenumber">3</span> <span class="title">Linear Programming</span></a><ul>
+<li><a href="Sec_LinearInequalities.html" data-scroll="Sec_LinearInequalities">Linear Inequalities</a></li>
+<li><a href="Sec_SystemsLinearInequalities.html" data-scroll="Sec_SystemsLinearInequalities">Systems of Linear Inequalities</a></li>
+<li><a href="Sec_LinearOptimization.html" data-scroll="Sec_LinearOptimization">Linear Optimization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Logic.html" data-scroll="Chap_Logic"><span class="codenumber">4</span> <span class="title">Logic</span></a><ul>
+<li><a href="Sec_Statements.html" data-scroll="Sec_Statements">Statements</a></li>
+<li><a href="Sec_EquivalentStatements.html" data-scroll="Sec_EquivalentStatements">Equivalent Statements</a></li>
+<li><a href="Sec_ConditionalStatements.html" data-scroll="Sec_ConditionalStatements">Conditional Statements</a></li>
+<li><a href="Quantifiers.html" data-scroll="Quantifiers">Quantifiers</a></li>
+<li><a href="Sec_Arguments.html" data-scroll="Sec_Arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Financial.html" data-scroll="Chap_Financial"><span class="codenumber">5</span> <span class="title">Financial Mathematics</span></a><ul>
+<li><a href="Sec_SimpleInterest.html" data-scroll="Sec_SimpleInterest">Simple Interest</a></li>
+<li><a href="Sec_CompoundInterest.html" data-scroll="Sec_CompoundInterest">Compound Interest</a></li>
+<li><a href="Sec_RegularPayments.html" data-scroll="Sec_RegularPayments">Regular Payments</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_NonLinear.html" data-scroll="Chap_NonLinear"><span class="codenumber">6</span> <span class="title">Non-Linear Functions</span></a><ul>
+<li><a href="Sec_Functions.html" data-scroll="Sec_Functions">Introduction to Functions</a></li>
+<li><a href="Sec_Quadratics.html" data-scroll="Sec_Quadratics">Quadratic Functions</a></li>
+<li><a href="Sec_Polynomials.html" data-scroll="Sec_Polynomials">Polynomials</a></li>
+<li><a href="Sec_RationalFunctions.html" data-scroll="Sec_RationalFunctions">Rational Functions</a></li>
+<li><a href="Sec_Exponentials.html" data-scroll="Sec_Exponentials">Exponentials</a></li>
+<li><a href="Sec_Logarithms.html" data-scroll="Sec_Logarithms">Logarithms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Calculus.html" data-scroll="Chap_Calculus"><span class="codenumber">7</span> <span class="title">Introduction to Differential Calculus</span></a><ul>
+<li><a href="Sec_LimitsContinuity.html" data-scroll="Sec_LimitsContinuity">Limits &amp; Continuity</a></li>
+<li><a href="Sec_AvgRoC.html" data-scroll="Sec_AvgRoC">Average rates of change</a></li>
+<li><a href="Sec_DefofDerivative.html" data-scroll="Sec_DefofDerivative">The Derivative Function</a></li>
+<li><a href="Sec_RulesofDerivative.html" data-scroll="Sec_RulesofDerivative">Basic rules of the derivative</a></li>
+<li><a href="Sec_AdvancedDerivative.html" data-scroll="Sec_AdvancedDerivative">Advanced Derivatve Techniques</a></li>
+<li><a href="DerivativeExp.html" data-scroll="DerivativeExp">Derivative of Exponentials</a></li>
+<li><a href="DerivativeLogs.html" data-scroll="DerivativeLogs">Derivative of Logarithms</a></li>
+<li><a href="Sec_DerivativeHints.html" data-scroll="Sec_DerivativeHints">Hints when Differentating</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_SetProb.html" data-scroll="Chap_SetProb"><span class="codenumber">8</span> <span class="title">Introduction to Sets and Probabilty</span></a><ul>
+<li><a href="Sec_IntroSets.html" data-scroll="Sec_IntroSets">Introduction to Sets</a></li>
+<li><a href="Sec_CardProb.html" data-scroll="Sec_CardProb">Cardinality and Probability</a></li>
+<li><a href="Sec_Conditional.html" data-scroll="Sec_Conditional">Condtional Probability</a></li>
+<li><a href="Sec_Bayes.html" data-scroll="Sec_Bayes">Bayes Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_CountingProb.html" data-scroll="Chap_CountingProb"><span class="codenumber">9</span> <span class="title">Counting and more Probabilty</span></a><ul>
+<li><a href="Sec_Permutation.html" data-scroll="Sec_Permutation">Multiplication Principle and Permutations</a></li>
+<li><a href="Sec_Combinations.html" data-scroll="Sec_Combinations">Combinations and Binomial Coefficients</a></li>
+<li><a href="Sec_AppstoProb.html" data-scroll="Sec_AppstoProb">Applications to Probability</a></li>
+<li><a href="Sec_ProbabilityDistributions.html" data-scroll="Sec_ProbabilityDistributions">Probability Distrbutions</a></li>
+<li><a href="Sec_Binomial.html" data-scroll="Sec_Binomial">Binomial Distrbutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Stats.html" data-scroll="Chap_Stats"><span class="codenumber">10</span> <span class="title">Statistics</span></a><ul>
+<li><a href="Sec_CentralTendency.html" data-scroll="Sec_CentralTendency">Frequency Distribution and Measures of Central Tendency</a></li>
+<li><a href="Sec_Variation.html" data-scroll="Sec_Variation">Measures of Variation</a></li>
+<li><a href="Sec_Normal.html" data-scroll="Sec_Normal" class="active">Normal Distributions</a></li>
+<li><a href="Sec_BinomialApproximation.html" data-scroll="Sec_BinomialApproximation">Normal Approximation of the Binomial</a></li>
+<li><a href="Sec_CLT.html" data-scroll="Sec_CLT">The Central Limit Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Chap_Markov.html" data-scroll="Chap_Markov"><span class="codenumber">11</span> <span class="title">Markov Chains</span></a><ul>
+<li><a href="Sec_IntrotoMarkov.html" data-scroll="Sec_IntrotoMarkov">Introduction to Markov Chains</a></li>
+<li><a href="Sec_StableSolutions.html" data-scroll="Sec_StableSolutions">Stable Solutions and Equilibrium</a></li>
+<li><a href="Sec_Absorb.html" data-scroll="Sec_Absorb">Absorption States</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_Normal"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">10.3</span> <span class="title">Normal Distributions</span>
+</h2>
+<section class="introduction" id="introduction-51"><p id="p-1317">In this section, we study one of the most ubiquitous and fundamental probability distributions in nature and mathematics: the <dfn class="terminology">normal distribution</dfn>.  We may know this as the standard “bell curve”.</p></section><section class="subsection" id="subsection-110"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.3.1</span> <span class="title">The standard Normal Curve</span>
+</h3>
+<article class="definition definition-like" id="definition-39"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-1318">The <dfn class="terminology">standard normal curve</dfn> is the curve generated by</p>
+<div class="displaymath">
+\begin{equation*}
+y=\frac{e^{-x^2/2}}{\sqrt{2\pi}}.
+\end{equation*}
+</div>
+<p data-braille="continuation">This may be seen below. <iframe src="https://www.desmos.com/calculator/5glqmgffkg" id="interactive-209" width="600" height="600"></iframe></p></article><p id="p-1319">We observe some things about this curve:</p>
+<ul class="disc">
+<li id="li-731">The peak of this curve is at \(x=0\)</li>
+<li id="li-732">The curve is symmetric, it's behavior on the one side mirrors that of the other.</li>
+<li id="li-733">It's values are largest the closer the \(x\) values are to zero.</li>
+<li id="li-734">The bulk of the area under the curve falls between -3 and 3, and otherwise tapers off as \(x\) approaches \(\infty, -\infty\text{.}\)</li>
+</ul>
+<p data-braille="continuation">These are all things we would intuitively associate with a bell curve.</p>
+<article class="remark remark-like" id="remark-30"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-1320">The standard normal curve is the probability distribution of the <dfn class="terminology">standard normal distribution</dfn>, the normal distribution with mean 0 and standard deviation 1.  For <em class="emphasis">continuous distributions</em> such as the normal distribution, we can have valid values that are any real number, as opposed to a finite or countable list.  Consequently we compute probabilities by finding <em class="emphasis">areas</em> under this curve.</p>
+<p id="p-1321">We use \(Z\) to denote the standard normal random variable, the probability that \(Z\) is between \(a\) and \(b\) is the area under the normal curve between \(a\) and \(b\text{.}\)</p></article><p id="p-1322">Finding these values is generally done through machine-assisted computations.  Many texts use a \(z\)-score table presentation where values of \(z\) and associated probabilities are listed.  However, these are just values computed by machines listed on paper.  This made sense in a day and age were computing power wasn't universal.  If you're reading this, this is clearly no longer the case.</p>
+<p id="p-1323">So if we wanted to find say \(P(-1.2\lt Z\leq 2)\)  this could be done as follows: <iframe src="https://www.desmos.com/calculator/8m5mr0vq9c" id="interactive-210" width="600" height="600"></iframe> This is the standard curve so the mean \(\mu=0\) and the standard deviation \(\sigma=1\text{.}\)  The bounds of our region are \(a=-1.2, b=2\) respectively.  So \(P(-1.2\lt z\leq 2)\approx0.8622.\)</p>
+<p id="p-1324">By typing “infinity” into the bounds, we can also find the areas of unbounded regions.  If we wanted to find say \(P(z&gt;1.5)\text{,}\) this is equivalent to \(P(1.5\lt z\lt \infty)\text{.}\) Thus \(P(Z&gt;1.5)\approx 0.0668\text{.}\)</p>
+<p id="p-1325">Using desmos: <iframe src="https://www.desmos.com/calculator/r099v73buw" id="interactive-211" width="600" height="600"></iframe></p>
+<p id="p-1326">We can turn this around and say, given a probabibility or area, to find an appropriate bound.  Suppose we wanted to find a \(k\) so that \(P(Z\lt k)=0.4\text{.}\)  So note that each \(k\) yields a different probability: <iframe src="https://www.desmos.com/calculator/16iyumeumv" id="interactive-212" width="600" height="600"></iframe></p>
+<p id="p-1327">We can see that we get to \(P=0.4\) fairly close to 0, on the negative side.  Specifically around \(k\approx-0.2533\text{.}\) <iframe src="https://www.desmos.com/calculator/ktkeqhrr7c" id="interactive-213" width="600" height="600"></iframe></p>
+<article class="remark remark-like" id="remark-31"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Some things to keep in mind.</span>
+</h6>
+<p id="p-1328">Here are some quick facts and heuristics about the normal curve to give you an intuitive sense on how it behaves.</p>
+<ul class="disc">
+<li id="li-735">Each half is 50% of the curve, so have greater than the mean, half less than the mean.</li>
+<li id="li-736">For any tail of the distribution, the corresponding tail on the other side has the same area.</li>
+<li id="li-737">Roughly 67% of the curve lies within \(\pm 1\) standard deviations from the mean,  95% within \(\pm 2\) standard deviations from the mean, and 99.7% within \(\pm 3\) standard deviations from the mean.</li>
+</ul></article><article class="exercise exercise-like" id="exercise-101"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-101"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.3.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-101"><article class="exercise exercise-like"><p id="p-1329">Find the following for the standard normal distribution.</p>
+<ol class="decimal">
+<li id="li-738">\(\displaystyle P(-2\lt Z\lt 1.8)\)</li>
+<li id="li-739">\(\displaystyle P(Z\lt 0.76)\)</li>
+<li id="li-740">\(z_0\) such that \(P(Z\lt z_0)=0.67\)</li>
+<li id="li-741">\(\displaystyle P(Z&gt; -1.1)\)</li>
+<li id="li-742">\(z_0\) such that \(P(Z&gt; z_0)=0.22\)</li>
+<li id="li-743">\(z_0\) such that \(P(-z_0\lt Z\lt z_0)=0.8\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-166" id="solution-166"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-166"><div class="solution solution-like"><p id="p-1330">We are given bounds and asked to find a probability, so: \(P(-2\lt Z\lt 1.8)\approx 0.9413\) <iframe src="https://www.desmos.com/calculator/j3odyygiqs" id="interactive-214" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-167" id="solution-167"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-167"><div class="solution solution-like"><p id="p-1331">We are given bounds and asked to find a probability, so: \(P( Z\lt 0.76)\approx 0.7764\) <iframe src="https://www.desmos.com/calculator/mdylpq4kf6" id="interactive-215" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-168" id="solution-168"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-168"><div class="solution solution-like"><p id="p-1332">We are given a probability and asked to find a bound, so: \(P(Z\lt z_0)=0.67\) is satisfied when \(z_0\approx 0.4399\) <iframe src="https://www.desmos.com/calculator/seaxnuolrg" id="interactive-216" width="600" height="600"></iframe> Note that we could also note that this \(z_0\) must satisfy \(P(Z&gt;z_0)=0.33\text{:}\) <iframe src="https://www.desmos.com/calculator/zu3pxbd0ah" id="interactive-217" width="600" height="600"></iframe> Which yields the same \(z_0\approx 0.4399\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-169" id="solution-169"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-169"><div class="solution solution-like"><p id="p-1333">We are given bounds and asked to find a probability, so: \(P(Z&gt; -1.1)\approx0.8643\) <iframe src="https://www.desmos.com/calculator/llig7fnfhd" id="interactive-218" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-170" id="solution-170"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">5</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-170"><div class="solution solution-like"><p id="p-1334">We are given a probability and asked to find a bound, so: \(P(Z&gt; z_0)=0.22\) is satisfied when \(z_0\approx 0.47722\) <iframe src="https://www.desmos.com/calculator/i2xa3ajuqp" id="interactive-219" width="600" height="600"></iframe> Note that we could also note that this \(z_0\) must satisfy \(P(Z\lt z_0)=0.78\text{:}\) <iframe src="https://www.desmos.com/calculator/jny1wlshet" id="interactive-220" width="600" height="600"></iframe> Which yields the same \(z_0\approx 0.7722\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-171" id="solution-171"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">6</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-171"><div class="solution solution-like">
+<p id="p-1335">We are given a probability and asked to find a bound.  Specifically, the bounds of a region that is symmetric about the mean, the same distance to the left as to the right.  So: \(P(-z_0\lt Z\lt z_0)=0.8\) is satisfied when \(z_0\approx 1.2816\) <iframe src="https://www.desmos.com/calculator/7shbr2wz76" id="interactive-221" width="600" height="600"></iframe></p>
+<p id="p-1336">Note that since 80% of the area falls in this central region, the sum of the tails must be 20%, and since the tails are mirror images of each other, each tail must contain 10%. Thus \(z_0\) must satisfy \(P(Z\lt -z_0)=0.10\text{:}\) <iframe src="https://www.desmos.com/calculator/tsfvtn8fal" id="interactive-222" width="600" height="600"></iframe> Which yields \(-z_0\approx -1.2816\) so the same \(z_0\approx 1.2816\text{.}\)  We could also approach this from the right: <iframe src="https://www.desmos.com/calculator/lkdrpqtqp8" id="interactive-223" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-111"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.3.2</span> <span class="title">General Normal Distributions</span>
+</h3>
+<p id="p-1337">The fact is, most things we care about in the real world don't happen to have mean 0 and standard deviation 1.  So we introduce the notion of \(general normal distributions\text{.}\)  Things that are generally normally distributed may have any mean and standard deviation, but what makes them normally distributed is that they have the <em class="emphasis">same fundamental shape</em> as the standard normal, a bell curved symmetric shape.  In the standard normal curve, the standard deviation is 1, so the units of \(z\) are standard deviations.  We can translate values from any \(X\) normally distributed random variable to the standard distribution through <dfn class="terminology">\(z\)-scores</dfn>.</p>
+<article class="definition definition-like" id="definition-40"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.3.5</span><span class="period">.</span>
+</h6>
+<p id="p-1338">Given a normally distributed variable \(X\) with mean \(\mu\) and standard deviation \(\sigma\text{,}\) the <dfn class="terminology">\(z\)-score</dfn> of a value \(x\) of \(X\) is the number of standard deviations \(x\) is above or below the mean.  This is computed</p>
+<div class="displaymath">
+\begin{equation*}
+z=\frac{x-\mu}{\sigma}.
+\end{equation*}
+</div></article><p id="p-1339">So if we had a normally distributed variable \(X\) with \(\mu=10, \sigma=3\text{,}\) if we wanted to find \(P(8\lt X\lt 11)\text{,}\) we could turn this into a standard normal problem.</p>
+<p id="p-1340">So the \(z\)-score of \(8\) would be</p>
+<div class="displaymath">
+\begin{equation*}
+z=\frac{8-10}{3}=-\frac{2}{3}.
+\end{equation*}
+</div>
+<p data-braille="continuation">Similarly, the \(z\)-score of \(11\) would be</p>
+<div class="displaymath">
+\begin{equation*}
+z=\frac{11-10}{3}=\frac{1}{3}.
+\end{equation*}
+</div>
+<p data-braille="continuation">So</p>
+<div class="displaymath">
+\begin{equation*}
+P(8\lt X\lt 11)=P(-\frac{2}{3}\lt Z\lt \frac{1}{3}).
+\end{equation*}
+</div>
+<p data-braille="continuation">See below: <iframe src="https://www.desmos.com/calculator/0znk7lhy30" id="interactive-224" width="600" height="600"></iframe> Play around with shifting \(m,s,a,b\) to see this changing relationship between \(X\) and \(Z\text{!}\)</p>
+<p id="p-1341">We can compute this problem either way, through \(P(-\frac{2}{3}\lt Z\lt \frac{1}{3})\approx 0.3781\text{:}\) <iframe src="https://www.desmos.com/calculator/pl4sj2nhnt" id="interactive-225" width="600" height="600"></iframe> Or more directly \(P(8\lt X\lt 11)\approx 0.3781\text{:}\) <iframe src="https://www.desmos.com/calculator/8ed9lkpchy" id="interactive-226" width="600" height="600"></iframe> Scrolling down the left side, we can see the \(z\)-scores are computed automatically.</p>
+<article class="example example-like" id="example-115"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-115"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.3.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-115"><article class="example example-like"><p id="p-1342">Suppose Ahi tuna weights are normally distributed with mean 120 lbs and standard deviation 25 lb's.  Kyle the fisherman goes out fishing.</p>
+<ol class="decimal">
+<li id="li-744">What is the probability that a tuna he catches weighs over 150 lbs?</li>
+<li id="li-745">What is the probability that a tuna he catches weighs between 50 and 100 lbs?</li>
+<li id="li-746">Out of all the tuna Kyle catches, find a cutoff weight for the smallest 15%</li>
+<li id="li-747">Find a \(k\) so that 75% of the tuna caught falls between \(120-k\) and \(120+k\) pounds.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-172" id="solution-172"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-172"><div class="solution solution-like"><p id="p-1343">\(P(X&gt;150)\approx 0.1151\text{.}\) <iframe src="https://www.desmos.com/calculator/gnjqjmeecy" id="interactive-227" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-173" id="solution-173"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-173"><div class="solution solution-like"><p id="p-1344">\(P(50\leq X\leq 100)\approx 0.2093\text{.}\) <iframe src="https://www.desmos.com/calculator/txlwfrvm6m" id="interactive-228" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-174" id="solution-174"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-174"><div class="solution solution-like"><p id="p-1345">15% of Tuna weigh less than 94.0892. <iframe src="https://www.desmos.com/calculator/cqbs6z8rn2" id="interactive-229" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-175" id="solution-175"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-175"><div class="solution solution-like"><p id="p-1346">75% of Tuna weigh between 91.2412 and 148.7587 pounds. <iframe src="https://www.desmos.com/calculator/pvzt2lmobx" id="interactive-230" width="600" height="600"></iframe> So \(k\approx 148.7587-120=28.7587\) or \(k\approx 120-91.2412=28.7587\text{.}\)</p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-102"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-102"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.3.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-102"><article class="exercise exercise-like"><p id="p-1347">Marathon running times are normally distributed with mean 4.5 hours and standard deviation 1 hour.</p>
+<ol class="decimal">
+<li id="li-748">What proportion of runners would take over 6 hours?</li>
+<li id="li-749">Suppose a special award is given to the top 10% fastest runners.  What would be the predicted cutoff for this time?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-176" id="solution-176"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-176"><div class="solution solution-like"><p id="p-1348">\(P(X&gt;6)\approx 0.0668\text{.}\) <iframe src="https://www.desmos.com/calculator/d6sxrhqzzw" id="interactive-231" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-177" id="solution-177"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-177"><div class="solution solution-like"><p id="p-1349">10% of runners would finish in 3.2184 hours or less.  That is 3 hours and about 13 minutes. <iframe src="https://www.desmos.com/calculator/lcncao3y7g" id="interactive-232" width="600" height="600"></iframe></p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-103"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-103"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.3.8</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-103"><article class="exercise exercise-like"><p id="p-1350">A business's weekly profit is normally distributed with mean \(\$2000\) and standard deviation \(\$1200\text{.}\)</p>
+<ol class="decimal">
+<li id="li-750">What percentage of weeks are profitable?</li>
+<li id="li-751">Find the bounds of the 50% middle-most profitable weeks.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-178" id="solution-178"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-178"><div class="solution solution-like"><p id="p-1351">\(P(X&gt;0)\approx 0.7977\text{.}\) <iframe src="https://www.desmos.com/calculator/gpv8cclvep" id="interactive-233" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-179" id="solution-179"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-179"><div class="solution solution-like"><p id="p-1352">The middle 50% of weeks range from \(\$109.61\) to \(\$1809.39\) in profit. <iframe src="https://www.desmos.com/calculator/bheiifimp6" id="interactive-234" width="600" height="600"></iframe></p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-104"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-104"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.3.9</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-104"><article class="exercise exercise-like"><p id="p-1353">A machine deposits milk into a bottle, the output is normal with mean 32 oz and standard deviation 0.65 oz.</p>
+<ol class="decimal">
+<li id="li-752">An acceptable range for a vendor is 31-34oz.  What percentage of bottles satisfy this?</li>
+<li id="li-753">What is the cutoff for the 10% smallest bottles?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-180" id="solution-180"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-180"><div class="solution solution-like"><p id="p-1354">\(P(31\lt x\lt 34)\approx 0.9370\text{.}\) <iframe src="https://www.desmos.com/calculator/rf33y0wli0" id="interactive-235" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-181" id="solution-181"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-181"><div class="solution solution-like"><p id="p-1355">The bottom 10% is any bottle smaller than about 31.167 oz. <iframe src="https://www.desmos.com/calculator/sd1ifanflx" id="interactive-236" width="600" height="600"></iframe></p></div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>

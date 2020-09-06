@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:35:39-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example example-like"><p xmlns:svg="http://www.w3.org/2000/svg">Recall that in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a> Margo has three supplements: the first contains 20% vitamin A, 20% vitamin D and 20% vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">On Monday she eats 100 mg of supplement 1, 100 mg of supplement 2 and 150 mg of supplement 3. On Wednesday she eats 150 mg of supplement 1, 50 mg of supplement 2 and 100 mg of supplement 3. Putting aside that this is an ill advised way to take supplements, how much of each vitamin did she get on each day?</p>
+<p>We first let</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+A= \left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)
+\end{equation*}
+</div>
+<p data-braille="continuation">represent the relation between vitamins and supplements, where each row corresponds to vitamins, and each column corresponds to supplements. So the entry in the second row, second column corresponds to the proportion of supplement 2 which is vitamin D, 30%.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">A useful way to conceptualize this matrix is as an arrow or transformation, whose inputs are mg of various supplements, and whose outputs are mg of various vitamins.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-43.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p>Next, we record the relationship between days of the week and supplements:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+B= \left( \begin{array}{rrr} 100 \amp  150\\ 100 \amp  50\\ 150 \amp  100 \end{array} \right)
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">Where now the rows are quantities of supplements and columns are days of the week. So the 100 in the third row second column represents the 100mg taken on Wednesday of Supplement 3. This to may be conceptualized as an arrow or transformation whose inputs are days of the week, and whose outputs are quantities of supplements.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-44.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p xmlns:svg="http://www.w3.org/2000/svg">Our goal now is to establish a relationship between days of the week and quantity of vitamins.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-45.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p>So, how much Vitamin A does Margo get on Monday? She took 100 mg of Supplement 1, of which 20% is Vitamin A, 100 mg of Supplement 2, of which 10% is Vitamin A, and 150 mg of Supplement 1, of which 50% is Vitamin A:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr} \color{red}{0.2} \amp  0.1 \amp  0.5\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} \color{blue}{100} \amp  150\\ \color{blue}{100} \amp  50\\ \color{blue}{150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} \color{red}{0.2}\cdot\color{blue}{100}+\color{red}{0.1}\cdot\color{blue}{100}+\color{red}{0.5}\cdot\color{blue}{150} \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)=\left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)\text{.}
+\end{equation*}
+</div>
+<p>So on Monday, Margo got 105 mg of vitamin A. What about the amount of vitamin D she received on Wednesday? She took 150 mg of Supplement 1, of which 20% is Vitamin D, 50 mg of Supplement 2, of which 30% is Vitamin D, and 100 mg of Supplement 1, of which 10% is Vitamin A:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ \color{red}{0.2} \amp  \color{red}{0.3} \amp  \color{red}{0.1}\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} 100 \amp  \color{blue}{150}\\ 100 \amp  \color{blue}{50}\\ 150 \amp  \color{blue}{100} \end{array} \right)\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  \color{red}{0.2}\cdot\color{blue}{150}+\color{red}{0.3}\cdot\color{blue}{50}+\color{red}{0.1}\cdot\color{blue}{100} \\ ? \amp  ? \end{array} \right)\\
+\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  55 \\ ? \amp  ? \end{array} \right)\text{.}
+\end{align*}
+</div>
+<p>So Margo got 55 mg of Vitamin D on Wednesday. Following this line of thinking, we obtain matrix:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr} {0.2} \amp  {0.1} \amp  {0.5}\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} {100} \amp  150\\ {100} \amp  50\\ {150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} 105 \amp  85 \\ 65 \amp  55 \\ 90 \amp  70 \end{array} \right)\text{.}
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">This matrix records how much of each vitamin Margo had per day, where vitamins are rows and days are columns. So on Monday, she got 90 mg of Vitamin E, and on Wednesday, she got 85 mg of Vitamin A.</p></article></body>
+</html>

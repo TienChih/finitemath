@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-09-06T07:37:03-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
+<p>Let \(S\) denote “took serum” and \(Z\) denote “zombified”.  We are given \(P(Z|S)=0.1, P(Z|S^c)=0.85, P(Z)=0.5.\)</p>
+<ol class="decimal">
+<li>This is \(P(S)\text{.}\)  So:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+P(Z)\amp =P(Z|S)P(S)+P(Z|S^c)(1-P(S))\\
+P(S)\amp =\frac{P(Z)-P(Z|S^c)}{P(Z|S)-P(Z|S^c)}\\
+\amp =\frac{0.5-0.85}{0.1-0.85}=\frac{7}{15}\approx 0.4666666667.
+\end{align*}
+</div>Which we can see: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/gdmhlhnxga" id="interactive-177" width="600" height="600"></iframe> Moreover, we now know \(P(Z)=0.5, P(S)=\frac{7}{15}, P(S\cap Z)=P(Z|S)P(S)=(0.1)\frac{7}{15}=\frac{7}{150}\approx 0.0466666667\)  So we can fill out the following venn diagram: <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-84.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.4.6<span class="period">.</span></span><span class="space"> </span>\(Z, S\) and their probabilities</figcaption></figure>
+</li>
+<li>This is \(P(S|Z^c)=\frac{P(S\cap Z^c)}{P(Z^c)}=\frac{0.42}{0.5}\approx 0.84\text{.}\)</li>
+</ol>
+<span class="incontext"><a href="Sec_Bayes.html#p-1144">in-context</a></span>
+</body>
+</html>
