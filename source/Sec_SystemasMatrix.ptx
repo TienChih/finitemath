@@ -484,7 +484,7 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
         <p>
           Margo needs 200mg of vitamin A, 100mg of vitamin D, and 140mg of vitamin E per week.
           She has three supplements:
-          the first contains 20% vitamin A, 20% vitamin D and 20\vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E. How much of each supplement should she eat each week?
+          the first contains 20% vitamin A, 20% vitamin D and 20% vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E. How much of each supplement should she eat each week?
         </p>
         <p>
           Let <m>x,y,z</m> denote the quantities of supplements 1,2 and 3 she takes each week.
@@ -500,7 +500,7 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
           </me>
           and for 140mg of vitamin E:
           <me>
-            0.2x+0.2y+0.4z=140
+            0.2x+0.4y+0.2z=140
           </me>.
         </p>
         <p>
