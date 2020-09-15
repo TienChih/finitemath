@@ -307,7 +307,7 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,3]])
     </p>
     <p>
       So basically what this is saying,
-      no matter what <m>z</m> is, you can fin <m>x</m> and <m>y</m>.
+      no matter what <m>z</m> is, you can find <m>x</m> and <m>y</m>.
       So if <m>z=0</m>, then <m>x,y=1</m>.
       But if <m>z=6</m>, then <m>x,y=-1</m>.
       Well, what is <m>z</m>?
