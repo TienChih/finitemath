@@ -36,9 +36,9 @@
         </md>
         So we satisfy the first inequality but not the second, so <m>(6,0)</m> does <em>not</em> belong to the region.
          </li>
-         <li> For <m>(-2,2)</m>  note that:
+         <li> For <m>(2,-2)</m>  note that:
         <md>
-          <mrow>2+(-2+\amp \not\geq 4</mrow>
+          <mrow>2+(-2)\amp \not\geq 4</mrow>
           <mrow>2-2(-2)\amp \not\leq 3</mrow>
         </md>
         So we satisfy neither inequality but not the second, and <m>(2,-2)</m> does <em>not</em> belong to the region.

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:22:55-06:00       *-->
+<!--*       on 2020-09-27T16:43:06-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,33 +15,23 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>As the inverse of an exponential function, it has some properties:</p>
-<ul class="disc">
-<li><p xmlns:svg="http://www.w3.org/2000/svg"><dfn class="terminology">It's domain is only positive numbers</dfn>. Why? Because the only possible outputs of exponential outputs are positive numbers. Taking the inverse reverses the roles of the domain and range, and so the domain of \(\log_a\) is the positives.</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg"><dfn class="terminology">As \(\mathbf{x}\) goes to 0, \(\mathbf{\log_a(x)}\) goes to \(\mathbf{-\infty}\text{.}\)</dfn> This is the result of the reflection. Normally \(a^x\) (for \(a&gt;1\)) goes to 0 as \(x\to -\infty\text{,}\) so when reflected, that line is now asymptotic to the \(y\)-axis. Also \(\log_a\) returns the power necessary to achieve the value \(x\text{.}\) If \(x\) is a small number like 0.0001, what power would I have to raise \(a\) to to get \(0.0001\text{?}\) It can't be 0, \(a^0=1\text{,}\) so it has to be <dfn class="terminology">less</dfn> than 0, and the smaller \(x\) is, the lower this power must go.</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">As \(\mathbf{x\to\infty, \log_a(x)\to \infty}\text{,}\) again this is the result of the reflection, but we can also think of this as the powers \(a\) needs to be raised to in order to achieve \(x\text{,}\) as this increases, those powers must increase as well.</p></li>
-<li>
-<p>\(\log_a(xy)=\log_a(x)+\log_a(y)\text{.}\) Too see this consider:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p>We let \(M(t)\) be the amount of Madeupinium in \(t\) minutes.</p>
+<ol class="decimal">
+<li>We first notice that \(300=M(25)=b\cdot a^{25}\text{.}\)  We also note that whatever \(b\) is, we have that \(M(0)=b\cdot a^0=b\) and \(\frac{b}{2}=M(25)=ba^{25}\text{.}\)  Thus:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-xy\amp = a^{\log_a{xy}}\\
-xy\amp = x\cdot y\\
-\amp = a^{\log_a(x)}\cdot a^{\log_a(y)}\\
-\amp = a^{\log_a(x)+\log_a(y)}
+\frac{1}{2}\amp = a^{25}\\
+a\amp = \left(\frac{1}{2}\right)^{1/25}\approx 0.972655
 \end{align*}
-</div>
-</li>
-<li>
-<p>\(\log_a(x^y)=y\log_a(x)\text{.}\) To see this, consider:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>From here we may deduce:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-x^y\amp = a^{\log_a(x^y)}.\\
-x^y\amp = (a^{\log_a(x)})^y\\
-\amp = a^{y\log_a(x)}
+300=ba^{60}\amp = b(\left(\left(\frac{1}{2}\right)^{1/25}\right)^{60}\\
+b\amp =300\cdot \left(\frac{1}{2}\right)^{-\frac{60}{25}}\approx 1583.409
 \end{align*}
-</div>
+</div>Thus there were about 15803.409 grams initially.</li>
+<li>Knowing that \(a=\left(\frac{1}{2}\right)^{1/25}\)  we have that  \(M(t)=300\cdot\left(\frac{1}{2}\right)^{-\frac{60}{25}}\left(\frac{1}{2}^{\frac{1}{25}}\right)^{t}\text{.}\) <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/8eaou0dgdw" id="interactive-126" width="600" height="600"></iframe>
 </li>
-</ul>
-<span class="incontext"><a href="Sec_Logarithms.html#p-832">in-context</a></span>
+<li>We have \(%(75)=80300\cdot\left(\frac{1}{2}\right)^{-\frac{60}{25}}\left(\frac{1}{2}^{\frac{1}{25}}\right)^{75}\approx 197.926\) <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/zqbcolgj8c" id="interactive-127" width="600" height="600"></iframe> About 197.926 grams.</li>
+</ol>
+<span class="incontext"><a href="Sec_Exponentials.html#p-832">in-context</a></span>
 </body>
 </html>

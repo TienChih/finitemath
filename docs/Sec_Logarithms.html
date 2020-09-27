@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:22:04-06:00       *-->
+<!--*       on 2020-09-27T16:42:19-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -220,16 +220,16 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_Logarithms"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.6</span> <span class="title">Logarithms</span>
 </h2>
-<section class="introduction" id="introduction-28"><p id="p-831">So looking at any exponential function, but specifically for increasing ones, we notice that they are 1-1, meaning two different inputs give you 2 different outputs. Thus, \(f(x)=a^x\) is an invertible function. You can see in these graphs that reflecting the exponential over the \(y=x\) line giving us  another function: <iframe src="https://www.desmos.com/calculator/cerccrco9k" id="interactive-128" width="600" height="600"></iframe> We call this function \(\log_a(x)\text{.}\)</p></section><section class="subsection" id="subsection-63"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-28"><p id="p-833">So looking at any exponential function, but specifically for increasing ones, we notice that they are 1-1, meaning two different inputs give you 2 different outputs. Thus, \(f(x)=a^x\) is an invertible function. You can see in these graphs that reflecting the exponential over the \(y=x\) line giving us  another function: <iframe src="https://www.desmos.com/calculator/cerccrco9k" id="interactive-128" width="600" height="600"></iframe> We call this function \(\log_a(x)\text{.}\)</p></section><section class="subsection" id="subsection-63"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.6.1</span> <span class="title">Properties of Logarithms</span>
 </h3>
-<p id="p-832">As the inverse of an exponential function, it has some properties:</p>
+<p id="p-834">As the inverse of an exponential function, it has some properties:</p>
 <ul class="disc">
-<li id="li-337"><p id="p-833"><dfn class="terminology">It's domain is only positive numbers</dfn>. Why? Because the only possible outputs of exponential outputs are positive numbers. Taking the inverse reverses the roles of the domain and range, and so the domain of \(\log_a\) is the positives.</p></li>
-<li id="li-338"><p id="p-834"><dfn class="terminology">As \(\mathbf{x}\) goes to 0, \(\mathbf{\log_a(x)}\) goes to \(\mathbf{-\infty}\text{.}\)</dfn> This is the result of the reflection. Normally \(a^x\) (for \(a&gt;1\)) goes to 0 as \(x\to -\infty\text{,}\) so when reflected, that line is now asymptotic to the \(y\)-axis. Also \(\log_a\) returns the power necessary to achieve the value \(x\text{.}\) If \(x\) is a small number like 0.0001, what power would I have to raise \(a\) to to get \(0.0001\text{?}\) It can't be 0, \(a^0=1\text{,}\) so it has to be <dfn class="terminology">less</dfn> than 0, and the smaller \(x\) is, the lower this power must go.</p></li>
-<li id="li-339"><p id="p-835">As \(\mathbf{x\to\infty, \log_a(x)\to \infty}\text{,}\) again this is the result of the reflection, but we can also think of this as the powers \(a\) needs to be raised to in order to achieve \(x\text{,}\) as this increases, those powers must increase as well.</p></li>
+<li id="li-337"><p id="p-835"><dfn class="terminology">It's domain is only positive numbers</dfn>. Why? Because the only possible outputs of exponential outputs are positive numbers. Taking the inverse reverses the roles of the domain and range, and so the domain of \(\log_a\) is the positives.</p></li>
+<li id="li-338"><p id="p-836"><dfn class="terminology">As \(\mathbf{x}\) goes to 0, \(\mathbf{\log_a(x)}\) goes to \(\mathbf{-\infty}\text{.}\)</dfn> This is the result of the reflection. Normally \(a^x\) (for \(a&gt;1\)) goes to 0 as \(x\to -\infty\text{,}\) so when reflected, that line is now asymptotic to the \(y\)-axis. Also \(\log_a\) returns the power necessary to achieve the value \(x\text{.}\) If \(x\) is a small number like 0.0001, what power would I have to raise \(a\) to to get \(0.0001\text{?}\) It can't be 0, \(a^0=1\text{,}\) so it has to be <dfn class="terminology">less</dfn> than 0, and the smaller \(x\) is, the lower this power must go.</p></li>
+<li id="li-339"><p id="p-837">As \(\mathbf{x\to\infty, \log_a(x)\to \infty}\text{,}\) again this is the result of the reflection, but we can also think of this as the powers \(a\) needs to be raised to in order to achieve \(x\text{,}\) as this increases, those powers must increase as well.</p></li>
 <li id="li-340">
-<p id="p-836">\(\log_a(xy)=\log_a(x)+\log_a(y)\text{.}\) Too see this consider:</p>
+<p id="p-838">\(\log_a(xy)=\log_a(x)+\log_a(y)\text{.}\) Too see this consider:</p>
 <div class="displaymath">
 \begin{align*}
 xy\amp = a^{\log_a{xy}}\\
@@ -240,7 +240,7 @@ xy\amp = x\cdot y\\
 </div>
 </li>
 <li id="li-341">
-<p id="p-837">\(\log_a(x^y)=y\log_a(x)\text{.}\) To see this, consider:</p>
+<p id="p-839">\(\log_a(x^y)=y\log_a(x)\text{.}\) To see this, consider:</p>
 <div class="displaymath">
 \begin{align*}
 x^y\amp = a^{\log_a(x^y)}.\\
@@ -250,10 +250,10 @@ x^y\amp = (a^{\log_a(x)})^y\\
 </div>
 </li>
 </ul>
-<p id="p-838">Typically most textbooks include a whole bunch of other arithmetic rules, but they can all be distilled from the 2 above so they're all totally pointless.</p></section><section class="subsection" id="subsection-64"><h3 class="heading hide-type">
+<p id="p-840">Typically most textbooks include a whole bunch of other arithmetic rules, but they can all be distilled from the 2 above so they're all totally pointless.</p></section><section class="subsection" id="subsection-64"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.6.2</span> <span class="title">Utility of logs</span>
 </h3>
-<p id="p-839">Since each logarithm is an inverse of an exponential function, and exponential equation has an equivalent logathrithmic equation.</p>
+<p id="p-841">Since each logarithm is an inverse of an exponential function, and exponential equation has an equivalent logathrithmic equation.</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|c|}
@@ -271,8 +271,8 @@ a^b=c\amp \log_a(c)=b\\
 \end{array}
 \end{equation*}
 </div>
-<p id="p-840">Special cases of logs are log base 10 which is usually just denoted \(\log\) and log based \(e\text{,}\) which is denoted \(\ln\text{.}\) Astronomers and other scientists like \(\log\) since taking \(\log\) base 10 gives you approximate magnitude of stuff. As a mathematician, I prefer \(\ln\) since \(e\) has pretty special mathematical properties, plus it's shorter, which makes it better.</p>
-<p id="p-841">The main use of logs algebraically is to de-exponentiate expressions. So if one is trying to solve \(10=2^x\text{,}\) we could do this via:</p>
+<p id="p-842">Special cases of logs are log base 10 which is usually just denoted \(\log\) and log based \(e\text{,}\) which is denoted \(\ln\text{.}\) Astronomers and other scientists like \(\log\) since taking \(\log\) base 10 gives you approximate magnitude of stuff. As a mathematician, I prefer \(\ln\) since \(e\) has pretty special mathematical properties, plus it's shorter, which makes it better.</p>
+<p id="p-843">The main use of logs algebraically is to de-exponentiate expressions. So if one is trying to solve \(10=2^x\text{,}\) we could do this via:</p>
 <div class="displaymath">
 \begin{align*}
 10\amp = 2^x\\
@@ -281,19 +281,19 @@ a^b=c\amp \log_a(c)=b\\
 x\amp = \frac{\ln(10)}{\ln(2)}\approx 3.3219\text{.}
 \end{align*}
 </div>
-<p id="p-842">One can also solve problems like this visually: <iframe src="https://www.desmos.com/calculator/t0pojr0gel" id="interactive-129" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-65"><h3 class="heading hide-type">
+<p id="p-844">One can also solve problems like this visually: <iframe src="https://www.desmos.com/calculator/t0pojr0gel" id="interactive-129" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-65"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.6.3</span> <span class="title">Computations</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-51"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-51"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.6.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-51"><article class="exercise exercise-like"><p id="p-843">Solve for \(x\text{:}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-51"><article class="exercise exercise-like"><p id="p-845">Solve for \(x\text{:}\)</p>
 <ol class="decimal">
 <li id="li-342">\(e^{x+2}=100\text{.}\)</li>
 <li id="li-343">\(\displaystyle \log(x)+\log(x+3)=1\)</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-76"><div class="solution solution-like">
-<p id="p-844">Consider the following:</p>
+<p id="p-846">Consider the following:</p>
 <ol class="decimal">
 <li id="li-344">Starting with:<div class="displaymath">
 \begin{align*}
@@ -321,18 +321,18 @@ x\amp = -5, 2
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-52"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-52"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.6.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-52"><article class="exercise exercise-like"><p id="p-845">Suppose a resturaunt's weekly revenue in thousands of dollars is \(R(t)=50-30e^{-0.1t}\) in \(t\) weeks after opening.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-52"><article class="exercise exercise-like"><p id="p-847">Suppose a resturaunt's weekly revenue in thousands of dollars is \(R(t)=50-30e^{-0.1t}\) in \(t\) weeks after opening.</p>
 <ol class="decimal">
 <li id="li-346">How much revenue did it make in it's initial week?</li>
 <li id="li-347">When will the resturaunt generate \(\$40\) thousand a week?</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-77" id="solution-77"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-77"><div class="solution solution-like">
-<p id="p-846">Consider the following:</p>
+<p id="p-848">Consider the following:</p>
 <ol class="decimal">
-<li id="li-348"><p id="p-847">In week 0, we have \(R(0)=50-30e^0=20\) or \(\$20\) thousand dollars.</p></li>
+<li id="li-348"><p id="p-849">In week 0, we have \(R(0)=50-30e^0=20\) or \(\$20\) thousand dollars.</p></li>
 <li id="li-349">
-<p id="p-848">We solve:</p>
+<p id="p-850">We solve:</p>
 <div class="displaymath">
 \begin{align*}
 R(t)=50-30e^{-0.1t}\amp = 40\\
@@ -350,17 +350,17 @@ t\amp = -10\ln(\frac{1}{3})\approx 10.9861
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-53"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-53"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.6.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-53"><article class="exercise exercise-like"><p id="p-849">Consider a radioactive compound Imaginarium which has halflife of 100 minutes.  Let \(I(t)\) be the amount of Imaginarium left in grams after \(t\) minutes if you started with 1000g.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-53"><article class="exercise exercise-like"><p id="p-851">Consider a radioactive compound Imaginarium which has halflife of 100 minutes.  Let \(I(t)\) be the amount of Imaginarium left in grams after \(t\) minutes if you started with 1000g.</p>
 <ol class="decimal">
 <li id="li-350">Find \(I(t)\text{.}\)</li>
 <li id="li-351">When will you have 10g left?</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-78" id="solution-78"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-78"><div class="solution solution-like">
-<p id="p-850">Consider the following:</p>
+<p id="p-852">Consider the following:</p>
 <ol class="decimal">
 <li id="li-352">
-<p id="p-851">We note that since the halflife is 100 minutes:</p>
+<p id="p-853">We note that since the halflife is 100 minutes:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{1}{2}\amp = a^5\\
@@ -370,7 +370,7 @@ a\amp = (\frac{1}{2})^{1/5}\approx0.87055
 <p data-braille="continuation">So \(I(t)=1000\cdot ((\frac{1}{2})^{1/5})^t=1000\cdot(\frac{1}{2})^{t/5}\text{.}\)</p>
 </li>
 <li id="li-353">
-<p id="p-852">We solve:</p>
+<p id="p-854">We solve:</p>
 <div class="displaymath">
 \begin{align*}
 10=I(t)\amp = 1000\cdot\left(\frac{1}{2}\right)^{t/5}\\

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:21:56-06:00       *-->
+<!--*       on 2020-09-27T16:42:11-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -220,30 +220,30 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_ConditionalStatements"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Conditional Statements</span>
 </h2>
-<section class="introduction" id="introduction-15"><p id="p-466">These things go by a few names, conditional statements, if-then statements. They are statements of the form “If \(p\text{,}\) then \(q\text{.}\)” When the condition \(p\) is satisfied, it implies the statement \(q\text{.}\) This is written in formal logic as \(p\to q\text{.}\)</p>
-<p id="p-467">Let's suppose that a parent has achild and they say to them "If you are clean your room, I'll buy you ice-cream!" What would make them a liar and what would make them a truth teller?</p>
-<p id="p-468">If the child cleans their room, and the parent buy them ice-cream, then hooray, they kept their promise! If the child cleans their room and and the parent doesn't buy them ice-cream, then they didn't keep their promise and are a liar.</p>
-<p id="p-469">Now what happens if the child doesn't clean their room?  Nothing was stipulated about what the parent would do in this case so they can do whatever you want. They only said that they would do something if the child cleaned their room, no promises were made as to what they would do if the child didn't. So now whether or not the parent buy the chid\ld ice-cream, they've technically kept their promise. This may make them a pushover parent, depending, but it wouldn't make them a liar!</p>
-<p id="p-470">So, if we let \(p\)= “child cleans room” and \(q\)= “parent buys them ice-cream” Then the above sentence may be written as \(p\to q\) which has the following truth table:</p>
+<section class="introduction" id="introduction-15"><p id="p-468">These things go by a few names, conditional statements, if-then statements. They are statements of the form “If \(p\text{,}\) then \(q\text{.}\)” When the condition \(p\) is satisfied, it implies the statement \(q\text{.}\) This is written in formal logic as \(p\to q\text{.}\)</p>
+<p id="p-469">Let's suppose that a parent has achild and they say to them "If you are clean your room, I'll buy you ice-cream!" What would make them a liar and what would make them a truth teller?</p>
+<p id="p-470">If the child cleans their room, and the parent buy them ice-cream, then hooray, they kept their promise! If the child cleans their room and and the parent doesn't buy them ice-cream, then they didn't keep their promise and are a liar.</p>
+<p id="p-471">Now what happens if the child doesn't clean their room?  Nothing was stipulated about what the parent would do in this case so they can do whatever you want. They only said that they would do something if the child cleaned their room, no promises were made as to what they would do if the child didn't. So now whether or not the parent buy the chid\ld ice-cream, they've technically kept their promise. This may make them a pushover parent, depending, but it wouldn't make them a liar!</p>
+<p id="p-472">So, if we let \(p\)= “child cleans room” and \(q\)= “parent buys them ice-cream” Then the above sentence may be written as \(p\to q\) which has the following truth table:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c} p\amp q\amp p\to q\\ \hline T\amp T\amp T\\ T\amp F\amp F\\ F\amp T\amp T\\ F\amp F\amp T \end{array}
 \end{equation*}
 </div>
-<p id="p-471">As we can see “If \(p\) then \(q\)” is always true unless \(p\) happens and then \(q\) does not happen as promised.</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<p id="p-473">As we can see “If \(p\) then \(q\)” is always true unless \(p\) happens and then \(q\) does not happen as promised.</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.3.1</span> <span class="title">An equivalent statement</span>
 </h3>
-<p id="p-472">Notice that \(p\to q\) is only false under one circumstance. So is the statement \(p\vee q\text{.}\) Is it possible then to rewrite \(p\to q\) as an “or” statement somehow?</p>
-<p id="p-473">I claim that \(p \to q = \sim p \vee q\text{.}\) To see this, consider:</p>
+<p id="p-474">Notice that \(p\to q\) is only false under one circumstance. So is the statement \(p\vee q\text{.}\) Is it possible then to rewrite \(p\to q\) as an “or” statement somehow?</p>
+<p id="p-475">I claim that \(p \to q = \sim p \vee q\text{.}\) To see this, consider:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c} p\amp q\amp p\to q\amp \sim p \amp  \sim p \vee q\\ \hline T\amp T\amp T\amp F\amp T\\ T\amp F\amp F\amp F\amp F\\ F\amp T\amp T\amp T\amp T\\ F\amp F\amp T\amp T\amp T \end{array}
 \end{equation*}
 </div>
-<p id="p-474">And we see that these things have the same truth values and are equivalent statements. But, more importantly, consider what \(\sim p \vee q\) would mean in our example. "Either you don't clean your room or you can have ice-cream." One might rephrase this as "You can either not clean your room or you can have ice-cream." Isn't this basically saying “If you clean your room you can have ice-cream?” These statements are not just logically equivalent, they should sound linguistically equivalent as well.</p></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
+<p id="p-476">And we see that these things have the same truth values and are equivalent statements. But, more importantly, consider what \(\sim p \vee q\) would mean in our example. "Either you don't clean your room or you can have ice-cream." One might rephrase this as "You can either not clean your room or you can have ice-cream." Isn't this basically saying “If you clean your room you can have ice-cream?” These statements are not just logically equivalent, they should sound linguistically equivalent as well.</p></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.3.2</span> <span class="title">Negation</span>
 </h3>
-<p id="p-475">What about the negation of \(p\to q\text{?}\) Well, one can try all sorts of combinations of \(p, q\text{,}\) but what we do know is how to negate and/or statements, and how to rewrite \(p\to q\) so:</p>
+<p id="p-477">What about the negation of \(p\to q\text{?}\) Well, one can try all sorts of combinations of \(p, q\text{,}\) but what we do know is how to negate and/or statements, and how to rewrite \(p\to q\) so:</p>
 <div class="displaymath">
 \begin{align*}
 \sim(p\to q)\amp = \sim(\sim p \vee q)\\
@@ -251,26 +251,26 @@ MathJax.Hub.Config({
 \amp = p\wedge \sim q\text{.}
 \end{align*}
 </div>
-<p id="p-476">How does that play out in practice? Again using our parenting example, \(p\wedge \sim q\) is "The child cleaned their room and the parent does not buy them ice-cream." That is precisely the exact opposite of what was promised, as would be expected by a negation.</p></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
+<p id="p-478">How does that play out in practice? Again using our parenting example, \(p\wedge \sim q\) is "The child cleaned their room and the parent does not buy them ice-cream." That is precisely the exact opposite of what was promised, as would be expected by a negation.</p></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.3.3</span> <span class="title">A Longer Example</span>
 </h3>
-<p id="p-477">Using these facts, we can take relatively complicated statements, break them down, and negate them with relative ease. Consider this sentence:</p>
-<p id="p-478">"If it is sunny and I am in a good mood, then I will take a walk."</p>
-<p id="p-479">So let's let:</p>
+<p id="p-479">Using these facts, we can take relatively complicated statements, break them down, and negate them with relative ease. Consider this sentence:</p>
+<p id="p-480">"If it is sunny and I am in a good mood, then I will take a walk."</p>
+<p id="p-481">So let's let:</p>
 <ul class="disc">
-<li id="li-129"><p id="p-480">\(p\)="It's Sunny"</p></li>
-<li id="li-130"><p id="p-481">\(q\)="I'm in a good mood."</p></li>
-<li id="li-131"><p id="p-482">\(r\)= “I take a walk”.</p></li>
+<li id="li-129"><p id="p-482">\(p\)="It's Sunny"</p></li>
+<li id="li-130"><p id="p-483">\(q\)="I'm in a good mood."</p></li>
+<li id="li-131"><p id="p-484">\(r\)= “I take a walk”.</p></li>
 </ul>
-<p id="p-483">We can summarize this whole thing as \((p\wedge q)\to r\text{.}\) It's not the easiest thing to see when this statement may be true. So, we can break this thing down as follows:</p>
+<p id="p-485">We can summarize this whole thing as \((p\wedge q)\to r\text{.}\) It's not the easiest thing to see when this statement may be true. So, we can break this thing down as follows:</p>
 <div class="displaymath">
 \begin{align*}
 (p\wedge q)\to r\amp = \sim (p\wedge q)\vee r\\
 \amp = (\sim p \vee \sim q) \vee r
 \end{align*}
 </div>
-<p id="p-484">So this is an equivalent statement, and it's not much easier to see that it is true as long as it isn't sunny, you're in a bad mood, or if you take a walk. We would read this as "Either it's not sunny, or I'm not in a good mood, or I'm taking a walk."</p>
-<p id="p-485">If we negate this thing:</p>
+<p id="p-486">So this is an equivalent statement, and it's not much easier to see that it is true as long as it isn't sunny, you're in a bad mood, or if you take a walk. We would read this as "Either it's not sunny, or I'm not in a good mood, or I'm taking a walk."</p>
+<p id="p-487">If we negate this thing:</p>
 <div class="displaymath">
 \begin{align*}
 \sim ((p\wedge q)\to r)\amp = \sim ((\sim p \vee \sim q) \vee r)\\
@@ -279,25 +279,25 @@ MathJax.Hub.Config({
 \amp = (p\wedge q)\wedge \sim r
 \end{align*}
 </div>
-<p id="p-486">We would read this as "It IS sunny and I'm in a good mood and for some reason I'm not going to walk." which is the opposite of what was promised before.</p></section><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
+<p id="p-488">We would read this as "It IS sunny and I'm in a good mood and for some reason I'm not going to walk." which is the opposite of what was promised before.</p></section><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.3.4</span> <span class="title">Misconceptions</span>
 </h3>
-<p id="p-487">There are some common misinterpretations of the conditional statement that should be addressed. In particular, there are colloquial statements which people believe that are equivalent to the conditional which are not.</p>
-<p id="p-488">Given the statement \(p\to q\text{,}\) is it equivalent to say \(q\to p\text{?}\) (We say that \(q\to p\) is the <dfn class="terminology">converse</dfn> of \(p\to q\text{.}\)) We can check with truth tables, but before that, let's ask ourselves this: Suppose that \(p=\) “I eat bad food.” and \(q=\) “I get sick.” I think we can all buy that \(p\to q\) i.e. If I eat bad food then I will get sick. Now the converse, \(q\to p\) is the statement “If I get sick, then I ate bad food”. Is this the same statement?</p>
-<p id="p-489">Doesn't seem so, you could have gotten sick from any sort of things, it didn't have to be bad food. Another example is if \(p=\)"I'm a square" and \(q=\)"I'm a rectangle." All squares are rectangles, not all rectangles are squares. So if \(p\to q\text{,}\) we can think of that as all the circumstances where \(p\) is true lives inside the collection of circumstances where \(q\) is true, and that the reverse is not the same thing. And of course:</p>
+<p id="p-489">There are some common misinterpretations of the conditional statement that should be addressed. In particular, there are colloquial statements which people believe that are equivalent to the conditional which are not.</p>
+<p id="p-490">Given the statement \(p\to q\text{,}\) is it equivalent to say \(q\to p\text{?}\) (We say that \(q\to p\) is the <dfn class="terminology">converse</dfn> of \(p\to q\text{.}\)) We can check with truth tables, but before that, let's ask ourselves this: Suppose that \(p=\) “I eat bad food.” and \(q=\) “I get sick.” I think we can all buy that \(p\to q\) i.e. If I eat bad food then I will get sick. Now the converse, \(q\to p\) is the statement “If I get sick, then I ate bad food”. Is this the same statement?</p>
+<p id="p-491">Doesn't seem so, you could have gotten sick from any sort of things, it didn't have to be bad food. Another example is if \(p=\)"I'm a square" and \(q=\)"I'm a rectangle." All squares are rectangles, not all rectangles are squares. So if \(p\to q\text{,}\) we can think of that as all the circumstances where \(p\) is true lives inside the collection of circumstances where \(q\) is true, and that the reverse is not the same thing. And of course:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} p \amp  q \amp  p\to q \amp  q\to p\\ \hline T \amp  T \amp  T \amp  T\\ T \amp  F \amp  F \amp  T\\ F \amp  T \amp  T \amp  F \\ F \amp  F \amp  T \amp  T \end{array}
 \end{equation*}
 </div>
-<p id="p-490">So these columns are not the same and so the statements are not equal.</p>
-<p id="p-491">What about \(\sim p \to \sim q\text{?}\) (This is the <dfn class="terminology">inverse</dfn> of \(p\to q\)) Well this would be "If I'm not eating bad food then I won't get sick" or "If I'm not a square then I'm not a rectangle." This doesn't seem like it's true either. You can not eat bad food, but can get sick by other means. Similarly there are plenty of rectangles that aren't squares. That and:</p>
+<p id="p-492">So these columns are not the same and so the statements are not equal.</p>
+<p id="p-493">What about \(\sim p \to \sim q\text{?}\) (This is the <dfn class="terminology">inverse</dfn> of \(p\to q\)) Well this would be "If I'm not eating bad food then I won't get sick" or "If I'm not a square then I'm not a rectangle." This doesn't seem like it's true either. You can not eat bad food, but can get sick by other means. Similarly there are plenty of rectangles that aren't squares. That and:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c|c} p \amp  q \amp  p\to q \amp \sim p \amp  \sim q\amp  \sim p\to \sim q\\ \hline T \amp  T \amp  T \amp  F \amp  F \amp  T\\ T \amp  F \amp  F \amp  F \amp  T \amp T\\ F \amp  T \amp  T \amp  T \amp  F \amp  F \\ F \amp  F \amp  T \amp  T \amp  T \amp  T \end{array}
 \end{equation*}
 </div>
-<p id="p-492">What about \(\sim q \to \sim p\) (the <dfn class="terminology">contrapositive"</dfn> of \(p\to q\))? In our example, that would be, "If I didn't get sick then I didn't eat bad food" or "If I'm not a rectangle then I'm not a square". These <em class="emphasis">so</em> seem true. If you didn't get sick you couldn't have eaten bad food (otherwise you'd have gotten sick). If you're not a rectangle, there's no way you could be a square. We can verify this:</p>
+<p id="p-494">What about \(\sim q \to \sim p\) (the <dfn class="terminology">contrapositive"</dfn> of \(p\to q\))? In our example, that would be, "If I didn't get sick then I didn't eat bad food" or "If I'm not a rectangle then I'm not a square". These <em class="emphasis">so</em> seem true. If you didn't get sick you couldn't have eaten bad food (otherwise you'd have gotten sick). If you're not a rectangle, there's no way you could be a square. We can verify this:</p>
 <div class="displaymath">
 \begin{align*}
 \sim q \to \sim p\amp = (\sim \sim q \vee \sim p)\\
@@ -306,16 +306,16 @@ MathJax.Hub.Config({
 \amp = p\to q\text{.}
 \end{align*}
 </div>
-<p id="p-493">So these things <em class="emphasis">are</em> the same.</p></section><section class="subsection" id="subsection-37"><h3 class="heading hide-type">
+<p id="p-495">So these things <em class="emphasis">are</em> the same.</p></section><section class="subsection" id="subsection-37"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.3.5</span> <span class="title">Biconditional</span>
 </h3>
-<p id="p-494">Maybe you want to describe 2 statements where \(p\to q\) and \(q\to p\text{,}\) i.e. whenever 1 is true then the other is true. Well this is literally \((p\to q)\wedge (q\to p)\text{.}\)</p>
+<p id="p-496">Maybe you want to describe 2 statements where \(p\to q\) and \(q\to p\text{,}\) i.e. whenever 1 is true then the other is true. Well this is literally \((p\to q)\wedge (q\to p)\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c} p \amp  q \amp  p\to q \amp  q\to p\amp  (p\to q)\wedge (q\to p)\\ \hline T \amp  T \amp  T \amp  T\amp T\\ T \amp  F \amp  F \amp  T\amp F\\ F \amp  T \amp  T \amp  F \amp F\\ F \amp  F \amp  T \amp  T\amp T \end{array}
 \end{equation*}
 </div>
-<p id="p-495">We symbolize this with \(p\leftrightarrow q:\)</p>
+<p id="p-497">We symbolize this with \(p\leftrightarrow q:\)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c} p \amp  q \amp  p\leftrightarrow q \\ \hline T \amp  T \amp  T \\ T \amp  F \amp  F\\ F \amp  T \amp  F \\ F \amp  F \amp  T \end{array}
@@ -325,9 +325,9 @@ MathJax.Hub.Config({
 </h3>
 <article class="exercise exercise-like" id="exercise-13"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-13"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-13"><article class="exercise exercise-like"><p id="p-496">Find a truth table for  \(\sim p\vee (q\to r)\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-13"><article class="exercise exercise-like"><p id="p-498">Find a truth table for  \(\sim p\vee (q\to r)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like"><div class="displaymath" id="p-497">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like"><div class="displaymath" id="p-499">
 \begin{equation*}
 \begin{array}{c|c|c|c|c|c} 
 p\amp q\amp  r \amp   \sim p \amp (q\to r)\amp \sim p\vee (q\to r)\\ 
@@ -346,9 +346,9 @@ F \amp  F\amp F \amp T\amp T\amp T\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-14"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-14"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-14"><article class="exercise exercise-like"><p id="p-498">Find a truth table for  \((\sim p\wedge r)\to q\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-14"><article class="exercise exercise-like"><p id="p-500">Find a truth table for  \((\sim p\wedge r)\to q\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><div class="displaymath" id="p-499">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><div class="displaymath" id="p-501">
 \begin{equation*}
 \begin{array}{c|c|c|c|c|c} 
 p\amp q\amp  r \amp   \sim p \amp \sim p \wedge r \amp (\sim p\vee r)\to q\\ 
@@ -367,9 +367,9 @@ F \amp  F\amp F \amp T\amp F\amp T\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-15"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-15"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like"><p id="p-500">Find a truth table for  \((p\to \sim q)\leftrightarrow r\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like"><p id="p-502">Find a truth table for  \((p\to \sim q)\leftrightarrow r\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like"><div class="displaymath" id="p-501">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like"><div class="displaymath" id="p-503">
 \begin{equation*}
 \begin{array}{c|c|c|c|c|c} 
 p\amp q\amp  r \amp   \sim q \amp p\to \sim q \amp (p\to \sim q)\leftrightarrow r\\ 

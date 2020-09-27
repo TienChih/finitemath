@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:22:23-06:00       *-->
+<!--*       on 2020-09-27T16:42:38-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -228,11 +228,11 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_IntrotoMarkov"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">11.1</span> <span class="title">Introduction to Markov Chains</span>
 </h2>
-<section class="introduction" id="introduction-55"><p id="p-1396">Let's say someone votes for one of two political parties \(A\) and \(B\text{.}\)  Each election cycle, this person may vote for either of these parties.  But the probability that they vote for some party depends on how they voted last time, after all people are more likely to vote for the same party they did last time, but there's always some chance that they'll switch.  If they vote for party \(A\) this cycle, what's the probability that they do the cycle after next?  The one after that?  We answer these questions.</p></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-55"><p id="p-1398">Let's say someone votes for one of two political parties \(A\) and \(B\text{.}\)  Each election cycle, this person may vote for either of these parties.  But the probability that they vote for some party depends on how they voted last time, after all people are more likely to vote for the same party they did last time, but there's always some chance that they'll switch.  If they vote for party \(A\) this cycle, what's the probability that they do the cycle after next?  The one after that?  We answer these questions.</p></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.1.1</span> <span class="title">An Illustrative Example</span>
 </h3>
-<p id="p-1397">Suppose you had two cities, \(X, Y\text{.}\)  Each year 60% of city \(X\)'s population moved to \(Y\) and 20% of \(Y\)'s population moves to \(X\text{.}\)  If both cities have 1000 people, how many will each have by next year?</p>
-<p id="p-1398">We note that in a year, city \(X\) will keep 60% of it's current population \(X_0=1000\) and attain 20% of \(Y's\) population, so after one year:</p>
+<p id="p-1399">Suppose you had two cities, \(X, Y\text{.}\)  Each year 60% of city \(X\)'s population moved to \(Y\) and 20% of \(Y\)'s population moves to \(X\text{.}\)  If both cities have 1000 people, how many will each have by next year?</p>
+<p id="p-1400">We note that in a year, city \(X\) will keep 60% of it's current population \(X_0=1000\) and attain 20% of \(Y's\) population, so after one year:</p>
 <div class="displaymath">
 \begin{equation*}
 X_1=0.6\cdot X_0+0.2\cdot Y_0=0.6\cdot 1000+0.2\cdot 1000=600+200=800.
@@ -244,13 +244,13 @@ X_1=0.6\cdot X_0+0.2\cdot Y_0=0.6\cdot 1000+0.2\cdot 1000=600+200=800.
 Y_1=0.4\cdot X_0+0.8\cdot Y_0=0.4\cdot 1000+0.8\cdot 1000=400+800=1200.
 \end{equation*}
 </div>
-<p id="p-1399">Recall <a href="Chap_Matrices.html" class="internal" title="Chapter 2: Systems of Linear Equations and Matrices">Chapter 2</a> and notice that we can rewrite the equations above as follows:</p>
+<p id="p-1401">Recall <a href="Chap_Matrices.html" class="internal" title="Chapter 2: Systems of Linear Equations and Matrices">Chapter 2</a> and notice that we can rewrite the equations above as follows:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix} X_1 \\ Y_1 \end{pmatrix}= \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}.
 \end{equation*}
 </div>
-<p id="p-1400">Thus</p>
+<p id="p-1402">Thus</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} 1000 \\ 1000 \end{pmatrix}=\begin{pmatrix} 800 \\ 1200 \end{pmatrix}.
@@ -260,7 +260,7 @@ Y_1=0.4\cdot X_0+0.8\cdot Y_0=0.4\cdot 1000+0.8\cdot 1000=400+800=1200.
 X=matrix(QQ, [[1000],[1000]])
 print(M*X)
 </script></div></p>
-<p id="p-1401">If this pattern keeps up, what happens in another year?  We can simply reapply the matrix \(M\text{:}\)</p>
+<p id="p-1403">If this pattern keeps up, what happens in another year?  We can simply reapply the matrix \(M\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} 800 \\ 1200 \end{pmatrix}=\begin{pmatrix} 720 \\ 1280 \end{pmatrix}.
@@ -280,24 +280,24 @@ X=matrix(QQ, [[1000],[1000]])
 print(M^2)
 print((M^2)*X)
 </script></div></p>
-<p id="p-1402">We should observe that if we have starting populations \(\begin{pmatrix} X_0 \\ Y_0\end{pmatrix}\) then in \(n\) years the respective populations will be:</p>
+<p id="p-1404">We should observe that if we have starting populations \(\begin{pmatrix} X_0 \\ Y_0\end{pmatrix}\) then in \(n\) years the respective populations will be:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix} X_n \\ Y_n \end{pmatrix}= \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}^n\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}.
 \end{equation*}
 </div>
 <p data-braille="continuation">The best way to think of this is that applyng the matrix \(M= \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\) shifts some of the value from \(X\) to \(Y\) and vice versa.  Each we do this, we are simply reapplying \(M\text{.}\)</p>
-<p id="p-1403">We call \(M=\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\) a <dfn class="terminology">transition matrix</dfn>.</p>
+<p id="p-1405">We call \(M=\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\) a <dfn class="terminology">transition matrix</dfn>.</p>
 <article class="example example-like" id="example-118"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-118"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">11.1.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-118"><article class="example example-like"><p id="p-1404">Following the example above:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-118"><article class="example example-like"><p id="p-1406">Following the example above:</p>
 <ol class="decimal">
 <li id="li-775">If the initial populations of towns \(X\) and \(Y\) are 100000 and 80000 respectively, what will the populations be after 4 years?</li>
 <li id="li-776">If the initial populations of towns \(X\) and \(Y\) are \(X_0\) and \(Y_0\) respectively, what will the populations be after 6 years?</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-197" id="solution-197"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-197"><div class="solution solution-like">
-<p id="p-1405">We have:</p>
+<p id="p-1407">We have:</p>
 <div class="displaymath">
 \begin{align*}
 \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}^4\begin{pmatrix} 100000 \\ 80000 \end{pmatrix} \amp=\begin{pmatrix} 0.3504 \amp 0.3248 \\ 0.6496 \amp 0.6752\end{pmatrix}\begin{pmatrix} 100000 \\ 80000 \end{pmatrix}\\
@@ -307,7 +307,7 @@ print((M^2)*X)
 <p data-braille="continuation">So city \(X\) will have 61024 people and city \(Y\) will have 118976 people.</p>
 </div></div>
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-198" id="solution-198"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-198"><div class="solution solution-like">
-<p id="p-1406">We have:</p>
+<p id="p-1408">We have:</p>
 <div class="displaymath">
 \begin{align*}
 \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}^6\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \amp=\begin{pmatrix} 0.336064 \amp 0.331968 \\ 0.663936 \amp 0.668032\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}\\
@@ -319,8 +319,8 @@ print((M^2)*X)
 </div></article></div></section><section class="subsection" id="subsection-118"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.1.2</span> <span class="title">Transitioning to Probability</span>
 </h3>
-<p id="p-1407">So let's suppose a voter who votes for party \(A\) has a 10% chance of switching to \(B\text{,}\) and a voter who votes for \(B\) has a 15% chance of switching to \(A\text{.}\)  If a voter has a 50% chance of voting for either part now, what is the probability they will vote for part \(A\) or \(B\) in a cycle?  In 5 cycles?</p>
-<p id="p-1408">So, similar to the above, we calculate the probability of each party affiliation.  Let \(A_0, B_0\) denote the events that the voter votes for \(A, B\) resepctively initially and \(A_1, B_1\) the events they vote for for the appropriate party in one cycle.  Then recall from <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a>:</p>
+<p id="p-1409">So let's suppose a voter who votes for party \(A\) has a 10% chance of switching to \(B\text{,}\) and a voter who votes for \(B\) has a 15% chance of switching to \(A\text{.}\)  If a voter has a 50% chance of voting for either part now, what is the probability they will vote for part \(A\) or \(B\) in a cycle?  In 5 cycles?</p>
+<p id="p-1410">So, similar to the above, we calculate the probability of each party affiliation.  Let \(A_0, B_0\) denote the events that the voter votes for \(A, B\) resepctively initially and \(A_1, B_1\) the events they vote for for the appropriate party in one cycle.  Then recall from <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a>:</p>
 <div class="displaymath">
 \begin{equation*}
 P(A_1)=P(A_1|A_0)P(A_0)+P(A_1|B_0)P(B_0)=(0.9)(0.5)+(0.15)(0.5)=0.525.
@@ -332,7 +332,7 @@ P(A_1)=P(A_1|A_0)P(A_0)+P(A_1|B_0)P(B_0)=(0.9)(0.5)+(0.15)(0.5)=0.525.
 P(B_1)=P(B_1|A_0)P(A_0)+P(B_1|B_0)P(B_0)=(0.1)(0.5)+(0.85)(0.5)=0.475.
 \end{equation*}
 </div>
-<p id="p-1409">Once again, we could describe this as:</p>
+<p id="p-1411">Once again, we could describe this as:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix} 0.9 \amp 0.15 \\ 0.1 \amp 0.85\end{pmatrix}\begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix} =\begin{pmatrix} 0.525 \\ 0.475 \end{pmatrix}
@@ -343,7 +343,7 @@ X=matrix(QQ, [[0.5],[0.5]])
 print(M*1.0)
 print((M)*X*1.0)
 </script></div></p>
-<p id="p-1410">So like in the town example, here \(M= \begin{pmatrix} 0.9 \amp 0.15 \\ 0.1 \amp 0.85\end{pmatrix}\) shifts the probabilities from \(A\) to \(B\) and vice versa.  So, in 5 cycles, we would have:</p>
+<p id="p-1412">So like in the town example, here \(M= \begin{pmatrix} 0.9 \amp 0.15 \\ 0.1 \amp 0.85\end{pmatrix}\) shifts the probabilities from \(A\) to \(B\) and vice versa.  So, in 5 cycles, we would have:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix} 0.9 \amp 0.15 \\ 0.1 \amp 0.85\end{pmatrix}^{5}\begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix}\approx \begin{pmatrix} 0.6949 \amp 0.4576 \\ 0.3051 \amp 0.5424\end{pmatrix}\begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix}\approx \begin{pmatrix} 0.5763 \\ 0.4237 \end{pmatrix}.
@@ -356,14 +356,14 @@ print((M^5)*X*1.0)
 </script></div> So about a 57.63% chance of voting for \(A\) and a 42.37% chance of voting for \(B\text{.}\)</p>
 <article class="example example-like" id="example-119"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-119"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">11.1.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-119"><article class="example example-like"><p id="p-1411">Abed either takes the bus or walks to work every day.  If he walks to work, there's a 50% chance he'll walk the next day or he'll take the bus.  If he takes the bus, he remembers how much he hates the bus and theres a 20% chance he'll still take the bus and an 80% chance he'll walk.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-119"><article class="example example-like"><p id="p-1413">Abed either takes the bus or walks to work every day.  If he walks to work, there's a 50% chance he'll walk the next day or he'll take the bus.  If he takes the bus, he remembers how much he hates the bus and theres a 20% chance he'll still take the bus and an 80% chance he'll walk.</p>
 <ol class="decimal">
 <li id="li-777">Let taking the bus be the first variable, and walking be the second, find a transition matrix for Abed's mode of transport.</li>
 <li id="li-778">If he takes the bus on Monday, what's the probability he  takes the bus on Friday?</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-199" id="solution-199"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-199"><div class="solution solution-like">
-<p id="p-1412">We have</p>
+<p id="p-1414">We have</p>
 <div class="displaymath">
 \begin{equation*}
 M=\begin{pmatrix} 0.2 \amp 0.5 \\ 0.8 \amp 0.5 \end{pmatrix}.
@@ -372,7 +372,7 @@ M=\begin{pmatrix} 0.2 \amp 0.5 \\ 0.8 \amp 0.5 \end{pmatrix}.
 <p data-braille="continuation">The first row is Bus\(\to\)Bus, Walk\(\to\)Bus.  The second is Bus\(\to\)Walk and Walk\(\to\)Walk.</p>
 </div></div>
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-200" id="solution-200"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-200"><div class="solution solution-like">
-<p id="p-1413">We have that there is a 100% chance Abed walks on Monday, so the respective probability of his modes of transport 4 days later are:</p>
+<p id="p-1415">We have that there is a 100% chance Abed walks on Monday, so the respective probability of his modes of transport 4 days later are:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix}B_4 \\ W_4 \end{pmatrix}=\begin{pmatrix} 0.2 \amp 0.5 \\ 0.8 \amp 0.5\end{pmatrix}^{4}\begin{pmatrix} 1 \\ 0 \end{pmatrix}= \begin{pmatrix} 0.3896 \amp 0.3815 \\ 0.6104 \amp 0.6185\end{pmatrix}\begin{pmatrix} 1 \\ 0 \end{pmatrix}= \begin{pmatrix} 0.3896 \\ 0.6104 \end{pmatrix}.
@@ -383,18 +383,18 @@ M=\begin{pmatrix} 0.2 \amp 0.5 \\ 0.8 \amp 0.5 \end{pmatrix}.
 </div></article></div></section><section class="subsection" id="subsection-119"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.1.3</span> <span class="title">More on Transition Matrices</span>
 </h3>
-<p id="p-1414">In general, a transition matrix \(M\) measures transitions from state to state.  In a finite state system, say with \(n\) states, this would be a \(n\times n\) system.  We saw above several 2 state systems.</p>
+<p id="p-1416">In general, a transition matrix \(M\) measures transitions from state to state.  In a finite state system, say with \(n\) states, this would be a \(n\times n\) system.  We saw above several 2 state systems.</p>
 <article class="remark remark-like" id="remark-34"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">11.1.3</span><span class="period">.</span>
 </h6>
-<p id="p-1415">Given a \(n\times n\) transition matrix, the following holds.</p>
+<p id="p-1417">Given a \(n\times n\) transition matrix, the following holds.</p>
 <ul class="disc">
 <li id="li-779">\(M_{ij}\) denotes the probability of proportion of value transitioning from the \(j\)th state to the \(i\)th state.  In other words, rows are incoming states, columns are outgoing states.</li>
 <li id="li-780">Since these are probabilities or proportions, \(0\leq M_{ij}\leq 1\text{,}\) they cannot fall below 0% or rise above 100%.</li>
 <li id="li-781">The sum of each column is 1, after all, 100% of state \(j\) has to go somewhere.</li>
 <li id="li-782">The sum of each row <em class="emphasis">does not have to be 1</em>.  Row \(i\) can recieve as much or as little value as the Markov process dictates.</li>
 <li id="li-783">The power of a transition matrix is also a transition matrix</li>
-</ul></article><p id="p-1416">Suppose Nadia likes to go out for tacos, sushi or burgers for lunch.  If she has tacos, there is a 20% chance she will have sushi next for lunch and a 40% chance she will go for burgers.  If she has sushi, theres a 50% chance she will have tacos the next day, and a 10% chance she will get burgers.  If she has burgers, then theres a 20% chance she gets tacos the next day, and a 60% chance she get's sushi.  If we let tacos be state 1, sushi state 2, and burgers state 3, this gives us the transition matrix</p>
+</ul></article><p id="p-1418">Suppose Nadia likes to go out for tacos, sushi or burgers for lunch.  If she has tacos, there is a 20% chance she will have sushi next for lunch and a 40% chance she will go for burgers.  If she has sushi, theres a 50% chance she will have tacos the next day, and a 10% chance she will get burgers.  If she has burgers, then theres a 20% chance she gets tacos the next day, and a 60% chance she get's sushi.  If we let tacos be state 1, sushi state 2, and burgers state 3, this gives us the transition matrix</p>
 <div class="displaymath">
 \begin{equation*}
 M=\begin{pmatrix}0.4 \amp 0.5 \amp 0.2 \\ 0.2 \amp 0.4 \amp 0.6 \\ 0.4 \amp 0.1 \amp 0.2 \end{pmatrix} .
@@ -411,14 +411,14 @@ print(M^3*1.0)
 </script></div> So this would mean if Nadia had tacos initially, there's a 38.8% chance she'll be eating tacos in 3 days and a 22.8% chance she'll have a burger instead.  If she has sushi for lunch initially, theres a 38% chance she'll be having tacos in 3 days.  If she initally had a burger, there's a 35.2% chance she'll be having sushi in 3 days etc.</p>
 <article class="exercise exercise-like" id="exercise-110"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-110"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.1.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-110"><article class="exercise exercise-like"><p id="p-1417">Suppose that when Zara plays Rock, Paper Scissors, she tries her best to mix it up.  If she throws a Rock, then there's a 0.3  chance she throws Paper next and 0.3 chance she throws Scissors.  If she throws Paper, there's a 80% chance she throws Scissors next, and a 20% chance she throws Rock next.  If she throws Scissors, theres a 30% chance she throws Rock and a 70% chance she throws Paper next.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-110"><article class="exercise exercise-like"><p id="p-1419">Suppose that when Zara plays Rock, Paper Scissors, she tries her best to mix it up.  If she throws a Rock, then there's a 0.3  chance she throws Paper next and 0.3 chance she throws Scissors.  If she throws Paper, there's a 80% chance she throws Scissors next, and a 20% chance she throws Rock next.  If she throws Scissors, theres a 30% chance she throws Rock and a 70% chance she throws Paper next.</p>
 <ol class="decimal">
 <li id="li-784">If Rock is state 1, Paper 2, Scissors 3, then find a transition matrix for this Markov process.</li>
 <li id="li-785">If she threw paper first, what is the probability she throws paper 4 games afterwards?</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-201" id="solution-201"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-201"><div class="solution solution-like">
-<p id="p-1418">We have:</p>
+<p id="p-1420">We have:</p>
 <div class="displaymath">
 \begin{equation*}
 M=\begin{pmatrix}0.4 \amp 0.2 \amp 0.3 \\ 0.3 \amp 0 \amp 0.7 \\ 0.3 \amp 0.8 \amp 0 \end{pmatrix} .
@@ -426,7 +426,7 @@ M=\begin{pmatrix}0.4 \amp 0.2 \amp 0.3 \\ 0.3 \amp 0 \amp 0.7 \\ 0.3 \amp 0.8 \a
 </div>
 </div></div>
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-202" id="solution-202"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-202"><div class="solution solution-like">
-<p id="p-1419">We have:</p>
+<p id="p-1421">We have:</p>
 <div class="displaymath">
 \begin{equation*}
 M^4=\begin{pmatrix}0.2953 \amp 0.3132 \amp 0.2784 \\ 0.3393 \amp 0.4954 \amp 0.2001 \\ 0.3654 \amp 0.1914 \amp 0.5215 \end{pmatrix} .
@@ -437,14 +437,14 @@ M^4=\begin{pmatrix}0.2953 \amp 0.3132 \amp 0.2784 \\ 0.3393 \amp 0.4954 \amp 0.2
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-111"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-111"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.1.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-111"><article class="exercise exercise-like"><p id="p-1420">Customers of a store purchase clothes from brands \(U\) and \(V\text{.}\)  Those who buy clothes from \(U\) and a 30% chance of switching to \(V\) in their next purchase.  Customers who bought \(V\) have a 40% chance of swithing to \(U\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-111"><article class="exercise exercise-like"><p id="p-1422">Customers of a store purchase clothes from brands \(U\) and \(V\text{.}\)  Those who buy clothes from \(U\) and a 30% chance of switching to \(V\) in their next purchase.  Customers who bought \(V\) have a 40% chance of swithing to \(U\)</p>
 <ol class="decimal">
 <li id="li-786">If brand \(U\) is state 1  and brand \(V\) is state 2, then find a transition matrix for this Markov process.</li>
 <li id="li-787">If initially half the customers bought each brand, how are purchases distributed after 10 purchases?</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-203" id="solution-203"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-203"><div class="solution solution-like">
-<p id="p-1421">We have:</p>
+<p id="p-1423">We have:</p>
 <div class="displaymath">
 \begin{equation*}
 M=\begin{pmatrix}0.7 \amp 0.4\\ 0.3 \amp 0.6 \end{pmatrix} .
@@ -452,7 +452,7 @@ M=\begin{pmatrix}0.7 \amp 0.4\\ 0.3 \amp 0.6 \end{pmatrix} .
 </div>
 </div></div>
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-204" id="solution-204"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-204"><div class="solution solution-like">
-<p id="p-1422">We have:</p>
+<p id="p-1424">We have:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix}0.7 \amp 0.4\\ 0.3 \amp 0.6 \end{pmatrix}^{10}\begin{pmatrix}0.5\\ 0.5 \end{pmatrix}\approx \begin{pmatrix}0.5714 \amp 0.5714\\ 0.4286 \amp 0.4286 \end{pmatrix}\begin{pmatrix}0.5\\ 0.5 \end{pmatrix}\approx \begin{pmatrix}0.5714 \\ 0.4286  \end{pmatrix} .

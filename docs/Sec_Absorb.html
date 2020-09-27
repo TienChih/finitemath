@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:22:25-06:00       *-->
+<!--*       on 2020-09-27T16:42:39-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -228,12 +228,12 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_Absorb"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">11.3</span> <span class="title">Absorption States</span>
 </h2>
-<section class="introduction" id="introduction-57"><p id="p-1445">What is you had a state in your Markov process, where once you reached that state you would never leave?  What if there were multiple such states?  Given any starting state, what is the probability you end up in one of these states?</p></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-57"><p id="p-1447">What is you had a state in your Markov process, where once you reached that state you would never leave?  What if there were multiple such states?  Given any starting state, what is the probability you end up in one of these states?</p></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.3.1</span> <span class="title">Gamblers Ruin</span>
 </h3>
-<p id="p-1446">Adaeze sits a poker table, she's a savy player so in each game she has a 60% chance of winng \(\$100\) and a 40% chance of losing \(\$100\text{.}\)  Being a savy player, she also realizes that eventually she will lose everything unless, she walks away at some point.  Let's say she makes the choice to cash out when she has \(\$500\text{.}\)  If she hits \(\$0\) she has to bow out by default.  She's going to keep playing until one of these outcomes is reached.  What's the probability she walks out happy?  Sad?</p>
-<p id="p-1447">You can imagine, this depends a lot on how much money she has when she comes in.  If she comes to the table with \(\$400\text{,}\) she only needs to win once more than whatever losses she has.  She also has a lot of cushion before going broke.  If she comes in with \(\$100\text{,}\) she has to win a net of 4 games, and theres far less room for error on her part.</p>
-<p id="p-1448">We can model this with a transition matrix, with states \(\$0, \$100, \ldots, \$500\text{.}\)</p>
+<p id="p-1448">Adaeze sits a poker table, she's a savy player so in each game she has a 60% chance of winng \(\$100\) and a 40% chance of losing \(\$100\text{.}\)  Being a savy player, she also realizes that eventually she will lose everything unless, she walks away at some point.  Let's say she makes the choice to cash out when she has \(\$500\text{.}\)  If she hits \(\$0\) she has to bow out by default.  She's going to keep playing until one of these outcomes is reached.  What's the probability she walks out happy?  Sad?</p>
+<p id="p-1449">You can imagine, this depends a lot on how much money she has when she comes in.  If she comes to the table with \(\$400\text{,}\) she only needs to win once more than whatever losses she has.  She also has a lot of cushion before going broke.  If she comes in with \(\$100\text{,}\) she has to win a net of 4 games, and theres far less room for error on her part.</p>
+<p id="p-1450">We can model this with a transition matrix, with states \(\$0, \$100, \ldots, \$500\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 M=\begin{pmatrix} 
@@ -247,7 +247,7 @@ M=\begin{pmatrix}
 \end{equation*}
 </div>
 <p data-braille="continuation">So in state \(\$0, \$500\text{,}\) we have an entry of 1 in those diagonals, because once she enters this state she never leaves, she doesn't go back if she hits her goal, and she can't if she goes broke.  In each other state, we have a 40% chance of moving to a lower state, and a 60% chance of moving to a higher state.  We call the \(\$0, \$500\) states <dfn class="terminology">absorbing states</dfn> because they absorb any incoming state.</p>
-<p id="p-1449">If we want to see what would happen in subsequent games, depending on starting position, we can do this via: <div class="sagecell-sage" id="sage-28"><script type="text/x-sage">M=matrix(QQ, [[1,0.4,0,0,0,0],[0,0,0.4,0,0,0], [0,0.6,0,0.4,0,0], [0,0,0.6,0,0.4,0], [0,0,0,0.6,0,0], [0,0,0,0,0.6,1]])
+<p id="p-1451">If we want to see what would happen in subsequent games, depending on starting position, we can do this via: <div class="sagecell-sage" id="sage-28"><script type="text/x-sage">M=matrix(QQ, [[1,0.4,0,0,0,0],[0,0,0.4,0,0,0], [0,0.6,0,0.4,0,0], [0,0,0.6,0,0.4,0], [0,0,0,0.6,0,0], [0,0,0,0,0.6,1]])
 for i in range(100):
   print(M^i*1.0)
   print(' ')
@@ -256,8 +256,8 @@ print(M^1000*1.0)
 </script></div> We can see that if she starts with no money, she has no money (of course), if she start with \(\$100\text{,}\) she has about a 61.6% chance of going broke, and a 38.4% chance of winning.  At \(\$200\) this improves to a 36% chance of losing and a 64% chance of winning.  If she comes in with \(\$300\text{,}\) she has a 19% chance of going broke and a 81% chance of winning.  At \(\$400\text{,}\) she has a 7.6% chance of going broke, 92.4% chance of winning.  If she comes in with \(\$500\text{,}\) then she's already made her goal.</p></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.3.2</span> <span class="title">The Fundamental Matrix and an actual solution.</span>
 </h3>
-<p id="p-1450">Here, we will discuss a method for solving for the probability of reach the absorbing states, as well as finding the average number of steps it takes to reach these states.</p>
-<p id="p-1451">The steps are:</p>
+<p id="p-1452">Here, we will discuss a method for solving for the probability of reach the absorbing states, as well as finding the average number of steps it takes to reach these states.</p>
+<p id="p-1453">The steps are:</p>
 <ol class="decimal">
 <li id="li-788">Write the transition matrix so that the absoprbing states are the first states:<div class="displaymath">
 \begin{equation*}
@@ -271,7 +271,7 @@ F=(I_m-B)^{-1}
 </div>where \(m\) corresponds to the dimensions of \(B\text{.}\)  Note that \(F_{ij}\) denotes the average number of times state \(i\) is visited when you start at state \(j\text{.}\)  The sum of each column tells you how many iterations on average before you reach an absorption state if you start in state \(j\text{.}\)</li>
 <li id="li-790">The matrix \(AF\) records the probabilities that you reach absorbing state \(i\) if you start at state \(j\text{.}\)</li>
 </ol>
-<p id="p-1452">Let's work this out with Adaeze:</p>
+<p id="p-1454">Let's work this out with Adaeze:</p>
 <ol class="decimal">
 <li id="li-791">Letting \(\$0, \$500\) be the first two states, we have a new transition matrix:<div class="displaymath">
 \begin{equation*}
@@ -339,16 +339,16 @@ AF=
 </ol>
 <article class="exercise exercise-like" id="exercise-114"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-114"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.3.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-114"><article class="exercise exercise-like"><p id="p-1453">Suppose employees of a company go through a probationary period when hired.  They are evaluated regularly and rated unacceptable, in progress, good, and excellent.  Unacceptable employees are let go, and excellent employees are offered full time contracts, either way they are no longer probationary.</p>
-<p id="p-1454">In progress employees have a 20% chance of moving to unacceptable, 20% chance of moving to good, and a 10% chance of moving to excellent in each round of review.  Good employees have a 10% chance to move to unacceptable, 20% chance of moving to in progress, and a 30% chance of moving to excellent.</p>
-<ol id="p-1455" class="decimal">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-114"><article class="exercise exercise-like"><p id="p-1455">Suppose employees of a company go through a probationary period when hired.  They are evaluated regularly and rated unacceptable, in progress, good, and excellent.  Unacceptable employees are let go, and excellent employees are offered full time contracts, either way they are no longer probationary.</p>
+<p id="p-1456">In progress employees have a 20% chance of moving to unacceptable, 20% chance of moving to good, and a 10% chance of moving to excellent in each round of review.  Good employees have a 10% chance to move to unacceptable, 20% chance of moving to in progress, and a 30% chance of moving to excellent.</p>
+<ol id="p-1457" class="decimal">
 <li id="li-794">Find the solution matrix.</li>
 <li id="li-795">If an employee came in as in progress, what is the probability they get a full time contract?</li>
 <li id="li-796">If an employee comes in as good, how long on average is their probationary period?</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-207" id="solution-207"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-207"><div class="solution solution-like">
-<p id="p-1456">We first write out the transition matrix, with the states being unacceptable, excellent, in progress and good:</p>
+<p id="p-1458">We first write out the transition matrix, with the states being unacceptable, excellent, in progress and good:</p>
 <div class="displaymath">
 \begin{equation*}
 M=
@@ -416,7 +416,7 @@ AF=
 </div>
 </div></div>
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-208" id="solution-208"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-208"><div class="solution solution-like">
-<p id="p-1457">If an employee came in as in progress, their chance of reaching excellent is \(\frac{6}{13}\text{,}\) the bottom left entry of the solutions matrix:</p>
+<p id="p-1459">If an employee came in as in progress, their chance of reaching excellent is \(\frac{6}{13}\text{,}\) the bottom left entry of the solutions matrix:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix}
@@ -427,7 +427,7 @@ AF=
 </div>
 </div></div>
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-209" id="solution-209"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-209"><div class="solution solution-like">
-<p id="p-1458">If an employee came in as good, their average probationary length would be the sum of the last column of \(F\text{:}\)</p>
+<p id="p-1460">If an employee came in as good, their average probationary length would be the sum of the last column of \(F\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix}
@@ -441,11 +441,11 @@ AF=
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-115"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-115"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.3.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-115"><article class="exercise exercise-like"><p id="p-1459">If you flip a fair coin, how long on average would it take you to get 3 heads in a row?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-115"><article class="exercise exercise-like"><p id="p-1461">If you flip a fair coin, how long on average would it take you to get 3 heads in a row?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-210" id="solution-210"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-210"><div class="solution solution-like">
-<p id="p-1460">Lets say we have 3 states, 3, 0, 1 and 2 heads in a row.  We'll let 3 be the absorbing state since you're done after that.  With each coin flip, you either get a heads, increasing the number of heads in a row, or a tails, sending you back to 0 heads in a row.</p>
-<p id="p-1461">We thus get transition matrix:</p>
+<p id="p-1462">Lets say we have 3 states, 3, 0, 1 and 2 heads in a row.  We'll let 3 be the absorbing state since you're done after that.  With each coin flip, you either get a heads, increasing the number of heads in a row, or a tails, sending you back to 0 heads in a row.</p>
+<p id="p-1463">We thus get transition matrix:</p>
 <div class="displaymath">
 \begin{equation*}
 M=
@@ -477,7 +477,7 @@ B=
 \end{pmatrix}.
 \end{equation*}
 </div>
-<p id="p-1462">From here, we have that</p>
+<p id="p-1464">From here, we have that</p>
 <div class="displaymath">
 \begin{equation*}
 F=(I_3-B)^{-1}=\begin{pmatrix}
@@ -492,11 +492,11 @@ F=(I_3-B)^{-1}=\begin{pmatrix}
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-116"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-116"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.3.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-116"><article class="exercise exercise-like"><p id="p-1463">Farida opens a restaurant, the food is good, but the restaurant business is notoriously tough.  She needs a positive critic review in local press to generate the local buzz she needs to survive.  Each month, there is a 30% chance a critic reviews the restaurant.  There's a 10% chance that otherwise she breaks even that month. If that fails, she dips into her savings.  She can do so 5 times before the business is bankrupt.</p>
-<p id="p-1464">What is the probability she gets the review before she goes bankrupt?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-116"><article class="exercise exercise-like"><p id="p-1465">Farida opens a restaurant, the food is good, but the restaurant business is notoriously tough.  She needs a positive critic review in local press to generate the local buzz she needs to survive.  Each month, there is a 30% chance a critic reviews the restaurant.  There's a 10% chance that otherwise she breaks even that month. If that fails, she dips into her savings.  She can do so 5 times before the business is bankrupt.</p>
+<p id="p-1466">What is the probability she gets the review before she goes bankrupt?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-211" id="solution-211"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-211"><div class="solution solution-like">
-<p id="p-1465">There are 8 states: positive review, banktruptcy, and 0,1,2,3,4 and 5 dips into the savings left.  The first two are absorbing states, she gets the review and business booms or she goes bust.  Using the order above, we get transition matrix:</p>
+<p id="p-1467">There are 8 states: positive review, banktruptcy, and 0,1,2,3,4 and 5 dips into the savings left.  The first two are absorbing states, she gets the review and business booms or she goes bust.  Using the order above, we get transition matrix:</p>
 <div class="displaymath">
 \begin{equation*}
 M=\begin{pmatrix}
@@ -532,7 +532,7 @@ B=\begin{pmatrix}
 \end{pmatrix}
 \end{equation*}
 </div>
-<p id="p-1466">Thus we have</p>
+<p id="p-1468">Thus we have</p>
 <div class="displaymath">
 \begin{equation*}
 F=(I_6-B)^{-1}=

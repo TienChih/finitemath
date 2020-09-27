@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:21:51-06:00       *-->
+<!--*       on 2020-09-27T16:42:06-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -228,75 +228,75 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_MatrixArithmetic"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Products and Sums of Matrices</span>
 </h2>
-<section class="introduction" id="introduction-8"><p id="p-309">In the previous sections, we saw how the entries of matrix may be used to record relationships between two collections of variables. For example in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a>, the entries in the \(3\times 3\) portion of the matrix represents the proportion of vitamins contained by a collection of supplements, with each entry representing a vitamin-supplement pair. It is natural then, to wonder if we could combine relationships between variables or compose them. The operations behind these ideas are the sums and products of matrices.</p></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-8"><p id="p-311">In the previous sections, we saw how the entries of matrix may be used to record relationships between two collections of variables. For example in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a>, the entries in the \(3\times 3\) portion of the matrix represents the proportion of vitamins contained by a collection of supplements, with each entry representing a vitamin-supplement pair. It is natural then, to wonder if we could combine relationships between variables or compose them. The operations behind these ideas are the sums and products of matrices.</p></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Products of Matrices</span>
 </h3>
-<p id="p-310">We begin with a motivating example:</p>
+<p id="p-312">We begin with a motivating example:</p>
 <article class="example example-like" id="Example_VitProd"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-Example_VitProd"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_VitProd"><article class="example example-like"><p id="p-311">Recall that in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a> Margo has three supplements: the first contains 20% vitamin A, 20% vitamin D and 20% vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E.</p>
-<p id="p-312">On Monday she eats 100 mg of supplement 1, 100 mg of supplement 2 and 150 mg of supplement 3. On Wednesday she eats 150 mg of supplement 1, 50 mg of supplement 2 and 100 mg of supplement 3. Putting aside that this is an ill advised way to take supplements, how much of each vitamin did she get on each day?</p>
-<p id="p-313">We first let</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_VitProd"><article class="example example-like"><p id="p-313">Recall that in <a class="xref" data-knowl="./knowl/Example_Vitamin.html" title="Example 2.2.3">Example 2.2.3</a> Margo has three supplements: the first contains 20% vitamin A, 20% vitamin D and 20% vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E.</p>
+<p id="p-314">On Monday she eats 100 mg of supplement 1, 100 mg of supplement 2 and 150 mg of supplement 3. On Wednesday she eats 150 mg of supplement 1, 50 mg of supplement 2 and 100 mg of supplement 3. Putting aside that this is an ill advised way to take supplements, how much of each vitamin did she get on each day?</p>
+<p id="p-315">We first let</p>
 <div class="displaymath">
 \begin{equation*}
 A= \left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)
 \end{equation*}
 </div>
 <p data-braille="continuation">represent the relation between vitamins and supplements, where each row corresponds to vitamins, and each column corresponds to supplements. So the entry in the second row, second column corresponds to the proportion of supplement 2 which is vitamin D, 30%.</p>
-<p id="p-314">A useful way to conceptualize this matrix is as an arrow or transformation, whose inputs are mg of various supplements, and whose outputs are mg of various vitamins.</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-43.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
-<p id="p-315">Next, we record the relationship between days of the week and supplements:</p>
+<p id="p-316">A useful way to conceptualize this matrix is as an arrow or transformation, whose inputs are mg of various supplements, and whose outputs are mg of various vitamins.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-44.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-317">Next, we record the relationship between days of the week and supplements:</p>
 <div class="displaymath">
 \begin{equation*}
 B= \left( \begin{array}{rrr} 100 \amp  150\\ 100 \amp  50\\ 150 \amp  100 \end{array} \right)
 \end{equation*}
 </div>
-<p id="p-316">Where now the rows are quantities of supplements and columns are days of the week. So the 100 in the third row second column represents the 100mg taken on Wednesday of Supplement 3. This to may be conceptualized as an arrow or transformation whose inputs are days of the week, and whose outputs are quantities of supplements.</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-44.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
-<p id="p-317">Our goal now is to establish a relationship between days of the week and quantity of vitamins.</p>
+<p id="p-318">Where now the rows are quantities of supplements and columns are days of the week. So the 100 in the third row second column represents the 100mg taken on Wednesday of Supplement 3. This to may be conceptualized as an arrow or transformation whose inputs are days of the week, and whose outputs are quantities of supplements.</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-45.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
-<p id="p-318">So, how much Vitamin A does Margo get on Monday? She took 100 mg of Supplement 1, of which 20% is Vitamin A, 100 mg of Supplement 2, of which 10% is Vitamin A, and 150 mg of Supplement 1, of which 50% is Vitamin A:</p>
+<p id="p-319">Our goal now is to establish a relationship between days of the week and quantity of vitamins.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-46.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-320">So, how much Vitamin A does Margo get on Monday? She took 100 mg of Supplement 1, of which 20% is Vitamin A, 100 mg of Supplement 2, of which 10% is Vitamin A, and 150 mg of Supplement 1, of which 50% is Vitamin A:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr} \color{red}{0.2} \amp  0.1 \amp  0.5\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} \color{blue}{100} \amp  150\\ \color{blue}{100} \amp  50\\ \color{blue}{150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} \color{red}{0.2}\cdot\color{blue}{100}+\color{red}{0.1}\cdot\color{blue}{100}+\color{red}{0.5}\cdot\color{blue}{150} \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)=\left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  ? \\ ? \amp  ? \end{array} \right)\text{.}
 \end{equation*}
 </div>
-<p id="p-319">So on Monday, Margo got 105 mg of vitamin A. What about the amount of vitamin D she received on Wednesday? She took 150 mg of Supplement 1, of which 20% is Vitamin D, 50 mg of Supplement 2, of which 30% is Vitamin D, and 100 mg of Supplement 1, of which 10% is Vitamin A:</p>
+<p id="p-321">So on Monday, Margo got 105 mg of vitamin A. What about the amount of vitamin D she received on Wednesday? She took 150 mg of Supplement 1, of which 20% is Vitamin D, 50 mg of Supplement 2, of which 30% is Vitamin D, and 100 mg of Supplement 1, of which 10% is Vitamin A:</p>
 <div class="displaymath">
 \begin{align*}
 \left( \begin{array}{rrr} 0.2 \amp  0.1 \amp  0.5\\ \color{red}{0.2} \amp  \color{red}{0.3} \amp  \color{red}{0.1}\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} 100 \amp  \color{blue}{150}\\ 100 \amp  \color{blue}{50}\\ 150 \amp  \color{blue}{100} \end{array} \right)\amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  \color{red}{0.2}\cdot\color{blue}{150}+\color{red}{0.3}\cdot\color{blue}{50}+\color{red}{0.1}\cdot\color{blue}{100} \\ ? \amp  ? \end{array} \right)\\
 \amp =\amp \left( \begin{array}{cr} 105 \amp  ? \\ ? \amp  55 \\ ? \amp  ? \end{array} \right)\text{.}
 \end{align*}
 </div>
-<p id="p-320">So Margo got 55 mg of Vitamin D on Wednesday. Following this line of thinking, we obtain matrix:</p>
+<p id="p-322">So Margo got 55 mg of Vitamin D on Wednesday. Following this line of thinking, we obtain matrix:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr} {0.2} \amp  {0.1} \amp  {0.5}\\ 0.2 \amp  0.3 \amp  0.1\\ 0.2 \amp  0.4 \amp  0.2 \end{array} \right)\left( \begin{array}{rrr} {100} \amp  150\\ {100} \amp  50\\ {150} \amp  100 \end{array} \right)=\left( \begin{array}{cr} 105 \amp  85 \\ 65 \amp  55 \\ 90 \amp  70 \end{array} \right)\text{.}
 \end{equation*}
 </div>
-<p id="p-321">This matrix records how much of each vitamin Margo had per day, where vitamins are rows and days are columns. So on Monday, she got 90 mg of Vitamin E, and on Wednesday, she got 85 mg of Vitamin A.</p></article></div>
-<p id="p-322">So with this illustrative example in mind, we can define matrix multiplication.</p>
+<p id="p-323">This matrix records how much of each vitamin Margo had per day, where vitamins are rows and days are columns. So on Monday, she got 90 mg of Vitamin E, and on Wednesday, she got 85 mg of Vitamin A.</p></article></div>
+<p id="p-324">So with this illustrative example in mind, we can define matrix multiplication.</p>
 <article class="definition definition-like" id="Defn_MatrixProd"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-323">For any matrix \(M\text{,}\) let \((M)_{ij}=m_{ij}\) denote the entry in the \(i\)th row and \(j\)th column. Then, given a \(m\times n\) matrix \(A\) and a \(n\times k\) matrix \(B\text{,}\) we define \(AB\) the product of \(A\) and \(B\) to be a \(m\times k\) matrix where:</p>
+<p id="p-325">For any matrix \(M\text{,}\) let \((M)_{ij}=m_{ij}\) denote the entry in the \(i\)th row and \(j\)th column. Then, given a \(m\times n\) matrix \(A\) and a \(n\times k\) matrix \(B\text{,}\) we define \(AB\) the product of \(A\) and \(B\) to be a \(m\times k\) matrix where:</p>
 <div class="displaymath">
 \begin{equation*}
 (AB)_{ij}=\begin{pmatrix}\color{red}{a_{i1}} \amp  \color{red}{a_{i2}} \amp  \cdots \amp  \color{red}{a_{in}} \end{pmatrix} \begin{pmatrix}\color{blue}{b_{1j}} \\ \color{blue}{b_{2j}} \\ \vdots \\ \color{blue}{b_{nj}} \end{pmatrix} =\begin{pmatrix}\color{red}{a_{i1}}\color{blue}{b_{1j}}+\color{red}{a_{i2}}\color{blue}{b_{2j}}+\cdots+\color{red}{a_{in}}\color{blue}{b_{nj}} \end{pmatrix}
 \end{equation*}
-</div></article><p id="p-324"><dfn class="terminology">Note that the number of columns of \(A\) and the number of rows of \(B\) must be the same.</dfn> Recall <a class="xref" data-knowl="./knowl/Example_VitProd.html" title="Example 2.3.1">Example 2.3.1</a>, the outputs of \(B\) corresponded to the rows, and the inputs of \(A\) corresponded to it's columns, so these had to match up. This number is also the \(n\) is <a class="xref" data-knowl="./knowl/Defn_MatrixProd.html" title="Definition 2.3.2">Definition 2.3.2</a>.</p>
+</div></article><p id="p-326"><dfn class="terminology">Note that the number of columns of \(A\) and the number of rows of \(B\) must be the same.</dfn> Recall <a class="xref" data-knowl="./knowl/Example_VitProd.html" title="Example 2.3.1">Example 2.3.1</a>, the outputs of \(B\) corresponded to the rows, and the inputs of \(A\) corresponded to it's columns, so these had to match up. This number is also the \(n\) is <a class="xref" data-knowl="./knowl/Defn_MatrixProd.html" title="Definition 2.3.2">Definition 2.3.2</a>.</p>
 <article class="example example-like" id="Example_MoreMatrixProducts"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-Example_MoreMatrixProducts"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_MoreMatrixProducts"><article class="example example-like"><p id="p-325">Let</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_MoreMatrixProducts"><article class="example example-like"><p id="p-327">Let</p>
 <div class="displaymath">
 \begin{equation*}
 A=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} , B=\begin{pmatrix}0.2 \amp  0.4 \\ 0.5 \amp  0.6 \\ 0.1 \amp  0.8 \end{pmatrix} , C=\begin{pmatrix}10 \\ 20 \\ 15 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p id="p-326">Find:</p>
+<p id="p-328">Find:</p>
 <ol class="decimal">
 <li id="li-80">
-<p id="p-327">\(AB\text{.}\)</p>
+<p id="p-329">\(AB\text{.}\)</p>
 <div class="displaymath">
 \begin{align*}
 AB=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \begin{pmatrix}0.2 \amp  0.4 \\ 0.5 \amp  0.6 \\ 0.1 \amp  0.8 \end{pmatrix} \amp =\amp \begin{pmatrix}1\cdot0.2+2\cdot0.5+3\cdot0.1 \amp  1\cdot0.4+2\cdot0.6+3\cdot0.8\\ 4\cdot0.2+5\cdot0.5+6\cdot0.1 \amp  4\cdot0.4+5\cdot0.6+6\cdot0.8 \end{pmatrix}\\
@@ -305,7 +305,7 @@ AB=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \begin{pma
 </div>
 </li>
 <li id="li-81">
-<p id="p-328">\(BA\text{.}\)</p>
+<p id="p-330">\(BA\text{.}\)</p>
 <div class="displaymath">
 \begin{align*}
 BA=\begin{pmatrix}0.2 \amp  0.4 \\ 0.5 \amp  0.6 \\ 0.1 \amp  0.8 \end{pmatrix} \begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \amp =\amp \begin{pmatrix}0.2\cdot1+ 0.4\cdot 4 \amp  0.2\cdot2+ 0.4\cdot 5 \amp  0.2\cdot3+ 0.4\cdot6\\ 0.5\cdot1+ 0.6\cdot 4 \amp  0.5\cdot2+ 0.6\cdot 5 \amp  0.5\cdot3+ 0.6\cdot6\\ 0.1\cdot1+ 0.8\cdot 4 \amp  0.1\cdot2+ 0.8\cdot 5 \amp  0.1\cdot3+ 0.8\cdot6 \end{pmatrix}\\
@@ -314,7 +314,7 @@ BA=\begin{pmatrix}0.2 \amp  0.4 \\ 0.5 \amp  0.6 \\ 0.1 \amp  0.8 \end{pmatrix} 
 </div>
 </li>
 <li id="li-82">
-<p id="p-329">\(AC\text{.}\)</p>
+<p id="p-331">\(AC\text{.}\)</p>
 <div class="displaymath">
 \begin{align*}
 AC=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \begin{pmatrix}10\\20\\15 \end{pmatrix} \amp =\amp \begin{pmatrix}1\cdot10+2\cdot20+3\cdot15 \\ 4\cdot10+5\cdot20+6\cdot15 \end{pmatrix}\\
@@ -323,7 +323,7 @@ AC=\begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \begin{pma
 </div>
 </li>
 <li id="li-83">
-<p id="p-330">\(CA\text{.}\) Notice that if we try to take the product \(CA\text{:}\)</p>
+<p id="p-332">\(CA\text{.}\) Notice that if we try to take the product \(CA\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 CA=\begin{pmatrix}10\\20\\15 \end{pmatrix} \begin{pmatrix}1 \amp  2 \amp  3\\ 4 \amp  5 \amp  6 \end{pmatrix} \amp =\amp \begin{pmatrix}10\cdot1+?\cdot4 \amp  10\cdot2+?\cdot5 \amp  10\cdot3+?\cdot6 \\ 20\cdot1+?\cdot4 \amp  20\cdot2+?\cdot5 \amp  20\cdot3+?\cdot6\\15\cdot1+?\cdot4 \amp  15\cdot2+?\cdot5 \amp  15\cdot3+?\cdot6 \end{pmatrix}
@@ -331,27 +331,27 @@ CA=\begin{pmatrix}10\\20\\15 \end{pmatrix} \begin{pmatrix}1 \amp  2 \amp  3\\ 4 
 </div>
 <p data-braille="continuation">Since the number of columns of the first matrix do not match with the number of rows of the second matrix, the product is not defined.</p>
 </li>
-<li id="li-84"><p id="p-331">\(BC\text{.}\) Since \(B\) has 2 columns and \(C\) has 3 rows, these values do not match and this product is not defined.</p></li>
-<li id="li-85"><p id="p-332">\(CB\text{.}\) Since \(C\) has 1 column and \(B\) has 2 rows, these values do not match and this product is not defined.</p></li>
+<li id="li-84"><p id="p-333">\(BC\text{.}\) Since \(B\) has 2 columns and \(C\) has 3 rows, these values do not match and this product is not defined.</p></li>
+<li id="li-85"><p id="p-334">\(CB\text{.}\) Since \(C\) has 1 column and \(B\) has 2 rows, these values do not match and this product is not defined.</p></li>
 </ol></article></div>
-<p id="p-333">Something we should observe here is that, unlike products of real numbers, products of matrices are <dfn class="terminology">NOT</dfn> commutative. In <a class="xref" data-knowl="./knowl/Example_MoreMatrixProducts.html" title="Example 2.3.3">Example 2.3.3</a>, \(AB\neq BA\text{,}\) and \(AC\) was defined whereas \(CA\) was not.</p>
-<p id="p-334">Another way matrix products deviate from real number products is that the product of matrices whose entries aren't 0 can result in a matrix whose entries are all 0.</p>
+<p id="p-335">Something we should observe here is that, unlike products of real numbers, products of matrices are <dfn class="terminology">NOT</dfn> commutative. In <a class="xref" data-knowl="./knowl/Example_MoreMatrixProducts.html" title="Example 2.3.3">Example 2.3.3</a>, \(AB\neq BA\text{,}\) and \(AC\) was defined whereas \(CA\) was not.</p>
+<p id="p-336">Another way matrix products deviate from real number products is that the product of matrices whose entries aren't 0 can result in a matrix whose entries are all 0.</p>
 <article class="example example-like" id="example-31"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-31"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-31"><article class="example example-like"><p id="p-335">Let</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-31"><article class="example example-like"><p id="p-337">Let</p>
 <div class="displaymath">
 \begin{equation*}
 A=\begin{pmatrix}1\amp 2\\2\amp 4 \end{pmatrix} , B=\begin{pmatrix}2\amp 6\\-1\amp -3 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p id="p-336">Notice that:</p>
+<p id="p-338">Notice that:</p>
 <div class="displaymath">
 \begin{align*}
 AB=\begin{pmatrix}1\amp 2\\2\amp 4 \end{pmatrix} \begin{pmatrix}2\amp 6\\-1\amp -3 \end{pmatrix} \amp =\amp \begin{pmatrix}1\cdot 2+2\cdot(-1) \amp  1\cdot 6+2\cdot(-3)\\ 2\cdot 2+4\cdot(-1)\amp 2\cdot 6 +4\cdot(-3) \end{pmatrix}\\
 \amp =\amp \begin{pmatrix}0 \amp  0 \\ 0 \amp  0 \end{pmatrix} \text{.}
 \end{align*}
 </div>
-<p id="p-337">Although neither \(A\) nor \(B\) have 0 entries, their product is an all 0 matrix. Also notice that this does not mean \(BA\) is an all 0 matrix.</p>
+<p id="p-339">Although neither \(A\) nor \(B\) have 0 entries, their product is an all 0 matrix. Also notice that this does not mean \(BA\) is an all 0 matrix.</p>
 <div class="displaymath">
 \begin{align*}
 BA=\begin{pmatrix}2\amp 6\\-1\amp -3 \end{pmatrix} \begin{pmatrix}1\amp 2\\2\amp 4 \end{pmatrix} \amp =\amp \begin{pmatrix}2\cdot 1+6\cdot2 \amp  2\cdot 2+6\cdot4\\ (-1)\cdot 1+(-3)\cdot2\amp (-1)\cdot 2 +(-3)\cdot4 \end{pmatrix}\\
@@ -360,7 +360,7 @@ BA=\begin{pmatrix}2\amp 6\\-1\amp -3 \end{pmatrix} \begin{pmatrix}1\amp 2\\2\amp
 </div></article></div> While matrix multiplication may differ wildly from real number multiplication, we do have a notion of “multiplying by 1”. <article class="definition definition-like" id="DefinitionIdentity"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
 </h6>
-<p id="p-338">For any positive integer \(n\text{,}\) let \(I_n\) denote the \(n\times n\) matrix with 1's in the diagonal and 0 elsewhere.  This is called a <dfn class="terminology">Identity Matrix</dfn>.</p></article><p id="p-339">So for example</p>
+<p id="p-340">For any positive integer \(n\text{,}\) let \(I_n\) denote the \(n\times n\) matrix with 1's in the diagonal and 0 elsewhere.  This is called a <dfn class="terminology">Identity Matrix</dfn>.</p></article><p id="p-341">So for example</p>
 <div class="displaymath">
 \begin{equation*}
 I_2=\begin{pmatrix}1 \amp 0 \\ 0 \amp 1 \end{pmatrix}.
@@ -379,7 +379,7 @@ I_2=\begin{pmatrix}1 \amp 0 \\ 0 \amp 1 \end{pmatrix}.
 <article class="remark remark-like" id="remark-1"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
 </h6>
-<p id="p-340">Given a matrix \(M\text{,}\) we have</p>
+<p id="p-342">Given a matrix \(M\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 MI_n=M=I_nM
@@ -388,18 +388,18 @@ MI_n=M=I_nM
 <p data-braille="continuation">whenever these products are defined.</p></article></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Sums of Matrices</span>
 </h3>
-<p id="p-341">Matrix sums are much more straight forward than their products. Two Matrices need to have the same dimensions in order to be summed, and the sum is just the sum of the entries, so:</p>
+<p id="p-343">Matrix sums are much more straight forward than their products. Two Matrices need to have the same dimensions in order to be summed, and the sum is just the sum of the entries, so:</p>
 <article class="definition definition-like" id="Defn_MatrixSum"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
 </h6>
-<p id="p-342">Given two \(m\times n\) matrices \(A\) and \(B\text{,}\) we define \(A+B\) the sum of \(A\) and \(B\) to be a \(m\times n\) matrix where:</p>
+<p id="p-344">Given two \(m\times n\) matrices \(A\) and \(B\text{,}\) we define \(A+B\) the sum of \(A\) and \(B\) to be a \(m\times n\) matrix where:</p>
 <div class="displaymath">
 \begin{equation*}
 (AB)_{ij}= (A_{ij}+B_{ij})
 \end{equation*}
 </div></article><article class="example example-like" id="example-32"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-32"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-32"><article class="example example-like"><p id="p-343">Company \(B\) gets in on this action and will give 2 dollars to each charity for each student who attends. NOW given \(F\) female and \(M\) male students, how much money will go to Elderly and the Homeless?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-32"><article class="example example-like"><p id="p-345">Company \(B\) gets in on this action and will give 2 dollars to each charity for each student who attends. NOW given \(F\) female and \(M\) male students, how much money will go to Elderly and the Homeless?</p>
 <div class="displaymath">
 \begin{align*}
 \begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \left( \begin{pmatrix}2 \amp  1 \\ 1 \amp  2 \\ 2 \amp  2 \end{pmatrix}  + \begin{pmatrix}2 \amp  2 \\ 2 \amp  2 \\ 2 \amp  2 \end{pmatrix}    \right)\begin{pmatrix}F\\M \end{pmatrix} \amp = \begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \begin{pmatrix}4 \amp  3 \\ 3 \amp  4 \\ 4 \amp  4 \end{pmatrix}  \begin{pmatrix}F\\M \end{pmatrix}\\
@@ -407,15 +407,15 @@ MI_n=M=I_nM
 \amp = \begin{pmatrix}4.7F+4.4M\\ 7.3F+6.6M \end{pmatrix}
 \end{align*}
 </div>
-<p id="p-344">So $\((4.7 F+4.4M)\) for Elderly and $\((7.3 F+6.6M)\) for Homeless.</p></article></div></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<p id="p-346">So $\((4.7 F+4.4M)\) for Elderly and $\((7.3 F+6.6M)\) for Homeless.</p></article></div></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.3</span> <span class="title">Computation using Sage</span>
 </h3>
-<p id="p-345">As usual, this seems like it should be much easier using technology. Let's suppose \(A=\begin{pmatrix}1 \amp  2 \\ 3 \amp  4 \end{pmatrix} , B=\begin{pmatrix}5 \amp  6 \\ 7 \amp  8 \end{pmatrix}\text{.}\)  We can use Sage to find \(A+B\text{:}\)</p>
-<p id="p-346"><div class="sagecell-sage" id="sage-2"><script type="text/x-sage">A=matrix(QQ, [[1,2],[3,4]])
+<p id="p-347">As usual, this seems like it should be much easier using technology. Let's suppose \(A=\begin{pmatrix}1 \amp  2 \\ 3 \amp  4 \end{pmatrix} , B=\begin{pmatrix}5 \amp  6 \\ 7 \amp  8 \end{pmatrix}\text{.}\)  We can use Sage to find \(A+B\text{:}\)</p>
+<p id="p-348"><div class="sagecell-sage" id="sage-2"><script type="text/x-sage">A=matrix(QQ, [[1,2],[3,4]])
 B=matrix(QQ, [[5,6],[7,8]])
 print(A+B)
 </script></div></p>
-<p id="p-347">Use:<pre class="code-block tex2jax_ignore">print(A*B)
+<p id="p-349">Use:<pre class="code-block tex2jax_ignore">print(A*B)
 </pre>To find \(AB\)  and<pre class="code-block tex2jax_ignore">print(B*A)
 </pre>to find \(BA\text{.}\)</p>
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><div class="displaymath">

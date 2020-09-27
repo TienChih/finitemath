@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:22:37-06:00       *-->
+<!--*       on 2020-09-27T16:42:50-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -24,10 +24,30 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">I can also check if something is not invertible: <div class="sagecell-sage" id="sage-8"><script type="text/x-sage">A=matrix(QQ, [[1,1],[-1,-1]])
-B=A^(-1)
-print(B)
-</script></div> You should get a mess of error messages, the last of which is “input matrix must be nonsingular”.  Since \(\begin{pmatrix} 1 \amp 1 \\ -1 \amp -1\end{pmatrix}\) <em class="emphasis">is</em> singular, it cannot be inverted.</p>
+<p>Suppose we had</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+M=\begin{pmatrix} 1 \amp 1 \\ -1 \amp -1\end{pmatrix}.
+\end{equation*}
+</div>
+<p data-braille="continuation">If we tried to find it's inverse as we have above, we would have:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{pmatrix} 1 \amp 1 \\ -1 \amp -1\end{pmatrix}\begin{pmatrix} a \amp b \\ c \amp d\end{pmatrix}=\begin{pmatrix} 1 \amp 0 \\ 0 \amp 1\end{pmatrix}.
+\end{equation*}
+</div>
+<p data-braille="continuation">and the system</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+a-c\amp=1\\
+b-d\amp=0\\
+a-c\amp=0\\
+b-d\amp=1
+\end{align*}
+</div>
+<p data-braille="continuation">But wait!  How can \(a-c=1\) and \(a-c=0\text{?}\)  This is a non-solvable system.  We can see it here as well: <div class="sagecell-sage" id="sage-6"><script type="text/x-sage">A=matrix(QQ, [[1,0,-1,0,1],[0,1,0,-1,0],[1,0,-1,0,0],[0,1,0,-1,1]])
+print(A.rref())
+</script></div> We see that we have a row \(0a+0b+0c+0d=1\text{,}\) which has no solution.</p>
 <span class="incontext"><a href="Sec_MatrixInverse.html#p-354">in-context</a></span>
 </body>
 </html>

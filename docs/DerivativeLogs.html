@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:22:09-06:00       *-->
+<!--*       on 2020-09-27T16:42:24-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -220,11 +220,11 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="DerivativeLogs"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.7</span> <span class="title">Derivative of Logarithms</span>
 </h2>
-<section class="introduction" id="introduction-35"><p id="p-1019">We recall that log functions are inverses of exponential functions.  We first conceptualized them in <a href="Sec_Logarithms.html" class="internal" title="Section 6.6: Logarithms">Section 6.6</a> as reflections of exponentials across the \(y=x\) line.  It is sensible then that the derivatives of logs should be based on those of exponentials.</p>
-<p id="p-1020">In fact, we can see it below.  Each point on the \(y=e^x\) line corresponds to a point on the \(y=\ln(x)\) line, and the slopes are reciprocals of each other: <iframe src="https://www.desmos.com/calculator/5fxsak3xaa" id="interactive-164" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-79"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-35"><p id="p-1021">We recall that log functions are inverses of exponential functions.  We first conceptualized them in <a href="Sec_Logarithms.html" class="internal" title="Section 6.6: Logarithms">Section 6.6</a> as reflections of exponentials across the \(y=x\) line.  It is sensible then that the derivatives of logs should be based on those of exponentials.</p>
+<p id="p-1022">In fact, we can see it below.  Each point on the \(y=e^x\) line corresponds to a point on the \(y=\ln(x)\) line, and the slopes are reciprocals of each other: <iframe src="https://www.desmos.com/calculator/5fxsak3xaa" id="interactive-164" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-79"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.7.1</span> <span class="title">Computing Logarithmic Derivatives</span>
 </h3>
-<p id="p-1021">We can use the chain rule to find the derivative of log functions as well. Let's first compute \(\frac{d}{dx}[\ln(x)]\text{:}\)</p>
+<p id="p-1023">We can use the chain rule to find the derivative of log functions as well. Let's first compute \(\frac{d}{dx}[\ln(x)]\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 x\amp = e^{\ln(x)}\\
@@ -235,7 +235,7 @@ x\amp = e^{\ln(x)}\\
 \end{align*}
 </div>
 <p data-braille="continuation">Visually: <iframe src="https://www.desmos.com/calculator/9vsyzdkzro" id="interactive-165" width="600" height="600"></iframe></p>
-<p id="p-1022">For general \(\log_a(x)\text{:}\)</p>
+<p id="p-1024">For general \(\log_a(x)\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 x\amp = a^{\log_a(x)}\\
@@ -245,15 +245,15 @@ x\amp = a^{\log_a(x)}\\
 \frac{d}{dx}[\log_a(x)]\amp = \frac{1}{x\ln(a)}\text{.}
 \end{align*}
 </div>
-<p id="p-1023">Verified graphically here as well: <iframe src="https://www.desmos.com/calculator/znr3xikwcc" id="interactive-166" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-80"><h3 class="heading hide-type">
+<p id="p-1025">Verified graphically here as well: <iframe src="https://www.desmos.com/calculator/znr3xikwcc" id="interactive-166" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-80"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.7.2</span> <span class="title">Exercises</span>
 </h3>
 <article class="example example-like" id="example-77"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-77"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.7.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-77"><article class="example example-like"><p id="p-1024">Let \(g(x)=\ln(x^2+1)\text{.}\)  Find \(g'(x)\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-77"><article class="example example-like"><p id="p-1026">Let \(g(x)=\ln(x^2+1)\text{.}\)  Find \(g'(x)\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-105" id="solution-105"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-105"><div class="solution solution-like">
-<p id="p-1025">Notice:</p>
+<p id="p-1027">Notice:</p>
 <div class="displaymath">
 \begin{align*}
 g'(x)\amp = \frac{d}{dx}[\ln(x^2+1)]\\
@@ -266,7 +266,7 @@ g'(x)\amp = \frac{d}{dx}[\ln(x^2+1)]\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-71"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-71"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.7.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-71"><article class="exercise exercise-like"><p id="p-1026">Suppose the demand function for q units of a certain item is</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-71"><article class="exercise exercise-like"><p id="p-1028">Suppose the demand function for q units of a certain item is</p>
 <div class="displaymath">
 \begin{equation*}
 p=D(q)=150+\frac{40}{\ln(q)}, q&gt;1,
@@ -279,7 +279,7 @@ p=D(q)=150+\frac{40}{\ln(q)}, q&gt;1,
 </ul>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-106" id="solution-106"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-106"><div class="solution solution-like">
-<p id="p-1027">Notice:</p>
+<p id="p-1029">Notice:</p>
 <ul class="disc">
 <li id="li-465">We note that revenue is \(R(q)=qD(q)=150q+\frac{40q}{\ln(q)}\text{.}\)  We then differentiate \(R(q)\text{:}\)<div class="displaymath">
 \begin{align*}

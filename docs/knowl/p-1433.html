@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:23:28-06:00       *-->
+<!--*       on 2020-09-27T16:43:45-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,30 +12,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Evaluate (Sage)'});
-});
-</script>
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">In a year: <div class="sagecell-sage" id="sage-22"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
-X=matrix(QQ, [[250000],[50000]])
-print(M*X)
-</script></div> We would have 160000 in \(X\) and 140000 in \(Y\text{.}\)  In 10 years: <div class="sagecell-sage" id="sage-23"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
-X=matrix(QQ, [[250000],[50000]])
-print(M^10*X*1.0)
-</script></div> About 100016 in \(X\) and 199984 in \(Y\text{.}\)  We can utilize sage to see how the values change over many iterations: <div class="sagecell-sage" id="sage-24"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
-X=matrix(QQ, [[250000],[50000]])
-for i in range(100):
-  print(M^i*X*1.0)
-  print(' ')
-</script></div> Here, we let it run for 100 iterations, and we see that the state converges to the 100000 in \(X\text{,}\) 200000 in \(Y\text{.}\)  We call this an <dfn class="terminology">equilibrium state</dfn>.</p>
+<p>Then say we have 500 g of the compound, we could solve the system:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+S\amp=\frac{5}{7}G\\
+L\amp=\frac{19}{14}G\\
+S+L+G\amp=500
+\end{align*}
+</div>
+<p data-braille="continuation">and obtain roughly 116.28g of solid, 220.93g of liquid and 162.79g of gas.</p>
 <span class="incontext"><a href="Sec_StableSolutions.html#p-1433">in-context</a></span>
 </body>
 </html>

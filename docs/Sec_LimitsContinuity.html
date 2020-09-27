@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:22:06-06:00       *-->
+<!--*       on 2020-09-27T16:42:21-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -223,105 +223,105 @@ MathJax.Hub.Config({
 <section class="introduction" id="introduction-30">In this section, we discuss the idea of <dfn class="terminology">limits</dfn>, or the math about approaching something infinitesimally closely. <article class="definition definition-like" id="definition-12"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="period">.</span>
 </h6>
-<p id="p-854">Informally, the limit of a function \(\limit{x}{a} f(x)=L\) (if it exists) is a number \(L\) such that when \(f(x)\) get's closer and closer to \(a\text{,}\) \(f(x)\) gets closer and closer to \(L\text{.}\)</p></article></section><section class="subsection" id="subsection-66"><h3 class="heading hide-type">
+<p id="p-856">Informally, the limit of a function \(\limit{x}{a} f(x)=L\) (if it exists) is a number \(L\) such that when \(f(x)\) get's closer and closer to \(a\text{,}\) \(f(x)\) gets closer and closer to \(L\text{.}\)</p></article></section><section class="subsection" id="subsection-66"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.1</span> <span class="title">The Limit</span>
 </h3>
-<p id="p-855">Consider the function \(f(x)=\frac{x^2-1}{x-1}\text{,}\) what happens as \(x\) get's closer and closer to 1?</p>
+<p id="p-857">Consider the function \(f(x)=\frac{x^2-1}{x-1}\text{,}\) what happens as \(x\) get's closer and closer to 1?</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|c|} \hline x \amp  f(x)\\ \hline 1.1 \amp  2.1\\ 1.01 \amp  2.01\\ 1.001 \amp  2.001\\ .9 \amp  1.9\\ .99\amp 1.99\\ .999 \amp  1.999\\ \hline \end{array}
 \end{equation*}
 </div>
-<p id="p-856">You can test and see these values here: <iframe src="https://www.desmos.com/calculator/w3ycpf3mv4" id="interactive-132" width="600" height="600"></iframe> It certainly seems as if \(x\) gets closer and closer to \(1\text{,}\) \(f(x)\) approaches the value \(2\text{.}\) Why couldn't we just plug in 1? Because if we did we would get \(f(1)"="\frac{1^2-1}{1-1}"="\frac{0}{0}\) which is undefined. Recall that \(1\) would not be a part of the domain of \(f(x)\text{.}\) <em class="emphasis">This, in fact, is the whole point of limits</em>, the entire reason they exist, is in order to give values to things like \(f(1)\) which are not defined.</p>
-<p id="p-857">The left and right limits of a function are values the function approaches as \(x\) \(a\) from the left or the right, so as we see above, they both (the black and orange dots in the linked graph) both approach the same value.</p>
+<p id="p-858">You can test and see these values here: <iframe src="https://www.desmos.com/calculator/w3ycpf3mv4" id="interactive-132" width="600" height="600"></iframe> It certainly seems as if \(x\) gets closer and closer to \(1\text{,}\) \(f(x)\) approaches the value \(2\text{.}\) Why couldn't we just plug in 1? Because if we did we would get \(f(1)"="\frac{1^2-1}{1-1}"="\frac{0}{0}\) which is undefined. Recall that \(1\) would not be a part of the domain of \(f(x)\text{.}\) <em class="emphasis">This, in fact, is the whole point of limits</em>, the entire reason they exist, is in order to give values to things like \(f(1)\) which are not defined.</p>
+<p id="p-859">The left and right limits of a function are values the function approaches as \(x\) \(a\) from the left or the right, so as we see above, they both (the black and orange dots in the linked graph) both approach the same value.</p>
 <article class="definition definition-like" id="definition-13"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.2</span><span class="period">.</span>
 </h6>
-<p id="p-858">We use \(\limit{x}{a^-} f(x)\) to denote the <dfn class="terminology">limit of \(f(x)\) as \(x\) approaches \(a\) from the left.</dfn> Similarly \(\limit{x}{a^+} f(x)\) denotes the <dfn class="terminology">limit of \(f(x)\) as \(x\) approaches \(a\) from the right.</dfn>  (If they exist).</p></article><p id="p-859">So:</p>
+<p id="p-860">We use \(\limit{x}{a^-} f(x)\) to denote the <dfn class="terminology">limit of \(f(x)\) as \(x\) approaches \(a\) from the left.</dfn> Similarly \(\limit{x}{a^+} f(x)\) denotes the <dfn class="terminology">limit of \(f(x)\) as \(x\) approaches \(a\) from the right.</dfn>  (If they exist).</p></article><p id="p-861">So:</p>
 <ul class="disc">
-<li id="li-354"><p id="p-860">\(\limit{x}{1^-}\frac{x^2-1}{x-1}=2\text{.}\)</p></li>
-<li id="li-355"><p id="p-861">\(\displaystyle \limit{x}{1^+}\frac{x^2-1}{x-1}=2\)</p></li>
-<li id="li-356"><p id="p-862">\(\displaystyle \limit{x}{1}\frac{x^2-1}{x-1}=2\)</p></li>
-<li id="li-357"><p id="p-863">\(f(1)\) is undefined.</p></li>
+<li id="li-354"><p id="p-862">\(\limit{x}{1^-}\frac{x^2-1}{x-1}=2\text{.}\)</p></li>
+<li id="li-355"><p id="p-863">\(\displaystyle \limit{x}{1^+}\frac{x^2-1}{x-1}=2\)</p></li>
+<li id="li-356"><p id="p-864">\(\displaystyle \limit{x}{1}\frac{x^2-1}{x-1}=2\)</p></li>
+<li id="li-357"><p id="p-865">\(f(1)\) is undefined.</p></li>
 </ul>
 <article class="example example-like" id="ExampleLimit"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ExampleLimit"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleLimit"><article class="example example-like"><p id="p-864">So looking at this graph of \(y=f(x)\text{:}\)</p>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-52.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
-<p id="p-865">For \(x=2,4,6,8\text{,}\) find the left and right limits, the limit, and the value of the function. See if you understand why the following are true:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleLimit"><article class="example example-like"><p id="p-866">So looking at this graph of \(y=f(x)\text{:}\)</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-53.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-867">For \(x=2,4,6,8\text{,}\) find the left and right limits, the limit, and the value of the function. See if you understand why the following are true:</p>
 <ul class="disc">
-<li id="li-358"><p id="p-866">\(\limit{x}{2^-}f(x)=2\text{,}\) as we approach \(x\) from the left, this is what \(f(x)\) approaches.</p></li>
-<li id="li-359"><p id="p-867">\(\limit{x}{2^+}f(x)=1\text{,}\) as we approach \(x\) from the right, this is what \(f(x)\) approaches.</p></li>
-<li id="li-360"><p id="p-868">\(\limit{x}{2}f(x)\) is undefined, there is no single number that \(f(x)\) get's closer to, so there is no limit.</p></li>
-<li id="li-361"><p id="p-869">\(f(2)=1\text{,}\) that's the actual value of \(f(2)\text{.}\)</p></li>
+<li id="li-358"><p id="p-868">\(\limit{x}{2^-}f(x)=2\text{,}\) as we approach \(x\) from the left, this is what \(f(x)\) approaches.</p></li>
+<li id="li-359"><p id="p-869">\(\limit{x}{2^+}f(x)=1\text{,}\) as we approach \(x\) from the right, this is what \(f(x)\) approaches.</p></li>
+<li id="li-360"><p id="p-870">\(\limit{x}{2}f(x)\) is undefined, there is no single number that \(f(x)\) get's closer to, so there is no limit.</p></li>
+<li id="li-361"><p id="p-871">\(f(2)=1\text{,}\) that's the actual value of \(f(2)\text{.}\)</p></li>
 </ul>
-<p id="p-870">Similarly, we should see:</p>
+<p id="p-872">Similarly, we should see:</p>
 <ul class="disc">
-<li id="li-362"><p id="p-871">\(\limit{x}{4^-}f(x)=1\text{.}\)</p></li>
-<li id="li-363"><p id="p-872">\(\limit{x}{4^+}f(x)=1\text{.}\)</p></li>
-<li id="li-364"><p id="p-873">\(\limit{x}{4}f(x)=1\text{.}\)</p></li>
-<li id="li-365"><p id="p-874">\(f(4)=-1\text{.}\)</p></li>
-<li id="li-366"><p id="p-875">\(\limit{x}{6^-}f(x)=-1\text{.}\)</p></li>
-<li id="li-367"><p id="p-876">\(\limit{x}{6^+}f(x)=-1\text{.}\)</p></li>
-<li id="li-368"><p id="p-877">\(\limit{x}{6}f(x)=-1\text{.}\)</p></li>
-<li id="li-369"><p id="p-878">\(f(6)=-1\text{.}\)</p></li>
-<li id="li-370"><p id="p-879">\(\limit{x}{8^-}f(x)=-3\text{.}\)</p></li>
-<li id="li-371"><p id="p-880">\(\limit{x}{8^+}f(x)=-3\text{.}\)</p></li>
-<li id="li-372"><p id="p-881">\(\limit{x}{8}f(x)=-3\text{.}\)</p></li>
-<li id="li-373"><p id="p-882">\(f(8)\) is undefined.</p></li>
+<li id="li-362"><p id="p-873">\(\limit{x}{4^-}f(x)=1\text{.}\)</p></li>
+<li id="li-363"><p id="p-874">\(\limit{x}{4^+}f(x)=1\text{.}\)</p></li>
+<li id="li-364"><p id="p-875">\(\limit{x}{4}f(x)=1\text{.}\)</p></li>
+<li id="li-365"><p id="p-876">\(f(4)=-1\text{.}\)</p></li>
+<li id="li-366"><p id="p-877">\(\limit{x}{6^-}f(x)=-1\text{.}\)</p></li>
+<li id="li-367"><p id="p-878">\(\limit{x}{6^+}f(x)=-1\text{.}\)</p></li>
+<li id="li-368"><p id="p-879">\(\limit{x}{6}f(x)=-1\text{.}\)</p></li>
+<li id="li-369"><p id="p-880">\(f(6)=-1\text{.}\)</p></li>
+<li id="li-370"><p id="p-881">\(\limit{x}{8^-}f(x)=-3\text{.}\)</p></li>
+<li id="li-371"><p id="p-882">\(\limit{x}{8^+}f(x)=-3\text{.}\)</p></li>
+<li id="li-372"><p id="p-883">\(\limit{x}{8}f(x)=-3\text{.}\)</p></li>
+<li id="li-373"><p id="p-884">\(f(8)\) is undefined.</p></li>
 </ul></article></div>
-<p id="p-883">A great shorthand for determining when there is or isn't a limit is: <em class="emphasis">\(\limit{x}{a}f(x)=L\) and exists if and only if \(\limit{x}{a^-}f(x)=L\) and \(\limit{x}{a^+}f(x)=L.\)</em></p>
+<p id="p-885">A great shorthand for determining when there is or isn't a limit is: <em class="emphasis">\(\limit{x}{a}f(x)=L\) and exists if and only if \(\limit{x}{a^-}f(x)=L\) and \(\limit{x}{a^+}f(x)=L.\)</em></p>
 <article class="exercise exercise-like" id="ExerciseLimit"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ExerciseLimit"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.1.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseLimit"><article class="exercise exercise-like"><p id="p-884">Consider the graph of \(y=g(x)\text{:}\) <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-53.svg" role="img" style="width: 100%; height: auto;" alt=""></div> Find the following:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseLimit"><article class="exercise exercise-like"><p id="p-886">Consider the graph of \(y=g(x)\text{:}\) <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-54.svg" role="img" style="width: 100%; height: auto;" alt=""></div> Find the following:</p>
 <ul class="disc">
-<li id="li-374"><p id="p-885">\(\limit{x}{0^-}g(x)\text{.}\)</p></li>
-<li id="li-375"><p id="p-886">\(\limit{x}{0^+}g(x)\text{.}\)</p></li>
-<li id="li-376"><p id="p-887">\(\limit{x}{0}g(x)\text{.}\)</p></li>
-<li id="li-377"><p id="p-888">\(g(0)\text{.}\)</p></li>
-<li id="li-378"><p id="p-889">\(\limit{x}{4^-}g(x)\text{.}\)</p></li>
-<li id="li-379"><p id="p-890">\(\limit{x}{4^+}g(x)\text{.}\)</p></li>
-<li id="li-380"><p id="p-891">\(\limit{x}{4}g(x)\text{.}\)</p></li>
-<li id="li-381"><p id="p-892">\(g(4)\text{.}\)</p></li>
-<li id="li-382"><p id="p-893">\(\limit{x}{8^-}g(x)\text{.}\)</p></li>
-<li id="li-383"><p id="p-894">\(\limit{x}{8^+}g(x)\text{.}\)</p></li>
-<li id="li-384"><p id="p-895">\(\limit{x}{8}g(x)\text{.}\)</p></li>
-<li id="li-385"><p id="p-896">\(g(8)\text{.}\)</p></li>
+<li id="li-374"><p id="p-887">\(\limit{x}{0^-}g(x)\text{.}\)</p></li>
+<li id="li-375"><p id="p-888">\(\limit{x}{0^+}g(x)\text{.}\)</p></li>
+<li id="li-376"><p id="p-889">\(\limit{x}{0}g(x)\text{.}\)</p></li>
+<li id="li-377"><p id="p-890">\(g(0)\text{.}\)</p></li>
+<li id="li-378"><p id="p-891">\(\limit{x}{4^-}g(x)\text{.}\)</p></li>
+<li id="li-379"><p id="p-892">\(\limit{x}{4^+}g(x)\text{.}\)</p></li>
+<li id="li-380"><p id="p-893">\(\limit{x}{4}g(x)\text{.}\)</p></li>
+<li id="li-381"><p id="p-894">\(g(4)\text{.}\)</p></li>
+<li id="li-382"><p id="p-895">\(\limit{x}{8^-}g(x)\text{.}\)</p></li>
+<li id="li-383"><p id="p-896">\(\limit{x}{8^+}g(x)\text{.}\)</p></li>
+<li id="li-384"><p id="p-897">\(\limit{x}{8}g(x)\text{.}\)</p></li>
+<li id="li-385"><p id="p-898">\(g(8)\text{.}\)</p></li>
 </ul>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-79" id="solution-79"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-79"><div class="solution solution-like"><ul id="p-897" class="disc">
-<li id="li-386"><p id="p-898">\(\limit{x}{0^-}g(x)=2\text{.}\)</p></li>
-<li id="li-387"><p id="p-899">\(\limit{x}{0^+}g(x)=-1\text{.}\)</p></li>
-<li id="li-388"><p id="p-900">\(\limit{x}{0}g(x)\text{ is undefined}\text{.}\)</p></li>
-<li id="li-389"><p id="p-901">\(g(0)=1\text{.}\)</p></li>
-<li id="li-390"><p id="p-902">\(\limit{x}{4^-}g(x)=0\text{.}\)</p></li>
-<li id="li-391"><p id="p-903">\(\limit{x}{4^+}g(x)=0\text{.}\)</p></li>
-<li id="li-392"><p id="p-904">\(\limit{x}{4}g(x)=0\text{.}\)</p></li>
-<li id="li-393"><p id="p-905">\(g(4)\text{ is undefined}\text{.}\)</p></li>
-<li id="li-394"><p id="p-906">\(\limit{x}{8^-}g(x)=1\text{.}\)</p></li>
-<li id="li-395"><p id="p-907">\(\limit{x}{8^+}g(x)=1\text{.}\)</p></li>
-<li id="li-396"><p id="p-908">\(\limit{x}{8}g(x)=1\text{.}\)</p></li>
-<li id="li-397"><p id="p-909">\(g(8)=1\text{.}\)</p></li>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-79" id="solution-79"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-79"><div class="solution solution-like"><ul id="p-899" class="disc">
+<li id="li-386"><p id="p-900">\(\limit{x}{0^-}g(x)=2\text{.}\)</p></li>
+<li id="li-387"><p id="p-901">\(\limit{x}{0^+}g(x)=-1\text{.}\)</p></li>
+<li id="li-388"><p id="p-902">\(\limit{x}{0}g(x)\text{ is undefined}\text{.}\)</p></li>
+<li id="li-389"><p id="p-903">\(g(0)=1\text{.}\)</p></li>
+<li id="li-390"><p id="p-904">\(\limit{x}{4^-}g(x)=0\text{.}\)</p></li>
+<li id="li-391"><p id="p-905">\(\limit{x}{4^+}g(x)=0\text{.}\)</p></li>
+<li id="li-392"><p id="p-906">\(\limit{x}{4}g(x)=0\text{.}\)</p></li>
+<li id="li-393"><p id="p-907">\(g(4)\text{ is undefined}\text{.}\)</p></li>
+<li id="li-394"><p id="p-908">\(\limit{x}{8^-}g(x)=1\text{.}\)</p></li>
+<li id="li-395"><p id="p-909">\(\limit{x}{8^+}g(x)=1\text{.}\)</p></li>
+<li id="li-396"><p id="p-910">\(\limit{x}{8}g(x)=1\text{.}\)</p></li>
+<li id="li-397"><p id="p-911">\(g(8)=1\text{.}\)</p></li>
 </ul></div></div>
 </div></article></div></section><section class="subsection" id="subsection-67"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.1.2</span> <span class="title">Continuity</span>
 </h3>
-<p id="p-910">Most people have an intuitive understanding of what it means for a function to be continuous, that it doesn't have any jumps, and the curve of the function “connect”.  This leads to a bit more formal of a definition:</p>
+<p id="p-912">Most people have an intuitive understanding of what it means for a function to be continuous, that it doesn't have any jumps, and the curve of the function “connect”.  This leads to a bit more formal of a definition:</p>
 <article class="definition definition-like" id="definition-14"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.5</span><span class="period">.</span>
 </h6>
-<p id="p-911">A function \(f(x)\) is <dfn class="terminology">continuous at \(x=a\)</dfn> if \(\limit{x}{a}f(x)=f(a).\)  It is <dfn class="terminology">continuous</dfn> if it is continuous at each \(x\) in it's domain.</p></article><article class="example example-like" id="example-67"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-67"><h6 class="heading">
+<p id="p-913">A function \(f(x)\) is <dfn class="terminology">continuous at \(x=a\)</dfn> if \(\limit{x}{a}f(x)=f(a).\)  It is <dfn class="terminology">continuous</dfn> if it is continuous at each \(x\) in it's domain.</p></article><article class="example example-like" id="example-67"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-67"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-67"><article class="example example-like"><p id="p-912">In <a class="xref" data-knowl="./knowl/ExampleLimit.html" title="Example 7.1.3">Example 7.1.3</a>, \(f(x)\) is continuous at each \(x\) except for \(x=2, 4\text{,}\) since the limits are either undefined or don't agree with the function at these values.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-67"><article class="example example-like"><p id="p-914">In <a class="xref" data-knowl="./knowl/ExampleLimit.html" title="Example 7.1.3">Example 7.1.3</a>, \(f(x)\) is continuous at each \(x\) except for \(x=2, 4\text{,}\) since the limits are either undefined or don't agree with the function at these values.</p></article></div>
 <article class="exercise exercise-like" id="exercise-55"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-55"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.1.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-55"><article class="exercise exercise-like"><p id="p-913">In <a class="xref" data-knowl="./knowl/ExerciseLimit.html" title="Checkpoint 7.1.4">Checkpoint 7.1.4</a>, identify when \(g(x)\) is continuous.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-55"><article class="exercise exercise-like"><p id="p-915">In <a class="xref" data-knowl="./knowl/ExerciseLimit.html" title="Checkpoint 7.1.4">Checkpoint 7.1.4</a>, identify when \(g(x)\) is continuous.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-80" id="solution-80"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-80"><div class="solution solution-like"><p id="p-914">We can see that \(g(x)\) is continuous everywhere but at \(x=0,4\text{.}\)  We note that \(g(x)\) has no defined limit at \(x=0\text{,}\) and \(g(x)\) is undefined when \(x=4\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-80" id="solution-80"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-80"><div class="solution solution-like"><p id="p-916">We can see that \(g(x)\) is continuous everywhere but at \(x=0,4\text{.}\)  We note that \(g(x)\) has no defined limit at \(x=0\text{,}\) and \(g(x)\) is undefined when \(x=4\text{.}\)</p></div></div>
 </div></article></div>
 <article class="example example-like" id="example-68"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-68"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-68"><article class="example example-like"><p id="p-915">For what values of \(x\) is</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-68"><article class="example example-like"><p id="p-917">For what values of \(x\) is</p>
 <div class="displaymath">
 \begin{equation*}
 f(x)=\begin{cases} 2^x \amp x\lt 0 \\ x+1 \amp 0\leq x \leq 4 \\ \sqrt{x} \amp x&gt;4\end{cases}
@@ -330,26 +330,26 @@ f(x)=\begin{cases} 2^x \amp x\lt 0 \\ x+1 \amp 0\leq x \leq 4 \\ \sqrt{x} \amp x
 <p data-braille="continuation">continuous?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-81" id="solution-81"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-81"><div class="solution solution-like">
-<p id="p-916">We note that we only really need to check \(x=0\) and \(x=4\text{.}\)  At \(x=0\text{,}\) we have</p>
+<p id="p-918">We note that we only really need to check \(x=0\) and \(x=4\text{.}\)  At \(x=0\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 \limit{x}{0^-} f(x)=2^0=1, \limit{x}{0^+} f(x)=0+1=1.\text{.}
 \end{equation*}
 </div>
 <p data-braille="continuation">Thus \(\limit{x}{0}f(x)=1\text{.}\)  Since \(f(0)=0+1=1\) we have that \(f(x)\) is continuous at \(x=0\text{.}\)</p>
-<p id="p-917">On the other hand, at \(x=4\text{,}\) we have</p>
+<p id="p-919">On the other hand, at \(x=4\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 \limit{x}{4^-} f(x)=4+1=5, \limit{x}{4^+} f(x)=\sqrt{4}=2.\text{.}
 \end{equation*}
 </div>
 <p data-braille="continuation">Thus \(\limit{x}{4}f(x)\) is undefined and  \(f(x)\) is <em class="emphasis">not</em> continuous at \(x=4\text{.}\)</p>
-<p id="p-918">We observe this visually: <iframe src="https://www.desmos.com/calculator/io24ldyfpn" id="interactive-133" width="600" height="600"></iframe></p>
+<p id="p-920">We observe this visually: <iframe src="https://www.desmos.com/calculator/io24ldyfpn" id="interactive-133" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-69"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-69"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-69"><article class="example example-like"><p id="p-919">For what value of \(k\) is</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-69"><article class="example example-like"><p id="p-921">For what value of \(k\) is</p>
 <div class="displaymath">
 \begin{equation*}
 g(x)=\begin{cases} -x^2+4 \amp x\leq 1 \\ kc \amp x&gt;1\end{cases}
@@ -358,19 +358,19 @@ g(x)=\begin{cases} -x^2+4 \amp x\leq 1 \\ kc \amp x&gt;1\end{cases}
 <p data-braille="continuation">continuous?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-82" id="solution-82"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-82"><div class="solution solution-like">
-<p id="p-920">We note that \(\limit{x}{1^-}g(x)=g(1)=-1+4=3\text{.}\)  We also note that \(\limit{x}{1^+}g(x)=k(1)=k\text{.}\)  So for \(g(x)\) to be continuous at \(x=1\text{,}\) we need</p>
+<p id="p-922">We note that \(\limit{x}{1^-}g(x)=g(1)=-1+4=3\text{.}\)  We also note that \(\limit{x}{1^+}g(x)=k(1)=k\text{.}\)  So for \(g(x)\) to be continuous at \(x=1\text{,}\) we need</p>
 <div class="displaymath">
 \begin{equation*}
 3=\limit{x}{1^+}g(x)=k.
 \end{equation*}
 </div>
 <p data-braille="continuation">Thus \(k=3\text{.}\)</p>
-<p id="p-921">We observe this visually: <iframe src="https://www.desmos.com/calculator/kdac8jjpzv" id="interactive-134" width="600" height="600"></iframe> Slide the value of \(k\) to see how other values of \(k\) will <em class="emphasis">not</em> give you a continuous function.</p>
+<p id="p-923">We observe this visually: <iframe src="https://www.desmos.com/calculator/kdac8jjpzv" id="interactive-134" width="600" height="600"></iframe> Slide the value of \(k\) to see how other values of \(k\) will <em class="emphasis">not</em> give you a continuous function.</p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-56"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-56"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.1.10</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-56"><article class="exercise exercise-like"><p id="p-922">For what values of \(x\) is</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-56"><article class="exercise exercise-like"><p id="p-924">For what values of \(x\) is</p>
 <div class="displaymath">
 \begin{equation*}
 a(x)=\begin{cases} x \amp x\lt 1 \\ x^2+1 \amp 1\leq x \lt 3 \\ 2^x \amp x\geq 3\end{cases}
@@ -379,26 +379,26 @@ a(x)=\begin{cases} x \amp x\lt 1 \\ x^2+1 \amp 1\leq x \lt 3 \\ 2^x \amp x\geq 3
 <p data-braille="continuation">continuous?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-83" id="solution-83"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-83"><div class="solution solution-like">
-<p id="p-923">We note that we only really need to check \(x=1\) and \(x=3\text{.}\)  At \(x=1\text{,}\) we have</p>
+<p id="p-925">We note that we only really need to check \(x=1\) and \(x=3\text{.}\)  At \(x=1\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 \limit{x}{1^-} a(x)=1, \limit{x}{1^+} a(x)=1^2+1=2.\text{.}
 \end{equation*}
 </div>
 <p data-braille="continuation">Thus \(\limit{x}{1}a(x)\) is undefined and \(a(x)\) is <em class="emphasis">not</em> continuous at \(x=1\text{.}\)</p>
-<p id="p-924">At \(x=3\text{,}\) we have</p>
+<p id="p-926">At \(x=3\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 \limit{x}{3^-} a(x)=3^2+1=10, \limit{x}{3^+} a(x)=2^3=8.
 \end{equation*}
 </div>
 <p data-braille="continuation">Thus \(\limit{x}{3}\) is undefined and  \(f(x)\) is <em class="emphasis">not</em> continuous at \(x=3\text{.}\)</p>
-<p id="p-925">We observe this visually: <iframe src="https://www.desmos.com/calculator/zcv7owo4du" id="interactive-135" width="600" height="600"></iframe></p>
+<p id="p-927">We observe this visually: <iframe src="https://www.desmos.com/calculator/zcv7owo4du" id="interactive-135" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-57"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-57"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.1.11</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-57"><article class="exercise exercise-like"><p id="p-926">For what value of \(k\) is</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-57"><article class="exercise exercise-like"><p id="p-928">For what value of \(k\) is</p>
 <div class="displaymath">
 \begin{equation*}
 b(x)=\begin{cases} 2^x \amp x\lt 2 \\ -x+k \amp x\geq2\end{cases}
@@ -407,14 +407,14 @@ b(x)=\begin{cases} 2^x \amp x\lt 2 \\ -x+k \amp x\geq2\end{cases}
 <p data-braille="continuation">continuous?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-84" id="solution-84"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-84"><div class="solution solution-like">
-<p id="p-927">We note that \(\limit{x}{2^-}b(x)=2^2=4\text{.}\)  We also note that \(\limit{x}{2^+}b(x)=b(2)=-(2)+k=-2+k\text{.}\)  So for \(b(x)\) to be continuous at \(x=2\text{,}\) we need</p>
+<p id="p-929">We note that \(\limit{x}{2^-}b(x)=2^2=4\text{.}\)  We also note that \(\limit{x}{2^+}b(x)=b(2)=-(2)+k=-2+k\text{.}\)  So for \(b(x)\) to be continuous at \(x=2\text{,}\) we need</p>
 <div class="displaymath">
 \begin{equation*}
 4=\limit{x}{2^+}b(x)=b(2)=-2+k.
 \end{equation*}
 </div>
 <p data-braille="continuation">Thus \(k=6\text{.}\)</p>
-<p id="p-928">We observe this visually: <iframe src="https://www.desmos.com/calculator/8ajqy7ful8" id="interactive-136" width="600" height="600"></iframe> Slide the value of \(k\) to see how other values of \(k\) will <em class="emphasis">not</em> give you a continuous function.</p>
+<p id="p-930">We observe this visually: <iframe src="https://www.desmos.com/calculator/8ajqy7ful8" id="interactive-136" width="600" height="600"></iframe> Slide the value of \(k\) to see how other values of \(k\) will <em class="emphasis">not</em> give you a continuous function.</p>
 </div></div>
 </div></article></div></section></section></div></main>
 </div>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:23:11-06:00       *-->
+<!--*       on 2020-09-27T16:43:24-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(A\) denote “produced in plant \(A\)” and \(I\) denote “passes inspection”.  Note that we denote “produced in plant \(B\)” by \(P(A^c)\text{.}\)  We are then given \(P(A)=0.6, P(I|A)=0.85, P(I|A^c)=0.7\text{.}\)</p>
-<ol class="decimal">
-<li>We are finding \(P(A\cap I)=P(I|A)P(A)=(0.85)(0.6)=0.51\text{.}\)  That is, 85% of the 60% of vehicles produced in \(A\) pass inspection, which is 51% of the vehicles produced in \(A\) and pass inspection.</li>
-<li>We are finding \(P(A^c\cap I)=P(I|A^c)P(A^c)=(0.7)(0.4)=0.28\text{.}\)  That is, 70% of the 40% of vehicles produced in \(B\) pass inspection, which is 28% of the vehicles produced in \(B\) and pass inspection.</li>
-<li>Since all the vehicles are produced in \(A\) or \(B\text{,}\) if we take the 51% who pass inspection from \(A\) and the 28% who pass inspection from \(B\text{,}\) that is \(0.51+0.28=0.79\) or 79% of cars pass inspection in total. This let's us fill out the following: <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-81.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.16<span class="period">.</span></span><span class="space"> </span>\(A, I\) and their probabilities</figcaption></figure>
-</li>
-<li>We are finding \(P(A|I)=\frac{P(A\cap I)}{P(I)}=\frac{0.51}{0.79}\approx 0.6455696\) or 64.55696%</li>
-</ol>
+<p>Let \(W\) denote “withdraw cash” and \(B\) denote “Check Balance”.  We are then given \(P(W)=0.92, P(B)=0.32, P(W\cup B)=0.96\text{.}\)  Notice then that:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+P(W\cup B)\amp=P(W)+P(B)-P(W\cap B)\\
+0.96\amp=0.92+0.32-P(W\cap B)\\
+P(W\cap B)\amp=0.28
+\end{align*}
+</div>
+<p data-braille="continuation">Which let's us fill in the following diagram: <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-81.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.14<span class="period">.</span></span><span class="space"> </span>\(R, C\) and their probabilities</figcaption></figure> We are tasked with finding \(P(W|B)\text{.}\)  Note that \(P(W|B)=\frac{P(W\cap B)}{P(B)}=\frac{0.28}{0.32}=0.875\) or 87.5%.</p>
 <span class="incontext"><a href="Sec_Conditional.html#p-1109">in-context</a></span>
 </body>
 </html>

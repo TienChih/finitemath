@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:23:17-06:00       *-->
+<!--*       on 2020-09-27T16:43:31-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,16 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(R\) denote “digits don't repeat” and \(E\) denote “digits are all even.”:</p>
+<p>Consider:</p>
 <ol class="decimal">
-<li>Recall <a class="xref" data-knowl="./knowl/ExampleDigits.html" title="Example 9.3.2">Example 9.3.2</a>, we say \(P(R)=\frac{P(10,4)}{10^4}, P(E)=\frac{5^4}{10^4}, P(R\cap E)=\frac{P(5,4)}{10^4}\text{.}\)  Thus<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<li>If \(D\) is the event “at least one diamond”, then \(D^c\) means “no diamonds”.  \(P(D^c)=\frac{C(39,5)}{C(52,5)}=\frac{575757}{2598960}\approx 0.2215336\text{,}\) since there are 29 non diamonds to pick 5 from.  So \(P(D)=1-P(D^c)=1-\frac{C(39,5)}{C(52,5)}\approx 0.7784664.\)</li>
+<li>Let \(B\) denote “all black cards”, and \(N\) denote “all non-face cards”.  Note \(P(B)=\frac{C(26,5)}{C(52,5)}\text{,}\) \(P(N)=\frac{C(36,5)}{C(52,5)}\text{,}\) and \(P(B\cap N)=\frac{C(18,5)}{C(52,5)}\text{.}\)  Thus<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-P(R\cup E)= P(R)+P(E)-P(R\cap E)=\frac{P(10,4)+5^4-P(5,4)}{10^4}=\frac{5040+625-120}{10^4}=\frac{5545}{10000}=0.5545.
+P(B\cup N)=P(B)+P(N)-P(B\cap N)=\frac{C(26,5)+C(36,5)-C(18,5)}{C(52,5)}=\frac{65780+376992-8568}{2598960}\approx 0.167068.
 \end{equation*}
 </div>
 </li>
-<li>Note that \(P(R|E)=\frac{P(5,4)/10^4}{5^4/10^4}=\frac{P(5,4)}{5^4}=\frac{120}{625}=0.192\) .</li>
-<li>Since \(P(R|E)=0.192\neq0.504=P(R)\) so these are not independent.</li>
+<li>This is \(P(N|B)=\frac{P(N\cap B)}{P(B)}=\frac{C(18,5)/C(52,5)}{C(26,5)/C(52,5)}=\frac{C(18,5)}{C(26,5)}=\frac{8568}{65780}\approx 0.130252.\)</li>
 </ol>
 <span class="incontext"><a href="Sec_AppstoProb.html#p-1209">in-context</a></span>
 </body>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-16T19:23:02-06:00       *-->
+<!--*       on 2020-09-27T16:43:13-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We have:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\alpha'(x)\amp = \limit{h}{0}\frac{\alpha(x+h)-\alpha(x)}{h}\\
-\amp = \limit{h}{0} \frac{\frac{2}{x+h+1}-\frac{2}{x+1}}{h}\\
-\amp = \limit{h}{0} \frac{\frac{2(x+1)}{(x+h+1)(x)}-\frac{2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
-\amp = \limit{h}{0} \frac{\frac{2(x+1)}{(x+h+1)(x)}-\frac{2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
-\amp = \limit{h}{0} \frac{\frac{2(x+1)-2(x+h+1)}{(x+h+1)(x+1)}}{h}\\
-\amp = \limit{h}{0} \frac{\frac{2x+2-2x-2h-2}{(x+h+1)(x+1)}}{h}\\
-\amp = \limit{h}{0} \frac{\frac{-2h}{(x+h+1)(x+1)}}{h}\\
-\amp = \limit{h}{0} \frac{-2}{(x+h+1)(x+1)}\\
-\amp = \frac{-2}{(x+0+1)(x+1)}=-\frac{2}{(x+1)^2}\text{.}
-\end{align*}
-</div>
-<p data-braille="continuation">We can see this below: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/2umbzq73fn" id="interactive-144" width="600" height="600"></iframe></p>
+<p>So this means that in \(0\) seconds, the change in the height was \(f'(0)=-10(0)+20=20\) meters/second as we suspected! But now we can compute all the other instantaneous rates of change as well.</p>
+<ul class="disc">
+<li>So at \(x=1\) second, it'll be \(f'(1)=-10(1)+20=10\) meters per second.</li>
+<li>In 2 seconds we are at the top with \(f'(2)=0\) meters per second.</li>
+<li>At 3 seconds, \(f'(3)=-10\) meters/second to reflect the negative change in height at this point.</li>
+<li>Finally in 4 seconds, the rocket hits the ground at \(f'(4)=-20\) meters per second.</li>
+</ul>
+<p data-braille="continuation">One can explore this below in the Desmos graph.  Notice how \(y=f'(x), f=-10x+20\) produce the same line: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/wo9lscifnb" id="interactive-143" width="600" height="600"></iframe></p>
 <span class="incontext"><a href="Sec_DefofDerivative.html#p-951">in-context</a></span>
 </body>
 </html>
