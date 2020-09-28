@@ -2,7 +2,7 @@
   <title>Logic</title>
   <introduction>
     <p>
-      In this chapter, we discuss the Mathematics of logic, statements and making sound arguments.  Every Mathematical formula and fact that we depend on to deduce solutions to problems only holds because we are able to show logically bthat they must be true.  Outside of Mathematics, reason and logic are the tools we use to deduce correct conclusions from given information.  So the study of logic is a valuable asset to both theoritical and practical pursuits.
+      In this chapter, we discuss the Mathematics of logic, statements and making sound arguments.  Every Mathematical formula and fact that we depend on to deduce solutions to problems only holds because we are able to show logically that they must be true.  Outside of Mathematics, reason and logic are the tools we use to deduce correct conclusions from given information.  So the study of logic is a valuable asset to both theoritical and practical pursuits.
     </p>
   </introduction>
   <xi:include  href="Sec_Statements.ptx"/>

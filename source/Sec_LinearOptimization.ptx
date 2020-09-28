@@ -9,7 +9,7 @@
     Suppose we were trying to maximize the function <m> f(x,y)=x+y </m> subject to the following constraints:
     <md>
           <mrow>3x+2y\amp \leq 8</mrow>
-          <mrow>x-y\amp \leq 3</mrow>
+          <mrow>x-y\amp \leq 1</mrow>
           <mrow>x\amp \geq 0</mrow>
           <mrow>y\amp \geq 0</mrow>
     </md>
@@ -202,7 +202,7 @@
     <solution>
       <p>
         Let <m>x</m> be the number of days the Michigan factory is run and <m>y</m> the number of days the Wisconsin Factory is run.
-        The goal is minimizing the cost <m>C(x,y)=960000x+75000y</m>.
+        The goal is minimizing the cost <m>C(x,y)=960000x+750000y</m>.
         The inequalities we are subject to are:
         <md>
           <mrow>20x+10y\amp \geq 5000,\ \ \text{Cruisers needed}</mrow>
@@ -216,14 +216,14 @@
       </p>
       <p>
         So sketching the inequalities, we obtain the following feasible region with corners:
-        <interactive desmos="cjvil8macz"  />
+        <interactive desmos="u8kjxloabk"  />
         The profit at each corner is as follows:
         <me>
-          \begin{array}{c|c|c} x \amp  y \amp  C(x,y)\\ \hline 130 \amp  240 \amp  960000(130)+75000(240)=142800000\\ 150 \amp  200 \amp  960000(150)+75000(200)=159000000\\ 240 \amp  80 \amp  960000(240)+75000(80)=236400000\\ 240 \amp  240 \amp  960000(240)+75000(240)=248400000\end{array}
+          \begin{array}{c|c|c} x \amp  y \amp  C(x,y)\\ \hline 130 \amp  240 \amp  960000(130)+750000(240)=304800000\\ 150 \amp  200 \amp  960000(150)+750000(200)=294000000\\ 240 \amp  80 \amp  960000(240)+750000(80)=290400000 \\ 240 \amp  240 \amp  960000(240)+750000(240)=410400000\end{array}
         </me>
       </p>
       <p>
-        So the cost is minimized when you run the Michigan factory for 130 days and the Wisconsin Factory for 240 days.
+        So the cost is minimized when you run the Michigan factory for 240 days and the Wisconsin Factory for 80 days.
       </p>
     </solution>
   </exercise>
