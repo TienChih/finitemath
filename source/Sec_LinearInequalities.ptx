@@ -7,7 +7,7 @@
     </me>
     is the collection of all points <m>(x,y)</m> that make this statement true.
     For equations of the form above, that forms a line.
-    If however if we replace the <m>=</m> with an inequality like so:
+    However, if we replace the <m>=</m> with an inequality like so:
     <me>
       2x+3y\leq12
     </me>
