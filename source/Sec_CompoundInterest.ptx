@@ -14,7 +14,7 @@
       That means each month,
       you would owe 5% more than what you owed the month before.
       <me>
-        \begin{array}{|c|c|} \hline \text{ Month }  \amp  \text{ Debt } \\ \hline 0 \amp  100\\ 1\amp  100+(.05)(100)=100+5=105\\ 2\amp  105+(.05)(105)=105+5.25=110.25\\ 3 \amp  110.25+(.05)(110.25)=110.25+5.5125=115.405\\ \vdots \amp  \vdots\\ \hline \end{array}
+        \begin{array}{|c|c|} \hline \text{ Month }  \amp  \text{ Debt } \\ \hline 0 \amp  100\\ 1\amp  100+(.05)(100)=100+5=105\\ 2\amp  105+(.05)(105)=105+5.25=110.25\\ 3 \amp  110.25+(.05)(110.25)=110.25+5.5125=115.7625\\ \vdots \amp  \vdots\\ \hline \end{array}
       </me>
     </p>
     <p>
