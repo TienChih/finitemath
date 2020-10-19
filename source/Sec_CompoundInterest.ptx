@@ -3,7 +3,7 @@
   <introduction>
     <p>
       Almost no meaningful financial transaction in the world is computed by simple interest.
-      The most common type of interest is compound interest which charges interest not just on your principle loan,
+      The most common type of interest is compound interest which charges interest not just on your principal loan,
       but also on previously accrued interest as well.
     </p>
   </introduction>
@@ -53,7 +53,7 @@
         <mrow>A\amp =P(1+i)^n,</mrow>
         <mrow>I\amp =P(1+i)^n-P.</mrow>
       </md>
-      Where <m>A</m> is the accumulated value, <m>P</m> is the value of the principle, <m>i</m> is the interest rate, <m>n</m> is the number of time units, and <m>I</m> is the total value of the interest.</p>
+      Where <m>A</m> is the accumulated value, <m>P</m> is the value of the principal, <m>i</m> is the interest rate, <m>n</m> is the number of time units, and <m>I</m> is the total value of the interest.</p>
 
       <p> But looking at <m> A =P(1+i)^n</m>, if one  knew any 3 of these values,
       in principle one should be able to find the 4th.

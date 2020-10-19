@@ -2,12 +2,12 @@
   <title>Simple Interest</title>
   <introduction>
     <p>
-      In this section, we discuss <em>simple interest</em>, a way of computing interest based solely on the principle.
+      In this section, we discuss <em>simple interest</em>, a way of computing interest based solely on the principal.
     </p>
   </introduction>  
   <p>
     <definition>
-      Given a initial investment or loan of <m>\$P</m>, often called a <em>principle</em> or <em>present value</em> of an investment/loan, then the <term>simple interest</term> of that principle at a rate of <m>r</m> per time unit, over <m>n</m> time units will be <me>I=Prn.</me>
+      Given a initial investment or loan of <m>\$P</m>, often called a <em>principal</em> or <em>present value</em> of an investment/loan, then the <term>simple interest</term> of that principal at a rate of <m>r</m> per time unit, over <m>n</m> time units will be <me>I=Prn.</me>
     </definition>  
   </p>  
 
@@ -22,7 +22,7 @@
       </p>
   </statement>
     </example> 
-    <p> Assuming no payments or additional principles are taken out, this interest is accumalated in addition to the original principle.  If we let <m>A</m> denote the accumalated future value: <me> A=P+It</me> at time <m>t</m>.</p>
+    <p> Assuming no payments or additional principals are taken out, this interest is accumalated in addition to the original principal.  If we let <m>A</m> denote the accumalated future value: <me> A=P+It</me> at time <m>t</m>.</p>
   <p>
     Let's say you take out a loan at $100 dollars and are charged 5% monthly simple interest.
     What this means is that every month, 5% of your initial debt is added on as interest.
