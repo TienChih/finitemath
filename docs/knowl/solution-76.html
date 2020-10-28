@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:12-06:00       *-->
+<!--*       on 2020-10-28T15:04:55-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,33 +16,32 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.6.1.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.5.12.1</span><span class="period">.</span>
 </h6>
-<p>Consider the following:</p>
-<ol class="decimal">
-<li>Starting with:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-e^{x+2}\amp = 100\\
-\ln(e^{x+2})\amp = \ln(100)\\
-x+2\amp = \ln(100)\\
-x\amp = \ln(100)-2\approx  2.60517
-\end{align*}
+<p>Let's define the following:</p>
+<ul class="disc">
+<li>\(s=\)"It snows."</li>
+<li>\(p=\)"The city sends out snow plows."</li>
+<li>\(t=\)"Traffic got bad."</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li>\(\displaystyle s\to p\)</li>
+<li>\(\displaystyle p\to t\)</li>
+<li>\(\displaystyle t\)</li>
+</ul>
+<p data-braille="continuation">So one hypothetically start with Reasoning by Transitivity:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{array}{lcl} 
+s\to p\amp \ \ \ \amp \\ 
+p\to t
+\\ \hline 
+s\to t\amp  \amp \text{ Reasnoning by Transitivity }  \end{array}
+\end{equation*}
 </div>
-</li>
-<li>Recall that \(\log\) is \(\log_{10}\text{.}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\log(x)+\log(x+3)\amp = 1\\
-\log(x(x+3))\amp = 1\\
-10^{\log(x(x+3))}\amp = 10^1\\
-x(x+3)\amp = 10\\
-x^2+3x-10\amp = 0\\
-(x+5)(x-2)\amp = 0\\
-x\amp = -5, 2
-\end{align*}
+<p data-braille="continuation">Next we are given \(t\text{.}\)  But we cannot from \(t\) conclude \(s\text{.}\)  This would be the Fallacy of the Converse.  There's all sorts of reasons traffic might be bad, it may have nothing to do with snows or snow plows.</p>
 </div>
-</li>
-</ol>
-</div>
-<span class="incontext"><a href="Sec_Logarithms.html#solution-76">in-context</a></span>
+<span class="incontext"><a href="Sec_Arguments.html#solution-76">in-context</a></span>
 </body>
 </html>

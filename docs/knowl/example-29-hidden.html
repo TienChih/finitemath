@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-24T15:00:30-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example example-like"><p xmlns:svg="http://www.w3.org/2000/svg">Is “\(\sim(p \vee q)=\sim p \vee \sim q\text{?}\)”</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Before we jump into the formal stuff, it helps to concretize this with actual statements. Let's say \(p\) is "I'll eat breakfast" and \(q\) is "I'll eat lunch". Then \(p \vee q\) is "I'll eat breakfast or I'll eat lunch". Is NOT doing this the same as \(\sim p \vee \sim q\) which is "I'll not eat breakfast or I'll not eat lunch?"</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">The first statement is basically "I'm not eating breakfast or lunch", the second is "I'll not eat breakfast or I'll not eat lunch", they sound similar spoken aloud but there is a subtle difference.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let's say you skip breakfast and eat lunch. Since you ate lunch, \(p\vee q\) is true, so \(\sim(p\vee q)\) must be false, you didn't not eat breakfast or eat lunch. What about \(\sim p \vee \sim q\text{?}\) Well you skipped breakfast so \(\sim p\) is true and therefore \(\sim p \vee \sim q\) is true, so it would seem like they are not the same.</p>
+<p>Formally, we can look at these truth tables:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c} p\amp q\amp p\vee q\amp  \sim (p\vee q)\\ \hline T \amp  T\amp T\amp F\\ T\amp F\amp T\amp F\\ F\amp T\amp T\amp F\\ F\amp F\amp F\amp T \end{array}
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{array}{c|c|c|c|c} p\amp q\amp \sim p\amp  \sim q \amp  \sim p \vee \sim q\\ \hline T \amp  T\amp F\amp F\amp F\\ T\amp F\amp F\amp T\amp T\\ F\amp T\amp T\amp F\amp T\\ F\amp F\amp T\amp T\amp T \end{array}
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">So \(\sim(p\vee q)\) i.e. "I'm not eating breakfast or lunch" is only true if you skip both meals. If you eat either then you lied. On the other hand, \(\sim p \vee \sim q\) i.e. "I'll skip breakfast or I'll skip lunch" is true so long as you skip either meal. It's only false if you go ahead and eat both.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">So what does \(\sim(p \vee q)\) equal?</p></article></body>
+</html>

@@ -370,6 +370,8 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
           which had twice as many 787-9s as 767s, was $8,100 million.
           How many of each type of aircraft did the company purchase?
         </p>
+       </statement>
+       <solution> 
         <p>
           It helps perhaps if we organize some of this information in a table.
           <me>
@@ -477,7 +479,7 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
             <mrow>-2(8)+16\amp = 0</mrow>
           </md>.
         </p>
-      </statement>
+      </solution>
     </example>
     <example xml:id="Example_Vitamin">
       <statement>
@@ -486,6 +488,8 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
           She has three supplements:
           the first contains 20% vitamin A, 20% vitamin D and 20% vitamin E; the second contains 10% vitamin A, 30% vitamin D and 40% vitamin E; the third contains 50% vitamin A, 10% vitamin D and 20% vitamin E. How much of each supplement should she eat each week?
         </p>
+      </statement>
+      <solution>
         <p>
           Let <m>x,y,z</m> denote the quantities of supplements 1,2 and 3 she takes each week.
           She needs 200mg of vitamin A, which gives us:
@@ -524,7 +528,7 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
           <m>x=200, y=100,
           z=300</m> or 200 mg of supplement 1, 100mg of supplement 2 and 300mg of supplement 3.
         </p>
-      </statement>
+      </solution>
     </example>
     <example>
       <statement>
@@ -553,9 +557,16 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
         <p>
           Let <m>a,b,c</m> denote the number of people walking along Anderson, Birmingham and Central.
           <ol>
-            <li>
-              <p>
-                Find an expression for the amount of people walking along each street.
+            <li>Find an expression for the amount of people walking along each street.</li>
+            <li>If 50 people crossed central,
+                how many people crossed Anderson and Birmingham?</li>
+            <li> If 100 people go through Anderson,
+                how many go through Birmingham or Central?</li>    
+          </ol>  
+        </p> 
+      </statement>
+        <solution>
+          <p>
                 We first set up our systems of equations.
                 We first note that all 300 people have to walk either along either Anderson or Birmingham, so
                 <me>
@@ -594,8 +605,8 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
                 So, depending on what <m>c</m> is,
                 this will determine how many people traverse Anderson and Birmingham.
               </p>
-            </li>
-            <li>
+            </solution>
+            <solution>
               <p>
                 If 50 people crossed central,
                 how many people crossed Anderson and Birmingham?
@@ -619,8 +630,8 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
                 </me>.
                 That is <m>a=125, b=125, c=50</m> which is our solution above.
               </p>
-            </li>
-            <li>
+           </solution>
+           <solution>
               <p>
                 If 100 people go through Anderson,
                 how many go through Birmingham or Central?
@@ -644,10 +655,138 @@ A=matrix(QQ, [[1,2,1,3],[-1,1,0,0],[0,3,1,0]])
                 </me>.
                 So 100 across Anderson, 200 across Birmingham and 25 across Central.
               </p>
-            </li>
-          </ol>
+            </solution>
+      
+    </example>
+
+
+    <exercise>
+      <statement>
+        <p>
+          An Ice Cream Manufacturer makes three flavors, Avacado, Blueberry and Chocolate.  A batch of Avacdo requires 2 eggs, 1 cup of milk and 2 cups of cream.  A batch of blueberry Blueberry requires 1 egg, 1 cup of milk and 2 cups of cream.  A batch of Chocolate requires 1 egg, 2 cups of milk and 1 cup of cream.  The manufacturer has 350 eggs, 350 cups of milk, and 400 cups of cream.  How many batches of each flavor should be made to use up all of the ingredients?
         </p>
       </statement>
-    </example>
+      <solution>
+        <p>
+          Let us suppose that <m>a</m> represents the number of Avacado batches, <m>b</m> blueberry and <m>c</m> chocolate (wildly creative of us).
+        </p>
+        <p>
+          Then the amount of eggs used is: 2 per avacado batch, 1 per blueberry and 1 per chocolate.  If we use 350 eggs, this gives us: <me>2a+b+c=350.</me>
+        </p>
+        <p>
+          The amount of milk used is: 1 cup per avacado batch, 1 per blueberry and 2 per chocolate.  If we use 350 cups of milk, this gives us: <me>a+b+2c=350.</me>
+        </p>  
+        <p>
+          The amount of cream used is: 2 cups per avacado batch, 2 per blueberry and 1 per chocolate.  If we use 400 cups of cream, this gives us: <me>2a+2b+c=350.</me>
+        </p>  
+
+        <p>
+          Putting all this together gives us:
+          <md>
+          <mrow>2a+b+c \amp=350</mrow>
+          <mrow>a+b+2c \amp=350</mrow>
+          <mrow>2a+2b+c \amp=400</mrow>
+        </md>
+        Which has matrix form:
+        <me>
+                  \left( \begin{array}{rrr|r} 
+                  2 \amp  1 \amp  1 \amp  350\\ 
+                  1 \amp  1 \amp  2 \amp  350\\ 
+                  2 \amp  2 \amp  1 \amp  400 \end{array} \right)
+                </me>
+
+         Which in turn has reduced row echelon form:
+         Which has matrix form:
+        <me>
+                  \left( \begin{array}{rrr|r} 
+                  1 \amp  0 \amp  0 \amp  100\\ 
+                  0 \amp  1 \amp  0 \amp  50\\ 
+                  0 \amp  0 \amp  1 \amp  100 \end{array} \right)
+                </me>       
+         </p>
+         <p>
+          So 100 batches of Avacado, 50 batches of Blueberry and 100 batches of Chocolate does the trick!
+         </p> 
+         </solution> 
+    </exercise>      
+
+    <exercise>
+      <statement>
+        <p>
+          An investor purchases stocks in three different companies.  Overpriced Textbooks Inc., Sandwich Solutions and Union Holdings Inc..  Their prices and dividend yields are as follows:
+
+          <me>
+            \begin{array}{|c|c|c|}
+            \hline
+            \text{Company} \amp \text{Price} \amp \text{Dividend Yield}\\
+            \hline
+            \text{Overpriced Textbooks Inc.} \amp \$56 \amp 2\%\\
+            \text{Sandwich Solutions} \amp \$16 \amp 7\%\\
+            \text{Union Holdings Inc.} \amp \$80 \amp 2\%\\
+            \hline
+            \end{array}
+          </me>
+          </p>
+          <p>
+            She invested a total of $8,400 in shares of the three
+stocks at the given prices and expected to earn $248 in
+annual dividends. If she purchased a total of 200 shares,
+how many shares of each stock did she purchase?
+
+
+          </p>  
+          </statement>  
+
+          <solution>
+            <p>
+            Let  <m>o, s, u</m> represent the number of shares in Overpriced Textbooks Inc., Sandwich Solutions and Union Holdings Inc. respectively.
+          </p>
+
+            <p>
+              Notice that she pays $56 per share of Overpriced Textbooks Inc., $16 per share of Sandwich Solutions and $80 per share of Union Holdings Inc..  So if this totals $8400, then: <me>56o+16s+80u=8400.</me>
+            </p>  
+
+            <p>
+              Then note: each share of Overpriced Textbooks Inc. pays <m>56\cdot 0.02=1.12</m> in dividends, a share of Sandwich Solutions pays <m>16\cdot 0.07=1.12</m> in dividends and each share of Union Holdings Inc. pays <m>80\cdot 0.02=1.60</m> in dividends.  So if this totals $248, then: <me>1.12o+1.12s+1.6u=248.</me>
+            </p> 
+            <p>
+              Finally,she bought 200 shares, so <me>o+s+u=200.</me>
+            </p>  
+
+            <p>
+          Putting all this together gives us:
+          <md>
+          <mrow>56o+16s+80u\amp=8400</mrow>
+          <mrow>1.12o+1.12s+1.6u\amp=248</mrow>
+          <mrow>o+s+u\amp=200</mrow>
+        </md>
+        Which has matrix form:
+        <me>
+                  \left( \begin{array}{rrr|r} 
+                  56 \amp  16 \amp  80 \amp  8400\\ 
+                  1.12 \amp  1.12 \amp  1.6 \amp  248\\ 
+                  1 \amp  1 \amp  1 \amp  200 \end{array} \right)
+                </me>
+
+         Which in turn has reduced row echelon form:
+         Which has matrix form:
+        <me>
+                  \left( \begin{array}{rrr|r} 
+                  1 \amp  0 \amp  0 \amp  50\\ 
+                  0 \amp  1 \amp  0 \amp  100\\ 
+                  0 \amp  0 \amp  1 \amp  50 \end{array} \right)
+                </me> 
+                So 50 shares of Overpriced Textbooks Inc., 100 shares of Sandwich Solutions and 50 shares of Union Holdings Inc.     
+         </p>
+          </solution>  
+
+
+
+
+    </exercise>  
+
+
+
+
   </subsection>
 </section>

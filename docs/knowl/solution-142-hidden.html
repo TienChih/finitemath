@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:31-06:00       *-->
+<!--*       on 2020-10-28T15:05:18-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,13 +14,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>We note that there are 11 non-poisened apples.</p>
+<p>We note that:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]\\
+\amp = t\frac{d}{dt}[e^{-0.25t}]+\frac{d}{dt}[t]e^{-0.25t}\\
+\amp = te^{-0.25t}\frac{d}{dt}[-0.25t]+1\cdot e^{-0.25t}\\
+\amp = te^{-0.25t}\cdot(-0.25t)+e^{-0.25t}\\
+\amp = (1-0.25t)e^{-0.25t}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">So with that:</p>
 <ol class="decimal">
-<li>Ths is picking 4 of 15 objects so \(C(15,4)=1365\text{.}\)</li>
-<li>Ths is picking 4 of 11 objects so \(C(11,4)=330\text{.}\)</li>
-<li>Ths is picking 4 of 5 objects so \(C(5,4)=5\text{.}\)</li>
-<li>Ths is picking 2 of 5 objects to be posiened, 2 of 11 objects for not poisened, and combining these selections, so  \(C(5,2)\cdot C(11,2)=10\cdot55 =550.\text{.}\)</li>
-<li>This is either no apples poisened, which has 330 possibilies as seen above, or 1 apple poisened, counted \(C(5,1)\cdot C(11,3)=5\cdot 165=825\text{.}\)  Thus we have \(330+825=1155\) ways to have no or one poisened apple.</li>
+<li>Notce \(D'(2)=(1-0.25(2))e^{-0.25(2)}\approx 0.303 \) or increasing by 0.303 mL/minute.</li>
+<li>We note that the quantity decreases when \(D'(t)=(1-0.25t)e^{-0.25t}\lt 0\) so:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(1-0.25t)e^{-0.25t}\amp \lt 0\\
+(1-0.25t)\amp \lt 0\\
+1\amp \lt 0.25t\\
+t\amp &gt; 4\text{.}
+\end{align*}
+</div>So after 4 minutes</li>
 </ol>
+<p data-braille="continuation">We can see this: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/uow1nliujd" id="interactive-180" width="600" height="600"></iframe></p>
 </div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:34-06:00       *-->
+<!--*       on 2020-10-28T15:05:29-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Well, since the probability of getting an A on any exam is a 30%, and the Exam scores are independent of each other, she has a (.3)(.3) chance of getting A's on the first two.  Then she doesn't get an A on the second two, which has a 0.7 chance each of happening, so the chance of this event ocurring is:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-(0.3)(0.3)(0.7)(0.7)=(0.3)^2(0.7)^2=0.0441.
-\end{equation*}
-</div>
-<span class="incontext"><a href="Sec_Binomial.html#p-1258">in-context</a></span>
+<p>We note that there are 11 non-poisened apples.</p>
+<ol class="decimal">
+<li>Ths is picking 4 of 15 objects so \(C(15,4)=1365\text{.}\)</li>
+<li>Ths is picking 4 of 11 objects so \(C(11,4)=330\text{.}\)</li>
+<li>Ths is picking 4 of 5 objects so \(C(5,4)=5\text{.}\)</li>
+<li>Ths is picking 2 of 5 objects to be posiened, 2 of 11 objects for not poisened, and combining these selections, so  \(C(5,2)\cdot C(11,2)=10\cdot55 =550.\text{.}\)</li>
+<li>This is either no apples poisened, which has 330 possibilies as seen above, or 1 apple poisened, counted \(C(5,1)\cdot C(11,3)=5\cdot 165=825\text{.}\)  Thus we have \(330+825=1155\) ways to have no or one poisened apple.</li>
+</ol>
+<span class="incontext"><a href="Sec_Combinations.html#p-1258">in-context</a></span>
 </body>
 </html>

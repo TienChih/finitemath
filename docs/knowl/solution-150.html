@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:32-06:00       *-->
+<!--*       on 2020-10-28T15:05:22-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,26 +16,22 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.3.7.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.2.17.1</span><span class="period">.</span>
 </h6>
-<p>Let \(W\) denote “both marbles are white”, \(J_1\) denote “Jar one was chosen”.  Note that \(P(J_1)=0.5\text{.}\)</p>
+<p>If we let \(R\) denote “It rains” and \(B\) denote “I am in a bad mood” then we are given \(P(R)=0.2, P(B)=0.1, P(R\cap B)=0.08\) and may fill out the following venn diagram: <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-68.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.18<span class="period">.</span></span><span class="space"> </span>Each event \(R, B\) and their respective probabilities.</figcaption></figure></p>
 <ol class="decimal">
-<li>So by Bayes Theorem:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-P(W)\amp =P(W|J_1)P(J_1)+P(W|J_1^c)(1-P(J_1))\\
-P(W)\amp =\frac{C(5,2)}{C(11,2)}(0.5)+\frac{C(8,2)}{C(15,2)}(0.5)\\
-P(W)\amp =\frac{10}{55}(0.5)+\frac{28}{105}(0.5)\\
-P(W)\amp =\frac{36}{165}\approx 0.224242
-\end{align*}
-</div>
+<li>This is \(P(R\cup B)\text{,}\) which we could compute \(P(R\cup B)=0.12+0.2+0.8=0.22\) or \(P(R\cup B)=P(R)+P(B)-P(R\cap B)=0.2+0.1-0.08=0.22\text{.}\) <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-69.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.19<span class="period">.</span></span><span class="space"> </span>\(R\cup B\)</figcaption></figure>
 </li>
-<li>Note, we assume \(W\text{,}\) so this is \(P(J_2|W)\text{.}\) This is then computed:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-P(J_2^c|W)=\frac{P(J_2\cap W)}{P(W)}=\frac{P(W|J_1^c)(1-P(J_1))}{P(W)}=\frac{\frac{28}{105}(0.5)}{\frac{36}{165}}=\frac{11}{18}\approx 0.6111111.
-\end{equation*}
-</div>After all, white marbles are more likely in Jar 2, so an all white selection is more likely to come from Jar 2.</li>
+<li>This is \(P(R\cap B^c)\text{,}\) which we can see is \(P(R\cap B^c)=0.12\text{.}\) <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-70.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.20<span class="period">.</span></span><span class="space"> </span>\(R\cap B^c\)</figcaption></figure>
+</li>
+<li>This is \(P(R^c\cup B)\text{,}\) which we can see is \(P(R^c\cup B)=0.78+0.02+0.08=0.88\text{.}\) <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-71.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.21<span class="period">.</span></span><span class="space"> </span>\(R^c\cup B\)</figcaption></figure>
+</li>
 </ol>
 </div>
-<span class="incontext"><a href="Sec_AppstoProb.html#solution-150">in-context</a></span>
+<span class="incontext"><a href="Sec_CardProb.html#solution-150">in-context</a></span>
 </body>
 </html>

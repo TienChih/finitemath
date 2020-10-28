@@ -253,6 +253,10 @@
       <statement>
         <p>
           Draw the line <m>y=f(x)</m> where <m>f(x)=-\frac{2}{3}x+4</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
           <ol>
             <li>
               <p>
@@ -287,12 +291,16 @@
         <p>
           Modern technology also let's us readily draw these functions: <figure><interactive desmos="gyvulordwz"  /><caption>Graph of  <m> -\frac{2}{3}x+4</m></caption></figure> 
         </p>
-      </statement>
+      </solution>
     </example>
     <example xml:id="Example_DrawLineOtherForm">
       <statement>
         <p>
           Draw the line <m>2x+4y=8</m>.
+        </p>
+        </statement>
+        <solution>
+        <p>  
           <ol>
             <li>
               <p>
@@ -334,7 +342,48 @@
           and from here,
           treated it the same way as in <xref ref="Example_DrawLine">Example</xref>.
         </p>
-      </statement>
+      </solution>
     </example>
+
+
+    <exercise>
+      <statement>
+        <p>
+          Plot the line <m>3x-4y=12</m>
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          
+              We can find two points that lie upon this line.  The easiest choices to find are likely the one where <m>x=0</m> or <m>y=0</m>.  When <m>x=0</m> we have <m>3(0)-4y=12</m> and <m>y=-3</m>.  Similarly when <m>y=0</m>, we have <m>3x-4(0)=12</m> and <m>x=4</m>.  So the points <m>(0,-3)</m> and <m>(4,0)</m> lie on this line.  So as before we may connect these dots:
+              <interactive desmos="ulnfqrb80d"  />
+            
+        </p>  
+
+        <p>
+          Note that as before,we can rewrite <m>3x-4y=12</m> as:
+          <md>
+            <mrow>3x-4y\amp = 12</mrow>
+            <mrow>-4y\amp = -3x+12</mrow>
+            <mrow>y\amp = -\frac{3}{4}x-3</mrow>
+          </md>
+          So our line has <m>y-</m>intercept <m>-3</m> and slope <m>\frac{3}{4}</m>:
+          <interactive desmos="exorvhk6so"  />
+        </p>  
+      </solution>  
+    </exercise>      
+
+
+
+
+
+
+
+
+
+
+
+
   </subsection>
 </section>

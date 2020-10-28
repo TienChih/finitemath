@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:23-06:00       *-->
+<!--*       on 2020-10-28T15:05:16-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let</p>
+<p>We <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">do</em> have a rule for the derivative of products. The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">product rule</dfn> and it states \(\frac{d}{dx}[f(x)g(x)]=f'(x)g(x)+f(x)g'(x)\text{.}\) To see why:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mathcal{U}=\{Ailca, Bryan, Corrine, Damien, Esmeralda, Francis\}.
-\end{equation*}
+\begin{align*}
+\frac{d}{dx}[f(x)g(x)]\amp = \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h},\ \text{ at this stage, I'm going to pull a clever trick and add by 0: }\\
+\amp = \limit{h}{0}\frac{f(x+h)g(x+h)\color{blue}{-f(x)g(x+h)+f(x)g(x+h)}-f(x)g(x)}{h}\\
+\amp = \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x+h)}{h}+\limit{h}{0}\frac{f(x)g(x+h)-f(x)g(x)}{h}\\
+\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}g(x+h)+\limit{h}{0}f(x)\frac{g(x+h)-g(x)}{h}\\
+\amp = f'(x)g(x)+f(x)g'(x)\text{.}
+\end{align*}
 </div>
-<p data-braille="continuation">Let \(A=\{Bryan, Esmeralda\}, B=\{Bryan, Francis\}\text{.}\)</p>
-<ul class="disc">
-<li>\(A^c=\{Alicia, Corrine, Damien, Franics\}\text{,}\) all the elements of \(\mathcal{U}\) that aren't in \(A\text{.}\)</li>
-<li>\(B^c=\{Ailca,Corrine, Damien, Esmeralda\}\text{,}\) all the elements of \(\mathcal{U}\) that aren't in \(B\text{.}\)</li>
-<li>\(\emptyset^c=\mathcal{U}=\{Ailca, Bryan, Corrine, Damien, Esmeralda, Francis\}\) since each element of \(\mathcal{U}\) is not contained in the emptyset.</li>
-</ul>
-<span class="incontext"><a href="Sec_IntroSets.html#p-1049">in-context</a></span>
+<span class="incontext"><a href="Sec_AdvancedDerivative.html#p-1049">in-context</a></span>
 </body>
 </html>

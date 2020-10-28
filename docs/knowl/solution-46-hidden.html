@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:04-06:00       *-->
+<!--*       on 2020-10-28T15:04:45-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,24 +14,51 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>So we note that:</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let  \(o, s, u\) represent the number of shares in Overpriced Textbooks Inc., Sandwich Solutions and Union Holdings Inc. respectively.</p>
+<p>Notice that she pays $56 per share of Overpriced Textbooks Inc., $16 per share of Sandwich Solutions and $80 per share of Union Holdings Inc..  So if this totals $8400, then:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+56o+16s+80u=8400.
+\end{equation*}
+</div>
+<p>Then note: each share of Overpriced Textbooks Inc. pays \(56\cdot 0.02=1.12\) in dividends, a share of Sandwich Solutions pays \(16\cdot 0.07=1.12\) in dividends and each share of Union Holdings Inc. pays \(80\cdot 0.02=1.60\) in dividends.  So if this totals $248, then:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+1.12o+1.12s+1.6u=248.
+\end{equation*}
+</div>
+<p>Finally,she bought 200 shares, so</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+o+s+u=200.
+\end{equation*}
+</div>
+<p>Putting all this together gives us:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-A\amp = 100000\\
-P\amp = 50000\\
-i\amp = 0.07
+56o+16s+80u\amp=8400\\
+1.12o+1.12s+1.6u\amp=248\\
+o+s+u\amp=200
 \end{align*}
 </div>
-<p>If one is familiar with the properties of logs and natural logs:</p>
+<p data-braille="continuation">Which has matrix form:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-100000\amp =50000(1.07)^{n}\\
-2\amp =(1.07)^{n}\\
-\ln(2)\amp= \ln(1.07^n)\\
-\ln(2)\amp= n\ln(1.07)\\
-n\amp=\frac{\ln(2)}{\ln(1.07)} \approx 10.24477
-\end{align*}
+\begin{equation*}
+\left( \begin{array}{rrr|r} 
+56 \amp  16 \amp  80 \amp  8400\\ 
+1.12 \amp  1.12 \amp  1.6 \amp  248\\ 
+1 \amp  1 \amp  1 \amp  200 \end{array} \right)
+\end{equation*}
 </div>
-<p data-braille="continuation">So about \(10.24477\) years.</p> Otherwise, since we know \(P, i\)  we can simply plot the graph and see when it reaches 50000: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/lsapccwwfe" id="interactive-65" width="600" height="600"></iframe> So about 10.245 years. <p xmlns:svg="http://www.w3.org/2000/svg"><iframe src="https://www.desmos.com/calculator/sve97pxkpq" id="interactive-66" width="600" height="600"></iframe></p>
+<p data-braille="continuation">Which in turn has reduced row echelon form: Which has matrix form:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 
+1 \amp  0 \amp  0 \amp  50\\ 
+0 \amp  1 \amp  0 \amp  100\\ 
+0 \amp  0 \amp  1 \amp  50 \end{array} \right)
+\end{equation*}
+</div>
+<p data-braille="continuation">So 50 shares of Overpriced Textbooks Inc., 100 shares of Sandwich Solutions and 50 shares of Union Holdings Inc.</p>
 </div></body>
 </html>

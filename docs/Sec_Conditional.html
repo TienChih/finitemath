@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-19T13:01:15-06:00       *-->
+<!--*       on 2020-10-28T15:04:17-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -220,111 +220,111 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_Conditional"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.3</span> <span class="title">Condtional Probability</span>
 </h2>
-<section class="introduction" id="introduction-40"><p id="p-1092">In this section, we consider how we might compute probabilities if you knew other events took place.  This occurs often in our day to day thinking without us being aware of it. It may be that the chance you have the flu on any random day is fairly low.  But if you woke up one morning, with a high fever and a cough, then certainly you'd think the chances were higher!  It may be difficult to predict the weather in general, but by observing signs like cloud cover, wind and changes in temperature, one could adjust your own assesment of the likelihood of rain.  In other words, the probablity of an event occuring may change depending on what other events do or don't take place.</p></section><section class="subsection" id="subsection-89"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-40"><p id="p-1152">In this section, we consider how we might compute probabilities if you knew other events took place.  This occurs often in our day to day thinking without us being aware of it. It may be that the chance you have the flu on any random day is fairly low.  But if you woke up one morning, with a high fever and a cough, then certainly you'd think the chances were higher!  It may be difficult to predict the weather in general, but by observing signs like cloud cover, wind and changes in temperature, one could adjust your own assesment of the likelihood of rain.  In other words, the probablity of an event occuring may change depending on what other events do or don't take place.</p></section><section class="subsection" id="subsection-89"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.3.1</span> <span class="title">Defining Conditional Probability</span>
 </h3>
-<p id="p-1093">Suppose you rolled a six-sded die.  Let \(A\) denoted “the outcome is even” and \(B\) denote “the outcome is at least 4”.  Let's say someone rolls the dice, looks at the result, and informs you that \(B\) is true.  What now is the probability that \(A\) is true?</p>
-<p id="p-1094">In general, \(P(A)=\frac{3}{6}\text{,}\) however, if we know \(B\) is true, there are no longer 6 valid outcomes.  We are restricted to \(B=\{4,5,6\}\) as our new sample space.  So we note that out of these, \(\{4,6\}\) are are even.  So the probability <em class="emphasis">now</em> that \(A\) occurs is \(\frac{2}{3}\text{.}\)</p>
-<p id="p-1095">We note that this \(\frac{2}{3}=\frac{|A\cap B|}{|B|}\text{.}\) That is, our of \(B\text{,}\) how much of \(B\) is \(A\text{?}\) <figure class="figure figure-like" id="figure-30"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-75.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<p id="p-1153">Suppose you rolled a six-sded die.  Let \(A\) denoted “the outcome is even” and \(B\) denote “the outcome is at least 4”.  Let's say someone rolls the dice, looks at the result, and informs you that \(B\) is true.  What now is the probability that \(A\) is true?</p>
+<p id="p-1154">In general, \(P(A)=\frac{3}{6}\text{,}\) however, if we know \(B\) is true, there are no longer 6 valid outcomes.  We are restricted to \(B=\{4,5,6\}\) as our new sample space.  So we note that out of these, \(\{4,6\}\) are are even.  So the probability <em class="emphasis">now</em> that \(A\) occurs is \(\frac{2}{3}\text{.}\)</p>
+<p id="p-1155">We note that this \(\frac{2}{3}=\frac{|A\cap B|}{|B|}\text{.}\) That is, our of \(B\text{,}\) how much of \(B\) is \(A\text{?}\) <figure class="figure figure-like" id="figure-30"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-75.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.1<span class="period">.</span></span><span class="space"> </span>\(B\text{,}\) the new sample space.</figcaption></figure> <figure class="figure figure-like" id="figure-31"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-76.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.2<span class="period">.</span></span><span class="space"> </span>\(A\) when restricted to \(B\text{.}\)</figcaption></figure></p>
 <article class="definition definition-like" id="DefinitionConditional"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-1096">We say the probability of \(A\) <dfn class="terminology">given</dfn> \(B\) is the probability \(A\)occurs assuming that \(B\) occurs.  This is denoted \(P(A|B)\) and is computed</p>
+<p id="p-1156">We say the probability of \(A\) <dfn class="terminology">given</dfn> \(B\) is the probability \(A\)occurs assuming that \(B\) occurs.  This is denoted \(P(A|B)\) and is computed</p>
 <div class="displaymath">
 \begin{equation*}
 P(A|B)=\frac{|A\cap B|}{|B|}=\frac{|A\cap B|/|S|}{|B|/|S|}=\frac{P(A\cap B)}{P(B)}.
 \end{equation*}
-</div></article><p id="p-1097">We can see this here with the following Desmos graph.  Initially, \(P(A)=0.6, P(B)=0.4, P(A\cap B)=0.3, P(A\cup B)=0.7\text{.}\)  We see that while \(P(A)\) takes up 60% of the \([0,1]\) interval, it takes up 75% of the \(P(B)\) interval, so \(P(A|B)=\frac{0.3}{0.4}=0.75.\)  Similarly \(P(B)\) takes up 40% of the \([0,1]\) interval, it takes up 50% of the \(P(A)\) interval, so \(P(B|A)=\frac{0.3}{0.6}=0.5.\)  Adjust the probablities, and slide the regions to change the overlap to see how that effects the values! <iframe src="https://www.desmos.com/calculator/vq8blapfw7" id="interactive-172" width="600" height="600"></iframe></p>
+</div></article><p id="p-1157">We can see this here with the following Desmos graph.  Initially, \(P(A)=0.6, P(B)=0.4, P(A\cap B)=0.3, P(A\cup B)=0.7\text{.}\)  We see that while \(P(A)\) takes up 60% of the \([0,1]\) interval, it takes up 75% of the \(P(B)\) interval, so \(P(A|B)=\frac{0.3}{0.4}=0.75.\)  Similarly \(P(B)\) takes up 40% of the \([0,1]\) interval, it takes up 50% of the \(P(A)\) interval, so \(P(B|A)=\frac{0.3}{0.6}=0.5.\)  Adjust the probablities, and slide the regions to change the overlap to see how that effects the values! <iframe src="https://www.desmos.com/calculator/vq8blapfw7" id="interactive-189" width="600" height="600"></iframe></p>
 <article class="remark remark-like" id="remark-19"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-1098">Reworking <a class="xref" data-knowl="./knowl/DefinitionConditional.html" title="Definition 8.3.3">Definition 8.3.3</a> we get:</p>
+<p id="p-1158">Reworking <a class="xref" data-knowl="./knowl/DefinitionConditional.html" title="Definition 8.3.3">Definition 8.3.3</a> we get:</p>
 <div class="displaymath">
 \begin{align*}
 P(A|B)\amp=\frac{P(A\cap B)}{P(B)}\\
 P(A\cap B)\amp=P(A|B)P(B)
 \end{align*}
-</div></article><p id="p-1099">This follows intuitively.  If at a resturaunt, 20% of people order steak (\(P(S)=0.2\)) and half the people who order steak order fries (\(P(F|S)=0.5\)), then how many people order fries and steak?  It's \(P(F\cap S)=P(F|S)P(S)=(0.5)(0.2)=0.1\) or 10% of the patrons had both steak and fries.  But without all of the formal symbolism, if 20 people out of a 100 had steak, and half also had fries, then 10 our of 100 had steak and fries!</p>
+</div></article><p id="p-1159">This follows intuitively.  If at a resturaunt, 20% of people order steak (\(P(S)=0.2\)) and half the people who order steak order fries (\(P(F|S)=0.5\)), then how many people order fries and steak?  It's \(P(F\cap S)=P(F|S)P(S)=(0.5)(0.2)=0.1\) or 10% of the patrons had both steak and fries.  But without all of the formal symbolism, if 20 people out of a 100 had steak, and half also had fries, then 10 our of 100 had steak and fries!</p>
 <article class="example example-like" id="ExampleClass2"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ExampleClass2"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleClass2"><article class="example example-like"><p id="p-1100">Recall <a class="xref" data-knowl="./knowl/ExampleClass.html" title="Example 8.2.6">Example 8.2.6</a>, suppose a class of 25 had 12 student athletes, 8 biology majors, and 5 students who were both student athletes and biology majors.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExampleClass2"><article class="example example-like"><p id="p-1160">Recall <a class="xref" data-knowl="./knowl/ExampleClass.html" title="Example 8.2.6">Example 8.2.6</a>, suppose a class of 25 had 12 student athletes, 8 biology majors, and 5 students who were both student athletes and biology majors.</p>
 <ol class="decimal">
-<li id="li-563">If a student is an athlete, what is the probability they were a biology major?</li>
-<li id="li-564">If a student is a biology major, what is the probability they were an athlete?</li>
-<li id="li-565">If a student is not an athlete, what is the probability they were a biology major?</li>
+<li id="li-579">If a student is an athlete, what is the probability they were a biology major?</li>
+<li id="li-580">If a student is a biology major, what is the probability they were an athlete?</li>
+<li id="li-581">If a student is not an athlete, what is the probability they were a biology major?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-115" id="solution-115"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-115"><div class="solution solution-like">
-<p id="p-1101">So recall: <figure class="figure figure-like" id="figure-32"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-77.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-153" id="solution-153"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-153"><div class="solution solution-like">
+<p id="p-1161">So recall: <figure class="figure figure-like" id="figure-32"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-77.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.6<span class="period">.</span></span><span class="space"> </span>Each set \(A, B\) and their respective sizes.</figcaption></figure></p>
 <ol class="decimal">
-<li id="li-566">This is \(P(B|A)=\frac{P(A\cap B)}{P(A)}=\frac{5/25}{12/25}=\frac{5}{12}.\)</li>
-<li id="li-567">This is \(P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{5/25}{8/25}=\frac{5}{8}.\)</li>
-<li id="li-568">This is \(P(B|A^c)=\frac{P(A^c\cap B)}{P(A^c)}=\frac{3/25}{13/25}=\frac{3}{13}.\)</li>
+<li id="li-582">This is \(P(B|A)=\frac{P(A\cap B)}{P(A)}=\frac{5/25}{12/25}=\frac{5}{12}.\)</li>
+<li id="li-583">This is \(P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{5/25}{8/25}=\frac{5}{8}.\)</li>
+<li id="li-584">This is \(P(B|A^c)=\frac{P(A^c\cap B)}{P(A^c)}=\frac{3/25}{13/25}=\frac{3}{13}.\)</li>
 </ol>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="ExerciseFood2"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ExerciseFood2"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseFood2"><article class="example example-like"><p id="p-1102">Recall <a class="xref" data-knowl="./knowl/ExerciseFood.html" title="Checkpoint 8.2.8">Checkpoint 8.2.8</a>: A food truck sells only burgers and hotdogs.  We have that 20 people ordered something, 18 people ordered burgers, 6 ordered hotdogs.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseFood2"><article class="example example-like"><p id="p-1162">Recall <a class="xref" data-knowl="./knowl/ExerciseFood.html" title="Checkpoint 8.2.8">Checkpoint 8.2.8</a>: A food truck sells only burgers and hotdogs.  We have that 20 people ordered something, 18 people ordered burgers, 6 ordered hotdogs.</p>
 <ol class="decimal">
-<li id="li-569">If someone ordered hotdogs, whats the probability they didn't order a burger?</li>
-<li id="li-570">If someone ordered a burger, what's the probability they  ordered a hotdog?</li>
-<li id="li-571">If someone didn't order a burger, what's the probability they  ordered a hotdog?</li>
+<li id="li-585">If someone ordered hotdogs, whats the probability they didn't order a burger?</li>
+<li id="li-586">If someone ordered a burger, what's the probability they  ordered a hotdog?</li>
+<li id="li-587">If someone didn't order a burger, what's the probability they  ordered a hotdog?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-116" id="solution-116"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-116"><div class="solution solution-like">
-<p id="p-1103">So recall: <figure class="figure figure-like" id="figure-33"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-78.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-154" id="solution-154"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-154"><div class="solution solution-like">
+<p id="p-1163">So recall: <figure class="figure figure-like" id="figure-33"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-78.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.8<span class="period">.</span></span><span class="space"> </span>Each set \(B, H\) and their respective sizes.</figcaption></figure></p>
 <ol class="decimal">
-<li id="li-572">This is \(P(B^c|H)=\frac{P(B^c\cap H)}{P(H)}=\frac{2/20}{6/20}=\frac{2}{6}.\)</li>
-<li id="li-573">This is \(P(H|B)=\frac{P(B\cap H)}{P(B)}=\frac{4/20}{18/20}=\frac{4}{18}.\)</li>
-<li id="li-574">This is \(P(H|B^c)=\frac{P(B^c\cap H)}{P(B6c)}=\frac{2/20}{2/20}=1.\) Which makes sense, no one ordered nothing, so if you didn't get a burger you must've gotten a hotdog!</li>
+<li id="li-588">This is \(P(B^c|H)=\frac{P(B^c\cap H)}{P(H)}=\frac{2/20}{6/20}=\frac{2}{6}.\)</li>
+<li id="li-589">This is \(P(H|B)=\frac{P(B\cap H)}{P(B)}=\frac{4/20}{18/20}=\frac{4}{18}.\)</li>
+<li id="li-590">This is \(P(H|B^c)=\frac{P(B^c\cap H)}{P(B6c)}=\frac{2/20}{2/20}=1.\) Which makes sense, no one ordered nothing, so if you didn't get a burger you must've gotten a hotdog!</li>
 </ol>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-90"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-90"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-90"><article class="example example-like"><p id="p-1104">Recall <a class="xref" data-knowl="./knowl/ExerciseWeather.html" title="Checkpoint 8.2.17">Checkpoint 8.2.17</a>: Suppose that today, there is a 20% chance it rains, a 10% chance that I will be in a bad mood, and an 8% chance that it rains <em class="emphasis">and</em> I'm in a bad mood.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-90"><article class="example example-like"><p id="p-1164">Recall <a class="xref" data-knowl="./knowl/ExerciseWeather.html" title="Checkpoint 8.2.17">Checkpoint 8.2.17</a>: Suppose that today, there is a 20% chance it rains, a 10% chance that I will be in a bad mood, and an 8% chance that it rains <em class="emphasis">and</em> I'm in a bad mood.</p>
 <ol class="decimal">
-<li id="li-575">If it rains, whats the chance that I'm in a bad mood?</li>
-<li id="li-576">If I'm in a good mood, whats the chance it didn't rain?</li>
+<li id="li-591">If it rains, whats the chance that I'm in a bad mood?</li>
+<li id="li-592">If I'm in a good mood, whats the chance it didn't rain?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-117" id="solution-117"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-117"><div class="solution solution-like">
-<p id="p-1105">So recall: <figure class="figure figure-like" id="figure-34"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-79.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-155" id="solution-155"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-155"><div class="solution solution-like">
+<p id="p-1165">So recall: <figure class="figure figure-like" id="figure-34"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-79.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.10<span class="period">.</span></span><span class="space"> </span>Each event \(R, B\) and their respective probabilities.</figcaption></figure></p>
 <ol class="decimal">
-<li id="li-577">This is \(P(B|R)=\frac{P(B\cap R)}{P(R)}=\frac{0.08}{0.2}=0.4.\)</li>
-<li id="li-578">This is \(P(R^c|B^c)=\frac{P(R^c\cap B^c)}{P(B^c)}=\frac{0.78}{0.9}\approx 0.866667.\)</li>
+<li id="li-593">This is \(P(B|R)=\frac{P(B\cap R)}{P(R)}=\frac{0.08}{0.2}=0.4.\)</li>
+<li id="li-594">This is \(P(R^c|B^c)=\frac{P(R^c\cap B^c)}{P(B^c)}=\frac{0.78}{0.9}\approx 0.866667.\)</li>
 </ol>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-91"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-91"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3.11</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-91"><article class="example example-like"><p id="p-1106">Recall <a class="xref" data-knowl="./knowl/ExerciseClass.html" title="Checkpoint 8.2.22">Checkpoint 8.2.22</a>: Suppose that in a Mathematics department, 20% of the students have done undergraduate research, 25% have gone to conferences.  We also have that 30% have done either one or the other.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-91"><article class="example example-like"><p id="p-1166">Recall <a class="xref" data-knowl="./knowl/ExerciseClass.html" title="Checkpoint 8.2.22">Checkpoint 8.2.22</a>: Suppose that in a Mathematics department, 20% of the students have done undergraduate research, 25% have gone to conferences.  We also have that 30% have done either one or the other.</p>
 <ol class="decimal">
-<li id="li-579">If a student doesn't do undergraduate research, whats the probability that they go to a conference?</li>
-<li id="li-580">If a student goes to a conference, what is the probability that they did undergrad research?</li>
+<li id="li-595">If a student doesn't do undergraduate research, whats the probability that they go to a conference?</li>
+<li id="li-596">If a student goes to a conference, what is the probability that they did undergrad research?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-118" id="solution-118"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-118"><div class="solution solution-like">
-<p id="p-1107">So recall: <figure class="figure figure-like" id="figure-35"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-80.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-156" id="solution-156"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-156"><div class="solution solution-like">
+<p id="p-1167">So recall: <figure class="figure figure-like" id="figure-35"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-80.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.12<span class="period">.</span></span><span class="space"> </span>\(R, C\) and their probabilities</figcaption></figure></p>
 <ol class="decimal">
-<li id="li-581">This is \(P(C|R^c)=\frac{P(C\cap R^c)}{P(R^c)}=\frac{0.01}{0.8}=0.125.\)</li>
-<li id="li-582">This is \(P(R|C)=\frac{P(R\cap C)}{P(C)}=\frac{0.15}{0.25}\approx 0.6.\)</li>
+<li id="li-597">This is \(P(C|R^c)=\frac{P(C\cap R^c)}{P(R^c)}=\frac{0.01}{0.8}=0.125.\)</li>
+<li id="li-598">This is \(P(R|C)=\frac{P(R\cap C)}{P(C)}=\frac{0.15}{0.25}\approx 0.6.\)</li>
 </ol>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-76"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-76"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-86"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-86"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.3.13</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-76"><article class="exercise exercise-like"><p id="p-1108">Among users of automated teller machines (ATMs), 92% use ATMs to withdraw cash, and 32% use them to check their account balance. Suppose that 96% use ATMs to either withdraw cash or check their account balance (or both). Given a woman who uses an ATM to check her account balance, what is the probability that she also uses an ATM to get cash?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-86"><article class="exercise exercise-like"><p id="p-1168">Among users of automated teller machines (ATMs), 92% use ATMs to withdraw cash, and 32% use them to check their account balance. Suppose that 96% use ATMs to either withdraw cash or check their account balance (or both). Given a woman who uses an ATM to check her account balance, what is the probability that she also uses an ATM to get cash?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-119" id="solution-119"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-119"><div class="solution solution-like">
-<p id="p-1109">Let \(W\) denote “withdraw cash” and \(B\) denote “Check Balance”.  We are then given \(P(W)=0.92, P(B)=0.32, P(W\cup B)=0.96\text{.}\)  Notice then that:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-157" id="solution-157"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-157"><div class="solution solution-like">
+<p id="p-1169">Let \(W\) denote “withdraw cash” and \(B\) denote “Check Balance”.  We are then given \(P(W)=0.92, P(B)=0.32, P(W\cup B)=0.96\text{.}\)  Notice then that:</p>
 <div class="displaymath">
 \begin{align*}
 P(W\cup B)\amp=P(W)+P(B)-P(W\cap B)\\
@@ -338,29 +338,29 @@ P(W\cap B)\amp=0.28
 </div></article></div>
 <article class="exercise exercise-like" id="ExercisePlants"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ExercisePlants"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.3.15</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExercisePlants"><article class="exercise exercise-like"><p id="p-1110">A company has two plants producing vehicles, plants \(A\) and \(B\text{.}\)  In plant \(A\text{,}\) 85% of the vehicles pass inspection, and in plant \(B\) only 70% do.  Suppose plant \(A\) produces 60% of the vehicles, and plant \(B\) the other 40%.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExercisePlants"><article class="exercise exercise-like"><p id="p-1170">A company has two plants producing vehicles, plants \(A\) and \(B\text{.}\)  In plant \(A\text{,}\) 85% of the vehicles pass inspection, and in plant \(B\) only 70% do.  Suppose plant \(A\) produces 60% of the vehicles, and plant \(B\) the other 40%.</p>
 <ol class="decimal">
-<li id="li-583">What percent of the vehicles produced are from plant \(A\) and pass inspection?</li>
-<li id="li-584">What percent of the vehicles produced are from plant \(B\) and pass inspection?</li>
-<li id="li-585">What percent of the vehicles produced pass inspection?</li>
-<li id="li-586">If a vehicle passes inspection, what's the probability it was manufactured in plant \(A\text{?}\)</li>
+<li id="li-599">What percent of the vehicles produced are from plant \(A\) and pass inspection?</li>
+<li id="li-600">What percent of the vehicles produced are from plant \(B\) and pass inspection?</li>
+<li id="li-601">What percent of the vehicles produced pass inspection?</li>
+<li id="li-602">If a vehicle passes inspection, what's the probability it was manufactured in plant \(A\text{?}\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-120" id="solution-120"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-120"><div class="solution solution-like">
-<p id="p-1111">Let \(A\) denote “produced in plant \(A\)” and \(I\) denote “passes inspection”.  Note that we denote “produced in plant \(B\)” by \(P(A^c)\text{.}\)  We are then given \(P(A)=0.6, P(I|A)=0.85, P(I|A^c)=0.7\text{.}\)</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-158" id="solution-158"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-158"><div class="solution solution-like">
+<p id="p-1171">Let \(A\) denote “produced in plant \(A\)” and \(I\) denote “passes inspection”.  Note that we denote “produced in plant \(B\)” by \(P(A^c)\text{.}\)  We are then given \(P(A)=0.6, P(I|A)=0.85, P(I|A^c)=0.7\text{.}\)</p>
 <ol class="decimal">
-<li id="li-587">We are finding \(P(A\cap I)=P(I|A)P(A)=(0.85)(0.6)=0.51\text{.}\)  That is, 85% of the 60% of vehicles produced in \(A\) pass inspection, which is 51% of the vehicles produced in \(A\) and pass inspection.</li>
-<li id="li-588">We are finding \(P(A^c\cap I)=P(I|A^c)P(A^c)=(0.7)(0.4)=0.28\text{.}\)  That is, 70% of the 40% of vehicles produced in \(B\) pass inspection, which is 28% of the vehicles produced in \(B\) and pass inspection.</li>
-<li id="li-589">Since all the vehicles are produced in \(A\) or \(B\text{,}\) if we take the 51% who pass inspection from \(A\) and the 28% who pass inspection from \(B\text{,}\) that is \(0.51+0.28=0.79\) or 79% of cars pass inspection in total. This let's us fill out the following: <figure class="figure figure-like" id="figure-37"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-82.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<li id="li-603">We are finding \(P(A\cap I)=P(I|A)P(A)=(0.85)(0.6)=0.51\text{.}\)  That is, 85% of the 60% of vehicles produced in \(A\) pass inspection, which is 51% of the vehicles produced in \(A\) and pass inspection.</li>
+<li id="li-604">We are finding \(P(A^c\cap I)=P(I|A^c)P(A^c)=(0.7)(0.4)=0.28\text{.}\)  That is, 70% of the 40% of vehicles produced in \(B\) pass inspection, which is 28% of the vehicles produced in \(B\) and pass inspection.</li>
+<li id="li-605">Since all the vehicles are produced in \(A\) or \(B\text{,}\) if we take the 51% who pass inspection from \(A\) and the 28% who pass inspection from \(B\text{,}\) that is \(0.51+0.28=0.79\) or 79% of cars pass inspection in total. This let's us fill out the following: <figure class="figure figure-like" id="figure-37"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-82.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.16<span class="period">.</span></span><span class="space"> </span>\(A, I\) and their probabilities</figcaption></figure>
 </li>
-<li id="li-590">We are finding \(P(A|I)=\frac{P(A\cap I)}{P(I)}=\frac{0.51}{0.79}\approx 0.6455696\) or 64.55696%</li>
+<li id="li-606">We are finding \(P(A|I)=\frac{P(A\cap I)}{P(I)}=\frac{0.51}{0.79}\approx 0.6455696\) or 64.55696%</li>
 </ol>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="ExerciseDiner"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ExerciseDiner"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.3.17</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseDiner"><article class="exercise exercise-like"><p id="p-1112">Some people ordered some food at a restaurant, and over the course of  dinner, it becomes clear that some of the patrons are getting sick.  Consider this table representing how many people ordered what, and how many got sick:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ExerciseDiner"><article class="exercise exercise-like"><p id="p-1172">Some people ordered some food at a restaurant, and over the course of  dinner, it becomes clear that some of the patrons are getting sick.  Consider this table representing how many people ordered what, and how many got sick:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{|c|c|c|c|}
@@ -375,43 +375,43 @@ P(W\cap B)\amp=0.28
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-591">What is the probability that a random diner got sick?</li>
-<li id="li-592">What is the probability that a diner got sick if we knew they ate fish?</li>
-<li id="li-593">What is the probability that a random diner had fish or steak?</li>
-<li id="li-594">What is the probability that a random diner either had fish or got sick?</li>
-<li id="li-595">What is the probability that a diner ate steak, given that they got sick?</li>
-<li id="li-596">What food made you most likely to get sick?</li>
+<li id="li-607">What is the probability that a random diner got sick?</li>
+<li id="li-608">What is the probability that a diner got sick if we knew they ate fish?</li>
+<li id="li-609">What is the probability that a random diner had fish or steak?</li>
+<li id="li-610">What is the probability that a random diner either had fish or got sick?</li>
+<li id="li-611">What is the probability that a diner ate steak, given that they got sick?</li>
+<li id="li-612">What food made you most likely to get sick?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-121" id="solution-121"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-121"><div class="solution solution-like">
-<p id="p-1113">We note that there are 50 diners in all.  Let \(C, F, T, S\) denote chicken, fish, steak and sick.</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-159" id="solution-159"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-159"><div class="solution solution-like">
+<p id="p-1173">We note that there are 50 diners in all.  Let \(C, F, T, S\) denote chicken, fish, steak and sick.</p>
 <ol class="decimal">
-<li id="li-597">We have that \(P(S)=\frac{5+4+3}{50}=0.24\text{.}\)</li>
-<li id="li-598">Out of the 10 people who ate fish, 4 got sick, so  \(P(S|F)=\frac{4}{10}\approx 0.4\text{.}\)</li>
-<li id="li-599">We have that \(P(F\cup T)=\frac{4+6+3+12}{50}=0.5\text{.}\)</li>
-<li id="li-600">We have that \(P(F\cup S)=\frac{4+6+5+3}{50}=0.36\text{.}\)  We could also compute this \(P(F\cup S)=P(F)+P(S)-P(\cap S)=\frac{10}{50}+\frac{12}{50}-\frac{4}{50}=\frac{18}{50}=0.36.\)</li>
-<li id="li-601">Out of the 12 people who got sick, 3 ate steak, so  \(P(T|S)=\frac{3}{12}=0.25\text{.}\)</li>
-<li id="li-602">We note that if you eat chicken, the chance you would get sick is \(P(S|C)=\frac{5}{25}=0.2\text{.}\)  If you eat fish, the chance you would get sick is \(P(S|F)=\frac{4}{10}=0.4\text{.}\) If you eat steak, the chance you would get sick is \(P(S|T)=\frac{3}{15}=0.2\text{.}\)  So Fish is the most likely to get you sick.</li>
+<li id="li-613">We have that \(P(S)=\frac{5+4+3}{50}=0.24\text{.}\)</li>
+<li id="li-614">Out of the 10 people who ate fish, 4 got sick, so  \(P(S|F)=\frac{4}{10}\approx 0.4\text{.}\)</li>
+<li id="li-615">We have that \(P(F\cup T)=\frac{4+6+3+12}{50}=0.5\text{.}\)</li>
+<li id="li-616">We have that \(P(F\cup S)=\frac{4+6+5+3}{50}=0.36\text{.}\)  We could also compute this \(P(F\cup S)=P(F)+P(S)-P(\cap S)=\frac{10}{50}+\frac{12}{50}-\frac{4}{50}=\frac{18}{50}=0.36.\)</li>
+<li id="li-617">Out of the 12 people who got sick, 3 ate steak, so  \(P(T|S)=\frac{3}{12}=0.25\text{.}\)</li>
+<li id="li-618">We note that if you eat chicken, the chance you would get sick is \(P(S|C)=\frac{5}{25}=0.2\text{.}\)  If you eat fish, the chance you would get sick is \(P(S|F)=\frac{4}{10}=0.4\text{.}\) If you eat steak, the chance you would get sick is \(P(S|T)=\frac{3}{15}=0.2\text{.}\)  So Fish is the most likely to get you sick.</li>
 </ol>
 </div></div>
 </div></article></div></section><section class="subsection" id="subsection-90"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.3.2</span> <span class="title">Independence</span>
 </h3>
-<p id="p-1114">Part of our motivation for studying conditional probability is to see how knowing certain events occur change the probability that other events occur.  In the dice example above, knowing that the outcome is a \(4,5\) or \(6\) increases the chance that the outcome is even from one half.  But what if there were events that did not in any way influence each other?</p>
-<p id="p-1115">If someone were to flip a coin, it is a 50% chance that it comes up heads.  It's not clear what exactly the probability of a random person falling down  a well is,  but if they did, and from the bottom of the well, they flipped a coin, we expect that it would still have a 50% chance of coming up heads.  The falling down a well has no bearing on the outcome of coin flips.  We say that these events are <dfn class="terminology">independent</dfn> of each other, meaning that the outcome of one event has no impact on the other.  More formally:</p>
+<p id="p-1174">Part of our motivation for studying conditional probability is to see how knowing certain events occur change the probability that other events occur.  In the dice example above, knowing that the outcome is a \(4,5\) or \(6\) increases the chance that the outcome is even from one half.  But what if there were events that did not in any way influence each other?</p>
+<p id="p-1175">If someone were to flip a coin, it is a 50% chance that it comes up heads.  It's not clear what exactly the probability of a random person falling down  a well is,  but if they did, and from the bottom of the well, they flipped a coin, we expect that it would still have a 50% chance of coming up heads.  The falling down a well has no bearing on the outcome of coin flips.  We say that these events are <dfn class="terminology">independent</dfn> of each other, meaning that the outcome of one event has no impact on the other.  More formally:</p>
 <article class="definition definition-like" id="DefinitionIndependence"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.18</span><span class="period">.</span>
 </h6>
-<p id="p-1116">Events \(A, B\) are <dfn class="terminology">independent</dfn> of each other if the outcome of one event does not change the probability of the other occuring.  That is</p>
+<p id="p-1176">Events \(A, B\) are <dfn class="terminology">independent</dfn> of each other if the outcome of one event does not change the probability of the other occuring.  That is</p>
 <div class="displaymath">
 \begin{equation*}
 P(A|B)=P(A).
 \end{equation*}
-</div></article><p id="p-1117">So \(P(H|W)=P(H)=0.5\text{.}\)  It is not always clear when events are independent.  The world is a complicated and chaotic place, and we all have apriori beliefs and biases.  Things which may seem unrelated may have subtle inflences on each other, and those we may assume to be connected may in fact be independent.  Thus it behooves us to be able to check if events are independent.   While <a class="xref" data-knowl="./knowl/DefinitionIndependence.html" title="Definition 8.3.18">Definition 8.3.18</a> may give us one avenue, another would be:</p>
+</div></article><p id="p-1177">So \(P(H|W)=P(H)=0.5\text{.}\)  It is not always clear when events are independent.  The world is a complicated and chaotic place, and we all have apriori beliefs and biases.  Things which may seem unrelated may have subtle inflences on each other, and those we may assume to be connected may in fact be independent.  Thus it behooves us to be able to check if events are independent.   While <a class="xref" data-knowl="./knowl/DefinitionIndependence.html" title="Definition 8.3.18">Definition 8.3.18</a> may give us one avenue, another would be:</p>
 <article class="remark remark-like" id="remark-20"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.3.19</span><span class="period">.</span>
 </h6>
-<p id="p-1118">Events \(A, B\) are <dfn class="terminology">independent</dfn> if and only if:</p>
+<p id="p-1178">Events \(A, B\) are <dfn class="terminology">independent</dfn> if and only if:</p>
 <div class="displaymath">
 \begin{align*}
 P(A|B)\amp= P(A)\\
@@ -420,42 +420,42 @@ P(A\cap B)\amp= P(A)P(B).
 \end{align*}
 </div></article><article class="example example-like" id="example-92"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-92"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3.20</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-92"><article class="example example-like"><p id="p-1119">Recall <a class="xref" data-knowl="./knowl/ExampleClass2.html" title="Example 8.3.5">Example 8.3.5</a>: Suppose a class of 25 had 12 student athletes, 8 biology majors, and 5 students who were both student athletes and biology majors.  Are being a biology major and being an athlete independent?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-92"><article class="example example-like"><p id="p-1179">Recall <a class="xref" data-knowl="./knowl/ExampleClass2.html" title="Example 8.3.5">Example 8.3.5</a>: Suppose a class of 25 had 12 student athletes, 8 biology majors, and 5 students who were both student athletes and biology majors.  Are being a biology major and being an athlete independent?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-122" id="solution-122"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-122"><div class="solution solution-like">
-<p id="p-1120">There are several approaches. You only need to go through one of these to obtain answer.</p>
-<p id="p-1121">First note that \(P(B)=\frac{8}{25}=0.32\) and \(P(B|A)=\frac{5}{12}\approx 0.41666667\text{.}\)  These are not the same (being a biology major seems to improve the odds that you are an athlete) so these are not independent.</p>
-<p id="p-1122">Next note that \(P(A)=\frac{12}{25}=0.48\) and \(P(A|B)=\frac{5}{8}=0.625\text{.}\)  These are not the same (being a student athelete seems to improve the odds that you are a biology major) so these are not independent.</p>
-<p id="p-1123">Finally note that \(P(A)=\frac{12}{25}=0.48, P(B)=\frac{8}{25}=0.32, P(A\cap B)=\frac{5}{25}=0.2\) but \(P(A)P(B)=0.48\cdot 0.32=0.1536\neq 0.2=P(A\cap B)\text{.}\)  So these are not independent.</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-160" id="solution-160"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-160"><div class="solution solution-like">
+<p id="p-1180">There are several approaches. You only need to go through one of these to obtain answer.</p>
+<p id="p-1181">First note that \(P(B)=\frac{8}{25}=0.32\) and \(P(B|A)=\frac{5}{12}\approx 0.41666667\text{.}\)  These are not the same (being a biology major seems to improve the odds that you are an athlete) so these are not independent.</p>
+<p id="p-1182">Next note that \(P(A)=\frac{12}{25}=0.48\) and \(P(A|B)=\frac{5}{8}=0.625\text{.}\)  These are not the same (being a student athelete seems to improve the odds that you are a biology major) so these are not independent.</p>
+<p id="p-1183">Finally note that \(P(A)=\frac{12}{25}=0.48, P(B)=\frac{8}{25}=0.32, P(A\cap B)=\frac{5}{25}=0.2\) but \(P(A)P(B)=0.48\cdot 0.32=0.1536\neq 0.2=P(A\cap B)\text{.}\)  So these are not independent.</p>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-93"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-93"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3.21</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-93"><article class="example example-like"><p id="p-1124">Recall <a class="xref" data-knowl="./knowl/ExerciseFood2.html" title="Example 8.3.7">Example 8.3.7</a>: A food truck sells only burgers and hotdogs.  We have that 20 people ordered something, 18 people ordered burgers, 6 ordered hotdogs.  Are ordering a burger and hotdog  independent?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-93"><article class="example example-like"><p id="p-1184">Recall <a class="xref" data-knowl="./knowl/ExerciseFood2.html" title="Example 8.3.7">Example 8.3.7</a>: A food truck sells only burgers and hotdogs.  We have that 20 people ordered something, 18 people ordered burgers, 6 ordered hotdogs.  Are ordering a burger and hotdog  independent?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-123" id="solution-123"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-123"><div class="solution solution-like">
-<p id="p-1125">There are several approaches. You only need to go through one of these to obtain answer.  Also recall that 4 people ordered both a burger and a hotdog.</p>
-<p id="p-1126">First note that \(P(B)=\frac{18}{20}=0.9\) and \(P(B|H)=\frac{4}{6}\approx 0.66666667\text{.}\)  These are not the same (ordering a hotdog makes it less likely you ordered a buger) so these are not independent.</p>
-<p id="p-1127">Next note that \(P(H)=\frac{6}{20}=0.3\) and \(P(H|B)=\frac{4}{18}=0.22222\text{.}\)  These are not the same (ordering a hamburger makes it less likelt you also got a hotdog) so these are not independent.</p>
-<p id="p-1128">Finally note that \(P(B)=\frac{18}{20}=0.9, P(H)=\frac{6}{20}=0.3, P(B\cap H)=\frac{4}{20}=0.2\) but \(P(B)P(H)=0.9\cdot 0.3=0.27\neq 0.2=P(B\cap H)\text{.}\)  So these are not independent.</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-161" id="solution-161"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-161"><div class="solution solution-like">
+<p id="p-1185">There are several approaches. You only need to go through one of these to obtain answer.  Also recall that 4 people ordered both a burger and a hotdog.</p>
+<p id="p-1186">First note that \(P(B)=\frac{18}{20}=0.9\) and \(P(B|H)=\frac{4}{6}\approx 0.66666667\text{.}\)  These are not the same (ordering a hotdog makes it less likely you ordered a buger) so these are not independent.</p>
+<p id="p-1187">Next note that \(P(H)=\frac{6}{20}=0.3\) and \(P(H|B)=\frac{4}{18}=0.22222\text{.}\)  These are not the same (ordering a hamburger makes it less likelt you also got a hotdog) so these are not independent.</p>
+<p id="p-1188">Finally note that \(P(B)=\frac{18}{20}=0.9, P(H)=\frac{6}{20}=0.3, P(B\cap H)=\frac{4}{20}=0.2\) but \(P(B)P(H)=0.9\cdot 0.3=0.27\neq 0.2=P(B\cap H)\text{.}\)  So these are not independent.</p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-79"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-79"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-89"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-89"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.3.22</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-79"><article class="exercise exercise-like"><p id="p-1129">Suppose that in a class, 10% were Math majors, 30% got A's on the last test, and 3% were Math majors who got A's.  Are being a Math major and getting an A independent?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-89"><article class="exercise exercise-like"><p id="p-1189">Suppose that in a class, 10% were Math majors, 30% got A's on the last test, and 3% were Math majors who got A's.  Are being a Math major and getting an A independent?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-124" id="solution-124"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-124"><div class="solution solution-like">
-<p id="p-1130">There are several approaches. You only need to go through one of these to obtain answer.  Let \(M\) denote being a Math major and \(A\) denote getting an A.</p>
-<p id="p-1131">First note that \(P(M)=0.1\) and \(P(M|A)=\frac{0.03}{0.3}=0.1\text{.}\)  These are  the same (your chances of being a Math major is unaffected by whether you got an A) so these are  independent.</p>
-<p id="p-1132">Next note that \(P(A)=0.3\) and \(P(A|M)=\frac{0.03}{0.1}=0.3\text{.}\)  These are  the same (your chances of getting an A is unaffected by whether you were a Math major) so these are  independent.</p>
-<p id="p-1133">Finally note that \(P(M)=0.1, P(A)=0.3, P(M\cap A)=0.03\) so \(P(M)P(A)=0.1\cdot 0.3=0.03P(M\cap A)\text{.}\)  So these are  independent.</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-162" id="solution-162"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-162"><div class="solution solution-like">
+<p id="p-1190">There are several approaches. You only need to go through one of these to obtain answer.  Let \(M\) denote being a Math major and \(A\) denote getting an A.</p>
+<p id="p-1191">First note that \(P(M)=0.1\) and \(P(M|A)=\frac{0.03}{0.3}=0.1\text{.}\)  These are  the same (your chances of being a Math major is unaffected by whether you got an A) so these are  independent.</p>
+<p id="p-1192">Next note that \(P(A)=0.3\) and \(P(A|M)=\frac{0.03}{0.1}=0.3\text{.}\)  These are  the same (your chances of getting an A is unaffected by whether you were a Math major) so these are  independent.</p>
+<p id="p-1193">Finally note that \(P(M)=0.1, P(A)=0.3, P(M\cap A)=0.03\) so \(P(M)P(A)=0.1\cdot 0.3=0.03P(M\cap A)\text{.}\)  So these are  independent.</p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-80"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-80"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-90"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-90"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.3.23</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-80"><article class="exercise exercise-like"><p id="p-1134">Let's suppose that 20% of a town were zombified, and half the town were women.  If zombification and gender are independent, what percentage of the town are women who are not zombies?  What about neither zombies nor women?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-90"><article class="exercise exercise-like"><p id="p-1194">Let's suppose that 20% of a town were zombified, and half the town were women.  If zombification and gender are independent, what percentage of the town are women who are not zombies?  What about neither zombies nor women?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-125" id="solution-125"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-125"><div class="solution solution-like"><p id="p-1135">Let \(Z\) denote “is a zombie”and \(W\) denote is a woman.  Then we are given \(P(Z)=0.2, P(W)=0.5\text{.}\)  Since we are given that \(P(Z\cap W)=P(Z)P(W)=0.2\cdot0.5=0.1\) we have: <figure class="figure figure-like" id="figure-38"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-83.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-163" id="solution-163"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-163"><div class="solution solution-like"><p id="p-1195">Let \(Z\) denote “is a zombie”and \(W\) denote is a woman.  Then we are given \(P(Z)=0.2, P(W)=0.5\text{.}\)  Since we are given that \(P(Z\cap W)=P(Z)P(W)=0.2\cdot0.5=0.1\) we have: <figure class="figure figure-like" id="figure-38"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-83.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.24<span class="period">.</span></span><span class="space"> </span>\(Z, W\) and their probabilities</figcaption></figure> Thus the proportion of the town who are women and not zombies is \(P(Z^c\cap W)=0.4\text{.}\)  Similarly, the proportion of the town who is neither women nor zombies is \(P(Z^c\cap W^c)=0.4\text{.}\)</p></div></div>
 </div></article></div></section></section></div></main>
 </div>

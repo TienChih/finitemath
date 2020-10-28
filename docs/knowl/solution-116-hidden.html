@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:26-06:00       *-->
+<!--*       on 2020-10-28T15:05:07-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,12 +14,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>So recall: <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-78.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.8<span class="period">.</span></span><span class="space"> </span>Each set \(B, H\) and their respective sizes.</figcaption></figure></p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Consider the following:</p>
 <ol class="decimal">
-<li>This is \(P(B^c|H)=\frac{P(B^c\cap H)}{P(H)}=\frac{2/20}{6/20}=\frac{2}{6}.\)</li>
-<li>This is \(P(H|B)=\frac{P(B\cap H)}{P(B)}=\frac{4/20}{18/20}=\frac{4}{18}.\)</li>
-<li>This is \(P(H|B^c)=\frac{P(B^c\cap H)}{P(B6c)}=\frac{2/20}{2/20}=1.\) Which makes sense, no one ordered nothing, so if you didn't get a burger you must've gotten a hotdog!</li>
+<li>
+<p>We note that since the halflife is 100 minutes:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{1}{2}\amp = a^5\\
+a\amp = (\frac{1}{2})^{1/5}\approx0.87055
+\end{align*}
+</div>
+<p data-braille="continuation">So \(I(t)=1000\cdot ((\frac{1}{2})^{1/5})^t=1000\cdot(\frac{1}{2})^{t/5}\text{.}\)</p>
+</li>
+<li>
+<p>We solve:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+10=I(t)\amp = 1000\cdot\left(\frac{1}{2}\right)^{t/5}\\
+\frac{1}{100}\amp = \left(\frac{1}{2}\right)^{t/5}\\
+\ln\left(\frac{1}{100}\right)\amp = \ln\left(\left(\frac{1}{2}\right)^{t/5}\right)\\
+\ln\left(\frac{1}{100}\right)\amp = \frac{t}{5}\cdot\ln\left(\frac{1}{2}\right)\\
+t\amp = \frac{5\ln\left(\frac{1}{100}\right)}{\ln\left(\frac{1}{2}\right)}\approx 33.21928
+\end{align*}
+</div>
+<p data-braille="continuation"><iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/lugcttrycr" id="interactive-148" width="600" height="600"></iframe> So in just over 33 minutes.</p>
+</li>
 </ol>
 </div></body>
 </html>

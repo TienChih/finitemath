@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:44-06:00       *-->
+<!--*       on 2020-10-28T15:05:40-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,24 +12,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Evaluate (Sage)'});
-});
-</script>
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">What if \(Y\) had 300000 people and \(X\) was a ghost town with no one in it?  We see that after 100 iterations: <div class="sagecell-sage" id="sage-25"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
-X=matrix(QQ, [[0],[300000]])
-for i in range(100):
-  print(M^i*X*1.0)
-  print(' ')
-</script></div> We achieve the same state, which incidentally was the stable solution we found earlier!</p>
-<span class="incontext"><a href="Sec_StableSolutions.html#p-1438">in-context</a></span>
+<p>We can see this in action with die rolls above, but let's say that you have a game of chance.  Tickets cost \(\$2\text{.}\)  You have a 3 in 10 chance of winning \(\$5\) and a 1 in 10 chance of winning \(\$10\text{.}\)  The <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">net</em> winnings have the following distribution:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{array}{|c|ccc|}
+\hline
+x \amp -2 \amp 3 \amp 8 \\
+\hline
+P(X=x) \amp \frac{6}{10} \amp \frac{3}{10} \amp \frac{1}{10}\\
+\hline
+\end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">So one could ask, what is the average net winnings if you buy \(n\) tickets?  The outcomes would be distributed as follows: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/lrk2echwyr" id="interactive-263" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="Sec_CLT.html#p-1438">in-context</a></span>
 </body>
 </html>

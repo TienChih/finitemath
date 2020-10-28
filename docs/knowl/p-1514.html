@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-28T15:05:44-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
+<p>Let's work this out with Adaeze:</p>
+<ol class="decimal">
+<li>Letting \(\$0, \$500\) be the first two states, we have a new transition matrix:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+M=\begin{pmatrix} 
+1 \amp 0 \amp 0.4 \amp 0 \amp 0 \amp 0 \\ 
+0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0.6 \\
+0 \amp 0 \amp 0 \amp 0.4 \amp 0 \amp 0 \\
+0 \amp 0 \amp 0.6 \amp 0 \amp 0.4 \amp 0 \\ 
+0 \amp 0 \amp 0 \amp 0.6 \amp 0 \amp 0.4 \\
+0 \amp 0 \amp 0  \amp 0 \amp 0.6 \amp 0 \\
+\end{pmatrix}
+\end{equation*}
+</div>We also have matrices:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+A=\begin{pmatrix} 
+0.4 \amp 0 \amp 0 \amp 0 \\ 
+0 \amp 0 \amp 0 \amp 0.6 
+\end{pmatrix}
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+B=\begin{pmatrix} 
+0 \amp 0.4 \amp 0 \amp 0 \\
+0.6 \amp 0 \amp 0.4 \amp 0 \\ 
+0 \amp 0.6 \amp 0 \amp 0.4 \\
+0  \amp 0 \amp 0.6 \amp 0 \\
+\end{pmatrix}
+\end{equation*}
+</div>
+</li>
+<li>We compute \(F\text{:}\) <div class="sagecell-sage" id="sage-30"><script type="text/x-sage">B=matrix(QQ, [[0,0.4,0,0], [0.6,0,0.4,0], [0,0.6,0,0.4],[0,0,0.6,0]])
+I=matrix.identity(4)
+F=(I-B)^(-1)
+print(F)
+</script></div> Giving us<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+F=
+\begin{pmatrix}
+\frac{325}{211} \amp \frac{190}{211} \amp \frac{100}{211} \amp \frac{40}{211} \\
+\frac{285}{211} \amp \frac{475}{211} \amp \frac{250}{211} \amp \frac{100}{211} \\
+\frac{225}{211} \amp \frac{375}{211} \amp \frac{475}{211} \amp \frac{190}{211} \\
+\frac{135}{211} \amp \frac{225}{211} \amp \frac{285}{211} \amp \frac{325}{211} \\
+\end{pmatrix}
+\end{equation*}
+</div>
+</li>
+<li>Finally, we compute \(AF\text{:}\) <div class="sagecell-sage" id="sage-31"><script type="text/x-sage">A=matrix(QQ, [[0.4,0,0,0], [0,0,0,0.6]])
+B=matrix(QQ, [[0,0.4,0,0], [0.6,0,0.4,0], [0,0.6,0,0.4],[0,0,0.6,0]])
+I=matrix.identity(4)
+F=(I-B)^(-1)
+print(A*F)
+print(' ')
+print(A*F*1.0)
+</script></div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+AF=
+\begin{pmatrix}
+\frac{130}{211} \amp \frac{76}{211} \amp \frac{40}{211} \amp \frac{16}{211} \\
+\frac{81}{211} \amp \frac{135}{211} \amp \frac{171}{211} \amp \frac{195}{211} \\
+\end{pmatrix}
+\end{equation*}
+</div>If you start with \(\$100\) theres a \(\frac{130}{211}\approx 0.616\) chance you go broke and a \(\frac{81}{211}\approx 0.384\) chance you make \(\$500\) etc., essentially the same values we found above, but precisely.</li>
+</ol>
+<span class="incontext"><a href="Sec_Absorb.html#p-1514">in-context</a></span>
+</body>
+</html>

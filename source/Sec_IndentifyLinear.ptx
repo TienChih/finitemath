@@ -122,6 +122,8 @@
         <p>
           Find the linear function with slope 3 passing through <m>(2,5)</m>.
         </p>
+      </statement>
+      <solution>  
         <p>
           Note that we are given <m>\color{red}{m=3}</m> and <m>\color{blue}{(x_0,y_0)=(2,5)}</m>.
           The general form for a line is <m>y=mx+b</m>, thus:
@@ -154,7 +156,7 @@
         <p>
           We can verify that this line has slope <m>m=3</m> and when <m>x=2, y=3\cdot 2-1=6-1=5</m>.
         </p>
-      </statement>
+      </solution>
     </example>
   </subsection>
   <subsection>
@@ -194,6 +196,8 @@
         <p>
           Find the line with slope 3 passing through <m>(2,5)</m>, again.
         </p>
+      </statement>
+      <solution>
         <p>
           Using the point-slope form,
           knowing that <m>\color{blue}{(2,5)}</m> lies on the line,
@@ -209,7 +213,7 @@
           Either way, you obtain the same line,
           with slope 3, passing through (2,5).
         </p>
-      </statement>
+      </solution>
     </example>
   </subsection>
   <subsection>
@@ -253,6 +257,8 @@
         <p>
           What line passes between <m>(2,3)</m> and <m>(4,1)</m>?
         </p>
+      </statement>
+      <solution>  
         <p>
           So we note then that <m>\color{red}{m=\frac{1-3}{4-2}=-1}</m>
           (also <m>\color{red}{m=\frac{3-1}{2-4}=-1}</m>).
@@ -299,7 +305,7 @@
         <p>
           <interactive desmos="yohrdbuwuc"  />
         </p>
-      </statement>
+      </solution>
     </example>
   </subsection>
   <subsection>
@@ -327,6 +333,8 @@
           </li>
         </ol>
       </p>
+    </statement>
+    <solution>
       <p>
         These can be identified algebraically:
         <ol>
@@ -334,10 +342,10 @@
             <p>
               When <m>\color{ForestGreen}{y=0}</m>, we have:
               <md>
-                <mrow>y\amp =\amp 2x-3</mrow>
-                <mrow>\color{ForestGreen}{0}\amp =\amp 2x-3</mrow>
-                <mrow>3\amp =\amp 2x</mrow>
-                <mrow>x\amp =\amp 1.5</mrow>
+                <mrow>y\amp = 2x-3</mrow>
+                <mrow>\color{ForestGreen}{0}\amp = 2x-3</mrow>
+                <mrow>3\amp = 2x</mrow>
+                <mrow>x\amp = 1.5</mrow>
               </md>.
             </p>
           </li>
@@ -369,8 +377,171 @@
 \draw[orange, dashed, ultra thick] (3,-5) --node[left]{\(x=3\)}(3,20);\end{tikzpicture}]]>
 </latex-image>
       </image>
-    </statement>
+    </solution>
   </example>
+
+  <exercise>
+    <statement>
+      <p>
+      <ol>
+        <li>
+          Find a linear function <m>f(x)</m> passing through <m>(2,5)</m> with slope <m>-1.5</m>.
+        </li>
+        <li>
+          When <m>x=4</m>, what is <m>f(x)</m>?
+        </li>
+        <li>  
+          When <m>f(x)=7</m> what is <m>x</m>?
+        </li>
+     </ol>
+   </p>
+     </statement>   
+     <solution>
+      <p>
+          We as usual have options.  Knowing that <m>m=-1.5</m> and that we pass through <m>(2,5)</m>, we can solve for a <m>y-</m>intercept:
+          <md>
+                <mrow>f(x)\amp = mx+b</mrow>
+                <mrow>5\amp = -1.5(2)+b</mrow>
+                <mrow>b\amp = 5+3=8</mrow>
+                <mrow>f(x)\amp = -1.5x+8.</mrow>
+          </md>
+          Or, more directly:
+          <md>
+                <mrow>f(x)-y_0\amp = m(x-x_0)</mrow>
+                <mrow>f(x)-5\amp = -1.5(x-2)</mrow>
+                <mrow>f(x)-5\amp = -1.5x+3</mrow>
+                <mrow>f(x)\amp = -1.5x+8.</mrow>
+          </md>
+          Visualized here:
+          <interactive desmos="gto5ws9hnb"/>
+        </p>
+        </solution>
+        <solution>  
+          <p>
+          This would be <m>f(4)=-1.5(4)+8=-6+8=2</m>.
+          <interactive desmos="efgghsueeq"/>
+      </p>
+     </solution>
+
+     <solution>  
+          <p>
+          We have:
+          <md>
+                
+                <mrow>f(x)\amp = 7</mrow>
+                 <mrow>-1.5x+8\amp = 7</mrow>
+                <mrow>-1.5x\amp = -1</mrow> 
+                <mrow>x\amp = \frac{-1}{-1.5}=\frac{2}{3}</mrow>.
+          </md>
+          Which we can see here:
+          <interactive desmos="oebuajkabl"/>
+      </p>
+     </solution>
+
+     </exercise>  
+
+     <exercise>
+    <statement>
+      <p>
+      <ol>
+        <li>
+          Find a linear function <m>g(x)</m> passing through <m>(1,-2)</m> and <m>(6,4)</m>.
+        </li>
+        <li>
+          When <m>x=-2</m>, what is <m>g(x)</m>?
+        </li>
+        <li>  
+          When <m>g(x)=0</m> what is <m>x</m>?
+        </li>
+     </ol>
+   </p>
+     </statement>   
+     <solution>
+      <p>
+          We start by finding the slope.  As before: <me>m=\frac{\Delta y}{\Delta x} =\frac{4-(-2)}{6-1}=\frac{6}{5}=1.2.</me>
+          We then have options.  Knowing that <m>m=1.2</m> and that we pass through <m>(1,-2),(6,4)</m>, we can solve for a <m>y-</m>intercept:
+          <md>
+                <mrow>g(x)\amp = mx+b</mrow>
+                <mrow>-2\amp = 1.2(1)+b</mrow>
+                <mrow>b\amp = -2-1.3=-3.2</mrow>
+                <mrow>g(x)\amp = 1.2x-3.2.</mrow>
+          </md>
+          Or, more directly:
+          <md>
+                <mrow>g(x)-y_0\amp = m(x-x_0)</mrow>
+                <mrow>g(x)-(-2)\amp = 1.2(x-1)</mrow>
+                <mrow>g(x)+2\amp = 1.2x-1.2</mrow>
+                <mrow>g(x)\amp = 1.2x-3.2.</mrow>
+          </md>
+          Visualized here:
+          <interactive desmos="qskhmmhrwv"/>
+        </p>
+        <p>
+          Note that you could have used the point <m>(6,4)</m>instead.
+        </p>  
+        </solution>
+        <solution>  
+          <p>
+          This would be <m>g(-2)=1.2(-2)-3.2=-2.4-3.2=-5.6</m>.
+          <interactive desmos="tdrwudnsig"/>
+      </p>
+     </solution>
+
+     <solution>  
+          <p>
+          We have:
+          <md>
+                
+                <mrow>g(x)\amp = 0</mrow>
+                 <mrow>1.2x-3.2\amp = 0</mrow>
+                <mrow>1.2x\amp = 3.2</mrow> 
+                <mrow>x\amp = \frac{3.2}{1.2}=\frac{8}{3}</mrow>.
+          </md>
+          Which we can see here:
+          <interactive desmos="310vkilgoj"/>
+      </p>
+     </solution>
+
+     </exercise>  
+
+
+     <exercise>
+    <statement>
+      <p>
+      
+          Find the equation of a line passing through<m>(2,-1)</m>,and parallel to a different line which passes through <m>(1,1)</m>and <m>(5,9)</m>.
+   </p>
+     </statement>   
+     <solution>
+      <p>
+          We start by finding the slope of the second line.  As usual: <me>m=\frac{\Delta y}{\Delta x} =\frac{9-1}{5-1}=\frac{8}{4}=2.</me>
+          Since our line is parallel to this one, they share the same slope of <m>m=2</m>.  Knowing that \we pass through <m>(2,-1)</m>, we can solve for a <m>y-</m>intercept:
+          <md>
+                <mrow>y\amp = mx+b</mrow>
+                <mrow>-1\amp = 2(2)+b</mrow>
+                <mrow>b\amp = -1-4=-5</mrow>
+                <mrow>y\amp = 2x-5.</mrow>
+          </md>
+          Or, more directly:
+          <md>
+                <mrow>y-y_0\amp = m(x-x_0)</mrow>
+                <mrow>y-1\amp = 2(x-2)</mrow>
+                <mrow>y-1\amp = 2x-4</mrow>
+                <mrow>y\amp = 2x-5.</mrow>
+          </md>
+          Visualized here:
+          <interactive desmos="l6fxmh3vhj"/>
+        </p>
+        
+     </solution>
+
+     </exercise>  
+
+
+
+
+
+
   </subsection>
   
   

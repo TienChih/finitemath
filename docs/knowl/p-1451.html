@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:45-06:00       *-->
+<!--*       on 2020-10-28T15:05:41-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,25 +12,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Evaluate (Sage)'});
-});
-</script>
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">If we want to see what would happen in subsequent games, depending on starting position, we can do this via: <div class="sagecell-sage" id="sage-28"><script type="text/x-sage">M=matrix(QQ, [[1,0.4,0,0,0,0],[0,0,0.4,0,0,0], [0,0.6,0,0.4,0,0], [0,0,0.6,0,0.4,0], [0,0,0,0.6,0,0], [0,0,0,0,0.6,1]])
-for i in range(100):
-  print(M^i*1.0)
-  print(' ')
-</script></div> Admittedly, this gets to be a bit hard to read, but what you can see is that over time, the values of the middle 4 rows go to zero.  What this translates to, is that as Adaeze continues to play, she chance that she doesnt end the game at some point goes down over time.  If we jump straight to 1000 games: <div class="sagecell-sage" id="sage-29"><script type="text/x-sage">M=matrix(QQ, [[1,0.4,0,0,0,0],[0,0,0.4,0,0,0], [0,0.6,0,0.4,0,0], [0,0,0.6,0,0.4,0], [0,0,0,0.6,0,0], [0,0,0,0,0.6,1]])
-print(M^1000*1.0)
-</script></div> We can see that if she starts with no money, she has no money (of course), if she start with \(\$100\text{,}\) she has about a 61.6% chance of going broke, and a 38.4% chance of winning.  At \(\$200\) this improves to a 36% chance of losing and a 64% chance of winning.  If she comes in with \(\$300\text{,}\) she has a 19% chance of going broke and a 81% chance of winning.  At \(\$400\text{,}\) she has a 7.6% chance of going broke, 92.4% chance of winning.  If she comes in with \(\$500\text{,}\) then she's already made her goal.</p>
-<span class="incontext"><a href="Sec_Absorb.html#p-1451">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">In order for this to happen, the average song length has to be 4 minutes.  We have \(\mu_{15}=\mu=3.75\) and \(\sigma_{15}=\frac{\sigma}{\sqrt{15}}=\frac{0.5}{\sqrt{15}}\approx 0.1291\text{.}\)  Thus \(P(X_{15}&gt;4)\approx0.0264\text{.}\) <iframe src="https://www.desmos.com/calculator/oggp7ee6qe" id="interactive-271" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="Sec_CLT.html#p-1451">in-context</a></span>
 </body>
 </html>

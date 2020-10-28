@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:29-06:00       *-->
+<!--*       on 2020-10-28T15:05:15-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,10 +14,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>Using the multiplication principle:</p>
-<ol class="decimal">
-<li>If you pick 5 times with 26 choices each, that is \(26\cdot26\cdot26\cdot26\cdot26=26^5\) choices.</li>
-<li>Each time you pick a letter, you reduce the number of choices for the next letter, so you have 26 choices for the first letter, then 25 for the next, then 24 etc. so \(26\cdot25\cdot24\cdot23\cdot 22\) choices.</li>
-</ol>
+<p>By <a class="xref" data-knowl="./knowl/RemarkPower.html" title="Remark 7.4.3">Remark 7.4.3</a> and <a class="xref" data-knowl="./knowl/RemarkLinear.html" title="Remark 7.4.1">Remark 7.4.1</a> we have:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+g'(x)\amp = \frac{d}{dx}[\sqrt{4x}+\frac{3}{x}-\frac{2}{x^2}]\\
+\amp = \frac{d}{dx}[2x^{1/2}+3x^{-1}-2x^{-2}]\\
+\amp = 2(1/2)x^{-1/2}+3(-1x^{-2})-2(2x^{-3})\\
+\amp = x^{-1/2}-3x^{-2}+4x^{-3}\\
+\amp = \frac{1}{\sqrt{x}}-\frac{3}{x^2}+\frac{4}{x^3}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">We can see this below: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/fi1nqzbrpf" id="interactive-166" width="600" height="600"></iframe></p>
 </div></body>
 </html>

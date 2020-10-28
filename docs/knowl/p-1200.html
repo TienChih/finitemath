@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:31-06:00       *-->
+<!--*       on 2020-10-28T15:05:26-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,29 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We note that there are 6 non-vegetarian dishes.</p>
-<ol class="decimal">
-<li>Ths is picking 3 of 10 objects so \(C(10,3)=120\text{.}\)</li>
-<li>Ths is picking 3 of 6 objects so \(C(6,3)=20\text{.}\)</li>
-<li>Ths is picking 3 of 4 objects so \(C(4,3)=4\text{.}\)</li>
-<li>Ths is picking 1 of 4 objects to be vegetarian, 2 of 6 objects for not vegetarian, and combining these selections, so  \(C(4,1)\cdot C(6,2)=4\cdot15 =60.\text{.}\)</li>
-<li>This is one, two or three vegetarian dishes, so<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p>So if 40% of the vehicles are built in plant A, then \(P(Y)=0.4\text{,}\) and we should be able to determine how many vehicles pass inspection.  We first note that the percent of vehicles who are from plant A and pass inspection is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-C(4,1)\cdot C(6,2)+C(4,2)\cdot C(6,1)+C(4,3)\cdot C(6,0)=4\cdot15 + 6\cdot 6+4\cdot 1 =100 
+P(X\cap Y)=P(X|Y)P(Y)=(0.85)(0.4)=0.34.
 \end{equation*}
-</div>ways to have at least one vegetarian dish.  Or if we took all 120 caterung options, and removed the 20 without vegetarian options, we would have \(120-20=100\) dishes.</li>
-</ol>
-<span class="incontext"><a href="Sec_Combinations.html#p-1200">in-context</a></span>
+</div>
+<p data-braille="continuation">Next, to see the percent of vehicles who are from plant B and pass inspection is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+P(X\cap Y^c)=P(X|Y^c)P(Y^c)=P(X|Y^c)(1-P(Y))=(0.7)(0.6)=0.42.
+\end{equation*}
+</div>
+<p data-braille="continuation">So the total percent of cars who pass inspection is:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+P(X)\amp =P(X\cap Y)+P(X\cap Y^c)\\
+\amp =P(X|Y)P(Y)+P(X|Y^c)P(Y^c)\\
+\amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
+\amp =(0.85)(0.4)+(0.7)(0.6)\\
+\amp =0.34+0.42=0.76
+\end{align*}
+</div>
+<p data-braille="continuation">We can see this below: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/ndd9pzxcqp" id="interactive-191" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="Sec_Bayes.html#p-1200">in-context</a></span>
 </body>
 </html>

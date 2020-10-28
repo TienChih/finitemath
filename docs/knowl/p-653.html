@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:05-06:00       *-->
+<!--*       on 2020-10-28T15:04:55-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let's say you have a back account that gives you 2% monthly interest and let's also say that from January to May, you deposit $100 each month. How much will you have in May? Well:</p>
-<ul class="disc">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">The 100 dollars you put in January would accrue interests for 4 months, so you'd have \(100(1.02)^4\) dollars.</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">The 100 dollars you put in February would accrue interests for 3 months, so you'd have \(100(1.02)^3\) dollars.</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">The 100 dollars you put in March would accrue interests for 2 months, so you'd have \(100(1.02)^2\) dollars.</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">The 100 dollars you put in April would accrue interests for 1 months, so you'd have \(100(1.02)^1\) dollars.</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">The 100 dollars you put in May would accrue interests for 0 months, so you'd have \(100(1.02)^0\) dollars.</p></li>
-</ul>
-<span class="incontext"><a href="Sec_RegularPayments.html#p-653">in-context</a></span>
+<p>We're given \(P=750, A=1000, n=5\text{.}\)  Thus we have:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+A\amp = P+Prn\\
+1000\amp = 750+(750)r(5)\\
+250\amp = 3750r\\
+r\amp = \frac{250}{3750}\approx 0.066\ldots
+\end{align*}
+</div>
+<p data-braille="continuation">So about 6.67\% annual simple interest: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/turr6ag5tb" id="interactive-74" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="Sec_SimpleInterest.html#p-653">in-context</a></span>
 </body>
 </html>

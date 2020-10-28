@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:16:04-06:00       *-->
+<!--*       on 2020-10-28T15:04:45-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,29 +16,55 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.2.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.5.1</span><span class="period">.</span>
 </h6>
-<p>So we note that:</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let us suppose that \(a\) represents the number of Avacado batches, \(b\) blueberry and \(c\) chocolate (wildly creative of us).</p>
+<p>Then the amount of eggs used is: 2 per avacado batch, 1 per blueberry and 1 per chocolate.  If we use 350 eggs, this gives us:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+2a+b+c=350.
+\end{equation*}
+</div>
+<p>The amount of milk used is: 1 cup per avacado batch, 1 per blueberry and 2 per chocolate.  If we use 350 cups of milk, this gives us:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a+b+2c=350.
+\end{equation*}
+</div>
+<p>The amount of cream used is: 2 cups per avacado batch, 2 per blueberry and 1 per chocolate.  If we use 400 cups of cream, this gives us:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+2a+2b+c=350.
+\end{equation*}
+</div>
+<p>Putting all this together gives us:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-A\amp = 350000\\
-P\amp = 200000\\
-n\amp = 30
+2a+b+c \amp=350\\
+a+b+2c \amp=350\\
+2a+2b+c \amp=400
 \end{align*}
 </div>
-<p>So we are solving:</p>
+<p data-braille="continuation">Which has matrix form:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-350000\amp =200000(1+i)^{30}\\
-\frac{350000}{200000}\amp =(1+i)^{30}\\
-(1+i)^{30}\amp= 1.75\\
-(1+i)\amp= (1.75)^{1/30}\approx 1.018829\\
-i\amp \approx 0.018829
-\end{align*}
+\begin{equation*}
+\left( \begin{array}{rrr|r} 
+2 \amp  1 \amp  1 \amp  350\\ 
+1 \amp  1 \amp  2 \amp  350\\ 
+2 \amp  2 \amp  1 \amp  400 \end{array} \right)
+\end{equation*}
 </div>
-<p data-braille="continuation">So the interest is about \(1.8829\%\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg"><iframe src="https://www.desmos.com/calculator/tnllurbsie" id="interactive-64" width="600" height="600"></iframe></p>
+<p data-braille="continuation">Which in turn has reduced row echelon form: Which has matrix form:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 
+1 \amp  0 \amp  0 \amp  100\\ 
+0 \amp  1 \amp  0 \amp  50\\ 
+0 \amp  0 \amp  1 \amp  100 \end{array} \right)
+\end{equation*}
 </div>
-<span class="incontext"><a href="Sec_CompoundInterest.html#solution-45">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">So 100 batches of Avacado, 50 batches of Blueberry and 100 batches of Chocolate does the trick!</p>
+</div>
+<span class="incontext"><a href="Sec_SystemasMatrix.html#solution-45">in-context</a></span>
 </body>
 </html>

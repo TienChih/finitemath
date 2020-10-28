@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-28T10:15:52-06:00       *-->
+<!--*       on 2020-10-28T15:04:38-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Entering this data in desmos: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/em6xkq7udn" id="interactive-24" width="600" height="600"></iframe></p>
-<ol class="decimal">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">It seems that the best fit line is \(y=-0.144848x+6.40121\text{.}\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">Since \(r^2=0.8318\text{,}\) we can say the murder rate is 83.18% predictable by the year.</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">In 2018, the murder rate should be \(-0.144848(18)+6.40121=3.793946\) or roughly 3.8 murders per 100,000 people in 2018.</p></li>
-</ol>
+<p>If we recall, a line needs not just a slope, but a \(y\) intercept. So how can we figure out what the \(y\) intercept should be? Well, given the slope \(\beta_1\text{,}\) ON AVERAGE, given some \(x_i\text{,}\) we should get that \(y_i=\beta_1x_i+\beta_0\text{,}\) where \(\beta_0\) is our yet-unknown \(y\)-intercept. Again, this won't happen every time, or possibly ever, but it should be the average result, so the way we find \(\beta_0\) is:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\bar{y}\amp = \beta_1\bar{x}+\beta_0\\
+\beta_0\amp = \bar{y}-\beta_1\bar{x}\text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="Sec_LinearRegression.html#p-191">in-context</a></span>
 </body>
 </html>

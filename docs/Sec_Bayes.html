@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-19T13:01:15-06:00       *-->
+<!--*       on 2020-10-28T15:04:18-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -220,21 +220,21 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_Bayes"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.4</span> <span class="title">Bayes Theorem</span>
 </h2>
-<section class="introduction" id="introduction-41"><p id="p-1136">In <a href="Sec_Conditional.html" class="internal" title="Section 8.3: Condtional Probability">Section 8.3</a> we saw that some events can change the likelihood of other events.  If we consider something like smoking and lung cancer, it's well understood that whether or not one smokes differentiates the probability that one contracts lung cancer.  Thus, we should be able to predict lung cancer rates from smoking rates, and vice versa.  We will make that formal here.</p></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-41"><p id="p-1196">In <a href="Sec_Conditional.html" class="internal" title="Section 8.3: Condtional Probability">Section 8.3</a> we saw that some events can change the likelihood of other events.  If we consider something like smoking and lung cancer, it's well understood that whether or not one smokes differentiates the probability that one contracts lung cancer.  Thus, we should be able to predict lung cancer rates from smoking rates, and vice versa.  We will make that formal here.</p></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.4.1</span> <span class="title">A Motivating Example</span>
 </h3>
-<p id="p-1137">Recall <a class="xref" data-knowl="./knowl/ExercisePlants.html" title="Checkpoint 8.3.15">Checkpoint 8.3.15</a>, if we rename our events, let \(Y\) denote “built in plant A” and \(X\) denotes “passes inspection”, then we have \(P(X|Y)=0.85, P(X|Y^c)=0.7\) measure the 85% chance for vehicles built in plant A to pass inspection, and the 70% built in B to pass inspection.  Then, how many vehicles pass inspection depends entirely on how many vehicles are manufactured in A as opposed to B. <iframe src="https://www.desmos.com/calculator/a4gs4jrer2" id="interactive-173" width="600" height="600"></iframe> If 100% of the vehicles were built in plant A, then naturally 85% of cars would pass inspection.  If they were all built in B, then only 70% would pass inspection.  For any mix of plants A and B, the number who pass inspection should be something in between.</p></section><section class="subsection" id="subsection-92"><h3 class="heading hide-type">
+<p id="p-1197">Recall <a class="xref" data-knowl="./knowl/ExercisePlants.html" title="Checkpoint 8.3.15">Checkpoint 8.3.15</a>, if we rename our events, let \(Y\) denote “built in plant A” and \(X\) denotes “passes inspection”, then we have \(P(X|Y)=0.85, P(X|Y^c)=0.7\) measure the 85% chance for vehicles built in plant A to pass inspection, and the 70% built in B to pass inspection.  Then, how many vehicles pass inspection depends entirely on how many vehicles are manufactured in A as opposed to B. <iframe src="https://www.desmos.com/calculator/a4gs4jrer2" id="interactive-190" width="600" height="600"></iframe> If 100% of the vehicles were built in plant A, then naturally 85% of cars would pass inspection.  If they were all built in B, then only 70% would pass inspection.  For any mix of plants A and B, the number who pass inspection should be something in between.</p></section><section class="subsection" id="subsection-92"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.4.2</span> <span class="title">Bayes's Theorem</span>
 </h3>
 <article class="theorem theorem-like" id="TheoremBayes"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Bayes's Theorem.</span>
 </h6>
-<p id="p-1138">Given events \(X, Y\text{:}\)</p>
+<p id="p-1198">Given events \(X, Y\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 P(X) =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y)).
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-1139">Recall that:</p>
+</div></article><article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-1199">Recall that:</p>
 <div class="displaymath">
 \begin{align*}
 P(X)\amp =P(X\cap Y)+P(X\cap Y^c)\\
@@ -242,7 +242,7 @@ P(X)\amp =P(X\cap Y)+P(X\cap Y^c)\\
 \amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))
 \end{align*}
 </div></article></div>
-<p id="p-1140">So if 40% of the vehicles are built in plant A, then \(P(Y)=0.4\text{,}\) and we should be able to determine how many vehicles pass inspection.  We first note that the percent of vehicles who are from plant A and pass inspection is</p>
+<p id="p-1200">So if 40% of the vehicles are built in plant A, then \(P(Y)=0.4\text{,}\) and we should be able to determine how many vehicles pass inspection.  We first note that the percent of vehicles who are from plant A and pass inspection is</p>
 <div class="displaymath">
 \begin{equation*}
 P(X\cap Y)=P(X|Y)P(Y)=(0.85)(0.4)=0.34.
@@ -264,8 +264,8 @@ P(X)\amp =P(X\cap Y)+P(X\cap Y^c)\\
 \amp =0.34+0.42=0.76
 \end{align*}
 </div>
-<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/ndd9pzxcqp" id="interactive-174" width="600" height="600"></iframe></p>
-<p id="p-1141">The relation in <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a> should also work the other way, if we saw that 80% of the vehicles pass inspection, what proportion of them were built in Plant A?  We are given \(P(X)=0.8\) and asked to find \(P(Y)\text{.}\)  So:</p>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/ndd9pzxcqp" id="interactive-191" width="600" height="600"></iframe></p>
+<p id="p-1201">The relation in <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a> should also work the other way, if we saw that 80% of the vehicles pass inspection, what proportion of them were built in Plant A?  We are given \(P(X)=0.8\) and asked to find \(P(Y)\text{.}\)  So:</p>
 <div class="displaymath">
 \begin{align*}
 P(X)\amp=P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
@@ -275,11 +275,11 @@ P(X)\amp=P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
 P(Y) \amp =\frac{.1}{.15}=\frac{2}{3}\approx 0.666666667.
 \end{align*}
 </div>
-<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/hyydpbhoud" id="interactive-175" width="600" height="600"></iframe></p>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/hyydpbhoud" id="interactive-192" width="600" height="600"></iframe></p>
 <article class="remark remark-like" id="remark-21"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.4.2</span><span class="period">.</span>
 </h6>
-<p id="p-1142">Reworking <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a>, we obtain:</p>
+<p id="p-1202">Reworking <a class="xref" data-knowl="./knowl/TheoremBayes.html" title="Theorem 8.4.1: Bayes's Theorem">Theorem 8.4.1</a>, we obtain:</p>
 <div class="displaymath">
 \begin{align*}
 P(X)\amp =P(X|Y)P(Y)+P(X|Y^c)(1-P(Y))\\
@@ -296,75 +296,75 @@ P(Y|X)\amp =\frac{P(Y\cap X)}{P(X)}\\
 \end{align*}
 </div></article><article class="example example-like" id="example-94"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-94"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.4.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-94"><article class="example example-like"><p id="p-1143">Suppose that out of coffee drinkers, 80% of those who use cream also add sugar, and 30% of those who don't use cream add sugar.  Suppose that 70% of coffee drinkers use cream.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-94"><article class="example example-like"><p id="p-1203">Suppose that out of coffee drinkers, 80% of those who use cream also add sugar, and 30% of those who don't use cream add sugar.  Suppose that 70% of coffee drinkers use cream.</p>
 <ol class="decimal">
-<li id="li-603">What proportion of coffee drinkers use sugar?</li>
-<li id="li-604">Given a random coffee drinker who uses sugar, what is the probability they use cream?</li>
-<li id="li-605">How many coffee drinkers drink their coffee black?  (no cream or sugar)</li>
+<li id="li-619">What proportion of coffee drinkers use sugar?</li>
+<li id="li-620">Given a random coffee drinker who uses sugar, what is the probability they use cream?</li>
+<li id="li-621">How many coffee drinkers drink their coffee black?  (no cream or sugar)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-126" id="solution-126"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-126"><div class="solution solution-like">
-<p id="p-1144">Let \(C\) denote “uses cream” and \(S\) denote “uses sugar”.  We are given \(P(S|C)=0.8, P(S|C^c)=0.3, P(C)=0.7.\)</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-164" id="solution-164"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-164"><div class="solution solution-like">
+<p id="p-1204">Let \(C\) denote “uses cream” and \(S\) denote “uses sugar”.  We are given \(P(S|C)=0.8, P(S|C^c)=0.3, P(C)=0.7.\)</p>
 <ol class="decimal">
-<li id="li-606">This is \(P(S)\text{.}\)  So:<div class="displaymath">
+<li id="li-622">This is \(P(S)\text{.}\)  So:<div class="displaymath">
 \begin{align*}
 P(S)\amp =P(S|C)P(C)+P(S|C^c)(1-P(C))\\
 P(S)\amp =(0.8)(0.7)+(0.3)(1-0.7)=0.65
 \end{align*}
-</div>Which we can see: <iframe src="https://www.desmos.com/calculator/3gypbhzj6l" id="interactive-176" width="600" height="600"></iframe> Moreover, we now know \(P(C)=0.7, P(S)=0.65, P(S\cap C)=P(S|C)P(C)=(0.8)(0.7)=0.56.\)  So we can fill out the following venn diagram: <figure class="figure figure-like" id="figure-39"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-84.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+</div>Which we can see: <iframe src="https://www.desmos.com/calculator/3gypbhzj6l" id="interactive-193" width="600" height="600"></iframe> Moreover, we now know \(P(C)=0.7, P(S)=0.65, P(S\cap C)=P(S|C)P(C)=(0.8)(0.7)=0.56.\)  So we can fill out the following venn diagram: <figure class="figure figure-like" id="figure-39"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-84.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.4.4<span class="period">.</span></span><span class="space"> </span>\(C, S\) and their probabilities</figcaption></figure>
 </li>
-<li id="li-607">This is \(P(C|S)=\frac{P(C\cap S)}{P(S)}=\frac{0.56}{0.65}\approx 0.861538\text{.}\)</li>
-<li id="li-608">This is \(P(C^c\cap S^c)=0.21\text{.}\)</li>
+<li id="li-623">This is \(P(C|S)=\frac{P(C\cap S)}{P(S)}=\frac{0.56}{0.65}\approx 0.861538\text{.}\)</li>
+<li id="li-624">This is \(P(C^c\cap S^c)=0.21\text{.}\)</li>
 </ol>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-95"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-95"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.4.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-95"><article class="example example-like"><p id="p-1145">Suppose that during the zombie apocalypse, an anti-zombification serum is developed.  People who take the serum have a 10% chance of becoming zombies, but those who don't have an 85% chance of becoming zombies. Suppose half of a city is zombified.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-95"><article class="example example-like"><p id="p-1205">Suppose that during the zombie apocalypse, an anti-zombification serum is developed.  People who take the serum have a 10% chance of becoming zombies, but those who don't have an 85% chance of becoming zombies. Suppose half of a city is zombified.</p>
 <ol class="decimal">
-<li id="li-609">What proportion of the city took the serum?</li>
-<li id="li-610">If you weren't zombified, what is the probability you took the serum?</li>
+<li id="li-625">What proportion of the city took the serum?</li>
+<li id="li-626">If you weren't zombified, what is the probability you took the serum?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-127" id="solution-127"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-127"><div class="solution solution-like">
-<p id="p-1146">Let \(S\) denote “took serum” and \(Z\) denote “zombified”.  We are given \(P(Z|S)=0.1, P(Z|S^c)=0.85, P(Z)=0.5.\)</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-165" id="solution-165"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-165"><div class="solution solution-like">
+<p id="p-1206">Let \(S\) denote “took serum” and \(Z\) denote “zombified”.  We are given \(P(Z|S)=0.1, P(Z|S^c)=0.85, P(Z)=0.5.\)</p>
 <ol class="decimal">
-<li id="li-611">This is \(P(S)\text{.}\)  So:<div class="displaymath">
+<li id="li-627">This is \(P(S)\text{.}\)  So:<div class="displaymath">
 \begin{align*}
 P(Z)\amp =P(Z|S)P(S)+P(Z|S^c)(1-P(S))\\
 P(S)\amp =\frac{P(Z)-P(Z|S^c)}{P(Z|S)-P(Z|S^c)}\\
 \amp =\frac{0.5-0.85}{0.1-0.85}=\frac{7}{15}\approx 0.4666666667.
 \end{align*}
-</div>Which we can see: <iframe src="https://www.desmos.com/calculator/gdmhlhnxga" id="interactive-177" width="600" height="600"></iframe> Moreover, we now know \(P(Z)=0.5, P(S)=\frac{7}{15}, P(S\cap Z)=P(Z|S)P(S)=(0.1)\frac{7}{15}=\frac{7}{150}\approx 0.0466666667\)  So we can fill out the following venn diagram: <figure class="figure figure-like" id="figure-40"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-85.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+</div>Which we can see: <iframe src="https://www.desmos.com/calculator/gdmhlhnxga" id="interactive-194" width="600" height="600"></iframe> Moreover, we now know \(P(Z)=0.5, P(S)=\frac{7}{15}, P(S\cap Z)=P(Z|S)P(S)=(0.1)\frac{7}{15}=\frac{7}{150}\approx 0.0466666667\)  So we can fill out the following venn diagram: <figure class="figure figure-like" id="figure-40"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-85.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.4.6<span class="period">.</span></span><span class="space"> </span>\(Z, S\) and their probabilities</figcaption></figure>
 </li>
-<li id="li-612">This is \(P(S|Z^c)=\frac{P(S\cap Z^c)}{P(Z^c)}=\frac{0.42}{0.5}\approx 0.84\text{.}\)</li>
+<li id="li-628">This is \(P(S|Z^c)=\frac{P(S\cap Z^c)}{P(Z^c)}=\frac{0.42}{0.5}\approx 0.84\text{.}\)</li>
 </ol>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-81"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-81"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-91"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-91"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-81"><article class="exercise exercise-like"><p id="p-1147">For those graduating from State University, those who go to grad school the year afterwards have a 60% chance of also working a job at the same time.  Those who don't go to grad school the year afterwards have a 90% chance of working.  If 15% of the graduates went to grad school the year afterwards, what proprtion were either working or going to grad school.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-91"><article class="exercise exercise-like"><p id="p-1207">For those graduating from State University, those who go to grad school the year afterwards have a 60% chance of also working a job at the same time.  Those who don't go to grad school the year afterwards have a 90% chance of working.  If 15% of the graduates went to grad school the year afterwards, what proprtion were either working or going to grad school.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-128" id="solution-128"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-128"><div class="solution solution-like">
-<p id="p-1148">Let \(G\) denote “grad school” and \(W\) denote “working”.  We are given \(P(W|G)=0.6, P(W|G^c)=0.9, P(G)=0.15.\)  We are asked to find \(P(G \cup W)\text{.}\)  We first find \(P(W)\text{:}\)</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-166" id="solution-166"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-166"><div class="solution solution-like">
+<p id="p-1208">Let \(G\) denote “grad school” and \(W\) denote “working”.  We are given \(P(W|G)=0.6, P(W|G^c)=0.9, P(G)=0.15.\)  We are asked to find \(P(G \cup W)\text{.}\)  We first find \(P(W)\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 P(W)\amp =P(W|G)P(G)+P(W|G^c)(1-P(G))\\
 \amp =(0.6)(0.15)+(0.9)(1-0.15)=0.855
 \end{align*}
 </div>
-<p data-braille="continuation">Which we can see: <iframe src="https://www.desmos.com/calculator/zzqjesbder" id="interactive-178" width="600" height="600"></iframe> Moreover, we now know \(P(G)=0.15, P(W)=0.855, P(G\cap W)=P(W|G)P(G)=(0.6)(0.15)=0.09\)  So we can fill out the following venn diagram: <figure class="figure figure-like" id="figure-41"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-86.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<p data-braille="continuation">Which we can see: <iframe src="https://www.desmos.com/calculator/zzqjesbder" id="interactive-195" width="600" height="600"></iframe> Moreover, we now know \(P(G)=0.15, P(W)=0.855, P(G\cap W)=P(W|G)P(G)=(0.6)(0.15)=0.09\)  So we can fill out the following venn diagram: <figure class="figure figure-like" id="figure-41"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-86.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.4.8<span class="period">.</span></span><span class="space"> </span>\(G, W\) and their probabilities</figcaption></figure> So \(P(W\cup G)=0.06+0.765+0.09=0.915\) or \(P(W\cup G)=P(W)+P(G)-P(W\cap G)=0.855+0.15-0.09=0.915\text{.}\)</p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-82"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-82"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-92"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-92"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-82"><article class="exercise exercise-like"><p id="p-1149">Suppose that a test for a virus has a 90% chance of returning a positive result if a person is infected with the virus, but a 8% chance of returning a positive result if not infected.  Suppose that people are randomly tested and 30% of the tests are coming back positive.  If Andre went out, took the test and it came back positive, what is the probability he has been infected?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-92"><article class="exercise exercise-like"><p id="p-1209">Suppose that a test for a virus has a 90% chance of returning a positive result if a person is infected with the virus, but a 8% chance of returning a positive result if not infected.  Suppose that people are randomly tested and 30% of the tests are coming back positive.  If Andre went out, took the test and it came back positive, what is the probability he has been infected?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-129" id="solution-129"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-129"><div class="solution solution-like">
-<p id="p-1150">Let \(I\) denote “infected” and \(T\) denote “tested positive”.  We are given \(P(T|I)=0.9, P(T|I^c)=0.08, P(T)=0.3.\)  We are asked to find \(P(I|T)\text{.}\)  We first find \(P(I)\text{:}\)</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-167" id="solution-167"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-167"><div class="solution solution-like">
+<p id="p-1210">Let \(I\) denote “infected” and \(T\) denote “tested positive”.  We are given \(P(T|I)=0.9, P(T|I^c)=0.08, P(T)=0.3.\)  We are asked to find \(P(I|T)\text{.}\)  We first find \(P(I)\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 P(T)\amp =P(T|I)P(I)+P(T|I^c)(1-P(I))\\
@@ -372,7 +372,7 @@ P(I) \amp =\frac{P(T)-P(T|I^c)}{P(T|I)-P(T|I^c)}\\
 \amp =\frac{0.3-0.08}{0.9-0.08}=\frac{0.22}{0.82}=\frac{11}{41}\approx 0.26829 
 \end{align*}
 </div>
-<p data-braille="continuation">Which we can see: <iframe src="https://www.desmos.com/calculator/qlwn25vdod" id="interactive-179" width="600" height="600"></iframe> Moreover, we now know \(P(I)=\frac{11}{41}, P(T)=0.3, P(T\cap I)=P(T|I)P(I)=(0.9)\frac{11}{41}=\frac{99}{410}\)  So we can fill out the following venn diagram: <figure class="figure figure-like" id="figure-42"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-87.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<p data-braille="continuation">Which we can see: <iframe src="https://www.desmos.com/calculator/qlwn25vdod" id="interactive-196" width="600" height="600"></iframe> Moreover, we now know \(P(I)=\frac{11}{41}, P(T)=0.3, P(T\cap I)=P(T|I)P(I)=(0.9)\frac{11}{41}=\frac{99}{410}\)  So we can fill out the following venn diagram: <figure class="figure figure-like" id="figure-42"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-87.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.4.10<span class="period">.</span></span><span class="space"> </span>\(I, T\) and their probabilities</figcaption></figure> So \(P(I|T)=\frac{P(I\cap T)}{P(T)}=\frac{99/410}{0.3}=\frac{33}{41}\approx 0.80488\text{.}\)</p>
 </div></div>
 </div></article></div></section></section></div></main>

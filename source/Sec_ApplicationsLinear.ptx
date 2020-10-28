@@ -38,8 +38,7 @@
         We are given that <m>T(32)=0</m> and <m>T(212)=100</m>.
         This gives us points <m>(32,0)</m> and <m>(212,100)</m>,
         so this bears some similarity to <xref ref="Example_PandP">Example</xref>.
-        <ol>
-          <li>
+        </p>
             <p>
               We first identify the slope of the function:
               <me>
@@ -57,8 +56,8 @@
                  <latex-image> <![CDATA[\begin{tikzpicture}[yscale=1/24, xscale=1/24][domain=-1:10] \draw[gray!50, thin, step=20] (0,-20) grid (212,100); \draw[very thick,->] (0,0) -- (212.1,0) node[right] {\(F\)}; \draw[very thick,->] (0,-20) -- (0,100.1) node[above] {\(C\)};  \foreach \x in {0,20,...,200} \draw (\x,0.05) -- (\x,-0.05) node[below] {\x}; \foreach \y in {0,20,...,100} \draw (-0.05,\y) -- (0.05,\y) node[left] {\y};   \draw[scale=1,domain=0:212,smooth,variable=\x,blue] plot ({\x},{(5/9)*\x-160/9});   \draw[blue] (106,60) --node[above]{\(C=T(F)=\frac{5}{9}F-\frac{160}{9}\)}(106,60);\end{tikzpicture}]]> </latex-image>
               </image>
             </p>
-          </li>
-          <li>
+          </solution>
+          <solution>
             <p>
               When it's 10 degrees, we have that <m>\color{teal}{F=10}</m> and so:
               <md>
@@ -72,8 +71,8 @@
                  <latex-image> <![CDATA[\begin{tikzpicture}[yscale=1/20, xscale=1/20][domain=-1:10] \draw[gray!50, thin, step=20] (0,-20) grid (212,100); \draw[very thick,->] (0,0) -- (212.1,0) node[right] {\(F\)}; \draw[very thick,->] (0,-20) -- (0,100.1) node[above] {\(C\)};  \foreach \x in {0,20,...,200} \draw (\x,0.05) -- (\x,-0.05) node[below] {\x}; \foreach \y in {0,20,...,100} \draw (-0.05,\y) -- (0.05,\y) node[left] {\y};   \draw[scale=1,domain=0:212,smooth,variable=\x,blue] plot ({\x},{(5/9)*\x-160/9});   \draw[blue] (106,60) --node[above]{\(C=\frac{5}{9}F-\frac{160}{9}\)}(106,60); \draw[ultra thick, dashed, ForestGreen] (10,-20) --node[right]{\(F=10\)} (10,100);  \node at (10,-12.22222){\(*\)}; \draw (10,-12.22222) --node[right]{\((10,-\frac{110}{9})\)}(10,-12.22222);\end{tikzpicture}]]> </latex-image>
               </image>
             </p>
-          </li>
-          <li>
+          </solution>
+          <solution>
             <p>
               When it's 30 degrees Celsius i.e.<nbsp/><m>\color{orange}{C=30}</m> we have:
               <md>
@@ -88,14 +87,9 @@
               <image>
                  <latex-image> <![CDATA[\begin{tikzpicture}[yscale=1/20, xscale=1/20][domain=-1:10] \draw[gray!50, thin, step=20] (0,-20) grid (212,100); \draw[very thick,->] (0,0) -- (212.1,0) node[right] {\(F\)}; \draw[very thick,->] (0,-20) -- (0,100.1) node[above] {\(C\)};  \foreach \x in {0,20,...,200} \draw (\x,0.05) -- (\x,-0.05) node[below] {\x}; \foreach \y in {0,20,...,100} \draw (-0.05,\y) -- (0.05,\y) node[left] {\y};   \draw[scale=1,domain=0:212,smooth,variable=\x,blue] plot ({\x},{(5/9)*\x-160/9});   \draw[blue] (106,60) --node[above]{\(C=\frac{5}{9}F-\frac{160}{9}\)}(106,60); \draw[ultra thick, dashed, orange] (0,30) --node[below]{\(C=30\)} (210,30);  \node at (86,30){\(*\)}; \draw (86,30) --node[above left]{\((86,30)\)}(86,30);\end{tikzpicture}]]> </latex-image>
               </image>
+              Desmos representation here: <interactive desmos="tyoznzrk53"  />
             </p>
-          </li>
-        </ol>
-      </p>
-      <p>
-        Desmos representation here: <interactive desmos="tyoznzrk53"  />
-      </p>
-    </solution>
+          </solution>
   </example>
   <example xml:id="Example_Proft">
     <statement>
@@ -128,26 +122,14 @@
       </p>
     </statement>
     <solution>
-      
-      <ol>
-        <li>
-          <p>
-            We break these down one at a time.
-          </p>
-          <ol>
-            <li>
               <p>
                 The marginal cost or cost per widget is $3, and the cost for producing no widgets is the fixed cost of $20.
                 Thus <m>C(x)=3x+20</m>.
               </p>
-            </li>
-            <li>
               <p>
                 You get $5 per widget sold,
                 and clearly do not get any money for selling nothing, so <m>R(x)=5x+0=5x</m>.
               </p>
-            </li>
-            <li>
               <p>
                 Profit is Revenue
                 (money generated)
@@ -155,23 +137,22 @@
                 (money spent).
                 Thus <m>P(x)=R(x)-C(x)=5x-(3x+20)=2x-20</m>.
               </p>
-            </li>
-          </ol>
+            
           <image>
              <latex-image> <![CDATA[\begin{tikzpicture}[yscale=1/20, xscale=1/5] \draw[gray!50, thin, step=5] (0,-20) grid (40,120); \draw[very thick,->] (0,0) -- (40.1,0) node[right] {\(x\)}; \draw[very thick,->] (0,-20) -- (0,120.1) node[above] {\(y\)};  \foreach \x in {0,5,...,40} \draw (\x,0.05) -- (\x,-0.05) node[below] {\x}; \foreach \y in {0,20,...,120} \draw (-0.05,\y) -- (0.05,\y) node[left] {\y};   \draw[scale=1,domain=0:34,smooth,variable=\x,blue] plot ({\x},{3*\x+20});  \draw[scale=1,domain=0:24,smooth,variable=\x,red] plot ({\x},{5*\x});  \draw[scale=1,domain=0:40,smooth,variable=\x,purple] plot ({\x},{2*\x-20});  \draw[blue] (25,95) --node[below right]{\(C(x)=3x+20\)}(25,95); \draw[red] (20,100) --node[left]{\(R(x)=5x\)}(20,100); \draw[purple] (25,30) --node[below right]{\(P(x)=2x-20\)}(25,30);\end{tikzpicture}]]> </latex-image>
           </image>
           <p>
-            <interactive desmos="d6l9b3kqho"  />
+            An interactive versionmay be found here:  <interactive desmos="d6l9b3kqho"  />
           </p>
-        </li>
-        <li>
+        </solution>
+        <solution>
           <p>
             Since <m>P(x)=2x-20</m>,
             the change per unit of <m>x</m> or profit per widget is the slope,
             or $2/widget.
           </p>
-        </li>
-        <li>
+        </solution>
+        <solution>
           <p>
             When you produce <m>\color{teal}{x=30}</m> widgets, the cost will be:
             <md>
@@ -186,8 +167,8 @@
             </image>
             <interactive desmos="cmoor2agyv"  />
           </p>
-        </li>
-        <li>
+        </solution>
+        <solution>
           <p>
             The break even occurs when the profit is zero, <m>\color{orange}{P(x)=0}</m>.
             <md>
@@ -202,14 +183,12 @@
             </image>
             <interactive desmos="bdtdeqzqqa"  />
           </p>
-        </li>
-      </ol>
     </solution>
   </example>
   <example>
     <statement>
       <p>
-        <term>Question:<nbsp/></term> Dr.<nbsp/>Johnson is traveling to visit her mother for a holiday.
+         Dr. Johnson is traveling to visit her mother for a holiday.
         She drives at a constant speed of 75 mph.
         After 3 hours,
         she passes a landmark that she knows is 200 miles from her mom's house.
@@ -234,9 +213,7 @@
       </p>
     </statement>
     <solution>
-      <p>
-        <ol>
-          <li>
+      
             <p>
               Since she is driving towards her mom's house,
               the distance from her to the house decreases at a rate of 75 miles per hour.
@@ -257,14 +234,14 @@
               </image>
               <interactive desmos="uoul2cdsjs"  />
             </p>
-          </li>
-          <li>
+    </solution>
+    <solution>
             <p>
               At the start of the journey, <m>\color{teal}{t=0}</m>,
               and so she was <m>D(\color{teal}{0})=-75\cdot\color{teal}{0}+425=425</m> miles from her mother's house. <interactive desmos="xuzh7xcgwk"  />
             </p>
-          </li>
-          <li>
+    </solution>
+    <solution>
             <p>
               When she arrives,
               her distance from her mothers house is <m>\color{orange}{D(t)=0}</m> miles and so:
@@ -280,15 +257,12 @@
               </image>
               <interactive desmos="dilrensiar"  />
             </p>
-          </li>
-        </ol>
-      </p>
     </solution>
   </example>
   <example xml:id="Example_">
     <statement>
       <p>
-        <term>Question:<nbsp/></term> Consider the following graphs of functions <m>q=S(p), D(p)</m>,
+        Consider the following graphs of functions <m>q=S(p), D(p)</m>,
         where <m>p</m> is the price of a product,
         and <m>q</m> is the quantity demanded.
       </p>
@@ -328,8 +302,7 @@
       </ol>
     </statement>
       <solution>
-      <ol>
-        <li>
+      
           <p>
             It helps if we can identify some points on these lines.
             We will work on them one at a time.
@@ -364,8 +337,8 @@
               </p>
             </li>
           </ol>
-        </li>
-        <li>
+        </solution>
+        <solution>
           <p>
             When <m>p=350</m>,
             we will have <m>S(350)=3*350=1050</m> products supplied,
@@ -378,8 +351,8 @@
             </image>
             <interactive desmos="dee7rqh07j"  />
           </p>
-        </li>
-        <li>
+        </solution>
+        <solution>
           <p>
             The equilibrium point is the point where the quantity supplied and demanded are the same.
             Algebraically, this means <m>D(p)=S(p)</m>, and so:
@@ -397,8 +370,7 @@
             </image>
             <interactive desmos="aywru3gvxu"  />
           </p>
-        </li>
-      </ol>
+        
     </solution>
   </example>
   <p>
@@ -407,4 +379,124 @@
     what sort of questions one can answer with them,
     and how to address them when the time comes.
   </p>
+
+  <exercise>
+    <statement>
+      <p>
+    A soda manufacturer can produce 1,000 cases of
+soda in a week at a total cost of $5,500 and 1,500 cases of
+soda at a total cost of $7,500.
+
+  <ol>
+    <li>
+      Find the manufacturer's weekly <em>fixed</em> and <em>marginal</em> costs.
+     </li>
+     <li>
+      How much would it cost the manufacturer to produce 2,000 cases of soda?
+    </li>
+    <li>
+      How much soda could be produced for $8,000?
+     </li>
+     </ol>  
+     </p>
+     </statement> 
+     <solution>
+      <p>
+        We note that marginal cost is the price per can, i.e. the slope of the cost/can line.  We recall that <me>m=\frac{\Delta y}{\Delta x}=\frac{7500-5500}{1500-1000}=\frac{2000}{5000}=4</me> or $4/can.
+      </p>
+      <p>
+      To find the fixed cost, this is the cost before production, or the cost of producing 0 cans, i.e. the y-intercept:
+      <md>
+      <mrow>C(x)\amp=mx+b</mrow>
+      <mrow>C(x)\amp=4x+b</mrow> 
+      <mrow>5500\amp=4(1000)+b</mrow> 
+      <mrow>5500\amp=4000+b</mrow>
+      <mrow>b\amp=1500.</mrow>
+    </md>
+      So the fixed cost of $1500 prior to production.  Note that we could have found these in other ways as well.
+      <interactive desmos="gyce1fygcu"/>
+      </p>
+     </solution> 
+     <solution>
+      <p>
+        We have already found that <m>C(x)=4x+1500</m> where x is the number of cases of soda produced.  So if we produce 2,000 cases, <m>x=2000</m> and:
+        <md>
+          <mrow>C(x)\amp=4x+1500</mrow>
+          <mrow>C(x)\amp=4(2000)+1500</mrow>
+          <mrow>C(x)\amp=8000+1500</mrow>
+          <mrow>C(x)\amp=9500</mrow>
+        </md>
+        So the cost would be $9,500:   <interactive desmos="h1icdb02bg"/> 
+      </p>
+     </solution> 
+     <solution>
+      <p>
+        If we are given that the cost of production is $8,000, we have <m>C(x)=8000</m> and:
+        <md>
+          <mrow>C(x)\amp=4x+1500</mrow>
+          <mrow>8000\amp=4x+1500</mrow>
+          <mrow>4x\amp=6500</mrow>
+          <mrow>x\amp=\frac{6500}{4}=1625</mrow>
+        </md>
+        So we could produce 1625 cases:   <interactive desmos="ajmvs2bzhy"/> 
+      </p>
+     </solution> 
+  </exercise> 
+
+
+  <exercise>
+    <statement>
+      <p>
+    The number of users of a new app was 2,000 at the start of the year and grows at a steady rate. After 5 weeks it is 5,000 people.  Let <m>U(t)</m> denote the number of users in <m>t</m> weeks.
+
+  <ol>
+    <li>
+      Find <m>U(t)</m>.
+     </li>
+     <li>
+      How many users will there be in 52 weeks??
+    </li>
+    <li>
+      When will the app have 17,000 users?
+     </li>
+     </ol>  
+     </p>
+     </statement> 
+     <solution>
+      <p>
+        We note <m>U(t)=mt+b</m>.  Moreover, initially when <m>t=0</m> there were 2,000 users so <m>U(0)=2000</m> and <m>b=2000</m>.  To find <m>m</m>: <me>m=\frac{\Delta U}{\Delta t}=\frac{5000-2000}{5-0}=\frac{3000}{6}=500</me>.  So the app gains 600 users per week and: <m>U(t)=600t+2000</m>
+      
+      <interactive desmos="s8ulml5tjn"/>
+      </p>
+     </solution> 
+     <solution>
+      <p>
+        We have already found that <m>U(t)=600t+2000</m>,so in 52 weeks, <m>t=52</m> and:
+        <md>
+          <mrow>U(t)\amp=600t+2000</mrow>
+          <mrow>U(t)\amp=600(52)+2000</mrow>
+          <mrow>U(t)\amp=31200+2000</mrow>
+           <mrow>U(t)\amp=33200.</mrow>
+        </md>
+        So the app would have 33,200 users:   <interactive desmos="covr60dclm"/> 
+      </p>
+     </solution> 
+     <solution>
+      <p>
+        If we are given that there are 17,000 users, we have <m>U(t)=17000</m> and:
+        <md>
+          <mrow>U(t)\amp=600t+2000</mrow>
+          <mrow>17000\amp=600t+2000</mrow>
+           <mrow>600t\amp=15000</mrow>
+            <mrow>t\amp=\frac{15000}{600}=25.</mrow>
+        </md>
+        So we would have 17,000 users in 25 weeks:   <interactive desmos="zwcm1vi8fi"/> 
+      </p>
+     </solution> 
+  </exercise>  
+
+
+
+
+
 </section>

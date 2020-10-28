@@ -407,7 +407,7 @@
             </li>
             <li>
               <p>
-                How much of a factor is the year in predictiung the number of murders?
+                How much of a factor is the year in predicting the number of murders?
               </p>
             </li>
             <li>
@@ -506,6 +506,198 @@
     </p>
   </solution>
 </example>
+
+
+      <exercise>
+      <statement>
+        <p>
+          TThe following table
+shows soybean production, in millions of tons, in the United
+States as a function of the cultivated area, in millions of acres:
+          <me>
+            \begin{array}{c|c} \text{ Area (millions of acres) }  \amp  \text{ Production (millions of tons) } \\ x\amp y\\ 
+            \hline 
+            30\amp 20\\ 
+            42\amp 33\\ 
+            69\amp 55\\ 
+            59\amp 57\\ 
+            74\amp 83\\ 
+           74\amp 88\\
+             \end{array}
+          </me>
+          <ol>
+            <li>
+              <p>
+                Determine the best fit line of production as a function of area.
+              </p>
+            </li>
+            <li>
+              <p>
+              Find the correlation coefficient, what does it tell us?
+            </p>
+            </li>
+            <li>
+              <p>
+                Interpret the slope of the regression line
+              </p>
+            </li>
+            <li>
+              <p>
+                Predict the production (in millions of tons) if 65 million acres are dedicated to soybean farming.
+              </p>
+            </li>
+            <li>
+              <p>
+                Predict the area (in millions of acres) used to farm soybeans if 70 million tons are produced.
+              </p>
+            </li>
+          </ol>
+        </p>
+        </statement>
+        <solution>
+        <p>
+          Entering this data in desmos: 
+          <interactive desmos="gdszirroq1"  />
+          
+          <ol>
+            <li>
+              <p>
+                It seems that the best fit line is <m>y=1.37993x-24.0358</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+              We have that <m>r=0.9436</m> so a strong positive relationship.
+            </p>
+            </li>
+            <li>
+              <p>
+                Units of <m>y</m> are g, units of <m>x</m> are inkg, so the slope represents about an increase of 3.85777 grams in a cats heart's weight per kg of the cat's weight.
+              </p>
+            </li>
+            <li>
+              <p>
+                So 65 million acres means <m>x=65</m> and 
+                <m>y=1.37993(65)-24.0358=65.65965</m> or roughly 65.66 million tons.  So 65 million acres of farming produces on average 65.66 tons of soybeans.
+              </p>
+            </li>
+            <li>
+              <p>
+                If 70 million tons are produced, then we have <m>y=70</m>. So we have:
+                <md>
+                  <mrow>y\amp= 1.37993x-24.0358</mrow>
+                  <mrow>70\amp= 1.37993x-24.0358</mrow>
+                  <mrow>1.37993x\amp=94.0358</mrow>
+                  <mrow>x\amp=\frac{94.0358}{1.37993}\approx 68.145</mrow>
+                </md>  
+              So if 70 million tons of soybeans are produced, it on average would take 68.145 million acres to produce.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+
+      <exercise>
+      <statement>
+        <p>
+          The following table
+shows the weight of cats in kg and their hearts in grams.  Fifteen cats were measured:
+          <me>
+            \begin{array}{c|c} \text{ Cat weight (kg) }  \amp  \text{ Heart weight (g) } \\ x\amp y\\ \hline 2.077\amp 7.955\\ 
+            2.110\amp 8.539\\ 
+            3.572\amp 14.011\\ 
+            2.603\amp 10.449\\ 
+            3.067\amp 11.942\\ 
+            3.631\amp 14.454\\
+            3.080\amp 12.001\\
+            2.584\amp 10.062\\
+            3.085\amp 12.115\\
+            2.769\amp 10.853\\
+            3.678\amp 14.653\\
+            3.048\amp 12.131\\
+            3.810\amp 15.079\\
+            2.756\amp 10.724\\
+             \end{array}
+          </me>
+          <ol>
+            <li>
+              <p>
+                Determine the best fit line of Heart weight as a function of cat weight.
+              </p>
+            </li>
+            <li>
+              <p>
+              Find the correlation coefficient, what does it tell us?
+            </p>
+            </li>
+            <li>
+              <p>
+                Interpret the slope of the regression line
+              </p>
+            </li>
+            <li>
+              <p>
+                Predict the weight of a cats heart (in grams) if the cat weight 3.5 kg.
+              </p>
+            </li>
+            <li>
+              <p>
+                Predict the weight of a cat (in kg) if the cat's heart weighs 13 g.
+              </p>
+            </li>
+          </ol>
+        </p>
+        </statement>
+        <solution>
+        <p>
+          Entering this data in desmos: 
+          <interactive desmos="ewrufu6pfg"  />
+          
+          <ol>
+            <li>
+              <p>
+                It seems that the best fit line is <m>y=3.85777x+0.234354</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+              We have that <m>r=0.9969</m> so an extremely strong positive relationship.
+            </p>
+            </li>
+            <li>
+              <p>
+                Units of <m>y</m> are g, units of <m>x</m> are inkg, so the slope represents about an increase of 3.85777 grams in a cats heart's weight per kg of the cat's weight.
+              </p>
+            </li>
+            <li>
+              <p>
+                So 3.5 kg means <m>x=3.5</m> and 
+                <m>y=3.85777(3.5)+0.234354=13.736549</m> or roughly 13.737 g.  So a cat weighing 3.5 kg would have a heart that weighs about 13.737 grams.
+              </p>
+            </li>
+            <li>
+              <p>
+                If the cat's heart weighs 13 g, then we have <m>y=13</m>. So we have:
+                <md>
+                  <mrow>y\amp= 3.85777x+0.234354</mrow>
+                  <mrow>13\amp= 3.85777x+0.234354</mrow>
+                  <mrow>3.85777x\amp=13-0.234354</mrow>
+                  <mrow>3.85777x\amp=12.765646</mrow>
+                  <mrow>x\amp=\frac{12.765646}{3.85777}\approx 3.309</mrow>
+                </md>  
+              So a cat whose heart weighs 13 g most likely weighs about 3.309 kg.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+
+
+
 
   </subsection>
   <subsection>
