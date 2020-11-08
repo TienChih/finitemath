@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-30T07:31:56-06:00       *-->
+<!--*       on 2020-11-08T13:10:06-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -220,16 +220,16 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="DerivativeExp"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.6</span> <span class="title">Derivative of Exponentials</span>
 </h2>
-<section class="introduction" id="introduction-34"><p id="p-1069">When we graph an exponential function, say an increasing one \(f(x)=a^x, a&gt;1\text{,}\) we imagine a function that curves up towards infinity as \(x\) increases and converges  to 0  as \(x\) decreases. <iframe src="https://www.desmos.com/calculator/51zxitu9xc" id="interactive-176" width="600" height="600"></iframe> What then should it's derivatives look like? Well it seems like the slopes are initially shallow, and then as we go forward the slopes start to increase, and they get progressively and progressively larger. In other words <em class="emphasis">the derivative is also an exponential function!</em> <iframe src="https://www.desmos.com/calculator/etbmc1ttzo" id="interactive-177" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-78"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-34"><p id="p-1088">When we graph an exponential function, say an increasing one \(f(x)=a^x, a&gt;1\text{,}\) we imagine a function that curves up towards infinity as \(x\) increases and converges  to 0  as \(x\) decreases. <iframe src="https://www.desmos.com/calculator/51zxitu9xc" id="interactive-176" width="600" height="600"></iframe> What then should it's derivatives look like? Well it seems like the slopes are initially shallow, and then as we go forward the slopes start to increase, and they get progressively and progressively larger. In other words <em class="emphasis">the derivative is also an exponential function!</em> <iframe src="https://www.desmos.com/calculator/etbmc1ttzo" id="interactive-177" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-78"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.6.1</span> <span class="title">Computing the derivative of Exponentials</span>
 </h3>
-<p id="p-1070">Which one? Let's first start with a special case, what is the derivative of \(f(x)=e^x\text{?}\) \(e\) is a special number, it has the peculiar property that:</p>
+<p id="p-1089">Which one? Let's first start with a special case, what is the derivative of \(f(x)=e^x\text{?}\) \(e\) is a special number, it has the peculiar property that:</p>
 <div class="displaymath">
 \begin{equation*}
 \limit{h}{0}\frac{e^h-1}{h}=1\text{.}
 \end{equation*}
 </div>
-<p id="p-1071">The proof of this is a fairly sophisticated fact and is not trivial, but we may still visualize the limit itself: <iframe src="https://www.desmos.com/calculator/iscxmzoqip" id="interactive-178" width="600" height="600"></iframe> Using this fact, we can deduce:</p>
+<p id="p-1090">The proof of this is a fairly sophisticated fact and is not trivial, but we may still visualize the limit itself: <iframe src="https://www.desmos.com/calculator/iscxmzoqip" id="interactive-178" width="600" height="600"></iframe> Using this fact, we can deduce:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[e^x]\amp = \limit{h}{0}\frac{e^{x+h}-e^x}{h}\\
@@ -238,8 +238,8 @@ MathJax.Hub.Config({
 \amp = e^x\cdot1=e^x\text{.}
 \end{align*}
 </div>
-<p id="p-1072">So this explains one of the reaons why \(e\) is such a significant number in mathematics, it is the unique number so that the exponential \(e^x\) is it's own derivative.</p>
-<p id="p-1073">So, to compute the actual derivative of \(a^x\text{:}\)</p>
+<p id="p-1091">So this explains one of the reaons why \(e\) is such a significant number in mathematics, it is the unique number so that the exponential \(e^x\) is it's own derivative.</p>
+<p id="p-1092">So, to compute the actual derivative of \(a^x\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[a^x]\amp = \frac{d}{dx}[(e^{\ln(a)})^x],\ \text{ since exponentiating by \(e\) and \(\ln\) are inverses }\\
@@ -251,10 +251,10 @@ MathJax.Hub.Config({
 </div>
 <article class="example example-like" id="example-76"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-76"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.6.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-76"><article class="example example-like"><p id="p-1074">Let's try the derivative of \(f(x)=e^{x}x^2\) and \(h(x)=2^{\frac{x}{x+1}}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-76"><article class="example example-like"><p id="p-1093">Let's try the derivative of \(f(x)=e^{x}x^2\) and \(h(x)=2^{\frac{x}{x+1}}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-140" id="solution-140"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-140"><div class="solution solution-like">
-<p id="p-1075">We first have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-147" id="solution-147"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-147"><div class="solution solution-like">
+<p id="p-1094">We first have:</p>
 <div class="displaymath">
 \begin{align*}
 f'(x)\amp = \frac{d}{dx}[e^xx^2]\\
@@ -262,7 +262,7 @@ f'(x)\amp = \frac{d}{dx}[e^xx^2]\\
 \amp = e^xx^2+e^x2x\text{.}
 \end{align*}
 </div>
-<p id="p-1076">Next, we compute:</p>
+<p id="p-1095">Next, we compute:</p>
 <div class="displaymath">
 \begin{align*}
 h'(x)\amp = \frac{d}{dx}[2^{\frac{x}{x+1}}]\\
@@ -273,12 +273,12 @@ h'(x)\amp = \frac{d}{dx}[2^{\frac{x}{x+1}}]\\
 </div>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-79"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-79"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-83"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-83"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.6.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-79"><article class="exercise exercise-like"><p id="p-1077">The daily revenue of a local convient store, \(t\) days after opening is \(R(t)=10-8e^{-0.02t}\) in thousands of dollars.  How is the daily revenue increasing or decreasing after 30 days?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-83"><article class="exercise exercise-like"><p id="p-1096">The daily revenue of a local convient store, \(t\) days after opening is \(R(t)=10-8e^{-0.02t}\) in thousands of dollars.  How is the daily revenue increasing or decreasing after 30 days?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-141" id="solution-141"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-141"><div class="solution solution-like">
-<p id="p-1078">We note that:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-148" id="solution-148"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-148"><div class="solution solution-like">
+<p id="p-1097">We note that:</p>
 <div class="displaymath">
 \begin{align*}
 R'(t)\amp = \frac{d}{dt}[10-8e^{-0.02t}]\\
@@ -290,9 +290,9 @@ R'(t)\amp = \frac{d}{dt}[10-8e^{-0.02t}]\\
 <p data-braille="continuation">Thus \(R'(30)=0.16e^{-0.02(30)}\approx 0.088\) so increasing by about \(\$88 \) a day. <iframe src="https://www.desmos.com/calculator/f1qvuthw3h" id="interactive-179" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-80"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-80"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-84"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-84"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.6.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-80"><article class="exercise exercise-like"><p id="p-1079">The quantity of a drug injected in a patient is</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-84"><article class="exercise exercise-like"><p id="p-1098">The quantity of a drug injected in a patient is</p>
 <div class="displaymath">
 \begin{equation*}
 D(t)=te^{-0.25t}
@@ -300,12 +300,12 @@ D(t)=te^{-0.25t}
 </div>
 <p data-braille="continuation">where \(D\) is measured in mL and \(t\) is in minutes after injection.</p>
 <ol class="decimal">
-<li id="li-475">How is the drug quantity changing in 2 minutes?</li>
-<li id="li-476">When does the drug quantity start to decrease?</li>
+<li id="li-486">How is the drug quantity changing in 2 minutes?</li>
+<li id="li-487">When does the drug quantity start to decrease?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-142" id="solution-142"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-142"><div class="solution solution-like">
-<p id="p-1080">We note that:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-149" id="solution-149"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-149"><div class="solution solution-like">
+<p id="p-1099">We note that:</p>
 <div class="displaymath">
 \begin{align*}
 D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]\\
@@ -317,8 +317,8 @@ D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]\\
 </div>
 <p data-braille="continuation">So with that:</p>
 <ol class="decimal">
-<li id="li-477">Notce \(D'(2)=(1-0.25(2))e^{-0.25(2)}\approx 0.303 \) or increasing by 0.303 mL/minute.</li>
-<li id="li-478">We note that the quantity decreases when \(D'(t)=(1-0.25t)e^{-0.25t}\lt 0\) so:<div class="displaymath">
+<li id="li-488">Notce \(D'(2)=(1-0.25(2))e^{-0.25(2)}\approx 0.303 \) or increasing by 0.303 mL/minute.</li>
+<li id="li-489">We note that the quantity decreases when \(D'(t)=(1-0.25t)e^{-0.25t}\lt 0\) so:<div class="displaymath">
 \begin{align*}
 (1-0.25t)e^{-0.25t}\amp \lt 0\\
 (1-0.25t)\amp \lt 0\\

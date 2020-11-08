@@ -173,6 +173,102 @@
 
     <me> \begin{pmatrix}x\\y\\z\end{pmatrix}=\begin{pmatrix} 0.3 \amp 0.8 \amp 0.5 \\  1.5 \amp 0.2 \amp 0.7\\ 0.5 \amp -0.5 \amp 0.2 \end{pmatrix}^{-1}\begin{pmatrix}10\\15\\20\end{pmatrix}=\begin{pmatrix} -\frac{195}{134} \amp \frac{205}{134} \amp -\frac{115}{67} \\  -\frac{25}{134} \amp \frac{95}{134} \amp -\frac{135}{67}\\ \frac{425}{134} \amp -\frac{275}{134} \amp \frac{285}{67} \end{pmatrix}\begin{pmatrix}10\\15\\20\end{pmatrix}=\begin{pmatrix}-\frac{3475}{134}\\-\frac{4225}{134}\\\frac{11525}{134}\end{pmatrix}.</me>
   </p>  
+
+
+
+
+    <exercise>
+      <statement>
+        <p>
+      The Acme Juice Company makes
+three juice blends: PineOrange, using 2 quarts of pineapple
+juice and 2 quarts of orange juice per gallon; PineKiwi,
+using 3 quarts of pineapple juice and 1 quart of kiwi juice
+per gallon; and OrangeKiwi, using 3 quarts of orange juice
+and 1 quart of kiwi juice per gallon. The amount of each
+kind of juice the company has on hand varies from day to
+day. How many gallons
+of each blend can it make on a day
+with the following stocks?
+
+  <ol>
+    <li> 400 quarts of pineapple juice, 400 quarts of orange juice and 100 quarts of kiwi juice.</li>
+    <li> 400 quarts of pineapple juice, 325 quarts of orange juice and 175 quarts of kiwi juice.</li>
+    <li> 140 quarts of pineapple juice, 440 quarts of orange juice and 140 quarts of kiwi juice.</li>
+   </ol> 
+
+  </p>
+  </statement>
+
+  <solution>
+    <p>
+    Consider the matrix <m>A</m> which represents a transformation from Products to Ingredients:
+
+    <me> A=\begin{pmatrix} 2\amp 3 \amp 0 \\ 2\amp 0 \amp 3 \\ 0\amp 1 \amp 1\end{pmatrix}.</me>
+
+    We can compute the inverse matrix from Ingredients to Products:
+
+    <me> A^{-1}=\begin{pmatrix} \frac{1}{4}\amp \frac{1}{4} \amp -\frac{3}{4} \\ \frac{1}{6}\amp -\frac{1}{6} \amp \frac{1}{2} \\ -\frac{1}{6}\amp \frac{1}{6} \amp \frac{1}{2}\end{pmatrix}.</me>
+  </p>
+
+  <p>
+    So if we had 400 quarts of pineapple juice, 400 quarts of orange juice and 100 quarts of kiwi juice, the amount of product we could make would be:
+
+    <me> \begin{pmatrix} \frac{1}{4}\amp \frac{1}{4} \amp -\frac{3}{4} \\ \frac{1}{6}\amp -\frac{1}{6} \amp \frac{1}{2} \\ -\frac{1}{6}\amp \frac{1}{6} \amp \frac{1}{2}\end{pmatrix} \begin{pmatrix} 400\\400\\100 \end{pmatrix}= \begin{pmatrix}125 \\ 50\\50\end{pmatrix}</me>
+
+    That is, 125 gallons of PineOrange, 50 gallons of PineKiwi and 50 gallons of OrangeKiwi.
+
+
+  </p>
+  </solution>  
+
+  <solution>
+    
+
+  <p>
+    If we had 400 quarts of pineapple juice, 325 quarts of orange juice and 175 quarts of kiwi juice, the amount of product we could make would be:
+
+    <me> \begin{pmatrix} \frac{1}{4}\amp \frac{1}{4} \amp -\frac{3}{4} \\ \frac{1}{6}\amp -\frac{1}{6} \amp \frac{1}{2} \\ -\frac{1}{6}\amp \frac{1}{6} \amp \frac{1}{2}\end{pmatrix} \begin{pmatrix} 400\\325\\175 \end{pmatrix}= \begin{pmatrix}50 \\ 100\\75\end{pmatrix}</me>
+
+    That is, 50 gallons of PineOrange, 100 gallons of PineKiwi and 75 gallons of OrangeKiwi.
+
+
+  </p>
+  </solution>  
+
+
+  <solution>
+    
+
+  <p>
+    If we had 140 quarts of pineapple juice, 440 quarts of orange juice and 140 quarts of kiwi juice, the amount of product we could make would be:
+
+    <me> \begin{pmatrix} \frac{1}{4}\amp \frac{1}{4} \amp -\frac{3}{4} \\ \frac{1}{6}\amp -\frac{1}{6} \amp \frac{1}{2} \\ -\frac{1}{6}\amp \frac{1}{6} \amp \frac{1}{2}\end{pmatrix} \begin{pmatrix} 140\\440\\140 \end{pmatrix}= \begin{pmatrix}40 \\ 20\\120\end{pmatrix}</me>
+
+    That is, 40 gallons of PineOrange, 20 gallons of PineKiwi and 120 gallons of OrangeKiwi.
+
+
+  </p>
+  </solution>  
+
+
+    </exercise>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  </subsection> 
 
 </section>

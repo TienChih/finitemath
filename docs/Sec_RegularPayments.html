@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-30T07:31:49-06:00       *-->
+<!--*       on 2020-11-08T13:09:56-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -220,32 +220,32 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_RegularPayments"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Regular Payments</span>
 </h2>
-<section class="introduction" id="introduction-22"><p id="p-710">Up until this point, we have discussed one time loans or investments.  But the fact is that most loans and investments aren't made or paid off in single lump sums.  You may purchase a car or a vehicle, and then slowly pay off that debt over time.  Maybe you're lucky enough to recieve an inheritance in an account that you slowly draw money from until it is depleted.  Maybe you make regular payments into a retirement or rainy day fund until a certain date or time is reached.</p>
-<p id="p-711">This complicates the process of computing the present and future value of loans and investments.  If you make regular payments into an account, then each payment will accrue interest, but for different lengths of time.  Similarly, if you have an account earning interest you draw from regularly, then the account is still generating interest, but less and less as you draw the funds out.</p>
-<p id="p-712">In this section, we will address these issues.</p></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-22"><p id="p-729">Up until this point, we have discussed one time loans or investments.  But the fact is that most loans and investments aren't made or paid off in single lump sums.  You may purchase a car or a vehicle, and then slowly pay off that debt over time.  Maybe you're lucky enough to recieve an inheritance in an account that you slowly draw money from until it is depleted.  Maybe you make regular payments into a retirement or rainy day fund until a certain date or time is reached.</p>
+<p id="p-730">This complicates the process of computing the present and future value of loans and investments.  If you make regular payments into an account, then each payment will accrue interest, but for different lengths of time.  Similarly, if you have an account earning interest you draw from regularly, then the account is still generating interest, but less and less as you draw the funds out.</p>
+<p id="p-731">In this section, we will address these issues.</p></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.1</span> <span class="title">Future Value</span>
 </h3>
-<p id="p-713">Let's say you have a bank account that gives you 2% monthly interest and let's also say that from January to May, you deposit $100 each month. How much will you have in May? Well:</p>
+<p id="p-732">Let's say you have a bank account that gives you 2% monthly interest and let's also say that from January to May, you deposit $100 each month. How much will you have in May? Well:</p>
 <ul class="disc">
-<li id="li-261"><p id="p-714">The 100 dollars you put in January would accrue interests for 4 months, so you'd have \(100(1.02)^4\) dollars.</p></li>
-<li id="li-262"><p id="p-715">The 100 dollars you put in February would accrue interests for 3 months, so you'd have \(100(1.02)^3\) dollars.</p></li>
-<li id="li-263"><p id="p-716">The 100 dollars you put in March would accrue interests for 2 months, so you'd have \(100(1.02)^2\) dollars.</p></li>
-<li id="li-264"><p id="p-717">The 100 dollars you put in April would accrue interests for 1 months, so you'd have \(100(1.02)^1\) dollars.</p></li>
-<li id="li-265"><p id="p-718">The 100 dollars you put in May would accrue interests for 0 months, so you'd have \(100(1.02)^0\) dollars.</p></li>
+<li id="li-272"><p id="p-733">The 100 dollars you put in January would accrue interests for 4 months, so you'd have \(100(1.02)^4\) dollars.</p></li>
+<li id="li-273"><p id="p-734">The 100 dollars you put in February would accrue interests for 3 months, so you'd have \(100(1.02)^3\) dollars.</p></li>
+<li id="li-274"><p id="p-735">The 100 dollars you put in March would accrue interests for 2 months, so you'd have \(100(1.02)^2\) dollars.</p></li>
+<li id="li-275"><p id="p-736">The 100 dollars you put in April would accrue interests for 1 months, so you'd have \(100(1.02)^1\) dollars.</p></li>
+<li id="li-276"><p id="p-737">The 100 dollars you put in May would accrue interests for 0 months, so you'd have \(100(1.02)^0\) dollars.</p></li>
 </ul>
-<p id="p-719">So you'd have:</p>
+<p id="p-738">So you'd have:</p>
 <div class="displaymath">
 \begin{equation*}
 100(1.02)^4+100(1.02)^3+100(1.02)^2+100(1.02)^1+100(1.02)^0\approx \$520.40
 \end{equation*}
 </div>
-<p id="p-720">But what if this went on for 10 months? For 10 years? You probably wouldn't want to calculate every single one of these. So is there an easier way to compute something like</p>
+<p id="p-739">But what if this went on for 10 months? For 10 years? You probably wouldn't want to calculate every single one of these. So is there an easier way to compute something like</p>
 <div class="displaymath">
 \begin{equation*}
 100(1.02)^4+100(1.02)^3+100(1.02)^2+100(1.02)^1+100(1.02)^0?
 \end{equation*}
 </div>
-<p id="p-721">So we have a sum of things that look like: \(x^n+x^{n-1}+\cdots+x^1+x^0\text{.}\) There is a funny fact about this sum. if we multiply it by \((x-1)\text{:}\)</p>
+<p id="p-740">So we have a sum of things that look like: \(x^n+x^{n-1}+\cdots+x^1+x^0\text{.}\) There is a funny fact about this sum. if we multiply it by \((x-1)\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 \amp\  (x^n+x^{n-1}+\cdots+x^1+x^0)(x-1)\\
@@ -255,14 +255,14 @@ MathJax.Hub.Config({
 \amp = x^{n+1}-1
 \end{align*}
 </div>
-<p id="p-722">Thus:</p>
+<p id="p-741">Thus:</p>
 <div class="displaymath">
 \begin{align*}
 (x^n+x^{n-1}+\cdots+1)(x-1)\amp = x^{n+1}-1\\
 x^n+x^{n-1}+\cdots+1\amp = \frac{x^{n+1}-1}{x-1}
 \end{align*}
 </div>
-<p id="p-723">So, we should note that the future value of our investment above is:</p>
+<p id="p-742">So, we should note that the future value of our investment above is:</p>
 <div class="displaymath">
 \begin{align*}
 \amp\  100(1.02)^4+100(1.02)^3+100(1.02)^2+100(1.02)^1+100(1.02)^0\\
@@ -271,33 +271,33 @@ x^n+x^{n-1}+\cdots+1\amp = \frac{x^{n+1}-1}{x-1}
 S\amp = 100\frac{(1.02)^5-1}{.02}\approx \$520.40.
 \end{align*}
 </div>
-<p id="p-724">Where \(S\) is the future value.  In 5 months, you would have \(\$520.40\) in this account!</p>
-<p id="p-725">Now, if we did this for \(n\) months instead of 5, we would obtain:</p>
+<p id="p-743">Where \(S\) is the future value.  In 5 months, you would have \(\$520.40\) in this account!</p>
+<p id="p-744">Now, if we did this for \(n\) months instead of 5, we would obtain:</p>
 <div class="displaymath">
 \begin{equation*}
 S=100\frac{(1.02)^n-1}{.02}
 \end{equation*}
 </div>
-<p id="p-726">If the monthly (or whichever time unit) interest rate was \(i\) instead of 2%, we would obtain:</p>
+<p id="p-745">If the monthly (or whichever time unit) interest rate was \(i\) instead of 2%, we would obtain:</p>
 <div class="displaymath">
 \begin{equation*}
 S=100\frac{(1+i)^n-1}{i}
 \end{equation*}
 </div>
-<p id="p-727">And if the payments were \(\$R\) instead of $100, we would finally have:</p>
+<p id="p-746">And if the payments were \(\$R\) instead of $100, we would finally have:</p>
 <div class="displaymath">
 \begin{equation*}
 S=R\frac{(1+i)^n-1}{i}
 \end{equation*}
 </div>
 <p data-braille="continuation">To verify, see the Desmos calculator below, adjust \(n, i\) and \(R\) as needed: <iframe src="https://www.desmos.com/calculator/kccfq8z6vm" id="interactive-88" width="600" height="600"></iframe></p>
-<p id="p-728">So here we have constructed the formula for the future value of a debt or investment based on a constant payment.</p>
-<article class="exercise exercise-like" id="exercise-40"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-40"><h6 class="heading">
+<p id="p-747">So here we have constructed the formula for the future value of a debt or investment based on a constant payment.</p>
+<article class="exercise exercise-like" id="exercise-44"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-44"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-40"><article class="exercise exercise-like"><p id="p-729">Suppose that I deposit $100 into an account at 1% monthly interest compounded monthly. How much will be in the account in 5 years?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-44"><article class="exercise exercise-like"><p id="p-748">Suppose that I deposit $100 into an account at 1% monthly interest compounded monthly. How much will be in the account in 5 years?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-89" id="solution-89"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-89"><div class="solution solution-like">
-<p id="p-730">So we have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-96" id="solution-96"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-96"><div class="solution solution-like">
+<p id="p-749">So we have:</p>
 <div class="displaymath">
 \begin{align*}
 R\amp = 100\\
@@ -305,22 +305,22 @@ n\amp = 60\\
 i\amp = 0.01
 \end{align*}
 </div>
-<p id="p-731">So we are solving:</p>
+<p id="p-750">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 S\amp = 100\frac{(1.01)^{60}-1}{0.01}\approx8166.97
 \end{align*}
 </div>
-<p id="p-732">So in 5 years, this account will be worth \(\$8166.97\text{.}\)</p>
-<p id="p-733"><iframe src="https://www.desmos.com/calculator/0ic58nymvp" id="interactive-89" width="600" height="600"></iframe></p>
+<p id="p-751">So in 5 years, this account will be worth \(\$8166.97\text{.}\)</p>
+<p id="p-752"><iframe src="https://www.desmos.com/calculator/0ic58nymvp" id="interactive-89" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-41"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-41"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-45"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-45"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-41"><article class="exercise exercise-like"><p id="p-734">Suppose that Aziz borrowed a fixed amount of money per year at a rate of \(12\%\) interest compounded annually. If in 10 years, he owed \(\$20000\text{,}\) how much did he borrow each year?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-45"><article class="exercise exercise-like"><p id="p-753">Suppose that Aziz borrowed a fixed amount of money per year at a rate of \(12\%\) interest compounded annually. If in 10 years, he owed \(\$20000\text{,}\) how much did he borrow each year?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-90" id="solution-90"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-90"><div class="solution solution-like">
-<p id="p-735">So we have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-97" id="solution-97"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-97"><div class="solution solution-like">
+<p id="p-754">So we have:</p>
 <div class="displaymath">
 \begin{align*}
 S\amp = 20000\\
@@ -328,7 +328,7 @@ n\amp = 10\\
 i\amp = 0.12
 \end{align*}
 </div>
-<p id="p-736">So we are solving:</p>
+<p id="p-755">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 20000\amp = R\frac{(1.12)^{10}-1}{0.12}\\
@@ -336,16 +336,16 @@ i\amp = 0.12
 R\amp \approx 1139.68
 \end{align*}
 </div>
-<p id="p-737">So each year, Aziz borrowed about \(\$1139.68\text{.}\)</p>
-<p id="p-738"><iframe src="https://www.desmos.com/calculator/n0o0omxpwn" id="interactive-90" width="600" height="600"></iframe></p>
+<p id="p-756">So each year, Aziz borrowed about \(\$1139.68\text{.}\)</p>
+<p id="p-757"><iframe src="https://www.desmos.com/calculator/n0o0omxpwn" id="interactive-90" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-42"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-42"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-46"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-46"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-42"><article class="exercise exercise-like"><p id="p-739">Olive wants to deposit \(\$500\) a month into an account, how much monthly interest would this account need to return in order for her to save \(\$8000\) in a year?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-46"><article class="exercise exercise-like"><p id="p-758">Olive wants to deposit \(\$500\) a month into an account, how much monthly interest would this account need to return in order for her to save \(\$8000\) in a year?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-91" id="solution-91"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-91"><div class="solution solution-like">
-<p id="p-740">So we have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-98" id="solution-98"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-98"><div class="solution solution-like">
+<p id="p-759">So we have:</p>
 <div class="displaymath">
 \begin{align*}
 R\amp = 500\\
@@ -353,7 +353,7 @@ S\amp = 8000\\
 n\amp = 12
 \end{align*}
 </div>
-<p id="p-741">So we are solving:</p>
+<p id="p-760">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 8000\amp = 500\frac{(1+i)^{12}-1}{i}\\
@@ -361,16 +361,16 @@ n\amp = 12
 \end{align*}
 </div>
 <p data-braille="continuation">Then, rather than engage in a nightmarish algebraic exercise, we will simply plot \(y=\frac{(1+x)^{12}-1}{x}\) and see when it reaches the value \(y=12\text{.}\) <iframe src="https://www.desmos.com/calculator/gcisbmg5wi" id="interactive-91" width="600" height="600"></iframe> We can observe that these curves intersect when \(x\approx 0.0509\text{.}\)</p>
-<p id="p-742">So each year, Olive's account would have to accrue \(5.09\%\) interest.</p>
-<p id="p-743"><iframe src="https://www.desmos.com/calculator/hnffoxp9kn" id="interactive-92" width="600" height="600"></iframe></p>
+<p id="p-761">So each year, Olive's account would have to accrue \(5.09\%\) interest.</p>
+<p id="p-762"><iframe src="https://www.desmos.com/calculator/hnffoxp9kn" id="interactive-92" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-43"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-43"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-47"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-47"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-43"><article class="exercise exercise-like"><p id="p-744">Katya wants to save \(\$2000\) a year into a savings account with \(10\%\) annual interest. How long would she have to save before accumulating \(\$50000\text{?}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-47"><article class="exercise exercise-like"><p id="p-763">Katya wants to save \(\$2000\) a year into a savings account with \(10\%\) annual interest. How long would she have to save before accumulating \(\$50000\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-92" id="solution-92"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-92"><div class="solution solution-like">
-<p id="p-745">So we have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-99" id="solution-99"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-99"><div class="solution solution-like">
+<p id="p-764">So we have:</p>
 <div class="displaymath">
 \begin{align*}
 R\amp = 2000\\
@@ -378,7 +378,7 @@ S\amp = 50000\\
 i\amp = 0.10
 \end{align*}
 </div>
-<p id="p-746">So we are solving:</p>
+<p id="p-765">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 50000\amp = 2000\frac{(1.1)^{n}-1}{.1}\\
@@ -389,20 +389,20 @@ n\amp = \frac{\ln(3.5)}{\ln(1.1)}\approx 13.144
 \end{align*}
 </div>
 <p data-braille="continuation">We could also plot \(y=1.1^x\) and set this against \(y=3.5\) to see what \(n\) should be: <iframe src="https://www.desmos.com/calculator/hllf3d9syk" id="interactive-93" width="600" height="600"></iframe> We can observe that these curves intersect when \(x\approx 13.144\text{.}\)</p>
-<p id="p-747">So each year, Katya will have saved \(\$50000\) in just over 13 years.</p>
-<p id="p-748"><iframe src="https://www.desmos.com/calculator/vfmixtfrje" id="interactive-94" width="600" height="600"></iframe></p>
+<p id="p-766">So each year, Katya will have saved \(\$50000\) in just over 13 years.</p>
+<p id="p-767"><iframe src="https://www.desmos.com/calculator/vfmixtfrje" id="interactive-94" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.3.2</span> <span class="title">Present Value</span>
 </h3>
-<p id="p-749">Just as a series of regular payments or withdrawals has a future value \(S\text{,}\) so to do they have a present value \(P\text{.}\) So if we have \(n\) payments of \(R\) at regular interest rate \(i\text{,}\) the future value is \(S=R\frac{(1+i)^n-1}{i}\text{.}\) What is it's present value \(P\text{?}\) To see this, recall that in   <a href="Sec_CompoundInterest.html" class="internal" title="Section 5.2: Compound Interest">Section 5.2</a>, we have established the following relationship between present and future value:</p>
+<p id="p-768">Just as a series of regular payments or withdrawals has a future value \(S\text{,}\) so to do they have a present value \(P\text{.}\) So if we have \(n\) payments of \(R\) at regular interest rate \(i\text{,}\) the future value is \(S=R\frac{(1+i)^n-1}{i}\text{.}\) What is it's present value \(P\text{?}\) To see this, recall that in   <a href="Sec_CompoundInterest.html" class="internal" title="Section 5.2: Compound Interest">Section 5.2</a>, we have established the following relationship between present and future value:</p>
 <div class="displaymath">
 \begin{align*}
 S\amp = P(1+i)^n\\
 P\amp = \frac{S}{(1+i)^n}\text{.}
 \end{align*}
 </div>
-<p id="p-750">From this point, we may substitute \(S=R\frac{(1+i)^n-1}{i}\text{:}\)</p>
+<p id="p-769">From this point, we may substitute \(S=R\frac{(1+i)^n-1}{i}\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 P\amp = \frac{R\frac{(1+i)^n-1}{i}}{(1+i)^n}\\
@@ -411,8 +411,8 @@ P\amp = \frac{R\frac{(1+i)^n-1}{i}}{(1+i)^n}\\
 P\amp = R\frac{1-(1+i)^{-n}}{i}.
 \end{align*}
 </div>
-<p id="p-751">Suppose that we invest $100,000 in an account that gives 1% monthly interest and I'd like to pull a regular sum of money out of the account for the next 10 years. What is the maximum that I could pull out?</p>
-<p id="p-752">Well, we have a present value of \(P=100,000\text{,}\) a monthly interest rate of \(i=0.01\) and \(n=120\) months. So:</p>
+<p id="p-770">Suppose that we invest $100,000 in an account that gives 1% monthly interest and I'd like to pull a regular sum of money out of the account for the next 10 years. What is the maximum that I could pull out?</p>
+<p id="p-771">Well, we have a present value of \(P=100,000\text{,}\) a monthly interest rate of \(i=0.01\) and \(n=120\) months. So:</p>
 <div class="displaymath">
 \begin{align*}
 100000\amp = R\frac{1-(1.01)^{-120}}{.01}\\
@@ -421,13 +421,13 @@ R\amp \approx \frac{1000}{0.697005}\\
 \amp \approx 1434.71
 \end{align*}
 </div>
-<p id="p-753">So with an investment like that, you could pull out \(\$1434.71\) a month for the next 10 years. <iframe src="https://www.desmos.com/calculator/ktiqxw1eke" id="interactive-95" width="600" height="600"></iframe></p>
-<article class="exercise exercise-like" id="exercise-44"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-44"><h6 class="heading">
+<p id="p-772">So with an investment like that, you could pull out \(\$1434.71\) a month for the next 10 years. <iframe src="https://www.desmos.com/calculator/ktiqxw1eke" id="interactive-95" width="600" height="600"></iframe></p>
+<article class="exercise exercise-like" id="exercise-48"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-48"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-44"><article class="exercise exercise-like"><p id="p-754">Zhou wishes to purchase a \(\$200000\) home.  After putting down a down payment, he takes out a 20 year mortgage of \(\$160000\) at a monthly rate of \(0.3\%\text{.}\)  How much will his monthly payments be?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-48"><article class="exercise exercise-like"><p id="p-773">Zhou wishes to purchase a \(\$200000\) home.  After putting down a down payment, he takes out a 20 year mortgage of \(\$160000\) at a monthly rate of \(0.3\%\text{.}\)  How much will his monthly payments be?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-93" id="solution-93"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-93"><div class="solution solution-like">
-<p id="p-755">So we have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-100" id="solution-100"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-100"><div class="solution solution-like">
+<p id="p-774">So we have:</p>
 <div class="displaymath">
 \begin{align*}
 P\amp = 160000\\
@@ -435,7 +435,7 @@ n\amp = 240\\
 i\amp = 0.003
 \end{align*}
 </div>
-<p id="p-756">So we are solving:</p>
+<p id="p-775">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 160000\amp = R\frac{1-(1.003)^{-240}}{.003}\\
@@ -443,16 +443,16 @@ i\amp = 0.003
 R\amp \approx \frac{160000}{170.9076}\approx 936.18
 \end{align*}
 </div>
-<p id="p-757">So Zhou's monthly mortage payment will be about \(\$936.18\) a month.</p>
-<p id="p-758"><iframe src="https://www.desmos.com/calculator/5wp8kabffs" id="interactive-96" width="600" height="600"></iframe></p>
+<p id="p-776">So Zhou's monthly mortage payment will be about \(\$936.18\) a month.</p>
+<p id="p-777"><iframe src="https://www.desmos.com/calculator/5wp8kabffs" id="interactive-96" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-45"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-45"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-49"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-49"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-45"><article class="exercise exercise-like"><p id="p-759">Tyrone authorizes a loan to a debtor who will make payments of \(\$1000\) a year for 10 years at \(6\%\) interest.  How much was the loan for?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-49"><article class="exercise exercise-like"><p id="p-778">Tyrone authorizes a loan to a debtor who will make payments of \(\$1000\) a year for 10 years at \(6\%\) interest.  How much was the loan for?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-94" id="solution-94"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-94"><div class="solution solution-like">
-<p id="p-760">So we have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-101" id="solution-101"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-101"><div class="solution solution-like">
+<p id="p-779">So we have:</p>
 <div class="displaymath">
 \begin{align*}
 R\amp = 1000\\
@@ -460,23 +460,23 @@ n\amp = 10\\
 i\amp = 0.06
 \end{align*}
 </div>
-<p id="p-761">So we are solving:</p>
+<p id="p-780">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 P\amp = 1000\frac{1-(1.06)^{-10}}{.06}\\
 \amp \approx 7360.09.
 \end{align*}
 </div>
-<p id="p-762">So the loan would have been for \(\$7360.09\text{.}\)</p>
-<p id="p-763"><iframe src="https://www.desmos.com/calculator/zgggwvppup" id="interactive-97" width="600" height="600"></iframe></p>
+<p id="p-781">So the loan would have been for \(\$7360.09\text{.}\)</p>
+<p id="p-782"><iframe src="https://www.desmos.com/calculator/zgggwvppup" id="interactive-97" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-46"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-46"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-50"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-50"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-46"><article class="exercise exercise-like"><p id="p-764">Karen racked up \(\$4000\) in credit card debit with a \(2\%\) monthly interest rate.  She can only make \(\$100\) monthly payments on it.  How long will it take for her to pay this debt off?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-50"><article class="exercise exercise-like"><p id="p-783">Karen racked up \(\$4000\) in credit card debit with a \(2\%\) monthly interest rate.  She can only make \(\$100\) monthly payments on it.  How long will it take for her to pay this debt off?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-95" id="solution-95"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-95"><div class="solution solution-like">
-<p id="p-765">So we have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-102" id="solution-102"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-102"><div class="solution solution-like">
+<p id="p-784">So we have:</p>
 <div class="displaymath">
 \begin{align*}
 R\amp = 100\\
@@ -484,7 +484,7 @@ P\amp = 4000\\
 i\amp = 0.02
 \end{align*}
 </div>
-<p id="p-766">So we are solving:</p>
+<p id="p-785">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 4000\amp = 100\frac{1-(1.02)^{-n}}{.02}\\
@@ -496,16 +496,16 @@ n\amp = \frac{\ln(0.2)}{-\ln(1.02)}\approx 81.274
 \end{align*}
 </div>
 <p data-braille="continuation">Or, by plotting \(y=\frac{1-(1.02)^{-x}}{.02}\) and \(y=40\text{,}\) we can see what the value of \(n\) should be: <iframe src="https://www.desmos.com/calculator/0guujzgatk" id="interactive-98" width="600" height="600"></iframe> \(n\approx 81.274\text{.}\)</p>
-<p id="p-767">So she would have paid the loan off in 82 months, 7 years and 10 months.</p>
-<p id="p-768"><iframe src="https://www.desmos.com/calculator/hirkvzdhib" id="interactive-99" width="600" height="600"></iframe></p>
+<p id="p-786">So she would have paid the loan off in 82 months, 7 years and 10 months.</p>
+<p id="p-787"><iframe src="https://www.desmos.com/calculator/hirkvzdhib" id="interactive-99" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-47"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-47"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-51"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-51"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-47"><article class="exercise exercise-like"><p id="p-769">Jasmine lends \(\$2500\) to a friend who will make \(\$200\) weekly payments on it for 15 weeks.  What in effect is the weekly interest rate of her loan?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-51"><article class="exercise exercise-like"><p id="p-788">Jasmine lends \(\$2500\) to a friend who will make \(\$200\) weekly payments on it for 15 weeks.  What in effect is the weekly interest rate of her loan?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-96" id="solution-96"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-96"><div class="solution solution-like">
-<p id="p-770">So we have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-103" id="solution-103"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-103"><div class="solution solution-like">
+<p id="p-789">So we have:</p>
 <div class="displaymath">
 \begin{align*}
 R\amp = 200\\
@@ -513,7 +513,7 @@ P\amp = 2500\\
 n\amp = 15
 \end{align*}
 </div>
-<p id="p-771">So we are solving:</p>
+<p id="p-790">So we are solving:</p>
 <div class="displaymath">
 \begin{align*}
 2500\amp = 200\frac{1-(1+i)^{-15}}{i}\\
@@ -521,8 +521,8 @@ n\amp = 15
 \end{align*}
 </div>
 <p data-braille="continuation">So by plotting \(y=\frac{1-(1+x)^{-15}}{x}\) and \(y=12.5\text{,}\) we can see what the value of \(i\) should be: <iframe src="https://www.desmos.com/calculator/hfebx0pt6m" id="interactive-100" width="600" height="600"></iframe> \(i\approx 0.0237\text{.}\)</p>
-<p id="p-772">So the effective weekly interest she charged was \(2.37\%\text{.}\)</p>
-<p id="p-773"><iframe src="https://www.desmos.com/calculator/ewvd9gpxnh" id="interactive-101" width="600" height="600"></iframe></p>
+<p id="p-791">So the effective weekly interest she charged was \(2.37\%\text{.}\)</p>
+<p id="p-792"><iframe src="https://www.desmos.com/calculator/ewvd9gpxnh" id="interactive-101" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div></section></section></div></main>
 </div>

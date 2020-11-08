@@ -346,5 +346,123 @@
       <mrow>BA\amp = \begin{pmatrix}23 \amp  34 \\ 31 \amp  46 \end{pmatrix}</mrow>
     </md>
   </solution>
+
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        A noodle shop has 3 locations.  Their revenues and costs over June July and August are recorded in the following tables in thousands of dollars:
+        <me>
+        \begin{array}{c|c|c|c|}
+          \textbf{Revenue} \amp \text{June} \amp \text{July} \amp \text{August}\\
+          \hline
+          \text{Location 1} \amp 112 \amp 70 \amp 130\\
+          \hline
+          \text{Location 2} \amp 42 \amp 50 \amp 61\\
+          \hline
+          \text{Location 3} \amp 155 \amp 145 \amp 180\\
+          \hline
+        \end{array}
+      </me>
+
+      <me>
+        \begin{array}{c|c|c|c|}
+          \textbf{Cost} \amp \text{June} \amp \text{July} \amp \text{August}\\
+          \hline
+          \text{Location 1} \amp 90 \amp 85 \amp 92\\
+          \hline
+          \text{Location 2} \amp 37 \amp 40 \amp 45\\
+          \hline
+          \text{Location 3} \amp 120 \amp 120 \amp 130\\
+          \hline
+        \end{array}
+      </me>
+
+      </p>
+      <p>
+        Express each of these as a matrix and find a matrix representing the profit at each location.
+      </p>  
+    </statement>
+    <solution>
+      <p>
+        Re-writing these as matrices, we get: <me> R=\begin{pmatrix}  112 \amp 70 \amp 130\\  42 \amp 50 \amp 61\\ 55 \amp 145 \amp 180\end{pmatrix}, C= \begin{pmatrix}    90 \amp 85 \amp 92\\  37 \amp 40 \amp 45\\  120 \amp 120 \amp 130 \end{pmatrix} </me>where the row and column tells you the revenue or cost of a location in a given month.  Then the profit would be:
+        <me>
+        P=R-C=\begin{pmatrix}  112 \amp 70 \amp 130\\  42 \amp 50 \amp 61\\ 55 \amp 145 \amp 180\end{pmatrix}- \begin{pmatrix}    90 \amp 85 \amp 92\\  37 \amp 40 \amp 45\\  120 \amp 120 \amp 130 \end{pmatrix}=\begin{pmatrix}    22 \amp -15 \amp 38\\  5 \amp 10 \amp 16\\  35 \amp 25 \amp 50 \end{pmatrix}.
+      </me>
+
+
+
+
+       </p> 
+
+    </solution>  
+  </exercise>  
+
+
+  <exercise>
+    <statement>
+      <p>
+        Consider the following table recording the price of 3 different goods and the shipping cost per item.
+        <me>
+        \begin{array}{c|c|c|c|}
+           \amp \text{Product A} \amp \text{Product B} \amp \text{Product C}\\
+          \hline
+          \text{Price per item} \amp 25 \amp 30 \amp 15\\
+          \hline
+          \text{Shipping cost per item} \amp 2 \amp 3 \amp 2\\
+          \hline
+
+        \end{array}
+      </me>
+
+      Then consider this table of the quantity purchased of each good by 4 clients.
+
+      <me>
+      \begin{array}{c|c|c|c|c|}
+           \amp \text{Client 1} \amp \text{Client 2} \amp \text{Client 3} \amp \text{Client 4}\\
+          \hline
+          \text{Product A purchased} \amp 100 \amp 115 \amp 50\amp 45\\
+          \hline
+          \text{Product B purchased} \amp 40 \amp 70 \amp 10\amp 55\\
+          \hline
+          \text{Product C purchased} \amp 35 \amp 25 \amp 80\amp 50\\
+          \hline
+
+        \end{array}
+
+      </me>
+
+      Find a matrix which records the price and shipping costs incurred by each client.
+
+    </p>
+  </statement>
+
+  <solution>
+    We can define two matrices.  Let <m>A</m> denote a transformation from Products to Prices: <me>A=\begin{pmatrix} 25 \amp 30 \amp 15\\  2 \amp 3 \amp 2 \end{pmatrix}.</me>  Then <m>B</m> denote a transformation from Clients to Products:
+
+    <me> B=\begin{pmatrix} 100 \amp 115 \amp 50\amp 45\\ 40 \amp 70 \amp 10\amp 55\\ 35 \amp 25 \amp 80\amp 50\\ \end{pmatrix}.</me>
+
+    So to form a transformation Clients to Prices, we take the product of these matrices:
+
+    <me>AB=\begin{pmatrix} 25 \amp 30 \amp 15\\  2 \amp 3 \amp 2 \end{pmatrix}\begin{pmatrix} 100 \amp 115 \amp 50\amp 45\\ 40 \amp 70 \amp 10\amp 55\\ 35 \amp 25 \amp 80\amp 50\\ \end{pmatrix}=\begin{pmatrix}4225 \amp 5350 \amp 2750 \amp 3525 \\ 390 \amp 490  \amp 290 \amp 355 \end{pmatrix}.</me>
+
+    Thus, Client 1 spent $4225 on product and $390 on shipping. Client 2 spent $5350 on product and $490 on shipping. Client 3 spent $2750 on product and $290 on shipping.  Client 4 spent $3525 on product and $355 on shipping.
+  </solution>  
+</exercise>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </subsection>
 </section>

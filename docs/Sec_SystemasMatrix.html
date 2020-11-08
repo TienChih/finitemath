@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-30T07:31:41-06:00       *-->
+<!--*       on 2020-11-08T13:09:43-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -723,7 +723,7 @@ a+b+2c \amp=350\\
 2 \amp  2 \amp  1 \amp  400 \end{array} \right)
 \end{equation*}
 </div>
-<p data-braille="continuation">Which in turn has reduced row echelon form: Which has matrix form:</p>
+<p data-braille="continuation">Which in turn has reduced row echelon form:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr|r} 
@@ -790,7 +790,7 @@ o+s+u\amp=200
 1 \amp  1 \amp  1 \amp  200 \end{array} \right)
 \end{equation*}
 </div>
-<p data-braille="continuation">Which in turn has reduced row echelon form: Which has matrix form:</p>
+<p data-braille="continuation">Which in turn has reduced row echelon form:</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \begin{array}{rrr|r} 
@@ -800,6 +800,97 @@ o+s+u\amp=200
 \end{equation*}
 </div>
 <p data-braille="continuation">So 50 shares of Overpriced Textbooks Inc., 100 shares of Sandwich Solutions and 50 shares of Union Holdings Inc.</p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-11"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-11"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-11"><article class="exercise exercise-like"><p id="p-371">A company is using trucks vans and SUV's to ship prototype robots.  There are three models: A, B and C. A truck holds 2 model A's, 2 model B's and 1 model C.  A van holds 3 A's, 2B's, 3 C's.  A SUV holds 5A's, 6B's and 2C's.</p>
+<ol id="p-372" class="decimal">
+<li id="li-96">How many trucks, vans and SUV's would you need to ship 42 model A's, 40 model B's, and 26 model C's.</li>
+<li id="li-97">How many of each type of vehicles could you use if model C's were discontinued?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like">
+<p id="p-373">Let's let \(t\) be the number of trucks, \(v\) the number of vans and \(s\) be the number of SUV's.</p>
+<p id="p-374">Each truck holds 2 model A's, each van 3, and each SUV 3.  Since 28 model A's are shipped, this is results in</p>
+<div class="displaymath">
+\begin{equation*}
+2t+3v+5s=42.
+\end{equation*}
+</div>
+<p id="p-375">Each truck holds 2 model B's, each van 2, and each SUV 6.  Since 30 model B's are shipped, this is results in</p>
+<div class="displaymath">
+\begin{equation*}
+2t+2v+6s=40.
+\end{equation*}
+</div> x<p id="p-376">Each truck holds 1 model C, each van 3, and each SUV 2.  Since 16 model C's are shipped, this is results in</p>
+<div class="displaymath">
+\begin{equation*}
+t+3v+2s=26.
+\end{equation*}
+</div>
+<p id="p-377">Putting all this together gives us:</p>
+<div class="displaymath">
+\begin{align*}
+2t+3v+5s\amp =42\\
+2t+2v+6s \amp =40\\
+t+3v+2s \amp=26
+\end{align*}
+</div>
+<p data-braille="continuation">Which has matrix form:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 
+2 \amp  3 \amp  5 \amp  42\\ 
+2 \amp  2 \amp  6 \amp  40\\ 
+1 \amp  3 \amp  2 \amp  26 \end{array} \right)
+\end{equation*}
+</div>
+<p data-braille="continuation">Which in turn has reduced row echelon form:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 
+1 \amp  0 \amp  0 \amp  10\\ 
+0 \amp  1 \amp  0 \amp  4\\ 
+0 \amp  0 \amp  1 \amp  2 \end{array} \right)
+\end{equation*}
+</div>
+<p data-braille="continuation">So 10 trucks, 4 vans and 2 SUV's.</p>
+</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-48"><div class="solution solution-like">
+<p id="p-378">If we remove the model C requirement, we have the system:</p>
+<div class="displaymath">
+\begin{align*}
+2t+3v+5s\amp =42\\
+2t+2v+6s \amp =40
+\end{align*}
+</div>
+<p data-braille="continuation">Which in turn has reduced row echelon form:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 
+1 \amp  0 \amp  4 \amp  18\\ 
+0 \amp  1 \amp  -1 \amp  2\\ 
+\end{array} \right)
+\end{equation*}
+</div>
+<p data-braille="continuation">In other words:</p>
+<div class="displaymath">
+\begin{align*}
+t+4s\amp =18\\
+v-s\amp =2
+\end{align*}
+</div>
+<p id="p-379">So there is more than 1 solution.  Remember that the number of any type of vehicle has to be a non-negative whole number.</p>
+<ol class="decimal">
+<li id="li-98">So if you had \(s=0\) SUV's, then you must have \(t=18-4\cdot 0=18\) trucks and \(v=2+0=2\) vans.</li>
+<li id="li-99">If you had \(s=1\) SUV's, then you must have \(t=18-4\cdot 1=14\) trucks and \(v=2+1=3\) vans.</li>
+<li id="li-100">If you had \(s=2\) SUV's, then you must have \(t=18-4\cdot 2=10\) trucks and \(v=2+2=4\) vans.</li>
+<li id="li-101">If you had \(s=3\) SUV's, then you must have \(t=18-4\cdot 3=6\) trucks and \(v=2+3=5\) vans.</li>
+<li id="li-102">If you had \(s=4\) SUV's, then you must have \(t=18-4\cdot 4=2\) trucks and \(v=2+4=6\) vans.</li>
+<li id="li-103">If you had \(s=5\) SUV's, then you must have \(t=18-4\cdot 5=-2\) trucks which is impossible.</li>
+</ol>
+<p id="p-380">So the valid number of truck, van and SUV's are: \((18,2,0), (14,3,1), (10,4,2), (6,5,3), (2,6,4).\)</p>
 </div></div>
 </div></article></div></section></section></div></main>
 </div>
