@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T13:10:21-07:00       *-->
+<!--*       on 2020-11-28T13:06:03-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -228,11 +228,11 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_StableSolutions"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">11.2</span> <span class="title">Stable Solutions and Equilibrium</span>
 </h2>
-<section class="introduction" id="introduction-56"><p id="p-1504">In this section, we discuss stable stable solutions to Markov systems.  If I repeat a Markov process over and over, does it trend torwards some some of state where it won't change?  Or does it go back and forth between multiple states in a cycle?  Is there an initial starting state so that each iteration of the Markov process gives you back the exact same state?  We examine these questions.</p></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-56"><p id="p-1514">In this section, we discuss stable stable solutions to Markov systems.  If I repeat a Markov process over and over, does it trend torwards some some of state where it won't change?  Or does it go back and forth between multiple states in a cycle?  Is there an initial starting state so that each iteration of the Markov process gives you back the exact same state?  We examine these questions.</p></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.2.1</span> <span class="title">Stable Solutions</span>
 </h3>
-<p id="p-1505">Suppose you had two cities, \(X, Y\text{.}\)  Each year 60% of city \(X\)'s population moved to \(Y\) and 20% of \(Y\)'s population moves to \(X\text{.}\)  If the cities had 300000 people in total, how could we distribute these people so each year the cities populations remained the same?</p>
-<p id="p-1506">What we are solving is essentionally \(\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}=\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}\)  So recall <a class="xref" data-knowl="./knowl/DefinitionIdentity.html" title="Definition 2.3.5">Definition 2.3.5</a>:</p>
+<p id="p-1515">Suppose you had two cities, \(X, Y\text{.}\)  Each year 60% of city \(X\)'s population moved to \(Y\) and 20% of \(Y\)'s population moves to \(X\text{.}\)  If the cities had 300000 people in total, how could we distribute these people so each year the cities populations remained the same?</p>
+<p id="p-1516">What we are solving is essentionally \(\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}=\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix}\)  So recall <a class="xref" data-knowl="./knowl/DefinitionIdentity.html" title="Definition 2.3.5">Definition 2.3.5</a>:</p>
 <div class="displaymath">
 \begin{align*}
 \begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \amp =\begin{pmatrix} X_0 \\ Y_0 \end{pmatrix} \\
@@ -258,17 +258,17 @@ print(M*X)
 <article class="remark remark-like" id="remark-35"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">11.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-1507">In general, <dfn class="terminology">stable solutions</dfn> to Markov chains are vectors \(\mathbf{x}\)  such that \(M\mathbf{x}=\mathbf{x}\text{.}\)  These can be found by solving:</p>
+<p id="p-1517">In general, <dfn class="terminology">stable solutions</dfn> to Markov chains are vectors \(\mathbf{x}\)  such that \(M\mathbf{x}=\mathbf{x}\text{.}\)  These can be found by solving:</p>
 <div class="displaymath">
 \begin{equation*}
 (M-I_n)\mathbf{x}=\mathbf{0}.
 \end{equation*}
 </div></article><article class="exercise exercise-like" id="exercise-126"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-126"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-126"><article class="exercise exercise-like"><p id="p-1508">Suppose you have a bizzare compound stored a chamber with different areas with different temperatures and pressures.  Thus it is always changing between the 3 states of matter.  After each hour, 20% of any solid becomes liquid and 20%  of the solid becomes gas.  10% of liquids become solid and 30% becomes gas.  15% of gas becomes solid and 40% becomes liquid.  What are initial amounts of solid liquid and gas so the amount of each never changes?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-126"><article class="exercise exercise-like"><p id="p-1518">Suppose you have a bizzare compound stored a chamber with different areas with different temperatures and pressures.  Thus it is always changing between the 3 states of matter.  After each hour, 20% of any solid becomes liquid and 20%  of the solid becomes gas.  10% of liquids become solid and 30% becomes gas.  15% of gas becomes solid and 40% becomes liquid.  What are initial amounts of solid liquid and gas so the amount of each never changes?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-250" id="solution-250"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-250"><div class="solution solution-like">
-<p id="p-1509">If solid, liquid, gas are states 1,2 and 3, then we have transition matrix:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-256" id="solution-256"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-256"><div class="solution solution-like">
+<p id="p-1519">If solid, liquid, gas are states 1,2 and 3, then we have transition matrix:</p>
 <div class="displaymath">
 \begin{equation*}
 M=\begin{pmatrix}0.6 \amp 0.1 \amp 0.15 \\ 0.2 \amp 0.6 \amp 0.4 \\ 0.2 \amp 0.3 \amp 0.45 \end{pmatrix} .
@@ -280,7 +280,7 @@ M=\begin{pmatrix}0.6 \amp 0.1 \amp 0.15 \\ 0.2 \amp 0.6 \amp 0.4 \\ 0.2 \amp 0.3
 \begin{pmatrix}-0.4 \amp 0.1 \amp 0.15 \\ 0.2 \amp -0.4 \amp 0.4 \\ 0.2 \amp 0.3 \amp -0.55 \end{pmatrix}\begin{pmatrix} S \\L \\ G\end{pmatrix}=\begin{pmatrix}0\\0\\0 \end{pmatrix} .
 \end{equation*}
 </div>
-<p id="p-1510">Doing so, we obtain:</p>
+<p id="p-1520">Doing so, we obtain:</p>
 <div class="displaymath">
 \begin{align*}
 S\amp=\frac{5}{7}G\\
@@ -288,7 +288,7 @@ L\amp=\frac{19}{14}G
 \end{align*}
 </div>
 <p data-braille="continuation">Which then, given any amount of gas, we could find how mnuch solid and liquid there were.</p>
-<p id="p-1511">So if say we have 1000 kg of the compound, we could solve the system:</p>
+<p id="p-1521">So if say we have 1000 kg of the compound, we could solve the system:</p>
 <div class="displaymath">
 \begin{align*}
 S\amp=\frac{5}{7}G\\
@@ -297,7 +297,7 @@ S+L+G\amp=1000
 \end{align*}
 </div>
 <p data-braille="continuation">and obtain roughly 232.56kg of solid, 441.86kg of liquid and 325.58kg of gas.</p>
-<p id="p-1512">Then say we have 500 g of the compound, we could solve the system:</p>
+<p id="p-1522">Then say we have 500 g of the compound, we could solve the system:</p>
 <div class="displaymath">
 \begin{align*}
 S\amp=\frac{5}{7}G\\
@@ -310,8 +310,8 @@ S+L+G\amp=500
 </div></article></div></section><section class="subsection" id="subsection-121"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.2.2</span> <span class="title">Equilibrium</span>
 </h3>
-<p id="p-1513">Let's say in the cities example above, you initially had 250000 people in city \(X\) and 50000 in \(Y\text{.}\)  What would happen over time?</p>
-<p id="p-1514">In a year: <div class="sagecell-sage" id="sage-22"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+<p id="p-1523">Let's say in the cities example above, you initially had 250000 people in city \(X\) and 50000 in \(Y\text{.}\)  What would happen over time?</p>
+<p id="p-1524">In a year: <div class="sagecell-sage" id="sage-22"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
 X=matrix(QQ, [[250000],[50000]])
 print(M*X)
 </script></div> We would have 160000 in \(X\) and 140000 in \(Y\text{.}\)  In 10 years: <div class="sagecell-sage" id="sage-23"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
@@ -326,7 +326,7 @@ for i in range(100):
 <article class="definition definition-like" id="definition-41"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">11.2.3</span><span class="period">.</span>
 </h6>
-<p id="p-1515">Given a transition matrix \(M\) an equilibirum solution is a solution \(\mathbf{e}\) so that as \(i\) increases</p>
+<p id="p-1525">Given a transition matrix \(M\) an equilibirum solution is a solution \(\mathbf{e}\) so that as \(i\) increases</p>
 <div class="displaymath">
 \begin{equation*}
 M^i\mathbf{x}\to \mathbf{e}.
@@ -334,13 +334,13 @@ M^i\mathbf{x}\to \mathbf{e}.
 </div></article><article class="remark remark-like" id="remark-36"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">11.2.4</span><span class="period">.</span>
 </h6>
-<p id="p-1516">Equilibrium solutions are stable solutions.</p></article><p id="p-1517">What if \(Y\) had 300000 people and \(X\) was a ghost town with no one in it?  We see that after 100 iterations: <div class="sagecell-sage" id="sage-25"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
+<p id="p-1526">Equilibrium solutions are stable solutions.</p></article><p id="p-1527">What if \(Y\) had 300000 people and \(X\) was a ghost town with no one in it?  We see that after 100 iterations: <div class="sagecell-sage" id="sage-25"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
 X=matrix(QQ, [[0],[300000]])
 for i in range(100):
   print(M^i*X*1.0)
   print(' ')
 </script></div> We achieve the same state, which incidentally was the stable solution we found earlier!</p>
-<p id="p-1518">Will this always happen?  Consider the transition matrix</p>
+<p id="p-1528">Will this always happen?  Consider the transition matrix</p>
 <div class="displaymath">
 \begin{equation*}
 M=\begin{pmatrix} 0\amp 1 \ 1 \amp 0\end{pmatrix}\text{.}
@@ -363,20 +363,20 @@ for i in range(100):
   print(M^i*X*1.0)
   print(' ')
 </script></div> We see that we oscilate between states \(\begin{pmatrix} 10\\0\end{pmatrix}\) and \(\begin{pmatrix} 0\\10\end{pmatrix}\text{.}\)  We <em class="emphasis">do not</em> achieve equilibrium.</p>
-<p id="p-1519">So when can we achieve equilibrium?</p>
+<p id="p-1529">So when can we achieve equilibrium?</p>
 <article class="definition definition-like" id="definition-42"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">11.2.5</span><span class="period">.</span>
 </h6>
-<p id="p-1520">A transition matrix is <dfn class="terminology">regular</dfn> if each entry is positive (not zero).</p></article><article class="theorem theorem-like" id="TheoremF"><h6 class="heading">
+<p id="p-1530">A transition matrix is <dfn class="terminology">regular</dfn> if each entry is positive (not zero).</p></article><article class="theorem theorem-like" id="TheoremF"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.2.6</span><span class="period">.</span>
 </h6>
-<p id="p-1521">If a transition matrix is regular, then it will achieve equilibrium.</p></article><p id="p-1522">Note that non-regular matrices may also achieve equilibrium.  The above claim merely says, every regular matrix is gaurunteed to do so.</p>
+<p id="p-1531">If a transition matrix is regular, then it will achieve equilibrium.</p></article><p id="p-1532">Note that non-regular matrices may also achieve equilibrium.  The above claim merely says, every regular matrix is gaurunteed to do so.</p>
 <article class="exercise exercise-like" id="exercise-127"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-127"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">11.2.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-127"><article class="exercise exercise-like"><p id="p-1523">Tech companies Axiom, Belafonte and Cybertech hire and rehire from the same talent pool.  Each month, 20% of Axiom's workers leave for Belafonte and 15% leave for Cybertech.  10% of Belafonte's go to Axiom and 25% go to Cybertech, and 30% of Cybertech's workers leave for Axiom, 10% for Belafonte.  Over time, what proportion of the workforce will each company employ?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-127"><article class="exercise exercise-like"><p id="p-1533">Tech companies Axiom, Belafonte and Cybertech hire and rehire from the same talent pool.  Each month, 20% of Axiom's workers leave for Belafonte and 15% leave for Cybertech.  10% of Belafonte's go to Axiom and 25% go to Cybertech, and 30% of Cybertech's workers leave for Axiom, 10% for Belafonte.  Over time, what proportion of the workforce will each company employ?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-251" id="solution-251"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-251"><div class="solution solution-like">
-<p id="p-1524">Note we have transition matrix</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-257" id="solution-257"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-257"><div class="solution solution-like">
+<p id="p-1534">Note we have transition matrix</p>
 <div class="displaymath">
 \begin{equation*}
 M=\begin{pmatrix} 0.65 \amp 0.1 \amp 0.3 \\ 0.2 \amp 0.65 \amp 0.1 \\ 0.15 \amp 0.25 \amp 0.6 \end{pmatrix}.
@@ -388,7 +388,7 @@ M=\begin{pmatrix} 0.65 \amp 0.1 \amp 0.3 \\ 0.2 \amp 0.65 \amp 0.1 \\ 0.15 \amp 
 \begin{pmatrix} -0.35 \amp 0.1 \amp 0.3 \\ 0.2 \amp -0.35 \amp 0.1 \\ 0.15 \amp 0.25 \amp -0.4 \end{pmatrix}\begin{pmatrix} a\\b\\c\end{pmatrix}=\begin{pmatrix}0\\0\\0\end{pmatrix}.
 \end{equation*}
 </div>
-<p id="p-1525">Doing so gives us:</p>
+<p id="p-1535">Doing so gives us:</p>
 <div class="displaymath">
 \begin{align*}
 a\amp =\frac{46}{41}c\\

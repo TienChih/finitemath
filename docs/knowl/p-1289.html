@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:32-06:00       *-->
+<!--*       on 2020-11-28T13:07:13-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The chance you win nothing would be \(1-\frac{1}{10}-\frac{3}{10}=\frac{6}{10}\text{.}\)  So the probability distribution would be:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p>We note that there are 6 non-vegetarian dishes.</p>
+<ol class="decimal">
+<li>Ths is picking 3 of 10 objects so \(C(10,3)=120\text{.}\)</li>
+<li>Ths is picking 3 of 6 objects so \(C(6,3)=20\text{.}\)</li>
+<li>Ths is picking 3 of 4 objects so \(C(4,3)=4\text{.}\)</li>
+<li>Ths is picking 1 of 4 objects to be vegetarian, 2 of 6 objects for not vegetarian, and combining these selections, so  \(C(4,1)\cdot C(6,2)=4\cdot15 =60.\text{.}\)</li>
+<li>This is one, two or three vegetarian dishes, so<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\begin{array}{|c|ccc|}
-\hline
-x \amp 0 \amp 5 \amp 20 \\
-\hline
-P(X=x) \amp \frac{6}{10} \amp \frac{3}{10} \amp \frac{1}{10} \\
-\hline
-\end{array}
+C(4,1)\cdot C(6,2)+C(4,2)\cdot C(6,1)+C(4,3)\cdot C(6,0)=4\cdot15 + 6\cdot 6+4\cdot 1 =100 
 \end{equation*}
-</div>
-<p data-braille="continuation">There is a \(\frac{3}{10}+\frac{1}{10}\) chance you win something.</p>
-<span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1289">in-context</a></span>
+</div>ways to have at least one vegetarian dish.  Or if we took all 120 caterung options, and removed the 20 without vegetarian options, we would have \(120-20=100\) dishes.</li>
+</ol>
+<span class="incontext"><a href="Sec_Combinations.html#p-1289">in-context</a></span>
 </body>
 </html>

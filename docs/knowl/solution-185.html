@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:30-06:00       *-->
+<!--*       on 2020-11-28T13:07:12-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,20 +16,16 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.3.4.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.2.6.1</span><span class="period">.</span>
 </h6>
-<p>Let \(R\) denote “digits don't repeat” and \(E\) denote “digits are all even.”:</p>
-<ol class="decimal">
-<li>Recall <a class="xref" data-knowl="./knowl/ExampleDigits.html" title="Example 9.3.2">Example 9.3.2</a>, we say \(P(R)=\frac{P(10,4)}{10^4}, P(E)=\frac{5^4}{10^4}, P(R\cap E)=\frac{P(5,4)}{10^4}\text{.}\)  Thus<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p>There are \(C(20,3)\) ways to pick a commttee of 3, \(C(20,4)\) ways to pick a commttee of 4 and \(C(20,5)\) ways to pick a commttee of 5.  So the total number of ways to pick commttees is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-P(R\cup E)= P(R)+P(E)-P(R\cap E)=\frac{P(10,4)+5^4-P(5,4)}{10^4}=\frac{5040+625-120}{10^4}=\frac{5545}{10000}=0.5545.
+C(20,3)+C(20,4)+C(20,5)=1140+4845+15504=21489.
 \end{equation*}
 </div>
-</li>
-<li>Note that \(P(R|E)=\frac{P(5,4)/10^4}{5^4/10^4}=\frac{P(5,4)}{5^4}=\frac{120}{625}=0.192\) .</li>
-<li>Since \(P(R|E)=0.192\neq0.504=P(R)\) so these are not independent.</li>
-</ol>
+<p data-braille="continuation">Note that there are no overlaps between these selections, they may share people, but there is no 3 person committee who is also a 4 person committee etc.</p>
 </div>
-<span class="incontext"><a href="Sec_AppstoProb.html#solution-185">in-context</a></span>
+<span class="incontext"><a href="Sec_Combinations.html#solution-185">in-context</a></span>
 </body>
 </html>

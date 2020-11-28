@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:04:47-06:00       *-->
+<!--*       on 2020-11-28T13:06:20-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,16 +16,54 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.3.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.7.1</span><span class="period">.</span>
 </h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let's let \(t\) be the number of trucks, \(v\) the number of vans and \(s\) be the number of SUV's.</p>
+<p>Each truck holds 2 model A's, each van 3, and each SUV 3.  Since 28 model A's are shipped, this is results in</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+2t+3v+5s=42.
+\end{equation*}
+</div>
+<p>Each truck holds 2 model B's, each van 2, and each SUV 6.  Since 30 model B's are shipped, this is results in</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+2t+2v+6s=40.
+\end{equation*}
+</div> x<p>Each truck holds 1 model C, each van 3, and each SUV 2.  Since 16 model C's are shipped, this is results in</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+t+3v+2s=26.
+\end{equation*}
+</div>
+<p>Putting all this together gives us:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-A+B\amp = \begin{pmatrix}6 \amp  8 \\ 10 \amp  12 \end{pmatrix}\\
-AB\amp = \begin{pmatrix}19 \amp  22 \\ 43 \amp  50 \end{pmatrix}\\
-BA\amp = \begin{pmatrix}23 \amp  34 \\ 31 \amp  46 \end{pmatrix}
+2t+3v+5s\amp =42\\
+2t+2v+6s \amp =40\\
+t+3v+2s \amp=26
 \end{align*}
 </div>
+<p data-braille="continuation">Which has matrix form:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 
+2 \amp  3 \amp  5 \amp  42\\ 
+2 \amp  2 \amp  6 \amp  40\\ 
+1 \amp  3 \amp  2 \amp  26 \end{array} \right)
+\end{equation*}
 </div>
-<span class="incontext"><a href="Sec_MatrixArithmetic.html#solution-47">in-context</a></span>
+<p data-braille="continuation">Which in turn has reduced row echelon form:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left( \begin{array}{rrr|r} 
+1 \amp  0 \amp  0 \amp  10\\ 
+0 \amp  1 \amp  0 \amp  4\\ 
+0 \amp  0 \amp  1 \amp  2 \end{array} \right)
+\end{equation*}
+</div>
+<p data-braille="continuation">So 10 trucks, 4 vans and 2 SUV's.</p>
+</div>
+<span class="incontext"><a href="Sec_SystemasMatrix.html#solution-47">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:19-06:00       *-->
+<!--*       on 2020-11-28T13:06:57-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,20 +14,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>Notice:</p>
-<ul class="disc">
-<li>We note that revenue is \(R(q)=qD(q)=150q+\frac{40q}{\ln(q)}\text{.}\)  We then differentiate \(R(q)\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p>If you sell \(x\) widgets, the total profit is \(P(x)=\$ \frac{200x-1000}{20x+30}.\)  So the average profit per widget is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+A(x)=\frac{P(x)}{x}= \frac{200x-1000}{20x+30}\cdot\frac{1}{x}=\frac{200x-1000}{20x^2+30x}.
+\end{equation*}
+</div>
+<p data-braille="continuation">Then, the marginal average cost is computed via the derivative:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-D'(q)\amp = \frac{d}{dq}[150q+\frac{40q}{\ln(q)}]\\
-\amp = 150 +\frac{d}{dq}[\frac{40q}{\ln(q)}]\\
-\amp =_{QR} 150 +\frac{\frac{d}{dq}[40q]\ln(q)-40q\frac{d}{dq}[\ln(q)]}{(\ln(q))^2}\\
-\amp = 150 +\frac{40\ln(q)-40q\frac{1}{q}}{(\ln(q))^2}\\
-\amp = 150 +\frac{40\ln(q)-40}{(\ln(q))^2}\text{.}
+A'(x)\amp = \frac{d}{dx}[\frac{200x-1000}{20x^2+30x}]\\
+\amp = \frac{\frac{d}{dx}[200x-1000](20x^2+30x)-(200x-1000)\frac{d}{dx}[20x^2-30x]}{(20x^2+30x)^2}\\
+\amp = \frac{200(20x^2+30x)-(200x-1000)(40x-30)}{(20x^2+30x)^2}\\
+\amp = \frac{4000x^2+6000x-(8000x^2-34000x-30000)}{(20x^2+30x)^2}\\
+\amp = \frac{4000x^2+6000x-8000x^2+34000x+30000}{(20x^2+30x)^2}\\
+\amp = \frac{-4000x^2+40000x+30000}{(20x^2+30x)^2}\text{.}
 \end{align*}
 </div>
-</li>
-<li>This would be \(R'(6)= 150 +\frac{40\ln(6)-40}{(\ln(6))^2}\approx  159.87\) or \(\$159.87\) dollars per unit sold.</li>
-</ul>
-<p data-braille="continuation">Visually: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/04r4ndvvxr" id="interactive-185" width="600" height="600"></iframe></p>
+<p data-braille="continuation">We can see this: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/fzzio7tkr5" id="interactive-173" width="600" height="600"></iframe></p>
 </div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:26-06:00       *-->
+<!--*       on 2020-11-28T13:07:06-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,18 +14,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>Let \(C\) denote “uses cream” and \(S\) denote “uses sugar”.  We are given \(P(S|C)=0.8, P(S|C^c)=0.3, P(C)=0.7.\)</p>
-<ol class="decimal">
-<li>This is \(P(S)\text{.}\)  So:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p>Let \(W\) denote “withdraw cash” and \(B\) denote “Check Balance”.  We are then given \(P(W)=0.92, P(B)=0.32, P(W\cup B)=0.96\text{.}\)  Notice then that:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-P(S)\amp =P(S|C)P(C)+P(S|C^c)(1-P(C))\\
-P(S)\amp =(0.8)(0.7)+(0.3)(1-0.7)=0.65
+P(W\cup B)\amp=P(W)+P(B)-P(W\cap B)\\
+0.96\amp=0.92+0.32-P(W\cap B)\\
+P(W\cap B)\amp=0.28
 \end{align*}
-</div>Which we can see: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/3gypbhzj6l" id="interactive-193" width="600" height="600"></iframe> Moreover, we now know \(P(C)=0.7, P(S)=0.65, P(S\cap C)=P(S|C)P(C)=(0.8)(0.7)=0.56.\)  So we can fill out the following venn diagram: <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-84.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.4.4<span class="period">.</span></span><span class="space"> </span>\(C, S\) and their probabilities</figcaption></figure>
-</li>
-<li>This is \(P(C|S)=\frac{P(C\cap S)}{P(S)}=\frac{0.56}{0.65}\approx 0.861538\text{.}\)</li>
-<li>This is \(P(C^c\cap S^c)=0.21\text{.}\)</li>
-</ol>
+</div>
+<p data-braille="continuation">Which let's us fill in the following diagram: <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-81.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.14<span class="period">.</span></span><span class="space"> </span>\(R, C\) and their probabilities</figcaption></figure> We are tasked with finding \(P(W|B)\text{.}\)  Note that \(P(W|B)=\frac{P(W\cap B)}{P(B)}=\frac{0.28}{0.32}=0.875\) or 87.5%.</p>
 </div></body>
 </html>

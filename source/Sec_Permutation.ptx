@@ -175,7 +175,7 @@ Note that <me>5\cdot 4\cdot 3=\frac{5\cdot 4\cdot 3\cdot \color{blue}{2}\cdot \c
   \end{array}
 </me> </p>
 
-<p>In the above arrangement, we have all the <m>B</m>'s in the same <q>position</q>.  Thus of we remove the disntinction between the <m>B</m>'s, we are left with just the <m>\frac{4!}{3!}=4</m> arrangements <me>ABBB, BABB, BBAB, BBBA.</me>  the <m>4!</m> is the number of arrangements with distinction, and the <m>3!</m> the number of ways to arrange the B's. </p>
+<p>In the above arrangement, we have all the <m>B</m>'s in the same <q>position</q>.  Thus of we remove the distinction between the <m>B</m>'s, we are left with just the <m>\frac{4!}{3!}=4</m> arrangements <me>ABBB, BABB, BBAB, BBBA.</me>  the <m>4!</m> is the number of arrangements with distinction, and the <m>3!</m> the number of ways to arrange the B's. </p>
 
 
 

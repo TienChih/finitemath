@@ -80,6 +80,14 @@
     </p>
   </statement>
  </remark>
+
+
+
+
+
+
+
+
  
  <exercise>
   <statement>
@@ -144,6 +152,77 @@ If we have to choose from one item from <m>S_1, \ldots S_r</m> sets, each with <
    </p>
  </solution>
 </example>    
+
+
+<example>
+    <title>Lattices</title>
+    <statement>
+    	<p>
+    Consider <q>lattice paths</q>, paths of length <m>n</m> starting at <m>(0,0)</m> where for each step, one is only allowed to move right or up?
+
+    <ol>
+    	<li> How many lattice paths are there to <m>(2,3)</m>?</li>
+    	<li> How many lattice paths are there to <m>(3,2)</m>?</li>
+    	<li> How many lattice paths are there of length 5?</li>
+    	<li> How many lattice paths are there to <m>(6,4)</m>?</li>
+    	<li> How many lattice paths are there to <m>(0,10)</m>?</li>
+    	<li> How many lattice paths are there of length 10?</li>
+    </ol>	
+</p>
+</statement>
+<solution>
+	<p>
+		Notice that for any path of length <m>n</m>, we can select some of the <m>n</m> steps to be <q>rights</q> and the rest would be <q>ups</q>.  So paths to <m>(2,3)</m> would correspond to all the way to take 5 moves, and select 2 of them to be <q>rights</q>.  This would be <m>{5\choose 2}=10</m> paths.
+		<interactive desmos="oath2pqxky"/>
+	</p>
+</solution>
+
+<solution>
+	<p>Paths to <m>(3,2)</m> would correspond to all the way to take 5 moves, and select 3 of them to be <q>rights</q>.  This would be <m>{5\choose 3}=10</m> paths.
+		<interactive desmos="6tjw2mag2m"/>
+	</p>
+</solution>
+
+<solution>
+	<p>There are two ways to look at this problem.  We could choose to select 0 of the 5 steps to be <q>rights</q>, or 1, 2, 3, 4 and up to 5 of them to be <q>rights</q>.  The correspond to to walks ending in <m>(0,5), (1,4), (2,3), (3,2), (4,1), (5,0)</m>.  These are all the possible endpoints of a length 5 walk.  So by summing the number of all such walks together, we can enumerate all length 5 walks.  This gives us <me>{5 \choose 0}+{5 \choose 1}+{5 \choose 2}+{5 \choose 3}+{5 \choose 4}+{5 \choose 5}=1+5+10+10+5+1=32 </me> paths.
+</p>
+<p>
+	On the other hand, we can count the number of <q>up/right</q> choices we could make.  There are 5 steps with two choices each.  So the total number of length 5 paths are <me> 2^5=32</me> paths.
+	</p>
+
+	<p>
+		We can see them here:
+		<interactive desmos="plnlxi9bco"/>
+	</p>
+</solution>
+
+
+<solution>
+	<p>
+		Paths to <m>(6,4)</m> would correspond to all the way to take 10 moves, and select 6 of them to be <q>rights</q>.  This would be <m>{10\choose 6}=210</m> paths.
+		<interactive desmos="f0fmgmdllq"/>
+	</p>
+</solution>
+
+<solution>
+	<p>Paths to <m>(10,0)</m> would correspond to all the way to take 10 moves, and only move <q>right</q>.  This would be <m>{10\choose 10}=1</m> path, which makes sense as you have no choices here.
+		<interactive desmos="54c9f6dgit"/>
+	</p>
+</solution>
+
+<solution>
+	<p>We can either sum together all the ways to pick some number of these moves to be <q>rights</q> and the rest <q>ups</q>.  Or we could take out 10 moves, and count the ways to select <q>up</q> or <q>right</q> for each.  Either way we obtain <me>\sum_{k=0}^{10} {10\choose k}=2^{10}=1024</me> paths of length 10.
+	</p>
+
+	<p>
+		We can see them here:
+		<interactive desmos="x5hpr8caun"/>
+	</p>
+</solution>
+
+
+
+</example>
 
 
 

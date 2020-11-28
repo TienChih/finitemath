@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:04:51-06:00       *-->
+<!--*       on 2020-11-28T13:06:27-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,11 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>What about \(\sim q \to \sim p\) (the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">contrapositive"</dfn> of \(p\to q\))? In our example, that would be, "If I didn't get sick then I didn't eat bad food" or "If I'm not a rectangle then I'm not a square". These <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">so</em> seem true. If you didn't get sick you couldn't have eaten bad food (otherwise you'd have gotten sick). If you're not a rectangle, there's no way you could be a square. We can verify this:</p>
+<p>I claim that \(p \to q = \sim p \vee q\text{.}\) To see this, consider:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\sim q \to \sim p\amp = (\sim \sim q \vee \sim p)\\
-\amp = q \vee \sim p\\
-\amp = \sim p \vee q\\
-\amp = p\to q\text{.}
-\end{align*}
+\begin{equation*}
+\begin{array}{c|c|c|c|c} p\amp q\amp p\to q\amp \sim p \amp  \sim p \vee q\\ \hline T\amp T\amp T\amp F\amp T\\ T\amp F\amp F\amp F\amp F\\ F\amp T\amp T\amp T\amp T\\ F\amp F\amp T\amp T\amp T \end{array}
+\end{equation*}
 </div>
 <span class="incontext"><a href="Sec_ConditionalStatements.html#p-554">in-context</a></span>
 </body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T13:10:12-07:00       *-->
+<!--*       on 2020-11-28T13:05:54-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -315,47 +315,91 @@ C(20,3)+C(20,4)+C(20,5)=1140+4845+15504=21489.
 </ol>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-103"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-103"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.2.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-103"><article class="exercise exercise-like"><p id="p-1276">Suppose there were 15 apples, 5 of which are poisened. How many ways are there to pick 4 apples so that:</p>
+<article class="example example-like" id="example-102"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-102"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Lattices.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-102"><article class="example example-like"><p id="p-1276">Consider “lattice paths”, paths of length \(n\) starting at \((0,0)\) where for each step, one is only allowed to move right or up?</p>
 <ol class="decimal">
-<li id="li-651">Without restrictions?</li>
-<li id="li-652">None of the apples are poisened?</li>
-<li id="li-653">All of the apples are poisened?</li>
-<li id="li-654">Exactly two apples are poisened?</li>
-<li id="li-655">Not more than 1 apple is poisened?</li>
+<li id="li-651">How many lattice paths are there to \((2,3)\text{?}\)</li>
+<li id="li-652">How many lattice paths are there to \((3,2)\text{?}\)</li>
+<li id="li-653">How many lattice paths are there of length 5?</li>
+<li id="li-654">How many lattice paths are there to \((6,4)\text{?}\)</li>
+<li id="li-655">How many lattice paths are there to \((0,10)\text{?}\)</li>
+<li id="li-656">How many lattice paths are there of length 10?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-187" id="solution-187"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-187"><div class="solution solution-like">
-<p id="p-1277">We note that there are 11 non-poisened apples.</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-187" id="solution-187"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-187"><div class="solution solution-like"><p id="p-1277">Notice that for any path of length \(n\text{,}\) we can select some of the \(n\) steps to be “rights” and the rest would be “ups”.  So paths to \((2,3)\) would correspond to all the way to take 5 moves, and select 2 of them to be “rights”.  This would be \({5\choose 2}=10\) paths. <iframe src="https://www.desmos.com/calculator/oath2pqxky" id="interactive-199" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-188" id="solution-188"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-188"><div class="solution solution-like"><p id="p-1278">Paths to \((3,2)\) would correspond to all the way to take 5 moves, and select 3 of them to be “rights”.  This would be \({5\choose 3}=10\) paths. <iframe src="https://www.desmos.com/calculator/6tjw2mag2m" id="interactive-200" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-189" id="solution-189"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-189"><div class="solution solution-like">
+<p id="p-1279">There are two ways to look at this problem.  We could choose to select 0 of the 5 steps to be “rights”, or 1, 2, 3, 4 and up to 5 of them to be “rights”.  The correspond to to walks ending in \((0,5), (1,4), (2,3), (3,2), (4,1), (5,0)\text{.}\)  These are all the possible endpoints of a length 5 walk.  So by summing the number of all such walks together, we can enumerate all length 5 walks.  This gives us</p>
+<div class="displaymath">
+\begin{equation*}
+{5 \choose 0}+{5 \choose 1}+{5 \choose 2}+{5 \choose 3}+{5 \choose 4}+{5 \choose 5}=1+5+10+10+5+1=32 
+\end{equation*}
+</div>
+<p data-braille="continuation">paths.</p>
+<p id="p-1280">On the other hand, we can count the number of “up/right” choices we could make.  There are 5 steps with two choices each.  So the total number of length 5 paths are</p>
+<div class="displaymath">
+\begin{equation*}
+2^5=32
+\end{equation*}
+</div>
+<p data-braille="continuation">paths.</p>
+<p id="p-1281">We can see them here: <iframe src="https://www.desmos.com/calculator/plnlxi9bco" id="interactive-201" width="600" height="600"></iframe></p>
+</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-190" id="solution-190"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">4</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-190"><div class="solution solution-like"><p id="p-1282">Paths to \((6,4)\) would correspond to all the way to take 10 moves, and select 6 of them to be “rights”.  This would be \({10\choose 6}=210\) paths. <iframe src="https://www.desmos.com/calculator/f0fmgmdllq" id="interactive-202" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-191" id="solution-191"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">5</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-191"><div class="solution solution-like"><p id="p-1283">Paths to \((10,0)\) would correspond to all the way to take 10 moves, and only move “right”.  This would be \({10\choose 10}=1\) path, which makes sense as you have no choices here. <iframe src="https://www.desmos.com/calculator/54c9f6dgit" id="interactive-203" width="600" height="600"></iframe></p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-192" id="solution-192"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">6</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-192"><div class="solution solution-like">
+<p id="p-1284">We can either sum together all the ways to pick some number of these moves to be “rights” and the rest “ups”.  Or we could take out 10 moves, and count the ways to select “up” or “right” for each.  Either way we obtain</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=0}^{10} {10\choose k}=2^{10}=1024
+\end{equation*}
+</div>
+<p data-braille="continuation">paths of length 10.</p>
+<p id="p-1285">We can see them here: <iframe src="https://www.desmos.com/calculator/x5hpr8caun" id="interactive-204" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-103"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-103"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.2.9</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-103"><article class="exercise exercise-like"><p id="p-1286">Suppose there were 15 apples, 5 of which are poisened. How many ways are there to pick 4 apples so that:</p>
 <ol class="decimal">
-<li id="li-656">Ths is picking 4 of 15 objects so \(C(15,4)=1365\text{.}\)</li>
-<li id="li-657">Ths is picking 4 of 11 objects so \(C(11,4)=330\text{.}\)</li>
-<li id="li-658">Ths is picking 4 of 5 objects so \(C(5,4)=5\text{.}\)</li>
-<li id="li-659">Ths is picking 2 of 5 objects to be posiened, 2 of 11 objects for not poisened, and combining these selections, so  \(C(5,2)\cdot C(11,2)=10\cdot55 =550.\text{.}\)</li>
-<li id="li-660">This is either no apples poisened, which has 330 possibilies as seen above, or 1 apple poisened, counted \(C(5,1)\cdot C(11,3)=5\cdot 165=825\text{.}\)  Thus we have \(330+825=1155\) ways to have no or one poisened apple.</li>
+<li id="li-657">Without restrictions?</li>
+<li id="li-658">None of the apples are poisened?</li>
+<li id="li-659">All of the apples are poisened?</li>
+<li id="li-660">Exactly two apples are poisened?</li>
+<li id="li-661">Not more than 1 apple is poisened?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-193" id="solution-193"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-193"><div class="solution solution-like">
+<p id="p-1287">We note that there are 11 non-poisened apples.</p>
+<ol class="decimal">
+<li id="li-662">Ths is picking 4 of 15 objects so \(C(15,4)=1365\text{.}\)</li>
+<li id="li-663">Ths is picking 4 of 11 objects so \(C(11,4)=330\text{.}\)</li>
+<li id="li-664">Ths is picking 4 of 5 objects so \(C(5,4)=5\text{.}\)</li>
+<li id="li-665">Ths is picking 2 of 5 objects to be posiened, 2 of 11 objects for not poisened, and combining these selections, so  \(C(5,2)\cdot C(11,2)=10\cdot55 =550.\text{.}\)</li>
+<li id="li-666">This is either no apples poisened, which has 330 possibilies as seen above, or 1 apple poisened, counted \(C(5,1)\cdot C(11,3)=5\cdot 165=825\text{.}\)  Thus we have \(330+825=1155\) ways to have no or one poisened apple.</li>
 </ol>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-104"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-104"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.2.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-104"><article class="exercise exercise-like"><p id="p-1278">A caterer offers 10 entrees, 4 of which are vegetarian.  How many ways can you pick 3 entrees:</p>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.2.10</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-104"><article class="exercise exercise-like"><p id="p-1288">A caterer offers 10 entrees, 4 of which are vegetarian.  How many ways can you pick 3 entrees:</p>
 <ol class="decimal">
-<li id="li-661">Without restrictions?</li>
-<li id="li-662">None of the dishes are vegetarian?</li>
-<li id="li-663">All of the dishes are vegetarian?</li>
-<li id="li-664">Exactly one of the dishes is vegetarian?</li>
-<li id="li-665">At least one of the dishes are vegetarian?</li>
+<li id="li-667">Without restrictions?</li>
+<li id="li-668">None of the dishes are vegetarian?</li>
+<li id="li-669">All of the dishes are vegetarian?</li>
+<li id="li-670">Exactly one of the dishes is vegetarian?</li>
+<li id="li-671">At least one of the dishes are vegetarian?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-188" id="solution-188"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-188"><div class="solution solution-like">
-<p id="p-1279">We note that there are 6 non-vegetarian dishes.</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-194" id="solution-194"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-194"><div class="solution solution-like">
+<p id="p-1289">We note that there are 6 non-vegetarian dishes.</p>
 <ol class="decimal">
-<li id="li-666">Ths is picking 3 of 10 objects so \(C(10,3)=120\text{.}\)</li>
-<li id="li-667">Ths is picking 3 of 6 objects so \(C(6,3)=20\text{.}\)</li>
-<li id="li-668">Ths is picking 3 of 4 objects so \(C(4,3)=4\text{.}\)</li>
-<li id="li-669">Ths is picking 1 of 4 objects to be vegetarian, 2 of 6 objects for not vegetarian, and combining these selections, so  \(C(4,1)\cdot C(6,2)=4\cdot15 =60.\text{.}\)</li>
-<li id="li-670">This is one, two or three vegetarian dishes, so<div class="displaymath">
+<li id="li-672">Ths is picking 3 of 10 objects so \(C(10,3)=120\text{.}\)</li>
+<li id="li-673">Ths is picking 3 of 6 objects so \(C(6,3)=20\text{.}\)</li>
+<li id="li-674">Ths is picking 3 of 4 objects so \(C(4,3)=4\text{.}\)</li>
+<li id="li-675">Ths is picking 1 of 4 objects to be vegetarian, 2 of 6 objects for not vegetarian, and combining these selections, so  \(C(4,1)\cdot C(6,2)=4\cdot15 =60.\text{.}\)</li>
+<li id="li-676">This is one, two or three vegetarian dishes, so<div class="displaymath">
 \begin{equation*}
 C(4,1)\cdot C(6,2)+C(4,2)\cdot C(6,1)+C(4,3)\cdot C(6,0)=4\cdot15 + 6\cdot 6+4\cdot 1 =100 
 \end{equation*}

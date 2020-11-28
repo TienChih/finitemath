@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:41-06:00       *-->
+<!--*       on 2020-11-28T13:07:30-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,38 +12,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Evaluate (Sage)'});
-});
-</script>
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>If this pattern keeps up, what happens in another year?  We can simply reapply the matrix \(M\text{:}\)</p>
+<p>Recall that the probability distribution of a die roll is:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} 800 \\ 1200 \end{pmatrix}=\begin{pmatrix} 720 \\ 1280 \end{pmatrix}.
+\begin{array}{|c|cccccc|}
+\hline
+x \amp 1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6 \\
+\hline
+P(X=x) \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6} \amp \frac{1}{6}\\
+\hline
+\end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">However, we also note that:</p>
+<p data-braille="continuation">What if I rolled two die and took their average?  One can check that the distribution would be:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} 800 \\ 1200 \end{pmatrix} \amp=\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\left(\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}\begin{pmatrix} 1000 \\ 1000 \end{pmatrix}\right)\\
-\amp=\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}^2\begin{pmatrix} 1000 \\ 1000 \end{pmatrix}\\
-\amp=\begin{pmatrix} 0.44 \amp 0.28 \\ 0.56 \amp 0.72\end{pmatrix}\begin{pmatrix} 1000 \\ 1000 \end{pmatrix}\\
-\amp=\begin{pmatrix} 720 \\ 1280 \end{pmatrix}
-\end{align*}
+\begin{equation*}
+\begin{array}{|c|ccccccccccc|}
+\hline
+x \amp 1 \amp 1.5 \amp 2 \amp 2.5 \amp 3 \amp 3.5 \amp 4 \amp 4.5 \amp 5 \amp 5.5 \amp 6 \\
+\hline
+P(X=x) \amp \frac{1}{12} \amp \frac{2}{12} \amp \frac{3}{12} \amp \frac{4}{12} \amp \frac{5}{12} \amp \frac{6}{12} \amp \frac{5}{12} \amp \frac{4}{12} \amp \frac{3}{12} \amp \frac{2}{12} \amp \frac{1}{12}\\
+\hline
+\end{array}
+\end{equation*}
 </div>
-<p data-braille="continuation"><div class="sagecell-sage" id="sage-16"><script type="text/x-sage">M=matrix(QQ, [[0.6,0.2],[0.4,0.8]])
-X=matrix(QQ, [[1000],[1000]])
-print(M^2)
-print((M^2)*X)
-</script></div></p>
-<span class="incontext"><a href="Sec_IntrotoMarkov.html#p-1463">in-context</a></span>
+<p data-braille="continuation">We notice some things.  First, the distribution is no longer uniform, the central values are more likely than the extreme values.  Realted to that, there is consequently less variation in results, as central values become more likely.</p>
+<span class="incontext"><a href="Sec_CLT.html#p-1463">in-context</a></span>
 </body>
 </html>

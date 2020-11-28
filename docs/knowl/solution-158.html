@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:24-06:00       *-->
+<!--*       on 2020-11-28T13:07:03-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,18 +16,27 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.3.15.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.2.22.1</span><span class="period">.</span>
 </h6>
-<p>Let \(A\) denote “produced in plant \(A\)” and \(I\) denote “passes inspection”.  Note that we denote “produced in plant \(B\)” by \(P(A^c)\text{.}\)  We are then given \(P(A)=0.6, P(I|A)=0.85, P(I|A^c)=0.7\text{.}\)</p>
+<p>If we let \(R\) denote “has done undergraduate research” and \(C\) denote “has gone to a conference” then we are given \(P(R)=0.2, P(C)=0.25, P(R\cup C)=0.3\text{:}\)</p>
 <ol class="decimal">
-<li>We are finding \(P(A\cap I)=P(I|A)P(A)=(0.85)(0.6)=0.51\text{.}\)  That is, 85% of the 60% of vehicles produced in \(A\) pass inspection, which is 51% of the vehicles produced in \(A\) and pass inspection.</li>
-<li>We are finding \(P(A^c\cap I)=P(I|A^c)P(A^c)=(0.7)(0.4)=0.28\text{.}\)  That is, 70% of the 40% of vehicles produced in \(B\) pass inspection, which is 28% of the vehicles produced in \(B\) and pass inspection.</li>
-<li>Since all the vehicles are produced in \(A\) or \(B\text{,}\) if we take the 51% who pass inspection from \(A\) and the 28% who pass inspection from \(B\text{,}\) that is \(0.51+0.28=0.79\) or 79% of cars pass inspection in total. This let's us fill out the following: <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-82.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.3.16<span class="period">.</span></span><span class="space"> </span>\(A, I\) and their probabilities</figcaption></figure>
+<li>This is \(P(R\cap C)\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+P(R\cup C)\amp = P(R)+P(C)-P(R\cap C) \\
+0.3\amp = 0.2+0.25-P(R\cap C) \\
+P(R\cap C)\amp=0.15 
+\end{align*}
+</div>From here we may fill out the following diagram <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-72.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.23<span class="period">.</span></span><span class="space"> </span>\(R, C\) and their probabilities</figcaption></figure>
 </li>
-<li>We are finding \(P(A|I)=\frac{P(A\cap I)}{P(I)}=\frac{0.51}{0.79}\approx 0.6455696\) or 64.55696%</li>
+<li>This is \(P(R\cap C^c)\text{,}\) which we can see is \(P(R\cap C^c)=0.05\text{.}\) <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-73.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.24<span class="period">.</span></span><span class="space"> </span>\(R\cap C^c\)</figcaption></figure>
+</li>
+<li>This is \(P(R^c\cap C^c)\text{,}\) which we can see is \(P(R^c\cap C^c)=0.7\text{.}\) <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-74.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.25<span class="period">.</span></span><span class="space"> </span>\(R^c\cap C^c\)</figcaption></figure>
+</li>
 </ol>
 </div>
-<span class="incontext"><a href="Sec_Conditional.html#solution-158">in-context</a></span>
+<span class="incontext"><a href="Sec_CardProb.html#solution-158">in-context</a></span>
 </body>
 </html>

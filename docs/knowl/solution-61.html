@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:04:51-06:00       *-->
+<!--*       on 2020-11-28T13:06:25-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,25 +16,28 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.3.2.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.6.1</span><span class="period">.</span>
 </h6>
+<p>Let \(x\) be the number of days the Michigan factory is run and \(y\) the number of days the Wisconsin Factory is run. The goal is minimizing the cost \(C(x,y)=960000x+750000y\text{.}\) The inequalities we are subject to are:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+20x+10y\amp \geq 5000,\ \ \text{Cruisers needed}\\
+40x+30y\amp \geq 12000,\ \ \text{Pontoons Needed}\\
+60x+50y\amp \leq 30000,\ \ \text{Maximum Jet Skis}\\
+x\amp \geq 0,\ \ \text{ no negative days }\\
+y\amp \geq 0,\ \ \text{ no negative days }\\
+x\amp \leq 240,\ \ \text{ cap on days }\\
+y\amp \leq 240,\ \ \text{ cap on days }
+\end{align*}
+</div>
+<p>So sketching the inequalities, we obtain the following feasible region with corners: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/u8kjxloabk" id="interactive-69" width="600" height="600"></iframe> The profit at each corner is as follows:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\begin{array}{c|c|c|c|c|c} 
-p\amp q\amp  r \amp   \sim p \amp \sim p \wedge r \amp (\sim p\vee r)\to q\\ 
-\hline 
-T \amp  T\amp T \amp F\amp F\amp T\\
-T \amp  T\amp F \amp F\amp F\amp T\\
-T \amp  F\amp T \amp F\amp F\amp T\\
-T \amp  F\amp F \amp F\amp F\amp T\\
-F \amp  T\amp T \amp T\amp T\amp T\\
-F \amp  T\amp F \amp T\amp F\amp T\\
-F \amp  F\amp T \amp T\amp T\amp F\\
-F \amp  F\amp F \amp T\amp F\amp T\\
-\end{array}
+\begin{array}{c|c|c} x \amp  y \amp  C(x,y)\\ \hline 130 \amp  240 \amp  960000(130)+750000(240)=304800000\\ 150 \amp  200 \amp  960000(150)+750000(200)=294000000\\ 240 \amp  80 \amp  960000(240)+750000(80)=290400000 \\ 240 \amp  240 \amp  960000(240)+750000(240)=410400000\end{array}
 \end{equation*}
 </div>
+<p xmlns:svg="http://www.w3.org/2000/svg">So the cost is minimized when you run the Michigan factory for 240 days and the Wisconsin Factory for 80 days.</p>
 </div>
-<span class="incontext"><a href="Sec_ConditionalStatements.html#solution-61">in-context</a></span>
+<span class="incontext"><a href="Sec_LinearOptimization.html#solution-61">in-context</a></span>
 </body>
 </html>

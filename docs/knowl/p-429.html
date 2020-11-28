@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:04:47-06:00       *-->
+<!--*       on 2020-11-28T13:06:22-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,17 +12,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>What are the solutions to the following system:</p>
+<p>Solving for the inverse of a matrix, or determining if a matrix is invertible boils down to solving a liear system, which we are doing by Sage anyhow.  We may use Sage to also dorectly invert matrices.  If I wanted to find the inverse of</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-2x+3y\amp \leq 12\\
-x\amp \geq 0\\
-y\amp \geq 0
-\end{align*}
+\begin{equation*}
+M= \begin{pmatrix} 3 \amp 1 \\ 5 \amp 2\end{pmatrix}
+\end{equation*}
 </div>
-<span class="incontext"><a href="Sec_SystemsLinearInequalities.html#p-429">in-context</a></span>
+<p data-braille="continuation">I could do so via: <div class="sagecell-sage" id="sage-7"><script type="text/x-sage">A=matrix(QQ, [[3,1],[5,2]])
+B=A^(-1)
+print(B)
+</script></div></p>
+<span class="incontext"><a href="Sec_MatrixInverse.html#p-429">in-context</a></span>
 </body>
 </html>

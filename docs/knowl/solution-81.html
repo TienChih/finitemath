@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:04:56-06:00       *-->
+<!--*       on 2020-11-28T13:06:30-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,24 +16,36 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.2.1.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.5.10.1</span><span class="period">.</span>
 </h6>
-<p>So we note that:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-P\amp = 500\\
-i\amp = 0.08\\
-n\amp = 10
-\end{align*}
-</div>
-<p>So we are solving:</p>
+<p>Let's define the following:</p>
+<ul class="disc">
+<li>\(b=\)"Frida had breakfast."</li>
+<li>\(p=\)"Frida had pancakes."</li>
+<li>\(w=\)"Frida had waffles."</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li>\(\displaystyle b\to (p\vee w)\)</li>
+<li>\(\displaystyle b\)</li>
+<li>\(\displaystyle \sim w\)</li>
+</ul>
+<p data-braille="continuation">Thus we can proceed as follows:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-A=500(1+.08)^{10}\approx 10794.62.
+\begin{array}{lcl} 
+b\to (p\vee w)\amp \ \ \ \amp \\ 
+b
+\\ \hline 
+p\vee w \amp  \amp \text{ Modus Ponnens } \\ \\ 
+p\vee w \\ 
+\sim w\\ 
+\hline 
+p  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
 \end{equation*}
 </div>
-<p xmlns:svg="http://www.w3.org/2000/svg"><iframe src="https://www.desmos.com/calculator/dmodfltuzf" id="interactive-79" width="600" height="600"></iframe></p>
+<p data-braille="continuation">Thus concluding \(p=\)"Frida had pancakes."</p>
 </div>
-<span class="incontext"><a href="Sec_CompoundInterest.html#solution-81">in-context</a></span>
+<span class="incontext"><a href="Sec_Arguments.html#solution-81">in-context</a></span>
 </body>
 </html>

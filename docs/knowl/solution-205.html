@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:36-06:00       *-->
+<!--*       on 2020-11-28T13:07:18-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,10 +16,40 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">10.3.4.2</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.4.9.1</span><span class="period">.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">We are given bounds and asked to find a probability, so: \(P( Z\lt 0.76)\approx 0.7764\) <iframe src="https://www.desmos.com/calculator/mdylpq4kf6" id="interactive-232" width="600" height="600"></iframe></p>
+<p>Recall the probability distribution of poisened apples.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{array}{|c|cccc|}
+\hline
+x \amp 0 \amp 1 \amp 2 \amp 3 \\
+\hline
+P(X=x) \amp \frac{35}{210}\approx 0.1667\amp \frac{105}{210}=0.5 \amp \frac{63}{210}=0.3 \amp \frac{7}{210}\approx 0.0333\\
+\hline
+\end{array}
+\end{equation*}
 </div>
-<span class="incontext"><a href="Sec_Normal.html#solution-205">in-context</a></span>
+<p data-braille="continuation">So the expected value of poisened apples would be</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+E(X)=0\cdot\frac{35}{210}+1\cdot\frac{=105}{210}+2\cdot\frac{63}{210}+3\cdot\frac{7}{210}=1.2.
+\end{equation*}
+</div>
+<p>Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+E(X^2)=0^2\cdot\frac{35}{210}+1^2\cdot\frac{=105}{210}+2^2\cdot\frac{63}{210}+3^3\cdot\frac{7}{210}=2.
+\end{equation*}
+</div>
+<p data-braille="continuation">So</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+Var(X)=E(X^2)-E(X)^2=2-1.2^2=0.56.
+\end{equation*}
+</div>
+<p data-braille="continuation">Which may also be computed: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/ff9t1rdmef" id="interactive-210" width="600" height="600"></iframe></p>
+</div>
+<span class="incontext"><a href="Sec_ProbabilityDistributions.html#solution-205">in-context</a></span>
 </body>
 </html>

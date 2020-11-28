@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:12-06:00       *-->
+<!--*       on 2020-11-28T13:06:42-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,13 +14,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>We note that \(\limit{x}{1^-}g(x)=g(1)=-1+4=3\text{.}\)  We also note that \(\limit{x}{1^+}g(x)=k(1)=k\text{.}\)  So for \(g(x)\) to be continuous at \(x=1\text{,}\) we need</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-3=\limit{x}{1^+}g(x)=k.
-\end{equation*}
-</div>
-<p data-braille="continuation">Thus \(k=3\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">We observe this visually: <iframe src="https://www.desmos.com/calculator/kdac8jjpzv" id="interactive-151" width="600" height="600"></iframe> Slide the value of \(k\) to see how other values of \(k\) will <em class="emphasis">not</em> give you a continuous function.</p>
+<p>We let \(M(t)\) be the amount of Madeupinium in \(t\) minutes.</p>
+<ol class="decimal">
+<li>We first notice that \(300=M(25)=b\cdot a^{25}\text{.}\)  We also note that whatever \(b\) is, we have that \(M(0)=b\cdot a^0=b\) and \(\frac{b}{2}=M(25)=ba^{25}\text{.}\)  Thus:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{1}{2}\amp = a^{25}\\
+a\amp = \left(\frac{1}{2}\right)^{1/25}\approx 0.972655
+\end{align*}
+</div>From here we may deduce:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+300=ba^{60}\amp = b(\left(\left(\frac{1}{2}\right)^{1/25}\right)^{60}\\
+b\amp =300\cdot \left(\frac{1}{2}\right)^{-\frac{60}{25}}\approx 1583.409
+\end{align*}
+</div>Thus there were about 15803.409 grams initially.</li>
+<li>Knowing that \(a=\left(\frac{1}{2}\right)^{1/25}\)  we have that  \(M(t)=300\cdot\left(\frac{1}{2}\right)^{-\frac{60}{25}}\left(\frac{1}{2}^{\frac{1}{25}}\right)^{t}\text{.}\) <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/8eaou0dgdw" id="interactive-143" width="600" height="600"></iframe>
+</li>
+<li>We have \(%(75)=80300\cdot\left(\frac{1}{2}\right)^{-\frac{60}{25}}\left(\frac{1}{2}^{\frac{1}{25}}\right)^{75}\approx 197.926\) <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/zqbcolgj8c" id="interactive-144" width="600" height="600"></iframe> About 197.926 grams.</li>
+</ol>
 </div></body>
 </html>

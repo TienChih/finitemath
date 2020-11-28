@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:18-06:00       *-->
+<!--*       on 2020-11-28T13:06:57-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,21 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The daily revenue of a local convient store, \(t\) days after opening is \(R(t)=10-8e^{-0.02t}\) in thousands of dollars.  How is the daily revenue increasing or decreasing after 30 days?</p>
-<span class="incontext"><a href="DerivativeExp.html#p-1077">in-context</a></span>
+<p>The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">chain rule</dfn> states</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x).
+\end{equation*}
+</div>
+<p data-braille="continuation">To see why:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{d}{dx}[f(g(x))]\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
+\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h}\color{blue}{\frac{g(x+h)-g(x)}{g(x+h)-g(x)}}\\
+\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}\\
+\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\text{.}
+\end{align*}
+</div>
+<span class="incontext"><a href="Sec_AdvancedDerivative.html#p-1077">in-context</a></span>
 </body>
 </html>

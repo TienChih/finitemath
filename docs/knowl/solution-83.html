@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:04:56-06:00       *-->
+<!--*       on 2020-11-28T13:06:31-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,29 +16,32 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.2.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.5.12.1</span><span class="period">.</span>
 </h6>
-<p>So we note that:</p>
+<p>Let's define the following:</p>
+<ul class="disc">
+<li>\(s=\)"It snows."</li>
+<li>\(p=\)"The city sends out snow plows."</li>
+<li>\(t=\)"Traffic got bad."</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li>\(\displaystyle s\to p\)</li>
+<li>\(\displaystyle p\to t\)</li>
+<li>\(\displaystyle t\)</li>
+</ul>
+<p data-braille="continuation">So one hypothetically start with Reasoning by Transitivity:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-A\amp = 350000\\
-P\amp = 200000\\
-n\amp = 30
-\end{align*}
+\begin{equation*}
+\begin{array}{lcl} 
+s\to p\amp \ \ \ \amp \\ 
+p\to t
+\\ \hline 
+s\to t\amp  \amp \text{ Reasnoning by Transitivity }  \end{array}
+\end{equation*}
 </div>
-<p>So we are solving:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-350000\amp =200000(1+i)^{30}\\
-\frac{350000}{200000}\amp =(1+i)^{30}\\
-(1+i)^{30}\amp= 1.75\\
-(1+i)\amp= (1.75)^{1/30}\approx 1.018829\\
-i\amp \approx 0.018829
-\end{align*}
+<p data-braille="continuation">Next we are given \(t\text{.}\)  But we cannot from \(t\) conclude \(s\text{.}\)  This would be the Fallacy of the Converse.  There's all sorts of reasons traffic might be bad, it may have nothing to do with snows or snow plows.</p>
 </div>
-<p data-braille="continuation">So the interest is about \(1.8829\%\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg"><iframe src="https://www.desmos.com/calculator/tnllurbsie" id="interactive-81" width="600" height="600"></iframe></p>
-</div>
-<span class="incontext"><a href="Sec_CompoundInterest.html#solution-83">in-context</a></span>
+<span class="incontext"><a href="Sec_Arguments.html#solution-83">in-context</a></span>
 </body>
 </html>

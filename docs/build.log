@@ -1,5 +1,7 @@
 Messages from application of /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pretext/static/xsl/pretext-html.xsl:
-PTX:ERROR:   a cross-reference ("xref") uses references [Example_Vitamin] that do not point to any target.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source.  Your output will contain some placeholder text that you will not want to distribute to your readers.
-             located within: "Sec_MatrixArithmetic" (xml:id), "Products and Sums of Matrices" (title)
-PTX:ERROR:   a cross-reference ("xref") uses references [Example_Vitamin] that do not point to any target.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source.  Your output will contain some placeholder text that you will not want to distribute to your readers.
-             located within: "Example_VitProd" (xml:id)
+PTX:ERROR:   a cross-reference ("xref") uses references [Chap_SetProb] that do not point to any target.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+             located within: "Sec_AppstoProb" (xml:id), "Applications to Probability" (title)
+PTX:ERROR:   a cross-reference ("xref") uses references [DefinitionProb] that do not point to any target.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+             located within: "Turning Counting into Probability " (title)
+PTX:ERROR:   a cross-reference ("xref") uses references [Chap_SetProb] that do not point to any target.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+             located within: "Operations on Events and Counting" (title)

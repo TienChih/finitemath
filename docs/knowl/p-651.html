@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:04:55-06:00       *-->
+<!--*       on 2020-11-28T13:06:30-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,16 +15,33 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We're given \(P=1000, A=2000, r=0.12\text{.}\)  Thus we have:</p>
+<p>Let's define the following:</p>
+<ul class="disc">
+<li>\(b=\)"Frida had breakfast."</li>
+<li>\(p=\)"Frida had pancakes."</li>
+<li>\(w=\)"Frida had waffles."</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li>\(\displaystyle b\to (p\vee w)\)</li>
+<li>\(\displaystyle b\)</li>
+<li>\(\displaystyle \sim w\)</li>
+</ul>
+<p data-braille="continuation">Thus we can proceed as follows:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-A\amp = P+Prn\\
-2000\amp = 1000+(1000)(.12)n\\
-1000\amp = 120n\\
-n\amp = \frac{1000}{120}\approx 8.333\ldots
-\end{align*}
+\begin{equation*}
+\begin{array}{lcl} 
+b\to (p\vee w)\amp \ \ \ \amp \\ 
+b
+\\ \hline 
+p\vee w \amp  \amp \text{ Modus Ponnens } \\ \\ 
+p\vee w \\ 
+\sim w\\ 
+\hline 
+p  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
+\end{equation*}
 </div>
-<p data-braille="continuation">So in 8 years and four months: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/9yhnvatmfg" id="interactive-73" width="600" height="600"></iframe></p>
-<span class="incontext"><a href="Sec_SimpleInterest.html#p-651">in-context</a></span>
+<p data-braille="continuation">Thus concluding \(p=\)"Frida had pancakes."</p>
+<span class="incontext"><a href="Sec_Arguments.html#p-651">in-context</a></span>
 </body>
 </html>

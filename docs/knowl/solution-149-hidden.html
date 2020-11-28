@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:22-06:00       *-->
+<!--*       on 2020-11-28T13:06:58-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,16 +14,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>From above:</p>
-<ul class="disc">
-<li>\(P(X)=\frac{3}{6}\text{.}\)</li>
-<li>\(P(Y)=\frac{3}{6}\text{.}\)</li>
-<li>\(P(X\cup Y)=\frac{4}{6}\text{.}\)</li>
-<li>\(P(X\cap Y)=\frac{2}{6}\text{.}\)</li>
-<li>\(P(X\cap Y^c)=\frac{1}{6}\text{.}\)</li>
-<li>\(P(X^c\cup Y)=\frac{5}{6}\text{.}\)</li>
-</ul>
-<p data-braille="continuation">We can modify our above venn diagram to list probabilities: <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-67.svg" role="img" style="width: 100%; height: auto;" alt="Test Venn Diagram."></div>
-<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.14<span class="period">.</span></span><span class="space"> </span>Each event \(X, Y\) and their respective probabilities.</figcaption></figure></p>
+<p>We note that:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]\\
+\amp = t\frac{d}{dt}[e^{-0.25t}]+\frac{d}{dt}[t]e^{-0.25t}\\
+\amp = te^{-0.25t}\frac{d}{dt}[-0.25t]+1\cdot e^{-0.25t}\\
+\amp = te^{-0.25t}\cdot(-0.25t)+e^{-0.25t}\\
+\amp = (1-0.25t)e^{-0.25t}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">So with that:</p>
+<ol class="decimal">
+<li>Notce \(D'(2)=(1-0.25(2))e^{-0.25(2)}\approx 0.303 \) or increasing by 0.303 mL/minute.</li>
+<li>We note that the quantity decreases when \(D'(t)=(1-0.25t)e^{-0.25t}\lt 0\) so:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(1-0.25t)e^{-0.25t}\amp \lt 0\\
+(1-0.25t)\amp \lt 0\\
+1\amp \lt 0.25t\\
+t\amp &gt; 4\text{.}
+\end{align*}
+</div>So after 4 minutes</li>
+</ol>
+<p data-braille="continuation">We can see this: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/uow1nliujd" id="interactive-180" width="600" height="600"></iframe></p>
 </div></body>
 </html>

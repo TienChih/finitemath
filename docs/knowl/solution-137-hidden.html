@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:17-06:00       *-->
+<!--*       on 2020-11-28T13:06:55-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,23 +14,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>If you sell \(x\) widgets, the total profit is \(P(x)=\$ \frac{200x-1000}{20x+30}.\)  So the average profit per widget is</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-A(x)=\frac{P(x)}{x}= \frac{200x-1000}{20x+30}\cdot\frac{1}{x}=\frac{200x-1000}{20x^2+30x}.
-\end{equation*}
-</div>
-<p data-braille="continuation">Then, the marginal average cost is computed via the derivative:</p>
+<p>By <a class="xref" data-knowl="./knowl/RemarkPower.html" title="Remark 7.4.3">Remark 7.4.3</a> and <a class="xref" data-knowl="./knowl/RemarkLinear.html" title="Remark 7.4.1">Remark 7.4.1</a> we have:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-A'(x)\amp = \frac{d}{dx}[\frac{200x-1000}{20x^2+30x}]\\
-\amp = \frac{\frac{d}{dx}[200x-1000](20x^2+30x)-(200x-1000)\frac{d}{dx}[20x^2-30x]}{(20x^2+30x)^2}\\
-\amp = \frac{200(20x^2+30x)-(200x-1000)(40x-30)}{(20x^2+30x)^2}\\
-\amp = \frac{4000x^2+6000x-(8000x^2-34000x-30000)}{(20x^2+30x)^2}\\
-\amp = \frac{4000x^2+6000x-8000x^2+34000x+30000}{(20x^2+30x)^2}\\
-\amp = \frac{-4000x^2+40000x+30000}{(20x^2+30x)^2}\text{.}
+g'(x)\amp = \frac{d}{dx}[\sqrt{4x}+\frac{3}{x}-\frac{2}{x^2}]\\
+\amp = \frac{d}{dx}[2x^{1/2}+3x^{-1}-2x^{-2}]\\
+\amp = 2(1/2)x^{-1/2}+3(-1x^{-2})-2(2x^{-3})\\
+\amp = x^{-1/2}-3x^{-2}+4x^{-3}\\
+\amp = \frac{1}{\sqrt{x}}-\frac{3}{x^2}+\frac{4}{x^3}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">We can see this: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/fzzio7tkr5" id="interactive-173" width="600" height="600"></iframe></p>
+<p data-braille="continuation">We can see this below: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/fi1nqzbrpf" id="interactive-166" width="600" height="600"></iframe></p>
 </div></body>
 </html>

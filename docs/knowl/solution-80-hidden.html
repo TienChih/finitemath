@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:04:55-06:00       *-->
+<!--*       on 2020-11-28T13:06:30-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,13 +14,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>We're given \(P=5000, n=15, r=0.02\text{.}\)  Thus we have:</p>
+<p>Let's define the following:</p>
+<ul class="disc">
+<li>\(s=\)"\(A, B\) are the same point."</li>
+<li>\(z=\)"The distance between \(A, B\) is zero."</li>
+<li>\(\ell=\)"There is exactly one line cointaining both \(A\) and \(B\text{.}\)"</li>
+</ul>
+<p data-braille="continuation">Then what we are given is:</p>
+<ul class="disc">
+<li>\(\displaystyle s\to z\)</li>
+<li>\(\displaystyle \sim s \to \ell\)</li>
+<li>\(\displaystyle \sim\ell\)</li>
+</ul>
+<p data-braille="continuation">Thus we can proceed as follows:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-A\amp = P+Prn\\
-A\amp = 5000+5000(0.02)(15)= 6500.00
-\end{align*}
+\begin{equation*}
+\begin{array}{lcl} 
+\sim s\to \ell\amp \ \ \ \amp \\ 
+\sim \ell
+\\ \hline 
+\sim (\sim s)=s \amp  \amp \text{ Modus Tollens } \\ \\ 
+s\to z \\ 
+s\\ 
+\hline 
+z  \amp  \amp \text{ Modus Ponnens } \end{array}
+\end{equation*}
 </div>
-<p data-braille="continuation">So  \(\$6500.00\) in debt: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/9hfwu4k50w" id="interactive-76" width="600" height="600"></iframe></p>
+<p data-braille="continuation">Thus concluding \(z=\)"The distance between \(A, B\) is zero."</p>
 </div></body>
 </html>

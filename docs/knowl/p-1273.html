@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-28T15:05:31-06:00       *-->
+<!--*       on 2020-11-28T13:07:12-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,33 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>There are \(C(20,3)=1140\) ways to pick 3 people out of 20.</p>
-<ol class="decimal">
-<li>There are \(C(5,3)=10\) ways to pick only sick people, so the probability this happens is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p>There are \(C(20,3)\) ways to pick a commttee of 3, \(C(20,4)\) ways to pick a commttee of 4 and \(C(20,5)\) ways to pick a commttee of 5.  So the total number of ways to pick commttees is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\frac{C(5,3)}{C(20,3)}=\frac{10}{1140}\approx 0.0088.
+C(20,3)+C(20,4)+C(20,5)=1140+4845+15504=21489.
 \end{equation*}
 </div>
-</li>
-<li>There are \(C(15,3)=455\) ways to pick only healthy people, so the probability this happens is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{C(15,3)}{C(20,3)}=\frac{455}{1140}\approx 0.3991.
-\end{equation*}
-</div>
-</li>
-<li>There are \(C(5,2)\cdot C(15,1)=10\cdot 15=150\) ways to pick two sick and one healthy person, so the probability this happens is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{C(5,2)\cdot C(15,1)}{C(20,3)}=\frac{10\cdot 15}{1140}\approx  0.1316.
-\end{equation*}
-</div>
-</li>
-<li>The probability that at least one person tested sick is \(1-\frac{C(15,3)}{C(20,3)}\text{.}\)  Thus assuming this happens, the probability everyone tests sick is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{C(5,3)/C(20,3)}{1-C(15,3)/C(20,3)}\approx \frac{0.0088}{0.6009}\approx 0.0146.
-\end{equation*}
-</div>
-</li>
-</ol>
-<span class="incontext"><a href="Sec_AppstoProb.html#p-1273">in-context</a></span>
+<p data-braille="continuation">Note that there are no overlaps between these selections, they may share people, but there is no 3 person committee who is also a 4 person committee etc.</p>
+<span class="incontext"><a href="Sec_Combinations.html#p-1273">in-context</a></span>
 </body>
 </html>
