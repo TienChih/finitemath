@@ -374,6 +374,7 @@ print(sd(Results))
 
 
 <exercise xml:id="ExerciseWeather">
+<title>Weather and Mood</title>
   <statement>
     <p>
   Suppose that today, there is a 20% chance it rains, a 10% chance that I will be in a bad mood, and an 8% chance that it rains <em>and</em> I'm in a bad mood.
@@ -460,6 +461,7 @@ print(sd(Results))
 
 
  <exercise xml:id="ExerciseClass">
+ <title>Student Research and Conferences</title>
   <statement>
     <p>
   Suppose that in a Mathematics department, 20% of the students have done undergraduate research, 25% have gone to conferences.  We also have that 30% have done either one or the other.
@@ -546,6 +548,7 @@ print(sd(Results))
 
 
  <exercise>
+ <title>Rolling two dice</title>
 <statement>
   <p>
     Roll two six-sided dice.  Let <m>A</m> denote <q>first die outcome is a 6</q>, <m>B</m> denotes <q>the sum of the outcomes is at least 10</q> and <m>C</m> denote <q>second die outcome is a 3</q>. Find the following:

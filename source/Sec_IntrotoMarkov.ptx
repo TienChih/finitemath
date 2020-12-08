@@ -223,6 +223,7 @@ So about a 57.63% chance of voting for <m>A</m> and a 42.37% chance of voting fo
 </p>
 
 <exercise>
+  <title>Rock, Paper, Scissors</title>
   <statement>
     <p>
   Suppose that when Zara plays Rock, Paper Scissors, she tries her best to mix it up.  If she throws a Rock, then there's a 0.3  chance she throws Paper next and 0.3 chance she throws Scissors.  If she throws Paper, there's a 80% chance she throws Scissors next, and a 20% chance she throws Rock next.  If she throws Scissors, theres a 30% chance she throws Rock and a 70% chance she throws Paper next.
@@ -256,6 +257,7 @@ So about a 57.63% chance of voting for <m>A</m> and a 42.37% chance of voting fo
 
 
 <exercise>
+  <title>Clothing Brands</title>
   <statement>
     <p>
   Customers of a store purchase clothes from brands <m>U</m> and <m>V</m>.  Those who buy clothes from <m>U</m> and a 30% chance of switching to <m>V</m> in their next purchase.  Customers who bought <m>V</m> have a 40% chance of swithing to <m>U</m>

@@ -154,6 +154,7 @@
     </ol>  
   </p>  
 <exercise>
+  <title>Promotion and Retention</title>
   <statement>
     <p>
       Suppose employees of a company go through a probationary period when hired.  They are evaluated regularly and rated unacceptable, in progress, good, and excellent.  Unacceptable employees are let go, and excellent employees are offered full time contracts, either way they are no longer probationary.
@@ -273,6 +274,7 @@
 
 
   <exercise>
+    <title>Flipping Coins</title>
     <statement>
       <p>
     If you flip a fair coin, how long on average would it take you to get 3 heads in a row?
@@ -329,6 +331,7 @@
 
 
   <exercise>
+    <title>Opening a Restaurant</title>
     <statement>
       <p>
         Farida opens a restaurant, the food is good, but the restaurant business is notoriously tough.  She needs a positive critic review in local press to generate the local buzz she needs to survive.  Each month, there is a 30% chance a critic reviews the restaurant.  There's a 10% chance that otherwise she breaks even that month. If that fails, she dips into her savings.  She can do so 5 times before the business is bankrupt.

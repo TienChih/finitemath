@@ -134,6 +134,7 @@ Then:
 
 
 <exercise>
+  <title>Waste material</title>
     <statement>
       <p>
         In a factory, the fabrication machines waste excess material, the amount of waste is a random variable with mean 1kg and standard deviation 0.25 kg.
@@ -168,6 +169,7 @@ Then:
 
 
 <exercise>
+  <title>Employee houurs</title>
     <statement>
       <p>
         Suppose employees of a fast food chain work hours that are normally distributed with a mean of 30 hours and standard deviation of 5 hours.
@@ -202,6 +204,7 @@ Then:
 
 
 <exercise>
+  <title>Length of playlists</title>
     <statement>
       <p>
         Angeline has a music library, the average song length is 3.75 minutes with standard deviation 0.5 minutes.  

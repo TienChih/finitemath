@@ -7,8 +7,8 @@
     <title>Validity of arguments</title>
     <statement>
       <p>
-        If I read the handouts and I watch the videos then I will pass.
-        I didn't pass.
+        If I read the handouts and I watch the videos then I will get an A.
+        I didn't get an A.
         I read the handouts, therefore I didn't watch the videos.
       </p>
       <p>
@@ -28,17 +28,17 @@
           </li>
           <li>
             <p>
-              <m>p=</m>
-              <q>pass class.</q>
+              <m>a=</m>
+              <q>got an A.</q>
             </p>
           </li>
         </ul>
       </p>
       <p>
-        So what we know is <m>(h\wedge v)\to p, h, \sim p</m>.
+        So what we know is <m>(h\wedge v)\to a, h, \sim a</m>.
         So:
         <me>
-          \begin{array}{lcl} (h\wedge v)\to p\amp \ \ \ \amp \\ \sim p\\ \hline \sim(h\wedge v)=\sim h \vee\sim v \amp  \amp \text{ Modus Tollens } \\ \\ \sim h \vee \sim v \\ h=\sim \sim h\\ \hline \sim v  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
+          \begin{array}{lcl} (h\wedge v)\to a\amp \ \ \ \amp \\ \sim a\\ \hline \sim(h\wedge v)=\sim h \vee\sim v \amp  \amp \text{ Modus Tollens } \\ \\ \sim h \vee \sim v \\ h=\sim \sim h\\ \hline \sim v  \amp  \amp \text{ Disjunctive Syllogism } \end{array}
         </me>
       </p>
       <p>

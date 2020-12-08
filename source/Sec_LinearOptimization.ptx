@@ -85,6 +85,7 @@
 
   
   <exercise>
+    <title>Raising Animals</title>
     <statement>
       <p>
         Suppose that a agriculture student is raising goats and pigs for a project.
@@ -129,6 +130,7 @@
     </solution>
   </exercise>
   <exercise>
+    <title>Feeding a Farm</title>
     <statement>
       <p>
         A farmer plans to mix two types of food to make a mix of low cost feed for the animals in his farm. A bag of food <m>A</m> costs $10 and contains 40 units of proteins, 20 units of minerals and 10 units of vitamins. A bag of food <m>B</m> costs $12 and contains 30 units of proteins, 20 units of minerals and 30 units of vitamins. How many bags of food <m>A</m> and <m>B</m> should the consumed by the animals each day in order to meet the minimum daily requirements of 150 units of proteins, 90 units of minerals and 60 units of vitamins at a minimum cost?
@@ -162,6 +164,7 @@
     </solution>
   </exercise>
   <exercise>
+    <title>Selling Airline Tickets</title>
     <statement>
       <p>
         An airline offers coach and first-class tickets. For the airline to be profitable, it must sell a minimum of 25 first-class tickets and a minimum of 40 coach tickets. The company makes a profit of $225 for each coach ticket and $200 for each first-class ticket. At most, the plane has a capacity of 150 travelers. How many of each ticket should be sold in order to maximize profits?
@@ -194,6 +197,7 @@
     </solution>
   </exercise>
   <exercise>
+    <title>Boat Manufacturing</title>
     <statement>
       <p>
         Bountiful Boats has to produce at least 5000 cabin cruisers and 12,000 pontoons each year; they can produce at most 30,000 jet skis in a year. The company has two factories:  one in Michigan, and one in Wisconsin; each factory is open for a maximum of 240 days per year. The Michigan factory makes 20 cabin cruisers, 40 pontoons, and 60 jet skis per day. The Wisconsin factory makes 10 cruisers, 30 pontoons, and 50 jet skis per day. The cost to run the Michigan factory per day is $960,000; the cost to run the Wisconsin factory per day is $750,000. How many days of the year should each factory run in order to meet the boat production, yet do so at a minimum cost?

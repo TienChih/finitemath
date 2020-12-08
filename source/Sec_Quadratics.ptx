@@ -115,6 +115,7 @@
 
 
 <exercise>
+  <title>Maximizing Area</title>
   <statement>
 <p> Suppose that you were given 200 ft of fencing to fence in a rectangular area.  What is the largest are you could fence in and what would it's dimensions be?
     </p>
@@ -135,6 +136,7 @@
 
 
 <exercise>
+  <title>Selling Widgets</title>
   <statement>
 <p> A company sells widgets for <m>\$50</m> each.  Unfortunately, no one wants to buy them.  The discover that for each dollar they lower the price, 5 more people are willing to buy a widget.  The marginal cost of producing a widget is <m>\$10</m> with fixed cost <m>\$300</m>.  How should the widget be priced to maximize profit?  What is this profit, and how many widgets would be sold?
     </p>

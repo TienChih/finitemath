@@ -139,6 +139,7 @@
     </example>  
 
     <exercise>
+      <title>Identify argument type</title>
       <statement>
         <p>
       Identify the argument type for each of the following:
@@ -233,6 +234,7 @@
     </example>
 
 <exercise>
+  <title>Valid or Fallacious arguments</title>
       <statement>
         <p>
       Identify if the argument is valid, and the argument or fallacy type for each of the following:
@@ -346,6 +348,7 @@
       </p>
 
       <exercise>
+        <title>Constructing an argument</title>
       <statement>
         <p>
       Suppose you knew the following:</p><p> If <m>A, B</m> are the same point, then the distance between them is zero.  If <m>A, B</m> are different points, there is exactly one line containing both <m>A</m> and <m>B</m>.  There is not exactly one line containing both <m>A</m> and <m>B</m>.</p>
@@ -391,6 +394,7 @@
     
 
     <exercise>
+      <title>Construction an argument 2</title>
       <statement>
         <p>
       Suppose you knew the following:</p>
@@ -437,6 +441,7 @@
 
 
     <exercise>
+      <title>Identify the flaw</title>
       <statement>
         <p>
       Find the flaw in the following line of reasoning:</p>
@@ -477,6 +482,7 @@
 
 
     <exercise>
+      <title>Identify the flaw 2</title>
       <statement>
         <p>
       Find the flaw in the following line of reasoning:</p>

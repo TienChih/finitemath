@@ -124,6 +124,7 @@
 
 
       <exercise>
+        <title>Random Testing</title>
         <statement>
           <p>
             Suppose you had a bus of 20 people, and 5 are sick, suppose  3 were picked  to test at random.
@@ -150,6 +151,7 @@
 
 
      <exercise>
+      <title>Passengers on an Elevator</title>
         <statement>
           <p>
             An elevator has 5 passengers and stops at 8 floors. It is equally
@@ -167,6 +169,7 @@ floor.
 
 
      <exercise>
+      <title>Marbles in Jars</title>
         <statement>
           <p>
             There are two jars, jar one has 5 white marbles and 6 black marbles. Jar 2 has 8 white marbles and 7 black marbles.  Suppose you pick a jar at random and pick two marbles at random from said jar.

@@ -132,6 +132,7 @@
   </p>
 
 <exercise>
+  <title>Rabbit Population</title>
   <statement>
 <p> Suppose a warren of rabbits grows at an exponential rate.  In 5 weeks, there are 100 rabbits, and in 10 weeks, there were 125 rabbits.
   <ol>
@@ -172,6 +173,7 @@
 </exercise>
 
 <exercise>
+  <title>Half-Life</title>
   <statement>
 <p> Suppose the half-life of Madeupinium in 25 minutes.  Suppose that a professor acquires a sample of Madeupinium, and after an hour, there is 300g left.
   <ol>

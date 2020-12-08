@@ -207,6 +207,7 @@
 
 
   <exercise xml:id="ExerciseLimit">
+    <title>Identify limits</title>
   <statement>
   <p>
     Consider the graph of <m>y=g(x)</m>:
@@ -394,6 +395,7 @@
    </example>
  
    <exercise>
+    <title>Identify points of continuity</title>
      <statement>
      <p>
      In <xref ref="ExerciseLimit"/>, identify when <m>g(x)</m> is continuous.
@@ -454,6 +456,7 @@
 
 
 <exercise>
+  <title>Ensuring continuity 1</title>
     <statement>
       <p>
     For what values of <m>x</m> is <me>a(x)=\begin{cases} x \amp x\lt 1 \\ x^2+1 \amp 1\leq x \lt 3 \\ 2^x \amp x\geq 3\end{cases}</me>
@@ -476,6 +479,7 @@
 
 
 <exercise>
+  <title>Ensuring continuity 2</title>
     <statement>
       <p>
     For what value of <m>k</m> is <me>b(x)=\begin{cases} 2^x \amp x\lt 2 \\ -x+k \amp x\geq2\end{cases}</me>

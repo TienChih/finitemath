@@ -97,6 +97,7 @@ another set.
  <p>In this case, we can see this relation is <em>not</em> a function.  Let's call it <m>L</m> for lunch.  We see that many of our subjects had more than one item for lunch.  So If we asked about <m>L(\text{Andrew})</m>, it's not clear if this should be Hamburger or Fries, or a Soda.  Recall that the definition of a function assigns <em>one</em> output per input.</p>
 
 <exercise>
+  <title>Which are functions?</title>
       <statement>
         <p>
           Which of the following assignments or relations are functions?
@@ -164,6 +165,7 @@ another set.
   </p>
   
   <exercise>
+    <title>When is a relation a function?</title>
       <statement>
         <p>
           Which of the following relations express <m>y</m> as a function of <m>x</m>?
@@ -252,6 +254,7 @@ another set.
 </example>
 
     <exercise>
+      <title>Find Domain and Range 1</title>
       <statement>
   <p>
     Find the domain and range of <m>a(x)=x^3-2</m>.
@@ -266,6 +269,7 @@ another set.
 </exercise>
 
  <exercise>
+  <title>Find Domain and Range 2</title>
   <statement>
   <p>
     Find the domain and range of <m>b(x)=\sqrt{x^2-4}</m>.
@@ -281,6 +285,7 @@ another set.
 </exercise>
 
 <exercise>
+  <title>Find Domain and Range 3</title>
   <statement>
   <p>
     Find the domain and range of <m>c(x)=\frac{1}{\sqrt{x}}+2</m>.
@@ -296,6 +301,7 @@ another set.
 </exercise>
 
 <exercise>
+  <title>Find Range</title>
   <statement>
   <p>
     Find the  range of <m>d(x)=x^2</m> restricted to the domain <m>\{-3,-2,1,2\}</m>.
@@ -344,6 +350,7 @@ another set.
 </example>
 
 <exercise>
+  <title>Evaluating functions 1</title>
   <statement>
 <p> Consider <m>g(x)=1+\sqrt{x+1}</m>.  Evaluate <m>f(x)</m> as follows:
     <ol>
@@ -368,6 +375,7 @@ another set.
 </exercise>
 
 <exercise>
+   <title>Evaluating functions 2</title>
   <statement>
 <p> Consider <m>h(x)=\frac{2}{x+3}</m>.  Evaluate <m>f(x)</m> as follows:
     <ol>
@@ -392,6 +400,7 @@ another set.
 </exercise>
 
 <exercise>
+   <title>Cost of production</title>
   <statement>
 <p> Suppose that the cost of producing <m>x</m> units of a good is <m>C(x)=\$20x+100</m>. :
     <ol>

@@ -280,6 +280,7 @@
       This artifical interest rate is often referred to as <term>APR</term> or <em>Annual Percentage Rate</em>.  
     </p>  
     <exercise>
+      <title>Future Value</title>
       <statement>
         <p>
           Suppose that I take out a loan for $500 at 12% annual interest charged biannually.
@@ -307,6 +308,7 @@
       </solution>
     </exercise>
     <exercise>
+      <title>Size of Initial Investment</title>
       <statement>
         <p>
           Suppose that I want to invest some money at 8% annual interest compounded annually
@@ -337,6 +339,7 @@
       </solution>
     </exercise>
     <exercise>
+      <title>Interest Rates</title>
       <statement>
         <p>
           Suppose that I want to invest $500 and in 10 years I want this to grow to $2000.
@@ -368,6 +371,7 @@
       </solution>
     </exercise>
     <exercise>
+      <title>Length of a Loan</title>
       <statement>
         <p>
           Suppose that I borrow $1000 at 24% annual interest compounded monthly.

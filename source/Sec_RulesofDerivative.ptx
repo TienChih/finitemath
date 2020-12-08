@@ -182,6 +182,7 @@
 
 
 <exercise>
+  <title>Marginal Cost, Revenue and Profit</title>
   <statement>
     <p>
       An analyst has found that a company’s costs and revenues
@@ -224,6 +225,7 @@ respectively, where <m>x</m> is the number of items produced.
 
 
 <exercise>
+  <title>Marginal Revenue</title>
   <statement>
     <p>
      If the price in dollars of a product is given by <me>p(q)=\frac{500}{q^2}+800</me> where <m>q</m> represents the demand for the product, find the marginal
@@ -242,6 +244,7 @@ revenue when the demand is 4.
 
 
 <exercise>
+  <title>Blood Sugar levels</title>
   <statement>
     <p>
     Insulin affects the glucose, or blood sugar,

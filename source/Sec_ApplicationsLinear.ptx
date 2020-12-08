@@ -385,6 +385,7 @@
   </p>
 
   <exercise>
+    <title>Soda Production</title>
     <statement>
       <p>
     A soda manufacturer can produce 1,000 cases of
@@ -449,6 +450,7 @@ soda at a total cost of $7,500.
 
 
   <exercise>
+    <title>App user base</title>
     <statement>
       <p>
     The number of users of a new app was 2,000 at the start of the year and grows at a steady rate. After 5 weeks it is 5,000 people.  Let <m>U(t)</m> denote the number of users in <m>t</m> weeks.

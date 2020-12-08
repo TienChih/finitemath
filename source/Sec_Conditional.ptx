@@ -254,6 +254,7 @@
 
 
 <exercise>
+  <title>ATM usage</title>
 <statement>
   <p>
     Among users of automated teller machines
@@ -303,6 +304,7 @@ what is the probability that she also uses an ATM to get cash?
 
 
 <exercise xml:id="ExercisePlants">
+  <title>Vehicle production</title>
 <statement>
   <p>
     A company has two plants producing vehicles, plants <m>A</m> and <m>B</m>.  In plant <m>A</m>, 85% of the vehicles pass inspection, and in plant <m>B</m> only 70% do.  Suppose plant <m>A</m> produces 60% of the vehicles, and plant <m>B</m> the other 40%.
@@ -356,6 +358,7 @@ what is the probability that she also uses an ATM to get cash?
 
 
 <exercise xml:id="ExerciseDiner">
+  <title>Eating out and getting sick</title>
 <statement>
   <p>
     Some people ordered some food at a restaurant, and over the course of  dinner, it becomes clear that some of the patrons are getting sick.  Consider this table representing how many people ordered what, and how many got sick:
@@ -511,6 +514,7 @@ If someone were to flip a coin, it is a 50% chance that it comes up heads.  It's
 
 
 <exercise>
+  <title>Major and grades</title>
 <statement>
   <p>
     Suppose that in a class, 10% were Math majors, 30% got A's on the last test, and 3% were Math majors who got A's.  Are being a Math major and getting an A independent?
@@ -539,6 +543,7 @@ If someone were to flip a coin, it is a 50% chance that it comes up heads.  It's
 
 
 <exercise>
+  <title>Zombification and Gender</title>
   <statement>
     <p>
   Let's suppose that 20% of a town were zombified, and half the town were women.  If zombification and gender are independent, what percentage of the town are women who are not zombies?  What about neither zombies nor women?

@@ -34,6 +34,7 @@
 
 
    <exercise>
+    <title>Computing a Derivative</title>
      <statement>
      <p>
      Let <m>\alpha(x)=\frac{2}{x+1}</m>.  Find <m>\alpha'(2)</m>.
@@ -61,6 +62,7 @@
    </exercise>
 
    <exercise>
+    <title>Growing Oil Spill</title>
      <statement>
      <p>
      The area of an oil spill <m>t</m> hours after a pipe burst is  <m>A(t)=1000\pi\sqrt{t}</m> square feet.  How fast is the spill spreading in 10 hours?
@@ -135,6 +137,7 @@
 
 
 <exercise>
+  <title>Computing a Derivative function</title>
      <statement>
      <p>
      Let <m>\alpha(x)=\frac{2}{x+1}</m>.  Find <m>\alpha'(x)</m>.
@@ -162,6 +165,7 @@
    </exercise>
 
    <exercise>
+    <title>Growing Oil Spill as a function</title>
      <statement>
      <p>
      The area of an oil spill <m>t</m> hours after a pipe burst is  <m>A(t)=1000\pi\sqrt{t}</m> square feet.  Find <m>A'(t)</m>.

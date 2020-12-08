@@ -199,11 +199,12 @@
 <subsection>
   <title>Exercises</title>
 <exercise>
+  <title>Marginal Profit</title>
   <statement>
     <p>
       The total profit \from selling
 <m>x</m> widgets is: <me>P(x)=\$ \frac{200x-1000}{20x+30}.</me>
-Find the marginal average cost function.
+Find the marginal average profit function.
 
 
     </p>
@@ -211,7 +212,7 @@ Find the marginal average cost function.
 
 <solution>
   <p>
-  If you sell <m>x</m> widgets, the total profit is <m>P(x)=\$ \frac{200x-1000}{20x+30}.</m>  So the average profit per widget is <me>A(x)=\frac{P(x)}{x}= \frac{200x-1000}{20x+30}\cdot\frac{1}{x}=\frac{200x-1000}{20x^2+30x}.</me>  Then, the marginal average cost is computed via the derivative:
+  If you sell <m>x</m> widgets, the total profit is <m>P(x)=\$ \frac{200x-1000}{20x+30}.</m>  So the average profit per widget is <me>A(x)=\frac{P(x)}{x}= \frac{200x-1000}{20x+30}\cdot\frac{1}{x}=\frac{200x-1000}{20x^2+30x}.</me>  Then, the marginal average profit is computed via the derivative:
      <md>
         <mrow>A'(x)\amp = \frac{d}{dx}[\frac{200x-1000}{20x^2+30x}]</mrow>
         <mrow>\amp = \frac{\frac{d}{dx}[200x-1000](20x^2+30x)-(200x-1000)\frac{d}{dx}[20x^2-30x]}{(20x^2+30x)^2}</mrow>
@@ -228,6 +229,7 @@ Find the marginal average cost function.
 
 
 <exercise>
+  <title>Bacterial Growth</title>
   <statement>
     <p>
       Assume that the total number (in millions)
@@ -269,6 +271,7 @@ hours) is given by <me> N(t)=3t(t-8)^2+30.</me>
 
 
 <exercise>
+  <title>Depreciation of assets</title>
   <statement>
     <p>
       A company purchases a  truck depreciates according to the

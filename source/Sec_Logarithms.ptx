@@ -130,6 +130,7 @@
   <title>Computations</title>
 
 <exercise>
+  <title>Utilizing the logarithm</title>
   <statement>
 <p> Solve for <m>x</m>:
   <ol>
@@ -170,6 +171,7 @@
 
 
 <exercise>
+  <title>Resturaunt revenue</title>
   <statement>
 <p> Suppose a resturaunt's weekly revenue in thousands of dollars is <m>R(t)=50-30e^{-0.1t}</m> in <m>t</m> weeks after opening.
   <ol>
@@ -204,6 +206,7 @@
 
 
 <exercise>
+  <title>Half-Life</title>
   <statement>
 <p> Consider a radioactive compound Imaginarium which has halflife of 100 minutes.  Let <m>I(t)</m> be the amount of Imaginarium left in grams after <m>t</m> minutes if you started with 1000g.
   <ol>

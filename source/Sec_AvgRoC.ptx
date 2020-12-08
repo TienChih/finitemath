@@ -134,6 +134,7 @@
   </example>
 
   <exercise>
+    <title>Changes in revenue</title>
     <statement>
       <p>
         Consider a restaurant, whose weekly revenue, <m>t</m> weeks after opening is <m>R(t)=60-40e^{-0.05t}</m> thousand dollars.  Find the average rates of change in weekly revenue over the following periods of time:

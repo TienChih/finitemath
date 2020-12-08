@@ -91,6 +91,7 @@
 
  
  <exercise>
+  <title>Cards from a deck</title>
   <statement>
     <p>
       In how many ways can a hand of 6 red cards be chosen from an
@@ -231,6 +232,7 @@ If we have to choose from one item from <m>S_1, \ldots S_r</m> sets, each with <
 
 
 <exercise>
+  <title>Poisoned apples</title>
   <statement>
     <p>
       Suppose there were 15 apples, 5 of which are poisened. How many ways are there to pick 4 apples so that:
@@ -259,6 +261,7 @@ If we have to choose from one item from <m>S_1, \ldots S_r</m> sets, each with <
 
 
 <exercise>
+  <title>Vegetarian options</title>
   <statement>
     <p>
       A caterer offers 10 entrees, 4 of which are vegetarian.  How many ways can you pick 3 entrees:

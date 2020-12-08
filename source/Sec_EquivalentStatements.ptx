@@ -207,6 +207,7 @@
 
 
   <exercise>
+    <title>Equivalence of Statements 1</title>
     <statement>
         <p>Are <m>p\wedge (q\vee r)</m> and <m>(p\wedge q)\vee (p\wedge r)</m> equivalent?</p>
     </statement>
@@ -248,6 +249,7 @@
 
   </exercise> 
   <exercise>
+    <title>Equivalence of Statements 2</title>
     <statement>
         <p>Are <m>p\vee (q\wedge r)</m> and <m>(p\vee q)\wedge (p\vee r)</m> equivalent?</p>
     </statement>
@@ -289,6 +291,7 @@
 
   </exercise> 
   <exercise>
+    <title>Equivalence of Statements 3</title>
     <statement>
         <p>Are <m>p\vee \sim q</m> and <m> \sim p \vee q</m> equivalent?</p>
     </statement>

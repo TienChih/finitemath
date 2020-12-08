@@ -71,6 +71,7 @@
 
 
 <exercise>
+  <title>Drivers speeding</title>
     <statement>
     <p>
     Consider a group of 100 drivers, each with a 45% chance of speeding. 
@@ -96,6 +97,7 @@
 
 
 <exercise>
+  <title>Feedback on a product</title>
     <statement>
     <p>
     A company sends a survey to 200 customers, each has a 53% of liking their product. 

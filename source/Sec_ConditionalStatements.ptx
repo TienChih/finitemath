@@ -233,6 +233,7 @@
   <subsection>
     <title>Exercises</title>
     <exercise>
+      <title>Truth Table 1</title>
     <statement>
         <p>Find a truth table for  <m>\sim p\vee (q\to r)</m>.</p>
     </statement>
@@ -258,6 +259,7 @@
   </exercise>
 
     <exercise>
+      <title>Truth Table 2</title>
     <statement>
         <p>Find a truth table for  <m>(\sim p\wedge r)\to q</m>.</p>
     </statement>
@@ -282,6 +284,7 @@
 
   </exercise>  
   <exercise>
+    <title>Truth Table 3</title>
     <statement>
         <p>Find a truth table for  <m>(p\to \sim q)\leftrightarrow r</m>.</p>
     </statement>

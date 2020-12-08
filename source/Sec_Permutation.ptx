@@ -49,6 +49,7 @@ If we have to make <m>n</m> choices, each with <m>m_1, m_2, m_3,\ldots,m_n</m> c
 </example>
 
 <exercise>
+  <title>Possible Coin Flips</title>
   <statement>
     <p>
       If you flip a coin 3 times, how many different head, tails arrangements are possible?
@@ -62,6 +63,7 @@ If we have to make <m>n</m> choices, each with <m>m_1, m_2, m_3,\ldots,m_n</m> c
 </exercise>
 
 <exercise>
+  <title>Meal Options</title>
   <statement>
     <p>
       If a resturaunt offered 4 different appetizers, 7 main courses and 5 desserts, how many ways can you order one of each?
@@ -135,6 +137,7 @@ Note that <me>5\cdot 4\cdot 3=\frac{5\cdot 4\cdot 3\cdot \color{blue}{2}\cdot \c
 
 
 <exercise>
+  <title>Delivery Routes</title>
   <statement>
     <p>
       If a driver had to make 6 deliveries, how many ways could they pick an order to do so?
@@ -148,6 +151,7 @@ Note that <me>5\cdot 4\cdot 3=\frac{5\cdot 4\cdot 3\cdot \color{blue}{2}\cdot \c
 </exercise>
 
 <exercise>
+  <title>Selecting Officers</title>
   <statement>
     <p>
       If a class of 30 had to select 4 students to be class president, vice president, secretary and treasurer?
@@ -208,6 +212,8 @@ Note that <me>5\cdot 4\cdot 3=\frac{5\cdot 4\cdot 3\cdot \color{blue}{2}\cdot \c
 
 
 <exercise>
+  <title>Eating Yogurt for a Week</title>
+
   <statement>
     <p>
       A student buys 3 strawberry yogurts, 2 raspberry yogurts, and 2 blueberry yogurts. They put

@@ -95,6 +95,7 @@
   <p>This is the most <q>likely</q> value.  In our example, it is 3 with 6 occurences.</p>
 
   <exercise>
+    <title>High and Low Temperatures</title>
     <statement>
       <p>
         Consider the following table of high and low temperatures in a location over the course of a year.

@@ -128,6 +128,7 @@ and now these data sets are equally <q>spread out</q>.
 
 
   <exercise>
+     <title>High and Low Temperatures over a Year</title>
     <statement>
       <p>
         Consider the following table of high and low temperatures in a location over the course of a year.
@@ -184,6 +185,7 @@ Find the population and sample standard deviation and variance for temperatures 
 
 
 <exercise>
+   <title>Employee Salaries</title>
     <statement>
       <p>
         Consider two companies, Company A and Company B, who pay their employees the following salaries:

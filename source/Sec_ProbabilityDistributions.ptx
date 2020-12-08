@@ -288,6 +288,7 @@ So the expected value of poisened apples would be <me>E(X)=0\cdot\frac{35}{210}+
 
 
 <exercise>
+<title>Quality Control an on Assembly Line</title>
   <statement>
     <p>
   Out of every 20 products on an assembly line, 5 are checked for defects.  Suppose in this group of 20, 3 are defective.  Let <m>X</m> denote the number of defective products.
@@ -348,6 +349,7 @@ Which again:
 
 
 <exercise>
+<title>Insured Device</title>
   <statement>
     <p>
   An insurance policy on an electrical device

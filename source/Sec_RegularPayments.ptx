@@ -124,6 +124,7 @@
     </p>
 
     <exercise>
+      <title>Future Value</title>
       <statement>
         <p>
           Suppose that I deposit $100 into an account at 1% monthly interest compounded monthly.
@@ -155,6 +156,7 @@
     </exercise>
 
     <exercise>
+      <title>Regular Loan Amounts</title>
       <statement>
         <p>
           Suppose that Aziz borrowed a fixed amount of money per year at a rate of <m>12\%</m> interest compounded annually.
@@ -188,6 +190,7 @@
     </exercise>
 
     <exercise>
+      <title>Interest Rate</title>
       <statement>
         <p>
           Olive wants to deposit <m>\$500</m> a month into an account, how much monthly interest would this account need to return in order for her to save <m>\$8000</m> in a year?
@@ -222,6 +225,7 @@
     </exercise>
 
     <exercise>
+      <title>How long until some amount is saved?</title>
       <statement>
         <p>
           Katya wants to save <m>\$2000</m> a year into a savings account with <m>10\%</m> annual interest. How long would she have to save before accumulating <m>\$50000</m>?
@@ -306,6 +310,7 @@
     </p>
 
     <exercise>
+      <title>Size of Payments</title>
       <statement>
         <p>
           Zhou wishes to purchase a <m>\$200000</m> home.  After putting down a down payment, he takes out a 20 year mortgage of <m>\$160000</m> at a monthly rate of <m>0.3\%</m>.  How much will his monthly payments be?
@@ -339,6 +344,7 @@
     </exercise>
 
     <exercise>
+      <title>Size of initial Loan</title>
       <statement>
         <p>
           Tyrone authorizes a loan to a debtor who will make payments of <m>\$1000</m> a year for 10 years at <m>6\%</m> interest.  How much was the loan for?
@@ -372,6 +378,7 @@
 
 
     <exercise>
+      <title>Number of paymenst to resolve a debt</title>
       <statement>
         <p>
           Karen racked up <m>\$4000</m> in credit card debit with a <m>2\%</m> monthly interest rate.  She can only make <m>\$100</m> monthly payments on it.  How long will it take for her to pay this debt off?
@@ -411,6 +418,7 @@
 
 
     <exercise>
+      <title>Interest Rate</title>
       <statement>
         <p>
           Jasmine lends <m>\$2500</m> to a friend who will make <m>\$200</m> weekly payments on it for 15 weeks.  What in effect is the weekly interest rate of her loan?

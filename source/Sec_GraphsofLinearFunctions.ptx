@@ -353,6 +353,7 @@
 
 
     <exercise>
+       <title>Plot a line</title>
       <statement>
         <p>
           Plot the line <m>3x-4y=12</m>

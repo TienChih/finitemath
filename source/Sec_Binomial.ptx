@@ -221,6 +221,7 @@ We can also compute these values the old fashioned way:
 
 
 <exercise>
+  <title>Insurance payouts</title>
   <statement>
     <p>
       Suppose an insurance company issues 8 policies, each of which have a 25% chance of paying out.
@@ -246,6 +247,7 @@ We can also compute these values the old fashioned way:
 </exercise>
 
 <exercise>
+  <title>Scheduling meetings</title>
   <statement>
     <p>
       Suppose a team leader proposes a meeting time to a team of 12.  Each member has a 30% chance of having a conflict.

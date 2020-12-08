@@ -338,6 +338,7 @@
 
 
   <exercise>
+    <title>Profit of a shop with multiple locations</title>
     <statement>
       <p>
         A noodle shop has 3 locations.  Their revenues and costs over June July and August are recorded in the following tables in thousands of dollars:
@@ -389,6 +390,7 @@
 
 
   <exercise>
+    <title>Product and Shipping costs</title>
     <statement>
       <p>
         Consider the following table recording the price of 3 different goods and the shipping cost per item.
