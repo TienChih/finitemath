@@ -40,6 +40,7 @@
     compared to algebraic ones.
   </p>
   <example>
+    <title>Are these statements equivalent?</title>
     <statement>
       <p>
         Is
@@ -86,6 +87,7 @@
     </statement>
   </example>
   <example>
+    <title>Are these statements equivalent?</title>
     <statement>
       <p>
         Does <m>\sim(p \vee q)=\sim p \wedge \sim q</m>?
@@ -178,6 +180,7 @@
   </theorem>      
 
   <example>
+    <title>Applying DeMorgan's Law</title>
     <statement>
       <p>
         Is <m>\sim((p \vee q)\wedge \sim r)=(\sim p \wedge \sim q )\vee r</m>?

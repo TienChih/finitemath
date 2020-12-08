@@ -26,6 +26,7 @@
 </definition>  
 
 <example>
+  <title>Element or not of a set</title>
 <statement>
   <p>
     Consider the set <m>A=\{2,3,5\}.</m>
@@ -42,6 +43,7 @@
 
 
 <example>
+  <title>Set Builder notation</title>
 <statement>
   <p>
     Consider the set <m>S=\{x:x\ \text{is a word starting with an "A"}\}.</m>
@@ -65,6 +67,7 @@ For this chapter, the primary goal of sets is to list a collection of possible o
 
 
 <example>
+  <title>Describing an Empty Set</title>
 <statement>
   <p>
     Consider the set <me>R=\{a:a^2-2a=0\ \text{and}\ a\ \text{is odd}\}.</me>
@@ -98,6 +101,7 @@ There are situations where every element which satisfies a condition also satisf
 
 
 <example>
+  <title>Subsets of Sets</title>
 <statement>
   <p>
     Consider the sets <me>A=\{1,2,3,4,5\}, B=\{1,3,5\}, C=\{1,4\}.</me>
@@ -126,9 +130,10 @@ There are situations where every element which satisfies a condition also satisf
 
 
 <example>
+  <title>Equivalent Sets</title>
 <statement>
   <p>
-    Consider the sets <me>V=\{4,1,2\}, W=\{4,2\}, X=\{2,4\}, Y=\{1,2,4,2\}, Z=\{a:x^2-6x+8=0\}.</me>
+    Consider the sets <me>V=\{4,1,2\}, W=\{4,2\}, X=\{2,4\}, Y=\{1,2,4,2\}, Z=\{x:x^2-6x+8=0\}.</me>
     <ul>
         <li><m>V\neq W</m>, since <m>1\not\in W</m></li>
         <li><m>V=Y</m> since each element of <m>V</m> is an element of <m>Y</m> and vice versa (one can check them one by one).</li>
@@ -164,6 +169,7 @@ There are situations where every element which satisfies a condition also satisf
 
 
 <example xml:id="ExampleSet">
+  <title>Complement of Sets</title>
 <statement>
   <p>
     Let <me>\mathcal{U}=\{Ailca, Bryan, Corrine, Damien, Esmeralda, Francis\}.</me> Let <m>A=\{Bryan, Esmeralda\}, B=\{Bryan, Francis\}</m>.
@@ -207,6 +213,7 @@ There are situations where every element which satisfies a condition also satisf
 </definition>  
 
 <example>
+  <title>Union and Intersection of Sets</title>
 <statement>
   <p>
     Recall <xref ref="ExampleSet"/>.  Find the following:

@@ -72,6 +72,7 @@
     Like linear functions, we may identify an exponential function by it's growth factor and any point.
  </p>
 <example>
+  <title>Identifying an exponential function with a point and growth factor</title>
   <statement>
 <p> Find a exponential function <m>h(x)</m> with growth factor 1.2 and where <m>h(2)=5</m>.
     </p>
@@ -93,6 +94,7 @@
     Also like linear functions, we may identify an exponential function by two points.
  </p>
 <example>
+  <title>Identifying an exponential function with two points</title>
   <statement>
      <p> Find a exponential function <m>d(t)</m> passing through <m>(1,4)</m> and <m> (4,2)</m>.
     </p>

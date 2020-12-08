@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-30T10:04:22-07:00       *-->
+<!--*       on 2020-12-08T10:58:57-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,9 +16,10 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-g'(x)\amp = \frac{(x^2+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x^2+1]}{(x^2+1)^2}\\
-\amp = \frac{(x^2+1)(1)-x(2x)}{(x^2+1)^2}\\
-\amp = \frac{1-x^2}{(x^2+1)^2}
+\frac{d}{dx}[f(g(x))]\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h},\ \text{ Similar to the product rule, we will multiply by 1: }\\
+\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{h}\color{blue}{\frac{g(x+h)-g(x)}{g(x+h)-g(x)}}\\
+\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}\\
+\amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}
 \end{align*}
 </div>
 <span class="incontext"><a href="Sec_AdvancedDerivative.html#mjx-eqn-mrow-726">in-context</a></span>

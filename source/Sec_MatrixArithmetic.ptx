@@ -18,6 +18,7 @@
       We begin with a motivating example:
     </p>
     <example xml:id="Example_VitProd">
+      <title>Vitamins and Supplements</title>
       <statement>
         <p>
           Recall that in <xref ref="Example_Vitamin">Example</xref> Margo has three supplements:
@@ -140,6 +141,7 @@
       This number is also the <m>n</m> is <xref ref="Defn_MatrixProd">Definition</xref>.
     </p>
     <example xml:id="Example_MoreMatrixProducts">
+      <title>Matrix Products</title>
       <statement>
         <p>
           Let
@@ -218,6 +220,7 @@
       Another way matrix products deviate from real number products is that the product of matrices whose entries aren't 0 can result in a matrix whose entries are all 0.
     </p>
     <example>
+      <title>The zero matrix as a product of nonzero matrices</title>
       <statement>
         <p>
           Let
@@ -290,23 +293,7 @@
         </p>
       </statement>
     </definition>    
-    <example>
-      <statement>
-        <p>
-          Company <m>B</m> gets in on this action and will give 2 dollars to each charity for each student who attends.
-          NOW given <m>F</m> female and <m>M</m> male students,
-          how much money will go to Elderly and the Homeless?
-          <md>
-            <mrow>\begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \left( \begin{pmatrix}2 \amp  1 \\ 1 \amp  2 \\ 2 \amp  2 \end{pmatrix}  + \begin{pmatrix}2 \amp  2 \\ 2 \amp  2 \\ 2 \amp  2 \end{pmatrix}    \right)\begin{pmatrix}F\\M \end{pmatrix} \amp = \begin{pmatrix}0.8 \amp  0.5 \amp  0 \\ 0.2 \amp  0.5 \amp  1 \end{pmatrix}  \begin{pmatrix}4 \amp  3 \\ 3 \amp  4 \\ 4 \amp  4 \end{pmatrix}  \begin{pmatrix}F\\M \end{pmatrix}</mrow>
-            <mrow>\amp = \begin{pmatrix}4.7 \amp  4.4 \\ 7.3 \amp   6.6 \end{pmatrix} \begin{pmatrix}F\\M \end{pmatrix}</mrow>
-            <mrow>\amp = \begin{pmatrix}4.7F+4.4M\\ 7.3F+6.6M \end{pmatrix}</mrow>
-          </md>
-        </p>
-        <p>
-          So $<m>(4.7 F+4.4M)</m> for Elderly and $<m>(7.3 F+6.6M)</m> for Homeless.
-        </p>
-      </statement>
-    </example>
+    
   </subsection>
   <subsection>
   <title>Computation using Sage</title>

@@ -66,6 +66,7 @@
   We call <m>M=\begin{pmatrix} 0.6 \amp 0.2 \\ 0.4 \amp 0.8\end{pmatrix}</m> a <term>transition matrix</term>.
 </p>
   <example>
+    <title>Population of Towns</title>
     <statement>
       <p>
         Following the example above:
@@ -151,6 +152,7 @@ So about a 57.63% chance of voting for <m>A</m> and a 42.37% chance of voting fo
 </p>  
 
 <example>
+  <title>Modes of Transportation</title>
   <statement>
     <p>
       Abed either takes the bus or walks to work every day.  If he walks to work, there's a 50% chance he'll walk the next day or he'll take the bus.  If he takes the bus, he remembers how much he hates the bus and theres a 20% chance he'll still take the bus and an 80% chance he'll walk.

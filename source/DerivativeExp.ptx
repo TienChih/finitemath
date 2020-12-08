@@ -62,6 +62,7 @@
   </p>
 
 <example>
+  <title>Derivatives involving exponentials</title>
 <statement>
   <p>
       Let's try the derivative of <m>f(x)=e^{x}x^2</m> and <m>h(x)=2^{\frac{x}{x+1}}</m>

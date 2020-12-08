@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-30T10:04:20-07:00       *-->
+<!--*       on 2020-12-08T10:58:55-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,15 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">While there is a formal definition of a derivative, it is a somewhat cumbersome and computationally intense definition.  In this section, we begin introducing some properties of the derivative which simplify computation.</p>
+<p>How do we know that? Well:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{d}{dx}[a(f)x)+bg(x)]\amp = \limit{h}{0}\frac{af(x+h)+bg(x+h)-(af(x)-bg(x))}{h}\\
+\amp = \limit{h}{0}\frac{af(x+h)-af(x)}{h}+\limit{h}{0}\frac{bg(x+h)-bg(x)}{h}\\
+\amp = a\limit{h}{0}\frac{f(x+h)-f(x)}{h}+b\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
+\amp = af'(x)+bg'(x)\text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="Sec_RulesofDerivative.html#p-1037">in-context</a></span>
 </body>
 </html>

@@ -84,6 +84,7 @@
 
 
 <example xml:id="ExampleClass2">
+  <title>Conditional Probability with Student Athletes and Bio Majors</title>
 <statement>
   <p>
     Recall <xref ref="ExampleClass"/>, suppose a class of 25 had 12 student athletes, 8 biology majors, and 5 students who were both student athletes and biology majors.
@@ -126,6 +127,7 @@
 
 
 <example xml:id="ExerciseFood2">
+  <title>Conditional Probability with Hamburgers and Hot Dogs</title>
 <statement>
   <p>
     Recall <xref ref="ExerciseFood"/>: A food truck sells only burgers and hotdogs.  We have that 20 people ordered something, 18 people ordered burgers, 6 ordered hotdogs.
@@ -169,6 +171,7 @@
 
 
 <example>
+  <title>Conditional Probability with Weather and Moods</title>
 <statement>
   <p>
     Recall <xref ref="ExerciseWeather"/>: Suppose that today, there is a 20% chance it rains, a 10% chance that I will be in a bad mood, and an 8% chance that it rains <em>and</em> I'm in a bad mood.
@@ -210,6 +213,7 @@
 
 
 <example>
+  <title>Conditional Probability with Student Research and Conferences</title>
 <statement>
   <p>
     Recall <xref ref="ExerciseClass"/>: Suppose that in a Mathematics department, 20% of the students have done undergraduate research, 25% have gone to conferences.  We also have that 30% have done either one or the other.
@@ -445,6 +449,7 @@ If someone were to flip a coin, it is a 50% chance that it comes up heads.  It's
 
 
 <example>
+  <title>Independence with Student Athletes and Bio Majors</title>
 <statement>
   <p>
     Recall <xref ref="ExampleClass2"/>: Suppose a class of 25 had 12 student athletes, 8 biology majors, and 5 students who were both student athletes and biology majors.  Are being a biology major and being an athlete independent?
@@ -475,6 +480,7 @@ If someone were to flip a coin, it is a 50% chance that it comes up heads.  It's
 
 
 <example>
+  <title>Independence with Hamburgers and Hotdogs</title>
 <statement>
   <p>
     Recall <xref ref="ExerciseFood2"/>: A food truck sells only burgers and hotdogs.  We have that 20 people ordered something, 18 people ordered burgers, 6 ordered hotdogs.  Are ordering a burger and hotdog  independent?

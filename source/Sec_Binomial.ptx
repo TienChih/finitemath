@@ -79,6 +79,7 @@ Of course, this all extends beyond exam grades and A's.
 
 
 <example xml:id="ExampleSoccer">
+  <title>Penalty Shots</title>
   <statement>
   <p>
   Suppose a soccer player has a 70% chance of making a penalty shot.  She shoots 5 times.  Assume the results of the shots are independent.
@@ -103,6 +104,7 @@ Of course, this all extends beyond exam grades and A's.
 
 
 <example xml:id="ExampleMachine">
+  <title>Malfunctioning Machines</title>
   <statement>
   <p>
   A factory has 10 machines, each of which has a 10% chance of malfunctioning in a day. 
@@ -171,6 +173,7 @@ We can also compute these values the old fashioned way:
 </p>
 
 <example>
+  <title>Mean, variance and standard deviation of Penalty Shots</title>
   <statement>
     <p>
       Consider <xref ref="ExampleSoccer" />.  What is the expected value, variance, and standard deviation for the number of shots made?
@@ -193,6 +196,7 @@ We can also compute these values the old fashioned way:
 
 
 <example>
+  <title>Mean, variance and standard deviation of Malfunctioning Machines</title>
   <statement>
     <p>
       Consider <xref ref="ExampleMachine" />.  What is the expected value, variance, and standard deviation for the number of malfunctioning machines?

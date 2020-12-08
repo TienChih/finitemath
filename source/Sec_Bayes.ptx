@@ -107,6 +107,7 @@ And:
 
 
 <example>
+  <title>Coffee drinkers, cream and sugar</title>
     <statement>
       <p>
         Suppose that out of coffee drinkers, 80% of those who use cream also add sugar, and 30% of those who don't use cream add sugar.  Suppose that 70% of coffee drinkers use cream.
@@ -155,6 +156,7 @@ And:
 
 
 <example>
+  <title>Zombie Apocalypse and the efficacy of serums</title>
     <statement>
       <p>
         Suppose that during the zombie apocalypse, an anti-zombification serum is developed.  People who take the serum have a 10% chance of becoming zombies, but those who don't have an 85% chance of becoming zombies. Suppose half of a city is zombified.

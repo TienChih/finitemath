@@ -222,6 +222,7 @@ another set.
     Generally speaking for real valued functions, any real number may be an element of the domain, unless otherwise specified, or unless it would result in an undefined arithmetic operation.
   </p>
   <example>
+    <title>Domain and Range of a function</title>
     <statement>
   <p>
     Consider the domain and range of <m>f(x)=x^2-2</m>.  No matter what the value of <m>x</m> is, that value may be squared, and 2 may be subtracted from the result.  Thus the domain is <m>(-\infty, \infty)</m>, every real number is a valid input. </p> <p> Note that <m>x^2</m> has minimal value 0, so <m>x^2-2\geq -2</m> and the range of <m>f(x)</m> is <m>[-2,\infty)</m>, numbers greater than or equal to 2 are valid outputs.
@@ -231,6 +232,7 @@ another set.
 </example>
 
 <example>
+  <title>Domain and Range of a function</title>
     <statement>
   <p>
     Consider the domain and range of <m>g(x)=\frac{2}{3-x} </m>.  In this case, we note that 2 divided by any non-zero number is well-defined.  However, we cannot divide two by zero.   Thus the domain is <m>(-\infty, 3)\cup (3,\infty)</m>, every real number other than 3 is a valid input, since <m>\frac{2}{3-3}=\frac{2}{0}</m> is undefined. </p> <p>  Similarly, there is no value we may divide 2 by to achieve 0, and thus the range is <m>(-\infty, 0)\cup (0,\infty)</m>, every real value other than zero is a valid output.
@@ -240,6 +242,7 @@ another set.
 </example>
 
 <example>
+  <title>Domain and Range of a function</title>
     <statement>
   <p>
     Consider the domain and range of <m>h(x)=\sqrt{2+x} </m>.  In this case, we note that we may take the squareroot of zero, but not negative numbers. We note then that <m>2+x\geq0</m> for <m>h(x)</m> to be defined.  Thus the domain is <m>(-2,\infty)</m>, every real number greater than or equal to -2 is a valid input. </p> <p>  Similarly, the output of the square root function is non-negative, and thus the range is <m>[0,\infty)</m>, every real value greater than or equal to zero is a valid output.
@@ -313,6 +316,7 @@ another set.
 <p>The algebraic definition of real valued function is a guide on how they are to be evaluated.  It may be that we will wish to evaluate these at real number values, but it is possible we will want to evluate them at algebraic expressions themselves.</p>
 
 <example>
+  <title>Evaluating a function</title>
   <statement>
 <p> Consider <m>f(x)=x^2+x-1</m>.  Evaluate <m>f(x)</m> as follows:
     <ol>

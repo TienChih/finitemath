@@ -74,6 +74,7 @@
     </p>
 
 <example xml:id="ExampleLimit">
+  <title>Limits of a function</title>
 <statement>
     <p>
       So looking at this graph of <m>y=f(x)</m>:
@@ -384,6 +385,7 @@
      </definition>
      
     <example>
+      <title>Points of continuity and discontinuity</title>
      <statement>
      <p>
      In <xref ref="ExampleLimit"/>, <m>f(x)</m> is continuous at each <m>x</m> except for <m>x=2, 4</m>, since the limits are either undefined or don't agree with the function at these values.
@@ -405,6 +407,7 @@
    </exercise>
 
    <example>
+    <title>Identifying points of continuity</title>
     <statement>
       <p>
     For what values of <m>x</m> is <me>f(x)=\begin{cases} 2^x \amp x\lt 0 \\ x+1 \amp 0\leq x \leq 4 \\ \sqrt{x} \amp x>4\end{cases}</me>
@@ -427,6 +430,7 @@
 
 
 <example>
+  <title>Ensuring continuity of a function</title>
     <statement>
       <p>
     For what value of <m>k</m> is <me>g(x)=\begin{cases} -x^2+4 \amp x\leq 1 \\ kc \amp x>1\end{cases}</me>

@@ -20,6 +20,7 @@
    </definition> 
 
   <example>
+    <title>Rolling two dice</title>
    <statement>
    <p>
    Consider the experiment rolling two dice.  We can see that the sample space for this experiment is:
@@ -90,6 +91,7 @@ A <term>probability distribution</term> is, roughly speaking, a complete descrip
 </remark>        
 
 <example xml:id="ExampleTicket">
+  <title>Lottery tickets</title>
   <statement>
     <p>
   Suppose you buy a ticket for a game of chance.  You have a <m>1/10</m> chance of winning the grand prize <m>\$20</m> and a <m>3/10</m> chance of winning the runner up prize <m>\$5</m>. Find a probability distribution for <m>X</m> your winnings.  What is the probability you win something?
@@ -114,6 +116,7 @@ There is a <m>\frac{3}{10}+\frac{1}{10}</m> chance you win something.
 
 
 <example xml:id="ExampleApple">
+  <title>Poisoned apples</title>
   <statement>
     <p>
   Snow white has a basket of 10 apples, 3 are poisened.  She is going to pick 4 apples at random to eat for some reason.  let <m>X</m> denote the number of poisened apples she eats.  Find a probability distribution for <m>X</m>.  What's the probability she eats at least 2 poisened apples?
@@ -222,6 +225,7 @@ print(sd(Results))
 
 
 <example>
+<title>Break-even point on Lottery Tickets</title>
   <statement>
     <p>
   Recall <xref ref="ExampleTicket"/>.  How much should the ticket cost so the game breaks even on average?
@@ -250,6 +254,7 @@ We have <m>E(X)=0\cdot(0.6)+5\cdot(0.3)+20\cdot(0.1)=3.5</m>.  So the game retur
 
 
 <example>
+<title>Expectation and Variance of Poisoned Apples</title>
   <statement>
     <p>
   Recall <xref ref="ExampleApple"/>.  What is the expected value and variance of poisened apples.

@@ -84,6 +84,7 @@ We notice some things.  First, the distribution is no longer uniform, the centra
 </p>
 
 <example>
+  <title>Winnings of mass-purchased Lottery Tickets</title>
     <statement>
       <p>
         Suppose you have a game of chance.  Tickets cost <m>\$2</m>.  You have a 3 in 10 chance of winning <m>\$5</m> and a 1 in 10 chance of winning <m>\$10</m>.  The <em>net</em> winnings have the following distribution:

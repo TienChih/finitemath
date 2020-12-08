@@ -101,6 +101,7 @@
    </p> 
 
     <example>
+      <title>Maximizing revenue</title>
   <statement>
 <p> Suppose that in an apartment complex of 80 units, if the rent is <m>\$800 </m> a month, all the units will be filled.  For every <m>\$25</m> we increase the rent there will be an additional vacancy.  What rent maximizes the monthly revenue?
     </p>

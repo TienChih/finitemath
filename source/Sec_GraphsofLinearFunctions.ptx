@@ -35,6 +35,7 @@
       and this amount is <m>m</m>."
     </p>
     <example xml:id="Example_Slope">
+      <title>Graphing a linear function</title>
       <statement>
         <p>
           Let <m>y=-x+4</m>.
@@ -98,6 +99,7 @@
       </statement>
     </example>
     <example xml:id="Example_NullSlope">
+       <title>Graphing another linear function</title>
       <statement>
         <p>
           Let <m>y=3</m>.
@@ -165,6 +167,7 @@
       and when <m>x=0</m>, <m>y=m(0)+b=b</m>.
     </p>
     <example xml:id="Example_Intercept">
+      <title>Identifying intercepts</title>
       <statement>
         <p>
           Let us recall <xref ref="Example_Slope">Example</xref> and let <m>y=-x+4</m>.
@@ -190,6 +193,7 @@
       </statement>
     </example>
     <example xml:id="Example_Intercept2">
+      <title>Identifying intercepts pt. 2</title>
       <statement>
         <p>
           Let us recall <xref ref="Example_NullSlope">Example</xref> and let <m>y=3=0x+3</m>.
@@ -250,6 +254,7 @@
       </ol>
     </p>
     <example xml:id="Example_DrawLine">
+       <title>Graphing a linear function is slope-intercept form</title>
       <statement>
         <p>
           Draw the line <m>y=f(x)</m> where <m>f(x)=-\frac{2}{3}x+4</m>.
@@ -294,6 +299,7 @@
       </solution>
     </example>
     <example xml:id="Example_DrawLineOtherForm">
+       <title>Graphing a linear function in standard form</title>
       <statement>
         <p>
           Draw the line <m>2x+4y=8</m>.

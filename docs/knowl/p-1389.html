@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-30T10:04:42-07:00       *-->
+<!--*       on 2020-12-08T10:59:11-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>So, given a data set \(1,2,3,4,5\text{,}\) we should all see the mean is 3.  We could try to measure the spread of this data set by taking the differences between the mean and the data points and summing them up:</p>
+<p>We can fix both these issues by squaring all the terms:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(1-3)+(2-3)+(3-3)+(4-3)+(5-3)
+(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2=10
 \end{equation*}
 </div>
-<p data-braille="continuation">However, when we look at this, we see that the sum of these values is 0.  So this, as it stands, is not a great measure of the spread.</p>
+<p data-braille="continuation">This seems like a good way to measure the spreadoutness of the data.  But hold on, what if the data set was:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+1,2,3,4,5,1,2,3,4,5
+\end{equation*}
+</div>
+<p data-braille="continuation">If we apply the same scheme, we would get:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2+(1-3)^2+(2-3)^2+(3-3)^2+(4-3)^2+(5-3)^2=20
+\end{equation*}
+</div>
+<p data-braille="continuation">But, I think we can all agree the second data set isn't any more spread out than the first one.  It's the same distribution repeated.  How can we fix this?</p>
 <span class="incontext"><a href="Sec_Variation.html#p-1389">in-context</a></span>
 </body>
 </html>

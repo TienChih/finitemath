@@ -188,6 +188,7 @@ Scrolling down the left side, we can see the <m>z</m>-scores are computed automa
 </p>
 
 <example>
+  <title>Normal distribution and Tuna Weight</title>
   <statement>
     <p>
       Suppose Ahi tuna weights are normally distributed with mean 120 lbs and standard deviation 25 lb's.  Kyle the fisherman goes out fishing.

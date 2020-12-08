@@ -25,6 +25,7 @@
       <q>Therefore your pet is a dog</q>.
     </p>
     <example>
+      <title>Arguments employing Modus Ponenes</title>
       <statement>
         <p>
       The following are also examples of Modus Ponones:
@@ -56,6 +57,7 @@
       <q>Therefore you did not eat peanuts</q>.
     </p>
      <example>
+      <title>Arguments emplying Modus Tollens</title>
       <statement>
         <p>
       The following are also examples of Modus Tollens:
@@ -92,6 +94,7 @@
       so therefore, I must take science."
     </p>
      <example>
+      <title>Arguments exmploying Disjunctive Syllogism</title>
       <statement>
         <p>
       The following are also examples of Disjunctive Syllogism:
@@ -121,6 +124,7 @@
       <q>Therefore, if it rains, then I will get sick.</q>
     </p>
      <example>
+      <title>Arguments employing Transitivity</title>
       <statement>
         <p>
       The following are also examples of Reasoning by Transitivity:
@@ -190,6 +194,7 @@
     So for example "If I sell this TV, I will have $200.  I have $200, so I must have sold the TV."  The reason this is a fallacy is because, absent more information, you could have acquired $200 in any other way, it was never suggested that this is your only avenue to have acquired this money.  Recall that both <m>F\to T, T\to T</m> are true statements, so knowing that <m>q</m> is true, does not allow you to conclude automatically that <m>p</m> is true.
   </p>
   <example>
+    <title>False arguments employing the Fallacy of Converse</title>
       <statement>
         <p>
       The following are also examples of Fallacy of Converse:
@@ -214,6 +219,7 @@
       So for example "If I order pizza, then I will have lunch.  I didn't order pizza, I must not have had lunch." The reason this is a fallacy is because it is clear that you could potentially have had anything else for lunch.  Without more knowledge, it can't be concluded based on this alone that you had no lunch options.  Recall that <m>F\to q</m> is always true no matter what <m>q</m> is.  So if you didn't get pizza, could have had lunch?  Yes.  Could you not have had lunch?  Also yes.  You simply can't conclude anything.
     </p>
     <example>
+      <title>False arguments employing the Fallacy of Inverse</title>
       <statement>
         <p>
       The following are also examples of Fallacy of the Inverse:

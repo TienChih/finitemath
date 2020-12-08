@@ -43,6 +43,7 @@
 
 
     <example>
+      <title>Derivative involving logarithms</title>
       <statement>
     <p>
       Let <m>g(x)=\ln(x^2+1)</m>.  Find <m>g'(x)</m>.</p></statement>

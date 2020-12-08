@@ -47,6 +47,7 @@
 </statement>
 </definition>
   <example xml:id="ExampleRoC">
+    <title>Average rates of change of the height of a rocket</title>
     <statement>
       <p>
         In our rocket example above, where the height is <m>f(x)=-5x^2+20x</m> meters in <m>x</m> seconds, find the rate of change of the rocket over the following periods of time:

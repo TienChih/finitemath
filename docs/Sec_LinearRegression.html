@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-30T10:03:06-07:00       *-->
+<!--*       on 2020-12-08T10:57:50-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -230,7 +230,7 @@ MathJax.Hub.Config({
 </h3>
 <p id="p-180">Wee begin with an illustrative example.</p>
 <article class="example example-like" id="Example_BasicRegression"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-Example_BasicRegression"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Finding a best-fit line.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_BasicRegression"><article class="example example-like"><p id="p-181"><dfn class="terminology">Question: </dfn> Consider the data set:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -274,7 +274,7 @@ r=\frac{n(\sum x_iy_i)-(\sum x_i)(\sum y_i)}{\sqrt{(n\sum x_i^2) - (\sum x_i)^2}
 <li id="li-50"><p id="p-195">The closer \(r\) is to 0, the weaker the correlation, meaning the ability to predict \(y\) from \(x\) is weak, the closer to \(-1\) or \(1\text{,}\) the better our ability to predict \(y\) from \(x\text{.}\)</p></li>
 </ol>
 <article class="example example-like" id="Example_visualizecorr"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-Example_visualizecorr"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Visualizations of different levels of correlation.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_visualizecorr"><article class="example example-like"><p id="p-196">Consider the following plots of points. Whether the points tend to have an upward or downward trend determines the sign of \(r\text{,}\) how well the best fit line predicts the points determines how close \(r\) is to either \(-1\) or \(1\text{.}\)</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-32.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-33.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
@@ -288,8 +288,8 @@ r=\frac{n(\sum x_iy_i)-(\sum x_i)(\sum y_i)}{\sqrt{(n\sum x_i^2) - (\sum x_i)^2}
 </div></article></div>
 <p id="p-197">We further note that the closer \(r\) is to either \(-1, 1\) the closer \(r^2\) is to 1, and similarly the closer \(r\) is to 0, the closer \(r^2\) is to 1. Thus, we use \(r^2\) as an overall measure of the strength of the correlation. In fact, we say that \(y\) is \(r^2\) predicted by \(x\text{,}\) that is the values of \(y\) are \(r^2\) determinable by the values of \(x\text{,}\) the rest by other, as of yet undetermined variables.</p>
 <article class="example example-like" id="Example_BasicRegressionContd"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-Example_BasicRegressionContd"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_BasicRegressionContd"><article class="example example-like"><p id="p-198">We continue from <a class="xref" data-knowl="./knowl/Example_BasicRegression.html" title="Example 1.5.1">Example 1.5.1</a>:</p>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Finding a best-fit line continued: correlation.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_BasicRegressionContd"><article class="example example-like"><p id="p-198">We continue from <a class="xref" data-knowl="./knowl/Example_BasicRegression.html" title="Example 1.5.1: Finding a best-fit line">Example 1.5.1</a>:</p>
 <div class="displaymath">
 \begin{align*}
 \bar{x}\amp = \frac{1+2+3+4+5}{5}=3\\
@@ -345,7 +345,7 @@ r\amp = \frac{n(\sum x_iy_i)-(\sum x_i)(\sum y_i)}{\sqrt{(n\sum x_i^2) - (\sum x
 <span class="type">Subsection</span> <span class="codenumber">1.5.4</span> <span class="title">Applications</span>
 </h3>
 <article class="example example-like" id="example-20"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-20"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Linear Regression with Murder Rate and Time.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-20"><article class="example example-like"><p id="p-209">From fbi.gov from 2004-2013, the murder rates per 100,000 people are listed below:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -368,7 +368,7 @@ r\amp = \frac{n(\sum x_iy_i)-(\sum x_i)(\sum y_i)}{\sqrt{(n\sum x_i^2) - (\sum x
 </div></div>
 </div></article></div>
 <article class="example example-like" id="Example_CorrQuizTest"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-Example_CorrQuizTest"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Linear Regression between Quiz and Test scores.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Example_CorrQuizTest"><article class="example example-like"><p id="p-217">I personally wondered in quiz scores are a good predictor of test scores in Calculus. I pulled out some data from this semester, and here are the average quiz and test scores of my students, anonymously of course:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -493,7 +493,7 @@ x\amp=\frac{12.765646}{3.85777}\approx 3.309
 </h3>
 <p id="p-249">A common misconception about correlated variables is that a strong correlation means that the \(x\) variables <dfn class="terminology">causes</dfn> the \(y\) variable. This is sometimes the case, but very often not true.</p>
 <p id="p-250">It is just as possible that \(y\) causes \(x\text{,}\) or that \(x\) and \(y\) <dfn class="terminology">share</dfn> common causes, or there's always complete coincidence.</p>
-<p id="p-251">In <a class="xref" data-knowl="./knowl/Example_CorrQuizTest.html" title="Example 1.5.5">Example 1.5.5</a>, if I had simply given everyone 100 on the quizzes without looking at them, and graded the exams in normal way, they likely would not have done any better. One could argue that they would have done worse as a result. So a positive correlation between the variables doesn't mean that one will rise simply by virtue of the other rising.</p>
+<p id="p-251">In <a class="xref" data-knowl="./knowl/Example_CorrQuizTest.html" title="Example 1.5.5: Linear Regression between Quiz and Test scores">Example 1.5.5</a>, if I had simply given everyone 100 on the quizzes without looking at them, and graded the exams in normal way, they likely would not have done any better. One could argue that they would have done worse as a result. So a positive correlation between the variables doesn't mean that one will rise simply by virtue of the other rising.</p>
 <p id="p-252">The bottom line is that correlations measure the strength and form of a relationship between variables, but not the nature of the relationship.</p></section></section></div></main>
 </div>
 </body>

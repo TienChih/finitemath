@@ -31,6 +31,7 @@
       Wee begin with an illustrative example.
     </p>
     <example xml:id="Example_BasicRegression">
+      <title>Finding a best-fit line</title>
       <statement>
         <p>
           <term>Question:<nbsp/></term> Consider the data set:
@@ -156,6 +157,7 @@
       </ol>
     </p>
     <example xml:id="Example_visualizecorr">
+      <title>Visualizations of different levels of correlation</title>
       <statement>
         <p>
           Consider the following plots of points.
@@ -267,6 +269,7 @@
       the rest by other, as of yet undetermined variables.
     </p>
     <example xml:id="Example_BasicRegressionContd">
+      <title>Finding a best-fit line continued: correlation</title>
       <statement>
         <p>
           We continue from <xref ref="Example_BasicRegression">Example</xref>:
@@ -392,6 +395,7 @@
   <subsection>
     <title>Applications</title>
     <example>
+      <title>Linear Regression with Murder Rate and Time</title>
       <statement>
         <p>
           From fbi.gov from 2004-2013,
@@ -446,6 +450,7 @@
       </solution>
     </example>
     <example xml:id="Example_CorrQuizTest">
+      <title>Linear Regression between Quiz and Test scores</title>
       <statement>
         <p>
           I personally wondered in quiz scores are a good predictor of test scores in Calculus.

@@ -134,6 +134,7 @@
 
 
 <example>
+  <title>Computing the derivative of a polynomial</title>
   <statement>
     <p>
       Find the derivative of <m>f(x)=x^4-2x^2+7x-3</m>.
@@ -156,6 +157,7 @@
 
 
 <example>
+  <title>Computing the derivative more generally</title>
   <statement>
     <p>
       Find the derivative of <m>g(x)=\sqrt{4x}+\frac{3}{x}-\frac{2}{x^2}</m>.

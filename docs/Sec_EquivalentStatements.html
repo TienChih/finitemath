@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-30T10:03:13-07:00       *-->
+<!--*       on 2020-12-08T10:57:56-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -220,22 +220,22 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_EquivalentStatements"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Equivalent Statements</span>
 </h2>
-<p id="p-522">Naturally, in mathematics, we care about equivalence of things. For example, one might say that given any \(x\text{,}\) \(2(x+3)=2x+6\text{.}\) Another example of equivalent statements would be “I own a red dog” and “I own a dog and it is red.” Suffice to say, the same information can be transmitted in a lot of distinct ways, and we should have some mechanism for detecting that.</p>
-<p id="p-523">Let's take a closer look at \(2(x+3)=2x+6\text{.}\) What does this really mean? In essence, it says that no matter what \(x\) is, the left hand side and right hand side will yield the same value.</p>
+<p id="p-520">Naturally, in mathematics, we care about equivalence of things. For example, one might say that given any \(x\text{,}\) \(2(x+3)=2x+6\text{.}\) Another example of equivalent statements would be “I own a red dog” and “I own a dog and it is red.” Suffice to say, the same information can be transmitted in a lot of distinct ways, and we should have some mechanism for detecting that.</p>
+<p id="p-521">Let's take a closer look at \(2(x+3)=2x+6\text{.}\) What does this really mean? In essence, it says that no matter what \(x\) is, the left hand side and right hand side will yield the same value.</p>
 <ul class="disc">
 <li id="li-151">If I evaluate \(x=0\) then \(2(0+3)=2(0)+6=6\text{.}\)</li>
 <li id="li-152">If I evaluate \(x=4\) then \(2(4+3)=2(4)+6=14\text{.}\)</li>
 <li id="li-153">If I evaluate \(x=-1\) then \(2(-1+3)=2(-1)+6=4\) and so forth.</li>
 </ul>
 <p data-braille="continuation">The statements \(2(x+3)\) and \(2x+6\) have the same value under the same circumstances. So this is how we define equivalence of logical statements. <dfn class="terminology">Two logical statements are equivalent if they have the same values under the same circumstances.</dfn></p>
-<p id="p-524">For algebraic expressions like the ones above, \(x\) can take on infinitely many values, so we can't just sit there and plug in infinitely many values into both sides, so it becomes imperative that we establish some sort of general rules and laws, like distribution, to avoid having to do this, while still being able to meaningfully accomplish things. The nice thing about logical statements is that for any variable, we only have 2 possible values, \(T\) or \(F\text{.}\) The statement itself can only take on the values \(T\) or \(F\text{,}\) so it's much easier to see if two logical statements are equivalent, compared to algebraic ones.</p>
-<article class="example example-like" id="example-35"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-35"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><p id="p-525">Is “\(\sim(p \vee q)=\sim p \vee \sim q\text{?}\)”</p>
-<p id="p-526">Before we jump into the formal stuff, it helps to concretize this with actual statements. Let's say \(p\) is "I'll eat breakfast" and \(q\) is "I'll eat lunch". Then \(p \vee q\) is "I'll eat breakfast or I'll eat lunch". Is NOT doing this the same as \(\sim p \vee \sim q\) which is "I'll not eat breakfast or I'll not eat lunch?"</p>
-<p id="p-527">The first statement is basically "I'm not eating breakfast or lunch", the second is "I'll not eat breakfast or I'll not eat lunch", they sound similar spoken aloud but there is a subtle difference.</p>
-<p id="p-528">Let's say you skip breakfast and eat lunch. Since you ate lunch, \(p\vee q\) is true, so \(\sim(p\vee q)\) must be false, you didn't not eat breakfast or eat lunch. What about \(\sim p \vee \sim q\text{?}\) Well you skipped breakfast so \(\sim p\) is true and therefore \(\sim p \vee \sim q\) is true, so it would seem like they are not the same.</p>
-<p id="p-529">Formally, we can look at these truth tables:</p>
+<p id="p-522">For algebraic expressions like the ones above, \(x\) can take on infinitely many values, so we can't just sit there and plug in infinitely many values into both sides, so it becomes imperative that we establish some sort of general rules and laws, like distribution, to avoid having to do this, while still being able to meaningfully accomplish things. The nice thing about logical statements is that for any variable, we only have 2 possible values, \(T\) or \(F\text{.}\) The statement itself can only take on the values \(T\) or \(F\text{,}\) so it's much easier to see if two logical statements are equivalent, compared to algebraic ones.</p>
+<article class="example example-like" id="example-34"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-34"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Are these statements equivalent?</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-34"><article class="example example-like"><p id="p-523">Is “\(\sim(p \vee q)=\sim p \vee \sim q\text{?}\)”</p>
+<p id="p-524">Before we jump into the formal stuff, it helps to concretize this with actual statements. Let's say \(p\) is "I'll eat breakfast" and \(q\) is "I'll eat lunch". Then \(p \vee q\) is "I'll eat breakfast or I'll eat lunch". Is NOT doing this the same as \(\sim p \vee \sim q\) which is "I'll not eat breakfast or I'll not eat lunch?"</p>
+<p id="p-525">The first statement is basically "I'm not eating breakfast or lunch", the second is "I'll not eat breakfast or I'll not eat lunch", they sound similar spoken aloud but there is a subtle difference.</p>
+<p id="p-526">Let's say you skip breakfast and eat lunch. Since you ate lunch, \(p\vee q\) is true, so \(\sim(p\vee q)\) must be false, you didn't not eat breakfast or eat lunch. What about \(\sim p \vee \sim q\text{?}\) Well you skipped breakfast so \(\sim p\) is true and therefore \(\sim p \vee \sim q\) is true, so it would seem like they are not the same.</p>
+<p id="p-527">Formally, we can look at these truth tables:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} p\amp q\amp p\vee q\amp  \sim (p\vee q)\\ \hline T \amp  T\amp T\amp F\\ T\amp F\amp T\amp F\\ F\amp T\amp T\amp F\\ F\amp F\amp F\amp T \end{array}
@@ -246,13 +246,13 @@ MathJax.Hub.Config({
 \begin{array}{c|c|c|c|c} p\amp q\amp \sim p\amp  \sim q \amp  \sim p \vee \sim q\\ \hline T \amp  T\amp F\amp F\amp F\\ T\amp F\amp F\amp T\amp T\\ F\amp T\amp T\amp F\amp T\\ F\amp F\amp T\amp T\amp T \end{array}
 \end{equation*}
 </div>
-<p id="p-530">So \(\sim(p\vee q)\) i.e. "I'm not eating breakfast or lunch" is only true if you skip both meals. If you eat either then you lied. On the other hand, \(\sim p \vee \sim q\) i.e. "I'll skip breakfast or I'll skip lunch" is true so long as you skip either meal. It's only false if you go ahead and eat both.</p>
-<p id="p-531">So what does \(\sim(p \vee q)\) equal?</p></article></div>
-<article class="example example-like" id="example-36"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-36"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-36"><article class="example example-like"><p id="p-532">Does \(\sim(p \vee q)=\sim p \wedge \sim q\text{?}\)</p>
-<p id="p-533">Start with the concrete before the formal. In our extended example, \(\sim(p\vee q)\) means "I'm not eating breakfast or lunch", whereas \(\sim p \wedge \sim q\) means "I'm not eating breakfast and I'm not eating lunch." It does kinda seem like they're the same…</p>
-<p id="p-534">So formally:</p>
+<p id="p-528">So \(\sim(p\vee q)\) i.e. "I'm not eating breakfast or lunch" is only true if you skip both meals. If you eat either then you lied. On the other hand, \(\sim p \vee \sim q\) i.e. "I'll skip breakfast or I'll skip lunch" is true so long as you skip either meal. It's only false if you go ahead and eat both.</p>
+<p id="p-529">So what does \(\sim(p \vee q)\) equal?</p></article></div>
+<article class="example example-like" id="example-35"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-35"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Are these statements equivalent?</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><p id="p-530">Does \(\sim(p \vee q)=\sim p \wedge \sim q\text{?}\)</p>
+<p id="p-531">Start with the concrete before the formal. In our extended example, \(\sim(p\vee q)\) means "I'm not eating breakfast or lunch", whereas \(\sim p \wedge \sim q\) means "I'm not eating breakfast and I'm not eating lunch." It does kinda seem like they're the same…</p>
+<p id="p-532">So formally:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} p\amp q\amp p\vee q\amp  \sim (p\vee q)\\ \hline T \amp  T\amp T\amp F\\ T\amp F\amp T\amp F\\ F\amp T\amp T\amp F\\ F\amp F\amp F\amp T \end{array}
@@ -267,10 +267,10 @@ MathJax.Hub.Config({
 <article class="theorem theorem-like" id="TheoremDeMorgans"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">De Morgan's Laws.</span>
 </h6>
-<p id="p-535">Given statments \(p, q\text{:}\)</p>
+<p id="p-533">Given statments \(p, q\text{:}\)</p>
 <ul class="disc">
-<li id="li-154"><p id="p-536">\(\sim(p \vee q)=\sim p \wedge \sim q\text{.}\)</p></li>
-<li id="li-155"><p id="p-537">\(\sim(p \wedge q)=\sim p \vee \sim q\text{.}\)</p></li>
+<li id="li-154"><p id="p-534">\(\sim(p \vee q)=\sim p \wedge \sim q\text{.}\)</p></li>
+<li id="li-155"><p id="p-535">\(\sim(p \wedge q)=\sim p \vee \sim q\text{.}\)</p></li>
 </ul></article><article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof">Consider the following truth tables:<div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} 
@@ -318,10 +318,10 @@ F \amp  F\amp T \amp T\amp T\\
 \end{array}
 \end{equation*}
 </div>Thus \(\sim(p \wedge q)=\sim p \vee \sim q\text{.}\)</article></div>
-<article class="example example-like" id="example-37"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-37"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-37"><article class="example example-like"><p id="p-538">Is \(\sim((p \vee q)\wedge \sim r)=(\sim p \wedge \sim q )\vee r\text{?}\)</p>
-<p id="p-539">So yeah sure, we could go ahead and build truth tables for all this, but at this point Im sure laying out 8 rows of T and F and all these combinations is a real hassle. On the other hand, we have in fact these very nice laws described above. One of the reasons we develop algebraic rules is convenience, so let's go ahead:</p>
+<article class="example example-like" id="example-36"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-36"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Applying DeMorgan's Law.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-36"><article class="example example-like"><p id="p-536">Is \(\sim((p \vee q)\wedge \sim r)=(\sim p \wedge \sim q )\vee r\text{?}\)</p>
+<p id="p-537">So yeah sure, we could go ahead and build truth tables for all this, but at this point Im sure laying out 8 rows of T and F and all these combinations is a real hassle. On the other hand, we have in fact these very nice laws described above. One of the reasons we develop algebraic rules is convenience, so let's go ahead:</p>
 <div class="displaymath">
 \begin{align*}
 \sim((p \vee q)\wedge \sim r)\amp =\amp \sim(p \vee q)\vee \sim\sim r\ \ \text{ By DeMorgan's Law }\\
@@ -329,13 +329,13 @@ F \amp  F\amp T \amp T\amp T\\
 \amp =\amp (\sim p \wedge \sim q )\vee r \ \ \text{ by DeMorgans law again. }
 \end{align*}
 </div>
-<p id="p-540">So yes, they are equal, fairly nice.</p></article></div>
+<p id="p-538">So yes, they are equal, fairly nice.</p></article></div>
 <article class="exercise exercise-like" id="exercise-24"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-24"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-24"><article class="exercise exercise-like"><p id="p-541">Are \(p\wedge (q\vee r)\) and \((p\wedge q)\vee (p\wedge r)\) equivalent?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-24"><article class="exercise exercise-like"><p id="p-539">Are \(p\wedge (q\vee r)\) and \((p\wedge q)\vee (p\wedge r)\) equivalent?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-64"><div class="solution solution-like">
-<p id="p-542">Consider the following truth tables:\(\ \\ \)</p>
+<p id="p-540">Consider the following truth tables:\(\ \\ \)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c} 
@@ -373,10 +373,10 @@ F \amp  F\amp F \amp F\amp F\amp F\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-25"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-25"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-25"><article class="exercise exercise-like"><p id="p-543">Are \(p\vee (q\wedge r)\) and \((p\vee q)\wedge (p\vee r)\) equivalent?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-25"><article class="exercise exercise-like"><p id="p-541">Are \(p\vee (q\wedge r)\) and \((p\vee q)\wedge (p\vee r)\) equivalent?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-65"><div class="solution solution-like">
-<p id="p-544">Consider the following truth tables:</p>
+<p id="p-542">Consider the following truth tables:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c|c} 
@@ -414,10 +414,10 @@ F \amp  F\amp F \amp F\amp F\amp F\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-26"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-26"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-26"><article class="exercise exercise-like"><p id="p-545">Are \(p\vee \sim q\) and \(\sim p \vee q\) equivalent?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-26"><article class="exercise exercise-like"><p id="p-543">Are \(p\vee \sim q\) and \(\sim p \vee q\) equivalent?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-66" id="solution-66"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-66"><div class="solution solution-like">
-<p id="p-546">Consider the following truth tables:\(\ \\ \)</p>
+<p id="p-544">Consider the following truth tables:\(\ \\ \)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c|c|c} 

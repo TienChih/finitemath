@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-30T10:04:36-07:00       *-->
+<!--*       on 2020-12-08T10:59:07-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Paths to \((6,4)\) would correspond to all the way to take 10 moves, and select 6 of them to be “rights”.  This would be \({10\choose 6}=210\) paths. <iframe src="https://www.desmos.com/calculator/f0fmgmdllq" id="interactive-202" width="600" height="600"></iframe></p>
+<p>We can either sum together all the ways to pick some number of these moves to be “rights” and the rest “ups”.  Or we could take out 10 moves, and count the ways to select “up” or “right” for each.  Either way we obtain</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\sum_{k=0}^{10} {10\choose k}=2^{10}=1024
+\end{equation*}
+</div>
+<p data-braille="continuation">paths of length 10.</p>
 <span class="incontext"><a href="Sec_Combinations.html#p-1282">in-context</a></span>
 </body>
 </html>

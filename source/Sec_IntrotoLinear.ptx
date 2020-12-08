@@ -10,6 +10,7 @@
   </p>
 </introduction>
   <example xml:id="Example_IsLinear">
+    <title>A linear function</title>
     <statement>
       <p>
         Consider a function who takes on the following values:
@@ -74,6 +75,7 @@
     It always helps to illustrate a concept with a <term>non</term>-example.
   </p>
  <example xml:id="Example_IsNotLinear">
+  <title>A nonlinear function</title>
     <statement>
       <p>
         Consider a function who takes on the following values:

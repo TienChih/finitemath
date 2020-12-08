@@ -7,6 +7,7 @@
     we'll give a few examples to show how they appear and are applied in practice.
   </p>
   <example xml:id="Example_LinearTemp">
+    <title>Conversion between temperature units</title>
     <statement>
       <p>
         The freezing point of water is <m>0^\circ</m> Celsius and <m>32^\circ</m> Fahrenheit.
@@ -92,6 +93,7 @@
           </solution>
   </example>
   <example xml:id="Example_Proft">
+    <title>Revenue, Cost and Profit</title>
     <statement>
       <p>
         Suppose you were selling widgets for $5 a unit,
@@ -186,6 +188,7 @@
     </solution>
   </example>
   <example>
+    <title>Distance and Travel</title>
     <statement>
       <p>
          Dr. Johnson is traveling to visit her mother for a holiday.
@@ -260,6 +263,7 @@
     </solution>
   </example>
   <example xml:id="Example_">
+    <title>Price and Quantity Demanded of products</title>
     <statement>
       <p>
         Consider the following graphs of functions <m>q=S(p), D(p)</m>,

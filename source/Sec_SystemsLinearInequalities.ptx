@@ -48,6 +48,7 @@
       <interactive desmos="is7lwibg4t"  />
   </p>  
   <example xml:id="Example_SysLinearInequality">
+    <title>Plotting a system of inequalities</title>
     <statement>
       <p>
         What are the solutions to the following system:

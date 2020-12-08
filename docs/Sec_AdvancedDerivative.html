@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-30T10:03:29-07:00       *-->
+<!--*       on 2020-12-08T10:58:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -223,13 +223,13 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-74"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.5.1</span> <span class="title">Product Rule</span>
 </h3>
-<p id="p-1066">Since the behavior of derivatives of sums behave so well, its tempting to believe that the derivatives of products would behave similarly well, that is, it may be reasonable to guess that \(\frac{d}{dx}[f(x)g(x)]=f'(x)g'(x)\text{.}\) To try to see if this is true, we should ask, is:</p>
+<p id="p-1064">Since the behavior of derivatives of sums behave so well, its tempting to believe that the derivatives of products would behave similarly well, that is, it may be reasonable to guess that \(\frac{d}{dx}[f(x)g(x)]=f'(x)g'(x)\text{.}\) To try to see if this is true, we should ask, is:</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx}[x\cdot x]=\frac{d}{dx}[x]\frac{d}{dx}[x]?
 \end{equation*}
 </div>
-<p id="p-1067">Well on the left hand side \(\frac{d}{dx}[x\cdot x]=\frac{d}{dx}[x^2]=2x\text{.}\) On the right, \(\frac{d}{dx}[x]\frac{d}{dx}[x]=1\cdot1=1\text{,}\) so these are clearly not the same.  It's safe to say that in general</p>
+<p id="p-1065">Well on the left hand side \(\frac{d}{dx}[x\cdot x]=\frac{d}{dx}[x^2]=2x\text{.}\) On the right, \(\frac{d}{dx}[x]\frac{d}{dx}[x]=1\cdot1=1\text{,}\) so these are clearly not the same.  It's safe to say that in general</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx}[f(x)g(x)]\neq f'(x)g'(x).
@@ -238,7 +238,7 @@ MathJax.Hub.Config({
 <article class="remark remark-like" id="ProductRule"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.5.1</span><span class="period">.</span>
 </h6>
-<p id="p-1068">We <em class="emphasis">do</em> have a rule for the derivative of products. The <dfn class="terminology">product rule</dfn> and it states \(\frac{d}{dx}[f(x)g(x)]=f'(x)g(x)+f(x)g'(x)\text{.}\) To see why:</p>
+<p id="p-1066">We <em class="emphasis">do</em> have a rule for the derivative of products. The <dfn class="terminology">product rule</dfn> and it states \(\frac{d}{dx}[f(x)g(x)]=f'(x)g(x)+f(x)g'(x)\text{.}\) To see why:</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx}[f(x)g(x)]\amp = \limit{h}{0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h},\ \text{ at this stage, I'm going to pull a clever trick and add by 0: }\\
@@ -247,12 +247,12 @@ MathJax.Hub.Config({
 \amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}g(x+h)+\limit{h}{0}f(x)\frac{g(x+h)-g(x)}{h}\\
 \amp = f'(x)g(x)+f(x)g'(x)\text{.}
 \end{align*}
-</div></article><article class="example example-like" id="example-73"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-73"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-73"><article class="example example-like"><p id="p-1069">Compute the derivative of \(f(x)=x^3(x+1)\text{.}\)</p>
+</div></article> = <article class="example example-like" id="example-72"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-72"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Applying the Product Rule.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-72"><article class="example example-like"><p id="p-1067">Compute the derivative of \(f(x)=x^3(x+1)\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-141" id="solution-141"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-141"><div class="solution solution-like">
-<p id="p-1070">Utilizing <a class="xref" data-knowl="./knowl/ProductRule.html" title="Remark 7.5.1">Remark 7.5.1</a>:</p>
+<p id="p-1068">Utilizing <a class="xref" data-knowl="./knowl/ProductRule.html" title="Remark 7.5.1">Remark 7.5.1</a>:</p>
 <div class="displaymath">
 \begin{align*}
 f'(x)\amp = \frac{d}{dx}[x^3](x+1)+x^3\frac{d}{dx}[x+1]\\
@@ -261,7 +261,7 @@ f'(x)\amp = \frac{d}{dx}[x^3](x+1)+x^3\frac{d}{dx}[x+1]\\
 \amp = 4x^3+3x^2\text{.}
 \end{align*}
 </div>
-<p id="p-1071">Also note we could have computed this some other way:</p>
+<p id="p-1069">Also note we could have computed this some other way:</p>
 <div class="displaymath">
 \begin{align*}
 f(x)\amp = x^3(x+1)=x^4+x^3\\
@@ -273,7 +273,7 @@ f'(x)\amp = 4x^3+3x^2\text{.}
 </div></article></div></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.5.2</span> <span class="title">Quotient Rule</span>
 </h3>
-<p id="p-1072">It should seem clear that</p>
+<p id="p-1070">It should seem clear that</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx}[\frac{f(x)}{g(x)}]\neq \frac{f'(x)}{g'(x)}.
@@ -282,7 +282,7 @@ f'(x)\amp = 4x^3+3x^2\text{.}
 <article class="remark remark-like" id="QuotientRule"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.5.3</span><span class="period">.</span>
 </h6>
-<p id="p-1073">We have an analagous rule for the derivative of quotients. The <dfn class="terminology">quotient rule</dfn> and it states \(\frac{d}{dx}[\frac{f(x)}{g(x)}]=\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}\text{.}\) To see why, let \(Q(x)=\frac{f(x)}{g(x)}\) and observe:</p>
+<p id="p-1071">We have an analagous rule for the derivative of quotients. The <dfn class="terminology">quotient rule</dfn> and it states \(\frac{d}{dx}[\frac{f(x)}{g(x)}]=\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}\text{.}\) To see why, let \(Q(x)=\frac{f(x)}{g(x)}\) and observe:</p>
 <div class="displaymath">
 \begin{align*}
 Q(x)\amp = \frac{f(x)}{g(x)}\\
@@ -294,12 +294,12 @@ Q'(x)g(x)\amp = f'(x)-\frac{f(x)g'(x)}{g(x)}\\
 Q'(x)g(x)\amp = \frac{f'(x)g(x)-f(x)g'(x)}{g(x)}\\
 Q'(x)\amp = \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}\text{.}
 \end{align*}
-</div></article><article class="example example-like" id="example-74"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-74"><h6 class="heading">
+</div></article><article class="example example-like" id="example-73"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-73"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-74"><article class="example example-like"><p id="p-1074">Compute the derivative of \(g(x)=\frac{x}{x^2+1}\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-73"><article class="example example-like"><p id="p-1072">Compute the derivative of \(g(x)=\frac{x}{x^2+1}\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-142" id="solution-142"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-142"><div class="solution solution-like">
-<p id="p-1075">Utilizing <a class="xref" data-knowl="./knowl/QuotientRule.html" title="Remark 7.5.3">Remark 7.5.3</a>:</p>
+<p id="p-1073">Utilizing <a class="xref" data-knowl="./knowl/QuotientRule.html" title="Remark 7.5.3">Remark 7.5.3</a>:</p>
 <div class="displaymath">
 \begin{align*}
 g'(x)\amp = \frac{(x^2+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x^2+1]}{(x^2+1)^2}\\
@@ -312,11 +312,11 @@ g'(x)\amp = \frac{(x^2+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x^2+1]}{(x^2+1)^2}\\
 </div></article></div></section><section class="subsection" id="subsection-76"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.5.3</span> <span class="title">Chain Rule</span>
 </h3>
-<p id="p-1076">We finally have a rule for composition of functions:</p>
+<p id="p-1074">We finally have a rule for composition of functions:</p>
 <article class="remark remark-like" id="ChainRule"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.5.5</span><span class="period">.</span>
 </h6>
-<p id="p-1077">The <dfn class="terminology">chain rule</dfn> states</p>
+<p id="p-1075">The <dfn class="terminology">chain rule</dfn> states</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx}[f(g(x))]=f'(g(x))g'(x).
@@ -331,19 +331,19 @@ g'(x)\amp = \frac{(x^2+1)\frac{d}{dx}[x]-x\frac{d}{dx}[x^2+1]}{(x^2+1)^2}\\
 \amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\text{.}
 \end{align*}
 </div>
-<p id="p-1078">We're going to play a second trick here, we are going to let \(k=g(x+h)-g(x)\text{,}\) we also note then that \(g(x+h+=g(x)+k\text{.}\) Also note that when \(h\to 0\) It follows that \(k=g(x+h)-g(x)\to g(x+0)-g(x)=0\text{.}\) So we can make some replacements:</p>
+<p id="p-1076">We're going to play a second trick here, we are going to let \(k=g(x+h)-g(x)\text{,}\) we also note then that \(g(x+h+=g(x)+k\text{.}\) Also note that when \(h\to 0\) It follows that \(k=g(x+h)-g(x)\to g(x+0)-g(x)=0\text{.}\) So we can make some replacements:</p>
 <div class="displaymath">
 \begin{align*}
 \amp = \limit{h}{0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
 \amp = \limit{\color{red}{k}}{0}\frac{f(\color{red}{g(x)+k})-f(g(x))}{\color{red}{k}}\limit{h}{0}\frac{g(x+h)-g(x)}{h}\\
 \amp = f'(g(x))g'(x)
 \end{align*}
-</div></article><article class="example example-like" id="example-75"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-75"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-75"><article class="example example-like"><p id="p-1079">Compute the derivative of \(f(x)=\sqrt{x^2+1}\text{.}\)</p>
+</div></article><article class="example example-like" id="example-74"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-74"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Applying the Chain Rule.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-74"><article class="example example-like"><p id="p-1077">Compute the derivative of \(f(x)=\sqrt{x^2+1}\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-143" id="solution-143"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-143"><div class="solution solution-like">
-<p id="p-1080">We can think of this as \(f(x)=g(h(x))\) where \(g(x)=\sqrt{x}=x^{1/2}, h(x)=x^2+1\text{.}\) So \(g'(x)=\frac{1}{2}x^{-1/2}, h'(x)=2x\text{.}\)  Utilizing <a class="xref" data-knowl="./knowl/ChainRule.html" title="Remark 7.5.5">Remark 7.5.5</a>:</p>
+<p id="p-1078">We can think of this as \(f(x)=g(h(x))\) where \(g(x)=\sqrt{x}=x^{1/2}, h(x)=x^2+1\text{.}\) So \(g'(x)=\frac{1}{2}x^{-1/2}, h'(x)=2x\text{.}\)  Utilizing <a class="xref" data-knowl="./knowl/ChainRule.html" title="Remark 7.5.5">Remark 7.5.5</a>:</p>
 <div class="displaymath">
 \begin{align*}
 f'(x)\amp = \frac{d}{dx}[\sqrt{x^2+1}]\\
@@ -360,7 +360,7 @@ f'(x)\amp = \frac{d}{dx}[\sqrt{x^2+1}]\\
 </h3>
 <article class="exercise exercise-like" id="exercise-80"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-80"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.5.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-80"><article class="exercise exercise-like"><p id="p-1081">The total profit \from selling \(x\) widgets is:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-80"><article class="exercise exercise-like"><p id="p-1079">The total profit \from selling \(x\) widgets is:</p>
 <div class="displaymath">
 \begin{equation*}
 P(x)=\$ \frac{200x-1000}{20x+30}.
@@ -369,7 +369,7 @@ P(x)=\$ \frac{200x-1000}{20x+30}.
 <p data-braille="continuation">Find the marginal average cost function.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-144" id="solution-144"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-144"><div class="solution solution-like">
-<p id="p-1082">If you sell \(x\) widgets, the total profit is \(P(x)=\$ \frac{200x-1000}{20x+30}.\)  So the average profit per widget is</p>
+<p id="p-1080">If you sell \(x\) widgets, the total profit is \(P(x)=\$ \frac{200x-1000}{20x+30}.\)  So the average profit per widget is</p>
 <div class="displaymath">
 \begin{equation*}
 A(x)=\frac{P(x)}{x}= \frac{200x-1000}{20x+30}\cdot\frac{1}{x}=\frac{200x-1000}{20x^2+30x}.
@@ -391,7 +391,7 @@ A'(x)\amp = \frac{d}{dx}[\frac{200x-1000}{20x^2+30x}]\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-81"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-81"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.5.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-81"><article class="exercise exercise-like"><p id="p-1083">Assume that the total number (in millions) of bacteria present in a culture at a certain time \(t\) (in hours) is given by</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-81"><article class="exercise exercise-like"><p id="p-1081">Assume that the total number (in millions) of bacteria present in a culture at a certain time \(t\) (in hours) is given by</p>
 <div class="displaymath">
 \begin{equation*}
 N(t)=3t(t-8)^2+30.
@@ -403,7 +403,7 @@ N(t)=3t(t-8)^2+30.
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-145" id="solution-145"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-145"><div class="solution solution-like">
-<p id="p-1084">Consider:</p>
+<p id="p-1082">Consider:</p>
 <ol class="decimal">
 <li id="li-480">We compute \(N'(t)\text{:}\)<div class="displaymath">
 \begin{align*}
@@ -424,21 +424,21 @@ N'(t)\amp = \frac{d}{dt}[3t(t-8)^2+30]\\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-82"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-82"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.5.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-82"><article class="exercise exercise-like"><p id="p-1085">A company purchases a  truck depreciates according to the formula</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-82"><article class="exercise exercise-like"><p id="p-1083">A company purchases a  truck depreciates according to the formula</p>
 <div class="displaymath">
 \begin{equation*}
 V(t)=\frac{60000}{1+0.5t+0.1t^2}
 \end{equation*}
 </div>
 <p data-braille="continuation">where \(V\) is measured in dollars and \(t\) is years after purchase.</p>
-<p id="p-1086">Find the rate the truck's value is changing in:</p>
+<p id="p-1084">Find the rate the truck's value is changing in:</p>
 <ol class="decimal">
 <li id="li-482">Three years.</li>
 <li id="li-483">Ten years.</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-146" id="solution-146"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-146"><div class="solution solution-like">
-<p id="p-1087">First note that \(V(t)=60000(1+0.5t+0.1t^2)^{-1}\text{.}\) So the truck's value changes according to:</p>
+<p id="p-1085">First note that \(V(t)=60000(1+0.5t+0.1t^2)^{-1}\text{.}\) So the truck's value changes according to:</p>
 <div class="displaymath">
 \begin{align*}
 V'(t)\amp = \frac{d}{dt}[60000(1+0.5t+0.1t^2)^{-1}]\\

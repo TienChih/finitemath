@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-30T10:03:58-07:00       *-->
+<!--*       on 2020-12-08T10:58:35-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,41 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We can combine all inequalities into one Desmos graph: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/ei31zrzylx" id="interactive-48" width="600" height="600"></iframe> Or we can split them into seperate graphs.</p>
+<p>So if say we had the system of linear inequalities:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+x+y\amp \geq 4\\
+x-2y\amp \leq 3
+\end{align*}
+</div>
+<p data-braille="continuation">We could ask ourselves if \((0,0), (4,4), (6,0), (2,-2)\) belong to the region.</p>
 <ol class="decimal">
-<li><iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/11eigcqvrn" id="interactive-49" width="600" height="600"></iframe></li>
-<li><iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/tvps9iifui" id="interactive-50" width="600" height="600"></iframe></li>
-<li><iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/inxg70usta" id="interactive-51" width="600" height="600"></iframe></li>
+<li>For \((0,0)\)  note that:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+0+0\amp \not\geq 4\\
+0-2(0)\amp \leq 3
+\end{align*}
+</div>So we satisfy the second but not the first inequality, so \((0,0)\) does <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">not</em> belong to the region.</li>
+<li>For \((4,4)\)  note that:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+4+4\amp \geq 4\\
+4-2(4)\amp \leq 3
+\end{align*}
+</div>So we satisfy both inequalities, and \((4,4)\)  <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">does</em> belong to the region!</li>
+<li>For \((6,0)\)  note that:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+6+0\amp \geq 4\\
+6-2(0)\amp \not\leq 3
+\end{align*}
+</div>So we satisfy the first inequality but not the second, so \((6,0)\) does <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">not</em> belong to the region.</li>
+<li>For \((2,-2)\)  note that:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+2+(-2)\amp \not\geq 4\\
+2-2(-2)\amp \not\leq 3
+\end{align*}
+</div>So we satisfy neither inequality but not the second, and \((2,-2)\) does <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">not</em> belong to the region.</li>
 </ol>
-<span class="incontext"><a href="Sec_LinearInequalities.html#p-445">in-context</a></span>
+<p data-braille="continuation">We can use the Desmos graph and drag the point \((a,b)\) around to verify which region satisfies both inequalities. <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/is7lwibg4t" id="interactive-52" width="600" height="600"></iframe></p>
+<span class="incontext"><a href="Sec_SystemsLinearInequalities.html#p-445">in-context</a></span>
 </body>
 </html>

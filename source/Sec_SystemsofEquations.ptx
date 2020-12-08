@@ -190,6 +190,7 @@
       This process should also reveal if there are infinitely many or no solutions.
     </p>
     <example>
+      <title>Solving a linear system of equations</title>
       <statement>
         <md>
           <mrow>2x+3y\amp = 1</mrow>
@@ -258,6 +259,7 @@
       </statement>
     </example>
     <example>
+      <title>Solving a linear system of equations with infinitely many solutions</title>
       <statement>
         <p>
           So if we consider:
@@ -289,6 +291,7 @@
         </p>
       </statement>
     </example>
+    <title>Solving a linear system of equation with no solutions</title>
     <example>
       <statement>
         <p>

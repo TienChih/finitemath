@@ -7,6 +7,7 @@
     given an <m>x</m> or <m>y</m> value, the other value:
   </p>
   <example xml:id="Example_LinearFindValue">
+    <title>Finding the value of the independent and dependent variable</title>
     <statement>
       <p>
         Consider the linear function <m>y=2x-3</m>.

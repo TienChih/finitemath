@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-30T10:04:02-07:00       *-->
+<!--*       on 2020-12-08T10:58:38-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,8 +16,9 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\sim(\forall x, p(x))\amp = \exists x,  \sim p(x)\\
-\sim(\exists x, p(x))\amp = \forall x, \sim p(x)
+\sim(\forall x, p(x)\to q(x))\amp = \exists x, \sim(p(x)\to q(x))\\
+\amp = \exists x, \sim(\sim p(x)\vee q(x))\\
+\amp = \exists x, p(x)\wedge \sim q(x).
 \end{align*}
 </div>
 <span class="incontext"><a href="Quantifiers.html#mjx-eqn-mrow-387">in-context</a></span>

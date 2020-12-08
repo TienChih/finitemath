@@ -118,6 +118,7 @@
       we should be able to uniquely identify <m>b</m>.
     </p>
     <example xml:id="Example_PandS">
+       <title>Identify a linear function with slope and point</title>
       <statement>
         <p>
           Find the linear function with slope 3 passing through <m>(2,5)</m>.
@@ -192,6 +193,7 @@
       we get the standard form for a line.
     </p>
     <example xml:id="Example_PandSagain">
+      <title>Identify a linear function with slope and point</title>
       <statement>
         <p>
           Find the line with slope 3 passing through <m>(2,5)</m>, again.
@@ -253,6 +255,7 @@
       or equivalently <m>m=\frac{y_0-y_1}{x_0-x_1}</m>.
     </p>
     <example xml:id="Example_PandP">
+      <title>Identify a linear function with two points</title>
       <statement>
         <p>
           What line passes between <m>(2,3)</m> and <m>(4,1)</m>?
@@ -317,6 +320,7 @@
     given an <m>x</m> or <m>y</m> value, the other value:
   </p>
   <example xml:id="Example_LinearFindValue">
+    <title>Identify values of the dependent and independent variables</title>
     <statement>
       <p>
         Consider the linear function <m>y=2x-3</m>.

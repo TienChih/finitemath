@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-30T10:04:01-07:00       *-->
+<!--*       on 2020-12-08T10:58:37-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,11 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We can summarize this whole thing as \((p\wedge q)\to r\text{.}\) It's not the easiest thing to see when this statement may be true. So, we can break this thing down as follows:</p>
+<p>If we negate this thing:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-(p\wedge q)\to r\amp = \sim (p\wedge q)\vee r\\
-\amp = (\sim p \vee \sim q) \vee r
+\sim ((p\wedge q)\to r)\amp = \sim ((\sim p \vee \sim q) \vee r)\\
+\amp = \sim (\sim p \vee \sim q) \wedge \sim r\\
+\amp =  (\sim \sim p  \wedge \sim \sim q) \wedge \sim r\\
+\amp = (p\wedge q)\wedge \sim r
 \end{align*}
 </div>
 <span class="incontext"><a href="Sec_ConditionalStatements.html#p-564">in-context</a></span>

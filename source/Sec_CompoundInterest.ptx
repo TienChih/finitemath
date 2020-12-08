@@ -60,6 +60,7 @@
     </p>
 
     <example>
+      <title>Future Value with compound interest</title>
       <statement>
         <p>
           Suppose that I make an investment $500 at 8% annual interest.
@@ -88,6 +89,7 @@
     </example>
 
     <example>
+      <title>Present Value with compound interest</title>
       <statement>
         <p>
           Suppose that I take out a loan at 4% a year, and after 5 years, I owe <m>\$7,000</m>.
@@ -118,6 +120,7 @@
     </example>
 
     <example>
+      <title>Interest Rate with compound interest</title>
       <statement>
         <p>
           Suppose that I purchase a property for <m>\$200,000</m> and in 30 years it is worth <m>\$350,000</m>.  What is the annual interest rate of the value of this property?
@@ -150,6 +153,7 @@
     </example>
 
     <example>
+      <title>Time of Investment with compound interest</title>
       <statement>
         <p>
           Suppose that I invested <m>\$50,000</m> at 7% annual interest.  How long would it take for this investment to be worth <m>\$100,000</m>.

@@ -27,6 +27,7 @@ If we have to make <m>n</m> choices, each with <m>m_1, m_2, m_3,\ldots,m_n</m> c
 </remark>  
 
 <example xml:id="ExampleAlphabet">
+  <title>5 letter passcodes</title>
   <statement>
     <p>
       Suppose you had to make a 5 letter passcode using the 26 letters in the English alphabet (all lowercase).
@@ -117,6 +118,7 @@ Note that <me>5\cdot 4\cdot 3=\frac{5\cdot 4\cdot 3\cdot \color{blue}{2}\cdot \c
 </remark>  
 
 <example>
+  <title>Selecting books for a bookshelf</title>
   <statement>
     <p>
       If you have 10 books, how many ways can you select 6 of them to arrange on a shelf?
@@ -191,6 +193,7 @@ Note that <me>5\cdot 4\cdot 3=\frac{5\cdot 4\cdot 3\cdot \color{blue}{2}\cdot \c
 
 
 <example>
+  <title>Arranging letters with repitition</title>
   <statement>
     <p>
       How many ways can you arrange the letters of MISSISSIPPI?

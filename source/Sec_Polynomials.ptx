@@ -155,6 +155,7 @@
       </p>
     </remark>
     <example>
+      <title>Behavior of a polynomial</title>
       <statement>
         <p>
           Let
@@ -191,6 +192,7 @@ axis y line=middle]
       </statement>
     </example>
     <example>
+      <title>Behavior of a polynomial</title>
       <statement>
         <p>
           Let

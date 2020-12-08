@@ -49,6 +49,7 @@
    </definition> 
 
    <example>
+    <title>Selecting books</title>
     <statement>
       <p>
     If you had 10 books, how many ways could you select 4 of them to lend a friend?  What about 6 books?
@@ -119,6 +120,7 @@ If we have to choose from one item from <m>S_1, \ldots S_r</m> sets, each with <
 </remark>  
 
 <example>
+  <title>Picking Committees of various sizes</title>
  <statement>
   <p>
     Suppose you wanted to pick a committee of  3, 4 or 5 out of 20 people.  How many ways can you do this?
@@ -132,6 +134,7 @@ If we have to choose from one item from <m>S_1, \ldots S_r</m> sets, each with <
 </example>
 
 <example>
+  <title>Picking Committees of particular compositions</title>
  <statement>
   <p>
     Suppose you wanted to pick a committee of  4 professors, 8 Mathematicians and 12 Historians.
@@ -155,7 +158,7 @@ If we have to choose from one item from <m>S_1, \ldots S_r</m> sets, each with <
 
 
 <example>
-    <title>Lattices</title>
+    <title>Lattice Paths</title>
     <statement>
     	<p>
     Consider <q>lattice paths</q>, paths of length <m>n</m> starting at <m>(0,0)</m> where for each step, one is only allowed to move right or up?

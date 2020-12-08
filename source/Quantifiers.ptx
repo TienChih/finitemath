@@ -28,6 +28,7 @@
       More generally, if <m>S(x)</m> is a statement about <m>x</m>, then <me> \forall x, S(x) </me> means that <m>S(x)</m> is true for every choice of <m>x</m>.
     </p>
     <example>
+      <title>Writing sentences as logical statements</title>
     <statement>
         <p>For each of the following sentences, write the formal accompanying statement.
           <ol>
@@ -49,7 +50,9 @@
 
   </example>
 
+
   <example>
+    <title>Writing logical statements as sentences</title>
     <statement>
         <p>For each of the following statements, write out the sentence accompanying it.
           <ol>
@@ -92,6 +95,7 @@
     </p>
 
     <example>
+      <title>Writing sentences as logical statements pt 2</title>
     <statement>
         <p>For each of the following sentences, write the formal accompanying statement.
           <ol>
@@ -114,6 +118,7 @@
   </example>
 
     <example>
+      <title>Writing  logical statements as sentences pt 2</title>
     <statement>
         <p>For each of the following statements, write out the sentence accompanying it.
           <ol>
@@ -159,6 +164,7 @@
       </md>
     </p>
      <example>
+      <title>Negation of a logical statement with quantifiers</title>
     <statement>
         <p>Negate <m>\forall x, p(x)\to q(x)</m></p>
     </statement>
@@ -174,6 +180,7 @@
   </example>
 
      <example>
+      <title>Negation of a logical statement with quantifiers pt. 2</title>
     <statement>
         <p>Negate <m>\exists x, a(x)\vee b(x)</m></p>
     </statement>
@@ -189,6 +196,7 @@
     </example>
 
     <example>
+      <title>Negation of a sentence</title>
     <statement>
         <p>Translate the sentence "Every real number is either positive or negative" into a logical statement, negate it, and then translate the negation back to a sentence.  Let  <m>x</m> be a real number, <m>P(x)</m> be "<m>x</m> is positive", and <m>N(x)</m> be "<m>x</m> is negative". </p>
     </statement>
@@ -204,6 +212,7 @@
     </example>
 
     <example>
+      <title>Negation of a sentence pt. 2</title>
     <statement>
         <p>Translate the sentence "There is a function who if one evaluates it at zero, the output is negative" into a logical statement, negate it, and then translate the negation back to a sentence.  Let  <m>x</m> be a function, <m>I(x)</m> be "<m>x</m> is evaluated at 0", and <m>N(x)</m> be "<m>x</m> has a negative output". </p>
     </statement>

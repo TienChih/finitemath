@@ -37,7 +37,10 @@
 </statement>
 </remark>
 
+=
+
 <example>
+  <title>Applying the Product Rule</title>
   <statement>
     <p>
       Compute the derivative of
@@ -162,6 +165,7 @@
 
 
 <example>
+  <title>Applying the Chain Rule</title>
   <statement>
     <p>
       Compute the derivative of
