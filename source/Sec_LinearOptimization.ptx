@@ -177,7 +177,7 @@
         The inequalities we are subject to are:
         <md>
           <mrow>x\amp \geq 40,\ \ \text{minimum coach tickets}</mrow>
-          <mrow>y \amp \geq 25,\ \ \text{mineral first class tickets}</mrow>
+          <mrow>y \amp \geq 25,\ \ \text{minimum first class tickets}</mrow>
           <mrow>x+y\amp \leq 150,\ \ \text{maximum capacity}</mrow>
           <mrow>x\amp \geq 0,\ \ \text{ no negative tickets }</mrow>
           <mrow>y\amp \geq 0,\ \ \text{ no negative tickets }</mrow>
