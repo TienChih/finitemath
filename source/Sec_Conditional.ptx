@@ -37,7 +37,7 @@
  <description>Test Venn Diagram.</description>     
 <latex-image>
 <![CDATA[\begin{venndiagram2sets}
-\fillACapB
+\fillB
 
 \end{venndiagram2sets}]]>
 </latex-image>
