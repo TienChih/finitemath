@@ -114,7 +114,7 @@
     <p>
       And if the payments were <m>\$R</m> instead of $100, we would finally have:
       <me>
-        S=R\frac{(1+i)^n-1}{i}
+        S=R\frac{(1+i)^n-1}{i}.
       </me>
       To verify, see the Desmos calculator below, adjust <m>n, i</m> and <m>R</m> as needed:
       <interactive desmos="kccfq8z6vm"  />
@@ -122,6 +122,13 @@
     <p>
       So here we have constructed the formula for the future value of a debt or investment based on a constant payment.
     </p>
+
+    <remark>
+    <p>
+      Let <m>S</m> denote the future value of a investment/debt.  Let <m>R</m> denote the size of the regular payments per time period, <m>i</m> denote the interest rate per time period and <m>n</m> the number of time periods.  Then <me>S=R\frac{(1+i)^n-1}{i}.</me>
+      Be sure you keep track of what time period (years, days, months etc.) you're using and <em>stay consistent</em>.
+    </p>
+  </remark>
 
     <exercise>
       <title>Future Value</title>
@@ -288,6 +295,13 @@
         <mrow>P\amp = R\frac{1-(1+i)^{-n}}{i}.</mrow>
       </md>
     </p>
+
+    <remark>
+    <p>
+      Let <m>P</m> denote the present value of a investment/debt.  Let <m>R</m> denote the size of the regular payments per time period, <m>i</m> denote the interest rate per time period and <m>n</m> the number of time periods.  Then <me>P = R\frac{1-(1+i)^{-n}}{i}.</me>
+      Be sure you keep track of what time period (years, days, months etc.) you're using and <em>stay consistent</em>.
+    </p>
+  </remark>
     <p>
       Suppose that we invest $100,000 in an account that gives 1% monthly interest and I'd like to pull a regular sum of money out of the account for the next 10 years.
       What is the maximum that I could pull out?

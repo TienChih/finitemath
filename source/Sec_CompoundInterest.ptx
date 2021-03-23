@@ -47,13 +47,16 @@
     <p>
       <interactive desmos="kqz7bwj8ip"  />
     </p>
+
+    <remark>
     <p>
-      So we have the general equation
+      When interest is <em>compound</em>, we have the general equations:
       <md>
         <mrow>A\amp =P(1+i)^n,</mrow>
         <mrow>I\amp =P(1+i)^n-P.</mrow>
       </md>
       Where <m>A</m> is the accumulated value, <m>P</m> is the value of the principal, <m>i</m> is the interest rate, <m>n</m> is the number of time units, and <m>I</m> is the total value of the interest.</p>
+    </remark>
 
       <p> But looking at <m> A =P(1+i)^n</m>, if one  knew any 3 of these values,
       in principle one should be able to find the 4th.
