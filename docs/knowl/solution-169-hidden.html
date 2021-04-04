@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-20T14:25:41-06:00       *-->
+<!--*       on 2021-04-04T08:32:52-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,9 +14,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">There are several approaches. You only need to go through one of these to obtain answer.  Let \(M\) denote being a Math major and \(A\) denote getting an A.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">First note that \(P(M)=0.1\) and \(P(M|A)=\frac{0.03}{0.3}=0.1\text{.}\)  These are  the same (your chances of being a Math major is unaffected by whether you got an A) so these are  independent.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Next note that \(P(A)=0.3\) and \(P(A|M)=\frac{0.03}{0.1}=0.3\text{.}\)  These are  the same (your chances of getting an A is unaffected by whether you were a Math major) so these are  independent.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Finally note that \(P(M)=0.1, P(A)=0.3, P(M\cap A)=0.03\) so \(P(M)P(A)=0.1\cdot 0.3=0.03P(M\cap A)\text{.}\)  So these are  independent.</p>
+<p>We note that there are 50 diners in all.  Let \(C, F, T, S\) denote chicken, fish, steak and sick.</p>
+<ol class="decimal">
+<li>We have that \(P(S)=\frac{5+4+3}{50}=0.24\text{.}\)</li>
+<li>Out of the 10 people who ate fish, 4 got sick, so  \(P(S|F)=\frac{4}{10}\approx 0.4\text{.}\)</li>
+<li>We have that \(P(F\cup T)=\frac{4+6+3+12}{50}=0.5\text{.}\)</li>
+<li>We have that \(P(F\cup S)=\frac{4+6+5+3}{50}=0.36\text{.}\)  We could also compute this \(P(F\cup S)=P(F)+P(S)-P(\cap S)=\frac{10}{50}+\frac{12}{50}-\frac{4}{50}=\frac{18}{50}=0.36.\)</li>
+<li>Out of the 12 people who got sick, 3 ate steak, so  \(P(T|S)=\frac{3}{12}=0.25\text{.}\)</li>
+<li>We note that if you eat chicken, the chance you would get sick is \(P(S|C)=\frac{5}{25}=0.2\text{.}\)  If you eat fish, the chance you would get sick is \(P(S|F)=\frac{4}{10}=0.4\text{.}\) If you eat steak, the chance you would get sick is \(P(S|T)=\frac{3}{15}=0.2\text{.}\)  So Fish is the most likely to get you sick.</li>
+</ol>
 </div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-20T14:25:45-06:00       *-->
+<!--*       on 2021-04-04T08:32:59-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,18 +16,13 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.3.4.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.3.1.1</span><span class="period">.</span>
 </h6>
-<p>Let \(R\) denote “digits don't repeat” and \(E\) denote “digits are all even.”:</p>
+<p>Recall that there are \(C(52,5)\) ways to select 5 cards of 52.  Thus \(|S|=C(52,5)=2598960\text{.}\)</p>
 <ol class="decimal">
-<li>Recall <a class="xref" data-knowl="./knowl/ExampleDigits.html" title="Example 9.3.2: Digits of a Password">Example 9.3.2</a>, we say \(P(R)=\frac{P(10,4)}{10^4}, P(E)=\frac{5^4}{10^4}, P(R\cap E)=\frac{P(5,4)}{10^4}\text{.}\)  Thus<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-P(R\cup E)= P(R)+P(E)-P(R\cap E)=\frac{P(10,4)+5^4-P(5,4)}{10^4}=\frac{5040+625-120}{10^4}=\frac{5545}{10000}=0.5545.
-\end{equation*}
-</div>
-</li>
-<li>Note that \(P(R|E)=\frac{P(5,4)/10^4}{5^4/10^4}=\frac{P(5,4)}{5^4}=\frac{120}{625}=0.192\) .</li>
-<li>Since \(P(R|E)=0.192\neq0.504=P(R)\) so these are not independent.</li>
+<li>There are 13 spades so the number of ways to select 5 spades is \(C(13,5)=1287\text{.}\)  Thus the probability of selecting 5 cards and getting all spades is \(\frac{C(13,5)}{C(52,5)}=\frac{1287}{2598960}\approx 0.00495\text{.}\)</li>
+<li>The number of ways to select all cards from the same suit is still \(C(13,5)\) but since there are 4 suits, the probability of selecting 5 cards and they are all the same suit is \(\frac{4\cdot C(13,5)}{C(52,5)}=\frac{4\cdot 1287}{2598960}\approx 0.0198107\text{.}\)</li>
+<li>We select 2 out of 13 hearts and 3 out of 39 non-hearts, and there are \(C(13,2)\cdot C(39,3)=78\cdot 9139=712842\) ways to do this.  Thus the probability you pick 5 cards and exactly 2 are hearts is \(\frac{C(13,2)\cdot C(39,3)}{C(52,5)}=\frac{712842}{259860}\approx  0.27428\)</li>
 </ol>
 </div>
 <span class="incontext"><a href="Sec_AppstoProb.html#solution-198">in-context</a></span>

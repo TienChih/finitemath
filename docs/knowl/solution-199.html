@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-20T14:25:46-06:00       *-->
+<!--*       on 2021-04-04T08:32:59-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,34 +16,13 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.3.5.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.3.2.1</span><span class="period">.</span>
 </h6>
-<p>There are \(C(20,3)=1140\) ways to pick 3 people out of 20.</p>
+<p>Recall that there are \(10\cdot10\cdot10\cdot10=10^4=1000\) possible passcodes.  Thus \(|S|=10000\text{.}\)</p>
 <ol class="decimal">
-<li>There are \(C(5,3)=10\) ways to pick only sick people, so the probability this happens is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{C(5,3)}{C(20,3)}=\frac{10}{1140}\approx 0.0088.
-\end{equation*}
-</div>
-</li>
-<li>There are \(C(15,3)=455\) ways to pick only healthy people, so the probability this happens is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{C(15,3)}{C(20,3)}=\frac{455}{1140}\approx 0.3991.
-\end{equation*}
-</div>
-</li>
-<li>There are \(C(5,2)\cdot C(15,1)=10\cdot 15=150\) ways to pick two sick and one healthy person, so the probability this happens is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{C(5,2)\cdot C(15,1)}{C(20,3)}=\frac{10\cdot 15}{1140}\approx  0.1316.
-\end{equation*}
-</div>
-</li>
-<li>The probability that at least one person tested sick is \(1-\frac{C(15,3)}{C(20,3)}\text{.}\)  Thus assuming this happens, the probability everyone tests sick is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{C(5,3)/C(20,3)}{1-C(15,3)/C(20,3)}\approx \frac{0.0088}{0.6009}\approx 0.0146.
-\end{equation*}
-</div>
-</li>
+<li>There are \(P(10,4)=10\cdot9\cdot8\cdot7=5040\) passcodes that don't repeat digits.  Thus the probability that a passcode doesn't repeat digits is \(\frac{P(10,4)}{10^4}=\frac{5040}{10000}=0.504\) .</li>
+<li>There are \(5^4=625\) passcodes that only use even digits.  Thus the probability that a passcode uses only even digits is \(\frac{5^4}{10^4}=\frac{625}{10000}=0.0625\) .</li>
+<li>There are \(P(5,4)=5\cdot4\cdot3\cdot2=120\) passcodes that don't repeat digits and only use even digits.  Thus the probability that a passcode doesn't repeat digits and only uses even digits is \(\frac{P(5,4)}{10^4}=\frac{120}{10000}=0.012\) .</li>
 </ol>
 </div>
 <span class="incontext"><a href="Sec_AppstoProb.html#solution-199">in-context</a></span>

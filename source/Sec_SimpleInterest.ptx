@@ -56,7 +56,7 @@
 
   <remark>
     <p>
-      Let <m>P</m> denote the present value of a investment/debt growing via <em>simple interest</em>.  Let <m>A</m> denote the futre value, <m>r</m> denote the simple interest rate per time period and <m>m</m> the number of time periods.  Then <me>A=P(1+rm).</me>
+      Let <m>P</m> denote the present value of a investment/debt growing via <em>simple interest</em>.  Let <m>A</m> denote the future value, <m>r</m> denote the simple interest rate per time period and <m>m</m> the number of time periods.  Then <me>A=P(1+rm).</me>
       Be sure you keep track of what time period (years, days, months etc.) you're using and <em>stay consistent</em>.
     </p>
   </remark>

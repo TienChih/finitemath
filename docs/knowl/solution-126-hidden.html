@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-20T14:25:29-06:00       *-->
+<!--*       on 2021-04-04T08:32:34-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,20 +14,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>We note that we only really need to check \(x=0\) and \(x=4\text{.}\)  At \(x=0\text{,}\) we have</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Consider the following:</p>
+<ol class="decimal">
+<li>
+<p>We note that since the halflife is 100 minutes:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\limit{x}{0^-} f(x)=2^0=1, \limit{x}{0^+} f(x)=0+1=1.\text{.}
-\end{equation*}
+\begin{align*}
+\frac{1}{2}\amp = a^5\\
+a\amp = (\frac{1}{2})^{1/5}\approx0.87055
+\end{align*}
 </div>
-<p data-braille="continuation">Thus \(\limit{x}{0}f(x)=1\text{.}\)  Since \(f(0)=0+1=1\) we have that \(f(x)\) is continuous at \(x=0\text{.}\)</p>
-<p>On the other hand, at \(x=4\text{,}\) we have</p>
+<p data-braille="continuation">So \(I(t)=1000\cdot ((\frac{1}{2})^{1/5})^t=1000\cdot(\frac{1}{2})^{t/5}\text{.}\)</p>
+</li>
+<li>
+<p>We solve:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\limit{x}{4^-} f(x)=4+1=5, \limit{x}{4^+} f(x)=\sqrt{4}=2.\text{.}
-\end{equation*}
+\begin{align*}
+10=I(t)\amp = 1000\cdot\left(\frac{1}{2}\right)^{t/5}\\
+\frac{1}{100}\amp = \left(\frac{1}{2}\right)^{t/5}\\
+\ln\left(\frac{1}{100}\right)\amp = \ln\left(\left(\frac{1}{2}\right)^{t/5}\right)\\
+\ln\left(\frac{1}{100}\right)\amp = \frac{t}{5}\cdot\ln\left(\frac{1}{2}\right)\\
+t\amp = \frac{5\ln\left(\frac{1}{100}\right)}{\ln\left(\frac{1}{2}\right)}\approx 33.21928
+\end{align*}
 </div>
-<p data-braille="continuation">Thus \(\limit{x}{4}f(x)\) is undefined and  \(f(x)\) is <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">not</em> continuous at \(x=4\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">We observe this visually: <iframe src="https://www.desmos.com/calculator/io24ldyfpn" id="interactive-150" width="600" height="600"></iframe></p>
+<p data-braille="continuation"><iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/lugcttrycr" id="interactive-151" width="600" height="600"></iframe> So in just over 33 minutes.</p>
+</li>
+</ol>
 </div></body>
 </html>

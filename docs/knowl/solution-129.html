@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-20T14:25:30-06:00       *-->
+<!--*       on 2021-04-04T08:32:39-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,16 +16,23 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">7.1.11.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">7.1.8.1</span><span class="period">.</span>
 </h6>
-<p>We note that \(\limit{x}{2^-}b(x)=2^2=4\text{.}\)  We also note that \(\limit{x}{2^+}b(x)=b(2)=-(2)+k=-2+k\text{.}\)  So for \(b(x)\) to be continuous at \(x=2\text{,}\) we need</p>
+<p>We note that we only really need to check \(x=0\) and \(x=4\text{.}\)  At \(x=0\text{,}\) we have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-4=\limit{x}{2^+}b(x)=b(2)=-2+k.
+\limit{x}{0^-} f(x)=2^0=1, \limit{x}{0^+} f(x)=0+1=1.\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Thus \(k=6\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">We observe this visually: <iframe src="https://www.desmos.com/calculator/8ajqy7ful8" id="interactive-153" width="600" height="600"></iframe> Slide the value of \(k\) to see how other values of \(k\) will <em class="emphasis">not</em> give you a continuous function.</p>
+<p data-braille="continuation">Thus \(\limit{x}{0}f(x)=1\text{.}\)  Since \(f(0)=0+1=1\) we have that \(f(x)\) is continuous at \(x=0\text{.}\)</p>
+<p>On the other hand, at \(x=4\text{,}\) we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\limit{x}{4^-} f(x)=4+1=5, \limit{x}{4^+} f(x)=\sqrt{4}=2.\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus \(\limit{x}{4}f(x)\) is undefined and  \(f(x)\) is <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">not</em> continuous at \(x=4\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">We observe this visually: <iframe src="https://www.desmos.com/calculator/io24ldyfpn" id="interactive-153" width="600" height="600"></iframe></p>
 </div>
 <span class="incontext"><a href="Sec_LimitsContinuity.html#solution-129">in-context</a></span>
 </body>

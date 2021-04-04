@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-20T14:25:35-06:00       *-->
+<!--*       on 2021-04-04T08:32:45-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,28 +14,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>We note that:</p>
+<p>First note that \(V(t)=60000(1+0.5t+0.1t^2)^{-1}\text{.}\) So the truck's value changes according to:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-D'(t)\amp = \frac{d}{dt}[te^{-0.25t}]\\
-\amp = t\frac{d}{dt}[e^{-0.25t}]+\frac{d}{dt}[t]e^{-0.25t}\\
-\amp = te^{-0.25t}\frac{d}{dt}[-0.25t]+1\cdot e^{-0.25t}\\
-\amp = te^{-0.25t}\cdot(-0.25t)+e^{-0.25t}\\
-\amp = (1-0.25t)e^{-0.25t}\text{.}
+V'(t)\amp = \frac{d}{dt}[60000(1+0.5t+0.1t^2)^{-1}]\\
+\amp = 60000(-1)(1+0.5t+0.1t^2)^{-2}\frac{d}{dt}[1+0.5t+0.1t^2]\\
+\amp = 60000(-1)(1+0.5t+0.1t^2)^{-2}(0.5+0.2t)\\
+\amp = \frac{-30000-12000t}{(1+0.5t+0.1t^2)^{2}}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">So with that:</p>
+<p data-braille="continuation">Thus:</p>
 <ol class="decimal">
-<li>Notce \(D'(2)=(1-0.25(2))e^{-0.25(2)}\approx 0.303 \) or increasing by 0.303 mL/minute.</li>
-<li>We note that the quantity decreases when \(D'(t)=(1-0.25t)e^{-0.25t}\lt 0\) so:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-(1-0.25t)e^{-0.25t}\amp \lt 0\\
-(1-0.25t)\amp \lt 0\\
-1\amp \lt 0.25t\\
-t\amp &gt; 4\text{.}
-\end{align*}
-</div>So after 4 minutes</li>
+<li>\(N'(3)=\frac{-30000-12000(3)}{(1+0.5(3)+0.1(3)^2)^{2}}\approx -5709.34\text{.}\)  So the truck is losing \(\$5709.34\) a year.</li>
+<li>\(N'(10)=\frac{-30000-12000(10)}{(1+0.5(10)+0.1(10)^2)^{2}}\approx -585.94\text{.}\)  So the truck is losing \(\$585.94\) a year.</li>
 </ol>
-<p data-braille="continuation">We can see this: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/uow1nliujd" id="interactive-180" width="600" height="600"></iframe></p>
+<p data-braille="continuation">We can see this: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/bdwnifm3dz" id="interactive-178" width="600" height="600"></iframe></p>
 </div></body>
 </html>

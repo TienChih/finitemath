@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-20T14:25:50-06:00       *-->
+<!--*       on 2021-04-04T08:33:04-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,20 +14,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>For Company A, if we list the data in thousands per year:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-48,50,58,58,59.1,59.3,61,61.1,61.6,62,63,71
-\end{equation*}
+<p>Recall that \(n=12, p=0.3.\)  Let \(X\) denote the number of team members have a conflict.</p>
+<ol class="decimal">
+<li>This is \(P(X=3)=C(12,6)(0.3)^6(0.7)^6\approx0.0792\text{.}\)</li>
+<li>This is the sum of three through twelves members having a conflict, but its also just removing cases zero through three having a conflict.  So<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\amp1-P(X=0)-P(X=1)-P(X=2)-P(X=3)\\
+\amp=1-C(12,0)(0.3)^0(0.7)^{12}-C(12,1)(0.3)^1(0.7)^{11}-C(12,2)(0.3)^2(0.7)^{10}-C(12,3)(0.3)^3(0.7)^{9}\\
+\amp \approx 1-0.4925=0.5075.
+\end{align*}
 </div>
-<p data-braille="continuation">we have \(\sigma_A\approx 5.6779\text{:}\) <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/3f6gwu3dtn" id="interactive-230" width="600" height="600"></iframe></p>
-<p>For Company B, if we list the data in thousands per year:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-49,51,53,55,57,59,61,63,65,67,69,71
-\end{equation*}
-</div>
-<p data-braille="continuation">we have \(\sigma_B\approx 6.9041\text{:}\) <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/nxwzkbqaqf" id="interactive-231" width="600" height="600"></iframe></p>
-<p xmlns:svg="http://www.w3.org/2000/svg">So Company B has a wider variation of salaries.</p>
+</li>
+<li>This is \(E(X)=np=12(0.3)=3.6\) team members.</li>
+</ol>
+<p data-braille="continuation">These may all be seen: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/drz7bqszhm" id="interactive-224" width="600" height="600"></iframe></p>
 </div></body>
 </html>

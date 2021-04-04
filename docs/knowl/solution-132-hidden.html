@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-20T14:25:30-06:00       *-->
+<!--*       on 2021-04-04T08:32:40-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,20 +14,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>By <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> we have:</p>
+<p>We note that \(\limit{x}{2^-}b(x)=2^2=4\text{.}\)  We also note that \(\limit{x}{2^+}b(x)=b(2)=-(2)+k=-2+k\text{.}\)  So for \(b(x)\) to be continuous at \(x=2\text{,}\) we need</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\alpha'(2)\amp = \limit{h}{0}\frac{\alpha(2+h)-\alpha(2)}{h}\\
-\amp = \limit{h}{0} \frac{\frac{2}{2+h+1}-\frac{2}{2+1}}{h}\\
-\amp = \limit{h}{0} \frac{\frac{2}{h+3}-\frac{2}{3}}{h}\\
-\amp = \limit{h}{0} \frac{\frac{2\cdot 3}{(h+3)3}-\frac{2(h+3)}{3(h+3)}}{h}\\
-\amp = \limit{h}{0} \frac{\frac{6-2(h+3)}{(h+3)3}}{h} \\
-\amp = \limit{h}{0} \frac{\frac{6-2(h+3)}{(h+3)3}}{h} \\
-\amp = \limit{h}{0} \frac{\frac{-2h}{(h+3)3}}{h} \\
-\amp = \limit{h}{0} \frac{-2}{(h+3)3} \\
-\amp =  \frac{-2}{(0+3)3}=-\frac{2}{9} \text{.}
-\end{align*}
+\begin{equation*}
+4=\limit{x}{2^+}b(x)=b(2)=-2+k.
+\end{equation*}
 </div>
-<p data-braille="continuation">We can see this below: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/qf4yzkw00n" id="interactive-158" width="600" height="600"></iframe></p>
+<p data-braille="continuation">Thus \(k=6\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">We observe this visually: <iframe src="https://www.desmos.com/calculator/8ajqy7ful8" id="interactive-156" width="600" height="600"></iframe> Slide the value of \(k\) to see how other values of \(k\) will <em class="emphasis">not</em> give you a continuous function.</p>
 </div></body>
 </html>

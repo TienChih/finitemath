@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-23T16:41:45-06:00       *-->
+<!--*       on 2021-04-04T08:31:34-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -220,11 +220,11 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Sec_DefofDerivative"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">The Derivative Function</span>
 </h2>
-<section class="introduction" id="introduction-32"><p id="p-1021">In <a href="Sec_AvgRoC.html" class="internal" title="Section 7.2: Average rates of change">Section 7.2</a>, we discuss average rates of change over intervals.  But typically, when rates of change are discussed, it's not described in terms of periods of time but at the very moment.  What is the speed right now?  Not what is the average speed?  How fast is the temperature rising?  How quickly is the Dow falling?  These are all described as <em class="emphasis">instantaneous</em> rates of change.  In other words, rates of change as the interval over which they are defined tends to zero.</p></section><section class="subsection" id="subsection-69"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-32"><p id="p-1036">In <a href="Sec_AvgRoC.html" class="internal" title="Section 7.2: Average rates of change">Section 7.2</a>, we discuss average rates of change over intervals.  But typically, when rates of change are discussed, it's not described in terms of periods of time but at the very moment.  What is the speed right now?  Not what is the average speed?  How fast is the temperature rising?  How quickly is the Dow falling?  These are all described as <em class="emphasis">instantaneous</em> rates of change.  In other words, rates of change as the interval over which they are defined tends to zero.</p></section><section class="subsection" id="subsection-70"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.3.1</span> <span class="title">From Average to Instant</span>
 </h3>
-<p id="p-1022">Recall that in <a class="xref" data-knowl="./knowl/ExampleRoC.html" title="Example 7.2.2: Average rates of change of the height of a rocket">Example 7.2.2</a>, we found the average rate of change in the height, \(f(x)=-5x^2+20x\text{,}\) of a rocket \(x\) seconds after launch , over the intervals \([0,2], [0,1], [0,0.5]\text{.}\)  But what prompted this discussion was what the speed was at the moment of launch.  We can't actually evaluate the average rate of change over \([0,0]\text{,}\) but what we can do is find the average rate of change over \([0, h]\) and see what happens as \(h\to 0\text{.}\) <iframe src="https://www.desmos.com/calculator/ufwyh8xrwp" id="interactive-157" width="600" height="600"></iframe> As you can observe, it appears as if this slope approaches 20 m/s.</p>
-<p id="p-1023">More formally, this value would be \(\limit{h}{0} \frac{f(0+h)-f(0)}{h}\text{:}\)</p>
+<p id="p-1037">Recall that in <a class="xref" data-knowl="./knowl/ExampleRoC.html" title="Example 7.2.2: Average rates of change of the height of a rocket">Example 7.2.2</a>, we found the average rate of change in the height, \(f(x)=-5x^2+20x\text{,}\) of a rocket \(x\) seconds after launch , over the intervals \([0,2], [0,1], [0,0.5]\text{.}\)  But what prompted this discussion was what the speed was at the moment of launch.  We can't actually evaluate the average rate of change over \([0,0]\text{,}\) but what we can do is find the average rate of change over \([0, h]\) and see what happens as \(h\to 0\text{.}\) <iframe src="https://www.desmos.com/calculator/ufwyh8xrwp" id="interactive-160" width="600" height="600"></iframe> As you can observe, it appears as if this slope approaches 20 m/s.</p>
+<p id="p-1038">More formally, this value would be \(\limit{h}{0} \frac{f(0+h)-f(0)}{h}\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 \limit{h}{0}\frac{f(0+h)-f(0)}{h}\amp=\limit{h}{0}\frac{-5h^2+20h}{h}\\
@@ -236,17 +236,17 @@ MathJax.Hub.Config({
 <article class="definition definition-like" id="DefinitionDerivative"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-1024">The instantaneous rate of change of \(f(x)\) at \(a\) denoted <dfn class="terminology">\(f'(a)\)</dfn> or the <dfn class="terminology">derivative</dfn> of \(f(x)\) at \(a\) is:</p>
+<p id="p-1039">The instantaneous rate of change of \(f(x)\) at \(a\) denoted <dfn class="terminology">\(f'(a)\)</dfn> or the <dfn class="terminology">derivative</dfn> of \(f(x)\) at \(a\) is:</p>
 <div class="displaymath">
 \begin{equation*}
 f'(a):=\limit{h}{0}\frac{f(a+h)-f(a)}{h}.
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-73"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-73"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-76"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-76"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Computing a Derivative.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-73"><article class="exercise exercise-like"><p id="p-1025">Let \(\alpha(x)=\frac{2}{x+1}\text{.}\)  Find \(\alpha'(2)\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-76"><article class="exercise exercise-like"><p id="p-1040">Let \(\alpha(x)=\frac{2}{x+1}\text{.}\)  Find \(\alpha'(2)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-132" id="solution-132"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-132"><div class="solution solution-like">
-<p id="p-1026">By <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> we have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-135" id="solution-135"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-135"><div class="solution solution-like">
+<p id="p-1041">By <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> we have:</p>
 <div class="displaymath">
 \begin{align*}
 \alpha'(2)\amp = \limit{h}{0}\frac{\alpha(2+h)-\alpha(2)}{h}\\
@@ -260,15 +260,15 @@ f'(a):=\limit{h}{0}\frac{f(a+h)-f(a)}{h}.
 \amp =  \frac{-2}{(0+3)3}=-\frac{2}{9} \text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/qf4yzkw00n" id="interactive-158" width="600" height="600"></iframe></p>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/qf4yzkw00n" id="interactive-161" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-74"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-74"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-77"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-77"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Growing Oil Spill.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-74"><article class="exercise exercise-like"><p id="p-1027">The area of an oil spill \(t\) hours after a pipe burst is  \(A(t)=1000\pi\sqrt{t}\) square feet.  How fast is the spill spreading in 10 hours?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-77"><article class="exercise exercise-like"><p id="p-1042">The area of an oil spill \(t\) hours after a pipe burst is  \(A(t)=1000\pi\sqrt{t}\) square feet.  How fast is the spill spreading in 10 hours?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-133" id="solution-133"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-133"><div class="solution solution-like">
-<p id="p-1028">By <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> we have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-136" id="solution-136"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-136"><div class="solution solution-like">
+<p id="p-1043">By <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> we have:</p>
 <div class="displaymath">
 \begin{align*}
 A'(10)\amp = \limit{h}{0}\frac{A(2+h)-A(2)}{h}\\
@@ -281,18 +281,18 @@ A'(10)\amp = \limit{h}{0}\frac{A(2+h)-A(2)}{h}\\
 \amp =  1000\pi\frac{1}{(\sqrt{10+0}+\sqrt{10})}=\frac{1000\pi}{2\sqrt{10}}\approx 496.729\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">About 496.729 square ft per hour.  We can see this below: <iframe src="https://www.desmos.com/calculator/oju8fxmmy4" id="interactive-159" width="600" height="600"></iframe></p>
+<p data-braille="continuation">About 496.729 square ft per hour.  We can see this below: <iframe src="https://www.desmos.com/calculator/oju8fxmmy4" id="interactive-162" width="600" height="600"></iframe></p>
 </div></div>
-</div></article></div></section><section class="subsection" id="subsection-70"><h3 class="heading hide-type">
+</div></article></div></section><section class="subsection" id="subsection-71"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.3.2</span> <span class="title">Dervative as a function in it's own right</span>
 </h3>
-<p id="p-1029">We note that in our rocket situation, there is nothing particularly special about time \(x=0\text{.}\)  In principle, the derivative described in <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> could be applied to any value of \(x\text{.}\)  Also, the rocket has a velocity at any time, and we should be able to compute it.  If we apply <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> to a general \(f(x)\text{,}\) we obtain:</p>
+<p id="p-1044">We note that in our rocket situation, there is nothing particularly special about time \(x=0\text{.}\)  In principle, the derivative described in <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> could be applied to any value of \(x\text{.}\)  Also, the rocket has a velocity at any time, and we should be able to compute it.  If we apply <a class="xref" data-knowl="./knowl/DefinitionDerivative.html" title="Definition 7.3.1">Definition 7.3.1</a> to a general \(f(x)\text{,}\) we obtain:</p>
 <div class="displaymath">
 \begin{equation*}
 f'(x)=\limit{h}{0}\frac{f(x+h)-f(x)}{h}\text{.}
 \end{equation*}
 </div>
-<p id="p-1030">So how does this play out given our rocket? Well:</p>
+<p id="p-1045">So how does this play out given our rocket? Well:</p>
 <div class="displaymath">
 \begin{align*}
 f'(x)\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
@@ -304,20 +304,20 @@ f'(x)\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
 \amp = -10x+20\text{.}
 \end{align*}
 </div>
-<p id="p-1031">So this means that in \(0\) seconds, the change in the height was \(f'(0)=-10(0)+20=20\) meters/second as we suspected! But now we can compute all the other instantaneous rates of change as well.</p>
+<p id="p-1046">So this means that in \(0\) seconds, the change in the height was \(f'(0)=-10(0)+20=20\) meters/second as we suspected! But now we can compute all the other instantaneous rates of change as well.</p>
 <ul class="disc">
 <li id="li-443">So at \(x=1\) second, it'll be \(f'(1)=-10(1)+20=10\) meters per second.</li>
 <li id="li-444">In 2 seconds we are at the top with \(f'(2)=0\) meters per second.</li>
 <li id="li-445">At 3 seconds, \(f'(3)=-10\) meters/second to reflect the negative change in height at this point.</li>
 <li id="li-446">Finally in 4 seconds, the rocket hits the ground at \(f'(4)=-20\) meters per second.</li>
 </ul>
-<p data-braille="continuation">One can explore this below in the Desmos graph.  Notice how \(y=f'(x), f=-10x+20\) produce the same line: <iframe src="https://www.desmos.com/calculator/wo9lscifnb" id="interactive-160" width="600" height="600"></iframe></p>
-<article class="exercise exercise-like" id="exercise-75"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-75"><h6 class="heading">
+<p data-braille="continuation">One can explore this below in the Desmos graph.  Notice how \(y=f'(x), f=-10x+20\) produce the same line: <iframe src="https://www.desmos.com/calculator/wo9lscifnb" id="interactive-163" width="600" height="600"></iframe></p>
+<article class="exercise exercise-like" id="exercise-78"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-78"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Computing a Derivative function.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-75"><article class="exercise exercise-like"><p id="p-1032">Let \(\alpha(x)=\frac{2}{x+1}\text{.}\)  Find \(\alpha'(x)\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-78"><article class="exercise exercise-like"><p id="p-1047">Let \(\alpha(x)=\frac{2}{x+1}\text{.}\)  Find \(\alpha'(x)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-134" id="solution-134"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-134"><div class="solution solution-like">
-<p id="p-1033">We have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-137" id="solution-137"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-137"><div class="solution solution-like">
+<p id="p-1048">We have:</p>
 <div class="displaymath">
 \begin{align*}
 \alpha'(x)\amp = \limit{h}{0}\frac{\alpha(x+h)-\alpha(x)}{h}\\
@@ -331,15 +331,15 @@ f'(x)\amp = \limit{h}{0}\frac{f(x+h)-f(x)}{h}\\
 \amp = \frac{-2}{(x+0+1)(x+1)}=-\frac{2}{(x+1)^2}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/2umbzq73fn" id="interactive-161" width="600" height="600"></iframe></p>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/2umbzq73fn" id="interactive-164" width="600" height="600"></iframe></p>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-76"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-76"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-79"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-79"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Growing Oil Spill as a function.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-76"><article class="exercise exercise-like"><p id="p-1034">The area of an oil spill \(t\) hours after a pipe burst is  \(A(t)=1000\pi\sqrt{t}\) square feet.  Find \(A'(t)\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-79"><article class="exercise exercise-like"><p id="p-1049">The area of an oil spill \(t\) hours after a pipe burst is  \(A(t)=1000\pi\sqrt{t}\) square feet.  Find \(A'(t)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-135" id="solution-135"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-135"><div class="solution solution-like">
-<p id="p-1035">We have:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-138" id="solution-138"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-138"><div class="solution solution-like">
+<p id="p-1050">We have:</p>
 <div class="displaymath">
 \begin{align*}
 A'(t)\amp = \limit{h}{0}\frac{A(t+h)-A(t)}{h}\\
@@ -352,20 +352,20 @@ A'(t)\amp = \limit{h}{0}\frac{A(t+h)-A(t)}{h}\\
 \amp =  1000\pi\frac{1}{(\sqrt{t+0}+\sqrt{t})}=\frac{1000\pi}{2\sqrt{t}}=\frac{500\pi}{\sqrt{t}}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/sbg2pzjqty" id="interactive-162" width="600" height="600"></iframe></p>
+<p data-braille="continuation">We can see this below: <iframe src="https://www.desmos.com/calculator/sbg2pzjqty" id="interactive-165" width="600" height="600"></iframe></p>
 </div></div>
-</div></article></div></section><section class="subsection" id="subsection-71"><h3 class="heading hide-type">
+</div></article></div></section><section class="subsection" id="subsection-72"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.3.3</span> <span class="title">Graphical Interpretation of the Derivative</span>
 </h3>
 <article class="remark remark-like" id="remark-9"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span>
 </h6>
-<p id="p-1036">Since the derivative corresponds to an instantaneous rate of change, given a function \(f(x)\) we have:</p>
+<p id="p-1051">Since the derivative corresponds to an instantaneous rate of change, given a function \(f(x)\) we have:</p>
 <ul class="disc">
 <li id="li-447">\(f'(a)&gt;0\) when \(f(x)\) is increasing at \(x=a\text{.}\)</li>
 <li id="li-448">\(f'(a)\lt 0\) when \(f(x)\) is decreasing at \(x=a\text{.}\)</li>
 <li id="li-449">\(f'(a)=0\) when \(f(x)\) is neither increasing nor decreasing at \(x=a\text{.}\)</li>
-</ul></article><p id="p-1037">So consider the curve depicted below: <iframe src="https://www.desmos.com/calculator/yj6q2uuqmj" id="interactive-163" width="600" height="600"></iframe> Observing this graph, we have that the function is decreasing (\(f'(x)\lt 0\)) from 1 to 4, or the interval \((1,4)\text{.}\)  The derivatve is positive when \(f(x)\) is increasing, that is \((-\infty,1)\cup(4,\infty)\text{.}\)  At \(x=1, 4\text{,}\) we have that \(f'(1)=0, f'(4)=0\text{.}\) <iframe src="https://www.desmos.com/calculator/kk5yzeeu0u" id="interactive-164" width="600" height="600"></iframe></p></section></section></div></main>
+</ul></article><p id="p-1052">So consider the curve depicted below: <iframe src="https://www.desmos.com/calculator/yj6q2uuqmj" id="interactive-166" width="600" height="600"></iframe> Observing this graph, we have that the function is decreasing (\(f'(x)\lt 0\)) from 1 to 4, or the interval \((1,4)\text{.}\)  The derivatve is positive when \(f(x)\) is increasing, that is \((-\infty,1)\cup(4,\infty)\text{.}\)  At \(x=1, 4\text{,}\) we have that \(f'(1)=0, f'(4)=0\text{.}\) <iframe src="https://www.desmos.com/calculator/kk5yzeeu0u" id="interactive-167" width="600" height="600"></iframe></p></section></section></div></main>
 </div>
 </body>
 </html>

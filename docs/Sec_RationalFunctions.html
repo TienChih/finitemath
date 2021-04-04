@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-23T16:41:41-06:00       *-->
+<!--*       on 2021-04-04T08:31:30-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -252,7 +252,42 @@ r(x)=\frac{a_nx^n+\cdots a_0x^0}{b_mx^m+\cdots b_0x^0}\text{,}
 <p id="p-888">Well, turns out, 0 divided by anything else (non-zero) is 0. So if the numerator is 0, then \(r(x)\) is 0. Moreover, it bounces or crosses in the same way as a polynomial. So if the multiplicity is odd, the function crosses and if it's even, it bounces.</p>
 <p id="p-889">For example, consider \(r_1(x)=\frac{x-1}{x}\text{.}\) It is clearly 0 when \(x=1\text{,}\) and since the multiplicity is odd, we cross <iframe src="https://www.desmos.com/calculator/9graa40kq1" id="interactive-133" width="600" height="600"></iframe> But if we change that to \(r_2(x)=\frac{(x-1)^2}{x}\text{,}\) the multiplicity is now even so we bounce: <iframe src="https://www.desmos.com/calculator/iy9kvoac37" id="interactive-134" width="600" height="600"></iframe></p>
 <p id="p-890">It also turns out you can't divide by 0. So at those points, the function is undefined. And as the values in the denominator towards 0, the overall value of the quotient approaches either positive or negative infinity. Just like roots, whether or not we change signs at these asymptotes depends on the multiplicity of the root.</p>
-<p id="p-891">For example, again consider \(r_1(x)=\frac{x-1}{x}\text{.}\) The denominator is 0 when \(x=0\text{,}\) so we have a vertical asymptote there. Since the multiplicity is odd, we change signs there: <iframe src="https://www.desmos.com/calculator/ik9xwhui5i" id="interactive-135" width="600" height="600"></iframe> If we made that multiplicity even, the function would not change sign at \(x=0\text{,}\) so for \(r_2(x)=\frac{x-1}{x^2}\text{:}\) <iframe src="https://www.desmos.com/calculator/h5famtu30t" id="interactive-136" width="600" height="600"></iframe></p></section></section></div></main>
+<p id="p-891">For example, again consider \(r_1(x)=\frac{x-1}{x}\text{.}\) The denominator is 0 when \(x=0\text{,}\) so we have a vertical asymptote there. Since the multiplicity is odd, we change signs there: <iframe src="https://www.desmos.com/calculator/ik9xwhui5i" id="interactive-135" width="600" height="600"></iframe> If we made that multiplicity even, the function would not change sign at \(x=0\text{,}\) so for \(r_2(x)=\frac{x-1}{x^2}\text{:}\) <iframe src="https://www.desmos.com/calculator/h5famtu30t" id="interactive-136" width="600" height="600"></iframe></p></section><section class="subsection" id="subsection-59"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.4.3</span> <span class="title">Putting it together</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-63"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-63"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Plotting Rational Function 1.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-63"><article class="exercise exercise-like"><p id="p-892">What is the behavior of the rational function \(f(x)=\frac{\left(x+2\right)\left(x-8\right)}{\left(x-2\right)\left(x+3\right)}\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-117" id="solution-117"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-117"><div class="solution solution-like">
+<p id="p-893">The numerator and denominator are both degree 2, so the long term behavior can be approximated by \(f(x)\approx\frac{x^2}{x^2}\approx 1\) and so there is a horizontal asymptote \(y=1\text{.}\)</p>
+<p id="p-894">The roots of the numerator are \(-2, 8\) so \(f(-2)=0=f(8)\text{.}\)  These both have multiplicty 1, which is odd, so the function changes sign at these values.</p>
+<p id="p-895">The roots of the numerator are \(-3, 2\) so we have vertical asymptotes \(x=-3, x=2\text{.}\)  These both have multiplicty 1, which is odd, so the function changes sign at these values.</p>
+<p id="p-896"><iframe src="https://www.desmos.com/calculator/t0tts7ibtm" id="interactive-137" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-64"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-64"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Plotting Rational Function 2.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-64"><article class="exercise exercise-like"><p id="p-897">What is the behavior of the rational function \(f(x)=\frac{x^{2}\left(x-6\right)}{\left(x+1\right)\left(x-8\right)}\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-118" id="solution-118"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-118"><div class="solution solution-like">
+<p id="p-898">The numerator has degree 3 and denominator has degree 2, so the long term behavior can be approximated by \(f(x)\approx\frac{x^3}{x^2}\approx x\) and so the long term behavior approximates \(y=x\text{.}\)</p>
+<p id="p-899">The roots of the numerator are \(0, 6\) so \(f(0)=0=f(6)\text{.}\)  The root \(x=0\) has multiplicity 2, which is even, so the function does <em class="emphasis">not</em> change signs here.  The root \(x=6\) has multiplicty 1, which is odd, so the function changes sign at this value.</p>
+<p id="p-900">The roots of the numerator are \(-1, 8\) so we have vertical asymptotes \(x=-1, x=8\text{.}\)  These both have multiplicty 1, which is odd, so the function changes sign at these values.</p>
+<p id="p-901"><iframe src="https://www.desmos.com/calculator/yj8kpz4hk0" id="interactive-138" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-65"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-65"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Plotting Rational Function 3.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-65"><article class="exercise exercise-like"><p id="p-902">What is the behavior of the rational function \(f(x)=\frac{\left(x+1\right)\left(x-5\right)}{\left(x+2\right)^{2}\left(x-2\right)}\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-119" id="solution-119"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-119"><div class="solution solution-like">
+<p id="p-903">The numerator has degree 2 and denominator has degree 3, so the long term behavior can be approximated by \(f(x)\approx\frac{x^2}{x^3}\approx \frac{1}{x}\) and so the long term behavior approximates \(y=0\text{.}\)</p>
+<p id="p-904">The roots of the numerator are \(-1, 5\) so \(f(-1)=0=f(5)\text{.}\) These both have multiplicty 1, which is odd, so the function changes sign at these values.</p>
+<p id="p-905">The roots of the numerator are \(-2, 2\) so we have vertical asymptotes \(x=-2, x=2\text{.}\)  The root \(x=-2\) has multiplicity 2, which is even, so the function does <em class="emphasis">not</em> change signs here.  The root \(x=2\) has multiplicty 1, which is odd, so the function changes sign at this value.</p>
+<p id="p-906"><iframe src="https://www.desmos.com/calculator/2x6tpe0sxz" id="interactive-139" width="600" height="600"></iframe></p>
+</div></div>
+</div></article></div></section></section></div></main>
 </div>
 </body>
 </html>

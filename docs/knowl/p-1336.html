@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-20T14:25:47-06:00       *-->
+<!--*       on 2021-04-04T08:33:01-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,31 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Then</p>
+<p>There are 3 poisened apples and 7 non-poisened apples.  Each selection ensures she is picking some number of poisened and the rest non poisened.  She can't pick more than 3 poisened apples since that's all there is.  So the probability distribution would be:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-E(X^2)=0^2\cdot\frac{35}{210}+1^2\cdot\frac{=105}{210}+2^2\cdot\frac{63}{210}+3^3\cdot\frac{7}{210}=2.
+\begin{array}{|c|cccc|}
+\hline
+x \amp 0 \amp 1 \amp 2 \amp 3 \\
+\hline
+P(X=x) \amp \frac{C(3,0)C(7,4)}{C(10,4)} \amp \frac{C(3,1)C(7,3)}{C(10,4)} \amp \frac{C(3,2)C(7,2)}{C(10,4)} \amp \frac{C(3,3)C(7,1)}{C(10,4)}\\
+\hline
+\end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">So</p>
+<p data-braille="continuation">Or:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-Var(X)=E(X^2)-E(X)^2=2-1.2^2=0.56.
+\begin{array}{|c|cccc|}
+\hline
+x \amp 0 \amp 1 \amp 2 \amp 3 \\
+\hline
+P(X=x) \amp \frac{35}{210}\approx 0.1667\amp \frac{105}{210}=0.5 \amp \frac{63}{210}=0.3 \amp \frac{7}{210}\approx 0.0333\\
+\hline
+\end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">Which may also be computed: <iframe xmlns:svg="http://www.w3.org/2000/svg" src="https://www.desmos.com/calculator/ff9t1rdmef" id="interactive-210" width="600" height="600"></iframe></p>
+<p data-braille="continuation">There is a \(\frac{63}{210}+\frac{7}{210}=\frac{1}{3}\) chance she eats at least 2 poisened apples.</p>
 <span class="incontext"><a href="Sec_ProbabilityDistributions.html#p-1336">in-context</a></span>
 </body>
 </html>

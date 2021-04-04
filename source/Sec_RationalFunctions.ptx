@@ -125,4 +125,111 @@
 
     </p>
   </subsection>
+
+
+  <subsection>
+    <title>Putting it together</title>
+
+    <exercise>
+      <title>Plotting Rational Function 1</title>
+      <statement>
+      <p>
+        What is the behavior of the rational function <m>f(x)=\frac{\left(x+2\right)\left(x-8\right)}{\left(x-2\right)\left(x+3\right)}</m>?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The numerator and denominator are both degree 2, so the long term behavior can be approximated by <m>f(x)\approx\frac{x^2}{x^2}\approx 1</m> and so there is a horizontal asymptote <m>y=1</m>.
+
+      </p>
+
+      <p>
+        The roots of the numerator are <m>-2, 8</m> so <m>f(-2)=0=f(8)</m>.  These both have multiplicty 1, which is odd, so the function changes sign at these values.
+      </p>
+
+      <p>
+        The roots of the numerator are <m>-3, 2</m> so we have vertical asymptotes <m>x=-3, x=2</m>.  These both have multiplicty 1, which is odd, so the function changes sign at these values.
+      </p>
+
+      <p>
+        <interactive desmos="t0tts7ibtm"/>
+      </p>
+
+
+
+    </solution>
+  </exercise>
+
+
+   <exercise>
+      <title>Plotting Rational Function 2</title>
+      <statement>
+      <p>
+        What is the behavior of the rational function <m>f(x)=\frac{x^{2}\left(x-6\right)}{\left(x+1\right)\left(x-8\right)}</m>?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The numerator has degree 3 and denominator has degree 2, so the long term behavior can be approximated by <m>f(x)\approx\frac{x^3}{x^2}\approx x</m> and so the long term behavior approximates <m>y=x</m>.
+
+      </p>
+
+      <p>
+        The roots of the numerator are <m>0, 6</m> so <m>f(0)=0=f(6)</m>.  The root <m>x=0</m> has multiplicity 2, which is even, so the function does <em>not</em> change signs here.  The root <m>x=6</m> has multiplicty 1, which is odd, so the function changes sign at this value.
+      </p>
+
+      <p>
+        The roots of the numerator are <m>-1, 8</m> so we have vertical asymptotes <m>x=-1, x=8</m>.  These both have multiplicty 1, which is odd, so the function changes sign at these values.
+      </p>
+
+      <p>
+        <interactive desmos="yj8kpz4hk0"/>
+      </p>
+
+
+
+    </solution>
+  </exercise>
+
+
+  <exercise>
+      <title>Plotting Rational Function 3</title>
+      <statement>
+      <p>
+        What is the behavior of the rational function <m>f(x)=\frac{\left(x+1\right)\left(x-5\right)}{\left(x+2\right)^{2}\left(x-2\right)}</m>?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The numerator has degree 2 and denominator has degree 3, so the long term behavior can be approximated by <m>f(x)\approx\frac{x^2}{x^3}\approx \frac{1}{x}</m> and so the long term behavior approximates <m>y=0</m>.
+
+      </p>
+
+      <p>
+        The roots of the numerator are <m>-1, 5</m> so <m>f(-1)=0=f(5)</m>. These both have multiplicty 1, which is odd, so the function changes sign at these values.
+      </p>
+
+      <p>
+        The roots of the numerator are <m>-2, 2</m> so we have vertical asymptotes <m>x=-2, x=2</m>.  The root <m>x=-2</m> has multiplicity 2, which is even, so the function does <em>not</em> change signs here.  The root <m>x=2</m> has multiplicty 1, which is odd, so the function changes sign at this value.
+      </p>
+
+      <p>
+        <interactive desmos="2x6tpe0sxz"/>
+      </p>
+
+
+
+    </solution>
+  </exercise>
+
+
+
+
+
+
+
+
+
+
+</subsection>
 </section>
