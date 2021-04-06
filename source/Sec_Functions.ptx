@@ -155,7 +155,7 @@ another set.
     <interactive desmos="rk0jkqcdpd" />
   </p>
   <p>
-    Sometimes we express real valued functions as an algebraic relation between an independent variable (typically <m>x</m> but not necissarily) as an input, and a dependent vairable (typically <m>y</m> but not necissarily) as an output.  To check to see if a relation is a function, we often employ the <term>vertical line test</term>: we check to see that for each vertical line, it intersects the curve of the relation at most once, that is, each input only has one output.
+    Sometimes we express real valued functions as an algebraic relation between an independent variable (typically <m>x</m> but not necessarily) as an input, and a dependent variable (typically <m>y</m> but not necessarily) as an output.  To check to see if a relation is a function, we often employ the <term>vertical line test</term>: we check to see that for each vertical line, it intersects the curve of the relation at most once, that is, each input only has one output.
   </p>  
   <p>
     We can see that the relation <m>y=\sqrt{10-x}</m> expresses <m>y</m> as a function of <m>x</m>:
