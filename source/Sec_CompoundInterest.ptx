@@ -324,7 +324,7 @@
           So we note that:
           <md>
             <mrow>A\amp = 2000, \ \text{ the future value }</mrow>
-            <mrow>i\amp = 0.06/12=0.005, \ \text{ the 6\% nominal interest rate divided by 12 months}</mrow>
+            <mrow>i\amp = 0.06/12=0.005, \ \text{ the 6 $\%$ nominal interest rate divided by 12 months}</mrow>
             <mrow>n\amp = 240, \ \text{ number of months }</mrow>
           </md>
           
